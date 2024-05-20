@@ -1,0 +1,70 @@
+from jose import jwt,JWTError
+from fastapi import Depends,HTTPException,status
+from passlib.context import CryptContext
+from typing import Any,Annotated
+from fastapi.security import OAuth2PasswordBearer
+from datetime import datetime, timedelta, timezone
+from models.user import TokenData
+from database.mongo_driver import validate_bson_id
+
+
+_jwt_key: str = 'randomkey'
+algo = 'HS512'
+
+#encoding access token function
+def create_access_token(data: dict, expires_delta: timedelta | None = None):
+    to_encode = data.copy()
+    if expires_delta:
+        expire = datetime.now(timezone.utc) + expires_delta
+    else:
+        expire = datetime.now(timezone.utc) + timedelta(minutes=1e6)
+    to_encode.update({"exp": expire})
+    encoded_jwt = jwt.encode(to_encode, _jwt_key, algorithm=algo)
+    return encoded_jwt
+
+#decoding access token function
+def decode_jwt_token(token: str) -> dict[str, Any]:
+    return jwt.decode(token, _jwt_key, algorithms=[algo])
+
+
+
+#password hashing and verification
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+def verify_password(plain_password, hashed_password):
+    return plain_password== hashed_password
+
+def get_password_hash(password):
+    return password
+
+
+
+
+#authentication functions
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+
+
+async def auth_user(token: Annotated[str, Depends(oauth2_scheme)]):
+    credentials_exception = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Could not validate credentials",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+    
+    try:
+        payload = jwt.decode(token, _jwt_key, algorithms=[algo])
+        user_id: str = payload.get("userId")
+        user_role: str = payload.get("user_role")
+        if user_id is None or user_role is None:
+            raise credentials_exception
+        token_data = TokenData(user_id=user_id,role=user_role)
+    except JWTError:
+        raise credentials_exception
+    user_id = validate_bson_id(token_data.user_id)
+    if user_id is None:
+        raise credentials_exception
+    return token_data.user_id
+
+
