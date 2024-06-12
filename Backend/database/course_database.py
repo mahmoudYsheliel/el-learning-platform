@@ -5,24 +5,25 @@ from database.mongo_driver import  get_database,validate_bson_id
 
 async def create_course(course: Course) -> ServiceResponse:
     course.number_of_enrollments=0
-    for mat in course.material:
-        bson_id=validate_bson_id(mat.Id)
-        if not bson_id:
-            return ServiceResponse(success=False,msg='bad material id' + mat.name)
-    
-        if mat.type == 'Lesson':
-            result = await get_database().get_collection('lesson').find_one({'_id':bson_id})
-            if not result:
-                return ServiceResponse(success=False,msg='bad lesson id')
-        elif mat.type == 'Quiz':
-            result = await get_database().get_collection('quiz').find_one({'_id':bson_id})
-            if not result:
-                return ServiceResponse(success=False,msg='bad quiz id')
-        elif mat.type == 'Assesment':
-            result = await get_database().get_collection('assesment').find_one({'_id':bson_id})
-            if not result:
-                return ServiceResponse(success=False,msg='bad assesment id')
+    for chapter in course.chapters:
+        for mat in chapter.materials:
+            bson_id=validate_bson_id(mat.Id)
+            if not bson_id:
+                return ServiceResponse(success=False,msg='bad material id' + mat.name)
         
+            if mat.type == 'Lesson':
+                result = await get_database().get_collection('lesson').find_one({'_id':bson_id})
+                if not result:
+                    return ServiceResponse(success=False,msg='bad lesson id')
+            elif mat.type == 'Quiz':
+                result = await get_database().get_collection('quiz').find_one({'_id':bson_id})
+                if not result:
+                    return ServiceResponse(success=False,msg='bad quiz id')
+            elif mat.type == 'Assesment':
+                result = await get_database().get_collection('assesment').find_one({'_id':bson_id})
+                if not result:
+                    return ServiceResponse(success=False,msg='bad assesment id')
+            
         
   
     for category in course.categories:
@@ -52,24 +53,25 @@ async def delete_course(course_id: str) -> ServiceResponse:
     result = await get_database().get_collection('course').find_one({'_id': bson_id})
     if not result:
         return ServiceResponse(success=False,msg='bad course id')
-    for mat in result.material:
-        bson_id=validate_bson_id(mat.Id)
-        if not bson_id:
-            return ServiceResponse(success=False,msg='bad material id' + mat.name)
-    
-        if mat.name == 'Lesson':
-            result = await get_database().get_collection('lesson').delete_one({'_id':bson_id})
-            if not result:
-                return ServiceResponse(success=False,msg='bad lesson id')
-        elif mat.name == 'Quiz':
-            result = await get_database().get_collection('quiz').delete_one({'_id':bson_id})
-            if not result:
-                return ServiceResponse(success=False,msg='bad quiz id')
-        elif mat.name == 'Assesment':
-            result = await get_database().get_collection('assesment').delete_one({'_id':bson_id})
-            if not result:
-                return ServiceResponse(success=False,msg='bad assesment id')
-       
+    for chapter in result.chapters:
+        for mat in chapter.material:
+            bson_id=validate_bson_id(mat.Id)
+            if not bson_id:
+                return ServiceResponse(success=False,msg='bad material id' + mat.name)
+        
+            if mat.name == 'Lesson':
+                result = await get_database().get_collection('lesson').delete_one({'_id':bson_id})
+                if not result:
+                    return ServiceResponse(success=False,msg='bad lesson id')
+            elif mat.name == 'Quiz':
+                result = await get_database().get_collection('quiz').delete_one({'_id':bson_id})
+                if not result:
+                    return ServiceResponse(success=False,msg='bad quiz id')
+            elif mat.name == 'Assesment':
+                result = await get_database().get_collection('assesment').delete_one({'_id':bson_id})
+                if not result:
+                    return ServiceResponse(success=False,msg='bad assesment id')
+        
     result = await get_database().get_collection('course').delete_one({'_id': bson_id})
     if not result.deleted_count:
         return ServiceResponse(success=False, status_code=404, msg='course not Found')
@@ -111,7 +113,7 @@ async def get_course(course_id:str)-> ServiceResponse:
         'min_age':1,
         'max_age':1,
         'objectives':1,
-        'material':1,
+        'chapters':1,
         'categories':1,
         
     })

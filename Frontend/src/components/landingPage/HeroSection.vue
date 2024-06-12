@@ -47,7 +47,7 @@ curious journey in the world
 }
 main {
   background-color: var(--primarry);
-  padding-block: 80px;
+  padding-block: 4rem;
 }
 .wrapper {
   width: 90%;

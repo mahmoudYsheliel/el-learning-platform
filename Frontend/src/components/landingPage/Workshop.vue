@@ -27,7 +27,7 @@ import Button from "primevue/button";
 <style scoped>
 main {
   display: flex;
-  padding: 6rem;
+  padding: 5rem 10rem;
   justify-content: space-between;
 }
 .container {
@@ -62,10 +62,24 @@ button {
 image {
   height: fit-content;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .image {
-    width: 40%;
+    width: 30%;
     height: fit-content;
+  }
+  .container{
+    width: 60%;
+  }
+  main{
+    padding-inline: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .image{
+    display: none;
+  }
+  .container{
+    width: 90%;
   }
 }
 </style>

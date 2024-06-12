@@ -48,7 +48,7 @@ const programs = [
           <p style="margin: 0;">Learn More <i class="pi pi-angle-right"></i></p>
         </div>
       </div>
-      <div class="rignt">
+      <div class="right">
         <img src="../../assets/Arrow 07.svg"  alt="" />
       </div>
     </div>
@@ -57,7 +57,7 @@ const programs = [
 
 <style scoped>
 main{
-    margin-block:7.5rem ;
+    margin-block:4rem ;
 }
 .header {
   text-align: center;
@@ -73,6 +73,7 @@ h1 {
   align-items: center;
   justify-content: center;
   margin-top: 3rem;
+  
 }
 p.header {
   color: var(--text);
@@ -93,6 +94,7 @@ p.header {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  cursor: pointer;
 }
 .top {
   display: flex;
@@ -115,4 +117,13 @@ p{
     padding: 0;
     line-height: 1.5rem;
 }
+@media screen and (max-width: 1300px) {
+  .left {
+   display: none;
+  }
+  .right {
+   display: none;
+  }
+}
+
 </style>

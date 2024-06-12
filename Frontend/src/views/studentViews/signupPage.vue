@@ -1,115 +1,150 @@
 <script setup lang="ts">
+import Navbar from "@/components/general/Navbar.vue";
+import Options from "@/components/general/Options.vue";
+import Footer from "@/components/general/Footer.vue";
+
+import "primeicons/primeicons.css";
+
 import Button from "primevue/button";
 import InputText from "primevue/inputtext";
-import InputNumber from "primevue/inputnumber";
 import Password from "primevue/password";
+
+import { HttpRequester } from "@/lib/APICaller";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import axios from "axios";
+
 const router = useRouter();
 
 const email = ref();
 const username = ref();
 const pass = ref();
 const confirmedPass = ref();
-const age = ref();
-const grade = ref();
-const contact = ref();
+
 const missingInfo = ref(false);
 const differentPassword = ref(false);
+const usernameEmailTaken = ref(false);
+const signupRequester = new HttpRequester("signup");
 
 function signup() {
-  if (
-    !email.value ||
-    !username.value ||
-    !pass.value ||
-    !confirmedPass.value ||
-    !contact.value ||
-    !age.value ||
-    !grade.value
-  ) {
+  if (!email.value || !username.value || !pass.value || !confirmedPass.value) {
     missingInfo.value = true;
   } else if (pass.value != confirmedPass.value) {
     differentPassword.value = true;
   } else {
-    axios
-      .post(
-        "http://127.0.0.1:8000/signup",
-        {
-          user: {
-            age: age.value,
-            grade: grade.value,
-            email: email.value,
-            username: username.value,
-            hashed_pass: pass.value,
-            phone_number: contact.value,
-          },
-        },
-        {}
-      )
-      .then((res) => router.push("login"));
+    let data = {
+      user: {
+        email: email.value,
+        username: username.value,
+        hashed_pass: pass.value,
+        user_type: "Instructor",
+      },
+    };
+
+    signupRequester.callApi(data).then((res) => {
+      if (
+        res.msg == "email is already used once" ||
+        res.msg == "username is already used once"
+      ) {
+        usernameEmailTaken.value=true
+      }
+      else if(res.success==true){
+        router.push('/login')
+      }
+    });
   }
 }
 </script>
 
 <template>
   <main>
+    <Navbar />
+    <Options />
     <div class="container">
       <div class="left">
-        <h1>Welcome To Trace, Where Your Future Starts</h1>
+        <img src="../../assets/login.png" alt="" />
       </div>
       <div class="right">
-        <h2>Signup</h2>
+        <div class="welcome">
+          <h1>Welcome back to the</h1>
+          <h1>Trace Community</h1>
+        </div>
+        <div class="google-facebook-wrapper">
+          <div class="facebook">
+            <i class="pi pi-facebook"></i>
+            <p>Log in with Facebook</p>
+          </div>
+          <div class="google">
+            <i class="pi pi-google"></i>
+            <p>Log in with Google</p>
+          </div>
+        </div>
         <h4 v-if="missingInfo">Some Data Is Missing</h4>
         <h4 v-if="differentPassword">Different Password</h4>
+        <h4 v-if="usernameEmailTaken">Username or Email is Taken</h4>
         <div class="wrapper">
-          <InputText v-model="email" placeholder="Email" />
-          <InputText v-model="username" placeholder="Username" />
-          <Password v-model="pass" :feedback="false" placeholder="Password" />
+          <InputText type="email" class="input" v-model="email" placeholder="Email" />
+          <InputText class="input" v-model="username" placeholder="Username" />
           <Password
+            class="input"
+            v-model="pass"
+            :feedback="false"
+            toggleMask
+            placeholder="Password"
+          />
+          <Password
+            id="input"
             v-model="confirmedPass"
             :feedback="false"
+            toggleMask
             placeholder="Confirm Password"
           />
-          <InputNumber v-model="age" placeholder="Age" />
-          <InputNumber v-model="grade" placeholder="Grade" />
-          <InputText v-model="contact" placeholder="Phone Numbaer" />
         </div>
         <div class="button">
-          <Button @click="signup" label="Signup" />
+          <Button @click="signup" label="Register" />
         </div>
+        <p style="margin-left: 5rem">
+          You have Account?<strong
+            @click="router.push('/login')"
+            style="cursor: pointer"
+            >Login</strong
+          >
+        </p>
       </div>
     </div>
+    <Footer />
   </main>
 </template>
 
 <style scoped>
 main {
   min-height: 100%;
-  width: 100%;
-  background-color: var(--primary);
-  padding-top: 5rem;
 }
 .container {
   margin-inline: auto;
-  width: 60rem;
-  aspect-ratio: 1.6/1;
-  background-color: var(--secondary);
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
+  width: 75%;
   color: var(--text);
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 1fr 1fr;
+  margin-block: 5rem;
 }
 .left {
-  padding: 2rem;
   display: flex;
+  align-items: start;
+  justify-content: start;
+  border-right: 0.25rem solid rgba(0, 0, 0, 0.2);
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--secondary);
-  background-color: var(--accent2);
+}
+
+.welcome > h1 {
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  color: black;
 }
 .wrapper {
   display: flex;
@@ -118,32 +153,66 @@ main {
   gap: 0.5rem;
   flex-direction: column;
 }
-h2 {
+h1 {
   text-align: center;
   margin-bottom: 2rem;
 }
+.google-facebook-wrapper,
+.google-facebook-wrapper > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.google,
+.facebook {
+  border-radius: 8px;
+  padding: 0.5rem;
+  border: 2px solid var(--accent1);
+  cursor: pointer;
+}
+.google > i {
+  color: var(--accent1);
+}
+.facebook {
+  color: white;
+  background-color: var(--accent1);
+}
+.google > p,
+.facebook > p {
+  line-height: 1rem;
+  transform: translate(0, 0.2rem);
+  padding: 0;
+  margin: 0;
+}
 button {
   padding: 0.5rem 2rem;
+  box-shadow: 0px 34px 40px -8px #7b76f13d;
 }
 .button {
-  margin-top: 4rem;
   display: flex;
   justify-content: end;
   padding-right: 4rem;
+  width: 100%;
 }
 h4 {
   text-align: center;
   color: red;
   margin: 0;
 }
+input {
+  width: 100%;
+}
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1250px) {
   .container {
     width: 80%;
-    aspect-ratio: auto;
     height: fit-content;
     grid-template-columns: 1fr;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 40rem;
+  }
+  .left {
+    display: none;
   }
   .button {
     margin-bottom: 2rem;

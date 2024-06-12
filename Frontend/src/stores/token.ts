@@ -41,49 +41,33 @@ export const useToken = defineStore("token", {
   },
 });
 
+interface info{
+  userType:string
+}
+
 export const usePersonalInfo = defineStore("personalInfo", {
   state: () => ({
-    balance: 0,
-    name: "",
-    role: null as string | null,
+    info:null as info|null
   }),
   actions: {
-    addInfo(balance: number, name: string, role: string) {
-      this.balance = balance;
-      this.name = name;
-      this.role = role;
+    addInfo(info: info) {
+     this.info=info
+     this.saveToLocalStorage()
     },
     saveToLocalStorage() {
-      localStorage.setItem("balance", JSON.stringify(this.balance));
-      localStorage.setItem("role", JSON.stringify(this.role));
-      localStorage.setItem("name", JSON.stringify(this.name));
+      localStorage.setItem("info", JSON.stringify(this.info));
     },
   },
   getters: {
-    getBalance(state) {
-      const data = localStorage.getItem("balance");
+    getInfo(state) {
+      const data = localStorage.getItem("info");
 
       if (data) {
-        this.balance = JSON.parse(data);
+        this.info = JSON.parse(data);
       }
-      return state.balance;
+      return state.info;
     },
-    getRole(state) {
-      const data = localStorage.getItem("role");
-
-      if (data) {
-        this.role = JSON.parse(data);
-      }
-      return state.role;
-    },
-    getName(state) {
-      const data = localStorage.getItem("name");
-
-      if (data) {
-        this.name = JSON.parse(data);
-      }
-      return state.name;
-    },
+   
   },
 });
 

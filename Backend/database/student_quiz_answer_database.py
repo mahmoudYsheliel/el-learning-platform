@@ -16,7 +16,6 @@ async def add_answer(student_id: str,quiz_id:str,answers:list[Answer]) -> Servic
         if not any(q['id'] == ans.model_dump()['question_id'] for q in result['questions']):
             return ServiceResponse(success=False,status_code=400, msg="wrong question id")
         for q in result['questions']:
-            print(q['choices'])
             if   any( c['id'] == ans.model_dump()['choice_id']    for c in q['choices']):
                 break
             return ServiceResponse(success=False,status_code=400, msg="wrong choice id")

@@ -2,16 +2,34 @@
 import "primeicons/primeicons.css";
 import { ref, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
+import Tree from "primevue/tree";
 
-const prop = defineProps(["material", "courseTitle"]);
+const prop = defineProps(["chapters", "courseTitle"]);
 
 const router = useRouter();
 const route = useRoute();
-const seletedMat = computed(() => {
-  return route.params.materialId;
-});
-
 const shrink = ref(false);
+const selectedKey = ref();
+
+const chaptersObj = computed(() => {
+  let chaptersObj = prop.chapters;
+  for (let index = 0; index < chaptersObj?.length; index++) {
+    chaptersObj[index].label = chaptersObj[index].title;
+    chaptersObj[index].children = chaptersObj[index].materials;
+    chaptersObj[index].key = 'k'+index.toString();
+    for (let j = 0; j < chaptersObj[index].children?.length; j++) {
+      chaptersObj[index].children[j].label =
+        chaptersObj[index].children[j].title;
+      chaptersObj[index].children[j].key =
+        'k'+index.toString() + "_" + j.toString();
+      if (chaptersObj[index].children[j].Id == route.params.materialId) {
+        selectedKey.value = Object.fromEntries(new Map([[chaptersObj[index].children[j].key,true]]));
+        
+      }
+    }
+  }
+  return chaptersObj;
+});
 </script>
 
 <template>
@@ -25,21 +43,27 @@ const shrink = ref(false);
         {{ courseTitle }}
       </h3>
       <div class="wrapper">
-        <div
-          v-for="(mat, i) in material"
-          :class="{ selected: seletedMat == mat.Id }"
-          class="element"
-          @click="
-            () => {
-              router.push(
-                `/viewCoursePage/${route.params.courseId}/${route.params.enrollmentId}/${mat.Id}`
-              );
+        <Tree
+          v-model:selectionKeys="selectedKey"
+          :value="chaptersObj"
+          selectionMode="single"
+          :metaKeySelection="false"
+          @nodeSelect="(node:any) => {
+            if (node.Id){router.push(
+                `/viewCoursePage/${route.params.courseId}/${route.params.enrollmentId}/${node.Id}`
+              );}
+            }"
+          @node-unselect="
+            (node) => {
+              if (node.Id) {
+                router.push(
+                  `/viewCoursePage/${route.params.courseId}/${route.params.enrollmentId}/${node.Id}`
+                );
+              }
             }
           "
-        >
-          <i :class="mat.icon" />
-          {{ mat.title }}
-        </div>
+          :pt="{ root: { style: 'padding:0' } }"
+        />
       </div>
     </div>
   </main>
@@ -47,10 +71,10 @@ const shrink = ref(false);
 
 <style scoped>
 main {
-  height: 100%;
+  min-height: 100%;
   width: fit-content;
   position: relative;
-
+  padding-bottom: 2rem;
   box-shadow: 4px 8px 8px var(--primary);
 }
 .container {
@@ -120,6 +144,7 @@ h3 {
 .wrapper {
   height: calc(100% - 6rem);
   overflow-y: scroll;
+  padding: 0;
 }
 .wrapper::-webkit-scrollbar {
   display: none;

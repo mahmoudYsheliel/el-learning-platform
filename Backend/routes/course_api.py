@@ -30,7 +30,6 @@ async def update_course(course_id:str=Body(embed=True),new_course:dict = Body(em
 
 @router.post('/create_course')
 async def create_course(new_course:Course =Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
-    new_course.main_instructor = userId
     res = await course_database.create_course(new_course)
     return res
 

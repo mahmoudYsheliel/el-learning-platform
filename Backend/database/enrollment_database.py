@@ -1,15 +1,16 @@
-from models.enrollments import Enrollment
+from models.enrollments import Enrollment,RequestEnrollment
 from models.runtime import ServiceResponse
 from database.mongo_driver import  get_database,validate_bson_id
 
 
-async def create_enrollment(enrollment: Enrollment,user_id) -> ServiceResponse:
-    mdb_result = await get_database().get_collection('enrollment').find_one({'student_id':user_id,'course_id':enrollment.course_id},{'id': {'$toString': '$_id'},})
+async def create_enrollment(enrollment: Enrollment) -> ServiceResponse:
+
+    mdb_result = await get_database().get_collection('enrollment').find_one({'student_id':enrollment.student_id,'course_id':enrollment.course_id},{'id': {'$toString': '$_id'},})
     if mdb_result:
         return ServiceResponse(data={'enrollment_id': mdb_result['id']})
 
     
-    user_bson = validate_bson_id(user_id)
+    user_bson = validate_bson_id(enrollment.student_id)
     user = await get_database().get_collection('user').find_one({'_id':user_bson},{'balance':1})
     
     course_bson = validate_bson_id(enrollment.course_id)
@@ -21,21 +22,23 @@ async def create_enrollment(enrollment: Enrollment,user_id) -> ServiceResponse:
     if not course:
         return ServiceResponse(success=False,msg="couln't find course",status_code=409 )
 
-    await get_database().get_collection('course').update_one(
-        {'_id': course_bson}, {'$set': {'number_of_enrollments':course['number_of_enrollments']+1}}
-    )
+   
 
     
     if course['price'] > user['balance']:
-        return ServiceResponse(success=False,msg="not enough balance",status_code=409 )
+        pass
+      #  return ServiceResponse(success=False,msg="not enough balance",status_code=409 )
     else:
         new_balance = user['balance'] - course['price'] 
         result = await get_database().get_collection('user').update_one({'_id':user_bson}, {'$set':{ 'balance':new_balance}})
+        await get_database().get_collection('course').update_one(
+        {'_id': course_bson}, {'$set': {'number_of_enrollments':course['number_of_enrollments']+1}}
+    )
         if not result.modified_count:
           return ServiceResponse(success=False, status_code=404, msg='enrollment not Found')
   
     
-    enrollment.student_id = user_id  
+    
         
     mdb_result = await get_database().get_collection('enrollment').insert_one(enrollment.model_dump())
     enrollment_id =str(mdb_result.inserted_id)
@@ -84,7 +87,7 @@ async def get_enrollment(course_id:str,user_id:str)-> ServiceResponse:
 
     bson_student_id=validate_bson_id(user_id)
     
-    enrollment = await get_database().get_collection('enrollment').find_one({'student_id':user_id,"course_id":course_id}, {
+    enrollment = await get_database().get_collection('enrollment').find_one({'student_id':str(user_id),"course_id":course_id}, {
         '_id': 0,
         'id': {'$toString': '$_id'},
         'progress':1,
@@ -99,14 +102,25 @@ async def get_enrollment(course_id:str,user_id:str)-> ServiceResponse:
 
 async def get_all_enrollments(user_id:str): 
     bson_student_id=validate_bson_id(user_id)
+    if(bson_student_id):
+        enrollments = await get_database().get_collection('enrollment').find({"student_id":str(user_id)}, {
+            '_id': 0,
+            'id': {'$toString': '$_id'},
+            'course_id':1,
+            'progress':1,
+        }).to_list(length=None)
     
-    enrollments = await get_database().get_collection('enrollment').find({"student_id":bson_student_id}, {
-        '_id': 0,
-        'id': {'$toString': '$_id'},
-        'course_id':1,
-        'progress':1,
-    }).to_list(length=None)
+        if  enrollments:
+            return ServiceResponse(data={'enrollments': enrollments})
+    return ServiceResponse(success=False,status_code=404, msg='enrollments Not Found')
+
+
+
+
+async def request_enrollment(requesr:RequestEnrollment): 
     
-    if not enrollments:
-        return ServiceResponse(success=False,status_code=404, msg='enrollments Not Found')
-    return ServiceResponse(data={'enrollments': enrollments})
+    mdb_result = await get_database().get_collection('requesrt_enrollment').insert_one(requesr.model_dump())
+    requesrt_enrollment_id =str(mdb_result.inserted_id)
+    if requesrt_enrollment_id:
+        return ServiceResponse(data={'requesrt_enrollment_id': requesrt_enrollment_id})
+    return ServiceResponse(success=False,msg="couln't add enrollment",status_code=409 )

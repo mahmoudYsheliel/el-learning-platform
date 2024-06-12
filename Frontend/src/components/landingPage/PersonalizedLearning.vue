@@ -29,7 +29,7 @@ online questionnaire designed by our experienced psychologists.
 <style scoped>
 main {
   display: flex;
-  padding: 6rem;
+  padding: 5rem 10rem;
   justify-content: space-between;
 }
 .container {
@@ -71,9 +71,31 @@ button {
   border: 2px solid var(--accent1);
   border-radius: 16px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .arrow {
    display: none;
+  }
+}
+@media screen and (max-width: 1400px) {
+  
+  .container{
+    width: 60%;
+  }
+  main{
+    padding-inline: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .image{
+    display: none;
+  }
+  .container{
+    width: 90%;
+  }
+}
+@media screen  and (max-width: 1800px) {
+  .sparkle{
+    display: none;
   }
 }
 </style>

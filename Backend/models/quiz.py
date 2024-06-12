@@ -4,13 +4,12 @@ from pydantic import BaseModel
 class Choice(BaseModel):
     id:Optional[int]=0
     choice:str
-    isRight:bool=False
 
 class Question(BaseModel):
     id:Optional[int]=0
     question:str
     choices:list[Choice]
-    multicorrect:Optional[bool]=False
+    correct_answer_id:int
     
 
 class Quiz(BaseModel):

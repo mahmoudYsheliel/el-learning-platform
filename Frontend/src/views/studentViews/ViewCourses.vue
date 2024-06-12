@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Navbar from "../../components/landingPage/Navbar.vue";
+import Navbar from "../../components/general/Navbar.vue";
 import Categories from "../../components/viewCourses/Categories.vue";
 import Courses from "../../components/viewCourses/Courses.vue";
 import axios from "axios";

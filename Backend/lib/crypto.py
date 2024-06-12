@@ -4,7 +4,6 @@ from passlib.context import CryptContext
 from typing import Any,Annotated
 from fastapi.security import OAuth2PasswordBearer
 from datetime import datetime, timedelta, timezone
-from models.user import TokenData
 from database.mongo_driver import validate_bson_id
 
 
@@ -56,15 +55,13 @@ async def auth_user(token: Annotated[str, Depends(oauth2_scheme)]):
     try:
         payload = jwt.decode(token, _jwt_key, algorithms=[algo])
         user_id: str = payload.get("userId")
-        user_role: str = payload.get("user_role")
-        if user_id is None or user_role is None:
+        if user_id is None :
             raise credentials_exception
-        token_data = TokenData(user_id=user_id,role=user_role)
     except JWTError:
         raise credentials_exception
-    user_id = validate_bson_id(token_data.user_id)
+    user_id = validate_bson_id(user_id)
     if user_id is None:
         raise credentials_exception
-    return token_data.user_id
+    return user_id
 
 

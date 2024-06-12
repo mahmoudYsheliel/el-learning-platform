@@ -25,8 +25,15 @@ class Progress(BaseModel):
     
 
 class Enrollment(BaseModel):
-    id:Optional[str] = None
-    student_id:Optional[str]=None
+    id:Optional[str] = ''
+    student_id:Optional[str]=''
     course_id:str
     created_at:datetime
     progress:Optional[Progress]={}
+    
+    
+class RequestEnrollment(BaseModel):
+    id:Optional[str] = ''
+    student_id:Optional[str]=''
+    course_id:str
+    created_at:datetime

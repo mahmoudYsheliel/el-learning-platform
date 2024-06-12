@@ -1,92 +1,107 @@
 <script lang="ts" setup>
-import Navbar from "../../components/landingPage/Navbar.vue";
+import Navbar from "../../components/general/Navbar.vue";
 import SideBar from "../../components/coursePage/SideBar.vue";
 import Lesson from "../../components/coursePage/Lesson.vue";
 import Quiz from "../../components/coursePage/Quiz.vue";
-import Assesment from "../../components/coursePage/Assesment.vue";
-import { ref, computed } from "vue";
+import Quiz2 from "../../components/coursePage/Quiz2.vue";
+import { ref, computed,watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import axios from "axios";
+import { HttpRequester } from "@/lib/APICaller";
 import Button from "primevue/button";
 
-const material = ref();
+
+
+const chapters = ref();
 const title = ref();
 const route = useRoute();
 const router = useRouter();
+const path=computed(()=>{return route.params.materialId})
+watch(path,()=>{getCourse()})
 const getCourse = async () => {
-  axios
-    .post(
-      "http://127.0.0.1:8000/get_course",
-      { course_id: route.params.courseId },
-      {}
-    )
-    .then((res) => {
-      try {
-        let c = res.data.data.course["material"];
-        material.value = res.data.data.course["material"];
-        title.value = res.data.data.course["title"];
-        function compareOrder(a: any, b: any) {
-          return a.order - b.order;
-        }
-        material.value.sort(compareOrder);
-        for (let i = 0; i < material.value.length; i++) {
-          if (material.value[i].type === "Lesson") {
-            material.value[i].icon = "pi pi-book";
+  const courseRequester = new HttpRequester("get_course");
+  courseRequester.callApi({ course_id: route.params.courseId }).then((res) => {
+    if (res.success) {
+      chapters.value = res.data.course.chapters;
+      title.value = res.data.course.title;
+      for (let material of chapters.value) {
+        for (let i = 0; i < material.materials.length; i++) {
+          if (material.materials[i].type === "Lesson") {
+            material.materials[i].icon = "pi pi-book";
           }
-          if (material.value[i].type === "Quiz") {
-            material.value[i].icon = "pi pi-check-square";
-          }
-          if (material.value[i].type === "Assesment") {
-            material.value[i].icon = "pi pi-file";
+          if (material.materials[i].type === "Quiz") {
+            material.materials[i].icon = "pi pi-check-square";
           }
         }
-      } catch (err) {}
-    });
+      }
+    }
+  });
 };
+
 getCourse();
+
+const materialComponnent = computed(() => {
+  let materialId = route.params.materialId;
+  for (
+    let chapterIndex = 0;
+    chapterIndex < chapters.value?.length;
+    chapterIndex++
+  ) {
+    const chapter = chapters.value[chapterIndex];
+    for (
+      let materialIndex = 0;
+      materialIndex < chapter.materials.length;
+      materialIndex++
+    ) {
+      const material = chapter.materials[materialIndex];
+      if (material.Id === materialId) {
+        let prevMaterialId = null;
+        let nextMaterialId = null;
+
+        // Determine previous material ID
+        if (materialIndex > 0) {
+          prevMaterialId = chapter.materials[materialIndex - 1].Id;
+        } else if (chapterIndex > 0) {
+          const prevChapter = chapters.value[chapterIndex - 1];
+          prevMaterialId =
+            prevChapter.materials[prevChapter.materials.length - 1].Id;
+        }
+
+        // Determine next material ID
+        if (materialIndex < chapter.materials.length - 1) {
+          nextMaterialId = chapter.materials[materialIndex + 1].Id;
+        } else if (chapterIndex < chapters.value.length - 1) {
+          const nextChapter = chapters.value[chapterIndex + 1];
+          if (nextChapter.materials.length > 0) {
+            nextMaterialId = nextChapter.materials[0].Id;
+          }
+        }
+        let type 
+        if (material.type==='Lesson'){type=Lesson}
+        if (material.type==='Quiz'){type=Quiz2}
+        return {
+          type: type,
+          prevMaterialId: prevMaterialId,
+          nextMaterialId: nextMaterialId,
+        };
+      }
+    }
+  }
+  return null;
+});
 function previous() {
   if (materialComponnent.value) {
     router.push(
-      `/viewCoursePage/${route.params.courseId}/${route.params.enrollmentId}/${
-        material.value[materialComponnent.value.order - 1].Id
-      }`
+      `/viewCoursePage/${route.params.courseId}/${route.params.enrollmentId}/${materialComponnent.value.prevMaterialId}`
     );
   }
 }
 function next() {
   if (materialComponnent.value) {
     router.push(
-      `/viewCoursePage/${route.params.courseId}/${route.params.enrollmentId}/${
-        material.value[materialComponnent.value.order + 1].Id
-      }`
+      `/viewCoursePage/${route.params.courseId}/${route.params.enrollmentId}/${materialComponnent.value.nextMaterialId}`
     );
   }
 }
-const seletedMat = computed(() => {
-  const specificMaterial = material.value?.find(
-    (item: any) => item?.Id === route.params.materialId
-  );
-
-  return specificMaterial;
-});
-const materialComponnent = computed(() => {
-  let i = material.value?.indexOf(seletedMat.value);
-  let end = false;
-  if (i == material.value?.length - 1) {
-    end = true;
-  }
-  if (seletedMat.value?.type == "Lesson") {
-    return { type: Lesson, order: i, end: end };
-  }
-  if (seletedMat.value?.type == "Quiz") {
-    return { type: Quiz, order: i, end: end };
-  }
-  if (seletedMat.value?.type == "Assesment") {
-    return { type: Assesment, order: i, end: end };
-  }
-
-  return null;
-});
 </script>
 
 <template>
@@ -94,19 +109,19 @@ const materialComponnent = computed(() => {
     <Navbar />
     <div class="container">
       <div class="sidebar">
-        <SideBar :material="material" :course-title="title" />
+        <SideBar :chapters="chapters" :course-title="title" />
       </div>
       <div class="wrapper">
         <component :is="materialComponnent?.type" />
         <div class="Button-Wrapper">
           <Button
             label="Previous"
-            :class="{ hide: materialComponnent?.order == 0 }"
+            :class="{ hide: !materialComponnent?.prevMaterialId }"
             @click="previous"
           />
           <Button
             label="Next"
-            :class="{ hide: materialComponnent?.end }"
+            :class="{ hide: !materialComponnent?.nextMaterialId }"
             @click="next"
           />
         </div>
@@ -120,18 +135,16 @@ const materialComponnent = computed(() => {
   display: grid;
   grid-template-columns: max-content 1fr;
 }
-.sidebar,
-.wrapper {
-  height: calc(100vh - 5rem);
-}
 .hide {
   visibility: hidden;
 }
 .wrapper {
   overflow-y: scroll;
+  margin-bottom: 2rem;
 }
 .wrapper::-webkit-scrollbar {
   display: none;
+  
 }
 Button {
   font-size: 1.5rem;

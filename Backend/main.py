@@ -6,13 +6,14 @@ from routes import (
     user_api,
     lesson_api,
     chat_api,
-    assesment_api,
     student_assesment_answer_api,
     quiz_api,
     student_quiz_answer_api,
     course_api,
     category_api,
     enrollment_api,
+    assesment_api,
+    program_api
 )
 
 
@@ -43,3 +44,4 @@ app.include_router(student_quiz_answer_api.router)
 app.include_router(course_api.router)
 app.include_router(category_api.router)
 app.include_router(enrollment_api.router)
+app.include_router(program_api.router)

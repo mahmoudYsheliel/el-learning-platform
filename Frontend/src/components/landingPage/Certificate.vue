@@ -7,11 +7,13 @@ import Button from "primevue/button";
     <img class="image" src="../../assets/certificate.png" alt="" />
     <div class="container">
       <img
+      class="sparkle"
         style="position: absolute; left: -25%"
         src="../../assets/StarFour.svg"
         alt=""
       />
       <img
+      class="sparkle"
         style="position: absolute; left: -30%; bottom: 0"
         src="../../assets/Sparkle.svg"
         alt=""
@@ -23,7 +25,7 @@ import Button from "primevue/button";
         the age of four till the age of eighteen years old. Exclusively in
         Egypt, Trace is empowered by Engineering for kids.
       </p>
-      <Button label="Book Workshop" />
+      <Button label="Join Us" />
     </div>
   </main>
 </template>
@@ -31,7 +33,7 @@ import Button from "primevue/button";
 <style scoped>
 main {
   display: flex;
-  padding: 6rem;
+  padding: 5rem 10rem;
   justify-content: space-between;
 }
 .container {
@@ -58,10 +60,29 @@ button {
 image {
   height: fit-content;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .image {
-    width: 40%;
+    width: 30%;
     height: fit-content;
+  }
+  .container{
+    width: 60%;
+  }
+  main{
+    padding-inline: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .image{
+    display: none;
+  }
+  .container{
+    width: 90%;
+  }
+}
+@media screen  and (max-width: 1800px) {
+  .sparkle{
+    display: none;
   }
 }
 </style>

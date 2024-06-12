@@ -27,7 +27,6 @@ def test_create_user():
     # check status code
     assert res.status_code == 200
     data = json.loads(res.content)
-    print('datadata',data)
     # check if response contains id
     assert data["data"]["user_id"]
 

@@ -1,44 +1,50 @@
 from typing import Optional
 from pydantic import BaseModel,Field
-from enum import Enum
-from  datetime import datetime
-
-
-class UserRole(Enum):
-    STUDENT = 0
-    INSTRUCTOR = 1
-    PARENT = 2
-    ADMIN = 3       
-
-
-
+from datetime import datetime
+   
 
 class User(BaseModel):
     id:Optional[str] = None
-    balance:Optional[float]=0
-    age:Optional[int]=0
-    grade:Optional[int]=0
-    specialization:Optional[str]=''
-    role:Optional[int] =0
-    #there is a problem regarding uniquness
     email:str = Field(unique=True)
     username:str = Field(unique=True)
     hashed_pass:str
-    phone_number:str
+    user_type:str #Instructor Child Parent
     created_at: Optional[datetime]=datetime.now().isoformat()
-    #role:UserRole
-    
+    phone_number:Optional[str]=''
+    first_name:Optional[str]=''
+    last_name:Optional[str]=''
+    birth_day:Optional[str]=''
+    gender:Optional[str]=''
+    balance:Optional[float]=0
     
 
-     
+class Instructor (BaseModel):
+    id:Optional[str] = None
+    user_id: str=Field(unique=True)
+    specialization:Optional[str]=''
+    
+    
+class Parent(BaseModel):
+    id:Optional[str] = None
+    user_id:str =Field(unique=True)
+    location:Optional[str]=''
+    job:Optional[str]=''
+    children:Optional[list[str]]=[]
+    
+class Child(BaseModel):
+    id:Optional[str] = None
+    user_id:str  =Field(unique=True)
+    grade:Optional[str]=0 
+    child_group:Optional[str]=''
+    education_system:Optional[str]=''
+
+
+    
 
 class Token(BaseModel):
     access_token:str
     
-    
-class TokenData(BaseModel):
-    user_id: str 
-    role: UserRole
+
     
     
     

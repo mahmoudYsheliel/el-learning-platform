@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import AboutUs from "../../components/landingPage/AboutUs.vue";
-import Navbar from "../../components/landingPage/Navbar.vue";
+import Navbar from "../../components/general/Navbar.vue";
 import HeroSection from "../../components/landingPage/HeroSection.vue";
-import FQA from "../../components/landingPage/FQA.vue";
-import Benefits from "../../components/landingPage/Benefits.vue";
-import OurParents from "../../components/landingPage/OurParents.vue";
-import Options from "../../components/landingPage/Options.vue";
+import Options from "../../components/general/Options.vue";
 import Programs from "../../components/landingPage/Programs.vue";
 import Workshop from "../../components/landingPage/Workshop.vue";
 import Certificate from "../../components/landingPage/Certificate.vue";
 import PersonalizedLearning from "../../components/landingPage/PersonalizedLearning.vue";
+import Achievement from "../../components/landingPage/Achievement.vue";
+import Footer from '../../components/general/Footer.vue'
 </script>
 <template>
   <main>
@@ -18,12 +16,10 @@ import PersonalizedLearning from "../../components/landingPage/PersonalizedLearn
       <HeroSection />
       <Programs/>
       <Workshop/>
-      <PersonalizedLearning/>
       <Certificate/>
-      <AboutUs />
-      <Benefits />
-      <OurParents />
-      <FQA />
+      <Achievement/>
+      <PersonalizedLearning/>
+      <Footer/>
   </main>
 </template>
 

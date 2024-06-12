@@ -2,24 +2,29 @@
 import SplitButton from "primevue/splitbutton";
 
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+import { HttpRequester } from "@/lib/APICaller";
 
-const menu = ref();
-const items = ref([
-  
-      {
-        label: "Discovery Zone",
-      },
-      {
-        label: "Path Finder",
-      },
-      {
-        label: "Master",
-      },
-]);
+const programRequester = new HttpRequester("get_all_program");
 
-const toggle = (event: any) => {
-  menu.value.toggle(event);
-};
+const programs = ref();
+
+const router = useRouter();
+const items = ref<any[]>([]);
+
+programRequester.callApi().then((res) => {
+  programs.value = res.data.program;
+  if (programs.value) {
+    for (let program of programs.value) {
+      items.value.push({
+        label: program.title,
+        command: () => {
+          router.push(`programs/${program.id}`);
+        },
+      });
+    }
+  }
+});
 </script>
 
 <template>
@@ -30,9 +35,13 @@ const toggle = (event: any) => {
     </div>
 
     <div class="options">
-        <span>Trace Plans</span>
+      <span>Trace Plans</span>
       <div class="card flex justify-content-center">
-        <SplitButton severity="help" class="programs" label="Programs"  :model="items" text />
+        <SplitButton
+          label="Programs"
+          :model="items"
+          text
+        />
       </div>
       <span>العربية</span>
     </div>
@@ -48,9 +57,8 @@ main {
   align-items: start;
   margin-top: 2rem;
 }
-.image{
-    position: relative;
-    top:  3rem;
+.image {
+  position: relative;
 }
 .options {
   display: flex;
@@ -68,5 +76,4 @@ p {
   color: var(--accent2);
   margin-left: 1rem;
 }
-
 </style>

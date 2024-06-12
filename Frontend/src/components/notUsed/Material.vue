@@ -7,7 +7,9 @@ for (let i = 0; i < prop.material?.length; i++) {
     prop.material[i].type = "pi pi-book";
   }
   if (prop.material[i].type === "Quiz") {
-    prop.material[i].type = "pi pi-check-square";
+    prop.material[i].type = "pi pi-check-square
+
+";
   }
   if (prop.material[i].type === "Assesment") {
     prop.material[i].type = "pi pi-file";

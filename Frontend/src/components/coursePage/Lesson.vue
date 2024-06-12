@@ -1,48 +1,31 @@
 <script lang="ts" setup>
-import axios from "axios";
-import { computed, ref } from "vue";
+import { computed, ref,watch } from "vue";
 import { useRoute } from "vue-router";
-import { useToken } from "@/stores/token";
-const token = useToken();
-const route = useRoute();
+import { HttpRequester } from "@/lib/APICaller";
 
-const seletedMat = computed(() => {
-  return route.params.materialId;
-});
-const title = ref();
-const description = ref();
-const source = ref();
-const getCourse = async () => {
-  axios
-    .post(
-      "http://127.0.0.1:8000/get_lesson",
-      { lesson_id: seletedMat.value },
-      {
-        headers: {
-          Authorization: `Bearer ${token.getToken}`,
-        },
-      }
-    )
-    .then((res) => {
-      try {
-        title.value = res.data.data.lesson["title"];
-        description.value = res.data.data.lesson["description"];
-        source.value = res.data.data.lesson["source"];
-      } catch (err) {}
-    });
+const route =useRoute()
+const lesson =ref()
+const path=computed(()=>{return route.params.materialId})
+watch(path,()=>{getlesson()})
+const getlesson = () => {
+  const lessonRequester = new HttpRequester('get_lesson')
+  lessonRequester.callApi({lesson_id:route.params.materialId}).then(res=>{if(res.success){
+    lesson.value = res.data.lesson
+    console.log(lesson.value)
+  }})
 };
-getCourse();
+getlesson();
 </script>
 
 <template>
   <main>
     <div class="container">
       <h2>
-        {{ title }}
+        {{ lesson?.title }}
       </h2>
-      <p>{{ description }}</p>
+      <p>{{ lesson?.description }}</p>
       <div class="wrapper">
-        <iframe :src="source" frameborder="0"></iframe>
+        <iframe :src="lesson?.source" frameborder="0"></iframe>
       </div>
     </div>
   </main>
@@ -54,11 +37,12 @@ getCourse();
   margin-inline: auto;
 }
 h2 {
-  color: var(--primary);
+  color: var(--accent1);
+  margin: 0;
+  line-height: 1rem;
   margin-top: 2rem;
-  border-bottom: 4px solid var(--primary);
+  border-bottom: 4px solid var(--accent3);
   width: fit-content;
-  margin-bottom: 1rem;
 }
 iframe {
   width: 100%;

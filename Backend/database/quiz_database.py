@@ -4,7 +4,6 @@ from database.mongo_driver import get_database, validate_bson_id
 
 
 async def create_quiz(quiz: Quiz) -> ServiceResponse:
-    quiz.last_question_number=0
     mdb_result = await get_database().get_collection("quiz").insert_one(quiz.model_dump())
     
     quiz_id = str(mdb_result.inserted_id)
@@ -88,9 +87,8 @@ async def add_question(quiz_id: str, question: Question) -> ServiceResponse:
     if not last_order:
         return ServiceResponse(success=False, status_code=400, msg="Bad quiz ID")
     last_order = last_order["last_question_number"]
-    question.id = last_order
     last_order = last_order + 1
-    
+    question.id = last_order
     for i, choice in enumerate(question.choices):
         choice.id=i
     

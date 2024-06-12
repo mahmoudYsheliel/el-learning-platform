@@ -1,45 +1,29 @@
 <script lang="ts" setup>
 import axios from "axios";
-import { computed, ref } from "vue";
+import { computed, ref,watch } from "vue";
 import { useRoute } from "vue-router";
 import { useToken } from "@/stores/token";
+import { HttpRequester } from "@/lib/APICaller";
 import "primeicons/primeicons.css";
 
 import Button from "primevue/button";
-const token = useToken();
+const path=computed(()=>{return route.params.materialId})
+watch(path,()=>{getCourse()})
 const route = useRoute();
 
-const seletedMat = computed(() => {
-  return route.params.materialId;
-});
-const title = ref();
-const description = ref();
-const questions = ref();
-const duration = ref();
-const getCourse = async () => {
-  axios
-    .post(
-      "http://127.0.0.1:8000/get_quiz",
-      { quiz_id: seletedMat.value },
-      {
-        headers: {
-          Authorization: `Bearer ${token.getToken}`,
-        },
-      }
-    )
-    .then((res) => {
-      try {
-        title.value = res.data.data.quiz["title"];
-        description.value = res.data.data.quiz["description"];
-        questions.value = res.data.data.quiz["questions"];
-        for (let q of questions.value) {
+const quiz = ref()
+const getCourse = () => {
+  const quizRequester = new HttpRequester('get_quiz')
+  quizRequester.callApi({quiz_id:route.params.materialId}).then(res=>{if(res.success){
+    quiz.value= res.data.quiz
+    for (let q of quiz.value.questions) {
           const showAnswer = ref(false);
           const selected = ref(null);
           q.showAnswer = showAnswer;
           q.selected = selected;
         }
-      } catch (err) {}
-    });
+  }})
+
 };
 getCourse();
 
@@ -52,12 +36,12 @@ function viewAnswer(q: any) {
   <main>
     <div class="container">
       <h2>
-        {{ title }}
+        {{ quiz?.title }}
       </h2>
-      <p>{{ description }}</p>
+      <p>{{ quiz?.description }}</p>
       <div class="wrapper">
         <div
-          v-for="question in questions"
+          v-for="question in quiz?.questions"
           class="question-container"
           :key="question.id"
         >
@@ -116,11 +100,12 @@ function viewAnswer(q: any) {
   margin-inline: auto;
 }
 h2 {
-  color: var(--primary);
+  color: var(--accent1);
+  margin: 0;
+  line-height: 1rem;
   margin-top: 2rem;
-  border-bottom: 4px solid var(--primary);
+  border-bottom: 4px solid var(--accent3);
   width: fit-content;
-  margin-bottom: 1rem;
 }
 .wrapper {
   margin-top: 2rem;

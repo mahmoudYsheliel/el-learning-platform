@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import Button from "primevue/button";
 import { ref } from "vue";
-import { usePersonalInfo } from "@/stores/token";
-import { useToken } from "@/stores/token";
+import { usePersonalInfo } from "../../stores/token";
+import { useToken } from "../../stores/token";
 import { useRouter, useRoute } from "vue-router";
 import axios from "axios";
 const prop = defineProps(["image", "title", "price", "firstLesson"]);

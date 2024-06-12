@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Body,Depends
-from models.enrollments import Enrollment
+from models.enrollments import Enrollment,RequestEnrollment
 import database.enrollment_database as enrollment_database
 from lib.crypto import auth_user
 from models.runtime import ServiceResponse
@@ -30,7 +30,9 @@ async def update_enrollment(enrollment_id:str=Body(embed=True),update:dict = Bod
 
 @router.post('/create_enrollment')
 async def create_enrollment(new_enrollment:Enrollment =Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
-    res = await enrollment_database.create_enrollment(new_enrollment,userId)
+    if (not new_enrollment.student_id):
+        new_enrollment.student_id = str(userId)  
+    res = await enrollment_database.create_enrollment(new_enrollment)
     return res
 
 
@@ -38,4 +40,16 @@ async def create_enrollment(new_enrollment:Enrollment =Body(embed=True),userId:s
 @router.post('/get_enrollments') 
 async def get_student_enrollments(userId:str = Depends(auth_user))-> ServiceResponse:
     res = await enrollment_database.get_all_enrollments(userId)
+    return res
+
+@router.post('/get_child_enrollments') 
+async def get_child_enrollments(child_id:str =Body(embed=True), userId:str = Depends(auth_user))-> ServiceResponse:
+    res = await enrollment_database.get_all_enrollments(child_id)
+    return res
+
+@router.post('/request_enrollment')
+async def request_enrollment(request:RequestEnrollment =Body(embed=True), userId:str = Depends(auth_user))-> ServiceResponse:
+    if (not request.student_id):
+        request.student_id = str(userId)  
+    res = await enrollment_database.request_enrollment(request)
     return res

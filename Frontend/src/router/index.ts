@@ -8,6 +8,15 @@ import instructorHome from '../views/instructorViews/instructorHome.vue';
 import addCourse from '@/views/instructorViews/addCourse.vue';
 import addCourseMaterial from '@/views/instructorViews/addCourseMaterial.vue';
 import signupPage from '@/views/studentViews/signupPage.vue';
+import viewProgram from '@/views/studentViews/viewProgram.vue';
+import parentProfile from '@/views/parentViews/parentProfile.vue';
+import children from '@/views/parentViews/children.vue';
+import payment from '@/views/parentViews/payment.vue';
+import subscription from '@/views/parentViews/subscription.vue';
+import parentSettings from '@/views/parentViews/parentSettings.vue';
+import addChild from '@/views/parentViews/addChild.vue'; 
+import parentViewCourse from '@/views/parentViews/parentViewCourse.vue';
+import childCourses from '@/views/studentViews/childCourses.vue';
 import { useToken } from "../stores/token";
 
 const router = createRouter({
@@ -32,7 +41,7 @@ const router = createRouter({
       meta: { requredAuth: false },
     },
     {
-      path: '/viewCourseDetails/:id',
+      path: '/viewCourseDetails/:courseId',
       name: 'viewCourseDetails',
       component: ViewCourseDetails,
       meta: { requredAuth: false },
@@ -67,23 +76,81 @@ const router = createRouter({
       component: signupPage,
       meta: { requredAuth: false },
     },
+    {
+      path: '/programs/:programId',
+      name: 'programs',
+      component: viewProgram,
+      meta: { requredAuth: false },
+    },
+
+
+    {
+      path: '/parentProfile',
+      name: 'parentProfile',
+      component: parentProfile,
+      meta: { requredAuth: true },
+    },
+    {
+      path: '/children',
+      name: 'children',
+      component: children,
+      meta: { requredAuth: true },
+    },
+    {
+      path: '/parentViewCourse/:courseId/:studentId/:isEnrolled',
+      name: 'parentViewCourse',
+      component: parentViewCourse,
+      meta: { requredAuth: true },
+    },
+    {
+      path: '/addChild',
+      name: 'addChild',
+      component: addChild,
+      meta: { requredAuth: true },
+    },
+    {
+      path: '/parentSettings',
+      name: 'parentSettings',
+      component: parentSettings,
+      meta: { requredAuth: true },
+    },
+    {
+      path: '/payment',
+      name: 'payment',
+      component: payment,
+      meta: { requredAuth: true },
+    },
+    {
+      path: '/subscription',
+      name: 'subscription',
+      component: subscription,
+      meta: { requredAuth: true },
+    },
+    {
+      path: '/childCourses',
+      name: 'childCourses',
+      component: childCourses,
+      meta: { requredAuth: true },
+    },
+    { path: "/:pathMatch(.*)", name:'notFound',component: LandingPage },
   ]
 })
-/*
-router.beforeResolve((to, from, next) => {
-  if(to.name=='notFound'){
-    next()
-  }
 
+router.beforeResolve(async(to, from, next) => {
+
+  if (to.name=='notFound'){
+    next({})
+  }
   const token = useToken();
   let authorized = token.getIsAuthorized;
-  console.log(authorized)
   if (to.meta.requredAuth && !authorized) {
-    next({ name: "lofin_signup" });
-  } else if (!to.meta.requredAuth && authorized) {
-    next({ name: "user" });
+    next({ name: "login" });
+  } else if ((to.name=='login' || to.name=='signup') && authorized) {
+    next({name:'home'})
   } else {
     next();
   }
-});*/
+});
+
+
 export default router
