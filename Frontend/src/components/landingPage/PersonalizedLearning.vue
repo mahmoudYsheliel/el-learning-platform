@@ -5,24 +5,38 @@ import Button from "primevue/button";
 <template>
   <main>
     <div class="container">
-      <img style="position: absolute;right: 0; bottom: 50%; transform: translate(120%,0); scale: 1.2;" src="../../assets/Arrow 07.svg" alt="" class="arrow">
-      <h1>Personalized Learning</h1>
-      <h1>Journey! <img
-        style="position: absolute; right: -100%"
-        src="../../assets/StarFour.svg"
+      <img
+        style="
+          position: absolute;
+          right: 0;
+          bottom: 50%;
+          transform: translate(120%, 0);
+          scale: 1.2;
+        "
+        src="/images/Arrow 07.svg"
         alt=""
-      /></h1>
+        class="arrow"
+      />
+      <h1>Personalized Learning</h1>
+      <h1>
+        Journey!
+        <img
+          style="position: absolute; right: -100%"
+          src="/images/StarFour.svg"
+          alt=""
+        />
+      </h1>
       <p>
         One Year Road Map
-        <br>
-As we believe in the importance of providing adequate knowledge
-for each learner, we have created a dedicated program roadmap
-for each learner that is based on the learners’ answers to their
-online questionnaire designed by our experienced psychologists.
+        <br />
+        As we believe in the importance of providing adequate knowledge for each
+        learner, we have created a dedicated program roadmap for each learner
+        that is based on the learners’ answers to their online questionnaire
+        designed by our experienced psychologists.
       </p>
       <Button label="See Roadmap" />
     </div>
-    <img class="image" src="../../assets/prsonalizedlearning.png" alt="" />
+    <img class="image" src="/images/prsonalizedlearning.png" alt="" />
   </main>
 </template>
 
@@ -51,7 +65,6 @@ h1 {
 }
 h1:first-of-type {
   color: var(--accent1);
-  
 }
 h1:last-of-type {
   color: var(--accent2);
@@ -73,28 +86,27 @@ button {
 }
 @media screen and (max-width: 1300px) {
   .arrow {
-   display: none;
+    display: none;
   }
 }
 @media screen and (max-width: 1400px) {
-  
-  .container{
+  .container {
     width: 60%;
   }
-  main{
+  main {
     padding-inline: 2rem;
   }
 }
 @media screen and (max-width: 600px) {
-  .image{
+  .image {
     display: none;
   }
-  .container{
+  .container {
     width: 90%;
   }
 }
-@media screen  and (max-width: 1800px) {
-  .sparkle{
+@media screen and (max-width: 1800px) {
+  .sparkle {
     display: none;
   }
 }

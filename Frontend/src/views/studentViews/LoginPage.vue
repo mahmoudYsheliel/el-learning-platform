@@ -34,8 +34,8 @@ function login() {
         const personalInfoRequester = new HttpRequester("personal_info");
         personalInfoRequester.callApi().then((res) => {
           if (res.success) {
-            personalInfo.addInfo({userType:res.data?.info?.user_type});
-            router.push('/')
+            personalInfo.addInfo({ userType: res.data?.info?.user_type });
+            router.push("/");
           }
         });
       }
@@ -50,7 +50,7 @@ function login() {
     <Options />
     <div class="container">
       <div class="left">
-        <img src="../../assets/login.png" alt="" />
+        <img src="/images/login.png" alt="" />
       </div>
       <div class="right">
         <div class="welcome">

@@ -18,7 +18,7 @@
       </p>
     </div>
 
-    <img src="../../assets/Screenshot from 2024-03-05 21-12-18 1.png" alt="" />
+    <img src="/images/Screenshot from 2024-03-05 21-12-18 1.png" alt="" />
   </main>
 </template>
 

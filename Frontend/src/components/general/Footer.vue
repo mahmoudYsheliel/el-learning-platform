@@ -27,7 +27,7 @@ const pages = [
 <template>
   <main>
     <div class="wrapper">
-      <img src="../../assets/logo3.png" alt="" />
+      <img src="/images/logo3.png" alt="" />
       <div class="programs">
         <h4>Programs</h4>
         <p v-for="program in programs">{{ program.name }}</p>
@@ -37,8 +37,16 @@ const pages = [
         <p v-for="page in pages">{{ page.name }}</p>
       </div>
       <div class="socialMedia">
-        <div><i class="pi pi-envelope"></i> <span>help@armstrong.courses</span></div>
-        <div> <i v-for="socialMediaIcon in socialMediaIcons" :class="socialMediaIcon.class"> </i></div>
+        <div>
+          <i class="pi pi-envelope"></i> <span>help@armstrong.courses</span>
+        </div>
+        <div>
+          <i
+            v-for="socialMediaIcon in socialMediaIcons"
+            :class="socialMediaIcon.class"
+          >
+          </i>
+        </div>
       </div>
     </div>
     <div class="copyRight">
@@ -52,36 +60,37 @@ const pages = [
 main {
   padding: 1rem 5rem;
   background-color: var(--accent1);
-   color: var(--primary);
+  color: var(--primary);
 }
-.wrapper{
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   align-items: start; 
-   gap: 5rem;
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  gap: 5rem;
 }
-p{
-    padding: 0;
-    margin: 0;
-    line-height: 1.5rem;
+p {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5rem;
 }
-i{
-    color: var(--secondary);
-    padding: 0.5rem;
-    background-color: var(--primary);
-    border-radius: 100%;
-    margin: 0.5rem;
+i {
+  color: var(--secondary);
+  padding: 0.5rem;
+  background-color: var(--primary);
+  border-radius: 100%;
+  margin: 0.5rem;
 }
-.programs>p,.pages>p{
-cursor: pointer;
+.programs > p,
+.pages > p {
+  cursor: pointer;
 }
-.copyRight{
-    margin-top: 2rem;
+.copyRight {
+  margin-top: 2rem;
 }
-@media screen and (max-width:500px)  {
-  img{
-    width: 75%
+@media screen and (max-width: 500px) {
+  img {
+    width: 75%;
   }
 }
 </style>

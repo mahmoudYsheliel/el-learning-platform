@@ -31,7 +31,7 @@ personalInformation();
 
 <template>
   <main>
-    <div class="logo"><img src="/src/assets/logo.png" alt="" /></div>
+    <div class="logo"><img src="/images/logo.png" alt="" /></div>
     <div class="profile">
       <div class="profile">
         <i class="pi pi-user" @click="viewLogout = !viewLogout"></i>

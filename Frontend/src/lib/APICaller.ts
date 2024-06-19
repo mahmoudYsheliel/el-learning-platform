@@ -9,7 +9,8 @@ export class HttpRequester {
 
   constructor(endpoint: string) {
     this.endpoint = endpoint;
-    this.base_endpoint = "http://127.0.0.1:8000/";
+    //this.base_endpoint = "http://127.0.0.1:8000/";
+    this.base_endpoint = "/";
     this.token = useToken();
     this.bearer = this.token.getToken;
   }
@@ -48,7 +49,7 @@ export class HttpRequester {
 
   public async callApi(queryParams?: object): Promise<any> {
     try {
-      const url = new URL(this.base_endpoint + this.endpoint);
+      const url = this.base_endpoint + this.endpoint;
 
       const config = {
         headers: {

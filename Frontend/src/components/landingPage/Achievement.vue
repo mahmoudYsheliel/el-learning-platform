@@ -3,25 +3,25 @@ import "primeicons/primeicons.css";
 
 const achievments = [
   {
-    class: "./src/assets/GraduationCap.svg",
+    class: "/images/GraduationCap.svg",
     info: "Instructor",
     count: 100,
     color: "#E9F8F3",
   },
   {
-    class: "./src/assets/VideoCamera.svg",
+    class: "/images/VideoCamera.svg",
     info: "Video",
     count: 1000,
     color: "#FFFAF5",
   },
   {
-    class: "./src/assets/GraduationCap.svg",
+    class: "/images/GraduationCap.svg",
     info: "Student",
     count: 2000,
     color: "#FFEEF0",
   },
   {
-    class: "./src/assets/UsersThree.svg",
+    class: "/images/UsersThree.svg",
     info: "Users",
     count: 10000,
     color: "#F0F7FF",
@@ -49,14 +49,18 @@ const achievments = [
             alt=""
           />
           <div class="info">
-            <h2 style="margin: '0';padding: 0;line-height: 0; font-size: 2rem;">{{ achievment.count }}</h2>
+            <h2
+              style="margin: '0'; padding: 0; line-height: 0; font-size: 2rem"
+            >
+              {{ achievment.count }}
+            </h2>
             <p>{{ achievment.info }}</p>
           </div>
         </div>
       </div>
     </div>
 
-    <img class="image" src="../../assets/achievments.png" alt="" />
+    <img class="image" src="/images/achievments.png" alt="" />
   </main>
 </template>
 
@@ -97,18 +101,18 @@ button {
     width: 30%;
     height: fit-content;
   }
-  .container{
+  .container {
     width: 60%;
   }
-  main{
+  main {
     padding-inline: 2rem;
   }
 }
 @media screen and (max-width: 1050px) {
-  .image{
+  .image {
     display: none;
   }
-  .container{
+  .container {
     width: 90%;
   }
 }

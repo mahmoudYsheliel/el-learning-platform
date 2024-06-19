@@ -7,7 +7,7 @@ import Button from "primevue/button";
     <div class="container">
       <img
         style="position: absolute; right: 0"
-        src="../../assets/StarFour.svg"
+        src="/images/StarFour.svg"
         alt=""
       />
       <div class="circle"></div>
@@ -20,7 +20,7 @@ import Button from "primevue/button";
       </p>
       <Button label="Book Workshop" />
     </div>
-    <img class="image" src="../../assets/workshop.png" alt="" />
+    <img class="image" src="/images/workshop.png" alt="" />
   </main>
 </template>
 
@@ -67,18 +67,18 @@ image {
     width: 30%;
     height: fit-content;
   }
-  .container{
+  .container {
     width: 60%;
   }
-  main{
+  main {
     padding-inline: 2rem;
   }
 }
 @media screen and (max-width: 600px) {
-  .image{
+  .image {
     display: none;
   }
-  .container{
+  .container {
     width: 90%;
   }
 }

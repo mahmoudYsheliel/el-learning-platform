@@ -30,18 +30,14 @@ programRequester.callApi().then((res) => {
 <template>
   <main>
     <div class="image">
-      <img src="../../assets/logo.png" alt="" />
+      <img src="/images/logo.png" alt="" />
       <p>Entertain Your Education</p>
     </div>
 
     <div class="options">
       <span>Trace Plans</span>
       <div class="card flex justify-content-center">
-        <SplitButton
-          label="Programs"
-          :model="items"
-          text
-        />
+        <SplitButton label="Programs" :model="items" text />
       </div>
       <span>العربية</span>
     </div>

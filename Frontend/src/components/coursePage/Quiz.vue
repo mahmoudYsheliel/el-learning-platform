@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import axios from "axios";
 import { computed, ref,watch } from "vue";
 import { useRoute } from "vue-router";
 import { useToken } from "@/stores/token";

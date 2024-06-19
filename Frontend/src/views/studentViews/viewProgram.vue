@@ -8,8 +8,7 @@ import { HttpRequester } from "@/lib/APICaller";
 
 import "primeicons/primeicons.css";
 
-import { ref ,computed,watch} from "vue";
-
+import { ref, computed, watch } from "vue";
 
 const programs = ref();
 const selectedProgram = ref();
@@ -18,8 +17,12 @@ const router = useRouter();
 const route = useRoute();
 const items = ref<any[]>([]);
 
-const path=computed(()=>{return route.params.programId})
-watch(path,()=>{requests()})
+const path = computed(() => {
+  return route.params.programId;
+});
+watch(path, () => {
+  requests();
+});
 
 function requests() {
   items.value = [];
@@ -76,16 +79,15 @@ const search = ref("");
           <h3>({{ selectedProgram?.age_group }})</h3>
         </div>
         <div class="description">
-        <p>{{ selectedProgram?.description }}</p>
-        <img :src="selectedProgram?.image" alt="">
-
+          <p>{{ selectedProgram?.description }}</p>
+          <img :src="selectedProgram?.image" alt="" />
         </div>
       </div>
       <div class="content">
         <h1 style="margin-block: 6rem 4rem">
           <img
             style="width: 1.5rem; margin-right: 0.5rem"
-            src="../../assets/pen.svg"
+            src="/images/pen.svg"
             alt=""
           />
           Start your Journey
@@ -162,27 +164,27 @@ h1 {
   width: 80%;
   margin-bottom: 10rem;
 }
-.description{
+.description {
   display: flex;
   padding-right: 10rem;
   gap: 15rem;
 }
-img{
+img {
   border-radius: 1rem;
   width: 20rem;
 }
 @media screen and (max-width: 1500px) {
-  .description{
+  .description {
     gap: 5rem;
     padding-right: 5rem;
   }
 }
 @media screen and (max-width: 1000px) {
-  .description{
+  .description {
     flex-direction: column-reverse;
     width: 90%;
   }
-  img{
+  img {
     width: 100%;
   }
 }

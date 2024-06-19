@@ -29,7 +29,7 @@ const programs = [
     <p class="header">Where Entertainment meets Education</p>
     <div class="wrapper">
       <div class="left">
-        <img src="../../assets/circleSparkleGroup.svg" alt="">
+        <img src="/images/circleSparkleGroup.svg" alt="" />
       </div>
       <div class="content">
         <div
@@ -38,26 +38,26 @@ const programs = [
           :style="{ backgroundColor: program.color }"
         >
           <div class="top">
-            <img src="../../assets/openBook.svg" style="width: 3rem" alt="" />
+            <img src="/images/openBook.svg" style="width: 3rem" alt="" />
             <div class="name-age">
               <p>{{ program.name }}</p>
               <p>{{ program.age }}</p>
             </div>
           </div>
           <p>{{ program.description }}</p>
-          <p style="margin: 0;">Learn More <i class="pi pi-angle-right"></i></p>
+          <p style="margin: 0">Learn More <i class="pi pi-angle-right"></i></p>
         </div>
       </div>
       <div class="right">
-        <img src="../../assets/Arrow 07.svg"  alt="" />
+        <img src="/images/Arrow 07.svg" alt="" />
       </div>
     </div>
   </main>
 </template>
 
 <style scoped>
-main{
-    margin-block:4rem ;
+main {
+  margin-block: 4rem;
 }
 .header {
   text-align: center;
@@ -73,7 +73,6 @@ h1 {
   align-items: center;
   justify-content: center;
   margin-top: 3rem;
-  
 }
 p.header {
   color: var(--text);
@@ -90,7 +89,7 @@ p.header {
   width: 18rem;
   color: var(--primary);
   border-radius: 8px;
-  padding: 1.5rem 2rem ;
+  padding: 1.5rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -101,29 +100,27 @@ p.header {
   align-items: center;
   gap: 1.5rem;
 }
-.name-age>*{
-    margin: 0;
-    padding: 0;
-    line-height: 1rem;
+.name-age > * {
+  margin: 0;
+  padding: 0;
+  line-height: 1rem;
 }
-.name-age{
-    
-    display: flex;
-    flex-direction: column;
-    gap:0.5rem;
+.name-age {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
-p{
-    margin: 0;
-    padding: 0;
-    line-height: 1.5rem;
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5rem;
 }
 @media screen and (max-width: 1300px) {
   .left {
-   display: none;
+    display: none;
   }
   .right {
-   display: none;
+    display: none;
   }
 }
-
 </style>

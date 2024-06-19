@@ -6,11 +6,11 @@ import { defineProps } from "vue";
 import { useRouter } from "vue-router";
 import { useToken } from "../../stores/token";
 import SplitButton from "primevue/splitbutton";
-import { ref,computed } from "vue";
+import { ref, computed } from "vue";
 import { HttpRequester } from "@/lib/APICaller";
 import { usePersonalInfo } from "../../stores/token";
 
-const personalInfo=usePersonalInfo()
+const personalInfo = usePersonalInfo();
 
 const token = useToken();
 defineProps(["selected"]);
@@ -29,73 +29,71 @@ const pagesToRoute = [
   { name: "Courses", to: "/" },
   { name: "Contact", to: "/" },
 ];
-const items = computed(()=>{
-if (personalInfo.getInfo?.userType=='Parent'){
-  return [
-  {
-    label: "My Profile",
+const items = computed(() => {
+  if (personalInfo.getInfo?.userType == "Parent") {
+    return [
+      {
+        label: "My Profile",
 
-    command: () => {
-      router.push("/parentProfile");
-    },
-  },
-  {
-    label: "Manage Children",
-    command: () => {
-      router.push("/children");
-    },
-  },
-  {
-    label: "Add Child",
-    command: () => {
-      router.push("/addChild");
-    },
-  },
-  {
-    label: "My Subscriptions",
-    command: () => {
-      router.push("/subscription");
-    },
-  },
-  {
-    label: "My Settings",
-    command: () => {
-      router.push("/parentSettings");
-    },
-  },
-  {
-    label: "My Payment Methods",
-    command: () => {
-      router.push("/payment");
-    },
-  },
-  
-  {
-    label: "Log out",
-    command: () => {
-      showDialogLogOut.value = true;
-    },
-  },
-]
-}
-else if (personalInfo.getInfo?.userType=='Child'){
-  return  [
-  {
-    label: "My Courses",
-    command: () => {
-      router.push("/childCourses");
-    },  
-  } ,
-  {
-    label: "Log out",
-    command: () => {
-      showDialogLogOut.value = true;
-    },
-  },
-]
-}
-}
-);
+        command: () => {
+          router.push("/parentProfile");
+        },
+      },
+      {
+        label: "Manage Children",
+        command: () => {
+          router.push("/children");
+        },
+      },
+      {
+        label: "Add Child",
+        command: () => {
+          router.push("/addChild");
+        },
+      },
+      {
+        label: "My Subscriptions",
+        command: () => {
+          router.push("/subscription");
+        },
+      },
+      {
+        label: "My Settings",
+        command: () => {
+          router.push("/parentSettings");
+        },
+      },
+      {
+        label: "My Payment Methods",
+        command: () => {
+          router.push("/payment");
+        },
+      },
+
+      {
+        label: "Log out",
+        command: () => {
+          showDialogLogOut.value = true;
+        },
+      },
+    ];
+  } else if (personalInfo.getInfo?.userType == "Child") {
+    return [
+      {
+        label: "My Courses",
+        command: () => {
+          router.push("/childCourses");
+        },
+      },
+      {
+        label: "Log out",
+        command: () => {
+          showDialogLogOut.value = true;
+        },
+      },
+    ];
+  }
+});
 </script>
 <template>
   <main>
@@ -142,7 +140,7 @@ else if (personalInfo.getInfo?.userType=='Child'){
               showDialogLogOut = false;
               const requester = new HttpRequester('/');
               requester.logOut();
-              router.push('/')
+              router.push('/');
             }
           "
           style="width: 8rem; background-color: red; color: var(--primary)"
@@ -152,7 +150,7 @@ else if (personalInfo.getInfo?.userType=='Child'){
     </Dialog>
 
     <div class="logo">
-      <img src="../../assets/log2.png" alt="" />
+      <img src="/images/log2.png" alt="" />
       <p class="logo-name">Trace Education</p>
     </div>
     <div class="options">

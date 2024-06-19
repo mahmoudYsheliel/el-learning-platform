@@ -45,10 +45,9 @@ function signup() {
         res.msg == "email is already used once" ||
         res.msg == "username is already used once"
       ) {
-        usernameEmailTaken.value=true
-      }
-      else if(res.success==true){
-        router.push('/login')
+        usernameEmailTaken.value = true;
+      } else if (res.success == true) {
+        router.push("/login");
       }
     });
   }
@@ -61,7 +60,7 @@ function signup() {
     <Options />
     <div class="container">
       <div class="left">
-        <img src="../../assets/login.png" alt="" />
+        <img src="/images/login.png" alt="" />
       </div>
       <div class="right">
         <div class="welcome">
@@ -82,7 +81,12 @@ function signup() {
         <h4 v-if="differentPassword">Different Password</h4>
         <h4 v-if="usernameEmailTaken">Username or Email is Taken</h4>
         <div class="wrapper">
-          <InputText type="email" class="input" v-model="email" placeholder="Email" />
+          <InputText
+            type="email"
+            class="input"
+            v-model="email"
+            placeholder="Email"
+          />
           <InputText class="input" v-model="username" placeholder="Username" />
           <Password
             class="input"

@@ -4,18 +4,18 @@ import Button from "primevue/button";
 
 <template>
   <main>
-    <img class="image" src="../../assets/certificate.png" alt="" />
+    <img class="image" src="/images/certificate.png" alt="" />
     <div class="container">
       <img
-      class="sparkle"
+        class="sparkle"
         style="position: absolute; left: -25%"
-        src="../../assets/StarFour.svg"
+        src="/images/StarFour.svg"
         alt=""
       />
       <img
-      class="sparkle"
+        class="sparkle"
         style="position: absolute; left: -30%; bottom: 0"
-        src="../../assets/Sparkle.svg"
+        src="/images/Sparkle.svg"
         alt=""
       />
       <h1>Earn your certificate By</h1>
@@ -65,23 +65,23 @@ image {
     width: 30%;
     height: fit-content;
   }
-  .container{
+  .container {
     width: 60%;
   }
-  main{
+  main {
     padding-inline: 2rem;
   }
 }
 @media screen and (max-width: 600px) {
-  .image{
+  .image {
     display: none;
   }
-  .container{
+  .container {
     width: 90%;
   }
 }
-@media screen  and (max-width: 1800px) {
-  .sparkle{
+@media screen and (max-width: 1800px) {
+  .sparkle {
     display: none;
   }
 }

@@ -1,7 +1,7 @@
 from models.user import User, Instructor, Child, Parent
 from models.runtime import ServiceResponse
 from database.mongo_driver import get_database, validate_bson_id
-from lib.crypto import verify_password
+from lib.crypto import verify_password,hash_password
 
 
 async def create_user(user: User) -> ServiceResponse:
@@ -26,6 +26,7 @@ async def create_user(user: User) -> ServiceResponse:
         return ServiceResponse(
             success=False, status_code=409, msg="username is already used once"
         )
+    user.hashed_pass = hash_password(user.hashed_pass)
     mdb_result = (
         await get_database().get_collection("user").insert_one(user.model_dump())
     )
