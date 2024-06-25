@@ -14,10 +14,12 @@ async def create_course(course: Course) -> ServiceResponse:
             if mat.type == 'Lesson':
                 result = await get_database().get_collection('lesson').find_one({'_id':bson_id})
                 if not result:
+                    print('lesson id',bson_id)
                     return ServiceResponse(success=False,msg='bad lesson id')
             elif mat.type == 'Quiz':
                 result = await get_database().get_collection('quiz').find_one({'_id':bson_id})
                 if not result:
+                    print('quiz id',bson_id)
                     return ServiceResponse(success=False,msg='bad quiz id')
             elif mat.type == 'Assesment':
                 result = await get_database().get_collection('assesment').find_one({'_id':bson_id})

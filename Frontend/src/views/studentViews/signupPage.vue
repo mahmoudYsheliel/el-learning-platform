@@ -2,7 +2,8 @@
 import Navbar from "@/components/general/Navbar.vue";
 import Options from "@/components/general/Options.vue";
 import Footer from "@/components/general/Footer.vue";
-
+import { decodeCredential } from "vue3-google-login";
+import { usePersonalInfo } from "@/stores/token";
 import "primeicons/primeicons.css";
 
 import Button from "primevue/button";
@@ -36,7 +37,7 @@ function signup() {
         email: email.value,
         username: username.value,
         hashed_pass: pass.value,
-        user_type: "Instructor",
+        user_type: "Parent",
       },
     };
 
@@ -52,6 +53,47 @@ function signup() {
     });
   }
 }
+
+const callback = (response: any) => {
+  // decodeCredential will retrive the JWT payload from the credential
+  const userData = decodeCredential(response.credential);
+  const emailVerified = (userData as any).email_verified;
+  if ((userData as any).email_verified) {
+    let data = {
+      user: {
+        email: (userData as any).email,
+        username: (userData as any).email,
+        hashed_pass: "mahmoud2000",
+        user_type: "Parent",
+      },
+    };
+
+    signupRequester.callApi(data).then((res) => {
+      if (
+        res.msg == "email is already used once" ||
+        res.msg == "username is already used once"
+      ) {
+        usernameEmailTaken.value = true;
+      } else if (res.success == true) {
+        const loginRequester = new HttpRequester("token");
+        const personalInfo = usePersonalInfo();
+        loginRequester.login( (userData as any).email , 'mahmoud2000').then((res) => {
+          console.log(res)
+          if (res.access_token) {
+            const personalInfoRequester = new HttpRequester("personal_info");
+            personalInfoRequester.callApi().then((res) => {
+              console.log(res);
+              if (res.success) {
+                personalInfo.addInfo({ userType: res.data?.info?.user_type });
+                router.push("/");
+              }
+            });
+          }
+        });
+      }
+    });
+  }
+};
 </script>
 
 <template>
@@ -68,14 +110,7 @@ function signup() {
           <h1>Trace Community</h1>
         </div>
         <div class="google-facebook-wrapper">
-          <div class="facebook">
-            <i class="pi pi-facebook"></i>
-            <p>Log in with Facebook</p>
-          </div>
-          <div class="google">
-            <i class="pi pi-google"></i>
-            <p>Log in with Google</p>
-          </div>
+          <GoogleLogin :callback="callback" />
         </div>
         <h4 v-if="missingInfo">Some Data Is Missing</h4>
         <h4 v-if="differentPassword">Different Password</h4>

@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "6606c6e543e416de9726f228"
+  },
+  "id": "string",
+  "category": "Embedded Systems",
+  "image": "https://images.spiceworks.com/800x400/wp-content/uploads/2023/10/12102017/Embedded-System.jpg",
+  "description": "Embedded systems are specialized computers in everyday devices, from cars to thermostats"
+},
+{
+  "_id": {
+    "$oid": "6606c79643e416de9726f229"
+  },
+  "id": "string",
+  "category": "Computer Programming",
+  "image": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*JG5yAvVMX1mAtjKXTEow4g.png",
+  "description": "Learn the basics of creating instructions for computers to follow"
+},
+{
+  "_id": {
+    "$oid": "6606c7e743e416de9726f22a"
+  },
+  "id": "string",
+  "category": "Computer Networks",
+  "image": "https://media.geeksforgeeks.org/wp-content/uploads/20230406152358/CN-(1).jpg",
+  "description": "Explore how computers communicate and share resources"
+},
+{
+  "_id": {
+    "$oid": "6606c84243e416de9726f22b"
+  },
+  "id": "string",
+  "category": "Robotics",
+  "image": "https://www.therobotreport.com/wp-content/uploads/2023/06/sick-sponsored-featured-image-july2023-article1.jpg",
+  "description": "Design and build intelligent machines helping you in daily life"
+}]

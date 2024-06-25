@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "665895db078c4d7259a520eb"
+  },
+  "id": "1",
+  "title": "Python Basics Quiz",
+  "description": "Test your knowledge of Python basics.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the correct file extension for Python files?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": ".py"
+        },
+        {
+          "id": 2,
+          "choice": ".python"
+        },
+        {
+          "id": 3,
+          "choice": ".pyt"
+        },
+        {
+          "id": 4,
+          "choice": ".pt"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "How do you create a variable with the numeric value 5?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "x = 5"
+        },
+        {
+          "id": 2,
+          "choice": "x == 5"
+        },
+        {
+          "id": 3,
+          "choice": "x : 5"
+        },
+        {
+          "id": 4,
+          "choice": "x <- 5"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "Which method can be used to remove whitespace from both ends of a string?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "strip()"
+        },
+        {
+          "id": 2,
+          "choice": "trim()"
+        },
+        {
+          "id": 3,
+          "choice": "len()"
+        },
+        {
+          "id": 4,
+          "choice": "pstrip()"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 3,
+  "last_question_number": 0
+}]

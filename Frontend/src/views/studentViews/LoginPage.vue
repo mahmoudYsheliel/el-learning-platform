@@ -3,6 +3,7 @@ import Navbar from "@/components/general/Navbar.vue";
 import Options from "@/components/general/Options.vue";
 import Footer from "@/components/general/Footer.vue";
 import { usePersonalInfo } from "@/stores/token";
+import { decodeCredential } from "vue3-google-login";
 
 import "primeicons/primeicons.css";
 
@@ -42,6 +43,31 @@ function login() {
     });
   }
 }
+
+const callback = (response: any) => {
+  // decodeCredential will retrive the JWT payload from the credential
+  const userData = decodeCredential(response.credential);
+  const emailVerified = (userData as any).email_verified;
+  if ((userData as any).email_verified) {
+    const loginRequester = new HttpRequester("token");
+    const personalInfo = usePersonalInfo();
+    loginRequester.login((userData as any).email, "mahmoud2000").then((res) => {
+
+      if (res.msg == "no such user") {
+        NoSuchUser.value = true;
+      } else if (res.access_token) {
+        const personalInfoRequester = new HttpRequester("personal_info");
+        personalInfoRequester.callApi().then((res) => {
+     
+          if (res.success) {
+            personalInfo.addInfo({ userType: res.data?.info?.user_type });
+            router.push("/");
+          }
+        });
+      }
+    });
+  }
+};
 </script>
 
 <template>
@@ -58,14 +84,7 @@ function login() {
           <h1>Trace Community</h1>
         </div>
         <div class="google-facebook-wrapper">
-          <div class="facebook">
-            <i class="pi pi-facebook"></i>
-            <p>Log in with Facebook</p>
-          </div>
-          <div class="google">
-            <i class="pi pi-google"></i>
-            <p>Log in with Google</p>
-          </div>
+          <GoogleLogin :callback="callback" />
         </div>
         <h4 v-if="missingInfo">Some Data Is Missing</h4>
         <h4 v-if="NoSuchUser">User Doesn't Exist</h4>

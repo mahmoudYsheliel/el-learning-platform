@@ -73,15 +73,15 @@ function viewAnswer(q: any) {
             <div
               class="answer"
               v-if="question.showAnswer"
-              :class="{showCorrect:question.choices.find((item:any) =>item.id === question.selected).isRight==true,
-                showWrong:question.choices.find((item:any) =>item.id === question.selected).isRight==false}"
+              :class="{showCorrect:question.correct_answer_id==question.selected,
+                showWrong:question.correct_answer_id!=question.selected}"
             >
               your answer is
               <span
-                v-if="question.choices.find((item:any) =>item.id === question.selected).isRight==true"
+                v-if="question.correct_answer_id==question.selected"
                 >correct</span
               ><span
-                v-if="question.choices.find((item:any) =>item.id === question.selected).isRight==false"
+                v-if="question.correct_answer_id!=question.selected"
                 >wrong</span
               >
             </div>

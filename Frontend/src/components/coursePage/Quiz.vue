@@ -25,9 +25,10 @@ const getCourse = () => {
 
 };
 getCourse();
-
 function viewAnswer(q: any) {
+
   q.showAnswer = true;
+
 }
 </script>
 

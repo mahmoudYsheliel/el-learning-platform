@@ -1,0 +1,9 @@
+[{
+  "_id": {
+    "$oid": "661d93db9010d1d9e0525618"
+  },
+  "id": "string",
+  "title": "Getting Started with Sensors",
+  "description": "This lesson will introduce you to the exciting world of Arduino programming and interfacing with sensors. You'll learn about the basic components of an Arduino board, explore different types of sensors, and write code to read sensor data.",
+  "source": "https://www.youtube.com/embed/jnP_81SiaqU?si=9kSyjU9k-LPI-L2_"
+}]

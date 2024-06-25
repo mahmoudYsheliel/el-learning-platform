@@ -32,12 +32,10 @@ groupRequester.callApi().then((res) => {
             childEnrollmentsRequester
               .callApi({ child_id: child })
               .then((res) => {
-                console.log(res);
                 if (res.data.enrollments) {
                   childObj.enrollments = res.data.enrollments;
                 }
                 children.value.push(childObj);
-                console.log(children.value);
               });
           }
         });

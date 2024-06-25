@@ -11,7 +11,6 @@ const getlesson = () => {
   const lessonRequester = new HttpRequester('get_lesson')
   lessonRequester.callApi({lesson_id:route.params.materialId}).then(res=>{if(res.success){
     lesson.value = res.data.lesson
-    console.log(lesson.value)
   }})
 };
 getlesson();

@@ -51,7 +51,7 @@ app.include_router(program_api.router)
 
 
 
-# mount static files server
+#mount static files server
 app.mount('/', StaticFiles(directory='dist', html=True), name='dist')
 
 
