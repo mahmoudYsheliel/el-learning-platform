@@ -221,7 +221,7 @@ async def update_user_info(
 async def add_child(user: User, child: Child, userId: str) -> ServiceResponse:
 
     user.user_type = "Child"
-
+    user.hashed_pass = hash_password(user.hashed_pass)
     found_user = (
         await get_database().get_collection("user").find_one({"email": user.email})
     )

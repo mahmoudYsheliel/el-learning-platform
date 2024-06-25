@@ -25,7 +25,7 @@ export class HttpRequester {
   public async login(username:string,pass:string){
     let lofinString=`grant_type=&username=${username}&password=${pass}&scope=&client_id=&client_secret=`
     try {
-      const url = new URL(this.base_endpoint + this.endpoint);
+      const url = this.base_endpoint + this.endpoint;
 
       let response = await axios.post(url.toString(), lofinString);
       if(response.data && response.status ==200 && response.data.access_token){
