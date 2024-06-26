@@ -37,9 +37,8 @@ programRequester.callApi().then((res) => {
     <div class="options">
       <span>Trace Plans</span>
       <div class="card flex justify-content-center">
-        <SplitButton label="Programs" :model="items" text />
+        <SplitButton label="Programs" :model="items" @click="items[0]?.command" text />
       </div>
-      <span>العربية</span>
     </div>
   </main>
 </template>

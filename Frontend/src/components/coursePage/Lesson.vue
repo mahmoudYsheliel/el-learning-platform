@@ -24,7 +24,7 @@ getlesson();
       </h2>
       <p>{{ lesson?.description }}</p>
       <div class="wrapper">
-        <iframe :src="lesson?.source" frameborder="0"></iframe>
+        <iframe :src="lesson?.source" frameborder="0" sandbox="allow-scripts allow-same-origin" allowfullscreen ></iframe>
       </div>
     </div>
   </main>
@@ -35,6 +35,7 @@ getlesson();
   width: 80%;
   margin-inline: auto;
 }
+
 h2 {
   color: var(--accent1);
   margin: 0;

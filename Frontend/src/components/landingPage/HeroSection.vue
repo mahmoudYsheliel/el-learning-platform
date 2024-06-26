@@ -32,7 +32,7 @@ const router = useRouter();
           through their interesting and curious journey in the world
         </p>
         <div class="buttonWrapper">
-          <Button label="Start For Free" @click="router.push('/viewCourses')" />
+          <Button label="Start For Free" @click="router.push('/')" />
           <p style="color: var(--accent1); margin: 0">
             NO CREDIT CARD REQUIRED
           </p>

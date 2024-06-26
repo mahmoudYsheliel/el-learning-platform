@@ -24,10 +24,10 @@ const socialMediaIcons = [
   { class: "pi pi-instagram", to: "/" },
 ];
 const pagesToRoute = [
-  { name: "Home", to: "/" },
-  { name: "About", to: "/" },
-  { name: "Courses", to: "/" },
-  { name: "Contact", to: "/" },
+  { name: "Home", to: "/#Home" },
+  { name: "Courses", to: "/#Courses" },
+  { name: "About", to: "/#About" },
+  { name: "Contact", to: "/#Contact" },
 ];
 const items = computed(() => {
   if (personalInfo.getInfo?.userType == "Parent") {
@@ -93,6 +93,12 @@ const items = computed(() => {
       },
     ];
   }
+  return [{
+        label: "Log out",
+        command: () => {
+          showDialogLogOut.value = true;
+        },
+      }]
 });
 </script>
 <template>
@@ -149,7 +155,7 @@ const items = computed(() => {
       </div>
     </Dialog>
 
-    <div class="logo">
+    <div class="logo" @click="router.push('/')">
       <img src="/images/log2.png" alt="" />
       <p class="logo-name">Trace Education</p>
     </div>
@@ -168,7 +174,7 @@ const items = computed(() => {
       <p class="register" @click="router.push('/signup')">Register</p>
     </div>
     <div v-if="token.getIsAuthorized" class="profile">
-      <SplitButton severity="secondary" :model="items" label="My Account" />
+      <SplitButton severity="secondary" :model="items" @click="items[0]?.command" label="My Account" />
       <i style="cursor: pointer" class="pi pi-shopping-cart"></i>
     </div>
   </main>
@@ -189,6 +195,7 @@ main {
   align-items: center;
   gap: 0.5rem;
   justify-self: start;
+  cursor: pointer;
 }
 .logo > img {
   height: 2.5rem;

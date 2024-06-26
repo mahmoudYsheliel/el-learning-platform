@@ -1,26 +1,36 @@
 <script lang="ts" setup>
 import "primeicons/primeicons.css";
+import { ref } from "vue";
 
-const programs = [
-  {
-    name: "Discovery Zone",
-    age: "6-9 Years",
-    description: "Lessons on design that cover the most recent developments.",
-    color: "var(--accent1)",
-  },
-  {
-    name: "Pathfinder",
-    age: "10-13 Years",
-    description: "Lessons on design that cover the most recent developments.",
-    color: "var(--accent3)",
-  },
-  {
-    name: "Master",
-    age: "14-18 Years",
-    description: "Lessons on design that cover the most recent developments.",
-    color: "var(--accent2)",
-  },
-];
+import { useRouter } from "vue-router";
+import { HttpRequester } from "@/lib/APICaller";
+
+const programRequester = new HttpRequester("get_all_program");
+
+const programs = ref();
+
+const router = useRouter();
+const items = ref<any[]>([]);
+
+programRequester.callApi().then((res) => {
+  const colors =['var(--accent1)','var(--accent3)','var(--accent2)']
+  programs.value = res.data.program;
+  console.log(programs.value)
+  if (programs.value) {
+    for (let i=0; i<programs.value.length;i++) {
+      items.value.push({
+        name: programs.value[i].title,
+        age:programs.value[i].age_group,
+        description:programs.value[i].description.substring(0,50) + '...',
+        color: colors[i%3],
+        command: () => {
+          router.push(`programs/${programs.value[i].id}`);
+        },
+      });
+    }
+  }
+});
+
 </script>
 
 <template>
@@ -34,7 +44,8 @@ const programs = [
       <div class="content">
         <div
           class="card"
-          v-for="program in programs"
+          v-for="program in items"
+          @click="program.command"
           :style="{ backgroundColor: program.color }"
         >
           <div class="top">

@@ -12,7 +12,7 @@ const app = createApp(App)
 const pinia = createPinia();
 
 app.use(vue3GoogleLogin, {
-    clientId: '97713053876-lv3icpet4rr95q84t1jgf5fe8cquctqg.apps.googleusercontent.com'
+    clientId: '97713053876-84ql7loco3nemjdtn6ha01o3v8nlmldj.apps.googleusercontent.com'
   })
 
 

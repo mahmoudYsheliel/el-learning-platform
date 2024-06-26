@@ -6,4 +6,400 @@
   "title": "Getting Started with Sensors",
   "description": "This lesson will introduce you to the exciting world of Arduino programming and interfacing with sensors. You'll learn about the basic components of an Arduino board, explore different types of sensors, and write code to read sensor data.",
   "source": "https://www.youtube.com/embed/jnP_81SiaqU?si=9kSyjU9k-LPI-L2_"
+},
+{
+  "_id": {
+    "$oid": "66306efb4478b3096c546f85"
+  },
+  "id": null,
+  "title": "introduction to C++",
+  "description": "Dive into object-oriented programming, a fundamental concept in game development. Learn about classes, objects, inheritance, and polymorphism to structure your game code effectively.",
+  "source": "https://www.youtube.com/embed/OTroAxvRNbw?si=dY7apQZL58Guujkk"
+},
+{
+  "_id": {
+    "$oid": "663070214478b3096c546f86"
+  },
+  "id": null,
+  "title": "Introduction to Game Loops and Rendering",
+  "description": "This lesson delves into the core concepts of game development. You'll explore the fundamental game loop structure, understand how graphics are rendered on screen, and learn basic techniques for animating objects in your games.",
+  "source": "https://www.youtube.com/embed/wN0x9eZLix4?si=YJZySAGXEfhyKPky"
+},
+{
+  "_id": {
+    "$oid": "6630c947dca142a6db60f50e"
+  },
+  "id": null,
+  "title": "Introduction to Game Loops and Rendering",
+  "description": "This lesson delves into the core concepts of game development. You'll explore the fundamental game loop structure, understand how graphics are rendered on screen, and learn basic techniques for animating objects in your games.\n\nString\n",
+  "source": "https://www.youtube.com/embed/wN0x9eZLix4?si=YJZySAGXEfhyKPky"
+},
+{
+  "_id": {
+    "$oid": "6630c981dca142a6db60f50f"
+  },
+  "id": null,
+  "title": "Introduction to Game Loops and Rendering",
+  "description": "This lesson delves into the core concepts of game development. You'll explore the fundamental game loop structure, understand how graphics are rendered on screen, and learn basic techniques for animating objects in your games.",
+  "source": "https://www.youtube.com/embed/wN0x9eZLix4?si=YJZySAGXEfhyKPky"
+},
+{
+  "_id": {
+    "$oid": "6638d32f1e7b165514057211"
+  },
+  "id": null,
+  "title": "Getting Started with Sensors",
+  "description": "This lesson will introduce you to the exciting world of Arduino programming and interfacing with sensors. You'll learn about the basic components of an Arduino board, explore different types of sensors, and write code to read sensor data.",
+  "source": "https://www.youtube.com/embed/jnP_81SiaqU?si=9kSyjU9k-LPI-L2_"
+},
+{
+  "_id": {
+    "$oid": "66589499078c4d7259a520e2"
+  },
+  "id": "1",
+  "title": "Introduction to Python",
+  "description": "A beginner's guide to programming with Python.",
+  "source": "https://www.youtube.com/embed/dX9CGRZwD-w?si=NFEVbvik01smILiD"
+},
+{
+  "_id": {
+    "$oid": "665894c5078c4d7259a520e3"
+  },
+  "id": "1",
+  "title": "Data Structures in JavaScript",
+  "description": "Learn about arrays, objects, and other data structures in JavaScript.",
+  "source": "https://www.youtube.com/embed/dX9CGRZwD-w?si=NFEVbvik01smILiD"
+},
+{
+  "_id": {
+    "$oid": "665894ce078c4d7259a520e4"
+  },
+  "id": "1",
+  "title": "Understanding Machine Learning",
+  "description": "An overview of machine learning concepts and techniques.",
+  "source": "https://www.youtube.com/embed/dX9CGRZwD-w?si=NFEVbvik01smILiD"
+},
+{
+  "_id": {
+    "$oid": "665894da078c4d7259a520e5"
+  },
+  "id": "1",
+  "title": "Web Development with HTML and CSS",
+  "description": "Create stunning web pages with HTML and CSS.",
+  "source": "https://www.youtube.com/embed/dX9CGRZwD-w?si=NFEVbvik01smILiD"
+},
+{
+  "_id": {
+    "$oid": "665894e7078c4d7259a520e6"
+  },
+  "id": "1",
+  "title": "Advanced SQL Queries",
+  "description": "Master complex SQL queries for database management.",
+  "source": "https://www.youtube.com/embed/dX9CGRZwD-w?si=NFEVbvik01smILiD"
+},
+{
+  "_id": {
+    "$oid": "665894f0078c4d7259a520e7"
+  },
+  "id": "1",
+  "title": "Introduction to Algorithms",
+  "description": "Learn the basics of algorithms and their applications.",
+  "source": "https://www.youtube.com/embed/dX9CGRZwD-w?si=NFEVbvik01smILiD"
+},
+{
+  "_id": {
+    "$oid": "665894f9078c4d7259a520e8"
+  },
+  "id": "1",
+  "title": "Cloud Computing Basics",
+  "description": "An introduction to cloud computing and its services.",
+  "source": "https://www.youtube.com/embed/dX9CGRZwD-w?si=NFEVbvik01smILiD"
+},
+{
+  "_id": {
+    "$oid": "66589504078c4d7259a520e9"
+  },
+  "id": "1",
+  "title": "Cybersecurity Fundamentals",
+  "description": "Learn the fundamentals of cybersecurity and how to protect systems.",
+  "source": "https://www.youtube.com/embed/dX9CGRZwD-w?si=NFEVbvik01smILiD"
+},
+{
+  "_id": {
+    "$oid": "66589517078c4d7259a520ea"
+  },
+  "id": "1",
+  "title": "React for Beginners",
+  "description": "A comprehensive guide to building web applications with React.",
+  "source": "https://www.youtube.com/embed/dX9CGRZwD-w?si=NFEVbvik01smILiD"
+},
+{
+  "_id": {
+    "$oid": "6679a4bf24650df2a16196d2"
+  },
+  "id": "string",
+  "title": "Exploring Robots and Their Applications",
+  "description": "Discover the basics of robotics, including robot definitions, types, components, and applications in various fields, setting a foundation for building and programming your own robots.",
+  "source": "https://drive.google.com/file/d/1p3KX-1m-IeFKd09vOmDJ3mYeXC08JJAc/preview"
+},
+{
+  "_id": {
+    "$oid": "6679a5a924650df2a16196d3"
+  },
+  "id": "string",
+  "title": "Understanding Robots and Their Types",
+  "description": "Learn the fundamentals of robotics, including what robots are, their components, and why we use them. Discover different types of robots and their applications in various fields.",
+  "source": "https://drive.google.com/file/d/1j14qZVbYrV5cuw5lNdpUKxvmuySmqtSk/preview"
+},
+{
+  "_id": {
+    "$oid": "6679a66224650df2a16196d4"
+  },
+  "id": "string",
+  "title": "Understanding Robots and Their Components",
+  "description": "Learn about robots, their types, components, and applications. Understand the essentials needed to build and program robots. Perfect for beginners in robotics",
+  "source": "https://drive.google.com/file/d/1RTdpO_PHAKwSSZUJfmio4ojSwUhd4Nip/preview"
+},
+{
+  "_id": {
+    "$oid": "6679a7f624650df2a16196d5"
+  },
+  "id": "string",
+  "title": "From Mechanics to Programming",
+  "description": "Learn the essentials of building a robot, including mechanics, material science, kinematics, 3D modeling, electricity basics, power electronics, sensors, and programming with Arduino.",
+  "source": "https://drive.google.com/file/d/1FU4zoYZZCMsPwjgX1rLWGFdcknvaZRzd/preview"
+},
+{
+  "_id": {
+    "$oid": "6679a93224650df2a16196d6"
+  },
+  "id": "string",
+  "title": "Understanding Electricity: Basics, Circuits, and Power Generation",
+  "description": "Electricity Fundamentals: Circuits, Conductivity, and Renewable Energy. Learn about circuits, conductors, electron flow, environmental impacts, and solar power generation limitations.",
+  "source": "https://drive.google.com/file/d/1rQaTvW9DTtRlDby0M6Zix5-4WeynbEyo/preview"
+},
+{
+  "_id": {
+    "$oid": "6679a9cf24650df2a16196d7"
+  },
+  "id": "string",
+  "title": "Electricity Essentials: Current, Voltage, and Resistance",
+  "description": "Explore Ohm's law and its relationship between voltage, current, and resistance, crucial for understanding electrical circuits.",
+  "source": "https://drive.google.com/file/d/1sdfbUf4cLc4SWegrZUpGzAh78kHzpgO-/preview"
+},
+{
+  "_id": {
+    "$oid": "6679aa4f24650df2a16196d8"
+  },
+  "id": "string",
+  "title": "Understanding Electrical Power: Units and Concepts",
+  "description": "Learn about the unit of electrical power and the distinction between power and energy in electrical systems.",
+  "source": "https://drive.google.com/file/d/18g4ZY3__32J-MKLZzopi68LVylV6y_aP/preview"
+},
+{
+  "_id": {
+    "$oid": "6679aabb24650df2a16196d9"
+  },
+  "id": "string",
+  "title": "Switches in Robotics: Control and Circuit Management",
+  "description": "Learn about the role of switches in robot circuits, including their function in controlling current flow and managing circuit operations",
+  "source": "https://drive.google.com/file/d/1g15BP4OSf-sZAu5jf7bysF5BxnDU4-s4/preview"
+},
+{
+  "_id": {
+    "$oid": "6679ab1824650df2a16196da"
+  },
+  "id": "string",
+  "title": "Mechanical Concepts in Robotics: Motion and Measurement",
+  "description": "xplore mechanical concepts crucial for describing robot motion, including distance, velocity, acceleration, and different types of motion. Dive into definitions, equations, and practical examples to understand movement in robotics",
+  "source": "https://drive.google.com/file/d/1zZUuP0WGDgbeKjEcn1NStJThHKaW-qkb/preview"
+},
+{
+  "_id": {
+    "$oid": "6679ab7c24650df2a16196db"
+  },
+  "id": "string",
+  "title": "Understanding Newton's Laws and Forces in Robotics",
+  "description": "Delve into Newton's laws of motion, exploring how forces govern robot behavior. Discover different force types like gravity and friction, essential for designing and understanding robot movements.",
+  "source": "https://drive.google.com/file/d/1hJleHF9AZg0g7gs53_J9nNCHMoRmm1v0/preview"
+},
+{
+  "_id": {
+    "$oid": "6679abd924650df2a16196dc"
+  },
+  "id": "string",
+  "title": "Exploring Energy: Potential, Kinetic, and More",
+  "description": "Dive into the fundamental concepts of energy, including potential and kinetic energy, conservation laws, and various energy types like electrical and heat energy. Discover how energy transforms and powers our world.",
+  "source": "https://drive.google.com/file/d/1W3klWfksU2roBICaPOVJzgIwe2j9B6fn/preview"
+},
+{
+  "_id": {
+    "$oid": "6679ac9024650df2a16196dd"
+  },
+  "id": "string",
+  "title": "Unraveling Momentum: Linear, Angular, and Collapsing",
+  "description": "Explore the physics of momentum, understanding its role in motion and stability, including linear and angular momentum. Discover the concept of collapsing and its impact on movement and robotic control.",
+  "source": "https://drive.google.com/file/d/1OxeasnpPbNOaW88lANNsjMDjasXGlfIQ/preview"
+},
+{
+  "_id": {
+    "$oid": "6679acd724650df2a16196de"
+  },
+  "id": "string",
+  "title": "Understanding Equilibrium and Forces: Moments and Center of Gravity",
+  "description": "Dive into the concepts of static equilibrium, force analysis, moments, and center of gravity in mechanical physics. Learn how these principles impact stability, motion, and design in robotics and structural engineering.",
+  "source": "https://drive.google.com/file/d/1ip08v-xUiAXsUgMSIRg30GONiEea7Uh-/preview"
+},
+{
+  "_id": {
+    "$oid": "6679ade624650df2a16196df"
+  },
+  "id": "string",
+  "title": "Introduction to Robotics and Computer Science Fundamentals",
+  "description": "Explore hardware, software, programming in C and PictoBlox, algorithms, and sequences in programming. Learn the basics of robotics and computer science in a practical and engaging manner.",
+  "source": "https://drive.google.com/file/d/1RBXxlLHfjt2zFfKDcIBjAI3BtXPCfuL2/preview"
+},
+{
+  "_id": {
+    "$oid": "6679ae5d24650df2a16196e0"
+  },
+  "id": "string",
+  "title": "Foundations of Programming",
+  "description": "This lesson covers the basics of programming, including machine language as the core communication method with computers, different programming paradigms, and the characteristics of high-level languages that make programming more accessible and efficient.",
+  "source": "https://drive.google.com/file/d/1E4-izLresnwGO40xmPUcLb7sP2lybaf_/preview"
+},
+{
+  "_id": {
+    "$oid": "6679ae9e24650df2a16196e1"
+  },
+  "id": "string",
+  "title": "Understanding Algorithms and Sequences in Programming",
+  "description": "This lesson explores the concepts of algorithms and sequences in programming. It clarifies the difference between them, emphasizing how algorithms are step-by-step processes to solve problems or achieve tasks, while sequences specify the order of steps within algorithms.",
+  "source": "https://drive.google.com/file/d/1qIyVu1kHG0TrE_rNzN8da9ygEOm1EZrW/preview"
+},
+{
+  "_id": {
+    "$oid": "6679af8924650df2a16196e2"
+  },
+  "id": "string",
+  "title": "Mastering C Programming Fundamentals: Variables, Loops, Conditionals, and Logic",
+  "description": "Dive deep into C programming with variables, loops, conditionals, and logic essentials. Learn to write efficient code and solve complex problems effectively.",
+  "source": "https://drive.google.com/file/d/1RMHpyiKfQabTV_mkX326CuFAo8xMGwcv/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b01224650df2a16196e3"
+  },
+  "id": "string",
+  "title": "Mastering Conditional Statements and Logical Operators in C",
+  "description": " Learn how to create powerful decision-making structures using if statements, logical operators, and conditional expressions in C programming.",
+  "source": "https://drive.google.com/file/d/10IFVX1EXZWubu3L7fCgbTYNr3jS-mfTM/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b05f24650df2a16196e4"
+  },
+  "id": "string",
+  "title": "Understanding Loop Structures in C Programming",
+  "description": "Explore entry-controlled and exit-controlled loops like for, while, and do-while in C, mastering their syntax and usage for efficient program execution and iteration control.",
+  "source": "https://drive.google.com/file/d/1_rxWTYntpgJu3gW_cduage9Pf4IrdjDP/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b0bc24650df2a16196e5"
+  },
+  "id": "string",
+  "title": "Understanding Functions in C Programming",
+  "description": "Differentiate between function declarations and definitions, learn the role of return statements, grasp the use of 'void' for functions with no return value, and master writing functions for common tasks like finding the maximum of two numbers.",
+  "source": "https://drive.google.com/file/d/1rImztsBTbzU_8WmjuFMVBK61ZjpiS7VX/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b11624650df2a16196e6"
+  },
+  "id": "string",
+  "title": "Fundamentals of C Programming: Functions and File Handling",
+  "description": "Explore the core concepts of C programming, including function declarations vs. definitions, return statements, and file handling using fopen(), fprintf(), and fseek(). Learn to create functions for maximum finding, handle file operations efficiently, and master essential programming techniques.",
+  "source": "https://drive.google.com/file/d/1AzNzcp8hlWqN2O83DyJojDEukzFEo1II/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b16724650df2a16196e7"
+  },
+  "id": "string",
+  "title": "Exploring Pictoblox: Visual Programming for Interactive Experiences",
+  "description": "Discover Pictoblox, a visual programming language using blocks to create interactive simulations, educational apps, and games. Learn about block palettes like 'control' for logic, 'when flag clicked' for program initiation, and 'sensing' for event detection, enabling versatile and engaging programming experiences.",
+  "source": "https://drive.google.com/file/d/1kNVjZg_CUg-x3MpyVQlFbPUWdi1fg8NF/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b1f324650df2a16196e8"
+  },
+  "id": "string",
+  "title": "Exploring Variables in Pictoblox",
+  "description": "Dive into Pictoblox's variable system, from initialization with 'set variable' to modification with 'change variable.' Learn to create loops using the 'control' palette and utilize built-in variables for sprite positioning.",
+  "source": "https://drive.google.com/file/d/1hRjnSP-AT2mMRxwYPBU7Ut9GFsFQH_KU/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b24424650df2a16196e9"
+  },
+  "id": "string",
+  "title": "Mastering Conditional Logic in Pictoblox",
+  "description": "Understand the power of conditional statements in Pictoblox. Use 'if' to execute code conditionally, negate conditions with NOT, combine conditions with AND, OR, NOT, handle false conditions with 'else,' and control program flow effectively.",
+  "source": "https://drive.google.com/file/d/1gxDvS5dVaZrxxJNm_AJYLJxbbndi8gXW/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b2d524650df2a16196ea"
+  },
+  "id": "string",
+  "title": "Digital Logic Gates Fundamentals",
+  "description": "Delve into the basics of digital logic gates, including AND, OR, XOR, NAND, and more. Learn about their input-output relationships and how they form the building blocks of digital circuits, essential for understanding electronics and computing.",
+  "source": "https://drive.google.com/file/d/1s2m139ozeA1RCxgjYPVvwldFAnLGG4YY/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b34924650df2a16196eb"
+  },
+  "id": "string",
+  "title": "Introduction to Arduino Fundamentals",
+  "description": " Learn about Arduino basics, including board types like UNO, Mega, and Lilypad, uploading code to Arduino using USB, understanding digital and analog signals, and identifying components like LEDs, motors, sensors, and relay modules.",
+  "source": "https://drive.google.com/file/d/19rC19xQiFPo5h6LdcoNRj-9gVfLCWGjL/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b3a724650df2a16196ec"
+  },
+  "id": "string",
+  "title": "Arduino Basics ",
+  "description": "Explore Arduino types, pin configuration, signal handling, and data types.",
+  "source": "https://drive.google.com/file/d/11HJrfybCc3d8pRbCKrgX2VbxgyYXy7ma/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b40a24650df2a16196ed"
+  },
+  "id": "string",
+  "title": "What is Breadboard?",
+  "description": "Explore the functionality and usage of breadboards in electronics. Learn about their structure, how to properly place components, and how to use them for prototyping circuits without soldering.",
+  "source": "https://drive.google.com/file/d/1TXf8V4fyupAv2dd5o5EZfMGQpH7gOTVx/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b46c24650df2a16196ee"
+  },
+  "id": "string",
+  "title": "Light sensor",
+  "description": "",
+  "source": "https://drive.google.com/file/d/1_DLhnO2lp7rVYnkgnotNzW6r7bI50980/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b4cc24650df2a16196ef"
+  },
+  "id": "string",
+  "title": "What is IR(Infrared) sensor?",
+  "description": "This lesson provides an in-depth exploration of IR (Infrared) sensors, covering their working principles, applications in various fields such as robotics and automation, and how they detect and measure infrared radiation. Students will learn about different types of IR sensors and their significance in modern technology.",
+  "source": "https://drive.google.com/file/d/1QlM5VoLVy3RDf2UXL-jdP4hEzm5MCVes/preview"
 }]

@@ -72,7 +72,8 @@ async def get_all_programs()-> ServiceResponse:
         'id': {'$toString': '$_id'},
         'title':1,
         'age_group':1,
-        'image':1
+        'image':1,
+        'description':1
         
     }).to_list(length=None)
     if not program:

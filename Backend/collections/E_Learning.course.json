@@ -1,10 +1,13 @@
-{
-  "new_course": {
-    "id": "string",
-    "title": "Robotics",
-    "description": "Explore the fascinating world of robotics with our comprehensive course! Delve into mechanics, electronics, programming, and AI, gaining hands-on experience in designing and building robots. Learn key concepts in material science, kinematics, 3D modeling, and programming languages like C and PictoBlox. Develop skills in sensor integration, power electronics, and algorithm design. Our course offers a blend of theory and practical projects, empowering you to create innovative robotic solutions. Pricing: 1000 Egyptian pounds. Objectives: 1) Master robotics fundamentals. 2) Build functional robots. 3) Understand programming and algorithms. 4) Apply sensors and actuators effectively. 5) Explore AI integration in robotics.",
-    "chapters": [
- {
+[{
+  "_id": {
+    "$oid": "6679ec42f618e6d7fcab539a"
+  },
+  "id": "string",
+  "title": "Robotics",
+  "description": "Explore the fascinating world of robotics with our comprehensive course! Delve into mechanics, electronics, programming, and AI, gaining hands-on experience in designing and building robots. Learn key concepts in material science, kinematics, 3D modeling, and programming languages like C and PictoBlox. Develop skills in sensor integration, power electronics, and algorithm design. Our course offers a blend of theory and practical projects, empowering you to create innovative robotic solutions. Pricing: 1000 Egyptian pounds. Objectives: 1) Master robotics fundamentals. 2) Build functional robots. 3) Understand programming and algorithms. 4) Apply sensors and actuators effectively. 5) Explore AI integration in robotics.",
+  "chapters": [
+    {
+      "title": "Introduction To Robotics",
       "materials": [
         {
           "Id": "6679a4bf24650df2a16196d2",
@@ -18,7 +21,6 @@
           "title": "Robots in Life",
           "type": "Quiz"
         },
-
         {
           "Id": "6679a5a924650df2a16196d3",
           "order": 3,
@@ -31,8 +33,6 @@
           "title": "Types of Robots",
           "type": "Quiz"
         },
-
-
         {
           "Id": "6679a66224650df2a16196d4",
           "order": 5,
@@ -45,10 +45,8 @@
           "title": "Robot Components and Functions",
           "type": "Quiz"
         },
-
-
-         {
-          "Id": "6679a66224650df2a16196d5",
+        {
+          "Id": "6679a7f624650df2a16196d5",
           "order": 7,
           "title": "From Mechanics to Programming",
           "type": "Lesson"
@@ -59,11 +57,10 @@
           "title": "Robot Building Fundamentals",
           "type": "Quiz"
         }
-      
-      ],
-      "title": "Introduction To Robotics"
+      ]
     },
-{
+    {
+      "title": "Electricity",
       "materials": [
         {
           "Id": "6679a93224650df2a16196d6",
@@ -101,8 +98,8 @@
           "title": "Electrical Power and Motors",
           "type": "Quiz"
         },
-      {
-          "Id": "6679aa4f24650df2a16196d9",
+        {
+          "Id": "6679aabb24650df2a16196d9",
           "order": 7,
           "title": "Switches in Robotics",
           "type": "Lesson"
@@ -113,10 +110,10 @@
           "title": "Robot Components",
           "type": "Quiz"
         }
-      ],
-      "title": "Electricity"
+      ]
     },
-{
+    {
+      "title": "Mechanics",
       "materials": [
         {
           "Id": "6679ab1824650df2a16196da",
@@ -173,16 +170,15 @@
           "type": "Lesson"
         },
         {
-          "Id": "6679c0ca24650df2a16196fc",
+          "Id": "6679c24324650df2a16196fc",
           "order": 10,
           "title": "Equilibrium",
           "type": "Quiz"
         }
-     
-      ],
-      "title": "Mechanics"
+      ]
     },
     {
+      "title": "Programming",
       "materials": [
         {
           "Id": "6679ade624650df2a16196df",
@@ -316,13 +312,10 @@
           "title": "Pictoblox 3",
           "type": "Quiz"
         }
-      ],
-      "title": "Programming"
+      ]
     },
-
-
-
- {
+    {
+      "title": "Programming",
       "materials": [
         {
           "Id": "6679b2d524650df2a16196ea",
@@ -343,7 +336,7 @@
           "type": "Lesson"
         },
         {
-          "Id": "6679c9d824650df2a1619709",
+          "Id": "6679c99724650df2a1619709",
           "order": 4,
           "title": "Arduino 2",
           "type": "Quiz"
@@ -370,7 +363,7 @@
           "Id": "6679b46c24650df2a16196ee",
           "order": 8,
           "title": "Light sensor",
-          "type": "Quiz"
+          "type": "Lesson"
         },
         {
           "Id": "6679b4cc24650df2a16196ef",
@@ -378,37 +371,30 @@
           "title": "What is IR(Infrared) sensor?",
           "type": "Lesson"
         }
-
-      ],
-      "title": "Programming"
+      ]
     }
-
-
-
-
-
-
-
-
-
-
-
-
-],
-    "price": 500,
-    "image": "https://www.therobotreport.com/wp-content/uploads/2023/06/sick-sponsored-featured-image-july2023-article1.jpg",
-    "categories": [{
+  ],
+  "price": 500,
+  "image": "https://www.therobotreport.com/wp-content/uploads/2023/06/sick-sponsored-featured-image-july2023-article1.jpg",
+  "categories": [
+    {
       "Id": "6606c84243e416de9726f22b",
       "title": "Robotics"
     },
     {
       "Id": "6606c79643e416de9726f229",
       "title": "Computer Programming"
-    }],
-    "objectives": ["Understand robotics mechanics and dynamics.","Master kinematics and 3D modeling concepts.","Gain proficiency in basic electricity principles.","Learn sensor integration techniques.","Develop programming skills using Arduino for robot control."],
-    "min_age": 13,
-    "max_age": 17,
-    "duration": 14,
-    "number_of_enrollments": 0
-  }
-}
+    }
+  ],
+  "objectives": [
+    "Understand robotics mechanics and dynamics.",
+    "Master kinematics and 3D modeling concepts.",
+    "Gain proficiency in basic electricity principles.",
+    "Learn sensor integration techniques.",
+    "Develop programming skills using Arduino for robot control."
+  ],
+  "min_age": 13,
+  "max_age": 17,
+  "duration": 14,
+  "number_of_enrollments": 0
+}]

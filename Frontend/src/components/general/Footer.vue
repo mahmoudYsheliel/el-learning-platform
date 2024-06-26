@@ -1,6 +1,28 @@
 <script lang="ts" setup>
 import "primeicons/primeicons.css";
+import { ref } from "vue";
+import { HttpRequester } from "@/lib/APICaller";
+import { useRouter } from "vue-router";
+const programRequester = new HttpRequester("get_all_program");
 
+const programs = ref();
+
+const router = useRouter();
+const items = ref<any[]>([]);
+
+programRequester.callApi().then((res) => {
+  programs.value = res.data.program;
+  if (programs.value) {
+    for (let program of programs.value) {
+      items.value.push({
+        name: program.title,
+        command: () => {
+          router.push(`programs/${program.id}`);
+        },
+      });
+    }
+  }
+});
 const socialMediaIcons = [
   { class: "pi pi-facebook", to: "/" },
   { class: "pi pi-linkedin", to: "/" },
@@ -9,14 +31,11 @@ const socialMediaIcons = [
   { class: "pi pi-whatsapp", to: "/" },
 ];
 
-const programs = [
-  { name: "Discovery Zone", to: "/" },
-  { name: "Pathfinder", to: "/" },
-  { name: "Master", to: "/" },
-];
+
 const pages = [
-  { name: "About Us", to: "/" },
-  { name: "Contact Us", to: "/" },
+  { name: "Home", to: "/#Home" },  
+  { name: "About Us", to: "/#About" },
+  { name: "Contact Us", to: "/#contact" },
   { name: "Schools", to: "/" },
   { name: "FQAs", to: "/" },
   { name: "Privacy Policy", to: "/" },
@@ -30,11 +49,11 @@ const pages = [
       <img src="/images/logo3.png" alt="" />
       <div class="programs">
         <h4>Programs</h4>
-        <p v-for="program in programs">{{ program.name }}</p>
+        <p v-for="program in items" @click="program?.command">{{ program.name }}</p>
       </div>
       <div class="pages">
         <h4>Pages</h4>
-        <p v-for="page in pages">{{ page.name }}</p>
+        <p v-for="page in pages" @click="router.push(page.to)">{{ page.name }}</p>
       </div>
       <div class="socialMedia">
         <div>

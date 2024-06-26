@@ -105,7 +105,7 @@ button {
     width: 60%;
   }
   main {
-    padding-inline: 2rem;
+    padding-inline: 5rem;
   }
 }
 @media screen and (max-width: 1050px) {
