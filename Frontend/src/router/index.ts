@@ -1,23 +1,27 @@
 import { createRouter, createWebHistory } from "vue-router";
-import LandingPage from "../views/studentViews/LandingPage.vue";
-import LoginPage from "../views/studentViews/LoginPage.vue";
-import ViewCourses from "../views/studentViews/ViewCourses.vue";
+import LandingPage from "../views/generalViews/LandingPage.vue";
+
+import LoginPage from "../views/generalViews/LoginPage.vue";
 import ViewCourseDetails from "../views/studentViews/ViewCourseDetails.vue";
 import viewCoursePage from "../views/studentViews/viewCoursePage.vue";
-import instructorHome from "../views/instructorViews/instructorHome.vue";
-import addCourse from "@/views/instructorViews/addCourse.vue";
-import addCourseMaterial from "@/views/instructorViews/addCourseMaterial.vue";
-import signupPage from "@/views/studentViews/signupPage.vue";
+import instructorHome from "../views/adminViews/instructorHome.vue";
+import addCourse from "@/views/adminViews/addCourse.vue";
+import addCourseMaterial from "@/views/adminViews/addCourseMaterial.vue";
+import signupPage from "@/views/generalViews/signupPage.vue";
 import viewProgram from "@/views/studentViews/viewProgram.vue";
-import parentProfile from "@/views/parentViews/parentProfile.vue";
-import children from "@/views/parentViews/children.vue";
-import payment from "@/views/parentViews/payment.vue";
+import parentHome from "@/views/parentViews/parentHome.vue";
+import childrenCourses from "@/views/parentViews/childrenCourses.vue";
+import childrenProgress from "@/views/parentViews/childrenProgress.vue";
+import childrenAnalysis from "@/views/parentViews/childrenAnalysis.vue";
+
 import subscription from "@/views/parentViews/subscription.vue";
 import parentSettings from "@/views/parentViews/parentSettings.vue";
 import addChild from "@/views/parentViews/addChild.vue";
 import parentViewCourse from "@/views/parentViews/parentViewCourse.vue";
 import childCourses from "@/views/studentViews/childCourses.vue";
-import { useToken } from "../stores/token";
+import manageRequests from "@/views/adminViews/manageRequests.vue"
+import { useToken, usePersonalInfo } from "../stores/token";
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,110 +30,119 @@ const router = createRouter({
       path: "/login",
       name: "login",
       component: LoginPage,
-      meta: { requredAuth: false },
+      meta: { requredAuth: false, userType: "Any" },
     },
     {
       path: "/",
       name: "home",
       component: LandingPage,
-      meta: { requredAuth: false },
-    },
-    {
-      path: "/viewCourses",
-      name: "viewCourses",
-      component: ViewCourses,
-      meta: { requredAuth: false },
+      meta: { requredAuth: false, userType: "Any" },
     },
     {
       path: "/viewCourseDetails/:courseId",
       name: "viewCourseDetails",
       component: ViewCourseDetails,
-      meta: { requredAuth: false },
+      meta: { requredAuth: false, userType: "Any" },
     },
     {
       path: "/viewCoursePage/:courseId/:enrollmentId/:materialId",
       name: "viewCoursePage",
       component: viewCoursePage,
-      meta: { requredAuth: true },
+      meta: { requredAuth: true, userType: "Child" },
     },
     {
       path: "/instructorHome",
       name: "instructorHome",
       component: instructorHome,
-      meta: { requredAuth: true },
+      meta: { requredAuth: true, userType: "Instructor" },
     },
     {
       path: "/addCourse",
       name: "addCourse",
       component: addCourse,
-      meta: { requredAuth: true },
+      meta: { requredAuth: true, userType: "Instructor" },
     },
     {
       path: "/addCourseMaterial/:courseId",
       name: "addCourseMaterial",
       component: addCourseMaterial,
-      meta: { requredAuth: true },
+      meta: { requredAuth: true, userType: "Instructor" },
     },
     {
       path: "/signup",
       name: "signup",
       component: signupPage,
-      meta: { requredAuth: false },
+      meta: { requredAuth: false, userType: "Any" },
     },
     {
       path: "/programs/:programId",
       name: "programs",
       component: viewProgram,
-      meta: { requredAuth: false },
+      meta: { requredAuth: false, userType: "Any" },
     },
 
+
     {
-      path: "/parentProfile",
-      name: "parentProfile",
-      component: parentProfile,
-      meta: { requredAuth: true },
+      path: "/parentHome",
+      name: "parentHome",
+      component: parentHome,
+      meta: { requredAuth: true, userType: "Parent" },
     },
     {
-      path: "/children",
-      name: "children",
-      component: children,
-      meta: { requredAuth: true },
+      path: "/childrenProgress",
+      name: "childrenProgress",
+      component: childrenProgress,
+      meta: { requredAuth: true, userType: "Parent" },
+    },
+    {
+      path: "/childrenCourses",
+      name: "childrenCourses",
+      component: childrenCourses,
+      meta: { requredAuth: true, userType: "Parent" },
+    },
+    {
+      path: "/childrenAnalysis",
+      name: "childrenAnalysis",
+      component: childrenAnalysis,
+      meta: { requredAuth: true, userType: "Parent" },
     },
     {
       path: "/parentViewCourse/:courseId/:studentId/:isEnrolled",
       name: "parentViewCourse",
       component: parentViewCourse,
-      meta: { requredAuth: true },
+      meta: { requredAuth: true, userType: "Parent" },
     },
     {
       path: "/addChild",
       name: "addChild",
       component: addChild,
-      meta: { requredAuth: true },
+      meta: { requredAuth: true, userType: "Parent" },
     },
     {
       path: "/parentSettings",
       name: "parentSettings",
       component: parentSettings,
-      meta: { requredAuth: true },
-    },
-    {
-      path: "/payment",
-      name: "payment",
-      component: payment,
-      meta: { requredAuth: true },
+      meta: { requredAuth: true, userType: "Parent" },
     },
     {
       path: "/subscription",
       name: "subscription",
       component: subscription,
-      meta: { requredAuth: true },
+      meta: { requredAuth: true, userType: "Parent" },
     },
+
+    
     {
       path: "/childCourses",
       name: "childCourses",
       component: childCourses,
-      meta: { requredAuth: true },
+      meta: { requredAuth: true, userType: "Child" },
+    },
+    {
+      path: "/manageRequests",
+      name: "manageRequests",
+      component: manageRequests,
+      meta: { requredAuth: true, userType: "Admin" },
     },
     { path: "/:pathMatch(.*)", name: "notFound", component: LandingPage },
   ],
@@ -159,7 +172,13 @@ router.beforeResolve(async (to, from, next) => {
   } else if ((to.name == "login" || to.name == "signup") && authorized) {
     next({ name: "home" });
   } else {
-    next();
+    const personalInfo = usePersonalInfo();
+    let userType = personalInfo.getInfo;
+    if (userType?.userType != to.meta.userType && to.meta.userType != 'Any') {
+      next({ name: "home" });
+    } else {
+      next();
+    }
   }
 });
 

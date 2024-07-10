@@ -4,15 +4,16 @@ import Footer from "@/components/general/Footer.vue";
 import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
 import Button from "primevue/button";
+import Information from "@/components/student/courseDetails/Information.vue";
 import "primeicons/primeicons.css";
 import { useRoute, useRouter } from "vue-router";
 import { HttpRequester } from "@/lib/APICaller";
-import { useToken } from "@/stores/token";
+import { useToken, usePersonalInfo } from "@/stores/token";
 import Dialog from "primevue/dialog";
-const showDialog =ref(false)
-const token = useToken()
+const showDialog = ref(false);
+const token = useToken();
+const personalInfo = usePersonalInfo();
 import { ref } from "vue";
-
 
 const route = useRoute();
 const router = useRouter();
@@ -44,61 +45,66 @@ courseRequester.callApi({ course_id: route.params.courseId }).then((res) => {
 });
 
 function enroll() {
-  if (!token.getIsAuthorized){
-    router.push('/login')
+  if (!token.getIsAuthorized) {
+    router.push("/login");
   }
-  const enrollRequester = new HttpRequester("request_enrollment");
-  const enroll = {
-    request: {
-      created_at: new Date().toISOString(),
-      course_id: route.params.courseId
-    },
-  };
-  enrollRequester.callApi(enroll).then((res) => {
-    if (res.data.requesrt_enrollment_id) {
-      showDialog.value=true
+
+  if (
+    personalInfo.getInfo?.userType == "Parent" ||
+    personalInfo.getInfo?.userType == "Child"
+  ) {
+    showDialog.value = true;
+  }
+}
+const isEnrolled = ref(false);
+const enrollmentId = ref();
+
+const enrollmentRequester = new HttpRequester("get_enrollment");
+enrollmentRequester
+  .callApi({ course_id: route.params.courseId })
+  .then((res) => {
+    if (res.data.enrollment) {
+      isEnrolled.value = true;
+      enrollmentId.value = res.data.enrollment?.id;
     }
   });
-}
-function homePage(){
-    router.push('/childCourses')
- }
 
- const isEnrolled = ref(false)
- const enrollmentId = ref()
-
- const enrollmentRequester = new HttpRequester('get_enrollment')
- enrollmentRequester.callApi({course_id:route.params.courseId}).then((res)=>{
-  if(res.data.enrollment){
-    isEnrolled.value=true
-    enrollmentId.value = res.data.enrollment?.id
-  }
- })
-
-function viewMaterial(){
- router.push(
-        `/viewCoursePage/${route.params.courseId}/${enrollmentId.value}/${course.value.chapters[0].materials[0].Id}`
-      );
+function childPage() {
+  router.push("/childrenCourses");
 }
 </script>
 
 <template>
   <Navbar />
   <div class="big-container">
-    <Dialog v-model:visible="showDialog"  modal
-    :pt="{
+    <Dialog
+      v-model:visible="showDialog"
+      modal
+      :pt="{
         root: 'border-none',
         mask: {
-            style: 'backdrop-filter: blur(2px)'
-        }
-    }">
-    <template #container="{ closeCallback }" >
-        <div style="padding: 2em; display: flex; flex-direction: column; align-items: center; gap: 2rem;">
-
-            <h2>Enrolment Request Sent Successfully</h2>
-        <Button  label="Go To Home Page" style="width: 20rem;" @click="homePage"/>
-        </div>
-    </template>
+          style: 'backdrop-filter: blur(2px)',
+        },
+      }"
+    >
+      <template #container="{ closeCallback }">
+        
+          <div class="dialog" v-if="personalInfo.getInfo?.userType == 'Parent'">
+            <h2>
+              Please Go To Children Courses > Select The Child You Want to
+              Enroll > Select the Course
+            </h2>
+            <Button
+              label="Go To Childre Courses"
+              style="width: 20rem"
+              @click="childPage"
+            />
+          </div>
+          <div class="dialog"  v-if="personalInfo.getInfo?.userType == 'Child'">
+            <h2>Ask your Parent To Enroll You to this Course</h2>
+            <Button label="Cancel" @click="showDialog=false"/>
+          </div>
+      </template>
     </Dialog>
     <div class="course-description">
       <div class="head">
@@ -109,8 +115,7 @@ function viewMaterial(){
       <div class="description">
         <div class="header">
           <h2>Course Description</h2>
-          <Button v-if="!isEnrolled" label="Enroll Now" @click="enroll" />
-          <Button v-else label="View Material" @click="viewMaterial"/>
+          <Button label="Enroll Now" @click="enroll" />
         </div>
         <p>{{ course?.description }}</p>
       </div>
@@ -160,6 +165,14 @@ function viewMaterial(){
           </AccordionTab>
         </Accordion>
       </div>
+      <Information
+        :categories="course?.categories"
+        :title="course?.title"
+        :price="course?.price"
+        :duration="course?.duration"
+        :min_age="course?.min_age"
+        :max_age="course?.max_age"
+      />
     </div>
   </div>
   <Footer />
@@ -190,6 +203,14 @@ h1 {
   width: fit-content;
   border-bottom: 0.25rem solid var(--accent3);
   line-height: 3rem;
+}
+.dialog{
+  padding: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
 }
 img {
   width: 100%;

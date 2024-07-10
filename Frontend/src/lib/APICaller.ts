@@ -35,11 +35,9 @@ export class HttpRequester {
       else if (response.data && response.status ==200) {
         return response.data;
       } else {
-        console.error("API response did not indicate success");
         return false;
       }
     } catch (error) {
-      console.error("Error calling API:", error);
     }
   }
   
@@ -61,11 +59,9 @@ export class HttpRequester {
       if (response.data && response.status ==200) {
         return response.data;
       } else {
-        console.error("API response did not indicate success");
         return false;
       }
     } catch (error) {
-      console.error("Error calling API:", error);
     }
   }
 }

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import ParentSidebar from '../../components/general/ParentSidebar.vue'
+import ParentSidebar from '../../components/parent/general/ParentSidebar.vue'
 import Navbar from '../../components/general/Navbar.vue';
 import Footer from '@/components/general/Footer.vue';
 </script>

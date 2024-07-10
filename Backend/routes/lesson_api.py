@@ -11,7 +11,7 @@ router = APIRouter()
 
 @router.post('/get_lesson') 
 async def get_lessons(lesson_id:str=Body(embed=True),userId:str = Depends(auth_user))-> ServiceResponse:
-    res = await lesson_database.get_lesson(lesson_id)
+    res = await lesson_database.get_lesson(lesson_id,userId)
     return res
 
 

@@ -24,16 +24,24 @@ programRequester.callApi().then((res) => {
   }
 });
 const socialMediaIcons = [
-  { class: "pi pi-facebook", to: "/" },
-  { class: "pi pi-linkedin", to: "/" },
-  { class: "pi pi-youtube", to: "/" },
-  { class: "pi pi-instagram", to: "/" },
-  { class: "pi pi-whatsapp", to: "/" },
+  {
+    class: "pi pi-facebook",
+    to: "https://www.facebook.com/traceedtech",
+  },
+  {
+    class: "pi pi-linkedin",
+    to: "https://www.linkedin.com/company/trace-education8/",
+  },
+  //{ class: "pi pi-youtube", to: "/" },
+  {
+    class: "pi pi-instagram",
+    to: "https://www.instagram.com/trace.education?igsh=ZW9xYnEyaGU1M210",
+  },
+   { class: "pi pi-whatsapp", to: "https://wa.me/201065356028?text=hello" },
 ];
 
-
 const pages = [
-  { name: "Home", to: "/#Home" },  
+  { name: "Home", to: "/#Home" },
   { name: "About Us", to: "/#About" },
   { name: "Contact Us", to: "/#contact" },
   { name: "Schools", to: "/" },
@@ -49,22 +57,33 @@ const pages = [
       <img src="/images/logo3.png" alt="" />
       <div class="programs">
         <h4>Programs</h4>
-        <p v-for="program in items" @click="program?.command">{{ program.name }}</p>
+        <p v-for="program in items" @click="program?.command">
+          {{ program.name }}
+        </p>
       </div>
       <div class="pages">
         <h4>Pages</h4>
-        <p v-for="page in pages" @click="router.push(page.to)">{{ page.name }}</p>
+        <p v-for="page in pages" @click="router.push(page.to)">
+          {{ page.name }}
+        </p>
       </div>
       <div class="socialMedia">
-        <div>
-          <i class="pi pi-envelope"></i> <span>help@armstrong.courses</span>
+        <div style="cursor: pointer">
+          <a href="mailto:Info@traceedtech.com?subject=Trace Platform&body=I hope this email finds you well:">
+            <i class="pi pi-envelope"></i>
+            <span>Info@traceedtech.com</span></a
+          >
         </div>
         <div>
-          <i
+          <a
             v-for="socialMediaIcon in socialMediaIcons"
-            :class="socialMediaIcon.class"
+            :href="socialMediaIcon.to"
           >
-          </i>
+            <i :class="socialMediaIcon.class" style="cursor: pointer"> </i>
+          </a>
+          <a href="https://www.tiktok.com/@traceeducation?_t=8m2j5N7d7Jt&_r=1">
+            <img class="icon" src="/public/images/tiktok.png" alt=""
+          /></a>
         </div>
       </div>
     </div>
@@ -93,7 +112,8 @@ p {
   margin: 0;
   line-height: 1.5rem;
 }
-i {
+i,
+.icon {
   color: var(--secondary);
   padding: 0.5rem;
   background-color: var(--primary);
@@ -106,6 +126,13 @@ i {
 }
 .copyRight {
   margin-top: 2rem;
+}
+.icon {
+  color: var(--secondary);
+  padding: 0.5rem;
+  background-color: var(--primary);
+  border-radius: 100%;
+  transform: translateY(1rem);
 }
 @media screen and (max-width: 500px) {
   img {

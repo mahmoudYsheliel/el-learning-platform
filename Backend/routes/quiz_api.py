@@ -10,7 +10,7 @@ router = APIRouter()
 
 @router.post('/get_quiz') 
 async def get_quiz(quiz_id:str=Body(embed=True),userId:str = Depends(auth_user))-> ServiceResponse:
-    res = await quiz_database.get_quiz(quiz_id)
+    res = await quiz_database.get_quiz(quiz_id,userId)
     return res
 
 @router.post('/create_quiz')

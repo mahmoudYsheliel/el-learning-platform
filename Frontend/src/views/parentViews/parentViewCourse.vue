@@ -9,6 +9,7 @@ import Button from "primevue/button";
 import { HttpRequester } from "@/lib/APICaller";
 import { useToken } from "@/stores/token";
 import Dialog from "primevue/dialog";
+import Information from "@/components/student/courseDetails/Information.vue";
 const showDialog =ref(false)
 const token = useToken()
 import { ref } from "vue";
@@ -61,7 +62,7 @@ function requestEnroll() {
   });
 }
  function childPage(){
-    router.push('/children')
+    router.push('/parentHome')
  }
 </script>
 
@@ -81,7 +82,10 @@ function requestEnroll() {
         <div style="padding: 2em; display: flex; flex-direction: column; align-items: center; gap: 2rem;">
 
             <h2>Enrolment Request Sent Successfully</h2>
-        <Button label="Go To Children Page" style="width: 20rem;" @click="childPage"/>
+            <h3 style="margin: 0; color: var(--secondary);">Please send a recite with {{ course?.price }} to this number: 01012345678</h3>
+            <h3 style="margin: 0; color: var(--secondary);">and attatch the recite as a whatsapp message to the same number</h3>
+            <i style="font-size: 6rem; color: var(--accent3);" class="pi pi-check-circle"></i>
+        <Button label="Go To Home Page" style="width: 20rem;" @click="childPage"/>
         </div>
     </template>
     </Dialog>
@@ -144,6 +148,7 @@ function requestEnroll() {
           </AccordionTab>
         </Accordion>
       </div>
+      <Information :categories="course?.categories" :title="course?.title" :price="course?.price" :duration="course?.duration" :min_age="course?.min_age" :max_age="course?.max_age"/>
     </div>
   </div>
   <Footer />

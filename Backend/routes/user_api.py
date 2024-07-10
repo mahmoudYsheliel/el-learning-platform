@@ -25,21 +25,29 @@ async def login_for_access_token(
     if not valid:
         return ServiceResponse(success=False,msg="no such user",status_code=404)
 
-    user1 = await get_database().get_collection("user").find_one({"email": form_data.username},{'id': {'$toString': '$_id'},})
-    user2 = await get_database().get_collection("user").find_one({"username": form_data.username},{'id': {'$toString': '$_id'},})
-    user = None
-    if user1 and not user2:
-        user = user1
-    elif user2 and not user1:
-        user = user2
-    elif (user1 and user2):
-        user = user2
+    user = await get_database().get_collection("user").find_one({"email": form_data.username},{'id': {'$toString': '$_id'},})
     userid=user['id']
     access_token_expires = timedelta(minutes=1e6)
     access_token = create_access_token(
         data={'userId':userid}, expires_delta=access_token_expires
     )
     return Token(access_token=access_token)
+
+
+@router.post("/switch_to_child")
+async def switc_to_child(child_id:str=Body(embed=True),userId:str = Depends(auth_user)):
+    user_children =await get_database().get_collection('parent').find_one({'user_id':str(userId)},{'children':1})
+    if not user_children:
+        return ServiceResponse(success=False,msg='Could not Find Children')
+    if child_id in user_children['children']:
+        access_token_expires = timedelta(minutes=1e6)
+        access_token = create_access_token(
+        data={'userId':child_id}, expires_delta=access_token_expires
+    )
+        return ServiceResponse(data={'access_token':access_token})
+    return ServiceResponse(success=False,msg='Could not Find Child')
+        
+    
 
 @router.post('/signup')
 async def signup(user:User =Body(embed=True)):

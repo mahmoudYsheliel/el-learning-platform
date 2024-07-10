@@ -402,4 +402,85 @@
   "title": "What is IR(Infrared) sensor?",
   "description": "This lesson provides an in-depth exploration of IR (Infrared) sensors, covering their working principles, applications in various fields such as robotics and automation, and how they detect and measure infrared radiation. Students will learn about different types of IR sensors and their significance in modern technology.",
   "source": "https://drive.google.com/file/d/1QlM5VoLVy3RDf2UXL-jdP4hEzm5MCVes/preview"
+},
+{
+  "_id": {
+    "$oid": "667c327b98157d488d318539"
+  },
+  "id": "string",
+  "title": "Welcome to Exploring the Universe",
+  "description": "Welcome to 'Exploring the Universe' – an exciting journey through space. Discover stars, galaxies, black holes, dark matter, our solar system, extraterrestrial life, and cutting-edge space exploration technology.",
+  "source": "https://drive.google.com/file/d/1mNGmce_3EWhacSvKRZjrcJHepC9Sbfnz/preview"
+},
+{
+  "_id": {
+    "$oid": "667c32b598157d488d31853a"
+  },
+  "id": "string",
+  "title": "From Fireworks to Rockets",
+  "description": "Historical overview of rocketry origins, rocket technology evolution in Europe, & Significant milestones in rocket development.",
+  "source": "https://drive.google.com/file/d/1d0Qzhm5z8VuaMnPPA_ZlVhYymIgk0z9T/preview"
+},
+{
+  "_id": {
+    "$oid": "667c32ea98157d488d31853b"
+  },
+  "id": "string",
+  "title": "Rockets? What’s that? ",
+  "description": "What a rocket is, & its components. Principles of Rocket Engines (Newton's third law). Rockets Applications: space missions and satellite deployment, multistage rockets facilitating deep space exploration (like the Saturn V rocket from the Apollo missions) ",
+  "source": "https://drive.google.com/file/d/12dVpGMXFAfHritZNHLhkylXMqspyc46O/preview"
+},
+{
+  "_id": {
+    "$oid": "667c332498157d488d31853c"
+  },
+  "id": "string",
+  "title": "Satellites? What’s that?",
+  "description": "Orbit definition, and types. What a satellite is and how it differs from other objects in space. What the basic components and functions are. How satellites maintain their position and velocity in space. ",
+  "source": "https://drive.google.com/file/d/1uF_AK2H9EUCy7s-T30Du4U9gKcMrkJAY/preview"
+},
+{
+  "_id": {
+    "$oid": "667c335a98157d488d31853d"
+  },
+  "id": "string",
+  "title": "Let’s Launch Satellites!",
+  "description": "Stages of a rocket launch: liftoff, ascent, orbit insertion. Factors affecting the trajectory and speed of a rocket: escape velocity",
+  "source": "https://drive.google.com/file/d/1f2dfErtS1SFpRH4nnGQqNSw628TkUgs2/preview"
+},
+{
+  "_id": {
+    "$oid": "667c363198157d488d31853e"
+  },
+  "id": "2",
+  "title": "Why Satellites?",
+  "description": "Role of satellites in space exploration: weather satellites, communication satellites, and scientific research satellites. The growing issue of space debris and potential solutions to mitigate them.",
+  "source": "https://drive.google.com/file/d/1TMzx6mzRRJo_U1Q0hS3Re1kFAQ7iQ608/preview"
+},
+{
+  "_id": {
+    "$oid": "667c369a98157d488d31853f"
+  },
+  "id": "string",
+  "title": "The way to Mars ",
+  "description": "Trajectory Design, Rendezvous Planning. Locating our spacecraft. Communicating with our spacecraft.",
+  "source": "https://drive.google.com/file/d/1cFM0WAdYuTDy7GHRFnCV6v1OqrWwD3fv/preview"
+},
+{
+  "_id": {
+    "$oid": "667c36c798157d488d318540"
+  },
+  "id": "string",
+  "title": "Future of Robotic Exploration",
+  "description": "The role of robotic missions in advancing our understanding of the universe and preparing for future human exploration.",
+  "source": "https://drive.google.com/file/d/11AJzgmsdTZ4FLob5ASMwSK7OFNh0W2v0/preview"
+},
+{
+  "_id": {
+    "$oid": "667c36fd98157d488d318541"
+  },
+  "id": "string",
+  "title": "Use of telescopes in space study",
+  "description": "Use of telescopes in space study: ground-based telescopes vs. space telescopes.",
+  "source": "https://drive.google.com/file/d/1QbdId0zwqfA0VERRX_eJAOcSpgtoapoo/preview"
 }]

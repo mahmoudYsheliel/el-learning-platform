@@ -37,6 +37,9 @@ body,
   --accent2: #7302ff;
   --accent3: #f4b904;
   --accent4:#FFC27A;
+  --choiceBackgroundColor:#E8F7FF;
+  --wrongAnswer:#FF2D2D;
+  --correctAnswer:#5CFA75;
 
   font-size: calc(11px + 100vw * 0.0035);
 }

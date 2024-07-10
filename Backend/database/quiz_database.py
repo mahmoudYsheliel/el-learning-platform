@@ -49,32 +49,47 @@ async def update_quiz(quiz_id: str, update: dict) -> ServiceResponse:
     return ServiceResponse(msg="OK")
 
 
-async def get_quiz(quiz_id: str) -> ServiceResponse:
-    bson_id = validate_bson_id(quiz_id)
-    if not bson_id:
-        return ServiceResponse(status_code=400, msg="Bad quiz ID")
+async def get_quiz(quiz_id: str,userId:str) -> ServiceResponse:
+    
+    user_type = await get_database().get_collection('user').find_one({'_id':userId})
+    if user_type['user_type'] == 'Child':
+        bson_id=validate_bson_id(quiz_id)
+        if not bson_id:
+            return ServiceResponse(status_code=400, msg='Bad Quiz ID')
+        course_id = await get_database().get_collection('course').find_one({'chapters.materials.Id':quiz_id},{'_id':1})
+        if not course_id:
+            return ServiceResponse(status_code=400, msg='This Quiz not Found in any Course')
+        enrollmet_id = await get_database().get_collection('enrollment').find_one({'course_id':str(course_id['_id']),'student_id':str(userId)},{'_id':1})
+        if not enrollmet_id:
+            return ServiceResponse(status_code=400, msg='This Course is not Available for This Student')
+        bson_id = validate_bson_id(quiz_id)
+        if not bson_id:
+            return ServiceResponse(status_code=400, msg="Bad quiz ID")
 
-    quiz = (
-        await get_database()
-        .get_collection("quiz")
-        .find_one(
-            {"_id": bson_id},
-            {
-                "_id": 0,
-                "id": {"$toString": "$_id"},
-                "title": 1,
-                "description": 1,
-                "order": 1,
-                "questions": 1,
-                'duaration':1
-            },
+        quiz = (
+            await get_database()
+            .get_collection("quiz")
+            .find_one(
+                {"_id": bson_id},
+                {
+                    "_id": 0,
+                    "id": {"$toString": "$_id"},
+                    "title": 1,
+                    "description": 1,
+                    "order": 1,
+                    "questions": 1,
+                    'duaration':1
+                },
+            )
         )
-    )
-    if not quiz:
-        return ServiceResponse(
-            success=False, status_code=404, msg="quiz Not Found"
-        )
-    return ServiceResponse(data={"quiz": quiz})
+        if not quiz:
+            return ServiceResponse(
+                success=False, status_code=404, msg="quiz Not Found"
+            )
+        return ServiceResponse(data={"quiz": quiz})
+    return ServiceResponse(
+                success=False, status_code=404, msg="User Not Allowed"
+            )
 
 
 async def add_question(quiz_id: str, question: Question) -> ServiceResponse:

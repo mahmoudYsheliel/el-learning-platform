@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import ParentSidebar from "../../components/general/ParentSidebar.vue";
+import ParentSidebar from "../../components/parent/general/ParentSidebar.vue";
 import Navbar from "../../components/general/Navbar.vue";
 import Footer from "@/components/general/Footer.vue";
 import { ref } from "vue";
@@ -13,7 +13,6 @@ import router from "@/router";
 
 const firstName = ref();
 const lastName = ref();
-const userName = ref();
 const email = ref();
 const pass = ref();
 const confirmPass = ref();
@@ -90,7 +89,6 @@ function addChildFunc() {
   if (
     !firstName.value ||
     !lastName.value ||
-    !userName.value ||
     !email.value ||
     !pass.value ||
     !confirmPass.value ||
@@ -108,7 +106,6 @@ function addChildFunc() {
     let date = {
       user: {
         email: email.value,
-        username: userName.value,
         hashed_pass: pass.value,
         user_type: "Child",
         first_name: firstName.value,
@@ -147,7 +144,7 @@ function addChildFunc() {
     }">
     <div class="dialog-container">
         <h1>Child Added Successfully</h1>
-        <Button label='View Child' @click="router.push('/children')"/>
+        <Button label='View Child' @click="router.push('/childrenCourses')"/>
     </div>
      
       
@@ -166,10 +163,6 @@ function addChildFunc() {
         <div class="element">
           <p>Last Name</p>
           <InputText v-model="lastName" />
-        </div>
-        <div class="element">
-          <p>User Name</p>
-          <InputText v-model="userName" />
         </div>
 
         <div class="element">

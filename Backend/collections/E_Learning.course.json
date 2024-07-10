@@ -397,4 +397,146 @@
   "max_age": 17,
   "duration": 14,
   "number_of_enrollments": 0
+},
+{
+  "_id": {
+    "$oid": "667c445898157d488d31854b"
+  },
+  "id": "string",
+  "title": "Exploring the Universe",
+  "description": "Join us on an exhilarating journey through space and aerospace engineering in 'Exploring the Universe.' Designed for young explorers aged 6 to 9, this course, led by Aerospace Engineer Muhammad Ayman, delves into the captivating history of rocketry, mechanics of rockets and satellites, satellite launching processes, and the profound significance of space exploration. Interactive games and activities from NASA Space Place ignite curiosity and passion for aerospace, inspiring children to explore potential future careers in this thrilling field.",
+  "chapters": [
+    {
+      "title": "Foundations of Rocketry and Satellites",
+      "materials": [
+        {
+          "Id": "667c327b98157d488d318539",
+          "order": 1,
+          "title": "Welcome to Exploring the Universe",
+          "type": "Lesson"
+        },
+        {
+          "Id": "667c32b598157d488d31853a",
+          "order": 2,
+          "title": "From Fireworks to Rockets",
+          "type": "Lesson"
+        },
+        {
+          "Id": "667c3bb798157d488d318543",
+          "order": 3,
+          "title": "From Fireworks to Rockets Quiz",
+          "type": "Quiz"
+        },
+        {
+          "Id": "667c32ea98157d488d31853b",
+          "order": 4,
+          "title": "Rockets? What’s that?",
+          "type": "Lesson"
+        },
+        {
+          "Id": "667c3bb798157d488d318543",
+          "order": 5,
+          "title": "Rockets? What’s that? Quiz",
+          "type": "Quiz"
+        },
+        {
+          "Id": "667c332498157d488d31853c",
+          "order": 6,
+          "title": "Satellites? What’s that?",
+          "type": "Lesson"
+        },
+        {
+          "Id": "667c3bf898157d488d318544",
+          "order": 7,
+          "title": "Satellites? What’s that? Quiz",
+          "type": "Quiz"
+        },
+        {
+          "Id": "667c335a98157d488d31853d",
+          "order": 8,
+          "title": "Let’s Launch Satellites!",
+          "type": "Lesson"
+        },
+        {
+          "Id": "667c3c1e98157d488d318545",
+          "order": 9,
+          "title": "Let’s Launch Satellites! Quiz",
+          "type": "Quiz"
+        },
+        {
+          "Id": "667c363198157d488d31853e",
+          "order": 10,
+          "title": "Why Satellites?",
+          "type": "Lesson"
+        },
+        {
+          "Id": "667c3c3f98157d488d318546",
+          "order": 11,
+          "title": "Why Satellites? Quiz",
+          "type": "Quiz"
+        }
+      ]
+    },
+    {
+      "title": "Role of Satellites and Telescopes",
+      "materials": [
+        {
+          "Id": "667c369a98157d488d31853f",
+          "order": 1,
+          "title": "The way to Mars",
+          "type": "Lesson"
+        },
+        {
+          "Id": "667c3c6698157d488d318547",
+          "order": 2,
+          "title": "The way to Mars",
+          "type": "Quiz"
+        },
+        {
+          "Id": "667c36c798157d488d318540",
+          "order": 3,
+          "title": "Future of Robotic Exploration",
+          "type": "Lesson"
+        },
+        {
+          "Id": "667c3d2d98157d488d318549",
+          "order": 4,
+          "title": "Future of Robotic Exploration",
+          "type": "Quiz"
+        },
+        {
+          "Id": "667c36fd98157d488d318541",
+          "order": 5,
+          "title": "Use of telescopes in space study",
+          "type": "Lesson"
+        },
+        {
+          "Id": "667c3c9c98157d488d318548",
+          "order": 6,
+          "title": "Use of telescopes in space study",
+          "type": "Quiz"
+        }
+      ]
+    }
+  ],
+  "price": 200,
+  "image": "https://i.ytimg.com/vi/CmWGW653voo/maxresdefault.jpg",
+  "categories": [
+    {
+      "Id": "667c3e7798157d488d31854a",
+      "title": "Space Exploration"
+    }
+  ],
+  "objectives": [
+    "Understand the foundational concepts of rocketry, including the evolution from fireworks to modern rockets.",
+    "Identify the components of rockets and satellites, explaining their functions and roles in space exploration.",
+    "Explore the principles of rocket engines, particularly Newton's third law, and its application in space missions.",
+    "Investigate the role of satellites in scientific research, weather forecasting, and global communications.",
+    "Engage in interactive activities and games from NASA Space Place to foster curiosity and enthusiasm for aerospace engineering.",
+    "nspire young explorers to consider future careers in aerospace by showcasing the diversity of roles within the field."
+  ],
+  "min_age": 6,
+  "max_age": 9,
+  "duration": 3,
+  "number_of_enrollments": 0
 }]

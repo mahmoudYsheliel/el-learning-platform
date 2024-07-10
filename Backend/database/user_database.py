@@ -1,4 +1,4 @@
-from models.user import User, Instructor, Child, Parent
+from models.user import User, Instructor, Child, Parent,Admin
 from models.runtime import ServiceResponse
 from database.mongo_driver import get_database, validate_bson_id
 from lib.crypto import verify_password,hash_password
@@ -6,7 +6,7 @@ from lib.crypto import verify_password,hash_password
 
 async def create_user(user: User) -> ServiceResponse:
     user_type = user.user_type
-    if user_type != "Instructor" and user_type != "Child" and user_type != "Parent":
+    if user_type != "Instructor" and user_type != "Child" and user_type != "Parent" and user_type != "Admin":
         return ServiceResponse(
             success=False, status_code=400, msg="user type is not valid"
         )
@@ -17,21 +17,23 @@ async def create_user(user: User) -> ServiceResponse:
         return ServiceResponse(
             success=False, status_code=409, msg="email is already used once"
         )
-    found_user = (
-        await get_database()
-        .get_collection("user")
-        .find_one({"username": user.username})
-    )
-    if found_user:
-        return ServiceResponse(
-            success=False, status_code=409, msg="username is already used once"
-        )
+        
     user.hashed_pass = hash_password(user.hashed_pass)
     mdb_result = (
         await get_database().get_collection("user").insert_one(user.model_dump())
     )
     user_id = str(mdb_result.inserted_id)
 
+    if user_type == "Admin":
+        admin = Admin(user_id=user_id)
+        mdb_result = (
+            await get_database()
+            .get_collection("admin")
+            .insert_one(admin.model_dump())
+        )
+        user_id = str(mdb_result.inserted_id)
+        return ServiceResponse(data={"user_id": user_id})
+    
     if user_type == "Instructor":
         instructor = Instructor(user_id=user_id)
         mdb_result = (
@@ -62,16 +64,8 @@ async def create_user(user: User) -> ServiceResponse:
 
 async def validate_user(username: str, password: str) -> ServiceResponse:
     # check user in database
-    user1 = await get_database().get_collection("user").find_one({"email": username})
-    user2 = await get_database().get_collection("user").find_one({"username": username})
-    user = None
-    if user1 and not user2:
-        user = user1
-    elif user2 and not user1:
-        user = user2
-    elif (user1 and user2) and (user1["email"] == user1["username"]):
-        user = user2
-
+    user = await get_database().get_collection("user").find_one({"email": username})
+   
     if not user:
         return False
 
@@ -105,6 +99,7 @@ async def personal_info(user_id: str):
             "birth_day": 1,
             "gender": 1,
             "balance": 1,
+            "image":1
         },
     )
 
@@ -114,12 +109,25 @@ async def personal_info(user_id: str):
     info2 = {}
 
     # Fetch specific user type information
+    if info1["user_type"] == "Admin":
+        info2 = await db.get_collection("admin").find_one(
+            {"user_id": str(user_id)},  # user_id is stored as string
+            {
+                "_id": 0,
+            },
+        )
+        
     if info1["user_type"] == "Instructor":
         info2 = await db.get_collection("instructor").find_one(
             {"user_id": str(user_id)},  # user_id is stored as string
             {
                 "_id": 0,
-                "specialization": 1,
+                "title":1,
+                "specializations":1,
+                "biography":1,
+                "education_background":1,
+                "experience":1,
+                "philisophy":1
             },
         )
     elif info1["user_type"] == "Parent":
@@ -228,15 +236,6 @@ async def add_child(user: User, child: Child, userId: str) -> ServiceResponse:
     if found_user:
         return ServiceResponse(
             success=False, status_code=409, msg="email is already used once"
-        )
-    found_user = (
-        await get_database()
-        .get_collection("user")
-        .find_one({"username": user.username})
-    )
-    if found_user:
-        return ServiceResponse(
-            success=False, status_code=409, msg="username is already used once"
         )
     mdb_result = (
         await get_database().get_collection("user").insert_one(user.model_dump())

@@ -17,12 +17,6 @@ defineProps(["selected"]);
 const showDialogLogOut = ref(false);
 const router = useRouter();
 
-const socialMediaIcons = [
-  { class: "pi pi-facebook", to: "/" },
-  { class: "pi pi-linkedin", to: "/" },
-  { class: "pi pi-youtube", to: "/" },
-  { class: "pi pi-instagram", to: "/" },
-];
 const pagesToRoute = [
   { name: "Home", to: "/#Home" },
   { name: "Courses", to: "/#Courses" },
@@ -30,19 +24,40 @@ const pagesToRoute = [
   { name: "Contact", to: "/#Contact" },
 ];
 const items = computed(() => {
-  if (personalInfo.getInfo?.userType == "Parent") {
+  if(personalInfo.getInfo?.userType == "Admin"){
     return [
       {
-        label: "My Profile",
-
+        label: "Manage Requests",
         command: () => {
-          router.push("/parentProfile");
+          router.push("/manageRequests");
         },
       },
       {
-        label: "Manage Children",
+        label: "Log out",
         command: () => {
-          router.push("/children");
+          showDialogLogOut.value = true;
+        },
+      }]
+  }
+  else if (personalInfo.getInfo?.userType == "Parent") {
+    return [
+      {
+        label: "Home",
+
+        command: () => {
+          router.push("/parentHome");
+        },
+      },
+      {
+        label: "Children Progress",
+        command: () => {
+          router.push("/childrenProgress");
+        },
+      },
+      {
+        label: "Children Courses",
+        command: () => {
+          router.push("/childrenCourses");
         },
       },
       {
@@ -63,13 +78,6 @@ const items = computed(() => {
           router.push("/parentSettings");
         },
       },
-      {
-        label: "My Payment Methods",
-        command: () => {
-          router.push("/payment");
-        },
-      },
-
       {
         label: "Log out",
         command: () => {

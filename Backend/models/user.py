@@ -6,9 +6,8 @@ from datetime import datetime
 class User(BaseModel):
     id:Optional[str] = None
     email:str = Field(unique=True)
-    username:str = Field(unique=True)
     hashed_pass:str
-    user_type:str #Instructor Child Parent
+    user_type:str #Instructor Child Parent Admin
     created_at: Optional[datetime]=datetime.now().isoformat()
     phone_number:Optional[str]=''
     first_name:Optional[str]=''
@@ -16,13 +15,21 @@ class User(BaseModel):
     birth_day:Optional[str]=''
     gender:Optional[str]=''
     balance:Optional[float]=0
+    image:Optional[str]=''
     
+class Admin(BaseModel):
+    id:Optional[str] = None
+    user_id: str=Field(unique=True)
 
 class Instructor (BaseModel):
     id:Optional[str] = None
     user_id: str=Field(unique=True)
-    specialization:Optional[str]=''
-    
+    title:Optional[str]=''
+    specializations:Optional[list[str]]=[]
+    biography:Optional[str]=''
+    education_background:Optional[list[str]]=[]
+    experience:Optional[list[str]]=[]
+    philisophy:Optional[str]=''
     
 class Parent(BaseModel):
     id:Optional[str] = None
