@@ -20,3 +20,23 @@ class Quiz(BaseModel):
     duaration:Optional[int]=0
     last_question_number:Optional[int]=0
     
+    
+ 
+'''
+class Choice(BaseModel):
+    id:Optional[int]=0
+    english:str
+    arabic:str
+
+class QuestionText(BaseModel):
+    english:str
+    arabic:str
+    
+class Question(BaseModel):
+    id:Optional[int]=0
+    question:QuestionText
+    choices:list[Choice]
+    correct_answer_id:int
+    '''
+    
+    

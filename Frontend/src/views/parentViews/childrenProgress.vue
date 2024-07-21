@@ -14,7 +14,7 @@ const selectedChild = ref(null)
 <template>
   <Navbar />
   <div class="container">
-    <ParentSidebar selected="Children Progress" />
+    <ParentSidebar class="sidebar" selected="Children Progress" />
     <div class="wrapper">
       <SelectChild @selected-child="id=>selectedChild=id"/>
         <CoursesProgress :selectedChildId="selectedChild"/>
@@ -76,5 +76,13 @@ flex-direction: column;
 align-items: center;
 color: white;
 }
-
+@media screen and (max-width: 1000px) {
+  .container {
+  grid-template-columns:  90vw;
+  min-height: 100vh;
+}
+.sidebar{
+  display: none;
+}
+}
 </style>

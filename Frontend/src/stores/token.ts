@@ -41,8 +41,18 @@ export const useToken = defineStore("token", {
   },
 });
 
+interface Notification{
+  title:string
+  description:string
+  type:string
+  analysis_quiz_id:string
+  enrollment_request_id:string
+  status:string //waiting  done
+}
+
 interface info{
   userType:string
+  notifications:Notification[]
 }
 
 export const usePersonalInfo = defineStore("personalInfo", {

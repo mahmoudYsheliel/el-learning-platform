@@ -143,7 +143,8 @@ function addChildFunc() {
         header:{style:'display:none'}
     }">
     <div class="dialog-container">
-        <h1>Child Added Successfully</h1>
+        <h3>Child Added Successfully</h3>
+        <h3>Please Log in With:</h3> <h3 style="color: var(--secondary);">{{ email }} Account</h3> <h3> to Start a New Journey</h3>
         <Button label='View Child' @click="router.push('/childrenCourses')"/>
     </div>
      
@@ -152,7 +153,7 @@ function addChildFunc() {
 
 
 
-    <ParentSidebar selected="Add Child" />
+    <ParentSidebar class="sidebar" selected="Add Child" />
     <div class="big-wrapper">
       <h2>{{ message }}</h2>
       <div class="wrapper">
@@ -258,12 +259,26 @@ button {
     padding: 2rem;
     gap: 2rem;
 }
+h3{
+  color: var(--accent1);
+  margin: 0;
+  line-height: 0rem;
+}
 @media screen and (max-width: 1000px) {
   .wrapper {
     grid-template-columns: 1fr 1fr;
   }
+  
 }
-
+@media screen and (max-width: 1000px) {
+  .container {
+  grid-template-columns:  90vw;
+  min-height: 100vh;
+}
+.sidebar{
+  display: none;
+}
+}
 @media screen and (max-width: 750px) {
   .wrapper {
     grid-template-columns: 1fr;

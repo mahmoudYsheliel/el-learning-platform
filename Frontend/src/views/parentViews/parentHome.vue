@@ -128,7 +128,7 @@ function addComment() {
         <Button label="Add Comment" @click="addComment" />
       </div>
     </Dialog>
-    <ParentSidebar selected="Home" />
+    <ParentSidebar class="sidebar" selected="Home" />
     <div class="wrapper">
       <div class="requests">
         <h2>Enrollment Requests</h2>
@@ -178,8 +178,9 @@ function addComment() {
 <style scoped>
 .container {
   display: grid;
-  grid-template-columns: 12rem 1fr;
+  grid-template-columns: 12rem calc(100vw - 15rem);
   min-height: 100vh;
+ 
 }
 .row {
   display: grid;
@@ -197,6 +198,8 @@ h3 {
 .wrapper {
   margin-top: 2rem;
   margin-left: 2rem;
+  width: 100%;
+  
 }
 h2 {
   color: var(--accent1);
@@ -211,6 +214,12 @@ h2 {
   padding-left: 1rem;
   overflow-x: scroll;
   max-width: 100%;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+}
+.table-container ample::-webkit-scrollbar {
+  display: none;
 }
 h3 {
   color: var(--text);
@@ -254,5 +263,15 @@ span {
   width: fit-content;
   display: flex;
   gap: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+  grid-template-columns:  90vw;
+  min-height: 100vh;
+}
+.sidebar{
+  display: none;
+}
 }
 </style>

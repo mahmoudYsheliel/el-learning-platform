@@ -7,9 +7,10 @@ import Button from "primevue/button";
 import InputText from "primevue/inputtext";
 import Dialog from "primevue/dialog";
 import { ref } from "vue";
-import { useRouter } from "vue-router";
+import 'primeicons/primeicons.css'
 
-const router = useRouter();
+
+
 interface RnrollmentRequest {
   id: string;
   parentEmail: string;
@@ -142,6 +143,46 @@ function reject(id: string) {
       }
     });
 }
+const reverse = ref(false)
+function orderRequests(type:string){
+  if (type=='price'){
+    enrollmentRequests.value.sort((a:any,b:any)=>{return a?.price - b?.price})
+    if (reverse.value){
+      enrollmentRequests.value.reverse()  
+    }
+  }
+  else if (type=='parent'){
+    enrollmentRequests.value.sort((a:any,b:any)=>{return a?.parentEmail?.localeCompare(b?.parentEmail)})
+    if (reverse.value){
+      enrollmentRequests.value.reverse()  
+    }
+  }
+  else if (type=='title'){
+    enrollmentRequests.value.sort((a:any,b:any)=>{return a?.courseTitle?.localeCompare(b?.courseTitle)})
+    if (reverse.value){
+      enrollmentRequests.value.reverse()  
+    }
+  }
+  else if (type=='date'){
+    enrollmentRequests.value.sort((a:any,b:any)=>{return a?.date?.localeCompare(b?.date)})
+    if (reverse.value){
+      enrollmentRequests.value.reverse()  
+    }
+  }
+  else if (type=='time'){
+    enrollmentRequests.value.sort((a:any,b:any)=>{return a?.time?.localeCompare(b?.time)})
+    if (reverse.value){
+      enrollmentRequests.value.reverse()  
+    }
+  }
+  else if (type=='status'){
+    enrollmentRequests.value.sort((a:any,b:any)=>{return a?.status?.localeCompare(b?.status)})
+    if (reverse.value){
+      enrollmentRequests.value.reverse()  
+    }
+  }
+  reverse.value=!reverse.value
+}
 </script>
 
 <template>
@@ -177,13 +218,13 @@ function reject(id: string) {
         <h2>Enrollment Requests</h2>
         <div class="table-container">
           <div class="row head">
-            <h3>Parent Email</h3>
-            <h3>Child Email</h3>
-            <h3>Course Title</h3>
-            <h3>Course Price</h3>
-            <h3>Date</h3>
-            <h3>Time</h3>
-            <h3>Status</h3>
+            <h3 @click="orderRequests('parent')">Parent Email <i class="pi pi-sort-alt"></i> </h3>
+            <h3 @click="orderRequests('child')">Child Email <i class="pi pi-sort-alt"></i></h3>
+            <h3 @click="orderRequests('title')">Course Title <i class="pi pi-sort-alt"></i></h3>
+            <h3  @click="orderRequests('price')">Course Price <i class="pi pi-sort-alt"></i></h3>
+            <h3 @click="orderRequests('date')">Date <i class="pi pi-sort-alt"></i></h3>
+            <h3 @click="orderRequests('time')">Time <i class="pi pi-sort-alt"></i></h3>
+            <h3 @click="orderRequests('status')">Status <i class="pi pi-sort-alt"></i></h3>
             <h3>Actions</h3>
           </div>
           <div class="row" v-for="(req, i) in enrollmentRequests">
@@ -278,6 +319,9 @@ h3 {
   margin-top: 2rem;
   margin-left: 2rem;
 }
+i{
+  padding-left: 0.5rem;
+}
 h2 {
   color: var(--accent1);
   width: fit-content;
@@ -294,6 +338,7 @@ h2 {
 }
 h3 {
   color: var(--text);
+  cursor: pointer;
 }
 span {
   color: var(--accent2);

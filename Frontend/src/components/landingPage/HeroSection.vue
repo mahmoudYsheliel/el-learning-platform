@@ -87,9 +87,14 @@ strong {
 button {
   padding: 1rem 3rem;
 }
-@media screen and (max-width: 800px) {
-  img {
-    display: none;
+@media screen and (max-width: 1300px) {
+  .wrapper {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  img{
+    width: 62%;
   }
 }
 </style>

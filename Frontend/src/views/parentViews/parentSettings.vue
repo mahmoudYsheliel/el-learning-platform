@@ -84,7 +84,7 @@ function change() {
       </div>
     </Dialog>
 
-    <ParentSidebar selected="Settings" />
+    <ParentSidebar class="sidebar" selected="Settings" />
     <div class="big-wrapper">
       <h1>{{ message }}</h1>
       <div class="wrapper">
@@ -170,7 +170,15 @@ button {
     grid-template-columns: 1fr 1fr;
   }
 }
-
+@media screen and (max-width: 1000px) {
+  .container {
+  grid-template-columns:  90vw;
+  min-height: 100vh;
+}
+.sidebar{
+  display: none;
+}
+}
 @media screen and (max-width: 750px) {
   .wrapper {
     grid-template-columns: 1fr;

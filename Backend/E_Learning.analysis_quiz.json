@@ -1,0 +1,535 @@
+[{
+  "_id": {
+    "$oid": "668f288a7cad99b82ce7ca0b"
+  },
+  "id": "1",
+  "title": "Personality and Skills Assessment",
+  "description": "\nPersonality and Skills Assessment is a comprehensive evaluation designed to identify individual strengths, weaknesses, and potential growth areas. This assessment combines personality profiling with skills testing to provide a holistic understanding of a person's capabilities. By analyzing traits such as communication style, problem-solving ability, and emotional intelligence, it offers insights into personal and professional development. This tool is invaluable for career planning, team building, and personal growth, enabling individuals to align their skills with their goals and aspirations. Whether for recruitment, employee development, or self-improvement, this assessment is a key to unlocking potential and enhancing performance.",
+  "sections": [
+    {
+      "id": 1,
+      "title": "Personality",
+      "questions": [
+        {
+          "id": 1,
+          "question": "How do you handle stress?",
+          "choices": [
+            {
+              "id": 1,
+              "choice": "I remain calm and think logically."
+            },
+            {
+              "id": 2,
+              "choice": "I get anxious but try to find solutions."
+            },
+            {
+              "id": 3,
+              "choice": "I seek help from others."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 2,
+          "question": "What motivates you?",
+          "choices": [
+            {
+              "id": 1,
+              "choice": "Achieving goals"
+            },
+            {
+              "id": 2,
+              "choice": "Helping others"
+            },
+            {
+              "id": 3,
+              "choice": "Learning new things"
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 3,
+          "question": "How do you prefer to work in a team?",
+          "choices": [
+            {
+              "id": 1,
+              "choice": "I like to take the lead."
+            },
+            {
+              "id": 2,
+              "choice": "I prefer to support others."
+            },
+            {
+              "id": 3,
+              "choice": "I contribute equally."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 4,
+          "question": "What is your approach to problem-solving?",
+          "choices": [
+            {
+              "id": 1,
+              "choice": "I analyze all possible solutions."
+            },
+            {
+              "id": 2,
+              "choice": "I try the first idea that comes to mind."
+            },
+            {
+              "id": 3,
+              "choice": "I seek advice from others."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 5,
+          "question": "How do you handle criticism?",
+          "choices": [
+            {
+              "id": 1,
+              "choice": "I take it constructively."
+            },
+            {
+              "id": 2,
+              "choice": "I feel discouraged but try to improve."
+            },
+            {
+              "id": 3,
+              "choice": "I ignore it."
+            }
+          ],
+          "correct_answer_id": 1
+        }
+      ],
+      "criteria": [
+        {
+          "min_score": 0,
+          "max_score": 2,
+          "future_steps": {
+            "feature_percentage_list": [
+              {
+                "feature": "Explore stress management techniques",
+                "percentage": 50
+              },
+              {
+                "feature": "Seek mentorship",
+                "percentage": 30
+              },
+              {
+                "feature": "Develop communication skills",
+                "percentage": 20
+              }
+            ]
+          },
+          "personality": {
+            "feature_percentage_list": [
+              {
+                "feature": "Calm",
+                "percentage": 40
+              },
+              {
+                "feature": "Supportive",
+                "percentage": 30
+              },
+              {
+                "feature": "Analytical",
+                "percentage": 30
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Stress management",
+                "percentage": 50
+              },
+              {
+                "feature": "Teamwork",
+                "percentage": 30
+              },
+              {
+                "feature": "Problem-solving",
+                "percentage": 20
+              }
+            ]
+          }
+        },
+        {
+          "min_score": 3,
+          "max_score": 4,
+          "future_steps": {
+            "feature_percentage_list": [
+              {
+                "feature": "Develop problem-solving skills",
+                "percentage": 70
+              },
+              {
+                "feature": "Enhance leadership skills",
+                "percentage": 20
+              },
+              {
+                "feature": "Improve emotional intelligence",
+                "percentage": 10
+              }
+            ]
+          },
+          "personality": {
+            "feature_percentage_list": [
+              {
+                "feature": "Analytical",
+                "percentage": 60
+              },
+              {
+                "feature": "Leader",
+                "percentage": 20
+              },
+              {
+                "feature": "Empathetic",
+                "percentage": 20
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Problem-solving",
+                "percentage": 60
+              },
+              {
+                "feature": "Leadership",
+                "percentage": 20
+              },
+              {
+                "feature": "Emotional intelligence",
+                "percentage": 20
+              }
+            ]
+          }
+        },
+        {
+          "min_score": 5,
+          "max_score": 5,
+          "future_steps": {
+            "feature_percentage_list": [
+              {
+                "feature": "Develop problem-solving skills",
+                "percentage": 80
+              },
+              {
+                "feature": "Master leadership techniques",
+                "percentage": 10
+              },
+              {
+                "feature": "Strengthen strategic thinking",
+                "percentage": 10
+              }
+            ]
+          },
+          "personality": {
+            "feature_percentage_list": [
+              {
+                "feature": "Highly Analytical",
+                "percentage": 80
+              },
+              {
+                "feature": "Strategic",
+                "percentage": 10
+              },
+              {
+                "feature": "Confident",
+                "percentage": 10
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Advanced Stress Management",
+                "percentage": 80
+              },
+              {
+                "feature": "Strategic Planning",
+                "percentage": 10
+              },
+              {
+                "feature": "High-level Leadership",
+                "percentage": 10
+              }
+            ]
+          }
+        }
+      ],
+      "last_question_number": 5
+    },
+    {
+      "id": 2,
+      "title": "Skills",
+      "questions": [
+        {
+          "id": 6,
+          "question": "How do you approach new tasks?",
+          "choices": [
+            {
+              "id": 1,
+              "choice": "I plan thoroughly before starting."
+            },
+            {
+              "id": 2,
+              "choice": "I dive in and learn as I go."
+            },
+            {
+              "id": 3,
+              "choice": "I seek advice from others."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 7,
+          "question": "What is your preferred way of learning?",
+          "choices": [
+            {
+              "id": 1,
+              "choice": "Reading books"
+            },
+            {
+              "id": 2,
+              "choice": "Hands-on experience"
+            },
+            {
+              "id": 3,
+              "choice": "Watching tutorials"
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 8,
+          "question": "How do you prioritize tasks?",
+          "choices": [
+            {
+              "id": 1,
+              "choice": "By urgency"
+            },
+            {
+              "id": 2,
+              "choice": "By importance"
+            },
+            {
+              "id": 3,
+              "choice": "Randomly"
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 9,
+          "question": "What is your approach to learning new skills?",
+          "choices": [
+            {
+              "id": 1,
+              "choice": "I take structured courses."
+            },
+            {
+              "id": 2,
+              "choice": "I learn through experimentation."
+            },
+            {
+              "id": 3,
+              "choice": "I follow tutorials and guides."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 10,
+          "question": "How do you manage your time?",
+          "choices": [
+            {
+              "id": 1,
+              "choice": "I use a planner."
+            },
+            {
+              "id": 2,
+              "choice": "I manage as I go."
+            },
+            {
+              "id": 3,
+              "choice": "I often get overwhelmed."
+            }
+          ],
+          "correct_answer_id": 1
+        }
+      ],
+      "criteria": [
+        {
+          "min_score": 0,
+          "max_score": 2,
+          "future_steps": {
+            "feature_percentage_list": [
+              {
+                "feature": "Develop a learning plan",
+                "percentage": 50
+              },
+              {
+                "feature": "Enhance time management skills",
+                "percentage": 30
+              },
+              {
+                "feature": "Explore new learning methods",
+                "percentage": 20
+              }
+            ]
+          },
+          "personality": {
+            "feature_percentage_list": [
+              {
+                "feature": "Planner",
+                "percentage": 40
+              },
+              {
+                "feature": "Organized",
+                "percentage": 30
+              },
+              {
+                "feature": "Curious",
+                "percentage": 30
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Time Management",
+                "percentage": 50
+              },
+              {
+                "feature": "Task Prioritization",
+                "percentage": 30
+              },
+              {
+                "feature": "Efficient Learning",
+                "percentage": 20
+              }
+            ]
+          }
+        },
+        {
+          "min_score": 3,
+          "max_score": 4,
+          "future_steps": {
+            "feature_percentage_list": [
+              {
+                "feature": "Refine learning strategies",
+                "percentage": 70
+              },
+              {
+                "feature": "Improve task prioritization",
+                "percentage": 20
+              },
+              {
+                "feature": "Boost productivity",
+                "percentage": 10
+              }
+            ]
+          },
+          "personality": {
+            "feature_percentage_list": [
+              {
+                "feature": "Productive",
+                "percentage": 60
+              },
+              {
+                "feature": "Strategic",
+                "percentage": 20
+              },
+              {
+                "feature": "Efficient",
+                "percentage": 20
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Advanced Time Management",
+                "percentage": 60
+              },
+              {
+                "feature": "Strategic Task Handling",
+                "percentage": 20
+              },
+              {
+                "feature": "High Efficiency Learning",
+                "percentage": 20
+              }
+            ]
+          }
+        },
+        {
+          "min_score": 5,
+          "max_score": 5,
+          "future_steps": {
+            "feature_percentage_list": [
+              {
+                "feature": "Master time management",
+                "percentage": 80
+              },
+              {
+                "feature": "Optimize learning techniques",
+                "percentage": 10
+              },
+              {
+                "feature": "Develop mentorship skills",
+                "percentage": 10
+              }
+            ]
+          },
+          "personality": {
+            "feature_percentage_list": [
+              {
+                "feature": "Highly Productive",
+                "percentage": 80
+              },
+              {
+                "feature": "Expert Planner",
+                "percentage": 10
+              },
+              {
+                "feature": "Mentor",
+                "percentage": 10
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Master Time Management",
+                "percentage": 80
+              },
+              {
+                "feature": "Expert Learning Strategies",
+                "percentage": 10
+              },
+              {
+                "feature": "Mentorship",
+                "percentage": 10
+              }
+            ]
+          }
+        }
+      ],
+      "last_question_number": 10
+    }
+  ],
+  "duration": 300,
+  "when_to_apply": {
+    "course_to_follow_id": "none",
+    "percentage": 0
+  }
+}]

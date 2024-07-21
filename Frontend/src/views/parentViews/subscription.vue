@@ -7,7 +7,7 @@ import Footer from '@/components/general/Footer.vue';
 <template>
     <Navbar/>
     <div class="container">
-        <ParentSidebar selected="Subscription"/>
+        <ParentSidebar class="sidebar" selected="Subscription"/>
         <div class="wrapper">
 
         </div>
@@ -21,5 +21,14 @@ import Footer from '@/components/general/Footer.vue';
     display: grid;
     grid-template-columns: 12rem 1fr;
     min-height: 100vh;
+}
+@media screen and (max-width: 1000px) {
+  .container {
+  grid-template-columns:  90vw;
+  min-height: 100vh;
+}
+.sidebar{
+  display: none;
+}
 }
 </style>

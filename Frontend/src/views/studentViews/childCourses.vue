@@ -25,7 +25,7 @@ coursesRequester.callApi().then((res) => {
 <template>
   <Navbar />
   <div class="container">
-    <ChildSidebar :selected="'Home'" />
+    <ChildSidebar class="sidebar" :selected="'Home'" />
     <div class="wrapper">
       
       <div class="courses">
@@ -121,5 +121,14 @@ h3 {
 img {
   height: 100%;
   border-radius: 8px;
+}
+@media screen and (max-width: 1000px) {
+  .container {
+  grid-template-columns:  90vw;
+  min-height: 100vh;
+}
+.sidebar{
+  display: none;
+}
 }
 </style>

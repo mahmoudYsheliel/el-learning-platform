@@ -27,6 +27,7 @@ class Progress(BaseModel):
     lessons_completed:list[LessonProgress]=[]
     quizes_completed:list[QuizProgress]=[]
     
+    
 class AddProgress(BaseModel):
     lesson_progress:LessonProgress=None
     quiz_progress:QuizProgress=None

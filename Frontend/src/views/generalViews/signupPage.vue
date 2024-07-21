@@ -78,7 +78,7 @@ const callback = (response: any) => {
             personalInfoRequester.callApi().then((res) => {
             
               if (res.success) {
-                personalInfo.addInfo({ userType: res.data?.info?.user_type });
+                personalInfo.addInfo({ userType: res.data?.info?.user_type,notifications:[] });
                 router.push("/");
               }
             });
@@ -236,7 +236,7 @@ input {
   width: 100%;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1000px) {
   .container {
     width: 80%;
     height: fit-content;

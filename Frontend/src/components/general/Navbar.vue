@@ -4,15 +4,34 @@ import Dialog from "primevue/dialog";
 import "primeicons/primeicons.css";
 import { defineProps } from "vue";
 import { useRouter } from "vue-router";
-import { useToken } from "../../stores/token";
 import SplitButton from "primevue/splitbutton";
 import { ref, computed } from "vue";
 import { HttpRequester } from "@/lib/APICaller";
-import { usePersonalInfo } from "../../stores/token";
+import { usePersonalInfo, useToken } from "../../stores/token";
 
+
+const analysisQuizNotificaiotn = ref(false);
+const analysisQuizId = ref('')
 const personalInfo = usePersonalInfo();
-
+const personalInfoRequester = new HttpRequester("personal_info");
 const token = useToken();
+if (token.isAuthorized) {
+  personalInfoRequester.callApi().then((res) => {
+    if (res?.success) {
+      let notification=res.data?.info?.notifications?.find((not:any)=>{return not?.status=='waiting' && not?.type=='analysis quiz'})
+      if (notification){
+        analysisQuizNotificaiotn.value=true
+        console.log(notification?.analysis_quiz_id)
+        analysisQuizId.value=notification?.analysis_quiz_id
+      }
+      personalInfo.addInfo({
+        userType: res.data?.info?.user_type,
+        notifications: res.data?.info?.notifications,
+      });
+    }
+  });
+}
+
 defineProps(["selected"]);
 const showDialogLogOut = ref(false);
 const router = useRouter();
@@ -24,7 +43,7 @@ const pagesToRoute = [
   { name: "Contact", to: "/#Contact" },
 ];
 const items = computed(() => {
-  if(personalInfo.getInfo?.userType == "Admin"){
+  if (personalInfo.getInfo?.userType == "Admin") {
     return [
       {
         label: "Manage Requests",
@@ -33,13 +52,31 @@ const items = computed(() => {
         },
       },
       {
+        label: "Manage Courses",
+        command: () => {
+          router.push("/manageCourses");
+        },
+      },
+      {
+        label: "Manage Instructors",
+        command: () => {
+          router.push("/manageInstructors");
+        },
+      },
+      {
+        label: "Manage Logs",
+        command: () => {
+          router.push("/manageLogs");
+        },
+      },
+      {
         label: "Log out",
         command: () => {
           showDialogLogOut.value = true;
         },
-      }]
-  }
-  else if (personalInfo.getInfo?.userType == "Parent") {
+      },
+    ];
+  } else if (personalInfo.getInfo?.userType == "Parent") {
     return [
       {
         label: "Home",
@@ -54,10 +91,17 @@ const items = computed(() => {
           router.push("/childrenProgress");
         },
       },
+
       {
         label: "Children Courses",
         command: () => {
           router.push("/childrenCourses");
+        },
+      },
+      {
+        label: "Children Analysis",
+        command: () => {
+          router.push("/childrenAnalysis");
         },
       },
       {
@@ -94,6 +138,12 @@ const items = computed(() => {
         },
       },
       {
+        label: "Notifications",
+        command: () => {
+          router.push("/childNotifications");
+        },
+      },
+      {
         label: "Log out",
         command: () => {
           showDialogLogOut.value = true;
@@ -101,16 +151,47 @@ const items = computed(() => {
       },
     ];
   }
-  return [{
-        label: "Log out",
-        command: () => {
-          showDialogLogOut.value = true;
-        },
-      }]
+  return [
+    {
+      label: "Log out",
+      command: () => {
+        showDialogLogOut.value = true;
+      },
+    },
+  ];
 });
+
 </script>
 <template>
   <main>
+    <Dialog
+      v-model:visible="analysisQuizNotificaiotn"
+      modal
+      :pt="{
+        mask: {
+          style: 'backdrop-filter: blur(2px)',
+        },
+        header: {
+          style: 'display:none',
+        },
+        content: {
+          style:
+            'margin-block:auto; display: flex; flex-direction: column; align-items: center; justify-content: center;',
+        },
+      }"
+    >
+      <div style="display: flex;flex-direction: column; align-items: center; gap: 2rem; padding-inline: 5rem;">
+        <h1>Start Analysis Quiz</h1>
+
+        <img
+          style="width: 10rem; height: 10rem; border-radius: 2rem"
+          src="/public/images/quizTime.png"
+          alt=""
+        />
+        <Button label="Start Quiz" @click="router.push(`/analysisQuiz/${analysisQuizId}`)"/>
+      </div>
+    </Dialog>
+
     <Dialog
       v-model:visible="showDialogLogOut"
       style="width: 500px; height: 300px"
@@ -178,11 +259,21 @@ const items = computed(() => {
       </p>
     </div>
     <div v-if="!token.getIsAuthorized" class="profile">
-      <Button @click="router.push('/login')" label="Login" />
+      <Button @click="router.push('/login')" label="Login" class="button" />
       <p class="register" @click="router.push('/signup')">Register</p>
     </div>
     <div v-if="token.getIsAuthorized" class="profile">
-      <SplitButton severity="secondary" :model="items" @click="items[0]?.command" label="My Account" />
+      <SplitButton
+        severity="secondary"
+        :model="items"
+        @click="items[0]?.command"
+        label="My Account"
+        :class="{
+          splitButton: personalInfo?.info?.notifications?.some((n) => {
+            return n.status == 'waiting';
+          }),
+        }"
+      />
       <i style="cursor: pointer" class="pi pi-shopping-cart"></i>
     </div>
   </main>
@@ -227,6 +318,9 @@ main {
   font-size: 1.25rem;
   color: var(--primary);
 }
+h1 {
+  color: var(--accent1);
+}
 .profile {
   justify-self: end;
   color: var(--secondary);
@@ -245,9 +339,20 @@ i {
   border-bottom: 2px solid var(--accent3);
 }
 
-button {
+.button {
   background-color: var(--primary);
   color: var(--accent1);
+}
+.splitButton::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--wrongAnswer);
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
 }
 @media screen and (max-width: 1000px) {
   .options {

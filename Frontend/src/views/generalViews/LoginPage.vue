@@ -35,7 +35,7 @@ function login() {
         const personalInfoRequester = new HttpRequester("personal_info");
         personalInfoRequester.callApi().then((res) => {
           if (res.success) {
-            personalInfo.addInfo({ userType: res.data?.info?.user_type });
+            personalInfo.addInfo({ userType: res.data?.info?.user_type,notifications:res.data?.info?.notifications });
             router.push("/");
           }
         });
@@ -60,7 +60,7 @@ const callback = (response: any) => {
         personalInfoRequester.callApi().then((res) => {
      
           if (res.success) {
-            personalInfo.addInfo({ userType: res.data?.info?.user_type });
+            personalInfo.addInfo({userType: res.data?.info?.user_type,notifications:res.data?.info?.notifications });
             router.push("/");
           }
         });

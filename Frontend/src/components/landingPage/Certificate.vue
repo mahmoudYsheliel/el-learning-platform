@@ -74,10 +74,13 @@ image {
 }
 @media screen and (max-width: 600px) {
   .image {
-    display: none;
+    width: 62%;
   }
-  .container {
-    width: 90%;
+ 
+  main{
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
 }
 @media screen and (max-width: 1800px) {

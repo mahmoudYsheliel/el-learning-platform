@@ -12,7 +12,8 @@ from routes import (
     course_api,
     category_api,
     enrollment_api,
-    program_api
+    program_api,
+    analysis_api
 )
 
 
@@ -41,6 +42,7 @@ app.include_router(course_api.router)
 app.include_router(category_api.router)
 app.include_router(enrollment_api.router)
 app.include_router(program_api.router)
+app.include_router(analysis_api.router)
 
 
 

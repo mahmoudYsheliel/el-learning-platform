@@ -76,7 +76,13 @@ image {
 }
 @media screen and (max-width: 600px) {
   .image {
-    display: none;
+    width: 62%;
+  }
+ 
+  main{
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
   }
   .container {
     width: 90%;

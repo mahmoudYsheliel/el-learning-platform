@@ -1,15 +1,26 @@
 <script lang="ts" setup>
 import Button from "primevue/button";
 import { HttpRequester } from "@/lib/APICaller";
-import { ref } from "vue";
-import { useRouter } from "vue-router";
+import { ref,computed,watch } from "vue";
+import { useRouter,useRoute } from "vue-router";
 const prop = defineProps(["programId",'search']);
 const router = useRouter()
+const route = useRoute()
 const course = ref();
+const path = computed(() => {
+  const courseRequester = new HttpRequester("get_course");
+  courseRequester.callApi({ course_id: prop.programId })
+  .then((res) => {course.value = res.data.course;console.log(course.value,res.data.course,prop.programId)});
+  return route.params.programId;
+});
+watch(path, () => {
+  console.log(prop.programId)
+
+});
 const courseRequester = new HttpRequester("get_course");
 courseRequester
   .callApi({ course_id: prop.programId })
-  .then((res) => (course.value = res.data.course));
+  .then((res) => {course.value = res.data.course});
   
 </script>
 

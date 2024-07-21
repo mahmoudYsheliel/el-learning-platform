@@ -87,4 +87,5 @@ span {
   border-bottom-right-radius: 3rem;
   color: var(--accent1);
 }
+
 </style>

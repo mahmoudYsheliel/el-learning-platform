@@ -1,4 +1,4 @@
-from models.user import User, Instructor, Child, Parent,Admin
+from models.user import User, Instructor, Child, Parent,Admin,Notification
 from models.runtime import ServiceResponse
 from database.mongo_driver import get_database, validate_bson_id
 from lib.crypto import verify_password,hash_password
@@ -99,7 +99,8 @@ async def personal_info(user_id: str):
             "birth_day": 1,
             "gender": 1,
             "balance": 1,
-            "image":1
+            "image":1,
+            'notifications':1,
         },
     )
 
@@ -177,7 +178,6 @@ async def update_user_info(
     )
     updated = None
     if user_type["user_type"] == "Parent":
-        print(user_type_specific_info)
         User_model_fields = set(Parent.model_fields.keys())
         update_patch_fields = set(user_type_specific_info.keys())
         if not update_patch_fields.issubset(User_model_fields):
@@ -230,6 +230,9 @@ async def add_child(user: User, child: Child, userId: str) -> ServiceResponse:
 
     user.user_type = "Child"
     user.hashed_pass = hash_password(user.hashed_pass)
+    
+    analysis_quiz= await get_database().get_collection('analysis_quiz').find_one({'when_to_apply.course_to_follow_id':'none'},{ "id": {"$toString": "$_id"},'title':1,"description":1})
+    user.notifications.append(Notification(title=analysis_quiz['title'],description=analysis_quiz['description'],type='analysis quiz',status='waiting',analysis_quiz_id=analysis_quiz['id']))
     found_user = (
         await get_database().get_collection("user").find_one({"email": user.email})
     )

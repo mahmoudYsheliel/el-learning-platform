@@ -1,0 +1,548 @@
+[{
+  "_id": {
+    "$oid": "668f288a7cad99b82ce7ca0b"
+  },
+  "id": "1",
+  "title": "Personality and Skills Assessment",
+  "description": "\nPersonality and Skills Assessment is a comprehensive evaluation designed to identify individual strengths, weaknesses, and potential growth areas. This assessment combines personality profiling with skills testing to provide a holistic understanding of a person's capabilities. By analyzing traits such as communication style, problem-solving ability, and emotional intelligence, it offers insights into personal and professional development. This tool is invaluable for career planning, team building, and personal growth, enabling individuals to align their skills with their goals and aspirations. Whether for recruitment, employee development, or self-improvement, this assessment is a key to unlocking potential and enhancing performance.",
+  "sections": [
+    {
+      "id": 1,
+      "title": "Personality",
+      "questions": [
+        {
+          "id": 1,
+          "question": {
+            "english": "How do you handle stress?",
+            "arabic": "كيف تتعامل مع الضغوط؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I remain calm and think logically.",
+              "arabic": "أبقى هادئًا وأفكر بشكل منطقي."
+            },
+            {
+              "id": 2,
+              "english": "I get anxious but try to find solutions.",
+              "arabic": "أشعر بالقلق لكن أحاول العثور على حلول."
+            },
+            {
+              "id": 3,
+              "english": "I seek help from others.",
+              "arabic": "أطلب المساعدة من الآخرين."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 2,
+          "question": {
+            "english": "What motivates you?",
+            "arabic": "ما الذي يحفزك؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "Achieving goals",
+              "arabic": "تحقيق الأهداف"
+            },
+            {
+              "id": 2,
+              "english": "Helping others",
+              "arabic": "مساعدة الآخرين"
+            },
+            {
+              "id": 3,
+              "english": "Learning new things",
+              "arabic": "تعلم أشياء جديدة"
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 3,
+          "question": {
+            "english": "How do you prefer to work in a team?",
+            "arabic": "كيف تفضل العمل في فريق؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I like to take the lead.",
+              "arabic": "أحب أن أتولى القيادة."
+            },
+            {
+              "id": 2,
+              "english": "I prefer to support others.",
+              "arabic": "أفضل دعم الآخرين."
+            },
+            {
+              "id": 3,
+              "english": "I contribute equally.",
+              "arabic": "أسهم بالتساوي."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 4,
+          "question": {
+            "english": "What is your approach to problem-solving?",
+            "arabic": "ما هو نهجك في حل المشكلات؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I analyze all possible solutions.",
+              "arabic": "أقوم بتحليل كل الحلول الممكنة."
+            },
+            {
+              "id": 2,
+              "english": "I try the first idea that comes to mind.",
+              "arabic": "أجرب أول فكرة تأتي إلى ذهني."
+            },
+            {
+              "id": 3,
+              "english": "I seek advice from others.",
+              "arabic": "ألجأ إلى استشارة الآخرين."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 5,
+          "question": {
+            "english": "How do you handle criticism?",
+            "arabic": "كيف تتعامل مع الانتقادات؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I take it constructively.",
+              "arabic": "أتقبلها بشكل بناء."
+            },
+            {
+              "id": 2,
+              "english": "I feel discouraged but try to improve.",
+              "arabic": "أشعر بالإحباط ولكن أحاول التحسين."
+            },
+            {
+              "id": 3,
+              "english": "I ignore it.",
+              "arabic": "أتجاهلها."
+            }
+          ],
+          "correct_answer_id": 1
+        }
+      ],
+      "criteria": [
+        {
+          "min_score": 0,
+          "max_score": 2,
+          "future_steps": {
+            "feature_percentage_list": [
+              {
+                "feature": "Explore stress management techniques",
+                "percentage": 50
+              },
+              {
+                "feature": "Seek mentorship",
+                "percentage": 30
+              },
+              {
+                "feature": "Develop communication skills",
+                "percentage": 20
+              }
+            ]
+          },
+          "personality": {
+            "feature_percentage_list": [
+              {
+                "feature": "Calm",
+                "percentage": 40
+              },
+              {
+                "feature": "Supportive",
+                "percentage": 30
+              },
+              {
+                "feature": "Analytical",
+                "percentage": 30
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Stress management",
+                "percentage": 50
+              },
+              {
+                "feature": "Teamwork",
+                "percentage": 30
+              },
+              {
+                "feature": "Problem-solving",
+                "percentage": 20
+              }
+            ]
+          }
+        },
+        {
+          "min_score": 3,
+          "max_score": 4,
+          "future_steps": {
+            "feature_percentage_list": [
+              {
+                "feature": "Develop problem-solving skills",
+                "percentage": 70
+              },
+              {
+                "feature": "Enhance leadership skills",
+                "percentage": 20
+              },
+              {
+                "feature": "Improve emotional intelligence",
+                "percentage": 10
+              }
+            ]
+          },
+          "personality": {
+            "feature_percentage_list": [
+              {
+                "feature": "Analytical",
+                "percentage": 60
+              },
+              {
+                "feature": "Leader",
+                "percentage": 20
+              },
+              {
+                "feature": "Empathetic",
+                "percentage": 20
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Problem-solving",
+                "percentage": 60
+              },
+              {
+                "feature": "Leadership",
+                "percentage": 20
+              },
+              {
+                "feature": "Emotional intelligence",
+                "percentage": 20
+              }
+            ]
+          }
+        },
+        {
+          "min_score": 5,
+          "max_score": 5,
+          "future_steps": {
+            "feature_percentage_list": [
+              {
+                "feature": "Develop problem-solving skills",
+                "percentage": 80
+              },
+              {
+                "feature": "Master leadership techniques",
+                "percentage": 10
+              },
+              {
+                "feature": "Strengthen strategic thinking",
+                "percentage": 10
+              }
+            ]
+          },
+          "personality": {
+            "feature_percentage_list": [
+              {
+                "feature": "Highly Analytical",
+                "percentage": 80
+              },
+              {
+                "feature": "Strategic",
+                "percentage": 10
+              },
+              {
+                "feature": "Confident",
+                "percentage": 10
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Advanced Stress Management",
+                "percentage": 80
+              },
+              {
+                "feature": "Strategic Planning",
+                "percentage": 10
+              },
+              {
+                "feature": "High-level Leadership",
+                "percentage": 10
+              }
+            ]
+          }
+        }
+      ],
+      "last_question_number": 5
+    },
+    {
+      "id": 2,
+      "title": "Skills",
+      "questions": [
+        {
+          "id": 1,
+          "question": {
+            "english": "How do you approach learning new skills?",
+            "arabic": "كيف تقترب من تعلم مهارات جديدة؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I seek formal training.",
+              "arabic": "أبحث عن تدريب رسمي."
+            },
+            {
+              "id": 2,
+              "english": "I learn through practical experience.",
+              "arabic": "أتعلم من خلال التجربة العملية."
+            },
+            {
+              "id": 3,
+              "english": "I prefer to learn independently.",
+              "arabic": "أفضل التعلم بشكل مستقل."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 2,
+          "question": {
+            "english": "How do you prioritize tasks?",
+            "arabic": "كيف تحدد أولوية المهام؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "Based on deadlines",
+              "arabic": "استنادًا إلى المواعيد النهائية"
+            },
+            {
+              "id": 2,
+              "english": "By importance and urgency",
+              "arabic": "بالأهمية والعاجلية"
+            },
+            {
+              "id": 3,
+              "english": "As they come up",
+              "arabic": "كما تأتي"
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 3,
+          "question": {
+            "english": "How do you adapt to change?",
+            "arabic": "كيف تتكيف مع التغيير؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I embrace it and look for opportunities.",
+              "arabic": "أتقبله وأبحث عن الفرص."
+            },
+            {
+              "id": 2,
+              "english": "I find it challenging but manage.",
+              "arabic": "أجد أنه تحدي ولكن أتعامل معه."
+            },
+            {
+              "id": 3,
+              "english": "I struggle with change.",
+              "arabic": "أصعب التغيير."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 4,
+          "question": {
+            "english": "How do you handle conflicts?",
+            "arabic": "كيف تتعامل مع النزاعات؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I try to find common ground.",
+              "arabic": "أحاول العثور على أرضية مشتركة."
+            },
+            {
+              "id": 2,
+              "english": "I avoid conflicts.",
+              "arabic": "أتجنب النزاعات."
+            },
+            {
+              "id": 3,
+              "english": "I confront the issue directly.",
+              "arabic": "أواجه المشكلة مباشرة."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 5,
+          "question": {
+            "english": "How do you handle tight deadlines?",
+            "arabic": "كيف تتعامل مع المواعيد النهائية الضيقة؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I prioritize tasks effectively.",
+              "arabic": "أحدد أولوية المهام بشكل فعال."
+            },
+            {
+              "id": 2,
+              "english": "I feel stressed but manage to deliver.",
+              "arabic": "أشعر بالضغط لكن أتمكن من التسليم."
+            },
+            {
+              "id": 3,
+              "english": "I struggle to meet deadlines.",
+              "arabic": "أصعب على تلبية المواعيد النهائية."
+            }
+          ],
+          "correct_answer_id": 1
+        }
+      ],
+      "criteria": [
+        {
+          "min_score": 0,
+          "max_score": 2,
+          "future_steps": {
+            "feature_percentage_list": [
+              {
+                "feature": "Enhance learning techniques",
+                "percentage": 50
+              },
+              {
+                "feature": "Seek training opportunities",
+                "percentage": 30
+              },
+              {
+                "feature": "Develop time management skills",
+                "percentage": 20
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Learning methods",
+                "percentage": 50
+              },
+              {
+                "feature": "Task prioritization",
+                "percentage": 30
+              },
+              {
+                "feature": "Adaptability",
+                "percentage": 20
+              }
+            ]
+          }
+        },
+        {
+          "min_score": 3,
+          "max_score": 4,
+          "future_steps": {
+            "feature_percentage_list": [
+              {
+                "feature": "Advance learning strategies",
+                "percentage": 70
+              },
+              {
+                "feature": "Master time management",
+                "percentage": 20
+              },
+              {
+                "feature": "Improve adaptability",
+                "percentage": 10
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Advanced Learning",
+                "percentage": 60
+              },
+              {
+                "feature": "Effective Prioritization",
+                "percentage": 30
+              },
+              {
+                "feature": "Change Management",
+                "percentage": 10
+              }
+            ]
+          }
+        },
+        {
+          "min_score": 5,
+          "max_score": 5,
+          "future_steps": {
+            "feature_percentage_list": [
+              {
+                "feature": "Master learning techniques",
+                "percentage": 80
+              },
+              {
+                "feature": "Excel in task management",
+                "percentage": 10
+              },
+              {
+                "feature": "Enhance adaptability",
+                "percentage": 10
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Advanced Learning Strategies",
+                "percentage": 70
+              },
+              {
+                "feature": "Effective Task Prioritization",
+                "percentage": 20
+              },
+              {
+                "feature": "Change Leadership",
+                "percentage": 10
+                }
+            ]
+          }
+        }
+      ],
+      "last_question_number": 10
+    }
+  ],
+  "duration": 300,
+  "when_to_apply": {
+    "course_to_follow_id": "none",
+    "percentage": 0
+  }
+}]
+

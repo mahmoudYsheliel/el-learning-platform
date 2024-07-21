@@ -11,6 +11,22 @@ const sidebarPages = [
     to: "manageRequests",
     icon: "pi pi-bell",
   },
+  {
+    label: "Manage Courses",
+    to: "manageCourses",
+    icon: "pi pi-server",
+  },
+  {
+    label: "Manage Instructors",
+    to: "manageInstructors",
+    icon: "pi pi-users",
+  },
+  {
+    label: "Manage Logs",
+    to: "manageLogs",
+    icon: "pi pi-arrow-right-arrow-left",
+  },
+ 
   
 ];
 </script>

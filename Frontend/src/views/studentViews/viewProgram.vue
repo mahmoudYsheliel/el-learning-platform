@@ -12,6 +12,7 @@ import { ref, computed, watch } from "vue";
 
 const programs = ref();
 const selectedProgram = ref();
+const roadMap =ref()
 
 const router = useRouter();
 const route = useRoute();
@@ -46,7 +47,9 @@ function requests() {
   selectedProgramRequester
     .callApi({ program_id: route.params.programId })
     .then((res) => {
+      selectedProgram.value=[]
       selectedProgram.value = res.data.program;
+      roadMap.value=res.data.program?.road_map
     });
 }
 requests();
@@ -94,7 +97,7 @@ const search = ref("");
         </h1>
         <div class="courses">
           <CourseCard
-            v-for="course in selectedProgram?.road_map"
+            v-for="course in roadMap"
             :programId="course.id"
             :search="search"
           />

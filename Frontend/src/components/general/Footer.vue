@@ -54,7 +54,7 @@ const pages = [
 <template>
   <main>
     <div class="wrapper">
-      <img src="/images/logo3.png" alt="" />
+      <img class="logo" src="/images/logo3.png" alt="" />
       <div class="programs">
         <h4>Programs</h4>
         <p v-for="program in items" @click="program?.command">
@@ -135,7 +135,7 @@ i,
   transform: translateY(1rem);
 }
 @media screen and (max-width: 500px) {
-  img {
+  .logo {
     width: 75%;
   }
 }

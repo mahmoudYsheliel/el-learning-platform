@@ -2,6 +2,15 @@ from typing import Optional
 from pydantic import BaseModel,Field
 from datetime import datetime
    
+class Notification(BaseModel):
+    title:str
+    description:Optional[str]=''
+    type:str #analysis quiz      enrollment request
+    analysis_quiz_id:Optional[str]=''
+    enrollment_request_id:Optional[str]=''
+    status:str #waiting  done
+    
+    
 
 class User(BaseModel):
     id:Optional[str] = None
@@ -16,6 +25,7 @@ class User(BaseModel):
     gender:Optional[str]=''
     balance:Optional[float]=0
     image:Optional[str]=''
+    notifications:Optional[list[Notification]]=[]
     
 class Admin(BaseModel):
     id:Optional[str] = None

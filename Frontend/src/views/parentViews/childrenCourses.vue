@@ -57,7 +57,7 @@ coursesRequester.callApi().then((res) => {
 <template>
   <Navbar />
   <div class="container">
-    <ParentSidebar selected="Children Courses" />
+    <ParentSidebar class="sidebar" selected="Children Courses" />
     <div class="wrapper">
       <div class="select-child">
         <h1>Select Child</h1>
@@ -128,6 +128,7 @@ coursesRequester.callApi().then((res) => {
   padding: 2rem;
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 .child-card {
   display: flex;
@@ -175,5 +176,14 @@ h3{
 img {
   height: 100%;
   border-radius: 8px;
+}
+@media screen and (max-width: 1000px) {
+  .container {
+  grid-template-columns:  90vw;
+  min-height: 100vh;
+}
+.sidebar{
+  display: none;
+}
 }
 </style>

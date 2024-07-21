@@ -277,10 +277,6 @@ async def add_progress(
                                 for choice in found_object["choices"]
                             ]
                         ):
-                            print(
-                                ans.choice_id,
-                                quiz["questions"][ans.question_id]["choices"],
-                            )
                             return ServiceResponse(
                                 success=False, status_code=400, msg="Bad Choice ID"
                             )

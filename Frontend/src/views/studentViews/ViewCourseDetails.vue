@@ -19,6 +19,7 @@ const route = useRoute();
 const router = useRouter();
 const course = ref();
 const courseRequester = new HttpRequester("get_course");
+const firstLessonId=ref()
 const chapters = ref<any[]>([]);
 courseRequester.callApi({ course_id: route.params.courseId }).then((res) => {
   course.value = res?.data?.course;
@@ -72,6 +73,9 @@ enrollmentRequester
 function childPage() {
   router.push("/childrenCourses");
 }
+function viewMaterial(){
+  router.push(`/viewCoursePage/${route.params.courseId}/${enrollmentId.value}/${course.value?.chapters[0]?.materials[0]?.Id}`)
+}
 </script>
 
 <template>
@@ -88,22 +92,21 @@ function childPage() {
       }"
     >
       <template #container="{ closeCallback }">
-        
-          <div class="dialog" v-if="personalInfo.getInfo?.userType == 'Parent'">
-            <h2>
-              Please Go To Children Courses > Select The Child You Want to
-              Enroll > Select the Course
-            </h2>
-            <Button
-              label="Go To Childre Courses"
-              style="width: 20rem"
-              @click="childPage"
-            />
-          </div>
-          <div class="dialog"  v-if="personalInfo.getInfo?.userType == 'Child'">
-            <h2>Ask your Parent To Enroll You to this Course</h2>
-            <Button label="Cancel" @click="showDialog=false"/>
-          </div>
+        <div class="dialog" v-if="personalInfo.getInfo?.userType == 'Parent'">
+          <h2>
+            Please Go To Children Courses > Select The Child You Want to Enroll
+            > Select the Course
+          </h2>
+          <Button
+            label="Go To Childre Courses"
+            style="width: 20rem"
+            @click="childPage"
+          />
+        </div>
+        <div class="dialog" v-if="personalInfo.getInfo?.userType == 'Child'">
+          <h2>Ask your Parent To Enroll You to this Course</h2>
+          <Button label="Cancel" @click="showDialog = false" />
+        </div>
       </template>
     </Dialog>
     <div class="course-description">
@@ -115,7 +118,8 @@ function childPage() {
       <div class="description">
         <div class="header">
           <h2>Course Description</h2>
-          <Button label="Enroll Now" @click="enroll" />
+          <Button v-if="!isEnrolled" label="Enroll Now" @click="enroll" />
+          <Button v-if="isEnrolled" label="View Material" @click="viewMaterial" />
         </div>
         <p>{{ course?.description }}</p>
       </div>
@@ -204,13 +208,13 @@ h1 {
   border-bottom: 0.25rem solid var(--accent3);
   line-height: 3rem;
 }
-.dialog{
+.dialog {
   padding: 2em;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 img {
   width: 100%;
