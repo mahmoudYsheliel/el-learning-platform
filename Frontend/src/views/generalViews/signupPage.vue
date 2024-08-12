@@ -4,6 +4,7 @@ import Options from "@/components/general/Options.vue";
 import Footer from "@/components/general/Footer.vue";
 import { decodeCredential } from "vue3-google-login";
 import { usePersonalInfo } from "@/stores/token";
+import { selectLang, translationModule } from "@/lib/Translate";
 import "primeicons/primeicons.css";
 
 import Button from "primevue/button";
@@ -95,50 +96,50 @@ const callback = (response: any) => {
     <Navbar />
     <Options />
     <div class="container">
-      <div class="left">
+      <div class="left borderRigth">
         <img src="/images/login.png" alt="" />
       </div>
       <div class="right">
         <div class="welcome">
-          <h1>Welcome back to the</h1>
-          <h1>Trace Community</h1>
+          <h1>{{ selectLang(translationModule.welcomeBack) }}</h1>
+          <h1>{{ selectLang(translationModule.traceCommunity) }}</h1>
         </div>
         <div class="google-facebook-wrapper">
           <GoogleLogin :callback="callback" />
         </div>
-        <h4 v-if="missingInfo">Some Data Is Missing</h4>
-        <h4 v-if="differentPassword">Different Password</h4>
-        <h4 v-if="usernameEmailTaken">Email is Taken</h4>
+        <h4 v-if="missingInfo">{{ selectLang(translationModule.dataMissing) }}</h4>
+        <h4 v-if="differentPassword">{{ selectLang(translationModule.diffPass) }}</h4>
+        <h4 v-if="usernameEmailTaken">{{ selectLang(translationModule.emailTaken) }}</h4>
         <div class="wrapper">
           <InputText
             type="email"
             class="input"
             v-model="email"
-            placeholder="Email"
+            :placeholder=selectLang(translationModule.email)
           />
           <Password
             class="input"
             v-model="pass"
             :feedback="false"
             toggleMask
-            placeholder="Password"
+            :placeholder=selectLang(translationModule.pass)
           />
           <Password
             id="input"
             v-model="confirmedPass"
             :feedback="false"
             toggleMask
-            placeholder="Confirm Password"
+            :placeholder=selectLang(translationModule.confirmPass)
           />
         </div>
         <div class="button">
-          <Button @click="signup" label="Register" />
+          <Button @click="signup" :label=selectLang(translationModule.signup) />
         </div>
         <p style="margin-left: 5rem">
-          You have Account?<strong
+          {{ selectLang(translationModule.haveAccount) }}<strong
             @click="router.push('/login')"
             style="cursor: pointer"
-            >Login</strong
+            > {{ selectLang(translationModule.login) }} </strong
           >
         </p>
       </div>

@@ -5,9 +5,11 @@ import "primeicons/primeicons.css";
 import { defineProps } from "vue";
 import { useRouter } from "vue-router";
 import SplitButton from "primevue/splitbutton";
-import { ref, computed } from "vue";
+import { ref } from "vue";
 import { HttpRequester } from "@/lib/APICaller";
 import { usePersonalInfo, useToken } from "../../stores/token";
+import {pagesToRoute,items} from '@/lib/Modules'
+import { selectLang,translationModule } from "@/lib/Translate";
 
 
 const analysisQuizNotificaiotn = ref(false);
@@ -21,7 +23,6 @@ if (token.isAuthorized) {
       let notification=res.data?.info?.notifications?.find((not:any)=>{return not?.status=='waiting' && not?.type=='analysis quiz'})
       if (notification){
         analysisQuizNotificaiotn.value=true
-        console.log(notification?.analysis_quiz_id)
         analysisQuizId.value=notification?.analysis_quiz_id
       }
       personalInfo.addInfo({
@@ -36,130 +37,8 @@ defineProps(["selected"]);
 const showDialogLogOut = ref(false);
 const router = useRouter();
 
-const pagesToRoute = [
-  { name: "Home", to: "/#Home" },
-  { name: "Courses", to: "/#Courses" },
-  { name: "About", to: "/#About" },
-  { name: "Contact", to: "/#Contact" },
-];
-const items = computed(() => {
-  if (personalInfo.getInfo?.userType == "Admin") {
-    return [
-      {
-        label: "Manage Requests",
-        command: () => {
-          router.push("/manageRequests");
-        },
-      },
-      {
-        label: "Manage Courses",
-        command: () => {
-          router.push("/manageCourses");
-        },
-      },
-      {
-        label: "Manage Instructors",
-        command: () => {
-          router.push("/manageInstructors");
-        },
-      },
-      {
-        label: "Manage Logs",
-        command: () => {
-          router.push("/manageLogs");
-        },
-      },
-      {
-        label: "Log out",
-        command: () => {
-          showDialogLogOut.value = true;
-        },
-      },
-    ];
-  } else if (personalInfo.getInfo?.userType == "Parent") {
-    return [
-      {
-        label: "Home",
 
-        command: () => {
-          router.push("/parentHome");
-        },
-      },
-      {
-        label: "Children Progress",
-        command: () => {
-          router.push("/childrenProgress");
-        },
-      },
 
-      {
-        label: "Children Courses",
-        command: () => {
-          router.push("/childrenCourses");
-        },
-      },
-      {
-        label: "Children Analysis",
-        command: () => {
-          router.push("/childrenAnalysis");
-        },
-      },
-      {
-        label: "Add Child",
-        command: () => {
-          router.push("/addChild");
-        },
-      },
-      {
-        label: "My Subscriptions",
-        command: () => {
-          router.push("/subscription");
-        },
-      },
-      {
-        label: "My Settings",
-        command: () => {
-          router.push("/parentSettings");
-        },
-      },
-      {
-        label: "Log out",
-        command: () => {
-          showDialogLogOut.value = true;
-        },
-      },
-    ];
-  } else if (personalInfo.getInfo?.userType == "Child") {
-    return [
-      {
-        label: "My Courses",
-        command: () => {
-          router.push("/childCourses");
-        },
-      },
-      {
-        label: "Notifications",
-        command: () => {
-          router.push("/childNotifications");
-        },
-      },
-      {
-        label: "Log out",
-        command: () => {
-          showDialogLogOut.value = true;
-        },
-      },
-    ];
-  }
-  return [
-    {
-      label: "Log out",
-      command: () => {
-        showDialogLogOut.value = true;
-      },
-    },
-  ];
-});
 
 </script>
 <template>
@@ -181,14 +60,14 @@ const items = computed(() => {
       }"
     >
       <div style="display: flex;flex-direction: column; align-items: center; gap: 2rem; padding-inline: 5rem;">
-        <h1>Start Analysis Quiz</h1>
+        <h1>{{ selectLang(translationModule.startAnalysisQuiz) }}</h1>
 
         <img
           style="width: 10rem; height: 10rem; border-radius: 2rem"
           src="/public/images/quizTime.png"
           alt=""
         />
-        <Button label="Start Quiz" @click="router.push(`/analysisQuiz/${analysisQuizId}`)"/>
+        <Button :label="selectLang(translationModule.startAnalysisQuiz)" @click="router.push(`/analysisQuiz/${analysisQuizId}`)"/>
       </div>
     </Dialog>
 
@@ -218,7 +97,7 @@ const items = computed(() => {
         "
         class="pi pi-exclamation-circle"
       ></i>
-      <p>Are you sure to log out</p>
+      <p>{{ selectLang(translationModule.sureLogout) }}</p>
       <div style="display: flex; gap: 2rem">
         <Button
           @click="showDialogLogOut = false"
@@ -227,7 +106,7 @@ const items = computed(() => {
             background-color: var(--accent1);
             color: var(--primary);
           "
-          label="Back"
+          :label=selectLang(translationModule.back)
         />
         <Button
           @click="
@@ -239,7 +118,7 @@ const items = computed(() => {
             }
           "
           style="width: 8rem; background-color: red; color: var(--primary)"
-          label="Log out"
+          :label=selectLang(translationModule.logout)
         />
       </div>
     </Dialog>
@@ -255,26 +134,29 @@ const items = computed(() => {
         :class="{ selected: selected == i }"
         @click="router.push(page.to)"
       >
-        {{ page.name }}
+        {{selectLang(page.name) }}
       </p>
     </div>
     <div v-if="!token.getIsAuthorized" class="profile">
-      <Button @click="router.push('/login')" label="Login" class="button" />
-      <p class="register" @click="router.push('/signup')">Register</p>
+      <Button @click="router.push('/login')" :label=selectLang(translationModule.login) class="button" />
+      <p class="register" @click="router.push('/signup')">{{ selectLang(translationModule.signup) }}</p>
     </div>
     <div v-if="token.getIsAuthorized" class="profile">
       <SplitButton
+      style="direction: ltr;"
         severity="secondary"
         :model="items"
-        @click="items[0]?.command"
-        label="My Account"
+        @click="items[0]?.command()"
+        :label=selectLang(translationModule.myAccount)
         :class="{
           splitButton: personalInfo?.info?.notifications?.some((n) => {
             return n.status == 'waiting';
           }),
         }"
       />
+      <Button @click="showDialogLogOut=true" :label=selectLang(translationModule.logout) />
       <i style="cursor: pointer" class="pi pi-shopping-cart"></i>
+      
     </div>
   </main>
 </template>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { HttpRequester } from "@/lib/APICaller";
 import { ref, computed } from "vue";
+import { selectLang,translationModule } from "@/lib/Translate";
 
 import PiChart from "../parentProfile/PiChart.vue";
 
@@ -44,7 +45,7 @@ const Data = ref();
       <div class="progress" v-if="selectedChildId">
         <div class="completed">
           <p>{{ enrollments?.length }}</p>
-          <p>Courses Enrolled</p>
+          <p>{{ selectLang(translationModule.coursesEnrolled) }}</p>
         </div>
         <div class="in-progress">
           <p>
@@ -54,7 +55,7 @@ const Data = ref();
               }).length
             }}
           </p>
-          <p>Courses Completed</p>
+          <p>{{ selectLang(translationModule.coursesCompleted) }}</p>
         </div>
       </div>
       <PiChart
@@ -72,12 +73,11 @@ const Data = ref();
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   margin-top: 2rem;
-  gap: 2rem;
+  gap: 3rem;
   flex-wrap: wrap;
-  padding-inline: 2rem;
 }
 .completed {
   background-color: var(--accent1);
@@ -85,13 +85,14 @@ const Data = ref();
 .in-progress {
   background-color: var(--accent2);
   
+  
 }
 .progress {
   display: flex;
   gap: 2rem;
-  display: flex;
   flex-wrap: wrap;
   height: fit-content;
+  justify-content: center;
 }
 .progress > * {
   border-radius: 0.5rem;

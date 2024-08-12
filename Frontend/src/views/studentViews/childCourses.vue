@@ -4,6 +4,7 @@ import Navbar from "../../components/general/Navbar.vue";
 import Footer from "@/components/general/Footer.vue";
 import ChildCourseCard from "@/components/general/ChildCourseCard.vue";
 import { HttpRequester } from "@/lib/APICaller";
+import { selectLang,translationModule } from "@/lib/Translate";
 import { ref } from "vue";
 
 const enrollmentsRequester = new HttpRequester("get_enrollments");
@@ -25,12 +26,12 @@ coursesRequester.callApi().then((res) => {
 <template>
   <Navbar />
   <div class="container">
-    <ChildSidebar class="sidebar" :selected="'Home'" />
+    <ChildSidebar class="sidebar" selected="home" />
     <div class="wrapper">
       
       <div class="courses">
         <div class="child-courses">
-          <h1>Courses You Enrolled</h1>
+          <h1>{{ selectLang(translationModule.enrolledCourses) }}</h1>
           <div class="enrolled-courses">
             <div
               class="course-container"
@@ -44,7 +45,7 @@ coursesRequester.callApi().then((res) => {
           </div>
         </div>
         <div class="availavle-courses">
-          <h1>Courses You Can Enroll</h1>
+          <h1>{{ selectLang(translationModule.canEnroll) }}</h1>
           <div class="unenrolled-courses">
             <div class="course-container" v-for="course in courses">
               <ChildCourseCard

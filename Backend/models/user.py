@@ -2,9 +2,13 @@ from typing import Optional
 from pydantic import BaseModel,Field
 from datetime import datetime
    
+class TwoLang(BaseModel):
+    en:str
+    ar:str
+    
 class Notification(BaseModel):
-    title:str
-    description:Optional[str]=''
+    title:TwoLang
+    description:TwoLang
     type:str #analysis quiz      enrollment request
     analysis_quiz_id:Optional[str]=''
     enrollment_request_id:Optional[str]=''

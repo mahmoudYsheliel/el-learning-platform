@@ -3,10 +3,11 @@ import "primeicons/primeicons.css";
 import { ref } from "vue";
 import { HttpRequester } from "@/lib/APICaller";
 import { useRouter } from "vue-router";
+import { selectLang,translationModule } from "@/lib/Translate";
+import { socialMediaIcons,pages } from "@/lib/Modules";
 const programRequester = new HttpRequester("get_all_program");
 
-const programs = ref();
-
+const programs = ref<any[]>([]);
 const router = useRouter();
 const items = ref<any[]>([]);
 
@@ -15,40 +16,17 @@ programRequester.callApi().then((res) => {
   if (programs.value) {
     for (let program of programs.value) {
       items.value.push({
-        name: program.title,
+        name: program?.title,
         command: () => {
-          router.push(`programs/${program.id}`);
+          router.push(`/programs/${program?.id}`);
         },
       });
     }
   }
 });
-const socialMediaIcons = [
-  {
-    class: "pi pi-facebook",
-    to: "https://www.facebook.com/traceedtech",
-  },
-  {
-    class: "pi pi-linkedin",
-    to: "https://www.linkedin.com/company/trace-education8/",
-  },
-  //{ class: "pi pi-youtube", to: "/" },
-  {
-    class: "pi pi-instagram",
-    to: "https://www.instagram.com/trace.education?igsh=ZW9xYnEyaGU1M210",
-  },
-   { class: "pi pi-whatsapp", to: "https://wa.me/201065356028?text=hello" },
-];
 
-const pages = [
-  { name: "Home", to: "/#Home" },
-  { name: "About Us", to: "/#About" },
-  { name: "Contact Us", to: "/#contact" },
-  { name: "Schools", to: "/" },
-  { name: "FQAs", to: "/" },
-  { name: "Privacy Policy", to: "/" },
-  { name: "Terms and Conditions", to: "/" },
-];
+
+
 </script>
 
 <template>
@@ -56,15 +34,15 @@ const pages = [
     <div class="wrapper">
       <img class="logo" src="/images/logo3.png" alt="" />
       <div class="programs">
-        <h4>Programs</h4>
+        <h4>{{ selectLang(translationModule.programs) }}</h4>
         <p v-for="program in items" @click="program?.command">
-          {{ program.name }}
+          {{ selectLang(program.name)}}
         </p>
       </div>
       <div class="pages">
-        <h4>Pages</h4>
+        <h4>{{ selectLang(translationModule.pages) }}</h4>
         <p v-for="page in pages" @click="router.push(page.to)">
-          {{ page.name }}
+          {{ selectLang(page.name) }}
         </p>
       </div>
       <div class="socialMedia">

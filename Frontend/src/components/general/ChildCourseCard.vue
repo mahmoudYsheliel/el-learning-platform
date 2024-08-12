@@ -2,6 +2,8 @@
 import Button from "primevue/button";
 import { HttpRequester } from "@/lib/APICaller";
 import { ref } from "vue";
+import { selectLang,translationModule } from "@/lib/Translate";
+
 import { useRouter } from "vue-router";
 const prop = defineProps(["programId"]);
 const router = useRouter()
@@ -17,8 +19,8 @@ courseRequester
   <main>
     <div class="container">
       <img :src="course?.image" alt="" />
-      <h2>{{ course?.title }}</h2>
-      <Button  @click="()=>{router.push(`/ViewCourseDetails/${prop.programId}`)}" label="Learn More" />
+      <h2>{{selectLang(course?.title) }}</h2>
+      <Button  @click="()=>{router.push(`/ViewCourseDetails/${prop.programId}`)}" :label=selectLang(translationModule.learnMore) />
     </div>
   </main>
 </template>

@@ -6,6 +6,8 @@ import Dialog from "primevue/dialog";
 import ProgressBar from "primevue/progressbar";
 import "primeicons/primeicons.css";
 
+import { selectLang,translationModule } from "@/lib/Translate";
+
 
 
 defineEmits(["next"]);
@@ -142,25 +144,22 @@ function updateProgress() {
 <template>
   <main>
     <div class="container">
-      <h2>{{ quiz?.title }}</h2>
-      <p>{{ quiz?.description }}</p>
+      <h2>{{selectLang(quiz?.title) }}</h2>
+      <p>{{ selectLang(quiz?.description) }}</p>
 
       <div class="wrapper">
         <div v-if="showCounterElseQuestions">
           <h1 style="text-align: center; color: var(--accent1)">
-            Quiz Will Start In
+            {{selectLang(translationModule.quizWillStart)}}
           </h1>
           <h1 class="count-down">{{ countDown }}</h1>
         </div>
         <div v-else class="question-wrapper">
           <div class="quiz-duration">
-            <span
-              >Quiz Expected Time:
-              <strong>{{ quiz?.duaration }} minutes</strong>
-            </span>
-            <span
-              >Your Time:
-              <strong>
+            
+            <span style="width: fit-content;"
+              >{{ selectLang(translationModule.yourTime) }}
+              <strong style="direction: ltr;">
                 {{ Math.floor(studentTime / 60) }}:
                 <strong v-if="studentTime % 60 < 10">0</strong
                 >{{ studentTime % 60 }}</strong
@@ -174,9 +173,9 @@ function updateProgress() {
                 :value="progress"
               ></ProgressBar>
 
-              <h3 class="question-order">Question {{ i + 1 }}</h3>
+              <h3 class="question-order">{{ selectLang(translationModule.question) }} {{ i + 1 }}</h3>
 
-              <h4 class="question-text">{{ question?.question }}</h4>
+              <h4 class="question-text">{{ selectLang(question?.question) }}</h4>
               <div class="choices-wrapper">
                 <p
                   v-for="choice in question?.choices"
@@ -191,14 +190,14 @@ function updateProgress() {
                     selectedChoice: quiz.questions[i].selected == choice.id,
                   }"
                 >
-                  {{ choice.choice }}
+                  {{ selectLang(choice.choice) }}
                 </p>
               </div>
             </div>
           </div>
           <div class="controls">
             <Button
-              label="Previous Question"
+              :label=selectLang(translationModule.prevQuestion)
               :disabled="currentQuention == 0"
               @click="
                 () => {
@@ -207,9 +206,9 @@ function updateProgress() {
                 }
               "
             />
-            <Button label="Finish Quiz" @click="finishQuiz" />
+            <Button :label=selectLang(translationModule.finishQuiz) @click="finishQuiz" />
             <Button
-              label="Next Question"
+              :label=selectLang(translationModule.nextQuestion)
               :disabled="currentQuention + 1 == quiz?.questions?.length"
               @click="
                 () => {
@@ -241,7 +240,7 @@ function updateProgress() {
           style="display: flex; align-items: center; flex-direction: column"
         >
           <div v-if="!showAnswer" class="score">
-            <p>Your Score</p>
+            <p>{{ selectLang(translationModule.yourScore) }}</p>
             <p>{{ Math.floor(score/quiz?.questions?.length*100) }}%</p>
 
       <img class="interaction" v-if="(score/quiz?.questions?.length)>0.9" src="https://i.pinimg.com/originals/56/da/ac/56daac56f90ba6cf039125586181f6ea.gif" alt="">
@@ -250,8 +249,8 @@ function updateProgress() {
           <div v-else class="answers">
             <div v-for="(question, i) in quiz?.questions" :key="question">
               <div class="question" style="min-height: 2rem">
-                <h4 class="question-order">Question {{ i + 1 }}</h4>
-                <h4 class="question-text">{{ question?.question }}</h4>
+                <h4 class="question-order">{{ selectLang(translationModule.question) }} {{ i + 1 }}</h4>
+                <h4 class="question-text">{{ selectLang(question?.question) }}</h4>
                 <div class="choices-wrapper">
                   <p
                     v-for="choice in question?.choices"
@@ -268,7 +267,7 @@ function updateProgress() {
                         quiz.questions[i].selected == choice.id,
                     }"
                   >
-                    {{ choice.choice }}
+                    {{ selectLang(choice.choice) }}
                   </p>
                 </div>
               </div>
@@ -276,7 +275,7 @@ function updateProgress() {
           </div>
           <div class="quiz-duration">
             <span
-              >Your Time:
+              >{{ selectLang(translationModule.yourTime) }}
               <strong>
                 {{ Math.floor(studentTime / 60) }}:
                 <strong v-if="studentTime % 60 < 10">0</strong
@@ -286,9 +285,9 @@ function updateProgress() {
           </div>
 
           <div class="controls">
-            <Button label="Show Answers" @click="showAnswer = true" />
-            <Button label="Try Again" @click="resetQuiz" />
-            <Button label="Next Lesson" @click="$emit('next', true)" />
+            <Button :label=selectLang(translationModule.showAnswer) @click="showAnswer = true" />
+            <Button :label=selectLang(translationModule.tryAgain) @click="resetQuiz" />
+            <Button :label=selectLang(translationModule.nextLesson) @click="$emit('next', true)" />
           </div>
         </div>
       </template>

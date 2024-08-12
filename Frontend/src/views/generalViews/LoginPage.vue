@@ -4,6 +4,9 @@ import Options from "@/components/general/Options.vue";
 import Footer from "@/components/general/Footer.vue";
 import { usePersonalInfo } from "@/stores/token";
 import { decodeCredential } from "vue3-google-login";
+import { selectLang, translationModule } from "@/lib/Translate";
+import { useLang } from "@/stores/token";
+const lang = useLang();
 
 import "primeicons/primeicons.css";
 
@@ -35,7 +38,10 @@ function login() {
         const personalInfoRequester = new HttpRequester("personal_info");
         personalInfoRequester.callApi().then((res) => {
           if (res.success) {
-            personalInfo.addInfo({ userType: res.data?.info?.user_type,notifications:res.data?.info?.notifications });
+            personalInfo.addInfo({
+              userType: res.data?.info?.user_type,
+              notifications: res.data?.info?.notifications,
+            });
             router.push("/");
           }
         });
@@ -52,15 +58,16 @@ const callback = (response: any) => {
     const loginRequester = new HttpRequester("token");
     const personalInfo = usePersonalInfo();
     loginRequester.login((userData as any).email, "mahmoud2000").then((res) => {
-
       if (res.msg == "no such user") {
         NoSuchUser.value = true;
       } else if (res.access_token) {
         const personalInfoRequester = new HttpRequester("personal_info");
         personalInfoRequester.callApi().then((res) => {
-     
           if (res.success) {
-            personalInfo.addInfo({userType: res.data?.info?.user_type,notifications:res.data?.info?.notifications });
+            personalInfo.addInfo({
+              userType: res.data?.info?.user_type,
+              notifications: res.data?.info?.notifications,
+            });
             router.push("/");
           }
         });
@@ -75,43 +82,46 @@ const callback = (response: any) => {
     <Navbar />
     <Options />
     <div class="container">
-      <div class="left">
-        <img src="/images/login.png" alt="" />
+      <div class="left borderRigth">
+        <img src="/images/login.png" alt=""/>
       </div>
       <div class="right">
         <div class="welcome">
-          <h1>Welcome back to the</h1>
-          <h1>Trace Community</h1>
+          <h1>{{ selectLang(translationModule.welcomeBack) }}</h1>
+          <h1>{{ selectLang(translationModule.traceCommunity) }}</h1>
         </div>
         <div class="google-facebook-wrapper">
           <GoogleLogin :callback="callback" />
         </div>
-        <h4 v-if="missingInfo">Some Data Is Missing</h4>
-        <h4 v-if="NoSuchUser">User Doesn't Exist</h4>
+        <h4 v-if="missingInfo">
+          {{ selectLang(translationModule.dataMissing) }}
+        </h4>
+        <h4 v-if="NoSuchUser">
+          {{ selectLang(translationModule.userNotExist) }}
+        </h4>
         <div class="wrapper">
           <InputText
             type="email"
             class="input"
             v-model="email"
-            placeholder="Email"
+            :placeholder="selectLang(translationModule.email)"
           />
           <Password
             class="input"
             v-model="pass"
             :feedback="false"
             toggleMask
-            placeholder="Password"
+            :placeholder="selectLang(translationModule.pass)"
           />
         </div>
         <div class="button">
-          <Button @click="login" label="Login" />
+          <Button @click="login" :label="selectLang(translationModule.login)" />
         </div>
         <p style="margin-left: 5rem">
-          No Account Yet?<strong
-            @click="router.push('/signup')"
-            style="cursor: pointer"
-            >Sign Up</strong
-          >
+          {{ selectLang(translationModule.noAccount)
+          }}<strong @click="router.push('/signup')" style="cursor: pointer">{{
+            selectLang(translationModule.signup)
+          }}</strong>
         </p>
       </div>
     </div>

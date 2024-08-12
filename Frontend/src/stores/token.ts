@@ -42,7 +42,7 @@ export const useToken = defineStore("token", {
 });
 
 interface Notification{
-  title:string
+  title:any
   description:string
   type:string
   analysis_quiz_id:string
@@ -113,6 +113,34 @@ export const useMaterial = defineStore("addedMaterial", {
         this.material = JSON.parse(data);
       }
       return state.material;
+     
+    },
+  },
+
+});
+
+
+export const useLang = defineStore("lang", {
+  state: () => ({
+    selectedLang:'en',
+  }),
+  actions: {
+    setLang(lang:string ) {
+      this.selectedLang = lang
+      this.saveToLocalStorage()
+    },
+    saveToLocalStorage() {
+      localStorage.setItem("selectedLang",this.selectedLang);
+    },
+  },
+  getters: {
+    getLang(state) {
+      const data = localStorage.getItem("selectedLang");
+      console.log(data)
+      if (data) {
+        this.selectedLang =data;
+      }
+      return state.selectedLang;
      
     },
   },

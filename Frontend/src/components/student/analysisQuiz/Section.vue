@@ -1,14 +1,21 @@
 <script lang="ts" setup>
 import Button from "primevue/button";
+import { selectLang,translationModule } from "@/lib/Translate";
 import { ref } from "vue";
+import Arc from "@/components/general/Arc.vue";
 
 defineProps([
   "showPrevious",
   "showNext",
-  "section",
+  "question",
   "answers",
-  "selectedQuestionId",
+  "selectedQuestionOrder",
+  'sectionName',
+  'audio_link',
+  'leftTime',
+  'duration'
 ]);
+
 defineEmits(["previous", "next", "answer"]);
 
 function scrollTop() {
@@ -21,43 +28,42 @@ const lang = ref('en')
 
 <template>
   <div class="container">
-    <h1>{{ section?.title }}</h1>
+    <div style="display: flex; justify-content: space-between;">
+      <h1>{{ selectLang(translationModule.question) }} {{ selectedQuestionOrder+1 }}</h1>
+    <Arc
+            :remainingTime="leftTime"
+            :totalTime="duration"
+          />
+    </div>
+   
     <div
       class="question-container"
-      v-for="(question, i) in section?.questions"
-      :key="question"
       
     >
-      <div v-if="selectedQuestionId == question?.id" class="question">
-        <div class="select-lang">
-          <h3 class="question-order">Question {{ i + 1 }}</h3>
-          <div class="langs">
-            <p @click="lang='en'" :class="{selected:(lang=='en')}">English</p>
-            <p @click="lang='ar'" :class="{selected:(lang=='ar')}">العربية</p>
-          </div>
-        </div>
+      <div  class="question">
         
-
-        <h4 class="question-text"><span v-if="lang=='en'">{{ question?.question?.english }} </span> <span v-if="lang=='ar'">{{ question?.question?.arabic }} </span></h4>
+        <iframe v-if="audio_link" :src="audio_link" frameborder="0" allowtransparency="true" sandbox="allow-scripts allow-same-origin" ></iframe>
+       
+        
+        <h4 class="question-text"> {{ selectLang(question?.question) }} <img :src="question?.image" alt=""> </h4>
         <div class="choices-wrapper">
           <p
             v-for="choice in question?.choices"
             class="choice-text"
-            :class="{selectedChoice:(answers?.some((item:any)=>{return item?.section_id==section?.id && item?.question_id==question?.id && item?.choice_id==choice?.id}))}"
+            :class="{selectedChoice:(answers?.some((item:any)=>{return item?.section_name==sectionName && item?.question_id==question?.id && item?.choice_id==choice?.id}))}"
             :key="choice"
             @click="
               () => {
                 $emit('answer', {
-                  section_id: section?.id,
+                  section_name: sectionName,
                   question_id: question?.id,
                   choice_id: choice?.id,
                 });
               }
             "
           >
-          <span v-if="lang=='en'">{{ choice.english }}</span>
-          <span v-if="lang=='ar'">{{ choice.arabic }}</span>
-            
+          <span >{{ selectLang(choice?.choice) }}</span>
+            <img :src="choice?.image" alt="">
           </p>
         </div>
       </div>
@@ -65,7 +71,7 @@ const lang = ref('en')
 
     <div class="button-container">
       <Button
-        label="Previous"
+      :label=selectLang(translationModule.prev)
         @click="
           () => {
             scrollTop();
@@ -75,7 +81,7 @@ const lang = ref('en')
         :disabled="!showPrevious"
       />
       <Button
-        label="Next"
+        :label=selectLang(translationModule.next)
         @click="
           () => {
             scrollTop();
@@ -89,6 +95,16 @@ const lang = ref('en')
 </template>
 
 <style scoped>
+.container{
+  padding-top: 2rem;
+}
+iframe {
+  background: transparent; /* Ensure the iframe itself has no background */
+  border: none; /* Remove the border */
+  width: 100%; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  margin-top: 1rem;
+}
 h1 {
   width: fit-content;
   line-height: 1.5rem;
@@ -174,5 +190,11 @@ button {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+h4,p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 </style>

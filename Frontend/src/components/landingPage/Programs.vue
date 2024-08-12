@@ -1,9 +1,12 @@
 <script lang="ts" setup>
 import "primeicons/primeicons.css";
 import { ref } from "vue";
+import { selectLang,translationModule } from "@/lib/Translate";
 
 import { useRouter } from "vue-router";
 import { HttpRequester } from "@/lib/APICaller";
+
+
 
 const programRequester = new HttpRequester("get_all_program");
 
@@ -18,9 +21,9 @@ programRequester.callApi().then((res) => {
   if (programs.value) {
     for (let i=0; i<programs.value.length;i++) {
       items.value.push({
-        name: programs.value[i].title,
+        name: selectLang(programs.value[i].title),
         age:programs.value[i].age_group,
-        description:programs.value[i].description.substring(0,50) + '...',
+        description: selectLang(programs.value[i].description),
         color: colors[i%3],
         command: () => {
           router.push(`programs/${programs.value[i].id}`);
@@ -34,8 +37,8 @@ programRequester.callApi().then((res) => {
 
 <template>
   <main>
-    <h1 class="header">Trace Programs</h1>
-    <p class="header">Where Entertainment meets Education</p>
+    <h1 class="header">{{ selectLang(translationModule.tracePrograms) }}</h1>
+    <p class="header">{{ selectLang(translationModule.traceProgramsDescription) }}</p>
     <div class="wrapper">
       <div class="left">
         <img src="/images/circleSparkleGroup.svg" alt="" />
@@ -54,8 +57,8 @@ programRequester.callApi().then((res) => {
               <p>{{ program.age }}</p>
             </div>
           </div>
-          <p>{{ program.description }}</p>
-          <p style="margin: 0">Learn More <i class="pi pi-angle-right"></i></p>
+          <p>{{ program.description.substring(0,50) +'...'}}</p>
+          <p style="margin: 0">{{ selectLang(translationModule.learnMore) }} <i class="pi pi-angle-right"></i></p>
         </div>
       </div>
       <div class="right">

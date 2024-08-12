@@ -3,6 +3,9 @@ import Button from "primevue/button";
 import { HttpRequester } from "../../../lib/APICaller";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { selectLang,translationModule } from "@/lib/Translate";
+
+
 const prop = defineProps(["programId",'childId','isEnrolled']);
 const router = useRouter()
 const course = ref();
@@ -17,8 +20,8 @@ courseRequester
   <main>
     <div class="container">
       <img :src="course?.image" alt="" />
-      <h2>{{ course?.title }}</h2>
-      <Button  @click="()=>{router.push(`/parentViewCourse/${prop.programId}/${prop.childId}/${prop.isEnrolled}`)}" label="Learn More" />
+      <h2>{{selectLang(course?.title) }}</h2>
+      <Button  @click="()=>{router.push(`/parentViewCourse/${prop.programId}/${prop.childId}/${prop.isEnrolled}`)}" :label=selectLang(translationModule.learnMore) />
     </div>
   </main>
 </template>

@@ -1,0 +1,170 @@
+[{
+  "_id": {
+    "$oid": "66ae90ab27f23bb8724c3197"
+  },
+  "id": null,
+  "name": "IQ",
+  "title": {
+    "en": "Intelligence Quotient (IQ)",
+    "ar": "معدل الذكاء"
+  },
+  "description": {
+    "en": "Intelligence quotient, a measure of a person's intellectual abilities.",
+    "ar": "معدل الذكاء، وهو مقياس لقدرات الشخص العقلية."
+  },
+  "global_min": 30,
+  "global_max": 140
+},
+{
+  "_id": {
+    "$oid": "66ae910f27f23bb8724c3198"
+  },
+  "id": null,
+  "name": "The Perfectionist",
+  "title": {
+    "en": "The Perfectionist",
+    "ar": "المثالي"
+  },
+  "description": {
+    "en": "A lot of emphasis on following the rules and doing things correctly.",
+    "ar": "يولي أهمية كبيرة لاتباع القواعد والقيام بالأشياء بشكل صحيح."
+  },
+  "global_min": 40,
+  "global_max": 100
+},
+{
+  "_id": {
+    "$oid": "66ae911e27f23bb8724c3199"
+  },
+  "id": null,
+  "name": "The Giver",
+  "title": {
+    "en": "The Giver",
+    "ar": "المعطي"
+  },
+  "description": {
+    "en": "They want to be liked and find ways that they can be helpful to others.",
+    "ar": "يريدون أن يكونوا محبوبين ويجدون طرقًا يمكنهم من خلالها مساعدة الآخرين."
+  },
+  "global_min": 40,
+  "global_max": 100
+},
+{
+  "_id": {
+    "$oid": "66ae912a27f23bb8724c319a"
+  },
+  "id": null,
+  "name": "The Achiever",
+  "title": {
+    "en": "The Achiever",
+    "ar": "المنجز"
+  },
+  "description": {
+    "en": "They want to be successful and admired by other people, and are very conscious of their public image.",
+    "ar": "يريدون أن يكونوا ناجحين ومعجبين بهم من قبل الآخرين، ويهتمون كثيرًا بصورتهم العامة."
+  },
+  "global_min": 40,
+  "global_max": 100
+},
+{
+  "_id": {
+    "$oid": "66ae913727f23bb8724c319b"
+  },
+  "id": null,
+  "name": "The Individualist",
+  "title": {
+    "en": "The Individualist",
+    "ar": "الفرداني"
+  },
+  "description": {
+    "en": "They want to be unique and to experience deep, authentic emotions.",
+    "ar": "يريدون أن يكونوا مميزين ويختبروا مشاعر عميقة وأصيلة."
+  },
+  "global_min": 40,
+  "global_max": 100
+},
+{
+  "_id": {
+    "$oid": "66ae914127f23bb8724c319c"
+  },
+  "id": null,
+  "name": "The Investigator",
+  "title": {
+    "en": "The Investigator",
+    "ar": "المحقق"
+  },
+  "description": {
+    "en": "They seek understanding and knowledge, and are more comfortable with data than other people.",
+    "ar": "يسعون للفهم والمعرفة، ويشعرون بالراحة أكثر مع البيانات مقارنةً بالآخرين."
+  },
+  "global_min": 40,
+  "global_max": 100
+},
+{
+  "_id": {
+    "$oid": "66ae914b27f23bb8724c319d"
+  },
+  "id": null,
+  "name": "The Skeptic",
+  "title": {
+    "en": "The Skeptic",
+    "ar": "المرتاب"
+  },
+  "description": {
+    "en": "They are preoccupied with security, seek safety, and like to be prepared for problems.",
+    "ar": "يهتمون بالأمان، يبحثون عن السلامة، ويحبون أن يكونوا مستعدين للمشاكل."
+  },
+  "global_min": 40,
+  "global_max": 100
+},
+{
+  "_id": {
+    "$oid": "66ae915927f23bb8724c319e"
+  },
+  "id": null,
+  "name": "The Enthusiast",
+  "title": {
+    "en": "The Enthusiast",
+    "ar": "المتحمس"
+  },
+  "description": {
+    "en": "They want to have as much fun and adventure as possible and are easily bored.",
+    "ar": "يريدون الاستمتاع والمغامرة بأكبر قدر ممكن ويشعرون بالملل بسهولة."
+  },
+  "global_min": 40,
+  "global_max": 100
+},
+{
+  "_id": {
+    "$oid": "66ae916727f23bb8724c319f"
+  },
+  "id": null,
+  "name": "The Challenger",
+  "title": {
+    "en": "The Challenger",
+    "ar": "المتحدي"
+  },
+  "description": {
+    "en": "They see themselves as strong and powerful and seek to stand up for what they believe in.",
+    "ar": "يرون أنفسهم أقوياء وقادرين ويسعون للدفاع عما يؤمنون به."
+  },
+  "global_min": 40,
+  "global_max": 100
+},
+{
+  "_id": {
+    "$oid": "66ae917427f23bb8724c31a0"
+  },
+  "id": null,
+  "name": "The Peacemaker",
+  "title": {
+    "en": "The Peacemaker",
+    "ar": "صانع السلام"
+  },
+  "description": {
+    "en": "They like to go with the flow and let the people around them set the agenda.",
+    "ar": "يحبون الانسجام وترك الناس من حولهم يحددون الأجندة."
+  },
+  "global_min": 40,
+  "global_max": 100
+}]

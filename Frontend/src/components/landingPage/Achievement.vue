@@ -1,40 +1,17 @@
 <script lang="ts" setup>
 import "primeicons/primeicons.css";
+import { selectLang,translationModule } from "@/lib/Translate";
+import { achievments } from "@/lib/Modules";
 
-const achievments = [
-  {
-    class: "/images/GraduationCap.svg",
-    info: "Instructor",
-    count: 100,
-    color: "#E9F8F3",
-  },
-  {
-    class: "/images/VideoCamera.svg",
-    info: "Video",
-    count: 1000,
-    color: "#FFFAF5",
-  },
-  {
-    class: "/images/GraduationCap.svg",
-    info: "Student",
-    count: 2000,
-    color: "#FFEEF0",
-  },
-  {
-    class: "/images/UsersThree.svg",
-    info: "Users",
-    count: 10000,
-    color: "#F0F7FF",
-  },
-];
+
 </script>
 
 <template>
   <main>
     <div class="container">
-      <h1>Our <span style="color: var(--accent2)">Achievements</span></h1>
+      <h1 style="color: var(--accent2)">{{ selectLang(translationModule.achievements) }}</h1>
       <h3 style="color: var(--text)">
-        Various versions have evolved over the years, sometimes by accident,
+        {{ selectLang(translationModule.achDescription) }}
       </h3>
       <div class="wrapper">
         <div class="card" v-for="achievment in achievments">
@@ -54,7 +31,7 @@ const achievments = [
             >
               {{ achievment.count }}
             </h2>
-            <p>{{ achievment.info }}</p>
+            <p>{{selectLang(achievment.info) }}</p>
           </div>
         </div>
       </div>

@@ -10,6 +10,8 @@ import Button from "primevue/button";
 import Calendar from "primevue/calendar";
 import Dialog from "primevue/dialog";
 import router from "@/router";
+import { selectLang, translationModule } from "@/lib/Translate";
+import { grades, genders, educationSystems } from "@/lib/Modules";
 
 const firstName = ref();
 const lastName = ref();
@@ -21,64 +23,16 @@ const birtDate = ref();
 const childGroup = ref();
 const educationSystem = ref();
 const grade = ref();
-const message = ref("");
+const message = ref();
 const showDialog = ref(false);
 const groups = ref<any[]>([]);
-
-const grades = [
-  {
-    label: "Kindergarten (KG)",
-    items: [
-      { label: 1, value: "Kindergarten 1" },
-      { label: 2, value: "Kindergarten 2" },
-    ],
-  },
-  {
-    label: "Primary Education",
-    items: [
-      { label: 1, value: "Primary 1" },
-      { label: 2, value: "Primary 2" },
-      { label: 3, value: "Primary 3" },
-      { label: 4, value: "Primary 4" },
-      { label: 5, value: "Primary 5" },
-      { label: 6, value: "Primary 6" },
-    ],
-  },
-  {
-    label: "Preparatory Education",
-    items: [
-      { label: 1, value: "Preparatory 1" },
-      { label: 2, value: "Preparatory 2" },
-      { label: 3, value: "Preparatory 3" },
-    ],
-  },
-  {
-    label: "Secondary Education",
-    items: [
-      { label: 1, value: "Secondary 1" },
-      { label: 2, value: "Secondary 2" },
-      { label: 3, value: "Secondary 3" },
-    ],
-  },
-  {
-    label: "Others",
-    items: [{ label: "Others", value: "Others" }],
-  },
-];
-const genders = ["Male", "Female"];
-const educationSystems = [
-  "National (Public) Education System",
-  "Private Schools",
-  "International Schools",
-  "Other",
-];
 
 const groupsRequester = new HttpRequester("get_all_program");
 groupsRequester.callApi().then((res) => {
   if (res.success) {
     for (let program of res?.data?.program) {
       groups.value.push({
-        label: program?.title + " " + program?.age_group,
+        label: selectLang(program?.title) ,
         code: program?.id,
       });
     }
@@ -98,9 +52,9 @@ function addChildFunc() {
     !childGroup.value ||
     !educationSystem.value
   ) {
-    message.value = "Some Fields Are Missing";
+    message.value = selectLang(translationModule.dataMissing);
   } else if (pass.value !== confirmPass.value) {
-    message.value = "Passwords Are Diffferent";
+    message.value = selectLang(translationModule.diffPass);
   } else {
     const addChildRequester = new HttpRequester("add_child");
     let date = {
@@ -110,21 +64,21 @@ function addChildFunc() {
         user_type: "Child",
         first_name: firstName.value,
         last_name: lastName.value,
-        gender: gender.value,
+        gender: gender.value?.value,
         birth_day: birtDate.value,
       },
       child: {
         user_id: "",
         grade: grade.value?.value,
         child_group: childGroup.value?.code,
-        education_system: educationSystem.value,
+        education_system: educationSystem.value?.value,
       },
     };
     addChildRequester.callApi(date).then((res) => {
       if (res.success) {
-        showDialog.value=true
-      } else {
-        message.value = res.msg;
+        showDialog.value = true;
+      } else if(res.msg=='email is already used once') {
+        message.value = selectLang(translationModule.emailTaken)
       }
     });
   }
@@ -134,61 +88,65 @@ function addChildFunc() {
 <template>
   <Navbar />
   <div class="container">
-
-    <Dialog modal v-model:visible="showDialog"  :pt="{
+    <Dialog
+      modal
+      v-model:visible="showDialog"
+      :pt="{
         root: 'border-none',
         mask: {
-            style: 'backdrop-filter: blur(2px)'
+          style: 'backdrop-filter: blur(2px)',
         },
-        header:{style:'display:none'}
-    }">
-    <div class="dialog-container">
-        <h3>Child Added Successfully</h3>
-        <h3>Please Log in With:</h3> <h3 style="color: var(--secondary);">{{ email }} Account</h3> <h3> to Start a New Journey</h3>
-        <Button label='View Child' @click="router.push('/childrenCourses')"/>
-    </div>
-     
-      
+        header: { style: 'display:none' },
+      }"
+    >
+      <div class="dialog-container">
+        <h3>{{ selectLang(translationModule.childAdded) }}</h3>
+        <h3>{{ selectLang(translationModule.loginWith) }}</h3>
+        <h3 style="color: var(--secondary)">{{ email }} Account</h3>
+        <h3>{{ selectLang(translationModule.toStartJourney) }}</h3>
+        <Button
+          :label="selectLang(translationModule.viewChild)"
+          @click="router.push('/childrenCourses')"
+        />
+      </div>
     </Dialog>
 
-
-
-    <ParentSidebar class="sidebar" selected="Add Child" />
+    <ParentSidebar class="sidebar" selected="addChild" />
     <div class="big-wrapper">
       <h2>{{ message }}</h2>
       <div class="wrapper">
         <div class="element">
-          <p>First Name</p>
+          <p>{{ selectLang(translationModule.firstName) }}</p>
           <InputText v-model="firstName" />
         </div>
         <div class="element">
-          <p>Last Name</p>
+          <p>{{ selectLang(translationModule.lastName) }}</p>
           <InputText v-model="lastName" />
         </div>
 
         <div class="element">
-          <p>Email</p>
+          <p>{{ selectLang(translationModule.email) }}</p>
           <InputText v-model="email" />
         </div>
         <div class="element">
-          <p>Password</p>
+          <p>{{ selectLang(translationModule.pass) }}</p>
           <InputText v-model="pass" />
         </div>
         <div class="element">
-          <p>Confirm Password</p>
+          <p>{{ selectLang(translationModule.confirmPass) }}</p>
           <InputText v-model="confirmPass" />
         </div>
         <div class="element">
-          <p>Gender</p>
-          <Dropdown v-model="gender" :options="genders" />
+          <p>{{ selectLang(translationModule.gender) }}</p>
+          <Dropdown v-model="gender" :options="genders" option-label="label" />
         </div>
         <div class="element">
-          <p>Birth Date</p>
+          <p>{{ selectLang(translationModule.birthDate) }}</p>
           <Calendar v-model="birtDate" showIcon iconDisplay="input" />
         </div>
 
         <div class="element">
-          <p>Grade</p>
+          <p>{{ selectLang(translationModule.grade) }}</p>
           <Dropdown
             v-model="grade"
             :options="grades"
@@ -199,7 +157,7 @@ function addChildFunc() {
         </div>
 
         <div class="element">
-          <p>Child Group</p>
+          <p>{{ selectLang(translationModule.programs) }}</p>
           <Dropdown
             v-model="childGroup"
             :options="groups"
@@ -208,12 +166,12 @@ function addChildFunc() {
         </div>
 
         <div class="element">
-          <p>Education System</p>
-          <Dropdown v-model="educationSystem" :options="educationSystems" />
+          <p>{{ selectLang(translationModule.educationSystem) }}</p>
+          <Dropdown v-model="educationSystem" :options="educationSystems"   option-label="label" />
         </div>
       </div>
 
-      <Button label="Add Child" @click="addChildFunc" />
+      <Button :label=selectLang(translationModule.addChild) @click="addChildFunc" />
     </div>
   </div>
   <Footer />
@@ -245,21 +203,21 @@ h2 {
 .element > * {
   width: 100%;
 }
-.big-wrapper{
-    padding-inline: 5rem;
+.big-wrapper {
+  padding-inline: 5rem;
 }
 button {
   padding: 0.75rem 5rem;
 }
-.dialog-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 2rem;
+.dialog-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
 }
-h3{
+h3 {
   color: var(--accent1);
   margin: 0;
   line-height: 0rem;
@@ -268,16 +226,15 @@ h3{
   .wrapper {
     grid-template-columns: 1fr 1fr;
   }
-  
 }
 @media screen and (max-width: 1000px) {
   .container {
-  grid-template-columns:  90vw;
-  min-height: 100vh;
-}
-.sidebar{
-  display: none;
-}
+    grid-template-columns: 90vw;
+    min-height: 100vh;
+  }
+  .sidebar {
+    display: none;
+  }
 }
 @media screen and (max-width: 750px) {
   .wrapper {

@@ -18,6 +18,10 @@ async def get_program()-> ServiceResponse:
     res = await program_database.get_all_programs()
     return res
 
+@router.post('/get_all_programs_and_courses') 
+async def get_program()-> ServiceResponse:
+    res = await program_database.get_all_programs_and_courses()
+    return res
 @router.post('/create_program')
 async def create_program(new_program:Program =Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
     res = await program_database.create_program(new_program)

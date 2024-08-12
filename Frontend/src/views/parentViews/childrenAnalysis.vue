@@ -4,6 +4,7 @@ import Navbar from '../../components/general/Navbar.vue';
 import Footer from '@/components/general/Footer.vue';
 import SelectChild from '@/components/parent/parentProfile/SelectChild.vue'
 import ChildrenAnalysis from '@/components/parent/childrenAnalysis/ChildrenAnalysis.vue'
+
 import { ref } from "vue";
 
 const selectedChild = ref(null)
@@ -12,7 +13,7 @@ const selectedChild = ref(null)
 <template>
     <Navbar/>
     <div class="container">
-        <ParentSidebar class="sidebar" selected="Children Analysis"/>
+        <ParentSidebar class="sidebar" selected="childAnalysis"/>
         <div class="wrapper">
             <SelectChild @selected-child="id=>selectedChild=id"/>
             <ChildrenAnalysis :child-id="selectedChild"/>
@@ -27,9 +28,11 @@ const selectedChild = ref(null)
     display: grid;
     grid-template-columns: 12rem 1fr;
     min-height: 100vh;
+  
 }
 .wrapper{
     margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 @media screen and (max-width: 1000px) {
   .container {

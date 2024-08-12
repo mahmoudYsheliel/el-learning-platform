@@ -1,0 +1,5201 @@
+[{
+  "_id": {
+    "$oid": "6658981b3c1292123725798d"
+  },
+  "id": "7",
+  "title": "Data Science Fundamentals Quiz",
+  "description": "Evaluate your understanding of data science fundamentals.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is data science?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "An interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from data"
+        },
+        {
+          "id": 2,
+          "choice": "A field of study that focuses on computer programming"
+        },
+        {
+          "id": 3,
+          "choice": "A field of study that focuses on hardware development"
+        },
+        {
+          "id": 4,
+          "choice": "None of the above"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "What is the first step in the data science process?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Data collection"
+        },
+        {
+          "id": 2,
+          "choice": "Data cleaning"
+        },
+        {
+          "id": 3,
+          "choice": "Data analysis"
+        },
+        {
+          "id": 4,
+          "choice": "Data visualization"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "What is a common tool used for data analysis in data science?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Microsoft Word"
+        },
+        {
+          "id": 2,
+          "choice": "Jupyter Notebook"
+        },
+        {
+          "id": 3,
+          "choice": "Adobe Photoshop"
+        },
+        {
+          "id": 4,
+          "choice": "Autodesk AutoCAD"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "What is machine learning in data science?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A method of data analysis that automates analytical model building"
+        },
+        {
+          "id": 2,
+          "choice": "A method of cleaning data"
+        },
+        {
+          "id": 3,
+          "choice": "A method of visualizing data"
+        },
+        {
+          "id": 4,
+          "choice": "A method of collecting data"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 5,
+      "question": "What is a data pipeline?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A set of data processing elements connected in series, where the output of one element is the input of the next"
+        },
+        {
+          "id": 2,
+          "choice": "A method of cleaning data"
+        },
+        {
+          "id": 3,
+          "choice": "A method of visualizing data"
+        },
+        {
+          "id": 4,
+          "choice": "A method of collecting data"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 6,
+      "question": "What is a data lake?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A system or repository of data stored in its natural/raw format, usually object blobs or files"
+        },
+        {
+          "id": 2,
+          "choice": "A method of cleaning data"
+        },
+        {
+          "id": 3,
+          "choice": "A method of visualizing data"
+        },
+        {
+          "id": 4,
+          "choice": "A method of collecting data"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 7,
+      "question": "What is the purpose of data visualization?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To communicate information clearly and effectively through graphical means"
+        },
+        {
+          "id": 2,
+          "choice": "To store data"
+        },
+        {
+          "id": 3,
+          "choice": "To clean data"
+        },
+        {
+          "id": 4,
+          "choice": "To collect data"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 7
+},
+{
+  "_id": {
+    "$oid": "6658984b3c1292123725798e"
+  },
+  "id": "7",
+  "title": "Data Science Fundamentals Quiz",
+  "description": "Evaluate your understanding of data science fundamentals.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is data science?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "An interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from data"
+        },
+        {
+          "id": 2,
+          "choice": "A field of study that focuses on computer programming"
+        },
+        {
+          "id": 3,
+          "choice": "A field of study that focuses on hardware development"
+        },
+        {
+          "id": 4,
+          "choice": "None of the above"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "What is the first step in the data science process?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Data collection"
+        },
+        {
+          "id": 2,
+          "choice": "Data cleaning"
+        },
+        {
+          "id": 3,
+          "choice": "Data analysis"
+        },
+        {
+          "id": 4,
+          "choice": "Data visualization"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "What is a common tool used for data analysis in data science?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Microsoft Word"
+        },
+        {
+          "id": 2,
+          "choice": "Jupyter Notebook"
+        },
+        {
+          "id": 3,
+          "choice": "Adobe Photoshop"
+        },
+        {
+          "id": 4,
+          "choice": "Autodesk AutoCAD"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "What is machine learning in data science?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A method of data analysis that automates analytical model building"
+        },
+        {
+          "id": 2,
+          "choice": "A method of cleaning data"
+        },
+        {
+          "id": 3,
+          "choice": "A method of visualizing data"
+        },
+        {
+          "id": 4,
+          "choice": "A method of collecting data"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 5,
+      "question": "What is a data pipeline?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A set of data processing elements connected in series, where the output of one element is the input of the next"
+        },
+        {
+          "id": 2,
+          "choice": "A method of cleaning data"
+        },
+        {
+          "id": 3,
+          "choice": "A method of visualizing data"
+        },
+        {
+          "id": 4,
+          "choice": "A method of collecting data"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 6,
+      "question": "What is a data lake?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A system or repository of data stored in its natural/raw format, usually object blobs or files"
+        },
+        {
+          "id": 2,
+          "choice": "A method of cleaning data"
+        },
+        {
+          "id": 3,
+          "choice": "A method of visualizing data"
+        },
+        {
+          "id": 4,
+          "choice": "A method of collecting data"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 7,
+      "question": "What is the purpose of data visualization?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To communicate information clearly and effectively through graphical means"
+        },
+        {
+          "id": 2,
+          "choice": "To store data"
+        },
+        {
+          "id": 3,
+          "choice": "To clean data"
+        },
+        {
+          "id": 4,
+          "choice": "To collect data"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 7
+},
+{
+  "_id": {
+    "$oid": "6658987e3c1292123725798f"
+  },
+  "id": "8",
+  "title": "Artificial Intelligence Quiz",
+  "description": "Test your knowledge of artificial intelligence.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is artificial intelligence?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "The simulation of human intelligence in machines that are programmed to think like humans and mimic their actions"
+        },
+        {
+          "id": 2,
+          "choice": "The study of human intelligence"
+        },
+        {
+          "id": 3,
+          "choice": "The development of software applications"
+        },
+        {
+          "id": 4,
+          "choice": "The enhancement of hardware performance"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "What is an example of AI technology?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Speech recognition"
+        },
+        {
+          "id": 2,
+          "choice": "Image recognition"
+        },
+        {
+          "id": 3,
+          "choice": "Natural language processing"
+        },
+        {
+          "id": 4,
+          "choice": "All of the above"
+        }
+      ],
+      "correct_answer_id": 4
+    },
+    {
+      "id": 3,
+      "question": "What is machine learning in the context of AI?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A subset of AI that enables a system to automatically learn and improve from experience without being explicitly programmed"
+        },
+        {
+          "id": 2,
+          "choice": "A subset of AI that focuses on data collection"
+        },
+        {
+          "id": 3,
+          "choice": "A subset of AI that focuses on data visualization"
+        },
+        {
+          "id": 4,
+          "choice": "A subset of AI that focuses on data storage"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": "What is deep learning?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A subset of machine learning that involves neural networks with three or more layers"
+        },
+        {
+          "id": 2,
+          "choice": "A subset of machine learning that involves shallow networks"
+        },
+        {
+          "id": 3,
+          "choice": "A subset of machine learning that involves decision trees"
+        },
+        {
+          "id": 4,
+          "choice": "A subset of machine learning that involves support vector machines"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 5,
+      "question": "What is natural language processing?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A branch of AI that helps computers understand, interpret, and manipulate human language"
+        },
+        {
+          "id": 2,
+          "choice": "A branch of AI that focuses on image recognition"
+        },
+        {
+          "id": 3,
+          "choice": "A branch of AI that focuses on speech recognition"
+        },
+        {
+          "id": 4,
+          "choice": "A branch of AI that focuses on data storage"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "665898f53c12921237257990"
+  },
+  "id": "9",
+  "title": "Web Development Quiz",
+  "description": "Test your knowledge of web development.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does CSS stand for?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Cascading Style Sheets"
+        },
+        {
+          "id": 2,
+          "choice": "Computer Style Sheets"
+        },
+        {
+          "id": 3,
+          "choice": "Creative Style Sheets"
+        },
+        {
+          "id": 4,
+          "choice": "Colorful Style Sheets"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "Which HTML attribute is used to define inline styles?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "style"
+        },
+        {
+          "id": 2,
+          "choice": "class"
+        },
+        {
+          "id": 3,
+          "choice": "font"
+        },
+        {
+          "id": 4,
+          "choice": "styles"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "Which is the correct CSS syntax?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "body:color=black;"
+        },
+        {
+          "id": 2,
+          "choice": "{body;color:black;"
+        },
+        {
+          "id": 3,
+          "choice": "body {color: black;}"
+        },
+        {
+          "id": 4,
+          "choice": "{body:color=black;"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 4,
+      "question": "Which property is used to change the background color?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "color"
+        },
+        {
+          "id": 2,
+          "choice": "background-color"
+        },
+        {
+          "id": 3,
+          "choice": "bgcolor"
+        },
+        {
+          "id": 4,
+          "choice": "bg-color"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": "How do you add a background color for all <h1> elements?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "h1 {background-color:#FFFFFF;"
+        },
+        {
+          "id": 2,
+          "choice": "h1.all {background-color:#FFFFFF;"
+        },
+        {
+          "id": 3,
+          "choice": "all.h1 {background-color:#FFFFFF;"
+        },
+        {
+          "id": 4,
+          "choice": "h1 {bgcolor:#FFFFFF;"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 6,
+      "question": "What is the default value of the position property?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "static"
+        },
+        {
+          "id": 2,
+          "choice": "absolute"
+        },
+        {
+          "id": 3,
+          "choice": "relative"
+        },
+        {
+          "id": 4,
+          "choice": "fixed"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 7,
+      "question": "How do you make each word in a text start with a capital letter?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "transform:capitalize"
+        },
+        {
+          "id": 2,
+          "choice": "text-transform:capitalize"
+        },
+        {
+          "id": 3,
+          "choice": "text-style:capitalize"
+        },
+        {
+          "id": 4,
+          "choice": "text-capitalize"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 8,
+      "question": "Which CSS property controls the text size?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "font-style"
+        },
+        {
+          "id": 2,
+          "choice": "text-size"
+        },
+        {
+          "id": 3,
+          "choice": "font-size"
+        },
+        {
+          "id": 4,
+          "choice": "text-style"
+        }
+      ],
+      "correct_answer_id": 3
+    }
+  ],
+  "duaration": 20,
+  "last_question_number": 8
+},
+{
+  "_id": {
+    "$oid": "6679beed24650df2a16196f0"
+  },
+  "id": "3",
+  "title": "Robots in Business Quiz",
+  "description": "Test your knowledge about robots and their impact on businesses.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Robots can’t lead to cost savings for businesses.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": "Robots are (......) machines that humans can program to perform certain actions.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Electrical"
+        },
+        {
+          "id": 2,
+          "choice": "Mechanical"
+        },
+        {
+          "id": 3,
+          "choice": "Electro-Mechanical"
+        },
+        {
+          "id": 4,
+          "choice": "Electro-chemical"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 3,
+      "question": "Robots do not need breaks, sleep, or vacations.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": "What is one reason why robots can contribute to cost reduction for businesses?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "They increase the need for human intervention"
+        },
+        {
+          "id": 2,
+          "choice": "They require expensive maintenance"
+        },
+        {
+          "id": 3,
+          "choice": "They streamline processes and reduce errors"
+        },
+        {
+          "id": 4,
+          "choice": "They are prone to technical malfunctions"
+        }
+      ],
+      "correct_answer_id": 3
+    }
+  ],
+  "duaration": 8,
+  "last_question_number": 4
+},
+{
+  "_id": {
+    "$oid": "6679bfac24650df2a16196f1"
+  },
+  "id": "4",
+  "title": "Types of Robots Quiz",
+  "description": "Test your knowledge about different types of robots and their applications.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Robots have rotary joints and can range from simple two-joint structures to highly complex ones.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "SCARA Robots"
+        },
+        {
+          "id": 2,
+          "choice": "Articulated Robots"
+        },
+        {
+          "id": 3,
+          "choice": "Delta Robots"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": "Robots known as parallel robots, these robots have three arms connected to a common platform.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "SCARA Robots"
+        },
+        {
+          "id": 2,
+          "choice": "Articulated Robots"
+        },
+        {
+          "id": 3,
+          "choice": "Delta Robots"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 3,
+      "question": "SCARA Robots are designed for tasks that require slow and deliberate movements.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "Robots are used to defend countries.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "SCARA Robots"
+        },
+        {
+          "id": 2,
+          "choice": "Medical Robots"
+        },
+        {
+          "id": 3,
+          "choice": "Military Robots"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 5,
+      "question": "Which type of robot is known for fast and precise horizontal movement in tasks?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Articulated Robots"
+        },
+        {
+          "id": 2,
+          "choice": "SCARA Robots"
+        },
+        {
+          "id": 3,
+          "choice": "Delta Robots"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 6,
+      "question": "Which category of robots is specifically designed for teaching programming and robotics concepts to students?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Military and Defense Robots"
+        },
+        {
+          "id": 2,
+          "choice": "Educational Robots"
+        },
+        {
+          "id": 3,
+          "choice": "Agricultural Robots"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 7,
+      "question": "What is another name for Delta Robots, and what type of tasks are they commonly used for?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Serial Robots; painting and welding"
+        },
+        {
+          "id": 2,
+          "choice": "Parallel Robots; high-speed tasks like picking and packing"
+        },
+        {
+          "id": 3,
+          "choice": "Linear Robots; medical surgeries"
+        },
+        {
+          "id": 4,
+          "choice": "Flexible Robots; for educational purposes"
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duaration": 12,
+  "last_question_number": 7
+},
+{
+  "_id": {
+    "$oid": "6679bfdf24650df2a16196f2"
+  },
+  "id": "5",
+  "title": "Robot Components and Functions Quiz",
+  "description": "Test your knowledge about the components and functions of robots.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "………… provides the necessary electrical energy to power the robot's components.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Batteries"
+        },
+        {
+          "id": 2,
+          "choice": "Sensors"
+        },
+        {
+          "id": 3,
+          "choice": "Actuators"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "……….. processes sensor data and controls the actuators based on the programmed instructions.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Actuators"
+        },
+        {
+          "id": 2,
+          "choice": "Communication interface"
+        },
+        {
+          "id": 3,
+          "choice": "Microcontroller"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 3,
+      "question": "………… enables the robot to send and receive data.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Actuators"
+        },
+        {
+          "id": 2,
+          "choice": "Communication interface"
+        },
+        {
+          "id": 3,
+          "choice": "Microcontroller"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "………… measure distance using sound waves.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Infrared Sensors"
+        },
+        {
+          "id": 2,
+          "choice": "Ultrasonic Sensors"
+        },
+        {
+          "id": 3,
+          "choice": "Torque Sensors"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": "Which type of sensor captures visual information to allow the robot to perceive its environment?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Infrared Sensors"
+        },
+        {
+          "id": 2,
+          "choice": "Ultrasonic Sensors"
+        },
+        {
+          "id": 3,
+          "choice": "Vision Sensors (Cameras)"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 6,
+      "question": "What is the role of Motors in a robot's components?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Measure distance using sound waves"
+        },
+        {
+          "id": 2,
+          "choice": "Generate mechanical motion"
+        },
+        {
+          "id": 3,
+          "choice": "Detect physical contact with objects"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 7,
+      "question": "What is the purpose of the Programming Interface in Robots?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Holds and supports other components"
+        },
+        {
+          "id": 2,
+          "choice": "Allows movement and flexibility"
+        },
+        {
+          "id": 3,
+          "choice": "Defines the behavior and tasks of the robot using specific languages"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 8,
+      "question": "Force/Torque Sensors in a robot measure the heat and proximity of the environment.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duaration": 14,
+  "last_question_number": 8
+},
+{
+  "_id": {
+    "$oid": "6679c07a24650df2a16196f3"
+  },
+  "id": "6",
+  "title": "Robot Building Fundamentals Quiz",
+  "description": "Test your knowledge about the fundamentals of building a robot.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Kinematics and Dynamics are only relevant for understanding the electronic components of a robot.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": "What is the purpose of 3D Modeling and CAD in building a robot?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Understanding motion principles"
+        },
+        {
+          "id": 2,
+          "choice": "Choosing appropriate materials"
+        },
+        {
+          "id": 3,
+          "choice": "Designing and modeling mechanical components"
+        },
+        {
+          "id": 4,
+          "choice": "Programming the robot's behavior"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 3,
+      "question": "What are the basics of Electricity that are crucial for building a robot?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Voltage, Current, and Motors"
+        },
+        {
+          "id": 2,
+          "choice": "Resistance, Sensors, and Programming"
+        },
+        {
+          "id": 3,
+          "choice": "Voltage, Current, and Resistance"
+        },
+        {
+          "id": 4,
+          "choice": "Power Electronics, Circuit Design, and Programming"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 4,
+      "question": "What is emphasized in the fundamentals of programming for building a robot?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Voltage, Current, and Resistance"
+        },
+        {
+          "id": 2,
+          "choice": "Events, Loops, Conditions, and Functions"
+        },
+        {
+          "id": 3,
+          "choice": "Serial Communication and Sensors"
+        },
+        {
+          "id": 4,
+          "choice": "3D Modeling and CAD"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": "Why is understanding Mechanics and Dynamics crucial for building a robot's mechanical structure?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To program the robot's behavior"
+        },
+        {
+          "id": 2,
+          "choice": "To choose appropriate materials"
+        },
+        {
+          "id": 3,
+          "choice": "To understand the principles of motion, force, and torque"
+        },
+        {
+          "id": 4,
+          "choice": "To design and model using CAD"
+        }
+      ],
+      "correct_answer_id": 3
+    }
+  ],
+  "duaration": 5,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "6679c0ca24650df2a16196f4"
+  },
+  "id": "7",
+  "title": "Electricity and Energy Quiz",
+  "description": "Test your knowledge about electricity, circuits, and energy sources.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What are the tiny charged particles that move through conductors to create electric current?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Protons"
+        },
+        {
+          "id": 2,
+          "choice": "Electrons"
+        },
+        {
+          "id": 3,
+          "choice": "Atoms"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": "What are the two main types of materials based on their electrical conductivity?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Metals and nonmetals"
+        },
+        {
+          "id": 2,
+          "choice": "Positively charged and negatively charged materials"
+        },
+        {
+          "id": 3,
+          "choice": "Conductors and insulators"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "What is an electric circuit, and what essential components does it include?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A random arrangement of wires and components"
+        },
+        {
+          "id": 2,
+          "choice": "A closed path for electrons to flow, including a power source, wires, and a load"
+        },
+        {
+          "id": 3,
+          "choice": "A measure of electrical resistance in a circuit"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "Electrons are tightly bound to the nucleus of an atom and cannot move freely in all materials.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": "Conductors like copper and aluminum are widely used in electrical wires and cables due to their ability to conduct electrons effectively.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 6,
+      "question": "What is the main environmental drawback of using coal for electricity generation?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Produces limited amounts of energy."
+        },
+        {
+          "id": 2,
+          "choice": "Releases greenhouse gases that contribute to climate change."
+        },
+        {
+          "id": 3,
+          "choice": "Creates excessive noise pollution."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 7,
+      "question": "How do solar panels convert sunlight into electricity?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Through a process of combustion."
+        },
+        {
+          "id": 2,
+          "choice": "By utilizing the photovoltaic effect to generate electric current."
+        },
+        {
+          "id": 3,
+          "choice": "By focusing sunlight onto a boiler to produce steam."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 8,
+      "question": "What is the main limitation of solar power generation?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Requires constant and strong winds."
+        },
+        {
+          "id": 2,
+          "choice": "Reliant on the availability of sunlight, leading to fluctuations in power output."
+        },
+        {
+          "id": 3,
+          "choice": "Produces large amounts of radioactive waste."
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duaration": 5,
+  "last_question_number": 8
+},
+{
+  "_id": {
+    "$oid": "6679c0f624650df2a16196f5"
+  },
+  "id": "8",
+  "title": "Electric Current and Circuits Quiz",
+  "description": "Test your knowledge about electric current, voltage, resistance, and circuits.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What unit is used to measure electric current?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Volt (V)"
+        },
+        {
+          "id": 2,
+          "choice": "Ohm (Ω)"
+        },
+        {
+          "id": 3,
+          "choice": "Ampere (A)"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 2,
+      "question": "What is the electrical pressure that pushes electrons through a conductor?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Voltage"
+        },
+        {
+          "id": 2,
+          "choice": "Current"
+        },
+        {
+          "id": 3,
+          "choice": "Resistance"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "What is the property of a material that opposes the flow of electric current?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Current"
+        },
+        {
+          "id": 2,
+          "choice": "Voltage"
+        },
+        {
+          "id": 3,
+          "choice": "Resistance"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 4,
+      "question": "What is the fundamental relationship between voltage, current, and resistance expressed by Ohm's law?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "V = I × R"
+        },
+        {
+          "id": 2,
+          "choice": "I = V × R"
+        },
+        {
+          "id": 3,
+          "choice": "R = V × I"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 5,
+      "question": "In a series circuit, what happens to the current as it passes through each component?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "It remains constant."
+        },
+        {
+          "id": 2,
+          "choice": "It increases."
+        },
+        {
+          "id": 3,
+          "choice": "It decreases."
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 6,
+      "question": "How is the total resistance in a parallel circuit calculated?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "1/R_total = 1/R1 + 1/R2 + 1/R3 + ..."
+        },
+        {
+          "id": 2,
+          "choice": "R_total = R1 + R2 + R3 + ..."
+        },
+        {
+          "id": 3,
+          "choice": "R_total = R1 × R2 × R3 × ..."
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 7,
+      "question": "What happens to the current flowing through a conductor if the voltage remains constant and the resistance is doubled?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "The current remains the same."
+        },
+        {
+          "id": 2,
+          "choice": "The current is halved."
+        },
+        {
+          "id": 3,
+          "choice": "The current quadruples."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 8,
+      "question": "In a series circuit, if one component breaks or malfunctions, what happens to the entire circuit?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "The current remains the same in all components."
+        },
+        {
+          "id": 2,
+          "choice": "The current increases in all components."
+        },
+        {
+          "id": 3,
+          "choice": "The current is interrupted, and the entire circuit stops functioning."
+        }
+      ],
+      "correct_answer_id": 3
+    }
+  ],
+  "duaration": 5,
+  "last_question_number": 8
+},
+{
+  "_id": {
+    "$oid": "6679c12124650df2a16196f6"
+  },
+  "id": "9",
+  "title": "Electrical Power and Motors Quiz",
+  "description": "Test your knowledge about electrical power, energy, motors, and their importance in robotics.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the unit of electrical power?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Ampere (A)"
+        },
+        {
+          "id": 2,
+          "choice": "Volt (V)"
+        },
+        {
+          "id": 3,
+          "choice": "Watt (W)"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 2,
+      "question": "What is the difference between power and energy?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Power is the rate at which energy is transferred or transformed, while energy is the total capacity to do work."
+        },
+        {
+          "id": 2,
+          "choice": "Power is the unit of energy, while energy is the rate at which power is transferred or transformed."
+        },
+        {
+          "id": 3,
+          "choice": "They are the same thing and can be used interchangeably."
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "If a light bulb consumes 60 watts of power for 3 seconds, how much energy does it use?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "1800 joules"
+        },
+        {
+          "id": 2,
+          "choice": "180 joules"
+        },
+        {
+          "id": 3,
+          "choice": "20 joules"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": "Why is it important to select an electric motor with the appropriate power rating for a robot?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To ensure the motor can provide enough torque to move the robot."
+        },
+        {
+          "id": 2,
+          "choice": "To prevent the motor from overheating and failing."
+        },
+        {
+          "id": 3,
+          "choice": "To extend the battery life of the robot."
+        },
+        {
+          "id": 4,
+          "choice": "All of the above"
+        }
+      ],
+      "correct_answer_id": 4
+    },
+    {
+      "id": 5,
+      "question": "What factors should be considered when selecting an electric motor for a robot?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Power rating, size, weight, speed, and torque requirements"
+        },
+        {
+          "id": 2,
+          "choice": "Only the power rating"
+        },
+        {
+          "id": 3,
+          "choice": "Only the size and weight"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 6,
+      "question": "Robots can run on any type of power source regardless of their size or complexity.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 7,
+      "question": "The formula P = V * I is used to calculate the power in a circuit.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 8,
+      "question": "A robot with a simple arm designed for delicate tasks would benefit most from a high-power motor.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duaration": 5,
+  "last_question_number": 8
+},
+{
+  "_id": {
+    "$oid": "6679c14e24650df2a16196f7"
+  },
+  "id": "10",
+  "title": "Robot Components and Functions Quiz",
+  "description": "Test your knowledge about common components and functions of robots, including LEDs, sensors, switches, and breadboards.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What are some common applications of LEDs in robots?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Status indicators"
+        },
+        {
+          "id": 2,
+          "choice": "Illumination"
+        },
+        {
+          "id": 3,
+          "choice": "Communication with other robots"
+        },
+        {
+          "id": 4,
+          "choice": "All of the above"
+        }
+      ],
+      "correct_answer_id": 4
+    },
+    {
+      "id": 2,
+      "question": "What factors determine the color of an LED?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "The voltage applied"
+        },
+        {
+          "id": 2,
+          "choice": "The material composition of the LED"
+        },
+        {
+          "id": 3,
+          "choice": "The amount of current flowing through it"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 3,
+      "question": "What type of sensor can help a robot navigate in a dark environment?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Sound sensor"
+        },
+        {
+          "id": 2,
+          "choice": "Light sensor"
+        },
+        {
+          "id": 3,
+          "choice": "Temperature sensor"
+        },
+        {
+          "id": 4,
+          "choice": "None of the above"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "What is the main function of a switch in a robot circuit?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To store data"
+        },
+        {
+          "id": 2,
+          "choice": "To control the flow of current"
+        },
+        {
+          "id": 3,
+          "choice": "To amplify electrical signals"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": "Robots only need one type of sensor to function effectively.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 6,
+      "question": "Why might some robots utilize a combination of different sensor types?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To create a more complex and visually appealing design"
+        },
+        {
+          "id": 2,
+          "choice": "To compensate for limitations of individual sensors and gather richer environmental data"
+        },
+        {
+          "id": 3,
+          "choice": "To make all sensors only work when paired with others"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 7,
+      "question": "A toggle switch can only be in one position at a time (ON or OFF).",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 8,
+      "question": "Switches are used to create electrical energy in a robot circuit.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 9,
+      "question": "What is the primary function of a breadboard in robot prototyping?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To offer a temporary platform for connecting components without soldering"
+        },
+        {
+          "id": 2,
+          "choice": "To generate electricity for the robot"
+        },
+        {
+          "id": 3,
+          "choice": "To store and manage data for the robot's control system"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 10,
+      "question": "The positive and negative power rails on a breadboard simplify connecting the power source and ground to the circuit.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 10
+},
+{
+  "_id": {
+    "$oid": "6679c18624650df2a16196f8"
+  },
+  "id": "11",
+  "title": "Physics Basics Quiz",
+  "description": "Test your knowledge about basic concepts in physics such as speed, acceleration, distance, and displacement.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the formula for calculating speed?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Speed = Distance ÷ Time"
+        },
+        {
+          "id": 2,
+          "choice": "Speed = Time ÷ Distance"
+        },
+        {
+          "id": 3,
+          "choice": "Speed = Distance × Time"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "Acceleration occurs whenever there is a change in an object's ……….",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Displacement"
+        },
+        {
+          "id": 2,
+          "choice": "Distance"
+        },
+        {
+          "id": 3,
+          "choice": "Velocity"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 3,
+      "question": "Which of the following is a unit of acceleration?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "seconds (s)"
+        },
+        {
+          "id": 2,
+          "choice": "meters per second squared (m/s^2)"
+        },
+        {
+          "id": 3,
+          "choice": "meters per second (m/s)"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "The SI unit of ………. is meter.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Distance"
+        },
+        {
+          "id": 2,
+          "choice": "Velocity"
+        },
+        {
+          "id": 3,
+          "choice": "Acceleration"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 5,
+      "question": "Distance and displacement always have the same value.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "6679c1c524650df2a16196f9"
+  },
+  "id": "12",
+  "title": "Newton's Laws of Motion Quiz",
+  "description": "Test your knowledge about Newton's laws of motion and basic concepts in physics.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Newton's second law of motion states that the acceleration of an object is directly proportional to the net force acting on it and?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Speed"
+        },
+        {
+          "id": 2,
+          "choice": "Acceleration"
+        },
+        {
+          "id": 3,
+          "choice": "Mass"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 2,
+      "question": "The force of ___________ between two objects increases with mass and decreases with distance.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "mass"
+        },
+        {
+          "id": 2,
+          "choice": "Acceleration"
+        },
+        {
+          "id": 3,
+          "choice": "gravity"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 3,
+      "question": "According to Newton's third law of motion, when you push against a wall with a force, the wall pushes back on you with",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "The same magnitude but in the opposite direction"
+        },
+        {
+          "id": 2,
+          "choice": "Greater magnitude but in the same direction"
+        },
+        {
+          "id": 3,
+          "choice": "Lesser magnitude but in the opposite direction"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": "Friction is a force that opposes the relative motion or tendency of such motion of two surfaces in contact.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 5,
+      "question": "Newton's first law of motion states that an object will remain at rest or in uniform motion unless acted upon by an external force.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "6679c1e824650df2a16196fa"
+  },
+  "id": "13",
+  "title": "Energy Concepts Quiz",
+  "description": "Test your understanding of energy measurement, kinetic energy, potential energy, and the law of energy conservation.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the unit of energy measurement?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Joule."
+        },
+        {
+          "id": 2,
+          "choice": "Ampere."
+        },
+        {
+          "id": 3,
+          "choice": "Volt."
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "What is kinetic energy?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Energy acquired from the object's position."
+        },
+        {
+          "id": 2,
+          "choice": "Energy acquired from the object's motion."
+        },
+        {
+          "id": 3,
+          "choice": "Energy acquired from an electrical current."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 3,
+      "question": "What is potential energy?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Energy acquired from the object's position."
+        },
+        {
+          "id": 2,
+          "choice": "Energy acquired from the object's motion."
+        },
+        {
+          "id": 3,
+          "choice": "Energy acquired from heat."
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": "The law of energy conservation states that energy cannot be created or destroyed, only transformed from one form to another.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 5,
+      "question": "Heat energy is the energy associated with the flow of electric charge.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "6679c21a24650df2a16196fb"
+  },
+  "id": "14",
+  "title": "Momentum Concepts Quiz",
+  "description": "Test your understanding of momentum measurement, calculation, and related concepts.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the unit of momentum?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Joule."
+        },
+        {
+          "id": 2,
+          "choice": "Ampere."
+        },
+        {
+          "id": 3,
+          "choice": "Volt."
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "A heavy truck has more momentum than a passenger car moving at the same speed because the truck?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "has greater mass."
+        },
+        {
+          "id": 2,
+          "choice": "has greater acceleration."
+        },
+        {
+          "id": 3,
+          "choice": "has a large wheelbase."
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "Which of the following equations represents the calculation for momentum?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Mass × Velocity."
+        },
+        {
+          "id": 2,
+          "choice": "Mass × Acceleration."
+        },
+        {
+          "id": 3,
+          "choice": "Energy / Time."
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": "Collapsing is a phenomenon where an object's momentum increases rapidly.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": "The momentum of an object can be negative.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "6679c24324650df2a16196fc"
+  },
+  "id": "15",
+  "title": "Equilibrium and Center of Gravity Quiz",
+  "description": "Test your knowledge of equilibrium conditions, center of gravity, and moment calculation.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "The condition for an object to be in translational equilibrium is?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Zero velocity."
+        },
+        {
+          "id": 2,
+          "choice": "Zero net force."
+        },
+        {
+          "id": 3,
+          "choice": "Zero displacement."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": "The center of gravity of an object?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "It is always located at one of its ends."
+        },
+        {
+          "id": 2,
+          "choice": "It always coincides with its geometric center."
+        },
+        {
+          "id": 3,
+          "choice": "Depends on its shape and mass distribution."
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 3,
+      "question": "Which of the following equations represents the calculation for a moment?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Mass × Velocity."
+        },
+        {
+          "id": 2,
+          "choice": "Force × distance."
+        },
+        {
+          "id": 3,
+          "choice": "Energy / Time."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "The concept of center of gravity only applies to objects with regular shapes.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": "The resolution of forces involves breaking down a force into its horizontal and vertical components.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "6679c27524650df2a16196fd"
+  },
+  "id": "16",
+  "title": "Computer Science Basics Quiz",
+  "description": "Test your knowledge of computer science fundamentals.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Computer Science is the study of everything related to computers, from hardware to software.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "Which of the following is NOT an input device?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Keyboard"
+        },
+        {
+          "id": 2,
+          "choice": "Mouse"
+        },
+        {
+          "id": 3,
+          "choice": "Monitor"
+        },
+        {
+          "id": 4,
+          "choice": "None of the above"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 3,
+      "question": "Which of the following is NOT a function of the CPU?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Processing data"
+        },
+        {
+          "id": 2,
+          "choice": "Storing data"
+        },
+        {
+          "id": 3,
+          "choice": "Executing instructions"
+        },
+        {
+          "id": 4,
+          "choice": "None of the above"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "Which of the following is a function of the operating system?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Managing memory"
+        },
+        {
+          "id": 2,
+          "choice": "Managing files"
+        },
+        {
+          "id": 3,
+          "choice": "Managing devices"
+        },
+        {
+          "id": 4,
+          "choice": "All of the above"
+        }
+      ],
+      "correct_answer_id": 4
+    },
+    {
+      "id": 5,
+      "question": "Instructions are a set of binary numbers that the processor can understand and translate into actions.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 6,
+      "question": "Which of the following is NOT a binary number?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "0"
+        },
+        {
+          "id": 2,
+          "choice": "1"
+        },
+        {
+          "id": 3,
+          "choice": "2"
+        },
+        {
+          "id": 4,
+          "choice": "None of the above"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 7,
+      "question": "Which of the following is NOT a type of application software?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Web browser"
+        },
+        {
+          "id": 2,
+          "choice": "Word processor"
+        },
+        {
+          "id": 3,
+          "choice": "Video game"
+        },
+        {
+          "id": 4,
+          "choice": "None of the above"
+        }
+      ],
+      "correct_answer_id": 4
+    },
+    {
+      "id": 8,
+      "question": "The secondary memory is volatile, meaning that it loses data when the computer is turned off.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 8
+},
+{
+  "_id": {
+    "$oid": "6679c2a124650df2a16196fe"
+  },
+  "id": "17",
+  "title": "Programming Basics Quiz",
+  "description": "Test your knowledge of programming fundamentals.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is programming?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A set of instructions that a computer can understand and execute to perform a specific action or task."
+        },
+        {
+          "id": 2,
+          "choice": "A way to communicate with computers in a natural language."
+        },
+        {
+          "id": 3,
+          "choice": "A method for creating and modifying software programs."
+        },
+        {
+          "id": 4,
+          "choice": "All of the above."
+        }
+      ],
+      "correct_answer_id": 4
+    },
+    {
+      "id": 2,
+      "question": "What is machine language?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A language that is similar to natural language."
+        },
+        {
+          "id": 2,
+          "choice": "A language that is specifically designed for computers."
+        },
+        {
+          "id": 3,
+          "choice": "A language that is used to create software programs."
+        },
+        {
+          "id": 4,
+          "choice": "None of the above."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 3,
+      "question": "Instructions written in a programming language need to be translated into machine language for the computer to understand.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": "What is the main purpose of programming?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To create websites."
+        },
+        {
+          "id": 2,
+          "choice": "To write emails."
+        },
+        {
+          "id": 3,
+          "choice": "To give computers instructions to perform specific tasks."
+        },
+        {
+          "id": 4,
+          "choice": "To connect to the internet."
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 5,
+      "question": "What is machine language made up of?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "English words and phrases."
+        },
+        {
+          "id": 2,
+          "choice": "Sequences of 0s and 1s."
+        },
+        {
+          "id": 3,
+          "choice": "Mathematical equations."
+        },
+        {
+          "id": 4,
+          "choice": "Pictures and symbols."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 6,
+      "question": "Which of the following is an example of a visual programming language?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Python"
+        },
+        {
+          "id": 2,
+          "choice": "C++"
+        },
+        {
+          "id": 3,
+          "choice": "Pictoblox"
+        },
+        {
+          "id": 4,
+          "choice": "Java"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 7,
+      "question": "What are the two main types of programming paradigms?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Visual programming and text-based programming."
+        },
+        {
+          "id": 2,
+          "choice": "Compiled languages and interpreted languages."
+        },
+        {
+          "id": 3,
+          "choice": "Procedural languages and object-oriented languages."
+        },
+        {
+          "id": 4,
+          "choice": "Functional languages and logical languages."
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 8,
+      "question": "What are the characteristics of high-level languages?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "They are similar to natural language."
+        },
+        {
+          "id": 2,
+          "choice": "They are easier to learn and use."
+        },
+        {
+          "id": 3,
+          "choice": "They require a compiler to translate them into machine language."
+        },
+        {
+          "id": 4,
+          "choice": "All of the above."
+        }
+      ],
+      "correct_answer_id": 4
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 8
+},
+{
+  "_id": {
+    "$oid": "6679c2c124650df2a16196ff"
+  },
+  "id": "18",
+  "title": "Algorithms and Sequences Quiz",
+  "description": "Test your knowledge of algorithms and sequences.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Algorithms are a series of steps that are followed to solve a problem or complete a task.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "What is the difference between a sequence and an algorithm?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "They are the same thing."
+        },
+        {
+          "id": 2,
+          "choice": "A sequence is a specific type of algorithm."
+        },
+        {
+          "id": 3,
+          "choice": "An algorithm is a specific type of sequence."
+        },
+        {
+          "id": 4,
+          "choice": "They are completely different concepts."
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 3,
+      "question": "Algorithms can only be used in the digital world.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "What is the primary purpose of an algorithm?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To create visually appealing graphics."
+        },
+        {
+          "id": 2,
+          "choice": "To solve problems or complete tasks in a specific order."
+        },
+        {
+          "id": 3,
+          "choice": "To connect to the internet and download files."
+        },
+        {
+          "id": 4,
+          "choice": "To display text and images on a computer screen."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": "What is the relationship between algorithms and sequences?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "They are completely unrelated concepts in programming."
+        },
+        {
+          "id": 2,
+          "choice": "An algorithm defines the overall goal, while a sequence specifies the order of steps."
+        },
+        {
+          "id": 3,
+          "choice": "A sequence is a more complex version of an algorithm."
+        },
+        {
+          "id": 4,
+          "choice": "An algorithm is a type of sequence that can be endlessly repeated."
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "6679c2e424650df2a1619700"
+  },
+  "id": "19",
+  "title": "C Programming Basics Quiz",
+  "description": "Test your knowledge of basic C programming concepts.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the purpose of a variable in C?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To display text on the screen."
+        },
+        {
+          "id": 2,
+          "choice": "To store and manipulate data."
+        },
+        {
+          "id": 3,
+          "choice": "To define functions."
+        },
+        {
+          "id": 4,
+          "choice": "To connect to the internet."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": "What is the syntax for declaring a variable in C?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "name value;"
+        },
+        {
+          "id": 2,
+          "choice": "data_type name = value;"
+        },
+        {
+          "id": 3,
+          "choice": "create name data_type;"
+        },
+        {
+          "id": 4,
+          "choice": "int = name value;"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 3,
+      "question": "In the example int total; int points = 3; total = points + 5; what is the value stored in the variable total after the assignment?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "3"
+        },
+        {
+          "id": 2,
+          "choice": "5"
+        },
+        {
+          "id": 3,
+          "choice": "8"
+        },
+        {
+          "id": 4,
+          "choice": "The answer cannot be determined."
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 4,
+      "question": "Data types define the kind of information a variable can hold.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 5,
+      "question": "What is the difference between declaring and assigning a value to a variable?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Declaring creates the variable, and assigning gives it a value."
+        },
+        {
+          "id": 2,
+          "choice": "They are the same thing."
+        },
+        {
+          "id": 3,
+          "choice": "Assigning creates the variable, and declaring gives it a value."
+        },
+        {
+          "id": 4,
+          "choice": "Declaring is for integers only, and assigning is for all data types."
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "6679c30524650df2a1619701"
+  },
+  "id": "20",
+  "title": "C Programming Conditional Statements Quiz",
+  "description": "Test your knowledge of conditional statements in C programming.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Conditional statements allow programs to make decisions based on certain conditions.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "What is the syntax for a basic if statement in C?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "if (condition);"
+        },
+        {
+          "id": 2,
+          "choice": "if condition { code }"
+        },
+        {
+          "id": 3,
+          "choice": "condition if { code };"
+        },
+        {
+          "id": 4,
+          "choice": "if (condition) { code }"
+        }
+      ],
+      "correct_answer_id": 4
+    },
+    {
+      "id": 3,
+      "question": "What is the difference between an if statement and an if-else statement?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "An if statement can have multiple conditions, while an if-else can only have one."
+        },
+        {
+          "id": 2,
+          "choice": "An if statement executes code only if true, while an if-else executes code for both true and false conditions."
+        },
+        {
+          "id": 3,
+          "choice": "There is no difference; they are the same thing."
+        },
+        {
+          "id": 4,
+          "choice": "An if statement requires curly braces, while an if-else does not."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "What is the result of the following expression: (5 > 3 && 2 == 4)",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        },
+        {
+          "id": 3,
+          "choice": "The answer depends on the value of other variables."
+        },
+        {
+          "id": 4,
+          "choice": "The expression is invalid."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": "The NOT (!) operator reverses the truth value of a condition.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 6,
+      "question": "What is the output of this code?\nint num1 = 10, num2 = 5;\nif (num1 > num2 || num1 == num2 * 2) \n{\n printf(\"The first number is greater than or double the second number.\\n\");\n} \nElse\n {\nprintf(\"The first number is not greater than or double the second number.\\n\");\n}",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "The first number is greater than or double the second number."
+        },
+        {
+          "id": 2,
+          "choice": "The first number is not greater than or double the second number."
+        },
+        {
+          "id": 3,
+          "choice": "The code contains an error and won't compile."
+        },
+        {
+          "id": 4,
+          "choice": "The output depends on the values of num1 and num2 at runtime."
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 6
+},
+{
+  "_id": {
+    "$oid": "6679c38724650df2a1619702"
+  },
+  "id": "21",
+  "title": "C Programming Loops Quiz",
+  "description": "Test your knowledge of loops in C programming.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "The for loop is an example of:",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Entry-controlled loop"
+        },
+        {
+          "id": 2,
+          "choice": "Exit-controlled loop"
+        },
+        {
+          "id": 3,
+          "choice": "Conditional loop"
+        },
+        {
+          "id": 4,
+          "choice": "Iterative loop"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "The following code will print the numbers from 1 to 10:\n#include <stdio.h>\nint main() \n{\nfor (int i = 1; i <= 10; i++) \n{\nprintf(\"%d\\n\", i);\n}\nreturn 0;\n}\nTrue or False?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "Which type of loop is used to execute a set of instructions a definite number of times?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "while loop"
+        },
+        {
+          "id": 2,
+          "choice": "for loop"
+        },
+        {
+          "id": 3,
+          "choice": "do-while loop"
+        },
+        {
+          "id": 4,
+          "choice": "All of the above"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "Which type of loop is used to execute a set of instructions at least once, and then re-execute as long as a specific condition is true?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "while loop"
+        },
+        {
+          "id": 2,
+          "choice": "for loop"
+        },
+        {
+          "id": 3,
+          "choice": "do-while loop"
+        },
+        {
+          "id": 4,
+          "choice": "All of the above"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 5,
+      "question": "Which of the following code snippets will print the numbers from 1 to 5 (inclusive) in ascending order?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "int i = 1;\nwhile (i <= 5) \n{\nprintf(\"%d \", i);\ni++;\n}"
+        },
+        {
+          "id": 2,
+          "choice": "for (int j = 0; j < 5; j++) \n{\nprintf(\"%d \", j + 1);\n}"
+        },
+        {
+          "id": 3,
+          "choice": "int k = 5;\ndo \n{\nprintf(\"%d \", k);\nk--;\n} while (k > 0);"
+        },
+        {
+          "id": 4,
+          "choice": "a and b"
+        }
+      ],
+      "correct_answer_id": 4
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "6679c3c924650df2a1619703"
+  },
+  "id": "22",
+  "title": "C Programming Functions Quiz",
+  "description": "Test your knowledge of functions in C programming.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the difference between a function declaration and a function definition?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A declaration only specifies the return type and function name, while a definition includes the function's body."
+        },
+        {
+          "id": 2,
+          "choice": "They are the same thing."
+        },
+        {
+          "id": 3,
+          "choice": "A declaration specifies the function's parameters, while a definition specifies the function's body."
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "What is the purpose of the return statement in a function?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To return a value from the function to the caller."
+        },
+        {
+          "id": 2,
+          "choice": "To terminate the function."
+        },
+        {
+          "id": 3,
+          "choice": "To pass arguments to the function."
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "The “void” keyword can be used as the return type of a function that does not return any value.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": "It is possible to call a function before it is declared.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": "Which of the following functions correctly finds the maximum of two numbers entered by the user?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "int findMax(int num1, int num2) {\n  if (num1 > num2) \n  {\n    return num1;\n  } \n  else \n  {\n    return num2;\n  }\n}\nint main() {\n  int a, b;\n  printf(\"Enter two numbers: \");\n  scanf(\"%d %d\", &a, &b);\n  int max = findMax(a, b);\n  printf(\"Maximum: %d\\n\", max);\n  return 0;\n}"
+        },
+        {
+          "id": 2,
+          "choice": "int findMax(int num1, int num2) {\n  if (num1 = num2) \n  {\n    return num1;\n  } \n  else \n  {\n    return num2;\n  }\n}\nint main() {\n  int a, b;\n  printf(\"Enter two numbers: \");\n  scanf(\"%d %d\", &a, &b);\n  int max = findMax(a, b);\n  printf(\"Maximum: %d\\n\", max);\n  return 0;\n}"
+        },
+        {
+          "id": 3,
+          "choice": "int findMax(int num1, int num2) \n{  \n  if (num1 > num2) \n{\n    num1 = num2;\n  }\n}\nint main() {\n  int a, b;\n  printf(\"Enter two numbers: \");\n  scanf(\"%d %d\", &a, &b);\n  findMax(a, b);\n  printf(\"Maximum: %d\\n\", a); \n  return 0;\n}"
+        },
+        {
+          "id": 4,
+          "choice": "Only a"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "6679c74024650df2a1619704"
+  },
+  "id": "23",
+  "title": "File Handling in C Quiz",
+  "description": "Test your knowledge of file handling concepts in C programming.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the purpose of file handling in C programming?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To store and retrieve data from external sources."
+        },
+        {
+          "id": 2,
+          "choice": "To manage memory allocation."
+        },
+        {
+          "id": 3,
+          "choice": "To execute code in a specific order."
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "Which function is used to open a file in C?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "fopen()"
+        },
+        {
+          "id": 2,
+          "choice": "open()"
+        },
+        {
+          "id": 3,
+          "choice": "readFile()"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "Which function is used to write a string to a file?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "fprintf()"
+        },
+        {
+          "id": 2,
+          "choice": "fputs()"
+        },
+        {
+          "id": 3,
+          "choice": "fopen()"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": "The fseek() function is used to move to a specific position within a file.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 5,
+      "question": "Which of the following code snippets will write the data to the file correctly?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "#include <stdio.h>\nint main() {\n  FILE *fptr;\n  char name[50];\n  int score;\n  fptr = fopen(\"highscores.txt\", \"w\");  \n  fprintf(fptr, \"Name: %s Score: %d\\n\", name, score); \n  fclose(fptr);\n  return 0;\n}"
+        },
+        {
+          "id": 2,
+          "choice": "#include <stdio.h>\nint main() {\n  FILE *fptr;\n  char name[50];\n  int score;\n  fptr = fopen(\"highscores.txt\", \"r\");  \n  fprintf(fptr, \"Name: %s Score: %d\\n\", name, score); \n  fclose(fptr);\n  return 0;\n}"
+        },
+        {
+          "id": 3,
+          "choice": "#include <stdio.h>\nint main() {\n  FILE *fptr;\n  char name[50];\n  int score;\n  fptr = fopen(\"highscores.txt\", \"r\");  \n  fgets(fptr, \"Name: %s Score: %d\\n\", name, score); \n  fclose(fptr);\n  return 0;\n}"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "6679c77324650df2a1619705"
+  },
+  "id": "24",
+  "title": "Pictoblox Quiz",
+  "description": "Test your knowledge of Pictoblox, a visual programming language for creating interactive experiences.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is Pictoblox?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A text-based programming language for creating games and animations."
+        },
+        {
+          "id": 2,
+          "choice": "A visual programming language that uses blocks to create interactive experiences."
+        },
+        {
+          "id": 3,
+          "choice": "A type of 3D modeling software for building virtual environments."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": "What is the block palette in Pictoblox?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A list of all available blocks categorized by function."
+        },
+        {
+          "id": 2,
+          "choice": "A tool for drawing and editing sprites."
+        },
+        {
+          "id": 3,
+          "choice": "A window for displaying the current stage background."
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "Pictoblox can be used to create interactive simulations and educational applications.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": "What does the 'control' block palette in Pictoblox allow you to do?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Control the movement and appearance of sprites."
+        },
+        {
+          "id": 2,
+          "choice": "Create loops, conditional statements, and branching logic."
+        },
+        {
+          "id": 3,
+          "choice": "Play sounds and add sound effects."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": "What does the 'when flag clicked' block in Pictoblox signify?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "The program starts when the mouse is clicked anywhere on the stage."
+        },
+        {
+          "id": 2,
+          "choice": "The program starts when a specific flag icon is clicked."
+        },
+        {
+          "id": 3,
+          "choice": "The program continuously repeats the following code."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 6,
+      "question": "The 'sensing' block palette allows you to detect events like pressing keys or the mouse touching a sprite.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 6
+},
+{
+  "_id": {
+    "$oid": "6679c7c024650df2a1619706"
+  },
+  "id": "25",
+  "title": "Pictoblox Quiz",
+  "description": "Test your knowledge of Pictoblox, a visual programming language for creating interactive experiences.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What are the variables in Pictoblox?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Text labels used to identify different parts of a program."
+        },
+        {
+          "id": 2,
+          "choice": "Containers for storing and managing data values."
+        },
+        {
+          "id": 3,
+          "choice": "Predefined commands used to build scripts."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": "What is the purpose of the 'set variable' block?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To change the movement of Tobi."
+        },
+        {
+          "id": 2,
+          "choice": "To assign an initial value to a newly created variable."
+        },
+        {
+          "id": 3,
+          "choice": "To compare the values of two variables."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 3,
+      "question": "What is the difference between the 'set variable' and 'change variable' blocks?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "The 'set variable' block is used for initialization, while the 'change variable' block is used for modifying existing values."
+        },
+        {
+          "id": 2,
+          "choice": "The 'set variable' block can only store text values, while the 'change variable' block can store numbers."
+        },
+        {
+          "id": 3,
+          "choice": "The 'set variable' block is used for variables declared at the global level, while the 'change variable' block is used for local variables."
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": "Variables can be used to store different types of data, such as numbers and text.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 5,
+      "question": "Which block palette would you use to create a loop that continuously checks the value of a variable?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Motion Palette"
+        },
+        {
+          "id": 2,
+          "choice": "Control Palette"
+        },
+        {
+          "id": 3,
+          "choice": "Sensing Palette"
+        },
+        {
+          "id": 4,
+          "choice": "Looks Palette"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 6,
+      "question": "Pictoblox offers special built-in variables like 'x' and 'y' that track the position of a sprite on the stage.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 6
+},
+{
+  "_id": {
+    "$oid": "6679c7e424650df2a1619707"
+  },
+  "id": "26",
+  "title": "Pictoblox Quiz",
+  "description": "Test your knowledge of Pictoblox, a visual programming language for creating interactive experiences.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the purpose of the 'if' statement in Pictoblox?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To repeat a block of code a specific number of times."
+        },
+        {
+          "id": 2,
+          "choice": "To execute a block of code only if a certain condition is true."
+        },
+        {
+          "id": 3,
+          "choice": "To compare the values of two expressions."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": "How do you negate a condition using the NOT operator in Pictoblox?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Change the comparison operator (e.g., < to >)."
+        },
+        {
+          "id": 2,
+          "choice": "Place the NOT block before the condition block."
+        },
+        {
+          "id": 3,
+          "choice": "Add an exclamation mark (!) before the condition expression."
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 3,
+      "question": "What logical operators can you use in Pictoblox to combine multiple conditions?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "motion, control, sensing"
+        },
+        {
+          "id": 2,
+          "choice": "AND, OR, NOT"
+        },
+        {
+          "id": 3,
+          "choice": "<, >, ="
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "What happens when a condition in an 'if' statement evaluates to false in Pictoblox?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "The program stops execution entirely."
+        },
+        {
+          "id": 2,
+          "choice": "The code block associated with the 'if' statement is skipped."
+        },
+        {
+          "id": 3,
+          "choice": "The code block associated with the 'if' statement is executed regardless."
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of the 'else' statement in an 'if-else' construct?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To repeat a block of code a specific number of times."
+        },
+        {
+          "id": 2,
+          "choice": "To provide an alternative action if the condition in the 'if' statement is false."
+        },
+        {
+          "id": 3,
+          "choice": "To compare the values of two expressions."
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "6679c95924650df2a1619708"
+  },
+  "id": "26",
+  "title": "True or False Quiz",
+  "description": "Test your knowledge with true or false questions.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Embedded system is a combination of software and hardware and you can’t add any additional parts.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": "Any information or data sent to the computer for processing is considered input.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "When 2 inputs 0,0 are passed through NAND gate, the output is zero.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "When 2 inputs 1,0 are passed through XOR gate, the output is zero.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": "When 2 inputs 1,0 are passed through OR gate, the output is 1.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 6,
+      "question": "When 2 inputs 1,0 are passed through AND gate, the output is 1.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 7,
+      "question": "Arduino is a closed-source electronics platform based on easy-to-use hardware and software.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 7
+},
+{
+  "_id": {
+    "$oid": "6679c99724650df2a1619709"
+  },
+  "id": "27",
+  "title": "Arduino Quiz",
+  "description": "Test your knowledge of Arduino and its components.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which of the following is one of the types of Arduino?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "UNO"
+        },
+        {
+          "id": 2,
+          "choice": "Mega"
+        },
+        {
+          "id": 3,
+          "choice": "lilypad"
+        },
+        {
+          "id": 4,
+          "choice": "All of the above"
+        }
+      ],
+      "correct_answer_id": 4
+    },
+    {
+      "id": 2,
+      "question": "..... Is used to upload the code from the Laptop to the Arduino kit.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Reset"
+        },
+        {
+          "id": 2,
+          "choice": "Ground"
+        },
+        {
+          "id": 3,
+          "choice": "USB"
+        },
+        {
+          "id": 4,
+          "choice": "External Power"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 3,
+      "question": "These values (0, 1, 0.2, 0.5, 0, 0.3) are ........",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Analog"
+        },
+        {
+          "id": 2,
+          "choice": "Digital"
+        },
+        {
+          "id": 3,
+          "choice": "Both of them"
+        },
+        {
+          "id": 4,
+          "choice": "None of them"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "A signal is an .... that carries data from one system or network to another.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Mechanical motion"
+        },
+        {
+          "id": 2,
+          "choice": "Electrical current"
+        },
+        {
+          "id": 3,
+          "choice": "Magnetic motion"
+        },
+        {
+          "id": 4,
+          "choice": "Digital motion"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": "All of the above are one of the analog components except......",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "LED"
+        },
+        {
+          "id": 2,
+          "choice": "Motors"
+        },
+        {
+          "id": 3,
+          "choice": "Sensor"
+        },
+        {
+          "id": 4,
+          "choice": "Relay Module"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "6679c9d824650df2a161970a"
+  },
+  "id": "28",
+  "title": "Arduino True/False Quiz",
+  "description": "Test your knowledge of Arduino concepts with true/false questions.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "LED is a nonpolarized component that allows the current to pass from and into any direction to another.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": "pinMode function is used to determine whether a specific pin is input or output.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "digitalWrite can be used correctly for both analog and digital signals.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "The code inside the void setup function is initialized one time at the beginning.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 5,
+      "question": "Float, long, and int are conversion methods.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "667c3a7b98157d488d318542"
+  },
+  "id": "1",
+  "title": "Quiz - From Fireworks to Rockets",
+  "description": "Test your knowledge on the history and development of rockets.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Who made the spinning ball that used steam?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Archytas"
+        },
+        {
+          "id": 2,
+          "choice": "Hero of Alexandria"
+        },
+        {
+          "id": 3,
+          "choice": "Wernher von Braun"
+        },
+        {
+          "id": 4,
+          "choice": "Konstantin Tsiolkovsky"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": "Which group used fire arrows in 975 AD?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Greeks"
+        },
+        {
+          "id": 2,
+          "choice": "Egyptians"
+        },
+        {
+          "id": 3,
+          "choice": "Chinese"
+        },
+        {
+          "id": 4,
+          "choice": "Romans"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 3,
+      "question": "Which Arab engineer wrote about different rockets?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Archytas"
+        },
+        {
+          "id": 2,
+          "choice": "Hero of Alexandria"
+        },
+        {
+          "id": 3,
+          "choice": "Najm al-Din Hassan al-Rammah"
+        },
+        {
+          "id": 4,
+          "choice": "Wernher von Braun"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 4,
+      "question": "Who made the rocket math equation in 1897?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Robert Goddard"
+        },
+        {
+          "id": 2,
+          "choice": "Wernher von Braun"
+        },
+        {
+          "id": 3,
+          "choice": "Konstantin Tsiolkovsky"
+        },
+        {
+          "id": 4,
+          "choice": "Yuri Gagarin"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 5,
+      "question": "What was the name of the first rocket to reach space?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Sputnik"
+        },
+        {
+          "id": 2,
+          "choice": "Vostok 1"
+        },
+        {
+          "id": 3,
+          "choice": "Saturn V"
+        },
+        {
+          "id": 4,
+          "choice": "V2 Ballistic Missile"
+        }
+      ],
+      "correct_answer_id": 4
+    },
+    {
+      "id": 6,
+      "question": "The Saturn V rocket was used to land people on Mars.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "667c3bb798157d488d318543"
+  },
+  "id": "2",
+  "title": "Quiz - Rockets? What’s that?",
+  "description": "Test your knowledge about rockets.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "A rocket is used to launch things into space.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "The nose of the rocket helps reduce air resistance.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "What part of the rocket holds the payload?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Tail"
+        },
+        {
+          "id": 2,
+          "choice": "Nose"
+        },
+        {
+          "id": 3,
+          "choice": "Wings"
+        },
+        {
+          "id": 4,
+          "choice": "Combustion chamber"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "What is needed along with fuel for a rocket to burn and produce energy?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Water"
+        },
+        {
+          "id": 2,
+          "choice": "Sunlight"
+        },
+        {
+          "id": 3,
+          "choice": "Oxygen"
+        },
+        {
+          "id": 4,
+          "choice": "Wind"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 5,
+      "question": "What law explains how rockets fly by pushing out hot gases?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Newton's First Law"
+        },
+        {
+          "id": 2,
+          "choice": "Newton's Second Law"
+        },
+        {
+          "id": 3,
+          "choice": "Newton's Third Law"
+        },
+        {
+          "id": 4,
+          "choice": "Law of Conservation of Energy"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 6,
+      "question": "What is the purpose of multistage rockets?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To carry more passengers"
+        },
+        {
+          "id": 2,
+          "choice": "To reach deeper into space"
+        },
+        {
+          "id": 3,
+          "choice": "To save fuel"
+        },
+        {
+          "id": 4,
+          "choice": "To reduce air resistance"
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 5
+},
+{
+  "_id": {
+    "$oid": "667c3bf898157d488d318544"
+  },
+  "id": "3",
+  "title": "Quiz - Satellites? What’s that?",
+  "description": "Test your knowledge about satellites.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is a satellite?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "A star"
+        },
+        {
+          "id": 2,
+          "choice": "A spaceship"
+        },
+        {
+          "id": 3,
+          "choice": "Any object that orbits another object"
+        },
+        {
+          "id": 4,
+          "choice": "A planet"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 2,
+      "question": "What part of the satellite is used for communication with Earth?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Solar panels"
+        },
+        {
+          "id": 2,
+          "choice": "Antenna"
+        },
+        {
+          "id": 3,
+          "choice": "Thrusters"
+        },
+        {
+          "id": 4,
+          "choice": "Sensors"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 3,
+      "question": "Low Earth Orbit (LEO) satellites can provide high-resolution images but cover smaller areas.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": "Medium Earth Orbit (MEO) satellites have a longer signal delay compared to Low Earth Orbit (LEO) satellites.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 5,
+      "question": "What type of orbit allows a satellite to stay over the same spot on Earth?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Low Earth Orbit (LEO)"
+        },
+        {
+          "id": 2,
+          "choice": "Medium Earth Orbit (MEO)"
+        },
+        {
+          "id": 3,
+          "choice": "Geostationary Orbit (GEO)"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 6,
+      "question": "What are thrusters used for on a satellite?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To generate power"
+        },
+        {
+          "id": 2,
+          "choice": "To send signals to Earth"
+        },
+        {
+          "id": 3,
+          "choice": "To adjust the satellite's position and avoid collisions"
+        },
+        {
+          "id": 4,
+          "choice": "To capture images of space"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 7,
+      "question": "Solar panels on a satellite provide energy during the night.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 7
+},
+{
+  "_id": {
+    "$oid": "667c3c1e98157d488d318545"
+  },
+  "id": "4",
+  "title": "Quiz - Let’s Launch Satellites!",
+  "description": "Test your knowledge about launching satellites.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What force keeps a satellite in its orbit without falling to Earth?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Gravitational force"
+        },
+        {
+          "id": 2,
+          "choice": "Centripetal force"
+        },
+        {
+          "id": 3,
+          "choice": "Centrifugal force"
+        },
+        {
+          "id": 4,
+          "choice": "Magnetic force"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "What is the first stage of a rocket launch?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Orbit insertion"
+        },
+        {
+          "id": 2,
+          "choice": "Liftoff"
+        },
+        {
+          "id": 3,
+          "choice": "Ascent"
+        },
+        {
+          "id": 4,
+          "choice": "Descent"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 3,
+      "question": "During orbit insertion, the rocket deploys the satellite into its specific orbit.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": "What is the term for the speed a rocket needs to escape Earth's gravitational pull?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Terminal velocity"
+        },
+        {
+          "id": 2,
+          "choice": "Escape velocity"
+        },
+        {
+          "id": 3,
+          "choice": "Orbital speed"
+        },
+        {
+          "id": 4,
+          "choice": "Launch speed"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": "What happens to a satellite if its speed decreases significantly in orbit?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "It moves to a higher orbit"
+        },
+        {
+          "id": 2,
+          "choice": "It maintains its current orbit"
+        },
+        {
+          "id": 3,
+          "choice": "It falls back to Earth"
+        },
+        {
+          "id": 4,
+          "choice": "It escapes Earth's gravity"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 6,
+      "question": "A satellite in a higher orbit moves slower than one in a lower orbit.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 6
+},
+{
+  "_id": {
+    "$oid": "667c3c3f98157d488d318546"
+  },
+  "id": "5",
+  "title": "Quiz - Why Satellites?",
+  "description": "Test your knowledge about satellites and their applications.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Where are navigation satellites typically located?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "LEO"
+        },
+        {
+          "id": 2,
+          "choice": "MEO"
+        },
+        {
+          "id": 3,
+          "choice": "GEO"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": "The Global Positioning System (GPS) is managed by the U.S. Space Force.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "What is one of the main uses of communication satellites?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Studying global warming"
+        },
+        {
+          "id": 2,
+          "choice": "Providing weather forecasts"
+        },
+        {
+          "id": 3,
+          "choice": "Facilitating international phone calls"
+        },
+        {
+          "id": 4,
+          "choice": "Monitoring space debris"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 4,
+      "question": "Which orbit is typically used for television broadcasting satellites?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "LEO"
+        },
+        {
+          "id": 2,
+          "choice": "MEO"
+        },
+        {
+          "id": 3,
+          "choice": "GEO"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 5,
+      "question": "What is space debris?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Active satellites in orbit"
+        },
+        {
+          "id": 2,
+          "choice": "Defunct satellites and fragments in space"
+        },
+        {
+          "id": 3,
+          "choice": "Satellites used for communication"
+        },
+        {
+          "id": 4,
+          "choice": "Satellites used for navigation"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 6,
+      "question": "What is a potential solution for dealing with space debris?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Ignoring the debris"
+        },
+        {
+          "id": 2,
+          "choice": "Using rockets to destroy debris"
+        },
+        {
+          "id": 3,
+          "choice": "Tracking and avoiding debris with satellites"
+        },
+        {
+          "id": 4,
+          "choice": "Launching more satellites to push debris away"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 7,
+      "question": "All satellites are designed to avoid space debris automatically.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 7
+},
+{
+  "_id": {
+    "$oid": "667c3c6698157d488d318547"
+  },
+  "id": "6",
+  "title": "Quiz - The Way to Mars",
+  "description": "Test your knowledge about missions to Mars.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is a crucial factor to consider when planning a mission to Mars?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "The color of the spacecraft"
+        },
+        {
+          "id": 2,
+          "choice": "The position of Mars relative to Earth"
+        },
+        {
+          "id": 3,
+          "choice": "The time of day on Earth"
+        },
+        {
+          "id": 4,
+          "choice": "The number of astronauts on board"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": "How long does a typical journey to Mars take?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "1-2 months"
+        },
+        {
+          "id": 2,
+          "choice": "3-4 months"
+        },
+        {
+          "id": 3,
+          "choice": "6-9 months"
+        },
+        {
+          "id": 4,
+          "choice": "12-15 months"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 3,
+      "question": "What are the 'seven minutes of terror'?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "The time taken to launch the spacecraft"
+        },
+        {
+          "id": 2,
+          "choice": "The period during which the spacecraft lands on Mars"
+        },
+        {
+          "id": 3,
+          "choice": "The time taken to establish communication with the spacecraft"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "How do scientists calculate the distance between Earth and the spacecraft?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "By measuring the time taken for a signal to travel to the spacecraft and back"
+        },
+        {
+          "id": 2,
+          "choice": "By using a telescope to visually locate the spacecraft"
+        },
+        {
+          "id": 3,
+          "choice": "By asking astronauts on the spacecraft to report their position"
+        },
+        {
+          "id": 4,
+          "choice": "By sending a rover to measure the distance"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 5,
+      "question": "What is one method used to communicate with spacecraft?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Using postal mail"
+        },
+        {
+          "id": 2,
+          "choice": "Sending signals via the spacecraft's antenna and receiving them with the DSN on Earth"
+        },
+        {
+          "id": 3,
+          "choice": "Using mobile phones"
+        },
+        {
+          "id": 4,
+          "choice": "Using walkie-talkies"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 6,
+      "question": "The Deep Space Network (DSN) consists of three large antennas located in Australia, the United States, and Spain.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 7,
+      "question": "It is common for missions to Mars to include astronauts on board.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 7
+},
+{
+  "_id": {
+    "$oid": "667c3c9c98157d488d318548"
+  },
+  "id": "7",
+  "title": "Quiz - Use Of Telescopes In Space Study",
+  "description": "Test your knowledge about telescopes used in space study.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the primary difference between a ground telescope and a space telescope?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "The size of the telescope"
+        },
+        {
+          "id": 2,
+          "choice": "The location where they are used"
+        },
+        {
+          "id": 3,
+          "choice": "The type of objects they can observe"
+        },
+        {
+          "id": 4,
+          "choice": "The cost of maintenance"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": "Why are space telescopes necessary?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To observe objects blocked by Earth's atmosphere"
+        },
+        {
+          "id": 2,
+          "choice": "To provide a clearer view of distant objects"
+        },
+        {
+          "id": 3,
+          "choice": "To avoid light pollution from cities"
+        },
+        {
+          "id": 4,
+          "choice": "All of the above"
+        }
+      ],
+      "correct_answer_id": 4
+    },
+    {
+      "id": 3,
+      "question": "The Hubble Space Telescope has contributed to the understanding of the formation of galaxies.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": "How do space telescopes contribute to scientific theories?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "By confirming existing theories"
+        },
+        {
+          "id": 2,
+          "choice": "By providing evidence to support new theories"
+        },
+        {
+          "id": 3,
+          "choice": "By disproving existing theories"
+        },
+        {
+          "id": 4,
+          "choice": "All of the above"
+        }
+      ],
+      "correct_answer_id": 4
+    },
+    {
+      "id": 5,
+      "question": "The Very Large Telescope (VLT) is located in North America.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 6,
+      "question": "What is the main purpose of the James Webb Space Telescope?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "To search for extraterrestrial life"
+        },
+        {
+          "id": 2,
+          "choice": "To study the behavior of asteroids"
+        },
+        {
+          "id": 3,
+          "choice": "To observe the early universe"
+        },
+        {
+          "id": 4,
+          "choice": "To monitor Earth's climate"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 7,
+      "question": "Space telescopes are necessary because Earth's atmosphere blocks some of the light waves.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 7
+},
+{
+  "_id": {
+    "$oid": "667c3d2d98157d488d318549"
+  },
+  "id": "8",
+  "title": "Quiz - Future of Robotic Exploration",
+  "description": "Test your knowledge about the future of robotic exploration in space.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Why are space rovers preferred over sending astronauts to Mars?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Rovers can bring back souvenirs"
+        },
+        {
+          "id": 2,
+          "choice": "Rovers are easier to repair"
+        },
+        {
+          "id": 3,
+          "choice": "Rovers are safer, more cost-effective, and can be sent more frequently than astronauts"
+        },
+        {
+          "id": 4,
+          "choice": "Rovers can communicate faster"
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 2,
+      "question": "Space rovers explore Mars by taking images and sending them back to Earth for analysis.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": "What is one of the primary tasks of a space rover on Mars?",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "Building habitats for future astronauts"
+        },
+        {
+          "id": 2,
+          "choice": "Exploring the planet’s geology"
+        },
+        {
+          "id": 3,
+          "choice": "Establishing a communication network"
+        },
+        {
+          "id": 4,
+          "choice": "Harvesting crops"
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": "Space rovers are equipped with robotic arms to collect samples from the Martian surface.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 5,
+      "question": "The presence of carbon, hydrogen, oxygen, nitrogen, phosphorus, and sulfur is essential for the existence of life.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 6,
+      "question": "Space rovers use a combination of cameras and sensors to measure various environmental factors on Mars.",
+      "choices": [
+        {
+          "id": 1,
+          "choice": "True"
+        },
+        {
+          "id": 2,
+          "choice": "False"
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duaration": 0,
+  "last_question_number": 6
+}]

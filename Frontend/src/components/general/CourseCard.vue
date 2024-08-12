@@ -1,35 +1,20 @@
 <script lang="ts" setup>
 import Button from "primevue/button";
-import { HttpRequester } from "@/lib/APICaller";
-import { ref,computed,watch } from "vue";
-import { useRouter,useRoute } from "vue-router";
-const prop = defineProps(["programId",'search']);
-const router = useRouter()
-const route = useRoute()
-const course = ref();
-const path = computed(() => {
-  const courseRequester = new HttpRequester("get_course");
-  courseRequester.callApi({ course_id: prop.programId })
-  .then((res) => {course.value = res.data.course;console.log(course.value,res.data.course,prop.programId)});
-  return route.params.programId;
-});
-watch(path, () => {
-  console.log(prop.programId)
+import { useRouter, } from "vue-router";
+import { selectLang,translationModule } from "@/lib/Translate";
 
-});
-const courseRequester = new HttpRequester("get_course");
-courseRequester
-  .callApi({ course_id: prop.programId })
-  .then((res) => {course.value = res.data.course});
+
+const prop = defineProps(["course",'search']);
+const router = useRouter()
   
 </script>
 
 <template>
-  <main v-if="course?.title.toLowerCase().includes(search.toLowerCase())">
+  <main v-if="selectLang(course?.title).toLowerCase().includes(search.toLowerCase())">
     <div class="container">
       <img :src="course?.image" alt="" />
-      <h2>{{ course?.title }}</h2>
-      <Button @click="()=>{router.push(`/viewCourseDetails/${prop.programId}`)}" label="Learn More" />
+      <h2>{{ selectLang(course?.title) }}</h2>
+      <Button @click="router.push(`/viewCourseDetails/${prop.course?.id}`)" :label=selectLang(translationModule.learnMore) />
     </div>
   </main>
 </template>

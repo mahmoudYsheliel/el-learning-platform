@@ -2,7 +2,6 @@
 import ParentSidebar from "../../components/parent/general/ParentSidebar.vue";
 import Navbar from "../../components/general/Navbar.vue";
 import Footer from "@/components/general/Footer.vue";
-import { HttpRequester } from "@/lib/APICaller";
 import SelectChild from '@/components/parent/parentProfile/SelectChild.vue'
 import ChildProgress from '@/components/parent/parentProfile/ChildProgress.vue'
 import CoursesProgress from '@/components/parent/parentProfile/CoursesProgress.vue'
@@ -14,7 +13,7 @@ const selectedChild = ref(null)
 <template>
   <Navbar />
   <div class="container">
-    <ParentSidebar class="sidebar" selected="Children Progress" />
+    <ParentSidebar class="sidebar" selected="childProgress" />
     <div class="wrapper">
       <SelectChild @selected-child="id=>selectedChild=id"/>
         <CoursesProgress :selectedChildId="selectedChild"/>
@@ -78,7 +77,7 @@ color: white;
 }
 @media screen and (max-width: 1000px) {
   .container {
-  grid-template-columns:  90vw;
+  grid-template-columns:  100vw;
   min-height: 100vh;
 }
 .sidebar{

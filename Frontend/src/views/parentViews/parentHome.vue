@@ -7,16 +7,15 @@ import Button from "primevue/button";
 import InputText from "primevue/inputtext";
 import Dialog from "primevue/dialog";
 import { ref } from "vue";
-import { useRouter } from "vue-router";
+import { selectLang,translationModule } from "@/lib/Translate";
 
-const router = useRouter();
 interface RnrollmentRequest {
   id: string;
-  childName: string;
+//  childName: string;
   childEmail: string;
-  courseTitle: string;
+  courseTitle: string|undefined;
   date: string;
-  time: string;
+ // time: string;
   status: string;
   price: number;
   comments: any[];
@@ -42,11 +41,11 @@ async function getEnrollmentRequests() {
                   if (courseRes.success == true) {
                     enrollmentRequests.value?.push({
                       id: req?.id,
-                      childName: studentRes?.data?.info?.first_name,
+                    //  childName: studentRes?.data?.info?.first_name,
                       childEmail: studentRes?.data?.info?.email,
-                      courseTitle: courseRes?.data?.course?.title,
+                      courseTitle:selectLang(courseRes?.data?.course?.title),
                       date: extractDate(req?.created_at),
-                      time: extractTime(req?.created_at),
+                     // time: extractTime(req?.created_at),
                       status: req?.status,
                       price: courseRes?.data?.course?.price,
                       comments: req?.comments,
@@ -99,6 +98,18 @@ function addComment() {
     }
   });
 }
+
+function statusName(status:string){
+  if (status=='Pending'){
+    return selectLang(translationModule.pendding)
+  }
+  if (status=='Rejected'){
+    return selectLang(translationModule.rejected)
+  }
+  if (status=='Success'){
+    return selectLang(translationModule.succeess)
+  }
+}
 </script>
 
 <template>
@@ -107,7 +118,7 @@ function addComment() {
     <Dialog
       v-model:visible="showComments"
       modal
-      header="Request Comments"
+      :header=selectLang(translationModule.showComments)
       :style="{ width: '50vw' }"
     >
       <div class="msg-wrapper">
@@ -125,38 +136,38 @@ function addComment() {
 
       <div class="add-comment">
         <InputText v-model="addedComment" />
-        <Button label="Add Comment" @click="addComment" />
+        <Button :label=selectLang(translationModule.addComment) @click="addComment" />
       </div>
     </Dialog>
-    <ParentSidebar class="sidebar" selected="Home" />
+    <ParentSidebar class="sidebar" selected="enrollmentsRequests" />
     <div class="wrapper">
       <div class="requests">
-        <h2>Enrollment Requests</h2>
+        <h2>{{ selectLang(translationModule.enrollmentRequests) }}</h2>
         <div class="table-container">
           <div class="row head">
-            <h3>Child Name</h3>
-            <h3>Child Email</h3>
-            <h3>Course Title</h3>
-            <h3>Course Price</h3>
-            <h3>Date</h3>
-            <h3>Time</h3>
-            <h3>Status</h3>
-            <h3>Show Comments</h3>
+            <!-- <h3>Child Name</h3> -->
+            <h3>{{ selectLang(translationModule.childEmail) }}</h3>
+            <h3>{{ selectLang(translationModule.courseTitle) }}</h3>
+            <h3>{{ selectLang(translationModule.price) }}</h3>
+            <h3>{{ selectLang(translationModule.date) }}</h3>
+            <!-- <h3>Time</h3> -->
+            <h3>{{ selectLang(translationModule.status) }}</h3>
+            <h3>{{ selectLang(translationModule.actions) }}</h3>
           </div>
           <div class="row" v-for="(req, i) in enrollmentRequests">
-            <span>{{ req.childName }}</span>
+            <!-- <span>{{ req.childName }}</span> -->
             <span>{{ req.childEmail }}</span>
             <span>{{ req.courseTitle }}</span>
             <span>{{ req.price }} L.E.</span>
             <span>{{ req.date }}</span>
-            <span>{{ req.time }}</span>
+            <!-- <span>{{ req.time }}</span> -->
             <span
               :class="{
                 pending: req.status == 'Pending',
                 rejected: req.status == 'Rejected',
                 accepted: req.status == 'Success',
               }"
-              >{{ req.status }}</span
+              >{{ statusName(req.status) }}</span
             >
             <span>
               <Button
@@ -165,7 +176,7 @@ function addComment() {
                   showComments = true;
                 "
                 style="font-size: 0.75rem"
-                label="Show Comments"
+                :label=selectLang(translationModule.showComments)
             /></span>
           </div>
         </div>
@@ -184,7 +195,8 @@ function addComment() {
 }
 .row {
   display: grid;
-  grid-template-columns: repeat(8, 10rem);
+  /* grid-template-columns: repeat(8, 10rem); */
+  grid-template-columns: 20rem 15rem 8rem 8rem 8rem 12rem;
 }
 h3 {
   margin: 0;
@@ -197,8 +209,8 @@ h3 {
 }
 .wrapper {
   margin-top: 2rem;
-  margin-left: 2rem;
-  width: 100%;
+  margin-inline: 2rem;
+  width: 95%;
   
 }
 h2 {
@@ -208,10 +220,10 @@ h2 {
   border-bottom: 0.25rem solid var(--accent3);
 }
 .requests {
-  width: 90%;
+  width: 100%;
 }
 .table-container {
-  padding-left: 1rem;
+  padding-inline: 1rem;
   overflow-x: scroll;
   max-width: 100%;
   -ms-overflow-style: none;  /* IE and Edge */

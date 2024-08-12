@@ -3,6 +3,8 @@ import "primeicons/primeicons.css";
 import { ref, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import Tree from "primevue/tree";
+import { selectLang } from "@/lib/Translate";
+
 
 const prop = defineProps(["chapters", "courseTitle"]);
 
@@ -14,12 +16,12 @@ const selectedKey = ref();
 const chaptersObj = computed(() => {
   let chaptersObj = prop.chapters;
   for (let index = 0; index < chaptersObj?.length; index++) {
-    chaptersObj[index].label = chaptersObj[index].title;
+    chaptersObj[index].label = selectLang(chaptersObj[index].title);
     chaptersObj[index].children = chaptersObj[index].materials;
     chaptersObj[index].key = "k" + index.toString();
     for (let j = 0; j < chaptersObj[index].children?.length; j++) {
       chaptersObj[index].children[j].label =
-        chaptersObj[index].children[j].title;
+        selectLang(chaptersObj[index].children[j].title);
       chaptersObj[index].children[j].key =
         "k" + index.toString() + "_" + j.toString();
       if (chaptersObj[index].children[j].Id == route.params.materialId) {
@@ -42,7 +44,7 @@ const chaptersObj = computed(() => {
     </span>
     <div class="container" :class="{ shrink: shrink }">
       <h3>
-        {{ courseTitle }}
+        {{selectLang(courseTitle) }}
       </h3>
 
       <Tree :value="chaptersObj" class="tree">

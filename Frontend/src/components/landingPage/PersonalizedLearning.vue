@@ -1,40 +1,28 @@
 <script lang="ts" setup>
 import Button from "primevue/button";
+import { selectLang,translationModule } from "@/lib/Translate";
 </script>
 
 <template>
   <main>
     <div class="container">
-      <img
-        style="
-          position: absolute;
-          right: 0;
-          bottom: 50%;
-          transform: translate(120%, 0);
-          scale: 1.2;
-        "
-        src="/images/Arrow 07.svg"
-        alt=""
-        class="arrow"
-      />
-      <h1>Personalized Learning</h1>
+     
+      <h1>{{ selectLang(translationModule.personalized) }}</h1>
       <h1>
-        Journey!
+        {{ selectLang(translationModule.journey) }}
         <img
-          style="position: absolute; right: -100%"
+          style="position: absolute; "
           src="/images/StarFour.svg"
           alt=""
         />
       </h1>
       <p>
-        One Year Road Map
+        {{ selectLang(translationModule.oneYear) }}
+        
         <br />
-        As we believe in the importance of providing adequate knowledge for each
-        learner, we have created a dedicated program roadmap for each learner
-        that is based on the learners’ answers to their online questionnaire
-        designed by our experienced psychologists.
+       {{ selectLang(translationModule.roadMapDescription) }}
       </p>
-      <Button label="See Roadmap" />
+      <Button :label=selectLang(translationModule.roadmap) />
     </div>
     <img class="image" src="/images/prsonalizedlearning.png" alt="" />
   </main>

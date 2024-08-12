@@ -2,7 +2,7 @@
   <div class="container" v-if="data">
     <canvas ref="donutChart" :width="width" :height="height"></canvas>
     <h3>
-      <span>Completed</span>
+      <span>{{ selectLang(translationModule.completed) }}</span>
       <span>{{ ratio }}%</span>
     </h3>
   </div>
@@ -10,6 +10,7 @@
 
 <script lang="ts" setup>
 import { ref, computed } from "vue";
+import { selectLang,translationModule } from "@/lib/Translate";
 
 interface PieSlice {
   value: number;

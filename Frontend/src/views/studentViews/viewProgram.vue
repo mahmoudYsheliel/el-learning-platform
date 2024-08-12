@@ -3,102 +3,84 @@ import Navbar from "@/components/general/Navbar.vue";
 import Footer from "@/components/general/Footer.vue";
 import CourseCard from "@/components/general/CourseCard.vue";
 import InputText from "primevue/inputtext";
-import { useRouter, useRoute } from "vue-router";
 import { HttpRequester } from "@/lib/APICaller";
-
+import { selectLang, translationModule } from "@/lib/Translate";
 import "primeicons/primeicons.css";
-
-import { ref, computed, watch } from "vue";
-
-const programs = ref();
-const selectedProgram = ref();
-const roadMap =ref()
-
-const router = useRouter();
-const route = useRoute();
-const items = ref<any[]>([]);
-
-const path = computed(() => {
-  return route.params.programId;
-});
-watch(path, () => {
-  requests();
+import { ref,computed } from "vue";
+import { useRoute,useRouter } from "vue-router";
+import Options from "@/components/general/Options.vue";
+const route = useRoute()
+const router = useRouter()
+const programs = ref<any[]>([]);
+const selectedProgramId = computed(()=>{
+  return route.params.programId
 });
 
-function requests() {
-  items.value = [];
-  programs.value = null;
-  const programRequester = new HttpRequester("get_all_program");
-  const selectedProgramRequester = new HttpRequester("get_program");
-  programRequester.callApi().then((res) => {
-    programs.value = res.data.program;
-    if (programs.value) {
-      for (let program of programs.value) {
-        items.value.push({
-          id: program.id,
-          label: program.title,
-          command: () => {
-            router.push(`/programs/${program.id}`);
-          },
-        });
-      }
+
+const programRequester = new HttpRequester("get_all_programs_and_courses");
+programRequester.callApi().then((res) => {
+  if(res.success){
+    programs.value=res.data.programs
+  }
+ 
+});
+const selectedProgram =computed(()=>{
+  for(let program of programs.value){
+    if (program?.id==selectedProgramId.value){
+      return program
     }
-  });
-  selectedProgramRequester
-    .callApi({ program_id: route.params.programId })
-    .then((res) => {
-      selectedProgram.value=[]
-      selectedProgram.value = res.data.program;
-      roadMap.value=res.data.program?.road_map
-    });
-}
-requests();
+  }
+})
 const search = ref("");
 </script>
 
 <template>
   <main>
     <Navbar />
+    <Options/>
 
     <div class="container">
       <InputText
         class="search"
         v-model="search"
-        placeholder="Search course . . ."
+        :placeholder="selectLang(translationModule.searchCourses)"
       />
       <div class="programs-wrapper">
         <h4
-          v-for="item in items"
-          @click="item?.command"
-          :class="{ selected: item.id == route.params.programId }"
+          v-for="program in programs"
+          @click="router.push(`/programs/${program?.id}`)"
+          :class="{ selected: program.id == selectedProgramId }"
         >
-          {{ item?.label }}
+          {{ selectLang(program?.title) }}
         </h4>
       </div>
 
       <div class="header-description">
         <div class="header">
-          <h1>{{ selectedProgram?.title }}</h1>
-          <h3>({{ selectedProgram?.age_group }})</h3>
+          <h1>{{ selectLang(selectedProgram?.title) }}</h1>
         </div>
         <div class="description">
-          <p>{{ selectedProgram?.description }}</p>
-          <img :src="selectedProgram?.image" alt="" />
+          <p>{{ selectLang(selectedProgram?.description) }}</p>
+          <div>
+            <img :src="selectedProgram?.image" alt="" class="image"/>
+          </div>
+          
         </div>
       </div>
       <div class="content">
         <h1 style="margin-block: 6rem 4rem">
+          
           <img
             style="width: 1.5rem; margin-right: 0.5rem"
             src="/images/pen.svg"
             alt=""
           />
-          Start your Journey
+          {{ selectLang(translationModule.startJourney) }}
         </h1>
         <div class="courses">
           <CourseCard
-            v-for="course in roadMap"
-            :programId="course.id"
+            v-for="course in selectedProgram?.courses"
+            :course="course"
             :search="search"
           />
         </div>
@@ -132,10 +114,9 @@ const search = ref("");
   color: var(--accent1);
 }
 .header-description {
-  margin-left: 5rem;
+  margin-inline: 5rem;
 }
 .header-description > p {
-  margin-left: 5rem;
   max-width: 80rem;
   color: var(--text);
 }
@@ -169,25 +150,28 @@ h1 {
 }
 .description {
   display: flex;
-  padding-right: 10rem;
   gap: 15rem;
 }
-img {
+.image {
   border-radius: 1rem;
   width: 20rem;
+  aspect-ratio: 1.6/1;
 }
 @media screen and (max-width: 1500px) {
   .description {
     gap: 5rem;
-    padding-right: 5rem;
   }
 }
 @media screen and (max-width: 1000px) {
   .description {
     flex-direction: column-reverse;
+    gap: 1rem;
     width: 90%;
   }
-  img {
+  .header-description{
+    margin-inline: 2rem;
+  }
+  .image {
     width: 100%;
   }
 }

@@ -1,42 +1,34 @@
 from typing import Optional
 from pydantic import BaseModel
 
+class TwoLang(BaseModel):
+    en:str
+    ar:str
+
+
 class Choice(BaseModel):
     id:Optional[int]=0
-    choice:str
+    choice:TwoLang
 
+    
 class Question(BaseModel):
     id:Optional[int]=0
-    question:str
+    question:TwoLang
     choices:list[Choice]
     correct_answer_id:int
-    
 
+    
 class Quiz(BaseModel):
     id:Optional[str] = None
-    title:str
-    description:Optional[str]=''
+    title:TwoLang
+    description:TwoLang
     questions:Optional[list[Question]]=[]
-    duaration:Optional[int]=0
+    duration:Optional[int]=0
     last_question_number:Optional[int]=0
     
     
  
-'''
-class Choice(BaseModel):
-    id:Optional[int]=0
-    english:str
-    arabic:str
 
-class QuestionText(BaseModel):
-    english:str
-    arabic:str
-    
-class Question(BaseModel):
-    id:Optional[int]=0
-    question:QuestionText
-    choices:list[Choice]
-    correct_answer_id:int
-    '''
+
     
     

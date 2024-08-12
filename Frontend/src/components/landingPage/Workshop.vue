@@ -1,25 +1,28 @@
 <script lang="ts" setup>
 import Button from "primevue/button";
+import { selectLang,translationModule } from "@/lib/Translate";
+
 </script>
 
 <template>
   <main>
     <div class="container">
-      <img
-        style="position: absolute; right: 0"
+      
+      <h1>{{ selectLang(translationModule.workshops) }}
+        
+      </h1>
+      <h1>{{ selectLang(translationModule.companyName) }}</h1>
+      <p>
+      {{ selectLang(translationModule.workshopDescription) }}
+      </p>
+      <Button :label=selectLang(translationModule.bookWorkshop) />
+    </div>
+    <img
+        style="display: inline;bottom:5rem;position: relative;"
+        class="star"
         src="/images/StarFour.svg"
         alt=""
       />
-      <div class="circle"></div>
-      <h1>Attend workshops by</h1>
-      <h1>Trace Education</h1>
-      <p>
-        Trace is proudly accredited by STEM.org that provides STEM courses; from
-        the age of four till the age of eighteen years old. Exclusively in
-        Egypt, Trace is empowered by Engineering for kids.
-      </p>
-      <Button label="Book Workshop" />
-    </div>
     <img class="image" src="/images/workshop.png" alt="" />
   </main>
 </template>
@@ -33,15 +36,6 @@ main {
 .container {
   width: 50%;
   position: relative;
-}
-.circle {
-  width: 2rem;
-  height: 2rem;
-  background-color: var(--accent2);
-  position: absolute;
-  right: -10%;
-  bottom: 0;
-  border-radius: 100%;
 }
 h1 {
   margin: 0;
@@ -72,6 +66,9 @@ image {
   }
   main {
     padding-inline: 2rem;
+  }
+  .star{
+    top:0
   }
 }
 @media screen and (max-width: 600px) {

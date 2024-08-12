@@ -3,31 +3,33 @@ from pydantic import BaseModel
 from bson.objectid import ObjectId
 from datetime import datetime
 
-
+class TwoLang(BaseModel):
+    en:str
+    ar:str
     
 class Material(BaseModel):
     Id:str
     order:int
-    title:str
+    title:TwoLang
     type:str #Lesson Quiz Assesment
 
 class Chapter(BaseModel):
-    title:str
+    title:TwoLang
     materials:Optional[list[Material]] = []
 
 class Categories(BaseModel):
     Id:str
-    title:str
+    title:TwoLang
     
 class Course(BaseModel):
     id: Optional[str] = None
-    title: str
-    description: str
+    title: TwoLang
+    description: TwoLang
     chapters: Optional[list[Chapter]] = []
     price: float
     image: str
     categories: Optional[list[Categories]] = []
-    objectives:Optional[list[str]] = []
+    objectives:Optional[list[TwoLang]] = []
     min_age:int
     max_age:int
     duration: Optional[int]  # number of days

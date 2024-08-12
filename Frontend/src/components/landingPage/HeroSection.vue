@@ -2,39 +2,43 @@
 import Button from "primevue/button";
 import "primeicons/primeicons.css";
 import { useRouter } from "vue-router";
+import { selectLang, translationModule } from "@/lib/Translate";
+
 const router = useRouter();
 </script>
 <template>
   <main>
+    
     <div class="wrapper">
+     
       <div class="container">
         <h1>
-          up your <span>skills</span>
+          <span>{{ selectLang(translationModule.upSkills) }}</span>
           <img
-            style="position: absolute; width: 25rem; left: 0"
-            src="/images/Circles.svg"
-            alt="Sparkle SVG"
-          />
+        class="imagenormal imageflip"
+        src="/images/Circles.svg"
+        alt="Sparkle SVG"
+      />
           <img
-            style="width: 2rem; transform: translate(5rem, -2rem)"
+            style="width: 2rem; margin-inline: 2rem; display: inline-block;"
             src="/images/StarFour.svg"
             alt="Sparkle SVG"
           />
           <br />
-          to <span>advance</span> your
-          <span>career</span>
+          {{ selectLang(translationModule.advanceCareer) }}
           <br />
-          path
+          {{ selectLang(translationModule.path) }}
         </h1>
         <p>
-          Trace delivers the most interactive way for education as never before
-          .We are here to boost our talent students creativity and guide them
-          through their interesting and curious journey in the world
+          {{ selectLang(translationModule.traceDescription) }}
         </p>
         <div class="buttonWrapper">
-          <Button label="Start For Free" @click="router.push('/')" />
+          <Button
+            :label="selectLang(translationModule.startFree)"
+            @click="router.push('/')"
+          />
           <p style="color: var(--accent1); margin: 0">
-            NO CREDIT CARD REQUIRED
+            {{ selectLang(translationModule.noCreditCard) }}
           </p>
         </div>
       </div>
@@ -52,8 +56,10 @@ const router = useRouter();
 main {
   background-color: var(--primarry);
   padding-block: 4rem;
+  position: relative;
 }
 .wrapper {
+ 
   width: 90%;
   display: flex;
   align-items: start;
@@ -63,7 +69,11 @@ main {
 img {
   width: 38.75%;
 }
-
+.imagenormal{
+  position: absolute;
+   width: 25rem; 
+   left: 0;
+}
 h1 {
   color: var(--accent1);
   text-transform: capitalize;
@@ -93,7 +103,7 @@ button {
     justify-content: center;
     align-items: center;
   }
-  img{
+  img {
     width: 62%;
   }
 }

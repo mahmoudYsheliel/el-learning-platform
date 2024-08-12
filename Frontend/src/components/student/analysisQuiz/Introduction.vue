@@ -1,32 +1,28 @@
 <script lang="ts" setup>
 import Button from "primevue/button";
-defineProps(["title", "description", "duaration", "sectionsTitles"]);
+import { selectLang,translationModule } from "@/lib/Translate";
+defineProps(["title", "description", "duration", "sectionsTitles"]);
 defineEmits(["startQuiz"]);
+import Options from "@/components/general/Options.vue";
 </script>
 
 <template>
   <div class="container">
-    <h1>{{ title }}</h1>
-    <h3>{{ description }}</h3>
-    <div class="sections">
-      <h3>
-        This quiz contains {{ sectionsTitles?.length }} sections as follow:
-        <strong v-for="sectionTitle in sectionsTitles">{{
-          sectionTitle
-        }}</strong>
-      </h3>
-    </div>
+    <Options/>
+    <h1>{{ selectLang(title) }}</h1>
+    <h3>{{ selectLang(description) }}</h3>
     <h3>
-      the duration of the quiz is:
+      {{ selectLang(translationModule.durationOfTest) }}
+
       <strong>
-        {{ Math.floor(duaration / 60) }}:<strong v-if="duaration % 60 < 10"
+        {{ Math.floor(duration / 60) }}:<strong v-if="duration % 60 < 10"
           >0</strong
-        >{{ duaration % 60 }} minutes</strong
+        >{{ duration % 60 }} {{ selectLang(translationModule.minutes) }}</strong
       >
     </h3>
     <div class="button-container">
         <Button
-      label="Start Quiz"
+      :label=selectLang(translationModule.startAnalysisQuiz)
       @click="
         () => {
           $emit('startQuiz');

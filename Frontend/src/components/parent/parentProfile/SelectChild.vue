@@ -6,6 +6,8 @@ import Dropdown from "primevue/dropdown";
 import Button from "primevue/button";
 import { usePersonalInfo,useToken } from "@/stores/token";
 import { useRouter } from "vue-router";
+import { selectLang,translationModule } from "@/lib/Translate";
+
 
 defineEmits(['selectedChild'])
 
@@ -55,7 +57,7 @@ function switchChild(id:string){
         
         personalInfoRequester.callApi().then((res) => {
           if (res.success) {
-            personalInfo.addInfo({ userType: res.data?.info?.user_type });
+            personalInfo.addInfo({ userType: res.data?.info?.user_type,notifications:[] });
             router.push("/");
           }
         });
@@ -75,7 +77,7 @@ function switchChild(id:string){
         v-model="selectedChild"
         :options="children"
         optionLabel="email"
-        placeholder="Select a Child"
+        :placeholder=selectLang(translationModule.selectChild)
         class="dropDown"
       />
       <div v-if="selectedChild" class="selectedChildInfo">
@@ -95,12 +97,12 @@ function switchChild(id:string){
             <h2 style="color: var(--accent1); margin: 0; line-height: 2rem;">
               {{ selectedChild?.first_name }} {{ selectedChild?.last_name }}
             </h2>
-           <Button label="Switch" @click="()=>{switchChild(selectedChild.id)}"/>
+           <Button :label=selectLang(translationModule.switchToChild) @click="()=>{switchChild(selectedChild.id)}"/>
           </div>
         </div>
 
         <h3>
-          {{ selectedChild?.child_group }}
+          {{ selectLang(selectedChild?.child_group) }}
         </h3>
       </div>
     </div>
@@ -149,9 +151,8 @@ function switchChild(id:string){
 h3 {
     color: var(--primary);
     background-color: var(--accent1);
-    padding: 0.5rem;
-    aspect-ratio: 1/1;
-    border-radius: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,12 +1,54 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router";
+import { useLang } from "./stores/token";
+const lang = useLang()
 </script>
 
 <template>
-  <RouterView />
+  <div  class="mainRouter" :class="{rtl:lang.getLang=='ar',ltr:lang.getLang=='en'}">
+    
+  <RouterView/>
+  </div>
 </template>
 
 <style>
+.rtl{
+  direction: rtl;
+}
+.ltr{
+  direction: ltr;
+}
+div[class*='rtl'] .imageflip{
+  transform: scaleX(-1);
+  right:0;
+}
+div[class*='rtl'] .borderRigth{
+  border: none;
+  border-left: 0.25rem solid rgba(0, 0, 0, 0.2);
+}
+div[class*='rtl'] .selectedSidebarItem{
+  background-color: var(--primary);
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  color: var(--accent1);
+}
+
+div[class*='rtl'] .circle {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--primary);
+  z-index: 2;
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: calc(100% - 0.5rem);
+  border-radius: 100%;
+  cursor: pointer;
+  transform: scaleX(-1);
+}
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -41,7 +83,7 @@ body,
   --wrongAnswer:#FF2D2D;
   --correctAnswer:#5CFA75;
 
-  font-size: calc(11px + 100vw * 0.0035);
+  font-size: calc(10px + 100vw * 0.005);
 }
 
 </style>

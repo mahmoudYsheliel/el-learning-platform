@@ -3,10 +3,12 @@ import Navbar from "../../components/general/Navbar.vue";
 import SideBar from "../../components/student/coursePage/SideBar.vue";
 import Lesson from "../../components/student/coursePage/Lesson.vue";
 import Quiz2 from "../../components/student/coursePage/Quiz2.vue";
-import { ref, computed, watch } from "vue";
+import { ref, computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { HttpRequester } from "@/lib/APICaller";
 import Button from "primevue/button";
+import { selectLang,translationModule } from "@/lib/Translate";
+
 
 const chapters = ref();
 const title = ref();
@@ -152,12 +154,12 @@ function next() {
         <component :is="materialComponnent?.type" @next="next" :completed="materialComponnent?.isCompleted"/>
         <div class="Button-Wrapper">
           <Button
-            label="Previous"
+            :label=selectLang(translationModule.prev)
             :class="{ hide: !materialComponnent?.prevMaterialId }"
             @click="previous"
           />
           <Button
-            label="Next"
+            :label=selectLang(translationModule.next)
             :class="{ hide: !materialComponnent?.nextMaterialId }"
             @click="next"
           />

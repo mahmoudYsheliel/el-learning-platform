@@ -2,36 +2,25 @@
 import "primeicons/primeicons.css";
 import { useRouter } from "vue-router";
 import { usePersonalInfo } from "@/stores/token";
-
+import { selectLang,translationModule } from "@/lib/Translate";
+import {childSidebar} from '@/lib/Modules'
 const personalInfo = usePersonalInfo()
 
 const router =useRouter()
 defineProps(["selected"]);
-const sidebarPages = [
-  {
-    label: "Home",
-    to: "childCourses",
-    icon: "pi pi-home",
-  },
-  {
-    label: "Notifications",
-    to: "childNotifications",
-    icon: "pi pi-bell",
-  },
-  
-];
+
 </script>
 
 <template>
   <main>
     <div
-      v-for="(page) in sidebarPages"
-      class="element"
-      :class="{ selected: selected == page.label }"
+      v-for="(page) in childSidebar"
+      class="element "
+      :class="{ selected: selected == page.name , selectedSidebarItem:selected == page.name}"
       @click="router.push(`/${page.to}`)"
     >
       <i :class="page.icon"></i>
-      <span :class="{notification:(page.label=='Notifications') && personalInfo.getInfo?.notifications?.some(n=>{return n.status=='waiting'})}"> {{ page.label }}</span>
+      <span :class="{notification:(page.name=='notifications') && personalInfo.getInfo?.notifications?.some(n=>{return n.status=='waiting'})}"> {{selectLang(page.label) }}</span>
     </div>
   </main>
 </template>
@@ -45,8 +34,6 @@ main {
   flex-direction: column;
   gap: 1rem;
   padding-top: 2rem;
-  border-bottom-right-radius: 1rem;
-  border-top-right-radius: 1rem;
 }
 .element {
   display: flex;
@@ -55,7 +42,7 @@ main {
   color: var(--primary);
   cursor: pointer;
   padding-block: 0.75rem;
-  padding-left: 1rem;
+  padding-inline: 1rem;
 }
 span {
   line-height: 0rem;

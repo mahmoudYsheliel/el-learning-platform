@@ -7,7 +7,7 @@ import Footer from '@/components/general/Footer.vue';
 <template>
     <Navbar/>
     <div class="container">
-        <ParentSidebar class="sidebar" selected="Subscription"/>
+        <ParentSidebar class="sidebar" selected="subscriptions"/>
         <div class="wrapper">
 
         </div>

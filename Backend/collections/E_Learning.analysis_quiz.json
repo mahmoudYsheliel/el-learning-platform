@@ -301,7 +301,7 @@
       "title": "Skills",
       "questions": [
         {
-          "id": 1,
+          "id": 6,
           "question": {
             "english": "How do you approach learning new skills?",
             "arabic": "كيف تقترب من تعلم مهارات جديدة؟"
@@ -326,7 +326,7 @@
           "correct_answer_id": 1
         },
         {
-          "id": 2,
+          "id": 7,
           "question": {
             "english": "How do you prioritize tasks?",
             "arabic": "كيف تحدد أولوية المهام؟"
@@ -351,7 +351,7 @@
           "correct_answer_id": 1
         },
         {
-          "id": 3,
+          "id": 8,
           "question": {
             "english": "How do you adapt to change?",
             "arabic": "كيف تتكيف مع التغيير؟"
@@ -376,7 +376,7 @@
           "correct_answer_id": 1
         },
         {
-          "id": 4,
+          "id": 9,
           "question": {
             "english": "How do you handle conflicts?",
             "arabic": "كيف تتعامل مع النزاعات؟"
@@ -401,7 +401,7 @@
           "correct_answer_id": 1
         },
         {
-          "id": 5,
+          "id": 10,
           "question": {
             "english": "How do you handle tight deadlines?",
             "arabic": "كيف تتعامل مع المواعيد النهائية الضيقة؟"
@@ -446,6 +446,22 @@
               }
             ]
           },
+          "personality": {
+            "feature_percentage_list": [
+              {
+                "feature": "Highly Productive",
+                "percentage": 80
+              },
+              {
+                "feature": "Expert Planner",
+                "percentage": 10
+              },
+              {
+                "feature": "Mentor",
+                "percentage": 10
+              }
+            ]
+          },
           "skills": {
             "feature_percentage_list": [
               {
@@ -479,6 +495,22 @@
               {
                 "feature": "Improve adaptability",
                 "percentage": 10
+              }
+            ]
+          },
+          "personality": {
+            "feature_percentage_list": [
+              {
+                "feature": "Productive",
+                "percentage": 60
+              },
+              {
+                "feature": "Strategic",
+                "percentage": 20
+              },
+              {
+                "feature": "Efficient",
+                "percentage": 20
               }
             ]
           },
@@ -518,6 +550,22 @@
               }
             ]
           },
+          "personality": {
+            "feature_percentage_list": [
+              {
+                "feature": "Planner",
+                "percentage": 40
+              },
+              {
+                "feature": "Organized",
+                "percentage": 30
+              },
+              {
+                "feature": "Curious",
+                "percentage": 30
+              }
+            ]
+          },
           "skills": {
             "feature_percentage_list": [
               {
@@ -531,7 +579,7 @@
               {
                 "feature": "Change Leadership",
                 "percentage": 10
-                }
+              }
             ]
           }
         }
@@ -545,4 +593,3 @@
     "percentage": 0
   }
 }]
-

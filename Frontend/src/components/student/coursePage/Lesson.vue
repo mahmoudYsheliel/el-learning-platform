@@ -4,6 +4,8 @@ import { useRoute } from "vue-router";
 import { HttpRequester } from "@/lib/APICaller";
 import Button from "primevue/button";
 import 'primeicons/primeicons.css'
+import { selectLang,translationModule } from "@/lib/Translate";
+
 const emit=defineEmits(['next'])
 defineProps(['completed'])
 
@@ -37,13 +39,13 @@ function markCompleted(){
   <main>
     <div class="container">
       <h2>
-        {{ lesson?.title }}
+        {{selectLang(lesson?.title) }}
       </h2>
-      <p>{{ lesson?.description }}</p>
+      <p>{{selectLang(lesson?.description) }}</p>
       <div class="wrapper">
         <iframe :src="lesson?.source" frameborder="0" sandbox="allow-scripts allow-same-origin" allowfullscreen ></iframe>
       </div>
-      <Button :disabled="completed" icon="pi pi-check-circle"  label="Mark As Completed" icon-pos="right" @click="markCompleted"/>
+      <Button :disabled="completed" icon="pi pi-check-circle"  :label=selectLang(translationModule.markCompleted) icon-pos="right" @click="markCompleted"/>
     </div>
   </main>
 </template>

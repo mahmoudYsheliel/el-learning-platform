@@ -10,6 +10,8 @@ import Button from "primevue/button";
 import Calendar from "primevue/calendar";
 import Dialog from "primevue/dialog";
 import router from "@/router";
+import { selectLang,translationModule } from "@/lib/Translate";
+import {  genders } from "@/lib/Modules";
 
 const firstName = ref();
 const lastName = ref();
@@ -21,8 +23,6 @@ const job = ref("");
 
 const message = ref("");
 const showDialog = ref(false);
-
-const genders = ["Male", "Female"];
 
 const userInfoRequester = new HttpRequester("personal_info");
 userInfoRequester.callApi().then(res=>
@@ -45,7 +45,7 @@ function change() {
     update: {
       first_name: firstName.value,
       last_name: lastName.value,
-      gender: gender.value,
+      gender: gender.value?.value,
       birth_day: birtDate.value,
       phone_number:phoneNumber.value
     },
@@ -79,47 +79,47 @@ function change() {
       }"
     >
       <div class="dialog-container">
-        <h1>Edited Successfully</h1>
-        <Button label="View Child" @click="router.push('/parentProfile')" />
+        <h1>{{ selectLang(translationModule.editedSuccessffully) }}</h1>
+        <Button :label=selectLang(translationModule.viewChild) @click="router.push('/parentProfile')" />
       </div>
     </Dialog>
 
-    <ParentSidebar class="sidebar" selected="Settings" />
+    <ParentSidebar class="sidebar" selected="settings" />
     <div class="big-wrapper">
       <h1>{{ message }}</h1>
       <div class="wrapper">
         <div class="element">
-          <p>First Name</p>
+          <p>{{ selectLang(translationModule.firstName) }}</p>
           <InputText v-model="firstName" />
         </div>
         <div class="element">
-          <p>Last Name</p>
+          <p>{{ selectLang(translationModule.lastName) }}</p>
           <InputText v-model="lastName" />
         </div>
         <div class="element">
-          <p>Phone Number</p>
+          <p>{{ selectLang(translationModule.phone) }}</p>
           <InputText v-model="phoneNumber" />
         </div>
 
         <div class="element">
-          <p>Address</p>
+          <p>{{ selectLang(translationModule.address) }}</p>
           <InputText v-model="address" />
         </div>
         <div class="element">
-          <p>Job</p>
+          <p>{{ selectLang(translationModule.job) }}</p>
           <InputText v-model="job" />
         </div>
         <div class="element">
-          <p>Gender</p>
-          <Dropdown v-model="gender" :options="genders" />
+          <p>{{ selectLang(translationModule.gender) }}</p>
+          <Dropdown v-model="gender" optionLabel="label" :options="genders" />
         </div>
         <div class="element">
-          <p>Birth Date</p>
+          <p>{{ selectLang(translationModule.birthDate) }}</p>
           <Calendar v-model="birtDate" dateFormat="yy-mm-dd" showIcon iconDisplay="input" />
         </div>
       </div>
 
-      <Button label="Save Changes" @click="change" />
+      <Button :label=selectLang(translationModule.saveChanges) @click="change" />
     </div>
   </div>
   <Footer />

@@ -10,6 +10,9 @@ import { HttpRequester } from "@/lib/APICaller";
 import { useToken } from "@/stores/token";
 import Dialog from "primevue/dialog";
 import Information from "@/components/student/courseDetails/Information.vue";
+import { selectLang,translationModule } from "@/lib/Translate";
+
+
 const showDialog =ref(false)
 const token = useToken()
 import { ref } from "vue";
@@ -81,35 +84,35 @@ function requestEnroll() {
     <template #container="{ closeCallback }" >
         <div style="padding: 2em; display: flex; flex-direction: column; align-items: center; gap: 2rem;">
 
-            <h2>Enrolment Request Sent Successfully</h2>
-            <h3 style="margin: 0; color: var(--secondary);">Please send a recite with {{ course?.price }} to this number: 01012345678</h3>
-            <h3 style="margin: 0; color: var(--secondary);">and attatch the recite as a whatsapp message to the same number</h3>
+            <h2>{{ selectLang(translationModule.sentSuccessfully) }}</h2>
+            <h3 style="margin: 0; color: var(--secondary);">{{ selectLang(translationModule.pleaseSendInvoice) }} {{ course?.price }} </h3>
+            <h3 style="margin: 0; color: var(--secondary);">{{ selectLang(translationModule.attatchTheInvoice) }}</h3>
             <i style="font-size: 6rem; color: var(--accent3);" class="pi pi-check-circle"></i>
-        <Button label="Go To Home Page" style="width: 20rem;" @click="childPage"/>
+        <Button :label=selectLang(translationModule.returnHome) style="width: 20rem;" @click="childPage"/>
         </div>
     </template>
     </Dialog>
     <div class="course-description">
       <div class="head">
-        <h1>{{ course?.title }}</h1>
+        <h1>{{selectLang(course?.title) }}</h1>
       </div>
 
       <img :src="course?.image" alt="" />
       <div class="description">
         <div class="header">
-          <h2>Course Description</h2>
-          <Button label="Enroll Now" v-if="!(route.params.isEnrolled=='1')" @click="requestEnroll" />
+          <h2>{{ selectLang(translationModule.courseDescription) }}</h2>
+          <Button :label=selectLang(translationModule.enrollNow) v-if="!(route.params.isEnrolled=='1')" @click="requestEnroll" />
         </div>
-        <p>{{ course?.description }}</p>
+        <p>{{ selectLang(course?.description) }}</p>
       </div>
       <div class="objectives">
-        <h2>Course Objectives</h2>
-        <p v-for="objective in course?.objectives">- {{ objective }}</p>
+        <h2>{{ selectLang(translationModule.courseObjectives) }}</h2>
+        <p v-for="objective in course?.objectives">- {{ selectLang(objective) }}</p>
       </div>
     </div>
     <div class="content">
       <div class="card">
-        <h2>Course Content</h2>
+        <h2>{{ selectLang(translationModule.courseContent) }}</h2>
         <Accordion :multiple="true" :activeIndex="[]">
           <AccordionTab
             v-for="(chapter, i) in chapters"
@@ -123,7 +126,7 @@ function requestEnroll() {
           >
             <template #header style="display: flex; flex-direction: column">
               <div>
-                <h4>{{ chapter.title }}</h4>
+                <h4>{{  selectLang(chapter.title) }}</h4>
                 <div
                   style="
                     display: flex;
@@ -132,8 +135,8 @@ function requestEnroll() {
                     padding-left: 2rem;
                   "
                 >
-                  <h5>{{ chapter.lessonCount }} Lessons</h5>
-                  <h5>{{ chapter.quizCount }} Quizes</h5>
+                  <h5>{{ chapter.lessonCount }} {{ selectLang(translationModule.lessons) }}</h5>
+                  <h5>{{ chapter.quizCount }} {{ selectLang(translationModule.quiz) }}</h5>
                 </div>
               </div>
             </template>
@@ -143,12 +146,12 @@ function requestEnroll() {
               class="m-0"
               v-for="mat in chapter.materials"
             >
-              <i :class="mat.icon"></i> {{ mat.title }}
+              <i :class="mat.icon"></i> {{ selectLang(mat.title) }}
             </p>
           </AccordionTab>
         </Accordion>
       </div>
-      <Information :categories="course?.categories" :title="course?.title" :price="course?.price" :duration="course?.duration" :min_age="course?.min_age" :max_age="course?.max_age"/>
+      <Information :categories="selectLang(course?.categories)" :title="selectLang(course?.title)" :price="course?.price" :duration="course?.duration" :min_age="course?.min_age" :max_age="course?.max_age"/>
     </div>
   </div>
   <Footer />

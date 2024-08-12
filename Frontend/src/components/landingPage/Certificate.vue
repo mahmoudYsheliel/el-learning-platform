@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import Button from "primevue/button";
+import { selectLang,translationModule } from "@/lib/Translate";
+
 </script>
 
 <template>
@@ -18,14 +20,12 @@ import Button from "primevue/button";
         src="/images/Sparkle.svg"
         alt=""
       />
-      <h1>Earn your certificate By</h1>
-      <h1>Trace Education</h1>
+      <h1>{{ selectLang(translationModule.earnCer) }}</h1>
+      <h1>{{ selectLang(translationModule.companyName) }}</h1>
       <p>
-        Trace is proudly accredited by STEM.org that provides STEM courses; from
-        the age of four till the age of eighteen years old. Exclusively in
-        Egypt, Trace is empowered by Engineering for kids.
+        {{ selectLang(translationModule.certificateDescription) }}
       </p>
-      <Button label="Join Us" />
+      <Button :label=selectLang(translationModule.joinUs) />
     </div>
   </main>
 </template>

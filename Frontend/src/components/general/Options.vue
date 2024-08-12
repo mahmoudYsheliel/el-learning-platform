@@ -4,12 +4,15 @@ import SplitButton from "primevue/splitbutton";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { HttpRequester } from "@/lib/APICaller";
-
+import { useLang } from "@/stores/token";
+import { selectLang,translationModule } from "@/lib/Translate";
+const lang = useLang();
 const programRequester = new HttpRequester("get_all_program");
 
-const programs = ref();
+const programs = ref<any[]>([]);
 
 const router = useRouter();
+
 const items = ref<any[]>([]);
 
 programRequester.callApi().then((res) => {
@@ -17,28 +20,53 @@ programRequester.callApi().then((res) => {
   if (programs.value) {
     for (let program of programs.value) {
       items.value.push({
-        label: program.title,
+        label: selectLang(program?.title),
         command: () => {
-          router.push(`programs/${program.id}`);
+          router.push(`/programs/${program?.id}`);
         },
       });
     }
   }
 });
+
+function setLang(selectedLang: string) {
+  if (selectedLang == 'English'){
+    lang.setLang('en');
+  }
+  if (selectedLang == 'العربية'){
+    lang.setLang('ar');
+  }
+ 
+  window.location.reload();
+}
 </script>
 
 <template>
   <main>
     <div class="image">
       <img src="/images/logo.png" alt="" />
-      <p>Entertain Your Education</p>
+      <p>{{ selectLang(translationModule.entertainYourEdu) }}</p>
     </div>
 
     <div class="options">
-      <span>Trace Plans</span>
+      <span>{{ selectLang(translationModule.plans) }}</span>
       <div class="card flex justify-content-center">
-        <SplitButton label="Programs" :model="items" @click="items[0]?.command" text />
+        <SplitButton
+          :label=selectLang(translationModule.programs)
+          :model="items"
+          @click="items[0]?.command"
+          text
+        />
       </div>
+      <span
+        style="cursor: pointer"
+        @click="
+          () => {
+            setLang(selectLang(translationModule.language));
+          }
+        "
+        >{{ selectLang(translationModule.language) }}</span
+      >
     </div>
   </main>
 </template>

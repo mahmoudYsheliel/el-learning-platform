@@ -2,7 +2,7 @@ from models.user import User, Instructor, Child, Parent,Admin,Notification
 from models.runtime import ServiceResponse
 from database.mongo_driver import get_database, validate_bson_id
 from lib.crypto import verify_password,hash_password
-
+from datetime import datetime
 
 async def create_user(user: User) -> ServiceResponse:
     user_type = user.user_type
@@ -226,13 +226,18 @@ async def update_user_info(
     return ServiceResponse(msg="Edited Successfully")
 
 
+
+
 async def add_child(user: User, child: Child, userId: str) -> ServiceResponse:
 
     user.user_type = "Child"
     user.hashed_pass = hash_password(user.hashed_pass)
-    
-    analysis_quiz= await get_database().get_collection('analysis_quiz').find_one({'when_to_apply.course_to_follow_id':'none'},{ "id": {"$toString": "$_id"},'title':1,"description":1})
-    user.notifications.append(Notification(title=analysis_quiz['title'],description=analysis_quiz['description'],type='analysis quiz',status='waiting',analysis_quiz_id=analysis_quiz['id']))
+    program = await get_database().get_collection('program').find_one({'_id':validate_bson_id(child.child_group)},{'_id':0,'min_age':1,'max_age':1})
+    if not program:
+        return ServiceResponse(msg="could find child_group", success=False)
+    analysis_quiz= await get_database().get_collection('analysis_quiz').find_one({'course_title_follow':'start','min_age':{'$lte':program['min_age']},'max_age':{'$gte':program['max_age']}},{ "id": {"$toString": "$_id"},'title':1,"description":1})
+    if analysis_quiz:
+        user.notifications.append(Notification(title=analysis_quiz['title'],description=analysis_quiz['description'],type='analysis quiz',status='waiting',analysis_quiz_id=analysis_quiz['id']))
     found_user = (
         await get_database().get_collection("user").find_one({"email": user.email})
     )

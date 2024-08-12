@@ -4,6 +4,9 @@ import { HttpRequester } from "@/lib/APICaller";
 const prop = defineProps(["selectedChildId"]);
 import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
+import { selectLang,translationModule } from "@/lib/Translate";
+
+
 
 const progress = ref<any[]>([]);
 const enrollments = ref();
@@ -141,10 +144,10 @@ function extractTime(dateTimeString: string) {
       <template #header>
         <div class="header">
           <h2>
-            {{ courseProgress.courseTitle }}
+            {{selectLang(courseProgress.courseTitle) }}
           </h2>
           <h2 style="color: var(--accent2)">
-            Completed: {{ courseProgress.percentage }}%
+            {{ selectLang(translationModule.completed) }} {{ courseProgress.percentage }} %
           </h2>
         </div>
       </template>
@@ -158,10 +161,11 @@ function extractTime(dateTimeString: string) {
               <template #header>
                 <div class="header">
                   <h3 style="color: var(--accent1)">
-                    {{ chapter.title }}
+                    {{selectLang(chapter.title) }}
                   </h3>
                   <h3 style="color: var(--accent2)">
-                    Completed: {{ chapter.progress }}%
+                    
+                    {{ selectLang(translationModule.completed) }}  {{ chapter.progress }} %
                   </h3>
                 </div>
               </template>
@@ -169,16 +173,15 @@ function extractTime(dateTimeString: string) {
                 <div class="material" v-for="mat in chapter.material">
                   <div class="lesson" v-if="mat?.type == 'Lesson'" >
                     <h4 style="color: var(--text);">
-                      {{ mat.title }}
+                      {{ selectLang(mat.title) }}
                     </h4>
                     <div
                       class="completed"
                       v-if="mat?.progress[0]?.completed_at"
                       style="color: var(--accent2)"
                     >
-                      <span style="color: var(--text);">Completed at:</span>
+                      <span style="color: var(--text);">{{ selectLang(translationModule.completedAt) }}</span>
                       {{ extractDate(mat?.progress[0]?.completed_at) }}
-                      {{ extractTime(mat?.progress[0]?.completed_at) }}
                     </div>
                   </div>
 
@@ -188,10 +191,10 @@ function extractTime(dateTimeString: string) {
                         <template #header>
                           <div class="quiz-header">
                             <h4 style="color: var(--text);">
-                              {{ mat?.title }}
+                              {{selectLang(mat?.title) }}
                             </h4>
                             <h4>
-                              <span style="color: var(--text);">Heighest:</span>
+                              <span style="color: var(--text);">{{ selectLang(translationModule.heighest) }}</span>
                               
                               {{
                                 mat?.progress?.reduce(
@@ -206,25 +209,23 @@ function extractTime(dateTimeString: string) {
                             </h4>
 
                             <h4>
-                              <span style="color: var(--text);"> Number Of Attempts:</span>
+                              <span style="color: var(--text);"> {{ selectLang(translationModule.nomOfAtts) }}</span>
                               {{ mat?.progress?.length }}
                             </h4>
                           </div>
                         </template>
                         <div class="quiz-content">
                           <div class="row names">
-                            <h5 style="color: var(--text);">Attempt</h5>
-                            <h5 style="color: var(--text);">Score</h5>
-                            <h5 style="color: var(--text);">Time To Answer</h5>
-                            <h5 style="color: var(--text);">Date</h5>
-                            <h5 style="color: var(--text);">Time</h5>
+                            <h5 style="color: var(--text);">{{ selectLang(translationModule.att) }}</h5>
+                            <h5 style="color: var(--text);">{{ selectLang(translationModule.score) }}</h5>
+                            <h5 style="color: var(--text);">{{ selectLang(translationModule.timeToAns) }}</h5>
+                            <h5 style="color: var(--text);">{{ selectLang(translationModule.date) }}</h5>
                           </div>
                           <div class="row" v-for="(p, i) in mat?.progress">
                             <h5>{{ i +1}}</h5>
                             <h5>{{ p?.score_prcentage }}%</h5>
                             <h5>{{ p?.time_taken }} sec</h5>
                             <h5>{{ extractDate(p?.created_at) }}</h5>
-                            <h5>{{ extractTime(p?.created_at) }}</h5>
                            
                            
                           </div>
@@ -273,7 +274,7 @@ main{
 }
 .row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   color: var(--accent1);
 }
 .names{

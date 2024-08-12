@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import "primeicons/primeicons.css";
+import { selectLang, translationModule } from "@/lib/Translate";
 
 defineProps(["title", "price", "categories", "min_age", "max_age", "duration"]);
 </script>
@@ -7,25 +8,25 @@ defineProps(["title", "price", "categories", "min_age", "max_age", "duration"]);
 <template>
   <main>
     <div class="container">
-      <h2>Course Information</h2>
+      <h2>{{ selectLang(translationModule.courseInfo) }}</h2>
       <div class="wrapper">
-        <h4>Title</h4>
+        <h4>{{ selectLang(translationModule.title) }}</h4>
         <p>{{ title }}</p>
       </div>
       <div class="wrapper">
-        <h4>Categories</h4>
-        <p v-for="cat in categories">{{ cat.title }}</p>
+        <h4>{{ selectLang(translationModule.categories) }}</h4>
+        <p v-for="cat in categories">{{selectLang(cat.title) }}</p>
       </div>
       <div class="wrapper">
-        <h4>Duration<i class="pi pi-clock"></i></h4>
-        <p>{{ duration }} Days</p>
+        <h4>{{ selectLang(translationModule.duration) }}<i class="pi pi-clock"></i></h4>
+        <p>{{ duration }} {{ selectLang(translationModule.days) }}</p>
       </div>
       <div class="wrapper">
-        <h4>Age<i class="pi pi-angle-double-up"></i></h4>
-        <p>{{ min_age }} - {{ max_age }} Years</p>
+        <h4>{{ selectLang(translationModule.age) }}<i class="pi pi-angle-double-up"></i></h4>
+        <p>{{ min_age }} - {{ max_age }} {{ selectLang(translationModule.years) }}</p>
       </div>
       <div class="wrapper">
-        <h4>Price<i class="pi pi-dollar"></i></h4>
+        <h4>{{ selectLang(translationModule.price) }}<i class="pi pi-dollar"></i></h4>
         <p>{{ price }} L.E</p>
       </div>
     </div>

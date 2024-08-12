@@ -2,10 +2,9 @@
 import ChildSidebar from "../../components/general/ChildSidebar.vue";
 import Navbar from "../../components/general/Navbar.vue";
 import Footer from "@/components/general/Footer.vue";
-import { HttpRequester } from "@/lib/APICaller";
 import Button from "primevue/button";
 import { usePersonalInfo } from "@/stores/token";
-import { ref } from "vue";
+import { selectLang,translationModule } from "@/lib/Translate";
 import { useRouter } from "vue-router";
 
 const router =useRouter()
@@ -17,21 +16,21 @@ const personalInfo = usePersonalInfo()
 <template>
   <Navbar />
   <div class="container">
-    <ChildSidebar class="sidebar" selected="Notifications" />
+    <ChildSidebar class="sidebar" selected="notifications" />
     <div class="wrapper">
 
 
       <div class="requests">
-        <h2>Notifications</h2>
+        <h2>{{ selectLang(translationModule.notifications) }}</h2>
         <div class="table-container">
           <div class="row head">
-            <h3>Title</h3>
-            <h3>Type</h3>
-            <h3>Status</h3>
-            <h3>Action</h3>
+            <h3>{{ selectLang(translationModule.title) }}</h3>
+            <h3>{{ selectLang(translationModule.type) }}</h3>
+            <h3>{{ selectLang(translationModule.status) }}</h3>
+            <h3>{{ selectLang(translationModule.actions) }}</h3>
           </div>
           <div class="row" v-for="(not, i) in personalInfo.getInfo?.notifications">
-            <span>{{ not.title }}</span>
+            <span>{{selectLang(not.title) }}</span>
             <span>{{ not.type }}</span>
             <span :class="{waiting:not.status=='waiting', done:not.status=='done'}">{{ not?.status }}</span>
             <span>
@@ -40,7 +39,7 @@ const personalInfo = usePersonalInfo()
                 v-if="not.type=='analysis quiz'"
                 :disabled="not.status=='done'"
                 style="font-size: 0.75rem"
-                label="Start Test"
+                :label=selectLang(translationModule.startTest)
             /></span>
           </div>
         </div>
