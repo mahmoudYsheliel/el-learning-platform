@@ -10,7 +10,7 @@ const router = useRouter()
 </script>
 
 <template>
-  <main v-if="selectLang(course?.title)?.toLowerCase().includes(search.toLowerCase())">
+  <main v-if="selectLang(course?.title).toLowerCase().includes(search.toLowerCase())">
     <div class="container">
       <img :src="course?.image" alt="" />
       <h2>{{ selectLang(course?.title) }}</h2>
