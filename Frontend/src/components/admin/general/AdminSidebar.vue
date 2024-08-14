@@ -1,42 +1,19 @@
 <script lang="ts" setup>
 import "primeicons/primeicons.css";
 import { useRouter } from "vue-router";
-
+import { managerSidebarPages } from "@/lib/Modules";
 
 const router =useRouter()
 defineProps(["selected"]);
-const sidebarPages = [
-  {
-    label: "Manage Requests",
-    to: "manageRequests",
-    icon: "pi pi-bell",
-  },
-  {
-    label: "Manage Courses",
-    to: "manageCourses",
-    icon: "pi pi-server",
-  },
-  {
-    label: "Manage Instructors",
-    to: "manageInstructors",
-    icon: "pi pi-users",
-  },
-  {
-    label: "Manage Logs",
-    to: "manageLogs",
-    icon: "pi pi-arrow-right-arrow-left",
-  },
- 
-  
-];
+
 </script>
 
 <template>
   <main>
     <div
-      v-for="(page) in sidebarPages"
+      v-for="(page) in managerSidebarPages"
       class="element"
-      :class="{ selected: selected == page.label }"
+      :class="{ selectedSidebarItem: selected == page.name, selected: selected == page.name }"
       @click="router.push(`/${page.to}`)"
     >
       <i :class="page.icon"></i>
@@ -62,7 +39,7 @@ main {
   color: var(--primary);
   cursor: pointer;
   padding-block: 0.75rem;
-  padding-left: 1rem;
+  padding-inline: 1rem;
 }
 span {
   line-height: 0rem;

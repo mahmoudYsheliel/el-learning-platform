@@ -7,15 +7,19 @@ import Button from "primevue/button";
 import InputText from "primevue/inputtext";
 import Dialog from "primevue/dialog";
 import { ref } from "vue";
-import 'primeicons/primeicons.css'
+import "primeicons/primeicons.css";
+import { selectLang, translationModule } from "@/lib/Translate";
 
-
+interface Languages {
+  en: string;
+  ar: string;
+}
 
 interface RnrollmentRequest {
   id: string;
   parentEmail: string;
   childEmail: string;
-  courseTitle: string;
+  courseTitle: Languages;
   date: string;
   time: string;
   status: string;
@@ -120,11 +124,17 @@ function accept(req: RnrollmentRequest) {
   const editRequestStatusRequester = new HttpRequester("edit_request_status");
   const createEnrollmentRequester = new HttpRequester("create_enrollment");
   createEnrollmentRequester
-    .callApi( {new_enrollment:{ student_id: req.student_id, course_id: req.course_id  ,created_at:new Date().toISOString()}})
+    .callApi({
+      new_enrollment: {
+        student_id: req.student_id,
+        course_id: req.course_id,
+        created_at: new Date().toISOString(),
+      },
+    })
     .then((res) => {
       if (res.success) {
         editRequestStatusRequester
-          .callApi({ new_status: "Success", enrollment_request_id: req.id} )
+          .callApi({ new_status: "Success", enrollment_request_id: req.id })
           .then((res) => {
             if (res.success) {
               getEnrollmentRequests();
@@ -143,152 +153,174 @@ function reject(id: string) {
       }
     });
 }
-const reverse = ref(false)
-function orderRequests(type:string){
-  if (type=='price'){
-    enrollmentRequests.value.sort((a:any,b:any)=>{return a?.price - b?.price})
-    if (reverse.value){
-      enrollmentRequests.value.reverse()  
+const reverse = ref(false);
+function orderRequests(type: string) {
+  if (type == "price") {
+    enrollmentRequests.value.sort((a: any, b: any) => {
+      return a?.price - b?.price;
+    });
+    if (reverse.value) {
+      enrollmentRequests.value.reverse();
+    }
+  } else if (type == "parent") {
+    enrollmentRequests.value.sort((a: any, b: any) => {
+      return a?.parentEmail?.localeCompare(b?.parentEmail);
+    });
+    if (reverse.value) {
+      enrollmentRequests.value.reverse();
+    }
+  } else if (type == "title") {
+    enrollmentRequests.value.sort((a: any, b: any) => {
+      return a?.courseTitle?.localeCompare(b?.courseTitle);
+    });
+    if (reverse.value) {
+      enrollmentRequests.value.reverse();
+    }
+  } else if (type == "date") {
+    enrollmentRequests.value.sort((a: any, b: any) => {
+      return a?.date?.localeCompare(b?.date);
+    });
+    if (reverse.value) {
+      enrollmentRequests.value.reverse();
+    }
+  } else if (type == "time") {
+    enrollmentRequests.value.sort((a: any, b: any) => {
+      return a?.time?.localeCompare(b?.time);
+    });
+    if (reverse.value) {
+      enrollmentRequests.value.reverse();
+    }
+  } else if (type == "status") {
+    enrollmentRequests.value.sort((a: any, b: any) => {
+      return a?.status?.localeCompare(b?.status);
+    });
+    if (reverse.value) {
+      enrollmentRequests.value.reverse();
     }
   }
-  else if (type=='parent'){
-    enrollmentRequests.value.sort((a:any,b:any)=>{return a?.parentEmail?.localeCompare(b?.parentEmail)})
-    if (reverse.value){
-      enrollmentRequests.value.reverse()  
-    }
-  }
-  else if (type=='title'){
-    enrollmentRequests.value.sort((a:any,b:any)=>{return a?.courseTitle?.localeCompare(b?.courseTitle)})
-    if (reverse.value){
-      enrollmentRequests.value.reverse()  
-    }
-  }
-  else if (type=='date'){
-    enrollmentRequests.value.sort((a:any,b:any)=>{return a?.date?.localeCompare(b?.date)})
-    if (reverse.value){
-      enrollmentRequests.value.reverse()  
-    }
-  }
-  else if (type=='time'){
-    enrollmentRequests.value.sort((a:any,b:any)=>{return a?.time?.localeCompare(b?.time)})
-    if (reverse.value){
-      enrollmentRequests.value.reverse()  
-    }
-  }
-  else if (type=='status'){
-    enrollmentRequests.value.sort((a:any,b:any)=>{return a?.status?.localeCompare(b?.status)})
-    if (reverse.value){
-      enrollmentRequests.value.reverse()  
-    }
-  }
-  reverse.value=!reverse.value
+  reverse.value = !reverse.value;
 }
 </script>
 
 <template>
   <Navbar />
-  <div class="container">
-    <Dialog
-      v-model:visible="showComments"
-      modal
-      header="Request Comments"
-      :style="{ width: '50vw' }"
-    >
-      <div class="msg-wrapper">
-        <div
-          class="msg"
-          v-for="msg in enrollmentRequests[requestOrderToShowComments].comments"
-          :class="{
-            admin: msg?.sender_type == 'Admin',
-            parent: msg?.sender_type == 'Parent',
-          }"
-        >
-          {{ msg.msg }}
-        </div>
+  <Dialog
+    v-model:visible="showComments"
+    modal
+    header="Request Comments"
+    :style="{ width: '50vw' }"
+  >
+    <div class="msg-wrapper">
+      <div
+        class="msg"
+        v-for="msg in enrollmentRequests[requestOrderToShowComments].comments"
+        :class="{
+          admin: msg?.sender_type == 'Admin',
+          parent: msg?.sender_type == 'Parent',
+        }"
+      >
+        {{ msg.msg }}
       </div>
+    </div>
 
-      <div class="add-comment">
-        <InputText v-model="addedComment" />
-        <Button label="Add Comment" @click="addComment" />
-      </div>
-    </Dialog>
-    <AdminSidebar selected="Manage Requests" />
+    <div class="add-comment">
+      <InputText v-model="addedComment" />
+      <Button label="Add Comment" @click="addComment" />
+    </div>
+  </Dialog>
+
+  <div class="container">
+    <AdminSidebar class="sidebar" selected="Manage Requests" />
     <div class="wrapper">
-      <div class="requests">
-        <h2>Enrollment Requests</h2>
-        <div class="table-container">
-          <div class="row head">
-            <h3 @click="orderRequests('parent')">Parent Email <i class="pi pi-sort-alt"></i> </h3>
-            <h3 @click="orderRequests('child')">Child Email <i class="pi pi-sort-alt"></i></h3>
-            <h3 @click="orderRequests('title')">Course Title <i class="pi pi-sort-alt"></i></h3>
-            <h3  @click="orderRequests('price')">Course Price <i class="pi pi-sort-alt"></i></h3>
-            <h3 @click="orderRequests('date')">Date <i class="pi pi-sort-alt"></i></h3>
-            <h3 @click="orderRequests('time')">Time <i class="pi pi-sort-alt"></i></h3>
-            <h3 @click="orderRequests('status')">Status <i class="pi pi-sort-alt"></i></h3>
-            <h3>Actions</h3>
-          </div>
-          <div class="row" v-for="(req, i) in enrollmentRequests">
-            <span>{{ req.parentEmail }}</span>
-            <span>{{ req.childEmail }}</span>
-            <span>{{ req.courseTitle }}</span>
-            <span>{{ req.price }} L.E.</span>
-            <span>{{ req.date }}</span>
-            <span>{{ req.time }}</span>
-            <span
-              :class="{
-                pending: req.status == 'Pending',
-                rejected: req.status == 'Rejected',
-                accepted: req.status == 'Success',
-              }"
-              >{{ req.status }}</span
-            >
-            <span
-              style="
-                display: flex;
-                flex-direction: column;
-                gap: 0.5rem;
-                margin-block: 1rem;
+      <h2>Enrollment Requests</h2>
+      <div class="table-container">
+        <div class="row head">
+          <h3 @click="orderRequests('parent')">
+            {{ selectLang(translationModule.parentEmail) }}
+            <i class="pi pi-sort-alt"></i>
+          </h3>
+          <h3 @click="orderRequests('child')">
+            {{ selectLang(translationModule.childEmail) }}
+            <i class="pi pi-sort-alt"></i>
+          </h3>
+          <h3 @click="orderRequests('title')">
+            {{ selectLang(translationModule.courseTitle) }}
+            <i class="pi pi-sort-alt"></i>
+          </h3>
+          <h3 @click="orderRequests('price')">
+            {{ selectLang(translationModule.price) }}
+            <i class="pi pi-sort-alt"></i>
+          </h3>
+          <h3 @click="orderRequests('date')">
+            {{ selectLang(translationModule.date) }}
+            <i class="pi pi-sort-alt"></i>
+          </h3>
+          <h3 @click="orderRequests('status')">
+            {{ selectLang(translationModule.status) }}
+            <i class="pi pi-sort-alt"></i>
+          </h3>
+          <h3>{{ selectLang(translationModule.actions) }}</h3>
+        </div>
+        <div class="row" v-for="(req, i) in enrollmentRequests">
+          <span>{{ req.parentEmail }}</span>
+          <span>{{ req.childEmail }}</span>
+          <span>{{ selectLang(req.courseTitle) }}</span>
+          <span>{{ req.price }} L.E.</span>
+          <span>{{ req.date }}</span>
+          <span
+            :class="{
+              pending: req.status == 'Pending',
+              rejected: req.status == 'Rejected',
+              accepted: req.status == 'Success',
+            }"
+            >{{ req.status }}</span
+          >
+          <span
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
+              margin-block: 1rem;
+            "
+          >
+            <Button
+              @click="
+                requestOrderToShowComments = i;
+                showComments = true;
               "
-            >
-              <Button
-                @click="
-                  requestOrderToShowComments = i;
-                  showComments = true;
-                "
-                style="font-size: 0.75rem; width: 100%"
-                label="Show Comments"
-              />
-              <Button
-                v-if="req.status == 'Pending'"
-                @click="
-                  () => {
-                    accept(req);
-                  }
-                "
-                style="
-                  font-size: 0.75rem;
-                  width: 100%;
-                  background-color: var(--correctAnswer);
-                  color: black;
-                "
-                label="Accept"
-              />
-              <Button
-                v-if="req.status == 'Pending'"
-                @click="
-                  () => {
-                    reject(req.id);
-                  }
-                "
-                style="
-                  font-size: 0.75rem;
-                  width: 100%;
-                  background-color: var(--wrongAnswer);
-                "
-                label="Reject"
-              />
-            </span>
-          </div>
+              style="font-size: 0.7rem; width: 100%"
+              label="Show Comments"
+            />
+            <Button
+              v-if="req.status == 'Pending'"
+              @click="
+                () => {
+                  accept(req);
+                }
+              "
+              style="
+                font-size: 0.7rem;
+                width: 100%;
+                background-color: var(--correctAnswer);
+                color: black;
+              "
+              label="Accept"
+            />
+            <Button
+              v-if="req.status == 'Pending'"
+              @click="
+                () => {
+                  reject(req.id);
+                }
+              "
+              style="
+                font-size: 0.7rem;
+                width: 100%;
+                background-color: var(--wrongAnswer);
+              "
+              label="Reject"
+            />
+          </span>
         </div>
       </div>
     </div>
@@ -299,12 +331,12 @@ function orderRequests(type:string){
 <style scoped>
 .container {
   display: grid;
-  grid-template-columns: 12rem 1fr;
+  grid-template-columns: 12rem calc(100vw - 12rem);
   min-height: 100vh;
 }
 .row {
   display: grid;
-  grid-template-columns: repeat(8, 9rem);
+  grid-template-columns: repeat(7, 10rem);
 }
 h3 {
   margin: 0;
@@ -312,15 +344,15 @@ h3 {
 .row > * {
   display: flex;
   align-items: center;
-  padding-left: 0.5rem;
+  padding-inline: 0.5rem;
   border: 2px solid var(--choiceBackgroundColor);
 }
 .wrapper {
   margin-top: 2rem;
-  margin-left: 2rem;
+  margin-inline: 2rem;
 }
-i{
-  padding-left: 0.5rem;
+i {
+  padding-inline: 0.5rem;
 }
 h2 {
   color: var(--accent1);
@@ -328,13 +360,9 @@ h2 {
   line-height: 1rem;
   border-bottom: 0.25rem solid var(--accent3);
 }
-.requests {
-  width: 90%;
-}
 .table-container {
-  padding-left: 1rem;
+  padding-inline: 1rem;
   overflow-x: scroll;
-  max-width: 100%;
 }
 h3 {
   color: var(--text);
@@ -379,5 +407,14 @@ span {
   width: fit-content;
   display: flex;
   gap: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  .container {
+  grid-template-columns:  100vw;
+  min-height: 100vh;
+}
+.sidebar{
+  display: none;
+}
 }
 </style>
