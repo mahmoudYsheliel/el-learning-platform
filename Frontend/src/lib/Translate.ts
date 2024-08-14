@@ -232,7 +232,7 @@ export const translationModule = {
   },
   email: {
     en: "Email",
-    ar: " الايميل",
+    ar: "البريد الإلكتروني",
   },
   pass: {
     en: "Password",
@@ -320,7 +320,7 @@ export const translationModule = {
   },
   childEmail: {
     en: "Child email",
-    ar: "ايميل  للطفل",
+    ar: "البريد الإلكتروني للطفل",
   },
   courseTitle: {
     en: "Course Title",
@@ -380,7 +380,7 @@ export const translationModule = {
   },
   emailTaken: {
     en: "Email is Taken",
-    ar: "تم أخذ  الايميل من قبل",
+    ar: "تم أخذ البريد الإلكتروني من قبل",
   },
   lessons: {
     en: "Lessons",
@@ -702,18 +702,6 @@ export const translationModule = {
     en:'Recommended Career',
     ar:'المهنة المقترحة '
   },
-  requests:{
-    en:'Requests',
-    ar:'الطلبات'
-  },
-  logs:{
-    en:'Activities',
-    ar:'الأنشطة '
-  },
-  parentEmail:{
-    en:'Parent Email',
-    ar:'ايميل الوالد'
-  }
 
 
 

@@ -15,8 +15,7 @@ from routes import (
     program_api,
     analysis_api
 )
-import os
-from fastapi.responses import FileResponse
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -48,13 +47,9 @@ app.include_router(analysis_api.router)
 
 
 
-@app.get("/{full_path:path}")
-async def catch_all(full_path: str):
-    index_path = os.path.join("dist", "index.html")
-    return FileResponse(index_path)
-
-
+#mount static files server
 app.mount('/', StaticFiles(directory='dist', html=True), name='dist')
+
 
 if __name__ == '__main__':
     uvicorn.run(app, host='0.0.0.0', port=8080)

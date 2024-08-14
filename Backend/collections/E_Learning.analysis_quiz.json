@@ -1,2588 +1,595 @@
 [{
   "_id": {
-    "$oid": "66afacc4766ec5a3ea5a0c41"
+    "$oid": "668f288a7cad99b82ce7ca0b"
   },
-  "id": "string",
-  "title": {
-    "en": "Comprehensive Quiz for Children Aged 6-9:",
-    "ar": "اختبار شامل للأطفال من عمر 6-9 سنوات"
-  },
-  "description": {
-    "en": "This comprehensive quiz is specifically designed for children aged 6-9. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
-    "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 6-9 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
-  },
-  "iq": {
-    "title": {
-      "en": "IQ Test",
-      "ar": "اختبار الذكاء"
+  "id": "1",
+  "title": "Personality and Skills Assessment",
+  "description": "\nPersonality and Skills Assessment is a comprehensive evaluation designed to identify individual strengths, weaknesses, and potential growth areas. This assessment combines personality profiling with skills testing to provide a holistic understanding of a person's capabilities. By analyzing traits such as communication style, problem-solving ability, and emotional intelligence, it offers insights into personal and professional development. This tool is invaluable for career planning, team building, and personal growth, enabling individuals to align their skills with their goals and aspirations. Whether for recruitment, employee development, or self-improvement, this assessment is a key to unlocking potential and enhancing performance.",
+  "sections": [
+    {
+      "id": 1,
+      "title": "Personality",
+      "questions": [
+        {
+          "id": 1,
+          "question": {
+            "english": "How do you handle stress?",
+            "arabic": "كيف تتعامل مع الضغوط؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I remain calm and think logically.",
+              "arabic": "أبقى هادئًا وأفكر بشكل منطقي."
+            },
+            {
+              "id": 2,
+              "english": "I get anxious but try to find solutions.",
+              "arabic": "أشعر بالقلق لكن أحاول العثور على حلول."
+            },
+            {
+              "id": 3,
+              "english": "I seek help from others.",
+              "arabic": "أطلب المساعدة من الآخرين."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 2,
+          "question": {
+            "english": "What motivates you?",
+            "arabic": "ما الذي يحفزك؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "Achieving goals",
+              "arabic": "تحقيق الأهداف"
+            },
+            {
+              "id": 2,
+              "english": "Helping others",
+              "arabic": "مساعدة الآخرين"
+            },
+            {
+              "id": 3,
+              "english": "Learning new things",
+              "arabic": "تعلم أشياء جديدة"
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 3,
+          "question": {
+            "english": "How do you prefer to work in a team?",
+            "arabic": "كيف تفضل العمل في فريق؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I like to take the lead.",
+              "arabic": "أحب أن أتولى القيادة."
+            },
+            {
+              "id": 2,
+              "english": "I prefer to support others.",
+              "arabic": "أفضل دعم الآخرين."
+            },
+            {
+              "id": 3,
+              "english": "I contribute equally.",
+              "arabic": "أسهم بالتساوي."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 4,
+          "question": {
+            "english": "What is your approach to problem-solving?",
+            "arabic": "ما هو نهجك في حل المشكلات؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I analyze all possible solutions.",
+              "arabic": "أقوم بتحليل كل الحلول الممكنة."
+            },
+            {
+              "id": 2,
+              "english": "I try the first idea that comes to mind.",
+              "arabic": "أجرب أول فكرة تأتي إلى ذهني."
+            },
+            {
+              "id": 3,
+              "english": "I seek advice from others.",
+              "arabic": "ألجأ إلى استشارة الآخرين."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 5,
+          "question": {
+            "english": "How do you handle criticism?",
+            "arabic": "كيف تتعامل مع الانتقادات؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I take it constructively.",
+              "arabic": "أتقبلها بشكل بناء."
+            },
+            {
+              "id": 2,
+              "english": "I feel discouraged but try to improve.",
+              "arabic": "أشعر بالإحباط ولكن أحاول التحسين."
+            },
+            {
+              "id": 3,
+              "english": "I ignore it.",
+              "arabic": "أتجاهلها."
+            }
+          ],
+          "correct_answer_id": 1
+        }
+      ],
+      "criteria": [
+        {
+          "min_score": 0,
+          "max_score": 2,
+          "future_steps": {
+            "feature_percentage_list": [
+              {
+                "feature": "Explore stress management techniques",
+                "percentage": 50
+              },
+              {
+                "feature": "Seek mentorship",
+                "percentage": 30
+              },
+              {
+                "feature": "Develop communication skills",
+                "percentage": 20
+              }
+            ]
+          },
+          "personality": {
+            "feature_percentage_list": [
+              {
+                "feature": "Calm",
+                "percentage": 40
+              },
+              {
+                "feature": "Supportive",
+                "percentage": 30
+              },
+              {
+                "feature": "Analytical",
+                "percentage": 30
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Stress management",
+                "percentage": 50
+              },
+              {
+                "feature": "Teamwork",
+                "percentage": 30
+              },
+              {
+                "feature": "Problem-solving",
+                "percentage": 20
+              }
+            ]
+          }
+        },
+        {
+          "min_score": 3,
+          "max_score": 4,
+          "future_steps": {
+            "feature_percentage_list": [
+              {
+                "feature": "Develop problem-solving skills",
+                "percentage": 70
+              },
+              {
+                "feature": "Enhance leadership skills",
+                "percentage": 20
+              },
+              {
+                "feature": "Improve emotional intelligence",
+                "percentage": 10
+              }
+            ]
+          },
+          "personality": {
+            "feature_percentage_list": [
+              {
+                "feature": "Analytical",
+                "percentage": 60
+              },
+              {
+                "feature": "Leader",
+                "percentage": 20
+              },
+              {
+                "feature": "Empathetic",
+                "percentage": 20
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Problem-solving",
+                "percentage": 60
+              },
+              {
+                "feature": "Leadership",
+                "percentage": 20
+              },
+              {
+                "feature": "Emotional intelligence",
+                "percentage": 20
+              }
+            ]
+          }
+        },
+        {
+          "min_score": 5,
+          "max_score": 5,
+          "future_steps": {
+            "feature_percentage_list": [
+              {
+                "feature": "Develop problem-solving skills",
+                "percentage": 80
+              },
+              {
+                "feature": "Master leadership techniques",
+                "percentage": 10
+              },
+              {
+                "feature": "Strengthen strategic thinking",
+                "percentage": 10
+              }
+            ]
+          },
+          "personality": {
+            "feature_percentage_list": [
+              {
+                "feature": "Highly Analytical",
+                "percentage": 80
+              },
+              {
+                "feature": "Strategic",
+                "percentage": 10
+              },
+              {
+                "feature": "Confident",
+                "percentage": 10
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Advanced Stress Management",
+                "percentage": 80
+              },
+              {
+                "feature": "Strategic Planning",
+                "percentage": 10
+              },
+              {
+                "feature": "High-level Leadership",
+                "percentage": 10
+              }
+            ]
+          }
+        }
+      ],
+      "last_question_number": 5
     },
-    "description": {
-      "en": "This section includes questions to assess the IQ of children aged 6-9. The questions are designed to evaluate logical reasoning, numerical ability, and problem-solving skills.",
-      "ar": "يتضمن هذا القسم أسئلة لتقييم الذكاء للأطفال من عمر 6-9 سنوات. تم تصميم الأسئلة لتقييم التفكير المنطقي، القدرة العددية، ومهارات حل المشكلات."
-    },
-    "iq_sections": [
-      {
-        "name": "IQ",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "What number comes next? 15, 13, 11, 9, 7, __",
-              "ar": "ما الرقم التالي؟ 15، 13، 11، 9، 7، __"
+    {
+      "id": 2,
+      "title": "Skills",
+      "questions": [
+        {
+          "id": 6,
+          "question": {
+            "english": "How do you approach learning new skills?",
+            "arabic": "كيف تقترب من تعلم مهارات جديدة؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I seek formal training.",
+              "arabic": "أبحث عن تدريب رسمي."
             },
-            "image": "",
-            "choices": [
+            {
+              "id": 2,
+              "english": "I learn through practical experience.",
+              "arabic": "أتعلم من خلال التجربة العملية."
+            },
+            {
+              "id": 3,
+              "english": "I prefer to learn independently.",
+              "arabic": "أفضل التعلم بشكل مستقل."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 7,
+          "question": {
+            "english": "How do you prioritize tasks?",
+            "arabic": "كيف تحدد أولوية المهام؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "Based on deadlines",
+              "arabic": "استنادًا إلى المواعيد النهائية"
+            },
+            {
+              "id": 2,
+              "english": "By importance and urgency",
+              "arabic": "بالأهمية والعاجلية"
+            },
+            {
+              "id": 3,
+              "english": "As they come up",
+              "arabic": "كما تأتي"
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 8,
+          "question": {
+            "english": "How do you adapt to change?",
+            "arabic": "كيف تتكيف مع التغيير؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I embrace it and look for opportunities.",
+              "arabic": "أتقبله وأبحث عن الفرص."
+            },
+            {
+              "id": 2,
+              "english": "I find it challenging but manage.",
+              "arabic": "أجد أنه تحدي ولكن أتعامل معه."
+            },
+            {
+              "id": 3,
+              "english": "I struggle with change.",
+              "arabic": "أصعب التغيير."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 9,
+          "question": {
+            "english": "How do you handle conflicts?",
+            "arabic": "كيف تتعامل مع النزاعات؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I try to find common ground.",
+              "arabic": "أحاول العثور على أرضية مشتركة."
+            },
+            {
+              "id": 2,
+              "english": "I avoid conflicts.",
+              "arabic": "أتجنب النزاعات."
+            },
+            {
+              "id": 3,
+              "english": "I confront the issue directly.",
+              "arabic": "أواجه المشكلة مباشرة."
+            }
+          ],
+          "correct_answer_id": 1
+        },
+        {
+          "id": 10,
+          "question": {
+            "english": "How do you handle tight deadlines?",
+            "arabic": "كيف تتعامل مع المواعيد النهائية الضيقة؟"
+          },
+          "choices": [
+            {
+              "id": 1,
+              "english": "I prioritize tasks effectively.",
+              "arabic": "أحدد أولوية المهام بشكل فعال."
+            },
+            {
+              "id": 2,
+              "english": "I feel stressed but manage to deliver.",
+              "arabic": "أشعر بالضغط لكن أتمكن من التسليم."
+            },
+            {
+              "id": 3,
+              "english": "I struggle to meet deadlines.",
+              "arabic": "أصعب على تلبية المواعيد النهائية."
+            }
+          ],
+          "correct_answer_id": 1
+        }
+      ],
+      "criteria": [
+        {
+          "min_score": 0,
+          "max_score": 2,
+          "future_steps": {
+            "feature_percentage_list": [
               {
-                "id": 0,
-                "choice": {
-                  "en": "5",
-                  "ar": "5"
-                },
-                "image": "",
-                "score": 2
+                "feature": "Enhance learning techniques",
+                "percentage": 50
               },
               {
-                "id": 1,
-                "choice": {
-                  "en": "2",
-                  "ar": "2"
-                },
-                "image": "",
-                "score": 1
+                "feature": "Seek training opportunities",
+                "percentage": 30
               },
               {
-                "id": 2,
-                "choice": {
-                  "en": "1",
-                  "ar": "1"
-                },
-                "image": "",
-                "score": 1
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "3",
-                  "ar": "3"
-                },
-                "image": "",
-                "score": 1
+                "feature": "Develop time management skills",
+                "percentage": 20
               }
             ]
           },
-          {
-            "id": 1,
-            "question": {
-              "en": "Tom has 8 apples. He gives 3 apples to his friend. How many apples does Tom have now?",
-              "ar": "توم لديه 8 تفاحات. يعطي 3 تفاحات لصديقه. كم عدد التفاح الذي يمتلكه توم الآن؟"
-            },
-            "image": "",
-            "choices": [
+          "personality": {
+            "feature_percentage_list": [
               {
-                "id": 0,
-                "choice": {
-                  "en": "4",
-                  "ar": "4"
-                },
-                "image": "",
-                "score": 1
+                "feature": "Highly Productive",
+                "percentage": 80
               },
               {
-                "id": 1,
-                "choice": {
-                  "en": "5",
-                  "ar": "5"
-                },
-                "image": "",
-                "score": 2
+                "feature": "Expert Planner",
+                "percentage": 10
               },
               {
-                "id": 2,
-                "choice": {
-                  "en": "6",
-                  "ar": "6"
-                },
-                "image": "",
-                "score": 1
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "7",
-                  "ar": "7"
-                },
-                "image": "",
-                "score": 1
+                "feature": "Mentor",
+                "percentage": 10
               }
             ]
           },
-          {
-            "id": 2,
-            "question": {
-              "en": "What is the next number in this sequence? 13, 20, 27, 34, 41, __",
-              "ar": "ما هو الرقم التالي في هذا التسلسل؟ 13، 20، 27، 34، 41، __"
-            },
-            "image": "",
-            "choices": [
+          "skills": {
+            "feature_percentage_list": [
               {
-                "id": 0,
-                "choice": {
-                  "en": "46",
-                  "ar": "46"
-                },
-                "image": "",
-                "score": 1
+                "feature": "Learning methods",
+                "percentage": 50
               },
               {
-                "id": 1,
-                "choice": {
-                  "en": "50",
-                  "ar": "50"
-                },
-                "image": "",
-                "score": 1
+                "feature": "Task prioritization",
+                "percentage": 30
               },
               {
-                "id": 2,
-                "choice": {
-                  "en": "48",
-                  "ar": "48"
-                },
-                "image": "",
-                "score": 3
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "55",
-                  "ar": "55"
-                },
-                "image": "",
-                "score": 1
-              }
-            ]
-          },
-          {
-            "id": 3,
-            "question": {
-              "en": "What is the next number in the following sequence? 1, 2, 4, 7, 11, ?",
-              "ar": "ما هو الرقم التالي في التسلسل التالي؟ 1، 2، 4، 7، 11، ؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "13",
-                  "ar": "13"
-                },
-                "image": "",
-                "score": 1
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "14",
-                  "ar": "14"
-                },
-                "image": "",
-                "score": 1
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "15",
-                  "ar": "15"
-                },
-                "image": "",
-                "score": 1
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "16",
-                  "ar": "16"
-                },
-                "image": "",
-                "score": 3
-              }
-            ]
-          },
-          {
-            "id": 4,
-            "question": {
-              "en": "What is the correct shape?",
-              "ar": "ما هو الشكل الصحيح ؟"
-            },
-            "image": "https://drive.google.com/thumbnail?id=1qB4mHrfEOGkLbGJQeWQW6MZFIHCtyhPI",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "A",
-                  "ar": "A"
-                },
-                "image": "https://drive.google.com/thumbnail?id=1JkM9UfkIswTDM1DbFgB19P-DMv0R0FLI",
-                "score": 3
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "B",
-                  "ar": "B"
-                },
-                "image": "https://drive.google.com/thumbnail?id=1ZV8ApQFl07kIiU_0bEwZ2RlOrOu71eNw",
-                "score": 1
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "C",
-                  "ar": "C"
-                },
-                "image": "https://drive.google.com/thumbnail?id=16uy0OEKJWsITFR8gu5Zqx8pfaga9zUGM",
-                "score": 1
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "D",
-                  "ar": "D"
-                },
-                "image": "https://drive.google.com/thumbnail?id=1I40C2W4Nj12g0dpUhvHKvrPSX0TiH8fX",
-                "score": 1
-              },
-              {
-                "id": 4,
-                "choice": {
-                  "en": "E",
-                  "ar": "E"
-                },
-                "image": "https://drive.google.com/thumbnail?id=1sZV4YTet8x99pzVNT0Wr9GZyvZHvyNhq",
-                "score": 1
-              },
-              {
-                "id": 5,
-                "choice": {
-                  "en": "F",
-                  "ar": "F"
-                },
-                "image": "https://drive.google.com/thumbnail?id=16b_9PCxhvWOla7WYuny1bpss8VwEMwnd",
-                "score": 1
-              }
-            ]
-          },
-          {
-            "id": 5,
-            "question": {
-              "en": "Sarah has 3 baskets. Each basket contains 4 apples. How many apples does Sarah have in total?",
-              "ar": "سارة لديها 3 سلال. يحتوي كل سلة على 4 تفاحات. كم عدد التفاح الذي تملكه سارة في المجموع؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "7",
-                  "ar": "7"
-                },
-                "image": "",
-                "score": 1
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "10",
-                  "ar": "10"
-                },
-                "image": "",
-                "score": 1
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "12",
-                  "ar": "12"
-                },
-                "image": "",
-                "score": 4
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "15",
-                  "ar": "15"
-                },
-                "image": "",
-                "score": 1
-              }
-            ]
-          },
-          {
-            "id": 6,
-            "question": {
-              "en": "What is the correct shape?",
-              "ar": "ما هو الشكل الصحيح ؟"
-            },
-            "image": "https://drive.google.com/thumbnail?id=1bAIAxzdF0RBv56h-0rBEIxH0uYd0l9Ze",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "A",
-                  "ar": "A"
-                },
-                "image": "https://drive.google.com/thumbnail?id=1ueP_nrmM-QTeXk0gFC85W_TihPSWLa14",
-                "score": 1
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "B",
-                  "ar": "B"
-                },
-                "image": "https://drive.google.com/thumbnail?id=16tMO4XdtsKkOJYF2V-2v_5yrG6MypE4B",
-                "score": 1
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "C",
-                  "ar": "C"
-                },
-                "image": "https://drive.google.com/thumbnail?id=1ylmwG_c4xI98utoLP_WQuEJ2dAoB80P9",
-                "score": 1
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "D",
-                  "ar": "D"
-                },
-                "image": "https://drive.google.com/thumbnail?id=1hhe9iltyP4HZFCiYhBoMEWyPODX4ERUd",
-                "score": 4
-              },
-              {
-                "id": 4,
-                "choice": {
-                  "en": "E",
-                  "ar": "E"
-                },
-                "image": "https://drive.google.com/thumbnail?id=1iUTzZ-pXf0jbB8BhnmD4LmRmW5M1EJfT",
-                "score": 1
-              },
-              {
-                "id": 5,
-                "choice": {
-                  "en": "F",
-                  "ar": "F"
-                },
-                "image": "https://drive.google.com/thumbnail?id=1r2aiAbd-0X4Kk6bTO-I-4aYI2I-Clus9",
-                "score": 1
+                "feature": "Adaptability",
+                "percentage": 20
               }
             ]
           }
-        ],
-        "last_question_number": 7
-      }
-    ]
-  },
-  "enneagram": {
-    "title": {
-      "en": "Enneagram Personality Types",
-      "ar": "أنواع الشخصية حسب الإنياجرام"
-    },
-    "description": {
-      "en": "The Enneagram section assesses nine distinct personality types, each with unique traits and tendencies. Answer questions to discover which type best describes you.",
-      "ar": "يقيِّم قسم الإنياجرام تسع أنواع شخصية متميزة، لكل منها سمات وميول فريدة. أجب على الأسئلة لاكتشاف أي نوع يصفك بشكل أفضل."
-    },
-    "personalities": [
-      {
-        "name": "The Perfectionist",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "Do you strive for perfection?",
-              "ar": "هل تسعى نحو الكمال؟"
-            },
-            "image": "",
-            "choices": [
+        },
+        {
+          "min_score": 3,
+          "max_score": 4,
+          "future_steps": {
+            "feature_percentage_list": [
               {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
+                "feature": "Advance learning strategies",
+                "percentage": 70
               },
               {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
+                "feature": "Master time management",
+                "percentage": 20
               },
               {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
+                "feature": "Improve adaptability",
+                "percentage": 10
               }
             ]
           },
-          {
-            "id": 1,
-            "question": {
-              "en": "Do you hold yourself to very high standards?",
-              "ar": "هل تلتزم بمعايير عالية جداً لنفسك؟"
-            },
-            "image": "",
-            "choices": [
+          "personality": {
+            "feature_percentage_list": [
               {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
+                "feature": "Productive",
+                "percentage": 60
               },
               {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
+                "feature": "Strategic",
+                "percentage": 20
               },
               {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
+                "feature": "Efficient",
+                "percentage": 20
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Advanced Learning",
+                "percentage": 60
               },
               {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
+                "feature": "Effective Prioritization",
+                "percentage": 30
+              },
+              {
+                "feature": "Change Management",
+                "percentage": 10
               }
             ]
           }
-        ],
-        "last_question_number": 1
-      },
-      {
-        "name": "The Giver",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "Do you work hard to be helpful to others?",
-              "ar": "هل تعمل بجد لتكون مفيداً للآخرين؟"
-            },
-            "image": "",
-            "choices": [
+        },
+        {
+          "min_score": 5,
+          "max_score": 5,
+          "future_steps": {
+            "feature_percentage_list": [
               {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
+                "feature": "Master learning techniques",
+                "percentage": 80
               },
               {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
+                "feature": "Excel in task management",
+                "percentage": 10
               },
               {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
+                "feature": "Enhance adaptability",
+                "percentage": 10
               }
             ]
           },
-          {
-            "id": 1,
-            "question": {
-              "en": "Do you like to be around people who you can help?",
-              "ar": "هل تحب أن تكون حول أشخاص يمكنك مساعدتهم؟"
-            },
-            "image": "",
-            "choices": [
+          "personality": {
+            "feature_percentage_list": [
               {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
+                "feature": "Planner",
+                "percentage": 40
               },
               {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
+                "feature": "Organized",
+                "percentage": 30
               },
               {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
+                "feature": "Curious",
+                "percentage": 30
+              }
+            ]
+          },
+          "skills": {
+            "feature_percentage_list": [
+              {
+                "feature": "Advanced Learning Strategies",
+                "percentage": 70
               },
               {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
+                "feature": "Effective Task Prioritization",
+                "percentage": 20
+              },
+              {
+                "feature": "Change Leadership",
+                "percentage": 10
               }
             ]
           }
-        ],
-        "last_question_number": 1
-      },
-      {
-        "name": "The Achiever",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "Is it important to you to achieve great things?",
-              "ar": "هل من المهم بالنسبة لك تحقيق أشياء عظيمة؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "question": {
-              "en": "Do you set ambitious goals for yourself?",
-              "ar": "هل تضع أهدافاً طموحة لنفسك؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
-              }
-            ]
-          }
-        ],
-        "last_question_number": 1
-      },
-      {
-        "name": "The Individualist",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "Do you feel your emotions very deeply?",
-              "ar": "هل تشعر بمشاعرك بعمق كبير؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "question": {
-              "en": "Have you always felt different from other people?",
-              "ar": "هل شعرت دائماً بأنك مختلف عن الآخرين؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
-              }
-            ]
-          }
-        ],
-        "last_question_number": 1
-      },
-      {
-        "name": "The Investigator",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "Are you driven by a desire to understand things?",
-              "ar": "هل تدفعك رغبة في فهم الأشياء؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "question": {
-              "en": "Do you enjoy exploring new ideas and concepts?",
-              "ar": "هل تستمتع باستكشاف أفكار ومفاهيم جديدة؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
-              }
-            ]
-          }
-        ],
-        "last_question_number": 1
-      },
-      {
-        "name": "The Skeptic",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "Do you value security and stability in your life?",
-              "ar": "هل تقدر الأمان والاستقرار في حياتك؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "question": {
-              "en": "Do you often seek reassurance from others?",
-              "ar": "هل تسعى غالباً للحصول على الطمأنينة من الآخرين؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
-              }
-            ]
-          }
-        ],
-        "last_question_number": 1
-      },
-      {
-        "name": "The Enthusiast",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "Are you always looking for new experiences?",
-              "ar": "هل تبحث دائماً عن تجارب جديدة؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "question": {
-              "en": "Do you enjoy being spontaneous?",
-              "ar": "هل تستمتع بالاندفاعية؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
-              }
-            ]
-          }
-        ],
-        "last_question_number": 1
-      },
-      {
-        "name": "The Challenger",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "Do you take charge of situations?",
-              "ar": "هل تتولى المسؤولية في المواقف؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "question": {
-              "en": "Do you enjoy confronting challenges directly?",
-              "ar": "هل تستمتع بمواجهة التحديات بشكل مباشر؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
-              }
-            ]
-          }
-        ],
-        "last_question_number": 1
-      },
-      {
-        "name": "The Peacemaker",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "Do you let other people decide what to do?",
-              "ar": "هل تترك للآخرين تحديد ما يجب القيام به؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "question": {
-              "en": "Do you go along with what other people want?",
-              "ar": "هل تتماشى مع ما يريده الآخرون؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 30
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 40
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 50
-              }
-            ]
-          }
-        ],
-        "last_question_number": 1
-      }
-    ]
-  },
-  "learning_styles": {
-    "title": {
-      "en": "Learning Styles",
-      "ar": "أنماط التعلم"
-    },
-    "description": {
-      "en": "Explore the various learning styles that enhance individual educational experiences. Discover how visual, auditory, and kinesthetic approaches can be leveraged to optimize learning and retention.",
-      "ar": " استكشف أنماط التعلم المختلفة التي تعزز التجارب التعليمية الفردية. اكتشف كيفية الاستفادة من الأساليب البصرية والسمعية والحركية لتحسين التعلم والاحتفاظ بالمعلومات."
-    },
-    "learning_style_features": [
-      {
-        "name": "Auditory",
-        "audio_link": "https://drive.google.com/file/d/1k2Wr8HpFLzJHPVjQZIJeOqngwfagMdlS/preview",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "It's April and it's ......... .",
-              "ar": "إنه أبريل و ......... ."
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "wet",
-                  "ar": "مبلل"
-                },
-                "image": "",
-                "score": 14
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "snowy",
-                  "ar": "ثلجي"
-                },
-                "image": "",
-                "score": 0
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "question": {
-              "en": "We are in the park in ...... .",
-              "ar": "نحن في الحديقة في ...... ."
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "umbrella",
-                  "ar": "مظلة"
-                },
-                "image": "",
-                "score": 0
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "June",
-                  "ar": "يونيو"
-                },
-                "image": "",
-                "score": 14
-              }
-            ]
-          },
-          {
-            "id": 2,
-            "question": {
-              "en": "In August we are at the ........ .",
-              "ar": "في أغسطس نحن في ........ ."
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "beach",
-                  "ar": "شاطئ"
-                },
-                "image": "",
-                "score": 14
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "hot",
-                  "ar": "حار"
-                },
-                "image": "",
-                "score": 0
-              }
-            ]
-          },
-          {
-            "id": 3,
-            "question": {
-              "en": "In October it's ...... .",
-              "ar": "في أكتوبر يكون ...... ."
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "sunny",
-                  "ar": "مشمس"
-                },
-                "image": "",
-                "score": 0
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "windy",
-                  "ar": "عاصف"
-                },
-                "image": "",
-                "score": 14
-              }
-            ]
-          },
-          {
-            "id": 4,
-            "question": {
-              "en": "In January we make a ....... .",
-              "ar": "في يناير نصنع ....... ."
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "hat",
-                  "ar": "قبعة"
-                },
-                "image": "",
-                "score": 0
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "snowman",
-                  "ar": "رجل الثلج"
-                },
-                "image": "",
-                "score": 7
-              }
-            ]
-          }
-        ],
-        "last_question_number": 4
-      },
-      {
-        "name": "Auditory",
-        "audio_link": "https://drive.google.com/file/d/1cZM6yZ-q0-PCZV3_yqxuCCO6NGlC6N0q/preview",
-        "questions": [
-          {
-            "id": 5,
-            "question": {
-              "en": "The train is small.",
-              "ar": "القطار صغير."
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "True",
-                  "ar": "صحيح"
-                },
-                "image": "",
-                "score": 0
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "False",
-                  "ar": "خطأ"
-                },
-                "image": "",
-                "score": 14
-              }
-            ]
-          },
-          {
-            "id": 6,
-            "question": {
-              "en": "The train is green.",
-              "ar": "القطار أخضر."
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "True",
-                  "ar": "صحيح"
-                },
-                "image": "",
-                "score": 14
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "False",
-                  "ar": "خطأ"
-                },
-                "image": "",
-                "score": 0
-              }
-            ]
-          }
-        ],
-        "last_question_number": 7
-      },
-      {
-        "name": "Reading/Writing",
-        "audio_link": null,
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "The Earth orbits the Sun once every 365.25 days. This period of time is known as a year. To account for the extra 0.25 days, we add an extra day to the calendar every four years, creating what is known as a leap year. How often do we have a leap year?",
-              "ar": "تدور الأرض حول الشمس مرة كل 365.25 يومًا. يُعرف هذا الوقت بسنة. لتعويض الأيام الإضافية 0.25، نضيف يومًا إضافيًا إلى التقويم كل أربع سنوات، مما ينشئ ما يُعرف بسنة كبيسة. كم مرة لدينا سنة كبيسة؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Every year",
-                  "ar": "كل سنة"
-                },
-                "image": "",
-                "score": 0
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Every two years",
-                  "ar": "كل سنتين"
-                },
-                "image": "",
-                "score": 0
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Every three years",
-                  "ar": "كل ثلاث سنوات"
-                },
-                "image": "",
-                "score": 0
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Every four years",
-                  "ar": "كل أربع سنوات"
-                },
-                "image": "",
-                "score": 100
-              }
-            ]
-          }
-        ],
-        "last_question_number": 0
-      },
-      {
-        "name": "Visual",
-        "audio_link": null,
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "How do you focus better when someone is talking?",
-              "ar": "كيف تركز بشكل أفضل عندما يتحدث شخص ما؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Image of a child looking at someone",
-                  "ar": "صورة لطفل ينظر إلى شخص ما"
-                },
-                "image": "https://drive.google.com/thumbnail?id=1RDSM32epPacyumO3G1EPHt8ndsyOGXMT",
-                "score": 50
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Image of a child with eyes closed",
-                  "ar": "صورة لطفل مغلق العينين"
-                },
-                "image": "https://drive.google.com/thumbnail?id=1C-vVKBXlgXjj0918gyCG7CHMZJsWVRl8",
-                "score": 0
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "question": {
-              "en": "How do you remember things better?",
-              "ar": "كيف تتذكر الأشياء بشكل أفضل؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Image of a notebook",
-                  "ar": "صورة لمفكرة"
-                },
-                "image": "https://drive.google.com/thumbnail?id=1vZIyjQSLsJ4rUTkad7Q6UBG3ftUzH8Im",
-                "score": 50
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Image of a child listening",
-                  "ar": "صورة لطفل يستمع"
-                },
-                "image": "https://drive.google.com/thumbnail?id=1mN2RQqb6Yxkr6ynpfo8J8tEDf4zpSrq5",
-                "score": 0
-              }
-            ]
-          }
-        ],
-        "last_question_number": 1
-      }
-    ]
-  },
-  "duration": 4500,
-  "big5traits": {
-    "title": {
-      "en": "Big Five Personality Traits",
-      "ar": "سمات الشخصية الخمس الكبرى"
-    },
-    "description": {
-      "en": "This section includes questions to assess the Big Five Personality Traits of children aged 6-9. The traits include Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.",
-      "ar": "يتضمن هذا القسم أسئلة لتقييم سمات الشخصية الخمس الكبرى للأطفال من عمر 6-9 سنوات. السمات تشمل الانفتاح، الضمير، الانبساط، التوافق، والعصابية."
-    },
-    "traits": [
-      {
-        "name": "Neuroticism",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "Do you sometimes worry about things?",
-              "ar": "هل تقلق بشأن الأشياء أحياناً؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "question": {
-              "en": "Do you get angry quickly?",
-              "ar": "هل تغضب بسرعة؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          },
-          {
-            "id": 2,
-            "question": {
-              "en": "Do you often feel sad?",
-              "ar": "هل تشعر بالحزن كثيراً؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          },
-          {
-            "id": 3,
-            "question": {
-              "en": "Do you panic easily?",
-              "ar": "هل تشعر بالهلع بسهولة؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          }
-        ],
-        "last_question_number": 0
-      },
-      {
-        "name": "Extraversion",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "Do you make new friends easily?",
-              "ar": "هل تصادق أصدقاء جدد بسهولة؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "question": {
-              "en": "Do you enjoy big parties or gatherings?",
-              "ar": "هل تستمتع بالحفلات الكبيرة أو التجمعات؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          },
-          {
-            "id": 2,
-            "question": {
-              "en": "Do you like to talk to many different people?",
-              "ar": "هل تحب التحدث إلى العديد من الأشخاص المختلفين؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          },
-          {
-            "id": 3,
-            "question": {
-              "en": "Do you feel comfortable around other people?",
-              "ar": "هل تشعر بالراحة حول الآخرين؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          }
-        ],
-        "last_question_number": 0
-      },
-      {
-        "name": "Openness",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "Do you like to imagine and think of new things?",
-              "ar": "هل تحب تخيل والتفكير في أشياء جديدة؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "question": {
-              "en": "Do you enjoy daydreaming?",
-              "ar": "هل تستمتع بالحلم اليقظ؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          },
-          {
-            "id": 2,
-            "question": {
-              "en": "Do you love to read books and stories?",
-              "ar": "هل تحب قراءة الكتب والقصص؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          },
-          {
-            "id": 3,
-            "question": {
-              "en": "Do you like to see new and different places?",
-              "ar": "هل تحب رؤية أماكن جديدة ومختلفة؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          }
-        ],
-        "last_question_number": 0
-      },
-      {
-        "name": "Agreeableness",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "Do you trust other people?",
-              "ar": "هل تثق بالآخرين؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "question": {
-              "en": "Do you enjoy helping others?",
-              "ar": "هل تستمتع بمساعدة الآخرين؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          },
-          {
-            "id": 2,
-            "question": {
-              "en": "Do you think other people are good and kind?",
-              "ar": "هل تعتقد أن الآخرين طيبون وودودون؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          },
-          {
-            "id": 3,
-            "question": {
-              "en": "Do you feel bad when others are sad?",
-              "ar": "هل تشعر بالحزن عندما يكون الآخرون حزينين؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          }
-        ],
-        "last_question_number": 0
-      },
-      {
-        "name": "Conscientiousness",
-        "questions": [
-          {
-            "id": 0,
-            "question": {
-              "en": "Do you finish your tasks or homework well?",
-              "ar": "هل تكمل مهامك أو واجباتك المنزلية بشكل جيد؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          },
-          {
-            "id": 1,
-            "question": {
-              "en": "Do you like to clean up your toys and room?",
-              "ar": "هل تحب تنظيف ألعابك وغرفتك؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          },
-          {
-            "id": 2,
-            "question": {
-              "en": "Do you always keep your promises?",
-              "ar": "هل تلتزم دائماً بوعودك؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          },
-          {
-            "id": 3,
-            "question": {
-              "en": "Do you work hard to do your best?",
-              "ar": "هل تعمل بجد لتبذل قصارى جهدك؟"
-            },
-            "image": "",
-            "choices": [
-              {
-                "id": 0,
-                "choice": {
-                  "en": "Never",
-                  "ar": "أبداً"
-                },
-                "image": "",
-                "score": 10
-              },
-              {
-                "id": 1,
-                "choice": {
-                  "en": "Sometimes",
-                  "ar": "أحياناً"
-                },
-                "image": "",
-                "score": 15
-              },
-              {
-                "id": 2,
-                "choice": {
-                  "en": "Often",
-                  "ar": "كثيراً"
-                },
-                "image": "",
-                "score": 20
-              },
-              {
-                "id": 3,
-                "choice": {
-                  "en": "Always",
-                  "ar": "دائماً"
-                },
-                "image": "",
-                "score": 25
-              }
-            ]
-          }
-        ],
-        "last_question_number": 0
-      }
-    ]
-  },
-  "course_title_follow": "start",
-  "max_age": 9,
-  "min_age": 6
+        }
+      ],
+      "last_question_number": 10
+    }
+  ],
+  "duration": 300,
+  "when_to_apply": {
+    "course_to_follow_id": "none",
+    "percentage": 0
+  }
 }]

@@ -315,33 +315,3 @@ export const iqLevels= [
     ar:'متفوق'
   }
 ]
-
-
-export const managerSidebarPages = computed(() => {
-  return [
-    {
-      label: selectLang(translationModule.requests),
-      name: 'Manage Requests',
-      to: "manageRequests",
-      icon: "pi pi-bell",
-    },
-    {
-      label: selectLang(translationModule.courses),
-      name: 'Manage Courses',
-      to: "manageCourses",
-      icon: "pi pi-server",
-    },
-    {
-      label: selectLang(translationModule.instructor),
-      name: 'Manage Instructors',
-      to: "manageInstructors",
-      icon: "pi pi-users",
-    },
-    {
-      label: selectLang(translationModule.logs),
-      name: 'Manage Logs',
-      to: "manageLogs",
-      icon: "pi pi-arrow-right-arrow-left",
-    },
-  ];
-});

@@ -31,7 +31,6 @@ async def create_analysis_quiz(new_analysis_quiz:AnalysisQuiz =Body(embed=True),
 
 @router.post('/get_analysis_quiz') 
 async def get_analysis_quiz(analysis_quiz_id:str=Body(embed=True),userId:str = Depends(auth_user))-> ServiceResponse:
-    print(userId)
     res = await analysis_database.get_analysis_quiz(analysis_quiz_id,userId)
     return res
 

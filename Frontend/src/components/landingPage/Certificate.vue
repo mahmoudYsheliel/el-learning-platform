@@ -57,8 +57,8 @@ p {
 button {
   padding: 1rem 3rem;
 }
-.image {
-  width: 40%;
+image {
+  height: fit-content;
 }
 @media screen and (max-width: 1400px) {
   .image {
