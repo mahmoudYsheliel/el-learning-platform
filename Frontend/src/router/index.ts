@@ -1,29 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
-import LandingPage from "../views/generalViews/LandingPage.vue";
-
-import LoginPage from "../views/generalViews/LoginPage.vue";
-import ViewCourseDetails from "../views/studentViews/ViewCourseDetails.vue";
-import viewCoursePage from "../views/studentViews/viewCoursePage.vue";
-import signupPage from "@/views/generalViews/signupPage.vue";
-import viewProgram from "@/views/studentViews/viewProgram.vue";
-import parentHome from "@/views/parentViews/parentHome.vue";
-import childrenCourses from "@/views/parentViews/childrenCourses.vue";
-import childrenProgress from "@/views/parentViews/childrenProgress.vue";
-import childrenAnalysis from "@/views/parentViews/childrenAnalysis.vue";
-import childNotifications from "@/views/studentViews/childNotifications.vue";
-import subscription from "@/views/parentViews/subscription.vue";
-import parentSettings from "@/views/parentViews/parentSettings.vue";
-import addChild from "@/views/parentViews/addChild.vue";
-import parentViewCourse from "@/views/parentViews/parentViewCourse.vue";
-import childCourses from "@/views/studentViews/childCourses.vue";
-import analysisQuiz from "@/views/studentViews/analysisQuiz.vue";
-import manageRequests from "@/views/adminViews/manageRequests.vue"
-import manageCourses from "@/views/adminViews/manageCourses.vue";
-import manageInstructors from "@/views/adminViews/manageInstructors.vue";
-import manageLogs from "@/views/adminViews/manageLogs.vue";
-import AdminProgram from "@/views/adminViews/AdminProgram.vue";
 import { useToken, usePersonalInfo } from "../stores/token";
 
+import LandingPage from "../views/generalViews/LandingPage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,7 +9,7 @@ const router = createRouter({
     {
       path: "/login",
       name: "login",
-      component: LoginPage,
+      component: ()=> import ("../views/generalViews/LoginPage.vue"),
       meta: { requredAuth: false, userType: "Any" },
     },
     {
@@ -43,25 +21,25 @@ const router = createRouter({
     {
       path: "/viewCourseDetails/:courseId",
       name: "viewCourseDetails",
-      component: ViewCourseDetails,
+      component: ()=> import ("../views/studentViews/ViewCourseDetails.vue"),
       meta: { requredAuth: false, userType: "Any" },
     },
     {
       path: "/viewCoursePage/:courseId/:enrollmentId/:materialId",
       name: "viewCoursePage",
-      component: viewCoursePage,
+      component: ()=> import ("../views/studentViews/viewCoursePage.vue"),
       meta: { requredAuth: true, userType: "Child" },
     },
     {
       path: "/signup",
       name: "signup",
-      component: signupPage,
+      component: ()=> import ( "@/views/generalViews/signupPage.vue"),
       meta: { requredAuth: false, userType: "Any" },
     },
     {
       path: "/programs/:programId",
       name: "programs",
-      component: viewProgram,
+      component: ()=> import ("@/views/studentViews/viewProgram.vue"),
       meta: { requredAuth: false, userType: "Any" },
     },
 
@@ -69,49 +47,49 @@ const router = createRouter({
     {
       path: "/parentHome",
       name: "parentHome",
-      component: parentHome,
+      component: ()=> import ("@/views/parentViews/parentHome.vue"),
       meta: { requredAuth: true, userType: "Parent" },
     },
     {
       path: "/childrenProgress",
       name: "childrenProgress",
-      component: childrenProgress,
+      component: ()=> import ("@/views/parentViews/childrenProgress.vue"),
       meta: { requredAuth: true, userType: "Parent" },
     },
     {
       path: "/childrenCourses",
       name: "childrenCourses",
-      component: childrenCourses,
+      component: ()=> import ("@/views/parentViews/childrenCourses.vue"),
       meta: { requredAuth: true, userType: "Parent" },
     },
     {
       path: "/childrenAnalysis",
       name: "childrenAnalysis",
-      component: childrenAnalysis,
+      component: ()=> import ("@/views/parentViews/childrenAnalysis.vue"),
       meta: { requredAuth: true, userType: "Parent" },
     },
     {
       path: "/parentViewCourse/:courseId/:studentId/:isEnrolled",
       name: "parentViewCourse",
-      component: parentViewCourse,
+      component: ()=> import ("@/views/parentViews/parentViewCourse.vue"),
       meta: { requredAuth: true, userType: "Parent" },
     },
     {
       path: "/addChild",
       name: "addChild",
-      component: addChild,
+      component: ()=> import ("@/views/parentViews/addChild.vue"),
       meta: { requredAuth: true, userType: "Parent" },
     },
     {
       path: "/parentSettings",
       name: "parentSettings",
-      component: parentSettings,
+      component: ()=> import ("@/views/parentViews/parentSettings.vue"),
       meta: { requredAuth: true, userType: "Parent" },
     },
     {
       path: "/subscription",
       name: "subscription",
-      component: subscription,
+      component: ()=> import ("@/views/parentViews/subscription.vue"),
       meta: { requredAuth: true, userType: "Parent" },
     },
 
@@ -119,53 +97,53 @@ const router = createRouter({
     {
       path: "/childCourses",
       name: "childCourses",
-      component: childCourses,
+      component: ()=> import ("@/views/studentViews/childCourses.vue"),
       meta: { requredAuth: true, userType: "Child" },
     },
     {
       path: "/childNotifications",
       name: "childNotifications",
-      component: childNotifications,
+      component: ()=> import ("@/views/studentViews/childNotifications.vue"),
       meta: { requredAuth: true, userType: "Child" },
     },
     
     {
       path: "/analysisQuiz/:quizId",
       name: "analysisQuiz",
-      component: analysisQuiz,
+      component: ()=> import ("@/views/studentViews/analysisQuiz.vue"),
       meta: { requredAuth: true, userType: "Child" },
     },
     {
       path: "/manageRequests",
       name: "manageRequests",
-      component: manageRequests,
+      component: ()=> import ("@/views/adminViews/manageRequests.vue"),
       meta: { requredAuth: true, userType: "Admin" },
     },
     {
       path: "/manageCourses",
       name: "manageCourses",
-      component: manageCourses,
+      component: ()=> import ("@/views/adminViews/manageCourses.vue"),
       meta: { requredAuth: true, userType: "Admin" },
     },
     {
       path: "/manageInstructors",
       name: "manageInstructors",
-      component: manageInstructors,
+      component: ()=> import ("@/views/adminViews/manageInstructors.vue"),
       meta: { requredAuth: true, userType: "Admin" },
     },
     {
       path: "/manageLogs",
       name: "manageLogs",
-      component: manageLogs,
+      component: ()=> import ("@/views/adminViews/manageLogs.vue"),
       meta: { requredAuth: true, userType: "Admin" },
     },
     {
       path: "/AdminProgram/:programId",
       name: "AdminProgram",
-      component: AdminProgram,
+      component: ()=> import ("@/views/adminViews/AdminProgram.vue"),
       meta: { requredAuth: true, userType: "Admin" },
     },
-    { path: "/:pathMatch(.*)", name: "notFound", component: LandingPage },
+    { path: "/:pathMatch(.*)", name: "notFound", component: ()=> import ("../views/generalViews/LandingPage.vue") },
   ],
 
   scrollBehavior(to, from, savedPosition) {

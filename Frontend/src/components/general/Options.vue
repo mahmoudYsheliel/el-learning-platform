@@ -29,7 +29,7 @@ programRequester.callApi().then((res) => {
   }
 });
 
-function setLang(selectedLang: string) {
+function setLang(selectedLang: string | undefined) {
   if (selectedLang == 'English'){
     lang.setLang('en');
   }
