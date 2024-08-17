@@ -3,8 +3,14 @@
     "$oid": "6679a4bf24650df2a16196d2"
   },
   "id": "string",
-  "title": "Exploring Robots and Their Applications",
-  "description": "Discover the basics of robotics, including robot definitions, types, components, and applications in various fields, setting a foundation for building and programming your own robots.",
+  "title": {
+    "en": "Exploring Robots and Their Applications",
+    "ar": "استكشاف الروبوتات وتطبيقاتها"
+  },
+  "description": {
+    "en": "Discover the basics of robotics, including robot definitions, types, components, and applications in various fields, setting a foundation for building and programming your own robots.",
+    "ar": "اكتشف أساسيات الروبوتات، بما في ذلك تعريفات الروبوتات وأنواعها ومكوناتها وتطبيقاتها في مختلف المجالات، مما يضع أساسًا لبناء وبرمجة الروبوتات الخاصة بك."
+  },
   "source": "https://drive.google.com/file/d/1p3KX-1m-IeFKd09vOmDJ3mYeXC08JJAc/preview"
 },
 {
@@ -12,8 +18,14 @@
     "$oid": "6679a5a924650df2a16196d3"
   },
   "id": "string",
-  "title": "Understanding Robots and Their Types",
-  "description": "Learn the fundamentals of robotics, including what robots are, their components, and why we use them. Discover different types of robots and their applications in various fields.",
+  "title": {
+    "en": "Understanding Robots and Their Types",
+    "ar": "فهم الروبوتات وأنواعها"
+  },
+  "description": {
+    "en": "Learn the fundamentals of robotics, including what robots are, their components, and why we use them. Discover different types of robots and their applications in various fields.",
+    "ar": "تعلم أساسيات الروبوتات، بما في ذلك ماهية الروبوتات ومكوناتها ولماذا نستخدمها. اكتشف أنواع الروبوتات المختلفة وتطبيقاتها في مجالات متعددة."
+  },
   "source": "https://drive.google.com/file/d/1j14qZVbYrV5cuw5lNdpUKxvmuySmqtSk/preview"
 },
 {
@@ -21,8 +33,14 @@
     "$oid": "6679a66224650df2a16196d4"
   },
   "id": "string",
-  "title": "Understanding Robots and Their Components",
-  "description": "Learn about robots, their types, components, and applications. Understand the essentials needed to build and program robots. Perfect for beginners in robotics",
+  "title": {
+    "en": "Understanding Robots and Their Components",
+    "ar": "فهم الروبوتات ومكوناتها"
+  },
+  "description": {
+    "en": "Learn about robots, their types, components, and applications. Understand the essentials needed to build and program robots. Perfect for beginners in robotics.",
+    "ar": "تعلم عن الروبوتات وأنواعها ومكوناتها وتطبيقاتها. فهم الأساسيات اللازمة لبناء وبرمجة الروبوتات. مثالي للمبتدئين في مجال الروبوتات."
+  },
   "source": "https://drive.google.com/file/d/1RTdpO_PHAKwSSZUJfmio4ojSwUhd4Nip/preview"
 },
 {
@@ -30,8 +48,14 @@
     "$oid": "6679a7f624650df2a16196d5"
   },
   "id": "string",
-  "title": "From Mechanics to Programming",
-  "description": "Learn the essentials of building a robot, including mechanics, material science, kinematics, 3D modeling, electricity basics, power electronics, sensors, and programming with Arduino.",
+  "title": {
+    "en": "From Mechanics to Programming",
+    "ar": "من الميكانيكا إلى البرمجة"
+  },
+  "description": {
+    "en": "Learn the essentials of building a robot, including mechanics, material science, kinematics, 3D modeling, electricity basics, power electronics, sensors, and programming with Arduino.",
+    "ar": "تعلم أساسيات بناء الروبوت، بما في ذلك الميكانيكا، علوم المواد، الحركيات، النمذجة ثلاثية الأبعاد، أساسيات الكهرباء، الإلكترونيات للطاقة، الحساسات، والبرمجة باستخدام Arduino."
+  },
   "source": "https://drive.google.com/file/d/1FU4zoYZZCMsPwjgX1rLWGFdcknvaZRzd/preview"
 },
 {
@@ -39,8 +63,14 @@
     "$oid": "6679a93224650df2a16196d6"
   },
   "id": "string",
-  "title": "Understanding Electricity: Basics, Circuits, and Power Generation",
-  "description": "Electricity Fundamentals: Circuits, Conductivity, and Renewable Energy. Learn about circuits, conductors, electron flow, environmental impacts, and solar power generation limitations.",
+  "title": {
+    "en": "Understanding Electricity: Basics, Circuits, and Power Generation",
+    "ar": "فهم الكهرباء: الأساسيات، الدوائر، وتوليد الطاقة"
+  },
+  "description": {
+    "en": "Electricity Fundamentals: Circuits, Conductivity, and Renewable Energy. Learn about circuits, conductors, electron flow, environmental impacts, and solar power generation limitations.",
+    "ar": "أساسيات الكهرباء: الدوائر، التوصيلية، والطاقة المتجددة. تعرف على الدوائر، الموصلات، تدفق الإلكترونات، التأثيرات البيئية، وقيود توليد الطاقة الشمسية."
+  },
   "source": "https://drive.google.com/file/d/1rQaTvW9DTtRlDby0M6Zix5-4WeynbEyo/preview"
 },
 {
@@ -48,8 +78,14 @@
     "$oid": "6679a9cf24650df2a16196d7"
   },
   "id": "string",
-  "title": "Electricity Essentials: Current, Voltage, and Resistance",
-  "description": "Explore Ohm's law and its relationship between voltage, current, and resistance, crucial for understanding electrical circuits.",
+  "title": {
+    "en": "Electricity Essentials: Current, Voltage, and Resistance",
+    "ar": "أساسيات الكهرباء: التيار، الجهد، والمقاومة"
+  },
+  "description": {
+    "en": "Explore Ohm's law and its relationship between voltage, current, and resistance, crucial for understanding electrical circuits.",
+    "ar": "استكشف قانون أوم وعلاقته بين الجهد والتيار والمقاومة، وهو أمر حيوي لفهم الدوائر الكهربائية."
+  },
   "source": "https://drive.google.com/file/d/1sdfbUf4cLc4SWegrZUpGzAh78kHzpgO-/preview"
 },
 {
@@ -57,8 +93,14 @@
     "$oid": "6679aa4f24650df2a16196d8"
   },
   "id": "string",
-  "title": "Understanding Electrical Power: Units and Concepts",
-  "description": "Learn about the unit of electrical power and the distinction between power and energy in electrical systems.",
+  "title": {
+    "en": "Understanding Electrical Power: Units and Concepts",
+    "ar": "فهم الطاقة الكهربائية: الوحدات والمفاهيم"
+  },
+  "description": {
+    "en": "Learn about the unit of electrical power and the distinction between power and energy in electrical systems.",
+    "ar": "تعلم عن وحدة الطاقة الكهربائية والتمييز بين الطاقة والقدرة في الأنظمة الكهربائية."
+  },
   "source": "https://drive.google.com/file/d/18g4ZY3__32J-MKLZzopi68LVylV6y_aP/preview"
 },
 {
@@ -66,8 +108,14 @@
     "$oid": "6679aabb24650df2a16196d9"
   },
   "id": "string",
-  "title": "Switches in Robotics: Control and Circuit Management",
-  "description": "Learn about the role of switches in robot circuits, including their function in controlling current flow and managing circuit operations",
+  "title": {
+    "en": "Switches in Robotics: Control and Circuit Management",
+    "ar": "المفاتيح في الروبوتات: التحكم وإدارة الدوائر"
+  },
+  "description": {
+    "en": "Learn about the role of switches in robot circuits, including their function in controlling current flow and managing circuit operations.",
+    "ar": "تعلم عن دور المفاتيح في دوائر الروبوتات، بما في ذلك وظيفتها في التحكم بتدفق التيار وإدارة عمليات الدائرة."
+  },
   "source": "https://drive.google.com/file/d/1g15BP4OSf-sZAu5jf7bysF5BxnDU4-s4/preview"
 },
 {
@@ -75,8 +123,14 @@
     "$oid": "6679ab1824650df2a16196da"
   },
   "id": "string",
-  "title": "Mechanical Concepts in Robotics: Motion and Measurement",
-  "description": "xplore mechanical concepts crucial for describing robot motion, including distance, velocity, acceleration, and different types of motion. Dive into definitions, equations, and practical examples to understand movement in robotics",
+  "title": {
+    "en": "Mechanical Concepts in Robotics: Motion and Measurement",
+    "ar": "المفاهيم الميكانيكية في الروبوتات: الحركة والقياس"
+  },
+  "description": {
+    "en": "Explore mechanical concepts crucial for describing robot motion, including distance, velocity, acceleration, and different types of motion. Dive into definitions, equations, and practical examples to understand movement in robotics.",
+    "ar": "استكشف المفاهيم الميكانيكية الأساسية لوصف حركة الروبوت، بما في ذلك المسافة، السرعة، التسارع، وأنواع الحركة المختلفة. اغمر في التعريفات والمعادلات والأمثلة العملية لفهم الحركة في الروبوتات."
+  },
   "source": "https://drive.google.com/file/d/1zZUuP0WGDgbeKjEcn1NStJThHKaW-qkb/preview"
 },
 {
@@ -84,8 +138,14 @@
     "$oid": "6679ab7c24650df2a16196db"
   },
   "id": "string",
-  "title": "Understanding Newton's Laws and Forces in Robotics",
-  "description": "Delve into Newton's laws of motion, exploring how forces govern robot behavior. Discover different force types like gravity and friction, essential for designing and understanding robot movements.",
+  "title": {
+    "en": "Understanding Newton's Laws and Forces in Robotics",
+    "ar": "فهم قوانين نيوتن والقوى في الروبوتات"
+  },
+  "description": {
+    "en": "Delve into Newton's laws of motion, exploring how forces govern robot behavior. Discover different force types like gravity and friction, essential for designing and understanding robot movements.",
+    "ar": "غص في قوانين نيوتن للحركة، واستكشف كيف تتحكم القوى في سلوك الروبوت. اكتشف أنواع القوى المختلفة مثل الجاذبية والاحتكاك، وهي ضرورية لتصميم وفهم حركات الروبوت."
+  },
   "source": "https://drive.google.com/file/d/1hJleHF9AZg0g7gs53_J9nNCHMoRmm1v0/preview"
 },
 {
@@ -93,8 +153,14 @@
     "$oid": "6679abd924650df2a16196dc"
   },
   "id": "string",
-  "title": "Exploring Energy: Potential, Kinetic, and More",
-  "description": "Dive into the fundamental concepts of energy, including potential and kinetic energy, conservation laws, and various energy types like electrical and heat energy. Discover how energy transforms and powers our world.",
+  "title": {
+    "en": "Exploring Energy: Potential, Kinetic, and More",
+    "ar": "استكشاف الطاقة: الطاقة الكامنة، الحركية، والمزيد"
+  },
+  "description": {
+    "en": "Dive into the fundamental concepts of energy, including potential and kinetic energy, conservation laws, and various energy types like electrical and heat energy. Discover how energy transforms and powers our world.",
+    "ar": "اغمر في المفاهيم الأساسية للطاقة، بما في ذلك الطاقة الكامنة والحركية، قوانين الحفاظ على الطاقة، وأنواع الطاقة المختلفة مثل الطاقة الكهربائية والحرارية. اكتشف كيف تتحول الطاقة وتدير عالمنا."
+  },
   "source": "https://drive.google.com/file/d/1W3klWfksU2roBICaPOVJzgIwe2j9B6fn/preview"
 },
 {
@@ -102,8 +168,14 @@
     "$oid": "6679ac9024650df2a16196dd"
   },
   "id": "string",
-  "title": "Unraveling Momentum: Linear, Angular, and Collapsing",
-  "description": "Explore the physics of momentum, understanding its role in motion and stability, including linear and angular momentum. Discover the concept of collapsing and its impact on movement and robotic control.",
+  "title": {
+    "en": "Unraveling Momentum: Linear, Angular, and Collapsing",
+    "ar": "فك رموز الزخم: الخطّي، الزاوي، والتقليص"
+  },
+  "description": {
+    "en": "Explore the physics of momentum, understanding its role in motion and stability, including linear and angular momentum. Discover the concept of collapsing and its impact on movement and robotic control.",
+    "ar": "استكشف فيزياء الزخم، وافهم دوره في الحركة والثبات، بما في ذلك الزخم الخطّي والزاوي. اكتشف مفهوم التقليص وتأثيره على الحركة والتحكم في الروبوتات."
+  },
   "source": "https://drive.google.com/file/d/1OxeasnpPbNOaW88lANNsjMDjasXGlfIQ/preview"
 },
 {
@@ -111,8 +183,14 @@
     "$oid": "6679acd724650df2a16196de"
   },
   "id": "string",
-  "title": "Understanding Equilibrium and Forces: Moments and Center of Gravity",
-  "description": "Dive into the concepts of static equilibrium, force analysis, moments, and center of gravity in mechanical physics. Learn how these principles impact stability, motion, and design in robotics and structural engineering.",
+  "title": {
+    "en": "Understanding Equilibrium and Forces: Moments and Center of Gravity",
+    "ar": "فهم التوازن والقوى: اللحظات ومركز الثقل"
+  },
+  "description": {
+    "en": "Dive into the concepts of static equilibrium, force analysis, moments, and center of gravity in mechanical physics. Learn how these principles impact stability, motion, and design in robotics and structural engineering.",
+    "ar": "استكشف مفاهيم التوازن الثابت، وتحليل القوى، واللحظات، ومركز الثقل في الفيزياء الميكانيكية. تعرف على كيفية تأثير هذه المبادئ على الاستقرار والحركة والتصميم في الروبوتات والهندسة الإنشائية."
+  },
   "source": "https://drive.google.com/file/d/1ip08v-xUiAXsUgMSIRg30GONiEea7Uh-/preview"
 },
 {
@@ -120,8 +198,14 @@
     "$oid": "6679ade624650df2a16196df"
   },
   "id": "string",
-  "title": "Introduction to Robotics and Computer Science Fundamentals",
-  "description": "Explore hardware, software, programming in C and PictoBlox, algorithms, and sequences in programming. Learn the basics of robotics and computer science in a practical and engaging manner.",
+  "title": {
+    "en": "Introduction to Robotics and Computer Science Fundamentals",
+    "ar": "مقدمة في الروبوتات ومبادئ علوم الكمبيوتر"
+  },
+  "description": {
+    "en": "Explore hardware, software, programming in C and PictoBlox, algorithms, and sequences in programming. Learn the basics of robotics and computer science in a practical and engaging manner.",
+    "ar": "استكشف الأجهزة والبرامج، والبرمجة بلغة C وPictoBlox، والخوارزميات، والتسلسلات في البرمجة. تعلم أساسيات الروبوتات وعلوم الكمبيوتر بطريقة عملية وجذابة."
+  },
   "source": "https://drive.google.com/file/d/1RBXxlLHfjt2zFfKDcIBjAI3BtXPCfuL2/preview"
 },
 {
@@ -129,8 +213,14 @@
     "$oid": "6679ae5d24650df2a16196e0"
   },
   "id": "string",
-  "title": "Foundations of Programming",
-  "description": "This lesson covers the basics of programming, including machine language as the core communication method with computers, different programming paradigms, and the characteristics of high-level languages that make programming more accessible and efficient.",
+  "title": {
+    "en": "Foundations of Programming",
+    "ar": "أساسيات البرمجة"
+  },
+  "description": {
+    "en": "This lesson covers the basics of programming, including machine language as the core communication method with computers, different programming paradigms, and the characteristics of high-level languages that make programming more accessible and efficient.",
+    "ar": "تغطي هذه الدرس أساسيات البرمجة، بما في ذلك لغة الآلة كوسيلة أساسية للتواصل مع أجهزة الكمبيوتر، والبرمجات المختلفة، وخصائص اللغات عالية المستوى التي تجعل البرمجة أكثر سهولة وفعالية."
+  },
   "source": "https://drive.google.com/file/d/1E4-izLresnwGO40xmPUcLb7sP2lybaf_/preview"
 },
 {
@@ -138,8 +228,14 @@
     "$oid": "6679ae9e24650df2a16196e1"
   },
   "id": "string",
-  "title": "Understanding Algorithms and Sequences in Programming",
-  "description": "This lesson explores the concepts of algorithms and sequences in programming. It clarifies the difference between them, emphasizing how algorithms are step-by-step processes to solve problems or achieve tasks, while sequences specify the order of steps within algorithms.",
+  "title": {
+    "en": "Understanding Algorithms and Sequences in Programming",
+    "ar": "فهم الخوارزميات والتسلسلات في البرمجة"
+  },
+  "description": {
+    "en": "This lesson explores the concepts of algorithms and sequences in programming. It clarifies the difference between them, emphasizing how algorithms are step-by-step processes to solve problems or achieve tasks, while sequences specify the order of steps within algorithms.",
+    "ar": "تستكشف هذه الدرس مفاهيم الخوارزميات والتسلسلات في البرمجة. توضح الفرق بينهما، مع التركيز على كيفية كون الخوارزميات عمليات خطوة بخطوة لحل المشكلات أو تحقيق المهام، بينما تحدد التسلسلات ترتيب الخطوات داخل الخوارزميات."
+  },
   "source": "https://drive.google.com/file/d/1qIyVu1kHG0TrE_rNzN8da9ygEOm1EZrW/preview"
 },
 {
@@ -147,8 +243,14 @@
     "$oid": "6679af8924650df2a16196e2"
   },
   "id": "string",
-  "title": "Mastering C Programming Fundamentals: Variables, Loops, Conditionals, and Logic",
-  "description": "Dive deep into C programming with variables, loops, conditionals, and logic essentials. Learn to write efficient code and solve complex problems effectively.",
+  "title": {
+    "en": "Mastering C Programming Fundamentals: Variables, Loops, Conditionals, and Logic",
+    "ar": "إتقان أساسيات برمجة C: المتغيرات والحلقات والشرطيات والمنطق"
+  },
+  "description": {
+    "en": "Dive deep into C programming with variables, loops, conditionals, and logic essentials. Learn to write efficient code and solve complex problems effectively.",
+    "ar": "تعمق في برمجة C مع المتغيرات والحلقات والشرطيات وأساسيات المنطق. تعلم كتابة كود فعال وحل المشكلات المعقدة بفعالية."
+  },
   "source": "https://drive.google.com/file/d/1RMHpyiKfQabTV_mkX326CuFAo8xMGwcv/preview"
 },
 {
@@ -156,8 +258,14 @@
     "$oid": "6679b01224650df2a16196e3"
   },
   "id": "string",
-  "title": "Mastering Conditional Statements and Logical Operators in C",
-  "description": " Learn how to create powerful decision-making structures using if statements, logical operators, and conditional expressions in C programming.",
+  "title": {
+    "en": "Mastering Conditional Statements and Logical Operators in C",
+    "ar": "إتقان العبارات الشرطية والمشغلات المنطقية في C"
+  },
+  "description": {
+    "en": "Learn how to create powerful decision-making structures using if statements, logical operators, and conditional expressions in C programming.",
+    "ar": "تعلم كيفية إنشاء هياكل اتخاذ قرارات قوية باستخدام العبارات الشرطية، المشغلات المنطقية، والتعبيرات الشرطية في برمجة C."
+  },
   "source": "https://drive.google.com/file/d/10IFVX1EXZWubu3L7fCgbTYNr3jS-mfTM/preview"
 },
 {
@@ -165,8 +273,14 @@
     "$oid": "6679b05f24650df2a16196e4"
   },
   "id": "string",
-  "title": "Understanding Loop Structures in C Programming",
-  "description": "Explore entry-controlled and exit-controlled loops like for, while, and do-while in C, mastering their syntax and usage for efficient program execution and iteration control.",
+  "title": {
+    "en": "Understanding Loop Structures in C Programming",
+    "ar": "فهم هياكل الحلقات في برمجة C"
+  },
+  "description": {
+    "en": "Explore entry-controlled and exit-controlled loops like for, while, and do-while in C, mastering their syntax and usage for efficient program execution and iteration control.",
+    "ar": "استكشف الحلقات التي تتحكم بها الإدخالات والحلقات التي تتحكم بها الخروج مثل for و while و do-while في C، مع إتقان تركيبها واستخدامها لتحقيق تنفيذ البرنامج بشكل فعال والتحكم في التكرار."
+  },
   "source": "https://drive.google.com/file/d/1_rxWTYntpgJu3gW_cduage9Pf4IrdjDP/preview"
 },
 {
@@ -174,8 +288,14 @@
     "$oid": "6679b0bc24650df2a16196e5"
   },
   "id": "string",
-  "title": "Understanding Functions in C Programming",
-  "description": "Differentiate between function declarations and definitions, learn the role of return statements, grasp the use of 'void' for functions with no return value, and master writing functions for common tasks like finding the maximum of two numbers.",
+  "title": {
+    "en": "Understanding Functions in C Programming",
+    "ar": "فهم الدوال في برمجة C"
+  },
+  "description": {
+    "en": "Differentiate between function declarations and definitions, learn the role of return statements, grasp the use of 'void' for functions with no return value, and master writing functions for common tasks like finding the maximum of two numbers.",
+    "ar": "تمييز بين إعلانات الدوال وتعريفاتها، تعلم دور عبارات الإرجاع، فهم استخدام 'void' للدوال التي لا تحتوي على قيمة إرجاع، وإتقان كتابة الدوال للمهام الشائعة مثل إيجاد أكبر عددين."
+  },
   "source": "https://drive.google.com/file/d/1rImztsBTbzU_8WmjuFMVBK61ZjpiS7VX/preview"
 },
 {
@@ -183,8 +303,14 @@
     "$oid": "6679b11624650df2a16196e6"
   },
   "id": "string",
-  "title": "Fundamentals of C Programming: Functions and File Handling",
-  "description": "Explore the core concepts of C programming, including function declarations vs. definitions, return statements, and file handling using fopen(), fprintf(), and fseek(). Learn to create functions for maximum finding, handle file operations efficiently, and master essential programming techniques.",
+  "title": {
+    "en": "Fundamentals of C Programming: Functions and File Handling",
+    "ar": "أساسيات برمجة C: الدوال والتعامل مع الملفات"
+  },
+  "description": {
+    "en": "Explore the core concepts of C programming, including function declarations vs. definitions, return statements, and file handling using fopen(), fprintf(), and fseek(). Learn to create functions for maximum finding, handle file operations efficiently, and master essential programming techniques.",
+    "ar": "استكشاف المفاهيم الأساسية لبرمجة C، بما في ذلك إعلانات الدوال مقابل التعريفات، عبارات الإرجاع، والتعامل مع الملفات باستخدام fopen()، fprintf()، و fseek(). تعلم كيفية إنشاء دوال لإيجاد القيم العظمى، التعامل مع عمليات الملفات بكفاءة، وإتقان تقنيات البرمجة الأساسية."
+  },
   "source": "https://drive.google.com/file/d/1AzNzcp8hlWqN2O83DyJojDEukzFEo1II/preview"
 },
 {
@@ -192,8 +318,14 @@
     "$oid": "6679b16724650df2a16196e7"
   },
   "id": "string",
-  "title": "Exploring Pictoblox: Visual Programming for Interactive Experiences",
-  "description": "Discover Pictoblox, a visual programming language using blocks to create interactive simulations, educational apps, and games. Learn about block palettes like 'control' for logic, 'when flag clicked' for program initiation, and 'sensing' for event detection, enabling versatile and engaging programming experiences.",
+  "title": {
+    "en": "Exploring Pictoblox: Visual Programming for Interactive Experiences",
+    "ar": "استكشاف Pictoblox: البرمجة المرئية لتجارب تفاعلية"
+  },
+  "description": {
+    "en": "Discover Pictoblox, a visual programming language using blocks to create interactive simulations, educational apps, and games. Learn about block palettes like 'control' for logic, 'when flag clicked' for program initiation, and 'sensing' for event detection, enabling versatile and engaging programming experiences.",
+    "ar": "اكتشف Pictoblox، لغة البرمجة المرئية التي تستخدم الكتل لإنشاء محاكيات تفاعلية، تطبيقات تعليمية، وألعاب. تعلم عن لوحات الكتل مثل 'التحكم' للمنطق، 'عند النقر على العلم' لبدء البرنامج، و 'الاستشعار' لاكتشاف الأحداث، مما يتيح تجارب برمجة متنوعة وجذابة."
+  },
   "source": "https://drive.google.com/file/d/1kNVjZg_CUg-x3MpyVQlFbPUWdi1fg8NF/preview"
 },
 {
@@ -201,8 +333,14 @@
     "$oid": "6679b1f324650df2a16196e8"
   },
   "id": "string",
-  "title": "Exploring Variables in Pictoblox",
-  "description": "Dive into Pictoblox's variable system, from initialization with 'set variable' to modification with 'change variable.' Learn to create loops using the 'control' palette and utilize built-in variables for sprite positioning.",
+  "title": {
+    "en": "Exploring Variables in Pictoblox",
+    "ar": "استكشاف المتغيرات في Pictoblox"
+  },
+  "description": {
+    "en": "Dive into Pictoblox's variable system, from initialization with 'set variable' to modification with 'change variable.' Learn to create loops using the 'control' palette and utilize built-in variables for sprite positioning.",
+    "ar": "غص في نظام المتغيرات في Pictoblox، من التهيئة باستخدام 'تعيين المتغير' إلى التعديل باستخدام 'تغيير المتغير'. تعلم كيفية إنشاء الحلقات باستخدام لوحة 'التحكم' واستخدام المتغيرات المدمجة لتحديد مواقع الشخصيات."
+  },
   "source": "https://drive.google.com/file/d/1hRjnSP-AT2mMRxwYPBU7Ut9GFsFQH_KU/preview"
 },
 {
@@ -210,8 +348,14 @@
     "$oid": "6679b24424650df2a16196e9"
   },
   "id": "string",
-  "title": "Mastering Conditional Logic in Pictoblox",
-  "description": "Understand the power of conditional statements in Pictoblox. Use 'if' to execute code conditionally, negate conditions with NOT, combine conditions with AND, OR, NOT, handle false conditions with 'else,' and control program flow effectively.",
+  "title": {
+    "en": "Mastering Conditional Logic in Pictoblox",
+    "ar": "إتقان المنطق الشرطي في Pictoblox"
+  },
+  "description": {
+    "en": "Understand the power of conditional statements in Pictoblox. Use 'if' to execute code conditionally, negate conditions with NOT, combine conditions with AND, OR, NOT, handle false conditions with 'else,' and control program flow effectively.",
+    "ar": "فهم قوة العبارات الشرطية في Pictoblox. استخدم 'if' لتنفيذ الشيفرة بشكل شرطي، أنكر الشروط باستخدام NOT، دمج الشروط باستخدام AND و OR و NOT، التعامل مع الشروط الخاطئة باستخدام 'else'، والتحكم في تدفق البرنامج بشكل فعال."
+  },
   "source": "https://drive.google.com/file/d/1gxDvS5dVaZrxxJNm_AJYLJxbbndi8gXW/preview"
 },
 {
@@ -219,8 +363,14 @@
     "$oid": "6679b2d524650df2a16196ea"
   },
   "id": "string",
-  "title": "Digital Logic Gates Fundamentals",
-  "description": "Delve into the basics of digital logic gates, including AND, OR, XOR, NAND, and more. Learn about their input-output relationships and how they form the building blocks of digital circuits, essential for understanding electronics and computing.",
+  "title": {
+    "en": "Digital Logic Gates Fundamentals",
+    "ar": "أساسيات البوابات المنطقية الرقمية"
+  },
+  "description": {
+    "en": "Delve into the basics of digital logic gates, including AND, OR, XOR, NAND, and more. Learn about their input-output relationships and how they form the building blocks of digital circuits, essential for understanding electronics and computing.",
+    "ar": "استكشف أساسيات البوابات المنطقية الرقمية، بما في ذلك AND و OR و XOR و NAND والمزيد. تعلم عن علاقات المدخلات والمخرجات وكيفية تشكيلها كعناصر أساسية في الدوائر الرقمية، وهي ضرورية لفهم الإلكترونيات والحوسبة."
+  },
   "source": "https://drive.google.com/file/d/1s2m139ozeA1RCxgjYPVvwldFAnLGG4YY/preview"
 },
 {
@@ -228,8 +378,14 @@
     "$oid": "6679b34924650df2a16196eb"
   },
   "id": "string",
-  "title": "Introduction to Arduino Fundamentals",
-  "description": " Learn about Arduino basics, including board types like UNO, Mega, and Lilypad, uploading code to Arduino using USB, understanding digital and analog signals, and identifying components like LEDs, motors, sensors, and relay modules.",
+  "title": {
+    "en": "Introduction to Arduino Fundamentals",
+    "ar": "مقدمة في أساسيات أردوينو"
+  },
+  "description": {
+    "en": "Learn about Arduino basics, including board types like UNO, Mega, and Lilypad, uploading code to Arduino using USB, understanding digital and analog signals, and identifying components like LEDs, motors, sensors, and relay modules.",
+    "ar": "تعلم أساسيات أردوينو، بما في ذلك أنواع اللوحات مثل UNO و Mega و Lilypad، رفع الكود إلى أردوينو عبر USB، فهم الإشارات الرقمية والتناظرية، وتحديد المكونات مثل LEDs والمحركات والمستشعرات ووحدات التبديل."
+  },
   "source": "https://drive.google.com/file/d/19rC19xQiFPo5h6LdcoNRj-9gVfLCWGjL/preview"
 },
 {
@@ -237,8 +393,14 @@
     "$oid": "6679b3a724650df2a16196ec"
   },
   "id": "string",
-  "title": "Arduino Basics ",
-  "description": "Explore Arduino types, pin configuration, signal handling, and data types.",
+  "title": {
+    "en": "Arduino Basics",
+    "ar": "أساسيات أردوينو"
+  },
+  "description": {
+    "en": "Explore Arduino types, pin configuration, signal handling, and data types.",
+    "ar": "استكشف أنواع أردوينو، تكوين الدبابيس، معالجة الإشارات، وأنواع البيانات."
+  },
   "source": "https://drive.google.com/file/d/11HJrfybCc3d8pRbCKrgX2VbxgyYXy7ma/preview"
 },
 {
@@ -246,8 +408,14 @@
     "$oid": "6679b40a24650df2a16196ed"
   },
   "id": "string",
-  "title": "What is Breadboard?",
-  "description": "Explore the functionality and usage of breadboards in electronics. Learn about their structure, how to properly place components, and how to use them for prototyping circuits without soldering.",
+  "title": {
+    "en": "What is Breadboard?",
+    "ar": "ما هو لوح الدوائر؟"
+  },
+  "description": {
+    "en": "Explore the functionality and usage of breadboards in electronics. Learn about their structure, how to properly place components, and how to use them for prototyping circuits without soldering.",
+    "ar": "استكشف وظيفة واستخدامات ألواح الدوائر في الإلكترونيات. تعرف على هيكلها، كيفية وضع المكونات بشكل صحيح، وكيفية استخدامها في تصميم الدوائر دون الحاجة للحام."
+  },
   "source": "https://drive.google.com/file/d/1TXf8V4fyupAv2dd5o5EZfMGQpH7gOTVx/preview"
 },
 {
@@ -255,8 +423,14 @@
     "$oid": "6679b46c24650df2a16196ee"
   },
   "id": "string",
-  "title": "Light sensor",
-  "description": "",
+  "title": {
+    "en": "Light Sensor",
+    "ar": "مستشعر الضوء"
+  },
+  "description": {
+    "en": "Learn about light sensors, their types, applications, and how they function to detect light intensity and provide input to various electronic systems.",
+    "ar": "تعلم عن مستشعرات الضوء، أنواعها، تطبيقاتها، وكيفية عملها لاكتشاف شدة الضوء وتقديم مدخلات إلى أنظمة إلكترونية مختلفة."
+  },
   "source": "https://drive.google.com/file/d/1_DLhnO2lp7rVYnkgnotNzW6r7bI50980/preview"
 },
 {
@@ -264,8 +438,14 @@
     "$oid": "6679b4cc24650df2a16196ef"
   },
   "id": "string",
-  "title": "What is IR(Infrared) sensor?",
-  "description": "This lesson provides an in-depth exploration of IR (Infrared) sensors, covering their working principles, applications in various fields such as robotics and automation, and how they detect and measure infrared radiation. Students will learn about different types of IR sensors and their significance in modern technology.",
+  "title": {
+    "en": "What is IR (Infrared) Sensor?",
+    "ar": "ما هو مستشعر الأشعة تحت الحمراء (IR)؟"
+  },
+  "description": {
+    "en": "This lesson provides an in-depth exploration of IR (Infrared) sensors, covering their working principles, applications in various fields such as robotics and automation, and how they detect and measure infrared radiation. Students will learn about different types of IR sensors and their significance in modern technology.",
+    "ar": "تقدم هذه الدرس استكشافًا متعمقًا لمستشعرات الأشعة تحت الحمراء (IR)، بما في ذلك مبادئ عملها وتطبيقاتها في مجالات مختلفة مثل الروبوتات والأتمتة، وكيفية اكتشافها وقياسها للإشعاع تحت الأحمر. سيتعلم الطلاب عن أنواع مختلفة من مستشعرات الأشعة تحت الحمراء وأهميتها في التكنولوجيا الحديثة."
+  },
   "source": "https://drive.google.com/file/d/1QlM5VoLVy3RDf2UXL-jdP4hEzm5MCVes/preview"
 },
 {
@@ -273,8 +453,14 @@
     "$oid": "667c327b98157d488d318539"
   },
   "id": "string",
-  "title": "Welcome to Exploring the Universe",
-  "description": "Welcome to 'Exploring the Universe' – an exciting journey through space. Discover stars, galaxies, black holes, dark matter, our solar system, extraterrestrial life, and cutting-edge space exploration technology.",
+  "title": {
+    "en": "Welcome to Exploring the Universe",
+    "ar": "مرحبا بكم في استكشاف الكون"
+  },
+  "description": {
+    "en": "Welcome to 'Exploring the Universe' – an exciting journey through space. Discover stars, galaxies, black holes, dark matter, our solar system, extraterrestrial life, and cutting-edge space exploration technology.",
+    "ar": "مرحبا بكم في 'استكشاف الكون' - رحلة مثيرة عبر الفضاء. اكتشف النجوم والمجرات والثقوب السوداء والمادة المظلمة ونظامنا الشمسي والحياة الخارجية وتكنولوجيا استكشاف الفضاء المتقدمة."
+  },
   "source": "https://drive.google.com/file/d/1mNGmce_3EWhacSvKRZjrcJHepC9Sbfnz/preview"
 },
 {
@@ -282,8 +468,14 @@
     "$oid": "667c32b598157d488d31853a"
   },
   "id": "string",
-  "title": "From Fireworks to Rockets",
-  "description": "Historical overview of rocketry origins, rocket technology evolution in Europe, & Significant milestones in rocket development.",
+  "title": {
+    "en": "From Fireworks to Rockets",
+    "ar": "من الألعاب النارية إلى الصواريخ"
+  },
+  "description": {
+    "en": "Historical overview of rocketry origins, rocket technology evolution in Europe, and significant milestones in rocket development.",
+    "ar": "نظرة تاريخية على أصول الصواريخ، تطور تكنولوجيا الصواريخ في أوروبا، وأبرز المحطات في تطوير الصواريخ."
+  },
   "source": "https://drive.google.com/file/d/1d0Qzhm5z8VuaMnPPA_ZlVhYymIgk0z9T/preview"
 },
 {
@@ -291,8 +483,14 @@
     "$oid": "667c32ea98157d488d31853b"
   },
   "id": "string",
-  "title": "Rockets? What’s that? ",
-  "description": "What a rocket is, & its components. Principles of Rocket Engines (Newton's third law). Rockets Applications: space missions and satellite deployment, multistage rockets facilitating deep space exploration (like the Saturn V rocket from the Apollo missions) ",
+  "title": {
+    "en": "Rockets? What’s that?",
+    "ar": "الصواريخ؟ ما هذا؟"
+  },
+  "description": {
+    "en": "What a rocket is, its components, principles of rocket engines (Newton's third law), rocket applications such as space missions, satellite deployment, and multistage rockets like Saturn V for deep space exploration.",
+    "ar": "ما هو الصاروخ، مكوناته، مبادئ محركات الصواريخ (قانون نيوتن الثالث)، تطبيقات الصواريخ مثل المهام الفضائية، إطلاق الأقمار الصناعية، والصواريخ متعددة المراحل مثل ساتورن 5 لاستكشاف الفضاء العميق."
+  },
   "source": "https://drive.google.com/file/d/12dVpGMXFAfHritZNHLhkylXMqspyc46O/preview"
 },
 {
@@ -300,8 +498,14 @@
     "$oid": "667c332498157d488d31853c"
   },
   "id": "string",
-  "title": "Satellites? What’s that?",
-  "description": "Orbit definition, and types. What a satellite is and how it differs from other objects in space. What the basic components and functions are. How satellites maintain their position and velocity in space. ",
+  "title": {
+    "en": "Satellites? What’s that?",
+    "ar": "الأقمار الصناعية؟ ما هذا؟"
+  },
+  "description": {
+    "en": "Orbit definition and types. What a satellite is and how it differs from other objects in space. Basic components and functions of satellites. How satellites maintain their position and velocity in space.",
+    "ar": "تعريف المدارات وأنواعها. ما هو القمر الصناعي وكيف يختلف عن الأجسام الأخرى في الفضاء. المكونات والوظائف الأساسية للأقمار الصناعية. كيفية الحفاظ على موقع وسرعة الأقمار الصناعية في الفضاء."
+  },
   "source": "https://drive.google.com/file/d/1uF_AK2H9EUCy7s-T30Du4U9gKcMrkJAY/preview"
 },
 {
@@ -309,8 +513,14 @@
     "$oid": "667c335a98157d488d31853d"
   },
   "id": "string",
-  "title": "Let’s Launch Satellites!",
-  "description": "Stages of a rocket launch: liftoff, ascent, orbit insertion. Factors affecting the trajectory and speed of a rocket: escape velocity",
+  "title": {
+    "en": "Let’s Launch Satellites!",
+    "ar": "لنطلق الأقمار الصناعية!"
+  },
+  "description": {
+    "en": "Stages of a rocket launch: liftoff, ascent, orbit insertion. Factors affecting the trajectory and speed of a rocket: escape velocity.",
+    "ar": "مراحل إطلاق الصاروخ: الإقلاع، الصعود، إدخال المدار. العوامل المؤثرة على مسار وسرعة الصاروخ: سرعة الهروب."
+  },
   "source": "https://drive.google.com/file/d/1f2dfErtS1SFpRH4nnGQqNSw628TkUgs2/preview"
 },
 {
@@ -318,8 +528,14 @@
     "$oid": "667c363198157d488d31853e"
   },
   "id": "2",
-  "title": "Why Satellites?",
-  "description": "Role of satellites in space exploration: weather satellites, communication satellites, and scientific research satellites. The growing issue of space debris and potential solutions to mitigate them.",
+  "title": {
+    "en": "Why Satellites?",
+    "ar": "لماذا الأقمار الصناعية؟"
+  },
+  "description": {
+    "en": "Role of satellites in space exploration: weather satellites, communication satellites, and scientific research satellites. The growing issue of space debris and potential solutions to mitigate them.",
+    "ar": "دور الأقمار الصناعية في استكشاف الفضاء: أقمار الطقس، أقمار الاتصالات، وأقمار البحث العلمي. القضية المتزايدة للحطام الفضائي والحلول المحتملة للتخفيف منها."
+  },
   "source": "https://drive.google.com/file/d/1TMzx6mzRRJo_U1Q0hS3Re1kFAQ7iQ608/preview"
 },
 {
@@ -327,8 +543,14 @@
     "$oid": "667c369a98157d488d31853f"
   },
   "id": "string",
-  "title": "The way to Mars ",
-  "description": "Trajectory Design, Rendezvous Planning. Locating our spacecraft. Communicating with our spacecraft.",
+  "title": {
+    "en": "The Way to Mars",
+    "ar": "الطريق إلى المريخ"
+  },
+  "description": {
+    "en": "Trajectory Design, Rendezvous Planning. Locating our spacecraft. Communicating with our spacecraft.",
+    "ar": "تصميم المسار، تخطيط اللقاء. تحديد موقع المركبة الفضائية. التواصل مع مركبتنا الفضائية."
+  },
   "source": "https://drive.google.com/file/d/1cFM0WAdYuTDy7GHRFnCV6v1OqrWwD3fv/preview"
 },
 {
@@ -336,8 +558,14 @@
     "$oid": "667c36c798157d488d318540"
   },
   "id": "string",
-  "title": "Future of Robotic Exploration",
-  "description": "The role of robotic missions in advancing our understanding of the universe and preparing for future human exploration.",
+  "title": {
+    "en": "Future of Robotic Exploration",
+    "ar": "مستقبل الاستكشاف الروبوتي"
+  },
+  "description": {
+    "en": "The role of robotic missions in advancing our understanding of the universe and preparing for future human exploration.",
+    "ar": "دور المهام الروبوتية في تعزيز فهمنا للكون والاستعداد لاستكشاف الإنسان في المستقبل."
+  },
   "source": "https://drive.google.com/file/d/11AJzgmsdTZ4FLob5ASMwSK7OFNh0W2v0/preview"
 },
 {
@@ -345,7 +573,13 @@
     "$oid": "667c36fd98157d488d318541"
   },
   "id": "string",
-  "title": "Use of telescopes in space study",
-  "description": "Use of telescopes in space study: ground-based telescopes vs. space telescopes.",
+  "title": {
+    "en": "Use of Telescopes in Space Study",
+    "ar": "استخدام التلسكوبات في دراسة الفضاء"
+  },
+  "description": {
+    "en": "Use of telescopes in space study: ground-based telescopes vs. space telescopes.",
+    "ar": "استخدام التلسكوبات في دراسة الفضاء: التلسكوبات الأرضية مقابل التلسكوبات الفضائية."
+  },
   "source": "https://drive.google.com/file/d/1QbdId0zwqfA0VERRX_eJAOcSpgtoapoo/preview"
 }]
