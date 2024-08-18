@@ -46,14 +46,20 @@ app.include_router(program_api.router)
 app.include_router(analysis_api.router)
 
 
-@app.get("/{full_path:path}")
-async def catch_all(full_path:str):
-    index_path = os.path.join('public','index.html')
-    return FileResponse(index_path)
+# from fastapi import Request
+# @app.get("/{full_path:path}")
+# async def catch_all(request: Request, full_path: str):
+#     if os.path.exists(os.path.join("dist", full_path)):
+#         return await StaticFiles(directory="dist").get_response(full_path, request)
+#     return FileResponse(os.path.join("dist", "index.html"))
+
+# @app.get("/{full_path:path}")
+# async def catch_all(full_path:str):
+#     index_path = os.path.join('dist','index.html')
+#     return FileResponse(index_path)
 
 # mount static files server
-app.mount("/", StaticFiles(directory="public", html=True), name="public")
-
+app.mount("/", StaticFiles(directory="dist", html=True), name="dist")
 if __name__ == '__main__':
     uvicorn.run(app, host='0.0.0.0', port=8080)
     

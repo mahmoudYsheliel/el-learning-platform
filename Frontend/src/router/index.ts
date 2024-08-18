@@ -143,7 +143,7 @@ const router = createRouter({
       component: ()=> import ("@/views/adminViews/AdminProgram.vue"),
       meta: { requredAuth: true, userType: "Admin" },
     },
-    { path: "/:pathMatch(.*)", name: "notFound", component: ()=> import ("../views/generalViews/LandingPage.vue") },
+  
   ],
 
   scrollBehavior(to, from, savedPosition) {

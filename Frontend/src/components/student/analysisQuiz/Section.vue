@@ -2,7 +2,7 @@
 import Button from "primevue/button";
 import { selectLang,translationModule } from "@/lib/Translate";
 import { ref } from "vue";
-import Arc from "@/components/general/Arc.vue";
+//import Arc from "@/components/general/Arc.vue";
 
 defineProps([
   "showPrevious",
@@ -30,10 +30,7 @@ const lang = ref('en')
   <div class="container">
     <div style="display: flex; justify-content: space-between;">
       <h1>{{ selectLang(translationModule.question) }} {{ selectedQuestionOrder+1 }}</h1>
-    <Arc
-            :remainingTime="leftTime"
-            :totalTime="duration"
-          />
+ 
     </div>
    
     <div
