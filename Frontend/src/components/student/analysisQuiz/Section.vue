@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import Button from "primevue/button";
-import { selectLang,translationModule } from "@/lib/Translate";
+import { selectLang, translationModule } from "@/lib/Translate";
 import { ref } from "vue";
-//import Arc from "@/components/general/Arc.vue";
+import Arc from "@/components/general/Arc.vue";
 
 defineProps([
   "showPrevious",
@@ -10,10 +10,10 @@ defineProps([
   "question",
   "answers",
   "selectedQuestionOrder",
-  'sectionName',
-  'audio_link',
-  'leftTime',
-  'duration'
+  "sectionName",
+  "audio_link",
+  "leftTime",
+  "duration",
 ]);
 
 defineEmits(["previous", "next", "answer"]);
@@ -21,28 +21,33 @@ defineEmits(["previous", "next", "answer"]);
 function scrollTop() {
   window.scrollTo(0, 0);
 }
-const lang = ref('en')
-
-
+const lang = ref("en");
 </script>
 
 <template>
   <div class="container">
-    <div style="display: flex; justify-content: space-between;">
-      <h1>{{ selectLang(translationModule.question) }} {{ selectedQuestionOrder+1 }}</h1>
- 
+    <div style="display: flex; justify-content: space-between">
+      <h1>
+        {{ selectLang(translationModule.question) }}
+        {{ selectedQuestionOrder + 1 }}
+      </h1>
+      <Arc :total-time="duration" :remaining-time="leftTime" />
     </div>
-   
-    <div
-      class="question-container"
-      
-    >
-      <div  class="question">
-        
-        <iframe v-if="audio_link" :src="audio_link" frameborder="0" allowtransparency="true" sandbox="allow-scripts allow-same-origin" ></iframe>
-       
-        
-        <h4 class="question-text"> {{ selectLang(question?.question) }} <img :src="question?.image" alt=""> </h4>
+
+    <div class="question-container">
+      <div class="question">
+        <iframe
+          v-if="audio_link"
+          :src="audio_link"
+          frameborder="0"
+          allowtransparency="true"
+          sandbox="allow-scripts allow-same-origin"
+        ></iframe>
+
+        <h4 class="question-text">
+          {{ selectLang(question?.question) }}
+          <img :src="question?.image" alt="" />
+        </h4>
         <div class="choices-wrapper">
           <p
             v-for="choice in question?.choices"
@@ -59,8 +64,8 @@ const lang = ref('en')
               }
             "
           >
-          <span >{{ selectLang(choice?.choice) }}</span>
-            <img :src="choice?.image" alt="">
+            <span>{{ selectLang(choice?.choice) }}</span>
+            <img :src="choice?.image" alt="" />
           </p>
         </div>
       </div>
@@ -68,7 +73,7 @@ const lang = ref('en')
 
     <div class="button-container">
       <Button
-      :label=selectLang(translationModule.prev)
+        :label="selectLang(translationModule.prev)"
         @click="
           () => {
             scrollTop();
@@ -78,7 +83,7 @@ const lang = ref('en')
         :disabled="!showPrevious"
       />
       <Button
-        :label=selectLang(translationModule.next)
+        :label="selectLang(translationModule.next)"
         @click="
           () => {
             scrollTop();
@@ -92,7 +97,7 @@ const lang = ref('en')
 </template>
 
 <style scoped>
-.container{
+.container {
   padding-top: 2rem;
 }
 iframe {
@@ -171,24 +176,25 @@ button {
   color: var(--primary);
   transition-duration: 0.5s;
 }
-.langs{
+.langs {
   display: flex;
   gap: 1rem;
   color: var(--text);
 }
-.langs>.selected{
+.langs > .selected {
   color: var(--accent1);
 }
-.langs>p{
+.langs > p {
   cursor: pointer;
 }
-.select-lang{
+.select-lang {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-h4,p{
+h4,
+p {
   display: flex;
   align-items: center;
   justify-content: center;

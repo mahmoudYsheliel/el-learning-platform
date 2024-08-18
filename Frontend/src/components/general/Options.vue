@@ -37,7 +37,6 @@ function setLang(selectedLang: string | undefined) {
     lang.setLang('ar');
   }
  
-  window.location.reload();
 }
 </script>
 

@@ -15,9 +15,7 @@ from routes import (
     program_api,
     analysis_api
 )
-import os
-from fastapi.responses import RedirectResponse
-from fastapi.responses import FileResponse
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -47,22 +45,15 @@ app.include_router(program_api.router)
 app.include_router(analysis_api.router)
 
 
+import os
+from fastapi.responses import RedirectResponse
+from fastapi.responses import FileResponse
 
-from fastapi.responses import HTMLResponse
 
-@app.get("/", response_class=HTMLResponse)
-async def serve_index():
-    with open("dist/index.html") as f:
-        return HTMLResponse(content=f.read())
 
-# Fallback route to serve index.html for all other routes
-@app.get("/{full_path:path}", response_class=HTMLResponse)
-async def catch_all(full_path: str):
-    with open("dist/index.html") as f:
-        return HTMLResponse(content=f.read())
     
-app.mount("/", StaticFiles(directory="dist", html=True), name="static")
-
+# Mount the static files directory
+app.mount("/", StaticFiles(directory="dist", html=True), name="dist")
 
 
 if __name__ == '__main__':
