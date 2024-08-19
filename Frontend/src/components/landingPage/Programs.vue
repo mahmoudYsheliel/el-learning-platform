@@ -21,9 +21,9 @@ programRequester.callApi().then((res) => {
   if (programs.value) {
     for (let i=0; i<programs.value.length;i++) {
       items.value.push({
-        name: selectLang(programs.value[i].title),
+        name: programs.value[i].title,
         age:programs.value[i].age_group,
-        description: selectLang(programs.value[i].description),
+        description: programs.value[i].description,
         color: colors[i%3],
         command: () => {
           router.push(`programs/${programs.value[i].id}`);
@@ -53,11 +53,11 @@ programRequester.callApi().then((res) => {
           <div class="top">
             <img src="/images/openBook.svg" style="width: 3rem" alt="" />
             <div class="name-age">
-              <p>{{ program.name }}</p>
+              <p>{{ selectLang(program.name) }}</p>
               <p>{{ program.age }}</p>
             </div>
           </div>
-          <p>{{ program.description.substring(0,50) +'...'}}</p>
+          <p>{{ selectLang(program.description)?.substring(0,50) +'...'}}</p>
           <p style="margin: 0">{{ selectLang(translationModule.learnMore) }} <i class="pi pi-angle-right"></i></p>
         </div>
       </div>

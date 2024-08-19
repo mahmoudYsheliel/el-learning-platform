@@ -85,7 +85,7 @@ function requestEnroll() {
         <div style="padding: 2em; display: flex; flex-direction: column; align-items: center; gap: 2rem;">
 
             <h2>{{ selectLang(translationModule.sentSuccessfully) }}</h2>
-            <h3 style="margin: 0; color: var(--secondary);">{{ selectLang(translationModule.pleaseSendInvoice) }} {{ course?.price }} </h3>
+            <h3 style="margin: 0; color: var(--secondary);">{{ selectLang(translationModule.pleaseSendInvoice) }} {{ course?.price }} {{ selectLang(translationModule.egyptianPound) }} </h3>
             <h3 style="margin: 0; color: var(--secondary);">{{ selectLang(translationModule.attatchTheInvoice) }}</h3>
             <i style="font-size: 6rem; color: var(--accent3);" class="pi pi-check-circle"></i>
         <Button :label=selectLang(translationModule.returnHome) style="width: 20rem;" @click="childPage"/>

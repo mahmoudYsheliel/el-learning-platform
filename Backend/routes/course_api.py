@@ -46,3 +46,15 @@ async def get_student_courses()-> ServiceResponse:
 async def get_instructor_courses(userId:str = Depends(auth_user))-> ServiceResponse:
     res = await course_database.get_all_instructor_courses(userId)
     return res
+
+
+@router.post('/get_all_courses_with_free_lessons') 
+async def get_all_courses_with_free_lessons()-> ServiceResponse:
+    res = await course_database.get_all_courses_with_free_lessons()
+    return res
+
+@router.post('/get_course_free_lessons') 
+async def get_course_free_lessons(course_id:str =Body(embed=True))-> ServiceResponse:
+    res = await course_database.get_course_free_lessons(course_id)
+    return res
+

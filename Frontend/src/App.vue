@@ -26,6 +26,9 @@ div[class*='rtl'] .borderRigth{
   border: none;
   border-left: 0.25rem solid rgba(0, 0, 0, 0.2);
 }
+div[class*='rtl'] .flipDirection{
+  direction: rtl;
+}
 div[class*='rtl'] .selectedSidebarItem{
   background-color: var(--primary);
   border-top-right-radius: 0rem;

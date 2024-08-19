@@ -22,7 +22,7 @@ import { selectLang,translationModule } from "@/lib/Translate";
         <br />
        {{ selectLang(translationModule.roadMapDescription) }}
       </p>
-      <Button :label=selectLang(translationModule.roadmap) />
+      <!-- <Button :label=selectLang(translationModule.roadmap) /> -->
     </div>
     <img class="image" src="/images/prsonalizedlearning.png" alt="" />
   </main>

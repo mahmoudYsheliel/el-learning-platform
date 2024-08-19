@@ -160,3 +160,49 @@ async def get_all_instructor_courses(main_instructor_id):
     if not courses:
        return ServiceResponse(data={'courses': courses})
     return ServiceResponse(data={'courses': courses})
+
+
+
+async def get_all_courses_with_free_lessons(): 
+    courses = await get_database().get_collection('course').find({}, {
+        '_id': 0,
+        'id': {'$toString': '$_id'},
+        'title':1,
+        'image':1,
+        'categories':1,
+        'chapters':1
+    }).to_list(length=None)
+    
+    if not courses:
+        return ServiceResponse(success=False,status_code=404, msg='courses Not Found')
+    
+    for course in courses:
+        lesson = course['chapters'][0]['materials'][0]
+        course['lesson']=lesson
+        course['chapters']=[]
+    return ServiceResponse(data={'courses': courses})
+
+
+
+async def get_course_free_lessons(course_id:str): 
+    course = await get_database().get_collection('course').find_one({'_id':validate_bson_id(course_id)}, {
+        '_id': 0,
+        'id': {'$toString': '$_id'},
+        'title':1,
+        'chapters':1
+    })
+    
+    if not course:
+        return ServiceResponse(success=False,status_code=404, msg='courses Not Found')
+    
+    
+    lesson_id = course['chapters'][0]['materials'][0]['Id']
+    lesson = await get_database().get_collection('lesson').find_one({'_id':validate_bson_id(lesson_id)}, {
+        '_id': 0,
+        'id': {'$toString': '$_id'},
+        'title':1,
+        'source':1,
+        'description':1,
+    })
+    course['chapters']=[]
+    return ServiceResponse(data={'course': course,'lesson':lesson})

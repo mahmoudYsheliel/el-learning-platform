@@ -591,8 +591,8 @@ export const translationModule = {
     ar: "تم إرسال طلب التسجيل بنجاح",
   },
   pleaseSendInvoice: {
-    en: " Please send an invoice to this number with:",
-    ar: "برجاء ارسال فاتورة على هذا الرقم مع:" 
+    en: " Please send an invoice to this number:01065356028 with",
+    ar: "برجاء ارسال فاتورة على هذا الرقم:01065356028 مع" 
   },
   attatchTheInvoice:{
     en:'and attatch the invoice as a whatsapp message to the same number',
@@ -713,8 +713,27 @@ export const translationModule = {
   parentEmail:{
     en:'Parent Email',
     ar:'ايميل الوالد'
+  },
+  noWorkshop:{
+    en:'Currently No Workshops',
+    ar:'لا يوجد ورش عمل حاليا'
+  },
+  viewFreeLesson:{
+    en:'View Free Lesson',
+    ar:'عرض الدرس المجاني'
+  },
+  freeLessons:{
+    en:'The Free Lessons',
+    ar:'الدروس المجانية'
+  },
+  viewCourse:{
+    en:'View Course',
+    ar:'عرض الدورة '
+  },
+  egyptianPound:{
+    en:'Egyptian Pound',
+    ar:'جنيه مصري'
   }
-
 
 
 

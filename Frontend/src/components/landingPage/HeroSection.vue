@@ -35,7 +35,7 @@ const router = useRouter();
         <div class="buttonWrapper">
           <Button
             :label="selectLang(translationModule.startFree)"
-            @click="router.push('/')"
+            @click="router.push('/freeCourses')"
           />
           <p style="color: var(--accent1); margin: 0">
             {{ selectLang(translationModule.noCreditCard) }}

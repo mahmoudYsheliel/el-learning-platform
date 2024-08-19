@@ -1,7 +1,28 @@
 <script lang="ts" setup>
 import Button from "primevue/button";
 import { selectLang,translationModule } from "@/lib/Translate";
+import { useRouter } from "vue-router";
+import { ref } from "vue";
+import { HttpRequester } from "@/lib/APICaller";
 
+const router = useRouter();
+
+const items = ref<any[]>([]);
+const programs = ref<any[]>([]);
+const programRequester = new HttpRequester("get_all_program");
+programRequester.callApi().then((res) => {
+  programs.value = res.data.program;
+  if (programs.value) {
+    for (let program of programs.value) {
+      items.value.push({
+        label: selectLang(program?.title),
+        command: () => {
+          router.push(`/programs/${program?.id}`);
+        },
+      });
+    }
+  }
+});
 </script>
 
 <template>
@@ -25,7 +46,7 @@ import { selectLang,translationModule } from "@/lib/Translate";
       <p>
         {{ selectLang(translationModule.certificateDescription) }}
       </p>
-      <Button :label=selectLang(translationModule.joinUs) />
+      <Button :label=selectLang(translationModule.joinUs)  @click="items[0]?.command" />
     </div>
   </main>
 </template>

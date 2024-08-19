@@ -18,6 +18,22 @@ const router = createRouter({
       component: LandingPage,
       meta: { requredAuth: false, userType: "Any" },
     },
+
+
+    {
+      path: "/freeCourses",
+      name: "freeCourses",
+      component: ()=> import ("../views/generalViews/freeCourses.vue"),
+      meta: { requredAuth: false, userType: "Any" },
+    },
+    {
+      path: "/freeLesson/:courseId/:lessonId",
+      name: "freeLesson",
+      component: ()=> import ("../views/generalViews/freeLesson.vue"),
+      meta: { requredAuth: false, userType: "Any" },
+    },
+
+
     {
       path: "/viewCourseDetails/:courseId",
       name: "viewCourseDetails",
