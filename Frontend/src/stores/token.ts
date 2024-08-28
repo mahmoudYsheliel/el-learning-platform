@@ -1,4 +1,3 @@
-
 import { defineStore } from "pinia";
 
 export const useToken = defineStore("token", {
@@ -41,28 +40,28 @@ export const useToken = defineStore("token", {
   },
 });
 
-interface Notification{
-  title:any
-  description:string
-  type:string
-  analysis_quiz_id:string
-  enrollment_request_id:string
-  status:string //waiting  done
+interface Notification {
+  title: any;
+  description: string;
+  type: string;
+  analysis_quiz_id: string;
+  enrollment_request_id: string;
+  status: string; //waiting  done
 }
 
-interface info{
-  userType:string
-  notifications:Notification[]
+interface info {
+  userType: string;
+  notifications: Notification[];
 }
 
 export const usePersonalInfo = defineStore("personalInfo", {
   state: () => ({
-    info:null as info|null
+    info: null as info | null,
   }),
   actions: {
     addInfo(info: info) {
-     this.info=info
-     this.saveToLocalStorage()
+      this.info = info;
+      this.saveToLocalStorage();
     },
     saveToLocalStorage() {
       localStorage.setItem("info", JSON.stringify(this.info));
@@ -77,33 +76,31 @@ export const usePersonalInfo = defineStore("personalInfo", {
       }
       return state.info;
     },
-   
   },
 });
 
-
-interface Material{
-  Id:string
-  order:number
-  title:string
-  type:string //Lesson Quiz Assesment
+interface Material {
+  Id: string;
+  order: number;
+  title: string;
+  type: string; //Lesson Quiz Assesment
 }
 
 export const useMaterial = defineStore("addedMaterial", {
   state: () => ({
-    material:[] as Material[],
+    material: [] as Material[],
   }),
   actions: {
-    addMaterial(Id:string,order:number,title:string,type:string ) {
-      this.material.push({Id:Id,order:order,title:title,type:type})
-      this.saveToLocalStorage()
+    addMaterial(Id: string, order: number, title: string, type: string) {
+      this.material.push({ Id: Id, order: order, title: title, type: type });
+      this.saveToLocalStorage();
     },
     saveToLocalStorage() {
       localStorage.setItem("material", JSON.stringify(this.material));
     },
-  deleteMaterial(){
-    localStorage.removeItem('material')
-  }
+    deleteMaterial() {
+      localStorage.removeItem("material");
+    },
   },
   getters: {
     getMaterial(state) {
@@ -113,36 +110,31 @@ export const useMaterial = defineStore("addedMaterial", {
         this.material = JSON.parse(data);
       }
       return state.material;
-     
     },
   },
-
 });
-
 
 export const useLang = defineStore("lang", {
   state: () => ({
-    selectedLang:'en',
+    selectedLang: "en",
   }),
   actions: {
-    setLang(lang:string ) {
-      this.selectedLang = lang
-      this.saveToLocalStorage()
+    setLang(lang: string) {
+      this.selectedLang = lang;
+      this.saveToLocalStorage();
     },
     saveToLocalStorage() {
-      localStorage.setItem("selectedLang",this.selectedLang);
+      localStorage.setItem("selectedLang", this.selectedLang);
     },
   },
   getters: {
     getLang(state) {
       const data = localStorage.getItem("selectedLang");
-      console.log(data)
       if (data) {
-        this.selectedLang =data;
+        this.selectedLang = data;
       }
       return state.selectedLang;
-     
     },
   },
-
 });
+

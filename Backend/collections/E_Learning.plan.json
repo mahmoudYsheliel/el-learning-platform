@@ -1,0 +1,82 @@
+[{
+  "_id": {
+    "$oid": "66cdd24daa47eaf347eca9d0"
+  },
+  "id": "plan-001",
+  "name": "Young Explorers Program",
+  "title": {
+    "en": "Young Explorers  Program",
+    "ar": "برنامج المستكشفين الصغار "
+  },
+  "description": {
+    "en": "Embark on a fascinating journey through Science, Technology, Engineering, and Mathematics with our comprehensive Young Explorers STEM Program. Designed for curious minds aged 6 to 12, this program combines engaging courses in space exploration, programming fundamentals, wave sciences, and aviation basics to inspire and educate the next generation of innovators.",
+    "ar": "انطلق في رحلة شيقة عبر العلوم والتكنولوجيا والهندسة والرياضيات مع برنامج المستكشفين الصغار الشامل. مصمم للعقول الفضولية التي تتراوح أعمارها بين 6 و12 عامًا، يجمع هذا البرنامج بين دورات مثيرة في استكشاف الفضاء وأساسيات البرمجة وعلوم الموجات وأساسيات الطيران لإلهام وتعليم جيل المستقبل من المبتكرين."
+  },
+  "courses": [
+    {
+      "Id": "667c445898157d488d31854b",
+      "ristriction_on_course": ""
+    },
+    {
+      "Id": "66be07508abeb455cb105b2d",
+      "ristriction_on_course": ""
+    },
+    {
+      "Id": "66bf7d0dda5e21b89701140f",
+      "ristriction_on_course": ""
+    },
+    {
+      "Id": "66c0137dda5e21b89701142d",
+      "ristriction_on_course": ""
+    }
+  ],
+  "image": "https://cdn.elearningindustry.com/wp-content/uploads/2020/08/5-ways-to-improve-your-course-cover-design-1024x575.png",
+  "price": 1200,
+  "categories": [
+    {
+      "Id": "667c3e7798157d488d31854a",
+      "title": {
+        "en": "Space Exploration",
+        "ar": "استكشاف الفضاء"
+      }
+    },
+    {
+      "Id": "6606c79643e416de9726f229",
+      "title": {
+        "en": "Computer Programming",
+        "ar": "برمجة الكمبيوتر"
+      }
+    },
+    {
+      "Id": "66bf7ca6da5e21b89701140e",
+      "title": {
+        "en": "Physics",
+        "ar": "الفيزياء "
+      }
+    }
+  ],
+  "objectives": [
+    {
+      "en": "Provide a comprehensive introduction to key STEM fields.",
+      "ar": "تقديم مقدمة شاملة في مجالات العلوم والتكنولوجيا والهندسة والرياضيات الأساسية."
+    },
+    {
+      "en": "Cultivate curiosity and enthusiasm for science and technology.",
+      "ar": "تنمية الفضول والحماس للعلوم والتكنولوجيا."
+    },
+    {
+      "en": "Develop foundational skills across various disciplines.",
+      "ar": "تطوير المهارات الأساسية عبر مختلف التخصصات."
+    },
+    {
+      "en": "Encourage critical thinking and problem-solving abilities.",
+      "ar": "تشجيع التفكير النقدي وقدرات حل المشكلات."
+    },
+    {
+      "en": "Inspire future interest and potential careers in STEM areas.",
+      "ar": "إلهام الاهتمام المستقبلي والإمكانات المهنية في مجالات العلوم والتكنولوجيا والهندسة والرياضيات."
+    }
+  ],
+  "min_age": 6,
+  "max_age": 12
+}]

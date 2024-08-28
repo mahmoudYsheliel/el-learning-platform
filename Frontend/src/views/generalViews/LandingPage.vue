@@ -10,6 +10,9 @@ import Achievement from "../../components/landingPage/Achievement.vue";
 import Footer from "../../components/general/Footer.vue";
 import { ref,watch } from "vue";
 import { useElementVisibility } from "@vueuse/core";
+import { useToken } from "@/stores/token";
+import { HttpRequester } from "@/lib/APICaller";
+import AskMissingPersonalInfo from "@/components/dialogs/AskMissingPersonalInfo.vue";
 
 
 
@@ -40,10 +43,26 @@ watch([homeIsVisible,coursesIsVisible,aboutIsVisible,contactIsVisible],()=>{
 })
 
 
+const token = useToken()
+const showAskInfoDialog=ref(false)
+if(token.getIsAuthorized){
+  const personaRequester = new HttpRequester("personal_info")
+personaRequester.callApi().then((res) => {
+  if (res?.success){
+    let info = res?.data?.info;
+    console.log(!info?.phone_number && info?.user_type=='Parent')
+  if ( !info?.phone_number && info?.user_type=='Parent'){
+    showAskInfoDialog.value=true
+  }
+  }
+  
+});
+}
 
 </script>
 <template>
   <main>
+    <AskMissingPersonalInfo :show-dialog="showAskInfoDialog" @remove-dialog="showAskInfoDialog=false"/>
     <Navbar class="nav" :selected="selected" />
     <Options id="Home" />
     <HeroSection ref="home"/>

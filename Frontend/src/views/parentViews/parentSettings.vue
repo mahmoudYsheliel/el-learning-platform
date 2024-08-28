@@ -79,7 +79,7 @@ function change() {
       }"
     >
       <div class="dialog-container">
-        <h1>{{ selectLang(translationModule.editedSuccessffully) }}</h1>
+        <h1 style="padding: 0;">{{ selectLang(translationModule.editedSuccessffully) }}</h1>
         <Button :label=selectLang(translationModule.viewChild) @click="router.push('/parentProfile')" />
       </div>
     </Dialog>
@@ -143,7 +143,7 @@ p {
   line-height: 1rem;
 }
 h1 {
-  color: red;
+  color: var(--accent2);
   text-align: center;
   margin: 0;
   padding-top: 5rem;

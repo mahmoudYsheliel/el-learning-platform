@@ -5,7 +5,7 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { HttpRequester } from "@/lib/APICaller";
 import { useLang } from "@/stores/token";
-import { selectLang,translationModule } from "@/lib/Translate";
+import { selectLang, translationModule } from "@/lib/Translate";
 const lang = useLang();
 const programRequester = new HttpRequester("get_all_program");
 
@@ -30,14 +30,16 @@ programRequester.callApi().then((res) => {
 });
 
 function setLang(selectedLang: string | undefined) {
-  if (selectedLang == 'English'){
-    lang.setLang('en');
+  if (selectedLang == "English") {
+    lang.setLang("en");
   }
-  if (selectedLang == 'العربية'){
-    lang.setLang('ar');
+  if (selectedLang == "العربية") {
+    lang.setLang("ar");
   }
- 
 }
+
+
+
 </script>
 
 <template>
@@ -48,10 +50,12 @@ function setLang(selectedLang: string | undefined) {
     </div>
 
     <div class="options">
-      <span @click="router.push('/tracePlans/0/0')" style="cursor: pointer;">{{ selectLang(translationModule.plans) }}</span>
+      <span @click="router.push('/tracePlans/0/0')" style="cursor: pointer">{{
+        selectLang(translationModule.plans)
+      }}</span>
       <div class="card flex justify-content-center">
         <SplitButton
-          :label=selectLang(translationModule.programs)
+          :label="selectLang(translationModule.programs)"
           :model="items"
           @click="items[0]?.command"
           text

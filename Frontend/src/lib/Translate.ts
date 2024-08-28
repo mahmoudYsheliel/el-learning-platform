@@ -777,6 +777,17 @@ export const translationModule = {
   planInfo:{
     en:'Plan Information',
     ar:'معلومات عن الخطة'
+  },
+  missingPersonalInfo:{
+    en:'Please add missing personal information',
+    ar:'الرجاء إضافة المعلومات الشخصية المفقودة'
+  },
+  addInfo:{
+    en:'Add missing information',
+    ar:'إضافة المعلومات المفقودة'
+  },
+  later:{
+    en:'Later',
+    ar:'لاحقاً'
   }
-
 };

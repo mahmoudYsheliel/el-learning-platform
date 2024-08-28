@@ -1,0 +1,8 @@
+[{
+  "_id": {
+    "$oid": "66c4c15cd5a7c41ce50456d0"
+  },
+  "id": "string",
+  "code": "promo",
+  "discount": 20
+}]
