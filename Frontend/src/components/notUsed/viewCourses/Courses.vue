@@ -35,7 +35,7 @@ function viewCourse(id: string) {
     )
     .then((res) => {
       if (res.data.success === false) {
-        router.push(`/viewCourseDetails/${id}`);
+        router.push(`/courseDetails/${id}`);
       } else if (res.data.success === true) {
         let enrollment_id = res.data.data.id;
         axios

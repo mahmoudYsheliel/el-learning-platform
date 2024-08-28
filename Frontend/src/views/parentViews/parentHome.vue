@@ -7,15 +7,15 @@ import Button from "primevue/button";
 import InputText from "primevue/inputtext";
 import Dialog from "primevue/dialog";
 import { ref } from "vue";
-import { selectLang,translationModule } from "@/lib/Translate";
+import { selectLang, translationModule } from "@/lib/Translate";
 
 interface RnrollmentRequest {
   id: string;
-//  childName: string;
+  //  childName: string;
   childEmail: string;
-  courseTitle: string|undefined;
+  courseTitle: string | undefined;
   date: string;
- // time: string;
+  // time: string;
   status: string;
   price: number;
   comments: any[];
@@ -34,33 +34,60 @@ async function getEnrollmentRequests() {
           .callApi({ another_userId: req?.student_id })
           .then((studentRes) => {
             if (studentRes.success == true) {
-              const childInfoRequester = new HttpRequester("get_course");
-              childInfoRequester
-                .callApi({ course_id: req?.course_id })
-                .then((courseRes) => {
-                  if (courseRes.success == true) {
-                    enrollmentRequests.value?.push({
-                      id: req?.id,
-                    //  childName: studentRes?.data?.info?.first_name,
-                      childEmail: studentRes?.data?.info?.email,
-                      courseTitle:selectLang(courseRes?.data?.course?.title),
-                      date: extractDate(req?.created_at),
-                     // time: extractTime(req?.created_at),
-                      status: req?.status,
-                      price: courseRes?.data?.course?.price,
-                      comments: req?.comments,
-                    });
-                    addedComment.value=''
-                    enrollmentRequests.value.sort((a, b) => a.id.localeCompare(b.id));
-                  }
-                });
+              if (req?.package_type == "course") {
+                const childInfoRequester = new HttpRequester("get_course");
+                childInfoRequester
+                  .callApi({ course_id: req?.course_id })
+                  .then((courseRes) => {
+                    if (courseRes.success == true) {
+                      enrollmentRequests.value?.push({
+                        id: req?.id,
+                        //  childName: studentRes?.data?.info?.first_name,
+                        childEmail: studentRes?.data?.info?.email,
+                        courseTitle: selectLang(courseRes?.data?.course?.title),
+                        date: extractDate(req?.created_at),
+                        // time: extractTime(req?.created_at),
+                        status: req?.status,
+                        price: req?.price,
+                        comments: req?.comments,
+                      });
+                      addedComment.value = "";
+                      enrollmentRequests.value.sort((a, b) =>
+                        a.id.localeCompare(b.id)
+                      );
+                    }
+                  });
+              } else if (req?.package_type == "plan") {
+                const childInfoRequester = new HttpRequester("get_plan");
+                childInfoRequester
+                  .callApi({ plan_id: req?.course_id })
+                  .then((planRes) => {
+                    if (planRes.success == true) {
+                      enrollmentRequests.value?.push({
+                        id: req?.id,
+                        //  childName: studentRes?.data?.info?.first_name,
+                        childEmail: studentRes?.data?.info?.email,
+                        courseTitle: selectLang(planRes?.data?.plan?.title),
+                        date: extractDate(req?.created_at),
+                        // time: extractTime(req?.created_at),
+                        status: req?.status,
+                        price: req?.price,
+                        comments: req?.comments,
+                      });
+                      addedComment.value = "";
+                      enrollmentRequests.value.sort((a, b) =>
+                        a.id.localeCompare(b.id)
+                      );
+                    }
+                  });
+              }
             }
           });
       }
     }
   });
 }
-getEnrollmentRequests()
+getEnrollmentRequests();
 
 function extractDate(dateTimeString: string) {
   const date = new Date(dateTimeString);
@@ -99,15 +126,15 @@ function addComment() {
   });
 }
 
-function statusName(status:string){
-  if (status=='Pending'){
-    return selectLang(translationModule.pendding)
+function statusName(status: string) {
+  if (status == "Pending") {
+    return selectLang(translationModule.pendding);
   }
-  if (status=='Rejected'){
-    return selectLang(translationModule.rejected)
+  if (status == "Rejected") {
+    return selectLang(translationModule.rejected);
   }
-  if (status=='Success'){
-    return selectLang(translationModule.succeess)
+  if (status == "Success") {
+    return selectLang(translationModule.succeess);
   }
 }
 </script>
@@ -118,7 +145,7 @@ function statusName(status:string){
     <Dialog
       v-model:visible="showComments"
       modal
-      :header=selectLang(translationModule.showComments)
+      :header="selectLang(translationModule.showComments)"
       :style="{ width: '50vw' }"
     >
       <div class="msg-wrapper">
@@ -136,7 +163,10 @@ function statusName(status:string){
 
       <div class="add-comment">
         <InputText v-model="addedComment" />
-        <Button :label=selectLang(translationModule.addComment) @click="addComment" />
+        <Button
+          :label="selectLang(translationModule.addComment)"
+          @click="addComment"
+        />
       </div>
     </Dialog>
     <ParentSidebar class="sidebar" selected="enrollmentsRequests" />
@@ -176,7 +206,7 @@ function statusName(status:string){
                   showComments = true;
                 "
                 style="font-size: 0.75rem"
-                :label=selectLang(translationModule.showComments)
+                :label="selectLang(translationModule.showComments)"
             /></span>
           </div>
         </div>
@@ -191,7 +221,6 @@ function statusName(status:string){
   display: grid;
   grid-template-columns: 12rem calc(100vw - 15rem);
   min-height: 100vh;
- 
 }
 .row {
   display: grid;
@@ -211,7 +240,6 @@ h3 {
   margin-top: 2rem;
   margin-inline: 2rem;
   width: 95%;
-  
 }
 h2 {
   color: var(--accent1);
@@ -226,9 +254,8 @@ h2 {
   padding-inline: 1rem;
   overflow-x: scroll;
   max-width: 100%;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 .table-container ample::-webkit-scrollbar {
   display: none;
@@ -279,11 +306,11 @@ span {
 
 @media screen and (max-width: 1000px) {
   .container {
-  grid-template-columns:  90vw;
-  min-height: 100vh;
-}
-.sidebar{
-  display: none;
-}
+    grid-template-columns: 90vw;
+    min-height: 100vh;
+  }
+  .sidebar {
+    display: none;
+  }
 }
 </style>

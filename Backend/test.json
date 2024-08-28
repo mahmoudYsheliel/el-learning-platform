@@ -1,214 +1,69 @@
 {
-  "new_course": {
-    "id": "string",
+  "plan": {
+    "id": "plan-001",
+    "name": "Young Explorers Program",
     "title": {
-      "en": "Discovering the World of Programming",
-      "ar": "اكتشاف عالم البرمجة"
+      "en": "Young Explorers  Program",
+      "ar": "برنامج المستكشفين الصغار "
     },
     "description": {
-      "en": "Dive into the core concepts of programming with our Fundamentals course! Learn the essentials of variables, data types, control structures, and functions. Gain practical skills in writing and debugging code in languages like C. Understand key programming paradigms and concepts such as loops, conditionals, and data structures. This course offers a solid foundation in programming, preparing you for more advanced topics and real-world coding challenges.",
-      "ar": "اغمر في مفاهيم البرمجة الأساسية من خلال دورتنا في الأساسيات! تعلم أساسيات المتغيرات وأنواع البيانات وهياكل التحكم والدوال. احصل على مهارات عملية في كتابة وتصحيح الأكواد باستخدام لغات مثل C. فهم الأساسيات البرمجية الرئيسية ومفاهيم مثل الحلقات والشرطيات والهياكل البيانية. توفر هذه الدورة أساسًا قويًا في البرمجة، مما يعدك للمواضيع المتقدمة وتحديات البرمجة العملية."
+      "en": "Embark on a fascinating journey through Science, Technology, Engineering, and Mathematics with our comprehensive Young Explorers STEM Program. Designed for curious minds aged 6 to 12, this program combines engaging courses in space exploration, programming fundamentals, wave sciences, and aviation basics to inspire and educate the next generation of innovators.",
+      "ar": "انطلق في رحلة شيقة عبر العلوم والتكنولوجيا والهندسة والرياضيات مع برنامج المستكشفين الصغار الشامل. مصمم للعقول الفضولية التي تتراوح أعمارها بين 6 و12 عامًا، يجمع هذا البرنامج بين دورات مثيرة في استكشاف الفضاء وأساسيات البرمجة وعلوم الموجات وأساسيات الطيران لإلهام وتعليم جيل المستقبل من المبتكرين."
     },
-    "chapters": [
+    "courses": [
+      { "Id": "667c445898157d488d31854b"},
+      { "Id": "66be07508abeb455cb105b2d" },
+      { "Id": "66bf7d0dda5e21b89701140f" },
+      { "Id": "66c0137dda5e21b89701142d" }
+    ],
+    "image": "https://cdn.elearningindustry.com/wp-content/uploads/2020/08/5-ways-to-improve-your-course-cover-design-1024x575.png",
+    "price": 500,
+    "objectives":  [
       {
-        "title": {
-          "en": "Introduction to Programming",
-          "ar": "مقدمة في لبرمجة"
-        },
-        "materials": [
-          {
-            "Id": "66bdf1c08abeb455cb105b1d",
-            "order": 1,
-            "title": {
-              "en": "Introduction to Computer Science",
-              "ar": "مقدمة في علوم الحاسب"
-            },
-            "type": "Lesson"
-          },
-          {
-            "Id": "66bdf1f68abeb455cb105b1e",
-            "order": 2,
-            "title": {
-              "en": "Computer Science Basics Quiz",
-              "ar": "اختبار أساسيات علوم الحاسب"
-            },
-            "type": "Quiz"
-          },
-          {
-            "Id": "66bdf3488abeb455cb105b1f",
-            "order": 3,
-            "title": {
-              "en": "Introduction to Programming",
-              "ar": "مقدمة في البرمجة"
-            },
-            "type": "Lesson"
-          },
-          {
-            "Id": "66bdf3988abeb455cb105b20",
-            "order": 4,
-            "title": {
-              "en": "Programming Basics Quiz",
-              "ar": "اختبار أساسيات البرمجة"
-            },
-            "type": "Quiz"
-          },
-          {
-            "Id": "66bdf4098abeb455cb105b21",
-            "order": 5,
-            "title": {
-              "en": "Introduction to Algorithms and Sequences",
-              "ar": "مقدمة في الخوارزميات والتسلسلات"
-            },
-            "type": "Lesson"
-          },
-          {
-            "Id": "66bdf43d8abeb455cb105b22",
-            "order": 6,
-            "title": {
-              "en": "Algorithms and Sequences Quiz",
-              "ar": "اختبار الخوارزميات والتسلسلات"
-            },
-            "type": "Quiz"
-          }
-        ]
+        "en": "Provide a comprehensive introduction to key STEM fields.",
+        "ar": "تقديم مقدمة شاملة في مجالات العلوم والتكنولوجيا والهندسة والرياضيات الأساسية."
       },
-
       {
-        "title": {
-          "en": "Exploring Programming Concepts",
-          "ar": "استكشاف مفاهيم البرمجة"
-        },
-
-        "materials": [
-          {
-            "Id": "66bdf4ad8abeb455cb105b23",
-            "order": 1,
-            "title": {
-              "en": "Understanding Variables in C Programming",
-              "ar": "فهم المتغيرات في برمجة C"
-            },
-            "type": "Lesson"
-          },
-          {
-            "Id": "66bdf4d48abeb455cb105b24",
-            "order": 2,
-            "title": {
-              "en": "Quiz on Variables",
-              "ar": "اختبار حول المتغيرات"
-            },
-            "type": "Quiz"
-          },
-          {
-            "Id": "66bdf5218abeb455cb105b25",
-            "order": 3,
-            "title": {
-              "en": "Understanding Conditional Statements",
-              "ar": "فهم العبارات الشرطية"
-            },
-            "type": "Lesson"
-          },
-          {
-            "Id": "66bdf53b8abeb455cb105b26",
-            "order": 4,
-            "title": {
-              "en": "Quiz on Conditional Statements",
-              "ar": "اختبار حول العبارات الشرطية"
-            },
-            "type": "Quiz"
-          },
-          {
-            "Id": "66bdf69f8abeb455cb105b28",
-            "order": 5,
-            "title": {
-              "en": "Understanding Loops",
-              "ar": "فهم الحلقات  "
-            },
-            "type": "Lesson"
-          },
-          {
-            "Id": "66bdf5a18abeb455cb105b27",
-            "order": 6,
-            "title": {
-              "en": "Quiz on Loops",
-              "ar": "اختبار حول الحلقات"
-            },
-            "type": "Quiz"
-          },
-          {
-            "Id": "66bdf73c8abeb455cb105b29",
-            "order": 7,
-            "title": {
-              "en": "Understanding Functions ",
-              "ar": "فهم الدوال"
-            },
-            "type": "Lesson"
-          },
-          {
-            "Id": "66bdf75a8abeb455cb105b2a",
-            "order": 8,
-            "title": {
-              "en": "Functions in C Programming Quiz",
-              "ar": "اختبار الدوال في برمجة C"
-            },
-            "type": "Quiz"
-          },
-          {
-            "Id": "66bdf7a08abeb455cb105b2b",
-            "order": 9,
-            "title": {
-              "en": "Understanding Functions ",
-              "ar": "فهم الدوال"
-            },
-            "type": "Lesson"
-          },
-          {
-            "Id": "66bdf7c48abeb455cb105b2c",
-            "order": 10,
-            "title": {
-              "en": "File Handling in C Programming Quiz",
-              "ar": "اختبار التعامل مع الملفات في برمجة C"
-            },
-            "type": "Quiz"
-          }
-        ]
+        "en": "Cultivate curiosity and enthusiasm for science and technology.",
+        "ar": "تنمية الفضول والحماس للعلوم والتكنولوجيا."
+      },
+      {
+        "en": "Develop foundational skills across various disciplines.",
+        "ar": "تطوير المهارات الأساسية عبر مختلف التخصصات."
+      },
+      {
+        "en": "Encourage critical thinking and problem-solving abilities.",
+        "ar": "تشجيع التفكير النقدي وقدرات حل المشكلات."
+      },
+      {
+        "en": "Inspire future interest and potential careers in STEM areas.",
+        "ar": "إلهام الاهتمام المستقبلي والإمكانات المهنية في مجالات العلوم والتكنولوجيا والهندسة والرياضيات."
       }
     ],
-    "price": 500,
-    "image": "http://prokoudine.info/wp-content/uploads/2020/01/online-programming-school.jpeg",
     "categories": [
+      {
+        "Id": "667c3e7798157d488d31854a",
+        "title": {
+          "en": "Space Exploration",
+          "ar": "استكشاف الفضاء"
+        }
+      },
       {
         "Id": "6606c79643e416de9726f229",
         "title": {
           "en": "Computer Programming",
           "ar": "برمجة الكمبيوتر"
         }
-      }
-    ],
-    "objectives": [
-      {
-        "en": "Understand basic programming concepts such as variables and data types.",
-        "ar": "فهم مفاهيم البرمجة الأساسية مثل المتغيرات وأنواع البيانات."
       },
       {
-        "en": "Learn to use control structures like loops and conditionals.",
-        "ar": "تعلم استخدام هياكل التحكم مثل الحلقات والشرطيات."
-      },
-      {
-        "en": "Gain proficiency in writing and debugging code in C.",
-        "ar": "احصل على إتقان في كتابة وتصحيح الأكواد باستخدام C."
-      },
-      {
-        "en": "Explore fundamental programming paradigms and data structures.",
-        "ar": "استكشف الأساسيات البرمجية الرئيسية والهياكل البيانية."
-      },
-      {
-        "en": "Develop problem-solving skills through practical coding exercises.",
-        "ar": "طور مهارات حل المشكلات من خلال تمارين البرمجة العملية."
+        "Id": "66bf7ca6da5e21b89701140e",
+        "title": {
+          "en": "Physics",
+          "ar": "الفيزياء "
+        }
       }
     ],
     "min_age": 6,
-    "max_age": 9,
-    "duration": 0,
-    "number_of_enrollments": 0
+    "max_age": 12
   }
 }

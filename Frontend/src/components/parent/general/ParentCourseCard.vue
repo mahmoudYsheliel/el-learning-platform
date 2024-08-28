@@ -21,7 +21,7 @@ courseRequester
     <div class="container">
       <img :src="course?.image" alt="" />
       <h2>{{selectLang(course?.title) }}</h2>
-      <Button  @click="()=>{router.push(`/parentViewCourse/${prop.programId}/${prop.childId}/${prop.isEnrolled}`)}" :label=selectLang(translationModule.learnMore) />
+      <Button  @click="()=>{router.push(`/courseDetails/${prop.programId}/${prop.childId}/${prop.isEnrolled}`)}" :label=selectLang(translationModule.learnMore) />
     </div>
   </main>
 </template>

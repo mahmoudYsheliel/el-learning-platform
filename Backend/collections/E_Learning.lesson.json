@@ -582,4 +582,739 @@
     "ar": "استخدام التلسكوبات في دراسة الفضاء: التلسكوبات الأرضية مقابل التلسكوبات الفضائية."
   },
   "source": "https://drive.google.com/file/d/1QbdId0zwqfA0VERRX_eJAOcSpgtoapoo/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf1c08abeb455cb105b1d"
+  },
+  "id": "cs_lesson_001",
+  "title": {
+    "en": "Introduction to Computer Science Fundamentals",
+    "ar": "مقدمة في أساسيات علوم الحاسب"
+  },
+  "description": {
+    "en": "This lesson introduces the basics of computer science, covering key concepts such as hardware, software, the role of the CPU, binary numbers, and the importance of operating systems. It provides foundational knowledge essential for understanding how computers work.",
+    "ar": "تقدم هذه الدرس أساسيات علوم الحاسب، وتشمل المفاهيم الرئيسية مثل الأجهزة والبرمجيات ودور وحدة المعالجة المركزية والأرقام الثنائية وأهمية نظم التشغيل. توفر معرفة أساسية لفهم كيفية عمل الحواسيب."
+  },
+  "source": "https://drive.google.com/file/d/1RBXxlLHfjt2zFfKDcIBjAI3BtXPCfuL2/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf3488abeb455cb105b1f"
+  },
+  "id": "programming_lesson_001",
+  "title": {
+    "en": "Introduction to Programming",
+    "ar": "مقدمة في البرمجة"
+  },
+  "description": {
+    "en": "This lesson covers the basics of programming, including the definition of programming, machine language, and the purpose of programming. It introduces different programming paradigms and characteristics of high-level languages.",
+    "ar": "تغطي هذه الدرس أساسيات البرمجة، بما في ذلك تعريف البرمجة، اللغة الآلية، والغرض من البرمجة. كما يقدم paradigms البرمجة المختلفة وخصائص اللغات عالية المستوى."
+  },
+  "source": "https://drive.google.com/file/d/1E4-izLresnwGO40xmPUcLb7sP2lybaf_/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf4098abeb455cb105b21"
+  },
+  "id": "algorithms_lesson_001",
+  "title": {
+    "en": "Introduction to Algorithms and Sequences",
+    "ar": "مقدمة في الخوارزميات والتسلسلات"
+  },
+  "description": {
+    "en": "This lesson introduces algorithms and sequences, explaining their definitions, differences, purposes, and how they are used in problem-solving and programming. It provides foundational knowledge essential for understanding how algorithms drive computational processes.",
+    "ar": "تقدم هذه الدرس الخوارزميات والتسلسلات، موضحة تعريفاتها واختلافاتها وأغراضها، وكيفية استخدامها في حل المشكلات والبرمجة. توفر معرفة أساسية لفهم كيفية قيادة الخوارزميات للعمليات الحسابية."
+  },
+  "source": "https://drive.google.com/file/d/1qIyVu1kHG0TrE_rNzN8da9ygEOm1EZrW/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf4ad8abeb455cb105b23"
+  },
+  "id": "variables_lesson_001",
+  "title": {
+    "en": "Understanding Variables in C Programming",
+    "ar": "فهم المتغيرات في برمجة C"
+  },
+  "description": {
+    "en": "This lesson covers the purpose of variables in C programming, including their declaration, assignment, and data types. It explains how variables are used to store and manipulate data, and how they play a crucial role in programming.",
+    "ar": "تغطي هذه الدرس غرض المتغيرات في برمجة C، بما في ذلك إعلانها وتعيين القيم وأنواع البيانات. تشرح كيف تُستخدم المتغيرات لتخزين البيانات ومعالجتها، وكيف تلعب دورًا حيويًا في البرمجة."
+  },
+  "source": "https://drive.google.com/file/d/1RMHpyiKfQabTV_mkX326CuFAo8xMGwcv/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf5218abeb455cb105b25"
+  },
+  "id": "conditional_statements_lesson_001",
+  "title": {
+    "en": "Understanding Conditional Statements in C Programming",
+    "ar": "فهم العبارات الشرطية في برمجة C"
+  },
+  "description": {
+    "en": "This lesson explains how conditional statements work in C programming, including the syntax and usage of if statements and if-else statements. It covers the logic behind decision-making in programs and provides examples to illustrate how conditions control the flow of execution.",
+    "ar": "تشرح هذه الدرس كيفية عمل العبارات الشرطية في برمجة C، بما في ذلك بناء الجملة واستخدام عبارات if وif-else. تغطي المنطق وراء اتخاذ القرار في البرامج وتوفر أمثلة توضح كيفية التحكم في تدفق التنفيذ باستخدام الشروط."
+  },
+  "source": "https://drive.google.com/file/d/10IFVX1EXZWubu3L7fCgbTYNr3jS-mfTM/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf69f8abeb455cb105b28"
+  },
+  "id": "loops_lesson_001",
+  "title": {
+    "en": "Understanding Loops in C Programming",
+    "ar": "فهم الحلقات في برمجة C"
+  },
+  "description": {
+    "en": "This lesson explains how loops work in C programming, including the syntax and usage of for loops, while loops, and do-while loops. It covers the concepts of iteration and control flow, providing examples to illustrate how loops can be used to execute code repeatedly under various conditions.",
+    "ar": "تشرح هذه الدرس كيفية عمل الحلقات في برمجة C، بما في ذلك بناء الجملة واستخدام حلقات for وwhile وdo-while. تغطي مفاهيم التكرار وتدفق التحكم، وتوفر أمثلة لتوضيح كيفية استخدام الحلقات لتنفيذ الشيفرة بشكل متكرر وفقًا لظروف مختلفة."
+  },
+  "source": "https://drive.google.com/file/d/1_rxWTYntpgJu3gW_cduage9Pf4IrdjDP/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf73c8abeb455cb105b29"
+  },
+  "id": "cs_lesson_002",
+  "title": {
+    "en": "Understanding Functions in C Programming",
+    "ar": "فهم الدوال في برمجة C"
+  },
+  "description": {
+    "en": "This lesson covers the basics of functions in C programming, including function declarations, definitions, return types, and the purpose of the return statement. It provides essential knowledge for writing and using functions effectively in your programs.",
+    "ar": "تغطي هذه الدرس أساسيات الدوال في برمجة C، بما في ذلك إعلانات الدوال، التعريفات، أنواع الإرجاع، وغرض بيان الإرجاع. توفر المعرفة الأساسية لكتابة واستخدام الدوال بفعالية في برامجك."
+  },
+  "source": "https://drive.google.com/file/d/1rImztsBTbzU_8WmjuFMVBK61ZjpiS7VX/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf7a08abeb455cb105b2b"
+  },
+  "id": "cs_lesson_003",
+  "title": {
+    "en": "File Handling in C Programming",
+    "ar": "التعامل مع الملفات في برمجة C"
+  },
+  "description": {
+    "en": "This lesson explores file handling in C programming, covering how to open, read, write, and close files. Learn about essential functions like fopen(), fprintf(), fseek(), and their applications in managing file operations.",
+    "ar": "تستعرض هذه الدرس التعامل مع الملفات في برمجة C، بما في ذلك كيفية فتح، قراءة، كتابة، وإغلاق الملفات. تعلم حول الدوال الأساسية مثل fopen()، fprintf()، fseek() وتطبيقاتها في إدارة عمليات الملفات."
+  },
+  "source": "https://drive.google.com/file/d/1AzNzcp8hlWqN2O83DyJojDEukzFEo1II/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf689dda5e21b8970113fe"
+  },
+  "id": "lesson_1",
+  "title": {
+    "en": "Wave Wizards - Part 1",
+    "ar": "سحرة الموجات - الجزء 1"
+  },
+  "description": {
+    "en": "Explore the basics of waves including types like transverse and longitudinal waves, and concepts such as wavelength, amplitude, and frequency. Learn about how waves transport energy and phenomena like constructive and destructive interference.",
+    "ar": "استكشف أساسيات الموجات بما في ذلك الأنواع مثل الموجات العرضية والطولية، ومفاهيم مثل الطول الموجي، والسعة، والتردد. تعلم عن كيفية نقل الموجات للطاقة وظواهر مثل التداخل البنّاء والتدميري."
+  },
+  "source": "https://drive.google.com/file/d/11VGMtCSkbxyG3WsbPR7PPjAeKsb3IcNo/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf68beda5e21b8970113ff"
+  },
+  "id": "lesson_2",
+  "title": {
+    "en": "Wave Wizards - Part 2",
+    "ar": "سحرة الموجات - الجزء 2"
+  },
+  "description": {
+    "en": "Delve deeper into how waves transport energy, with a focus on amplitude and its impact on energy. Understand the effects of wave interference and practical applications like noise-canceling technology.",
+    "ar": "استكشف كيفية نقل الموجات للطاقة، مع التركيز على السعة وتأثيرها على الطاقة. افهم تأثيرات التداخل الموجي وتطبيقات عملية مثل تقنية إلغاء الضوضاء."
+  },
+  "source": "https://drive.google.com/file/d/1wCwtt80Lb2Rgi4kAHECOyQaVo9mhr9C3/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6aa6da5e21b897011400"
+  },
+  "id": "lesson_001",
+  "title": {
+    "en": "The Magic of Sound",
+    "ar": "سحر الصوت"
+  },
+  "description": {
+    "en": "Explore the fascinating world of sound waves, their impact on our understanding of hearing, and their role in technology and nature. Learn about the physics of sound, including how sound waves propagate and are perceived by our ears.",
+    "ar": "استكشف عالم الموجات الصوتية المدهش وتأثيرها على فهمنا للسمع ودورها في التكنولوجيا والطبيعة. تعرف على فيزياء الصوت، بما في ذلك كيفية انتشار الموجات الصوتية وكيفية إدراكها من قبل آذاننا."
+  },
+  "source": "https://drive.google.com/file/d/1iQa9KqpWd8TMmjJIaieudQTc9k117nWR/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6ae6da5e21b897011401"
+  },
+  "id": "lesson_002",
+  "title": {
+    "en": "The Fascinating Properties of Sound",
+    "ar": "خصائص الصوت المثيرة"
+  },
+  "description": {
+    "en": "Discover the various properties of sound, including pitch, intensity, and the Doppler effect. Learn about sound waves' frequency and amplitude, how they affect what we hear, and phenomena like echo and ultrasonic/infrasonic sounds.",
+    "ar": "اكتشف الخصائص المختلفة للصوت، بما في ذلك النغمة، الشدة، وتأثير دوبلر. تعرف على تردد الموجات الصوتية وسعتها، كيف تؤثر على ما نسمعه، وظواهر مثل الصدى والأصوات فوق الصوتية وتحت الصوتية."
+  },
+  "source": "https://drive.google.com/file/d/1thWtmiVFYjHMGCLz4NZKkz0vXFUpPr3Y/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6bacda5e21b897011402"
+  },
+  "id": "lesson_id_123",
+  "title": {
+    "en": "Light as We Know It",
+    "ar": "الضوء كما نعرفه"
+  },
+  "description": {
+    "en": "This lesson explores the properties of light, including its behavior, sources, and significance in various contexts. Students will learn about the nature of light, its applications, and how it impacts our daily lives.",
+    "ar": "تستكشف هذه الدرس خصائص الضوء، بما في ذلك سلوكه ومصادره وأهميته في سياقات مختلفة. سيتعلم الطلاب عن طبيعة الضوء وتطبيقاته وكيف يؤثر على حياتنا اليومية."
+  },
+  "source": "https://drive.google.com/file/d/1pITxSASvPcd8R1wMpvthMJgV5fpRCMat/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6c5cda5e21b897011403"
+  },
+  "id": "Optical Mysteries",
+  "title": {
+    "en": "Optical Mysteries",
+    "ar": "الأسرار البصرية"
+  },
+  "description": {
+    "en": "Explore how light travels, reflects, refracts, and how lenses work. Learn about the Ray Model, Reflection, Refraction, and the role of Lenses. Understand how these principles apply to everyday tools like glasses and microscopes.",
+    "ar": "استكشف كيفية انتقال الضوء، انعكاسه، انكساره، وكيفية عمل العدسات. تعرف على نموذج الشعاع، الانعكاس، الانكسار، ودور العدسات. افهم كيف تطبق هذه المبادئ على الأدوات اليومية مثل النظارات والميكروسكوبات."
+  },
+  "source": "https://drive.google.com/file/d/1XnfndVygICnioJMAzTXUJRrFUCG74dAj/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6ca1da5e21b897011404"
+  },
+  "id": "Magnificent Light",
+  "title": {
+    "en": "Magnificent Light",
+    "ar": "الضوء الرائع"
+  },
+  "description": {
+    "en": "We’ll explore why the sky and sea are blue, if water is truly transparent, and what causes auroras. We'll also learn about refraction and see how light behaves in different media. Discover the fascinating phenomenon of mirages and how they trick our eyes into seeing things that aren’t there.",
+    "ar": "هنستكشف لماذا السماء والبحر زرقاء، وهل المياه شفافة حقًا، وما هي الأضواء الشمالية وكيف تحدث. سنتعلم أيضًا عن الانكسار وكيف يتصرف الضوء في وسائل مختلفة. اكتشف ظاهرة السراب وكيف تخدع عيوننا لرؤية أشياء غير موجودة."
+  },
+  "source": "https://drive.google.com/file/d/1M_3KMNfPywNmKWKrbW_-hyGR_M7-tGlR/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6cf9da5e21b897011405"
+  },
+  "id": "Magnificent Light",
+  "title": {
+    "en": "Magnificent Light 2",
+    "ar": "2 الضوء الرائع"
+  },
+  "description": {
+    "en": "Explore why the sea appears blue, how mirages trick our eyes, and why colors change underwater. Discover the science behind the aurora and how light interacts with different media. Learn about the role of photons, refraction, and absorption in creating these fascinating optical phenomena.",
+    "ar": "استكشف لماذا يظهر البحر أزرق، وكيف يخدع السراب عيوننا، ولماذا تتغير الألوان تحت الماء. اكتشف علم الأضواء الشمالية وكيف يتفاعل الضوء مع وسائل مختلفة. تعرف على دور الفوتونات، والانكسار، والامتصاص في خلق هذه الظواهر البصرية الرائعة."
+  },
+  "source": "https://drive.google.com/file/d/1P6ed2XLnkHC1Br2VS3-ci1P2f4ONVKha/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6d3cda5e21b897011406"
+  },
+  "id": "Unseen Wonders",
+  "title": {
+    "en": "Unseen Wonders",
+    "ar": "العجائب غير المرئية"
+  },
+  "description": {
+    "en": "Discover the electromagnetic spectrum beyond visible light. Learn about radio waves, microwaves, and infrared waves—how they work and their applications. Explore how these invisible waves influence our daily lives, from radio broadcasts to night-vision technology.",
+    "ar": "اكتشف الطيف الكهرومغناطيسي beyond الضوء المرئي. تعرف على موجات الراديو، الميكروويف، والموجات تحت الحمراء—كيف تعمل وتطبيقاتها. استكشف كيف تؤثر هذه الموجات غير المرئية على حياتنا اليومية، من البث الإذاعي إلى تكنولوجيا الرؤية الليلية."
+  },
+  "source": "https://drive.google.com/file/d/1RIWE00wrMzqXEAQBSXQv0Lg4uSmIZk5g/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6dbfda5e21b897011407"
+  },
+  "id": "unseen_wonders_001",
+  "title": {
+    "en": "Unseen Wonders 2",
+    "ar": "2 العجائب غير المرئية"
+  },
+  "description": {
+    "en": "Explore the fascinating world of electromagnetic waves that we can't see but have significant impacts, including radio waves, microwaves, infrared waves, ultraviolet rays, X-rays, and gamma rays. Learn about their sources, uses, and effects.",
+    "ar": "اكتشف عالم الأمواج الكهرومغناطيسية المدهش الذي لا يمكننا رؤيته ولكن له تأثيرات كبيرة، بما في ذلك الأمواج الراديوية، الميكروويف، الأشعة تحت الحمراء، الأشعة فوق البنفسجية، الأشعة السينية، وأشعة جاما. تعرف على مصادرها واستخداماتها وتأثيراتها."
+  },
+  "source": "https://drive.google.com/file/d/11JLSs5Q9LKXfaq013_PpX7M5b_EsMkxY/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfa992da5e21b897011410"
+  },
+  "id": "001",
+  "title": {
+    "en": "Running the Skies",
+    "ar": "التحكم في السما"
+  },
+  "description": {
+    "en": "Explore the evolution of flight and how to build objects that can soar through the skies.",
+    "ar": "اكتشف تطور الطيران وكيفية بناء الأشياء التي تحلق في السماء."
+  },
+  "source": "https://drive.google.com/file/d/1FdTTB3A8ysYaHZYGhMzlR8dNvSFl7p8B/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfa9e9da5e21b897011411"
+  },
+  "id": "002",
+  "title": {
+    "en": "The History and Uses of Kites",
+    "ar": "تاريخ واستخدامات الطيارات الورقية"
+  },
+  "description": {
+    "en": "Explore the ancient origins of kites and their surprising uses in history beyond just flying.",
+    "ar": "استكشف أصول الطيارات الورقية القديمة واستخداماتها المفاجئة في التاريخ بخلاف الطيران."
+  },
+  "source": "https://drive.google.com/file/d/1lZEwzxYdZOi-NzZzuuzHNhVQBqUXvSkq/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfaa26da5e21b897011412"
+  },
+  "id": "003",
+  "title": {
+    "en": "Famous Figures and Their Kites",
+    "ar": "المشاهير وطياراتهم الورقية"
+  },
+  "description": {
+    "en": "Discover how historical figures innovated with kites, leading to advancements in science, aviation, and exploration.",
+    "ar": "تعرف على كيفية ابتكار الشخصيات التاريخية بالطيارات الورقية مما أدى لتقدمات في العلوم والطيران والاستكشاف."
+  },
+  "source": "https://drive.google.com/file/d/1iy5kWPU7tEBsyxFGHPY8WgQYdKxOJRCE/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfaa6dda5e21b897011413"
+  },
+  "id": "004",
+  "title": {
+    "en": "The Dream of Flying",
+    "ar": "حلم الطيران"
+  },
+  "description": {
+    "en": "Explore the history of mankind's quest to fly, from mythical stories to real inventions and the evolution of aviation.",
+    "ar": "استكشف تاريخ سعي الإنسان للطيران، من القصص الأسطورية إلى الاختراعات الحقيقية وتطور الطيران."
+  },
+  "source": "https://drive.google.com/file/d/1PLeVirv3P8nUaieFBcrPA-JZBFvGXHYZ/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfaaa9da5e21b897011414"
+  },
+  "id": "005",
+  "title": {
+    "en": "The Evolution of Flight",
+    "ar": "تطور الطيران"
+  },
+  "description": {
+    "en": "Dive into the journey of flight evolution, from early gliders and bird-like wings to the first successful motor-powered airplane by the Wright brothers.",
+    "ar": "استكشف رحلة تطور الطيران، من الطائرات الشراعية المبكرة والأجنحة المشابهة للطيور إلى أول طائرة ناجحة تعمل بالمحرك بواسطة الأخوين رايت."
+  },
+  "source": "https://drive.google.com/file/d/1mhznKswnuBC6jhd0LBDTTzBc3lLtCXsp/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfab56da5e21b897011415"
+  },
+  "id": "1",
+  "title": {
+    "en": "Wilbur & Orville Wright: Pioneers of Flight",
+    "ar": "ويلبر وأورفيل رايت: رواد الطيران"
+  },
+  "description": {
+    "en": "Explore the journey of Wilbur and Orville Wright, two brothers who pioneered powered flight. Learn about their early mechanical interests, their experimentation with kites, and their development of the first successful powered airplane.",
+    "ar": "استكشف رحلة ويلبر وأورفيل رايت، الأخوان اللذان قادا الطيران المدفوع. تعرف على اهتماماتهم الميكانيكية المبكرة، تجاربهم مع الطائرات الورقية، وتطويرهم لأول طائرة ناجحة مدفوعة."
+  },
+  "source": "https://drive.google.com/file/d/1otyHeK4EOhB4S8Pcu1yIimZOK9rgpeKS/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfab90da5e21b897011416"
+  },
+  "id": "2",
+  "title": {
+    "en": "The Wright Brothers' Journey to Powered Flight",
+    "ar": "رحلة الأخوين رايت إلى الطيران المدفوع"
+  },
+  "description": {
+    "en": "Discover the Wright brothers' rigorous journey towards powered flight. Learn about their experiments with gliders, the creation of their wind tunnel, and the development of the Flyer, leading to the first successful powered flight in history.",
+    "ar": "اكتشف الرحلة الدقيقة للأخوين رايت نحو الطيران المدفوع. تعرف على تجاربهم مع الطائرات الورقية، إنشاء نفق الهواء، وتطوير طائرة الفلاير، مما أدى إلى أول رحلة طيران مدفوعة ناجحة في التاريخ."
+  },
+  "source": "https://drive.google.com/file/d/1kq23O8Pey05GGBh5w74MJq4_mUtwFylr/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfac07da5e21b897011417"
+  },
+  "id": "4",
+  "title": {
+    "en": "Air Works for Me",
+    "ar": "الهواء يعمل من أجلي"
+  },
+  "description": {
+    "en": "Explore the essential role of air in our lives, including its composition, mass, pressure, and the effects of temperature on air molecules. Learn how air takes up space, applies pressure, and influences various phenomena.",
+    "ar": "استكشف الدور الأساسي للهواء في حياتنا، بما في ذلك تكوينه، كتلته، ضغطه، وتأثيرات درجة الحرارة على جزيئات الهواء. تعرف على كيفية استيلاء الهواء على المساحة، تطبيقه للضغط، وتأثيره على الظواهر المختلفة."
+  },
+  "source": "https://drive.google.com/file/d/18m91mADDQ75h7oWOlBDoG8AOO6lxdgt0/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfac46da5e21b897011418"
+  },
+  "id": "5",
+  "title": {
+    "en": "The Four Forces of Flight at Work",
+    "ar": "القوى الأربع للطيران في العمل"
+  },
+  "description": {
+    "en": "Discover the four fundamental forces of flight: gravity, lift, thrust, and drag. Learn how these forces interact to keep an airplane in the sky, with practical examples and explanations.",
+    "ar": "اكتشف القوى الأربع الأساسية للطيران: الجاذبية، الرفع، الدفع، والسحب. تعرف على كيفية تفاعل هذه القوى للحفاظ على الطائرة في السماء، مع أمثلة عملية وشرح."
+  },
+  "source": "https://drive.google.com/file/d/1htg2qdxrGROwo9SES4sAXxxL_S1quOwK/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfac79da5e21b897011419"
+  },
+  "id": "6",
+  "title": {
+    "en": "The Pull of Gravity",
+    "ar": "جاذبية الأرض"
+  },
+  "description": {
+    "en": "Explore the concept of gravity, its effects on objects on Earth and beyond, and how it influences our understanding of the universe. Learn about key figures like Galileo and Newton and their contributions to the study of gravity.",
+    "ar": "استكشف مفهوم الجاذبية وتأثيراتها على الأجسام على الأرض وما وراءها، وكيف تؤثر على فهمنا للكون. تعرف على الشخصيات الرئيسية مثل جاليليو ونيوتن وإسهاماتهم في دراسة الجاذبية."
+  },
+  "source": "https://drive.google.com/file/d/1CaMeoUyET8diXTHSPHYqWkLfA6YPiC8Z/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfaca9da5e21b89701141a"
+  },
+  "id": "7",
+  "title": {
+    "en": "It Lifts Me Up—The Force of Lift",
+    "ar": "قوة الرفع"
+  },
+  "description": {
+    "en": "Discover how airplanes achieve lift to defy gravity. Learn about the role of air pressure, Bernoulli’s principle, and angle of attack in creating lift. Explore the principles that allow aircraft to fly and the importance of balancing lift and gravity.",
+    "ar": "اكتشف كيف تحقق الطائرات الرفع لتتغلب على الجاذبية. تعرف على دور ضغط الهواء، مبدأ برنولي، وزاوية الهجوم في خلق الرفع. استكشف المبادئ التي تتيح للطائرات الطيران وأهمية تحقيق التوازن بين الرفع والجاذبية."
+  },
+  "source": "https://drive.google.com/file/d/17zRSnneTZ2jGLprkNN_v0L9h0qi3E5Bf/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfacdcda5e21b89701141b"
+  },
+  "id": "8",
+  "title": {
+    "en": "The Opposing Forces of Thrust and Drag",
+    "ar": "القوى المتضادة للدفع والسحب"
+  },
+  "description": {
+    "en": "Explore how thrust propels aircraft forward and how drag slows them down. Learn about the role of engines, air resistance, and the impact of aerodynamic design on flight efficiency. Understand the balance between thrust and drag to control aircraft speed and movement.",
+    "ar": "استكشف كيف يدفع الدفع الطائرات للأمام وكيف يبطئ السحب حركتها. تعرف على دور المحركات، مقاومة الهواء، وتأثير التصميم الديناميكي الهوائي على كفاءة الطيران. افهم التوازن بين الدفع والسحب للتحكم في سرعة الطائرات وحركتها."
+  },
+  "source": "https://drive.google.com/file/d/1RmsY4wnGKg1EqZv_wNl773V-gi3k-Yvu/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfad44da5e21b89701141c"
+  },
+  "id": "1",
+  "title": {
+    "en": "Exploring Airplane Control Surfaces and Basic Parts",
+    "ar": "استكشاف أجزاء التحكم الأساسية للطائرات والأجزاء الأساسية"
+  },
+  "description": {
+    "en": "Learn about the evolution of airplanes from the Wright Flyer to modern jets, how pilots control airplanes using control surfaces, and the basic components of every airplane including the fuselage, wings, tail assembly, engines, and landing gear.",
+    "ar": "تعلم عن تطور الطائرات من Wright Flyer إلى الطائرات الحديثة، كيف يتحكم الطيارون بالطائرات باستخدام أجزاء التحكم، والأجزاء الأساسية لكل طائرة بما في ذلك الجسم الرئيسي، الأجنحة، مجموعة الديل، المحركات، وعجلات الهبوط."
+  },
+  "source": "https://drive.google.com/file/d/1JwyFRscQqIn-5JAQR03YvXumAWELXzQf/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfad89da5e21b89701141d"
+  },
+  "id": "2",
+  "title": {
+    "en": "Understanding the Tail Assembly and Engines in Airplanes",
+    "ar": "فهم مجموعة الديل والمحركات في الطائرات"
+  },
+  "description": {
+    "en": "Explore the role of the tail assembly in stabilizing airplanes, including horizontal and vertical stabilizers, elevators, and rudders. Learn how engines provide thrust and how landing gear supports the airplane on the ground. Discover the evolution of control surfaces from the Wright Flyer to modern aircraft and what to expect in future lessons about aviation history and technology.",
+    "ar": "استكشف دور مجموعة الديل في تثبيت الطائرات، بما في ذلك المثبتات الأفقية والعمودية، والأسانسير، والزنبرك. تعلم كيف توفر المحركات الدفع وكيف تدعم عجلات الهبوط الطائرة على الأرض. اكتشف تطور أجزاء التحكم من Wright Flyer إلى الطائرات الحديثة وما يمكن توقعه في الدروس المستقبلية حول تاريخ الطيران والتكنولوجيا."
+  },
+  "source": "https://drive.google.com/file/d/1ExrRb5IWZaV-9n7vE-dXSrf5EEwqvyiP/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfadf1da5e21b89701141e"
+  },
+  "id": "1",
+  "title": {
+    "en": "The Evolution of Transportation and Aviation",
+    "ar": "تطور وسائل النقل والطيران"
+  },
+  "description": {
+    "en": "Explore the history of transportation, from the invention of the wheel to the first flight by the Wright brothers. Discover how aviation evolved during wars and how modern aircraft were developed.",
+    "ar": "استكشف تاريخ وسائل النقل من اختراع العجلة إلى أول رحلة للأخوين رايت. اكتشف كيف تطور الطيران خلال الحروب وكيف تم تطوير الطائرات الحديثة."
+  },
+  "source": "https://drive.google.com/file/d/18IQFPSyFNEECiM6dgaeF_K2yzzWSBTb0/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfae33da5e21b89701141f"
+  },
+  "id": "2",
+  "title": {
+    "en": "The Adventure of Aviation Evolution",
+    "ar": "مغامرة تطور الطيران"
+  },
+  "description": {
+    "en": "Discover the incredible journey of aviation, from early transportation to breaking the sound barrier and beyond. Explore the advancements in aircraft during World War II, the development of jet and hypersonic planes, and the future of unmanned aerial vehicles.",
+    "ar": "استكشف الرحلة المذهلة لتطور الطيران من وسائل النقل الأولى إلى كسر حاجز الصوت وما بعده. اكتشف تطور الطائرات خلال الحرب العالمية الثانية، وتطوير الطائرات النفاثة والفرط صوتية، ومستقبل الطائرات بدون طيار."
+  },
+  "source": "https://drive.google.com/file/d/1NEgjPXrDln7jNOZO3WWFouLzW_fnVL9T/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfae92da5e21b897011420"
+  },
+  "id": "1",
+  "title": {
+    "en": "Exploring Planet Earth",
+    "ar": "استكشاف كوكب الأرض"
+  },
+  "description": {
+    "en": "Discover Planet Earth, our home in the solar system. Learn about its unique atmosphere, water bodies, and role in supporting life. Understand maps, satellites, and Earth's place in the universe.",
+    "ar": "استكشف كوكب الأرض، بيتنا في المجموعة الشمسية. تعرف على غلافه الجوي الفريد، ومساحات المياه، ودوره في دعم الحياة. افهم الخرائط والأقمار الصناعية ومكانة الأرض في الكون."
+  },
+  "source": "https://drive.google.com/file/d/1p2c0g5rQH3IjDq6FOtMXAY8i0jk4Ddzc/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfaecdda5e21b897011421"
+  },
+  "id": "2",
+  "title": {
+    "en": "Journey Through Earth's Atmosphere",
+    "ar": "رحلة عبر غلاف الأرض الجوي"
+  },
+  "description": {
+    "en": "Explore Earth's atmosphere, from the gases that sustain life to the layers protecting us from meteoroids. Learn about the troposphere, stratosphere, mesosphere, and beyond, and discover how each layer plays a unique role in maintaining our planet's environment.",
+    "ar": "استكشف غلاف الأرض الجوي، من الغازات التي تدعم الحياة إلى الطبقات التي تحمينا من النيازك. تعلم عن التروبوسفير، والستراتوسفير، والميزوسفير، وما بعدها، واكتشف كيف تلعب كل طبقة دورًا فريدًا في الحفاظ على بيئتنا."
+  },
+  "source": "https://drive.google.com/file/d/1FKheZ6Xt6zolJZfRaFEdQB8QjlvEXwpe/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb2f113b16f87bfae7285d"
+  },
+  "id": "string",
+  "title": {
+    "en": "Welcome to Aerospace: The Beginning",
+    "ar": "مرحبًا بكم في عالم الفضاء الجوي: البداية"
+  },
+  "description": {
+    "en": "Introduction to aerospace principles, history, and flight experiments.",
+    "ar": "مقدمة في مبادئ الفضاء الجوي وتاريخ الطيران وتجارب الطيران."
+  },
+  "source": "string"
+},
+{
+  "_id": {
+    "$oid": "66cb2f583b16f87bfae7285e"
+  },
+  "id": "string",
+  "title": {
+    "en": "Folklore Legends And Myths About Flight",
+    "ar": "أساطير وحكايات شعبية عن الطيران"
+  },
+  "description": {
+    "en": "Exploring global myths and legends about flight across various cultures.",
+    "ar": "استكشاف الأساطير والحكايات العالمية عن الطيران عبر الثقافات المختلفة."
+  },
+  "source": "https://drive.google.com/file/d/1Qq2uyjq7Lqm4Jhb1qd-xvXZrREjxlTqO/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb304d3b16f87bfae7285f"
+  },
+  "id": "string",
+  "title": {
+    "en": "The Early Endeavours",
+    "ar": "الجهود المبكرة"
+  },
+  "description": {
+    "en": "Explore the milestones in early flight history, from Abbas Ibn Firnas in the 9th century to Hezârfen Çelebi in the 17th century, and the contributions of Galileo and others.",
+    "ar": "استكشف المعالم المبكرة في تاريخ الطيران، من عباس ابن فرناس في القرن التاسع إلى حزارفن چلبي في القرن السابع عشر، ومساهمات جاليليو وآخرين."
+  },
+  "source": "https://drive.google.com/file/d/1XyjhnTvp0qHk-kRggaC9YZHP4Sv5AA7x/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb30ad3b16f87bfae72860"
+  },
+  "id": "string",
+  "title": {
+    "en": "Fluids and Archimedes' Principle",
+    "ar": "السوائل ومبدأ أرخميدس"
+  },
+  "description": {
+    "en": "Explore the fundamentals of fluids, including density, buoyancy, and Archimedes' Principle. Learn how gases behave under varying conditions with the ideal gas law, and understand how temperature and pressure affect gas density and buoyancy.",
+    "ar": "استكشف أساسيات السوائل، بما في ذلك الكثافة، والطوفان، ومبدأ أرخميدس. تعلم كيفية تصرف الغازات تحت ظروف متغيرة باستخدام قانون الغاز المثالي، وفهم كيف تؤثر درجة الحرارة والضغط على كثافة الغاز والطوفان."
+  },
+  "source": "https://drive.google.com/file/d/1jOmlbnVWw69S8p-99H6aCd6WSFWzNmcq/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb31033b16f87bfae72861"
+  },
+  "id": "string",
+  "title": {
+    "en": "Lighter-Than-Air Flight",
+    "ar": "الطيران أخف من الهواء"
+  },
+  "description": {
+    "en": "Learn about the evolution of lighter-than-air flight, from early balloons to Zeppelins and their decline.",
+    "ar": "تعلم عن تطور الطيران أخف من الهواء، من المناطيد المبكرة إلى الزبلينز وتراجعها."
+  },
+  "source": "string"
+},
+{
+  "_id": {
+    "$oid": "66cb313f3b16f87bfae72862"
+  },
+  "id": "string",
+  "title": {
+    "en": "Bernoulli’s Principle",
+    "ar": "مبدأ برنولي"
+  },
+  "description": {
+    "en": "Bernoulli's principle explains the relationship between fluid speed and pressure, where increasing speed results in decreased pressure.",
+    "ar": "يشرح مبدأ برنولي العلاقة بين سرعة السوائل والضغط، حيث تؤدي زيادة السرعة إلى انخفاض الضغط."
+  },
+  "source": "https://drive.google.com/file/d/1i76O21Aj_ojLtwEMba5pUtYAF1Kjy0rg/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb317c3b16f87bfae72863"
+  },
+  "id": "string",
+  "title": {
+    "en": "Newton’s Action and Reaction Theory",
+    "ar": "نظرية العمل والرد فعل لنيوتن"
+  },
+  "description": {
+    "en": "Explore Newton’s Third Law, its definition, experiments, and how it relates to aircraft flight.",
+    "ar": "استكشف قانون نيوتن الثالث، تعريفه، تجاربه، وعلاقته بالطيران."
+  },
+  "source": "https://drive.google.com/file/d/1XPMzCn38rtDiU4Xv8R71LL6c-vpH25FY/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb32503b16f87bfae72864"
+  },
+  "id": "string",
+  "title": {
+    "en": "Other Principles and Concepts",
+    "ar": "مبادئ ومفاهيم أخرى"
+  },
+  "description": {
+    "en": "Explore Coanda Effect on fluid flow and Angle of Attack for lift generation in aircraft.",
+    "ar": "استكشاف تأثير كواندا على تدفق السوائل وزاوية الهجوم لتوليد الرفع في الطائرات."
+  },
+  "source": "https://drive.google.com/file/d/1hiKdsJbDB1vlHzXMTKQrlaQiJoTZvEyt/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb32db3b16f87bfae72865"
+  },
+  "id": "string",
+  "title": {
+    "en": "Forces of Flight",
+    "ar": "قوى الطيران"
+  },
+  "description": {
+    "en": "Explore how airplanes fly by examining weight, lift, thrust, drag, and their effects during takeoff, cruising, and landing.",
+    "ar": "استكشف كيفية طيران الطائرات من خلال فحص الوزن، الرفع، الدفع، والمقاومة وتأثيراتها خلال الإقلاع، الطيران المستوي، والهبوط."
+  },
+  "source": "https://drive.google.com/file/d/1QPGBg2KrRpINsel4XlJEyR8s5OHiRxjp/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb335b3b16f87bfae72866"
+  },
+  "id": "string",
+  "title": {
+    "en": "The Invention of the Airplane",
+    "ar": "اختراع الطائرة"
+  },
+  "description": {
+    "en": "Explore the history of aviation from early pioneers like George Cayley and Otto Lilienthal to the Wright brothers. Learn about key inventors, their innovations, and how their contributions shaped modern aircraft.",
+    "ar": "استكشف تاريخ الطيران من الرواد الأوائل مثل جورج كايل وجوتو ليلينتال إلى الأخوين رايت. تعرف على المخترعين الرئيسيين وابتكاراتهم وكيف شكلت مساهماتهم الطائرات الحديثة."
+  },
+  "source": "string"
+},
+{
+  "_id": {
+    "$oid": "66cb345e3b16f87bfae72867"
+  },
+  "id": "string",
+  "title": {
+    "en": "Achieving the Dream",
+    "ar": "تحقيق الحلم"
+  },
+  "description": {
+    "en": "Discover how structured problem-solving led to the Wright brothers' first controlled flight. Learn about their groundbreaking achievement and Wright Brothers Day celebration.",
+    "ar": "اكتشف كيف أدى حل المشكلات المنظم إلى أول رحلة طيران متحكم بها للأخوين رايت. تعرف على إنجازهم الرائد واحتفال يوم الأخوين رايت."
+  },
+  "source": "string"
+},
+{
+  "_id": {
+    "$oid": "66cb34973b16f87bfae72868"
+  },
+  "id": "string",
+  "title": {
+    "en": "Understanding the Earth & Atmosphere",
+    "ar": "فهم الأرض والغلاف الجوي"
+  },
+  "description": {
+    "en": "Explore the Earth's atmosphere, its layers, and how pressure, temperature, and humidity affect flight. Learn about their impact on density and aircraft performance.",
+    "ar": "استكشف غلاف الأرض الجوي، طبقاته، وكيف يؤثر الضغط ودرجة الحرارة والرطوبة على الطيران. تعرف على تأثيرها على الكثافة وأداء الطائرات."
+  },
+  "source": "https://drive.google.com/file/d/1C-mrYYiyRFEPCLkrDtU888p_hjzyQbVy/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb350a3b16f87bfae72869"
+  },
+  "id": "string",
+  "title": {
+    "en": "Post-Wright",
+    "ar": "ما بعد رايت"
+  },
+  "description": {
+    "en": "Explore the evolution of air racing from early competitions to modern high-speed races, highlighting key events and technological advancements.",
+    "ar": "استكشف تطور سباقات الطيران من المنافسات الأولى إلى السباقات الحديثة عالية السرعة، مع تسليط الضوء على الأحداث الرئيسية والتطورات التكنولوجية."
+  },
+  "source": "string"
 }]

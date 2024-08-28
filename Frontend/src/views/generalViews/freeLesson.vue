@@ -5,7 +5,7 @@ import Footer from "@/components/general/Footer.vue";
 import { HttpRequester } from "@/lib/APICaller";
 import { selectLang, translationModule } from "@/lib/Translate";
 import { useRouter, useRoute } from "vue-router";
-import { ref } from "vue";
+import { ref,computed } from "vue";
 import Button from "primevue/button";
 const router = useRouter();
 const route = useRoute();
@@ -13,12 +13,24 @@ const route = useRoute();
 const selectedCourse = ref();
 const courseRequester = new HttpRequester("get_course_free_lessons");
 
-console.log(route.params.courseId);
 courseRequester.callApi({ course_id: route.params?.courseId }).then((res) => {
   if (res?.success) {
     selectedCourse.value = res?.data;
   }
 });
+
+const isEnrolled=computed(()=>{
+  if(route.params?.isEnrolled){
+    return route.params?.isEnrolled
+  }
+  return 0
+})
+const childId=computed(()=>{
+  if(route.params?.childId){
+    return route.params?.childId
+  }
+  return 0
+})
 </script>
 
 <template>
@@ -40,7 +52,7 @@ courseRequester.callApi({ course_id: route.params?.courseId }).then((res) => {
 </div>
     
     </div>
-    <Button :label="selectLang(translationModule.viewCourse)" @click="router.push(`/viewCourseDetails/${route.params?.courseId}`)"/>
+    <Button :label="selectLang(translationModule.viewCourse)" @click="router.push(`/courseDetails/${route.params?.courseId}/${childId}/${isEnrolled}`)"/>
    
   </div>
 

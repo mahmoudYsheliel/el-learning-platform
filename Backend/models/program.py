@@ -19,3 +19,6 @@ class Program(BaseModel):
     max_age:int
     road_map:Optional[list[RoadMapCourse]]=[]
     image:str
+    
+    
+    

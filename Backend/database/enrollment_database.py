@@ -304,8 +304,37 @@ async def add_progress(
     return ServiceResponse(success=False, msg="Type Not Set Priperly")
 
 
-async def request_enrollment(requesr: RequestEnrollment) -> ServiceResponse:
 
+
+
+
+
+async def request_enrollment(requesr: RequestEnrollment) -> ServiceResponse:
+    
+    package_bson = validate_bson_id(requesr.course_id)
+    if requesr.package_type != 'course' and requesr.package_type != 'plan':
+          return ServiceResponse(success=False, msg="rejected typeof package", status_code=409)
+    price = 0
+    if requesr.package_type == 'course':
+        course = await get_database().get_collection('course').find_one({"_id":package_bson},{"_id":0,"price":1})
+        if not course:
+            return ServiceResponse(success=False, msg="couln't find course", status_code=409)
+        price = course['price']
+    if requesr.package_type == 'plan':
+        course = await get_database().get_collection('plan').find_one({"_id":package_bson},{"_id":0,"price":1})
+        if not course:
+            return ServiceResponse(success=False, msg="couln't find plan", status_code=409)
+        price = course['price']
+    
+    discount = await get_database().get_collection('promo_code').find_one({"code":requesr.promo_code},{"discount":1})
+    discout_percentage =  0
+    if  discount:
+        discout_percentage = discount['discount']
+    
+    price = price * (100-discout_percentage)/100 
+    requesr.price=price
+    
+    requesr.discount=discout_percentage
     mdb_result = (
         await get_database()
         .get_collection("requesrt_enrollment")
@@ -313,8 +342,9 @@ async def request_enrollment(requesr: RequestEnrollment) -> ServiceResponse:
     )
     requesrt_enrollment_id = str(mdb_result.inserted_id)
     if requesrt_enrollment_id:
-        return ServiceResponse(data={"requesrt_enrollment_id": requesrt_enrollment_id})
+        return ServiceResponse(data={"request": requesr})
     return ServiceResponse(success=False, msg="couln't add enrollment", status_code=409)
+
 
 async def get_enrollment_requests(user_id: str) -> ServiceResponse:
     res = (
@@ -328,7 +358,12 @@ async def get_enrollment_requests(user_id: str) -> ServiceResponse:
                 "student_id": 1,
                 "status": 1,
                 "course_id": 1,
+                "package_type": 1,
+                "price": 1,
+                "promo_code":1,
+                "discount":1,
                 "comments": 1,
+                "price":1,
                 "created_at": 1,
             },
         ).to_list(length=None)
@@ -352,6 +387,11 @@ async def get_all_enrollment_requests(user_id: str) -> ServiceResponse:
                 "parent_id": 1,
                 "status": 1,
                 "course_id": 1,
+                "package_type": 1,
+                "promo_code":1,
+                "discount":1,
+                "comments": 1,
+                "price":1,
                 "comments": 1,
                 "created_at": 1,
             },

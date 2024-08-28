@@ -1,12 +1,24 @@
 <script lang="ts" setup>
 import Button from "primevue/button";
-import { useRouter, } from "vue-router";
+import { useRouter,useRoute } from "vue-router";
 import { selectLang,translationModule } from "@/lib/Translate";
-
+import { computed } from "vue";
 
 const prop = defineProps(["course",'search']);
 const router = useRouter()
-  
+const route = useRoute()
+const isEnrolled=computed(()=>{
+  if(route.params?.isEnrolled){
+    return route.params?.isEnrolled
+  }
+  return 0
+})
+const childId=computed(()=>{
+  if(route.params?.childId){
+    return route.params?.childId
+  }
+  return 0
+})
 </script>
 
 <template>
@@ -14,7 +26,7 @@ const router = useRouter()
     <div class="container">
       <img :src="course?.image" alt="" />
       <h2>{{ selectLang(course?.title) }}</h2>
-      <Button @click="router.push(`/viewCourseDetails/${prop.course?.id}`)" :label=selectLang(translationModule.learnMore) />
+      <Button @click="router.push(`/courseDetails/${prop.course?.id}/${childId}/${isEnrolled}`)" :label=selectLang(translationModule.learnMore) />
     </div>
   </main>
 </template>
@@ -28,7 +40,8 @@ const router = useRouter()
 h2{
     color: var(--header);
     margin: 0;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
+    font-size: 1.25rem
 }
 button{
     align-self: end;
@@ -38,4 +51,5 @@ img{
     aspect-ratio: 1.6/1;
     border-radius: 8px;
 }
+
 </style>

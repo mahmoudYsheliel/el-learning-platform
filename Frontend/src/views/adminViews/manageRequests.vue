@@ -21,12 +21,13 @@ interface RnrollmentRequest {
   childEmail: string;
   courseTitle: Languages;
   date: string;
-  time: string;
   status: string;
   price: number;
+  comments: any[];
   student_id: string;
   course_id: string;
-  comments: any[];
+  type: string;
+  courses: any[];
 }
 const enrollmentRequests = ref<RnrollmentRequest[]>([]);
 const enrollmentRequestsRequester = new HttpRequester(
@@ -50,30 +51,59 @@ async function getEnrollmentRequests() {
               .callApi({ another_userId: req?.student_id })
               .then((studentRes) => {
                 if (studentRes.success == true) {
-                  const childInfoRequester = new HttpRequester("get_course");
-                  childInfoRequester
-                    .callApi({ course_id: req?.course_id })
-                    .then((courseRes) => {
-                      if (courseRes.success == true) {
-                        enrollmentRequests.value?.push({
-                          id: req?.id,
-                          parentEmail: parentRes?.data?.info?.email,
-                          childEmail: studentRes?.data?.info?.email,
-                          courseTitle: courseRes?.data?.course?.title,
-                          date: extractDate(req?.created_at),
-                          time: extractTime(req?.created_at),
-                          status: req?.status,
-                          price: courseRes?.data?.course?.price,
-                          comments: req?.comments,
-                          course_id: req?.course_id,
-                          student_id: req?.student_id,
-                        });
-                        addedComment.value = "";
-                        enrollmentRequests.value.sort((a, b) =>
-                          a.id.localeCompare(b.id)
-                        );
-                      }
-                    });
+                  if (req.package_type == "course") {
+                    const childInfoRequester = new HttpRequester("get_course");
+                    childInfoRequester
+                      .callApi({ course_id: req?.course_id })
+                      .then((courseRes) => {
+                        if (courseRes.success == true) {
+                          enrollmentRequests.value?.push({
+                            id: req?.id,
+                            parentEmail: parentRes?.data?.info?.email,
+                            childEmail: studentRes?.data?.info?.email,
+                            courseTitle: courseRes?.data?.course?.title,
+                            date: extractDate(req?.created_at),
+                            status: req?.status,
+                            price: req?.price,
+                            comments: req?.comments,
+                            student_id: req?.student_id,
+                            course_id: req?.course_id,
+                            courses: [],
+                            type: "course",
+                          });
+                          addedComment.value = "";
+                          enrollmentRequests.value.sort((a, b) =>
+                            a.id.localeCompare(b.id)
+                          );
+                        }
+                      });
+                  } else if (req.package_type == "plan") {
+                    const childInfoRequester = new HttpRequester("get_plan");
+                    childInfoRequester
+                      .callApi({ plan_id: req?.course_id })
+                      .then((planRes) => {
+                        if (planRes.success == true) {
+                          enrollmentRequests.value?.push({
+                            id: req?.id,
+                            parentEmail: parentRes?.data?.info?.email,
+                            childEmail: studentRes?.data?.info?.email,
+                            courseTitle: planRes?.data?.plan?.title,
+                            date: extractDate(req?.created_at),
+                            status: req?.status,
+                            price: req?.price,
+                            comments: req?.comments,
+                            student_id: req?.student_id,
+                            course_id: req?.course_id,
+                            courses: planRes?.data?.plan?.courses,
+                            type: "plan",
+                          });
+                          addedComment.value = "";
+                          enrollmentRequests.value.sort((a, b) =>
+                            a.id.localeCompare(b.id)
+                          );
+                        }
+                      });
+                  }
                 }
               });
           });
@@ -121,27 +151,55 @@ function addComment() {
 }
 
 function accept(req: RnrollmentRequest) {
-  const editRequestStatusRequester = new HttpRequester("edit_request_status");
-  const createEnrollmentRequester = new HttpRequester("create_enrollment");
-  createEnrollmentRequester
-    .callApi({
-      new_enrollment: {
-        student_id: req.student_id,
-        course_id: req.course_id,
-        created_at: new Date().toISOString(),
-      },
-    })
-    .then((res) => {
-      if (res.success) {
-        editRequestStatusRequester
-          .callApi({ new_status: "Success", enrollment_request_id: req.id })
-          .then((res) => {
-            if (res.success) {
-              getEnrollmentRequests();
-            }
-          });
-      }
-    });
+  if (req.type == "course") {
+    const editRequestStatusRequester = new HttpRequester("edit_request_status");
+    const createEnrollmentRequester = new HttpRequester("create_enrollment");
+    createEnrollmentRequester
+      .callApi({
+        new_enrollment: {
+          student_id: req.student_id,
+          course_id: req.course_id,
+          created_at: new Date().toISOString(),
+        },
+      })
+      .then((res) => {
+        if (res.success) {
+          editRequestStatusRequester
+            .callApi({ new_status: "Success", enrollment_request_id: req.id })
+            .then((res) => {
+              if (res.success) {
+                getEnrollmentRequests();
+              }
+            });
+        }
+      });
+  }
+  if (req.type == "plan") {
+    const editRequestStatusRequester = new HttpRequester("edit_request_status");
+    for (let course of req.courses){
+      const createEnrollmentRequester = new HttpRequester("create_enrollment");
+    createEnrollmentRequester
+      .callApi({
+        new_enrollment: {
+          student_id: req.student_id,
+          course_id: course?.Id,
+          created_at: new Date().toISOString(),
+        },
+      })
+      .then((res) => {
+        if (res.success) {
+          editRequestStatusRequester
+            .callApi({ new_status: "Success", enrollment_request_id: req.id })
+            .then((res) => {
+              if (res.success) {
+                getEnrollmentRequests();
+              }
+            });
+        }
+      });
+    }
+   
+  }
 }
 function reject(id: string) {
   const editRequestStatusRequester = new HttpRequester("edit_request_status");
@@ -410,11 +468,11 @@ span {
 }
 @media screen and (max-width: 1000px) {
   .container {
-  grid-template-columns:  100vw;
-  min-height: 100vh;
-}
-.sidebar{
-  display: none;
-}
+    grid-template-columns: 100vw;
+    min-height: 100vh;
+  }
+  .sidebar {
+    display: none;
+  }
 }
 </style>

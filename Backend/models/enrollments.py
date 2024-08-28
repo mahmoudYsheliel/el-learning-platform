@@ -48,13 +48,19 @@ class Comment(BaseModel):
     sender_type:Optional[str]=''
     msg:str    
     
+    
+    
 class RequestEnrollment(BaseModel):
     id:Optional[str] = ''
     student_id:Optional[str]=''
     parent_id:Optional[str]=''
     status:Optional[str]='Pending' #Pending Success Rejected 
     course_id:str
+    package_type:Optional[str] ='course'  # course plan
+    price:Optional[float]=0
+    promo_code:Optional[str]=''
+    discount: Optional[int]=0
     comments:Optional[list[str]]=[]
     last_comment_id:Optional[int]=0
-    created_at:datetime
+    created_at: Optional[datetime]=datetime.now().isoformat()
     

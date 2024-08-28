@@ -39,7 +39,7 @@ coursesRequester.callApi().then((res) => {
             >
               <ChildCourseCard
                 class="card"
-                :programId="enrollment.course_id"
+                :courseId="enrollment.course_id"
               />
             </div>
           </div>
@@ -50,7 +50,7 @@ coursesRequester.callApi().then((res) => {
             <div class="course-container" v-for="course in courses">
               <ChildCourseCard
                 class="card"
-                :programId="course.id"
+                :courseId="course.id"
                 v-if="!enrollments || !enrollments.some((obj:any)=>{return obj?.course_id==course?.id})"
               />
             </div>

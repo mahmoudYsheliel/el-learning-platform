@@ -9,10 +9,10 @@ const courses = ref<any[]>([]);
 const enrollments = ref();
 
 const obj = computed(() => {
-    enrollments.value=null
+  enrollments.value = null;
 
   const coursesRequester = new HttpRequester("get_courses");
-  
+
   coursesRequester.callApi().then((res) => {
     if (res.data.courses) {
       courses.value = res.data.courses;
@@ -20,15 +20,27 @@ const obj = computed(() => {
   });
 
   const childEnrollmentsRequester = new HttpRequester("get_child_enrollments");
-  childEnrollmentsRequester.callApi({ child_id: props.childId }).then((res) => {
+  if (props.childId) {
+    childEnrollmentsRequester
+      .callApi({ child_id: props.childId })
+      .then((res) => {
+        if (res.data.enrollments) {
+          enrollments.value = res.data.enrollments;
+        }
+      });
+  }
 
-    if (res.data.enrollments) {
-      enrollments.value = res.data.enrollments;
-    }
-  });
-  return null
+  return null;
 });
 
+const plans = ref();
+const plansRequester = new HttpRequester("get_all_plans");
+plansRequester.callApi().then((res) => {
+  if (res.success) {
+    plans.value = res?.data?.plans;
+    console.log(plans.value);
+  }
+});
 </script>
 
 <template>
@@ -55,7 +67,7 @@ const obj = computed(() => {
             :isEnrolled="0"
             :programId="course.id"
             :childId="childId"
-            v-if="!enrollments || !enrollments.some((obj:any)=>{return obj?.course_id==course?.id})"
+            v-if="!enrollments?.some((obj:any)=>{return obj?.course_id==course?.id})"
           />
         </div>
       </div>

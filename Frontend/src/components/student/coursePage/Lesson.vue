@@ -43,7 +43,7 @@ function markCompleted(){
       </h2>
       <p>{{selectLang(lesson?.description) }}</p>
       <div class="wrapper">
-        <iframe :src="lesson?.source" frameborder="0" sandbox="allow-scripts allow-same-origin" allowfullscreen ></iframe>
+        <iframe  :src="lesson?.source" frameborder="0" sandbox="allow-scripts allow-same-origin" allowfullscreen ></iframe>
       </div>
       <Button :disabled="completed" icon="pi pi-check-circle"  :label=selectLang(translationModule.markCompleted) icon-pos="right" @click="markCompleted"/>
     </div>

@@ -48,7 +48,7 @@ function setLang(selectedLang: string | undefined) {
     </div>
 
     <div class="options">
-      <span>{{ selectLang(translationModule.plans) }}</span>
+      <span @click="router.push('/tracePlans/0/0')" style="cursor: pointer;">{{ selectLang(translationModule.plans) }}</span>
       <div class="card flex justify-content-center">
         <SplitButton
           :label=selectLang(translationModule.programs)

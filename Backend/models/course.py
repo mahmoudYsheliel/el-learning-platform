@@ -1,7 +1,5 @@
 from typing import Optional
 from pydantic import BaseModel
-from bson.objectid import ObjectId
-from datetime import datetime
 
 class TwoLang(BaseModel):
     en:str
@@ -34,3 +32,4 @@ class Course(BaseModel):
     max_age:int
     duration: Optional[int]  # number of days
     number_of_enrollments: Optional[int]=0
+    

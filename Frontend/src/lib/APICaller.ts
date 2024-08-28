@@ -26,7 +26,6 @@ export class HttpRequester {
     let lofinString=`grant_type=&username=${username}&password=${pass}&scope=&client_id=&client_secret=`
     try {
       const url = this.base_endpoint + this.endpoint;
-
       let response = await axios.post(url.toString(), lofinString);
       if(response.data && response.status ==200 && response.data.access_token){
         this.token.addToken(response.data.access_token);

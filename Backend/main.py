@@ -13,7 +13,9 @@ from routes import (
     category_api,
     enrollment_api,
     program_api,
-    analysis_api
+    analysis_api,
+    promo_code_api,
+    plan_api
 )
 
 
@@ -43,12 +45,8 @@ app.include_router(category_api.router)
 app.include_router(enrollment_api.router)
 app.include_router(program_api.router)
 app.include_router(analysis_api.router)
-
-
-import os
-from fastapi.responses import RedirectResponse
-from fastapi.responses import FileResponse
-
+app.include_router(promo_code_api.router)
+app.include_router(plan_api.router)
 
 
     

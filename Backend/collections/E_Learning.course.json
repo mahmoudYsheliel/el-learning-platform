@@ -836,4 +836,1066 @@
   "max_age": 9,
   "duration": 3,
   "number_of_enrollments": 0
+},
+{
+  "_id": {
+    "$oid": "66be07508abeb455cb105b2d"
+  },
+  "id": "string",
+  "title": {
+    "en": "Discovering the World of Programming",
+    "ar": "اكتشاف عالم البرمجة"
+  },
+  "description": {
+    "en": "Dive into the core concepts of programming with our Fundamentals course! Learn the essentials of variables, data types, control structures, and functions. Gain practical skills in writing and debugging code in languages like C. Understand key programming paradigms and concepts such as loops, conditionals, and data structures. This course offers a solid foundation in programming, preparing you for more advanced topics and real-world coding challenges.",
+    "ar": "اغمر في مفاهيم البرمجة الأساسية من خلال دورتنا في الأساسيات! تعلم أساسيات المتغيرات وأنواع البيانات وهياكل التحكم والدوال. احصل على مهارات عملية في كتابة وتصحيح الأكواد باستخدام لغات مثل C. فهم الأساسيات البرمجية الرئيسية ومفاهيم مثل الحلقات والشرطيات والهياكل البيانية. توفر هذه الدورة أساسًا قويًا في البرمجة، مما يعدك للمواضيع المتقدمة وتحديات البرمجة العملية."
+  },
+  "chapters": [
+    {
+      "title": {
+        "en": "Introduction to Programming",
+        "ar": "مقدمة في لبرمجة"
+      },
+      "materials": [
+        {
+          "Id": "66bdf1c08abeb455cb105b1d",
+          "order": 1,
+          "title": {
+            "en": "Introduction to Computer Science",
+            "ar": "مقدمة في علوم الحاسب"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bdf1f68abeb455cb105b1e",
+          "order": 2,
+          "title": {
+            "en": "Computer Science Basics Quiz",
+            "ar": "اختبار أساسيات علوم الحاسب"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bdf3488abeb455cb105b1f",
+          "order": 3,
+          "title": {
+            "en": "Introduction to Programming",
+            "ar": "مقدمة في البرمجة"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bdf3988abeb455cb105b20",
+          "order": 4,
+          "title": {
+            "en": "Programming Basics Quiz",
+            "ar": "اختبار أساسيات البرمجة"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bdf4098abeb455cb105b21",
+          "order": 5,
+          "title": {
+            "en": "Introduction to Algorithms and Sequences",
+            "ar": "مقدمة في الخوارزميات والتسلسلات"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bdf43d8abeb455cb105b22",
+          "order": 6,
+          "title": {
+            "en": "Algorithms and Sequences Quiz",
+            "ar": "اختبار الخوارزميات والتسلسلات"
+          },
+          "type": "Quiz"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Exploring Programming Concepts",
+        "ar": "استكشاف مفاهيم البرمجة"
+      },
+      "materials": [
+        {
+          "Id": "66bdf4ad8abeb455cb105b23",
+          "order": 1,
+          "title": {
+            "en": "Understanding Variables in C Programming",
+            "ar": "فهم المتغيرات في برمجة C"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bdf4d48abeb455cb105b24",
+          "order": 2,
+          "title": {
+            "en": "Quiz on Variables",
+            "ar": "اختبار حول المتغيرات"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bdf5218abeb455cb105b25",
+          "order": 3,
+          "title": {
+            "en": "Understanding Conditional Statements",
+            "ar": "فهم العبارات الشرطية"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bdf53b8abeb455cb105b26",
+          "order": 4,
+          "title": {
+            "en": "Quiz on Conditional Statements",
+            "ar": "اختبار حول العبارات الشرطية"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bdf69f8abeb455cb105b28",
+          "order": 5,
+          "title": {
+            "en": "Understanding Loops",
+            "ar": "فهم الحلقات  "
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bdf5a18abeb455cb105b27",
+          "order": 6,
+          "title": {
+            "en": "Quiz on Loops",
+            "ar": "اختبار حول الحلقات"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bdf73c8abeb455cb105b29",
+          "order": 7,
+          "title": {
+            "en": "Understanding Functions ",
+            "ar": "فهم الدوال"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bdf75a8abeb455cb105b2a",
+          "order": 8,
+          "title": {
+            "en": "Functions in C Programming Quiz",
+            "ar": "اختبار الدوال في برمجة C"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bdf7a08abeb455cb105b2b",
+          "order": 9,
+          "title": {
+            "en": "Understanding Functions ",
+            "ar": "فهم الدوال"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bdf7c48abeb455cb105b2c",
+          "order": 10,
+          "title": {
+            "en": "File Handling in C Programming Quiz",
+            "ar": "اختبار التعامل مع الملفات في برمجة C"
+          },
+          "type": "Quiz"
+        }
+      ]
+    }
+  ],
+  "price": 500,
+  "image": "http://prokoudine.info/wp-content/uploads/2020/01/online-programming-school.jpeg",
+  "categories": [
+    {
+      "Id": "6606c79643e416de9726f229",
+      "title": {
+        "en": "Computer Programming",
+        "ar": "برمجة الكمبيوتر"
+      }
+    }
+  ],
+  "objectives": [
+    {
+      "en": "Understand basic programming concepts such as variables and data types.",
+      "ar": "فهم مفاهيم البرمجة الأساسية مثل المتغيرات وأنواع البيانات."
+    },
+    {
+      "en": "Learn to use control structures like loops and conditionals.",
+      "ar": "تعلم استخدام هياكل التحكم مثل الحلقات والشرطيات."
+    },
+    {
+      "en": "Gain proficiency in writing and debugging code in C.",
+      "ar": "احصل على إتقان في كتابة وتصحيح الأكواد باستخدام C."
+    },
+    {
+      "en": "Explore fundamental programming paradigms and data structures.",
+      "ar": "استكشف الأساسيات البرمجية الرئيسية والهياكل البيانية."
+    },
+    {
+      "en": "Develop problem-solving skills through practical coding exercises.",
+      "ar": "طور مهارات حل المشكلات من خلال تمارين البرمجة العملية."
+    }
+  ],
+  "min_age": 6,
+  "max_age": 9,
+  "duration": 7,
+  "number_of_enrollments": 0
+},
+{
+  "_id": {
+    "$oid": "66bf7d0dda5e21b89701140f"
+  },
+  "id": "string",
+  "title": {
+    "en": "Waves and Wonders",
+    "ar": "أمواج وعجائب"
+  },
+  "description": {
+    "en": "Discover the science of waves, sound, and light in this engaging course. Explore wave behavior, sound propagation, and light properties, including reflection and refraction. Learn about electromagnetic waves like ultraviolet and gamma rays. Interactive lessons and quizzes make complex concepts accessible and exciting for curious learners.",
+    "ar": "اكتشف علم الموجات والصوت والضوء في هذه الدورة الجذابة. استكشاف سلوك الموجة، وانتشار الصوت، وخصائص الضوء، بما في ذلك الانعكاس والانكسار. التعرف على الموجات الكهرومغناطيسية مثل الأشعة فوق البنفسجية وأشعة جاما. الدروس والاختبارات التفاعلية تجعل المفاهيم المعقدة سهلة المنال ومثيرة للمتعلمين الفضوليين."
+  },
+  "chapters": [
+    {
+      "title": {
+        "en": "Fundamentals of Waves",
+        "ar": "أساسيات الموجات"
+      },
+      "materials": [
+        {
+          "Id": "66bf689dda5e21b8970113fe",
+          "order": 1,
+          "title": {
+            "en": "Wave Wizards 1",
+            "ar": "سحرة الموجات 1"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bf68beda5e21b8970113ff",
+          "order": 2,
+          "title": {
+            "en": "Wave Wizards 2",
+            "ar": "سحرة الموجات 2"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bf6e72da5e21b897011408",
+          "order": 3,
+          "title": {
+            "en": "Quiz on Wave Physics",
+            "ar": "اختبار حول فيزياء الموجات"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bf6aa6da5e21b897011400",
+          "order": 4,
+          "title": {
+            "en": "The Magic of Sound",
+            "ar": "سحر الصوت"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bf6ae6da5e21b897011401",
+          "order": 5,
+          "title": {
+            "en": "The Fascinating Properties of Sound",
+            "ar": "خصائص الصوت المثيرة"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bf6eedda5e21b897011409",
+          "order": 6,
+          "title": {
+            "en": "Quiz on The Magic of Sound",
+            "ar": "اختبار حول سحر الصوت"
+          },
+          "type": "Quiz"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": " Light and Optical Phenomena",
+        "ar": " الظواهر الضوئية والبصرية"
+      },
+      "materials": [
+        {
+          "Id": "66bf6bacda5e21b897011402",
+          "order": 1,
+          "title": {
+            "en": "Light as We Know It",
+            "ar": "الضوء كما نعرفه"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bf6f3ada5e21b89701140a",
+          "order": 2,
+          "title": {
+            "en": "Quiz on Light as We Know It",
+            "ar": "اختبار حول الضوء كما نعرفه"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bf6c5cda5e21b897011403",
+          "order": 3,
+          "title": {
+            "en": "Optical Mysteries",
+            "ar": "الأسرار البصرية"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bf6f88da5e21b89701140b",
+          "order": 4,
+          "title": {
+            "en": "Quiz on Optical Mysteries",
+            "ar": "اختبار حول الألغاز البصرية"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bf6ca1da5e21b897011404",
+          "order": 5,
+          "title": {
+            "en": "Magnificent Light",
+            "ar": "الضوء الرائع"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bf6cf9da5e21b897011405",
+          "order": 6,
+          "title": {
+            "en": "Magnificent Light 2",
+            "ar": "2 الضوء الرائع"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bf6fc3da5e21b89701140c",
+          "order": 7,
+          "title": {
+            "en": "Quiz on Magnificent Light",
+            "ar": "اختبار حول الضوء الرائع"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bf6d3cda5e21b897011406",
+          "order": 8,
+          "title": {
+            "en": "Unseen Wonders",
+            "ar": "العجائب غير المرئية"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bf6dbfda5e21b897011407",
+          "order": 9,
+          "title": {
+            "en": "Unseen Wonders 2",
+            "ar": "2 العجائب غير المرئية"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bf6e72da5e21b897011408",
+          "order": 10,
+          "title": {
+            "en": "Quiz on Wave Physics",
+            "ar": "اختبار حول فيزياء الموجات"
+          },
+          "type": "Quiz"
+        }
+      ]
+    }
+  ],
+  "price": 500,
+  "image": "https://img.freepik.com/premium-photo/glowing-waves-neon-light-forming-intricate-patterns-darkness-evoking-sense-mystery-wonder_35691-47002.jpg?w=996",
+  "categories": [
+    {
+      "Id": "66bf7ca6da5e21b89701140e",
+      "title": {
+        "en": "Physics",
+        "ar": "الفيزياء "
+      }
+    }
+  ],
+  "objectives": [
+    {
+      "en": "Identify and describe the basic properties of waves, including peaks, troughs, and wave types.",
+      "ar": "تحديد ووصف الخصائص الأساسية للأمواج، بما في ذلك القمم والأخاديد وأنواع الأمواج."
+    },
+    {
+      "en": "Understand how sound waves travel through different mediums and how their properties affect perception.",
+      "ar": "فهم كيفية انتقال موجات الصوت عبر وسائط مختلفة وكيف تؤثر خصائصها على الإدراك."
+    },
+    {
+      "en": "Explain the behavior of light waves, including reflection, refraction, and dispersion, and their applications.",
+      "ar": "شرح سلوك موجات الضوء، بما في ذلك الانعكاس والانكسار والتشتت، وتطبيقاتها."
+    },
+    {
+      "en": "Analyze optical phenomena such as mirages and how they relate to light and wave behavior.",
+      "ar": "تحليل الظواهر البصرية مثل السراب وكيفية ارتباطها بسلوك الضوء والأمواج."
+    },
+    {
+      "en": "Explore the effects of different wavelengths and frequencies on wave behavior and color perception.",
+      "ar": "استكشاف تأثيرات الأطوال الموجية والترددات المختلفة على سلوك الأمواج وإدراك اللون."
+    }
+  ],
+  "min_age": 6,
+  "max_age": 9,
+  "duration": 6,
+  "number_of_enrollments": 0
+},
+{
+  "_id": {
+    "$oid": "66c0137dda5e21b89701142d"
+  },
+  "id": "string",
+  "title": {
+    "en": "Running the Skies",
+    "ar": "الجري في السماء"
+  },
+  "description": {
+    "en": "This course explores aviation fundamentals, from the history of flight and key inventors to the principles of aerodynamics and flight mechanics. Students will learn about the forces of flight, the importance of gravity, and aircraft control systems through engaging lessons and quizzes, enhancing their understanding of how airplanes fly and stay aloft.",
+    "ar": "يستكشف هذا المقرر أساسيات الطيران، بدءًا من تاريخ الطيران والمخترعين الرئيسيين إلى مبادئ الديناميكا الهوائية وميكانيكا الطيران. سوف يتعلم الطلاب حول قوى الطيران، وأهمية الجاذبية، وأنظمة التحكم في الطائرات من خلال الدروس والاختبارات التفاعلية، مما يعزز فهمهم لكيفية طيران الطائرات وبقائها عالياً."
+  },
+  "chapters": [
+    {
+      "title": {
+        "en": "The Fundamentals of Flight",
+        "ar": "أساسيات الطيران"
+      },
+      "materials": [
+        {
+          "Id": "66bfa992da5e21b897011410",
+          "order": 1,
+          "title": {
+            "en": "Running the Skies",
+            "ar": "التحكم في السما"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfa9e9da5e21b897011411",
+          "order": 2,
+          "title": {
+            "en": "The History and Uses of Kites",
+            "ar": "تاريخ واستخدامات الطيارات الورقية"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfaa26da5e21b897011412",
+          "order": 3,
+          "title": {
+            "en": "Famous Figures and Their Kites",
+            "ar": "المشاهير وطياراتهم الورقية"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfaf9ada5e21b897011422",
+          "order": 4,
+          "title": {
+            "en": "Kites in Flight",
+            "ar": "الطائرات الورقية في الطيران"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bfaa6dda5e21b897011413",
+          "order": 5,
+          "title": {
+            "en": "The Dream of Flying",
+            "ar": "حلم الطيران"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfaaa9da5e21b897011414",
+          "order": 6,
+          "title": {
+            "en": "The Evolution of Flight",
+            "ar": "تطور الطيران"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfb0b3da5e21b897011423",
+          "order": 7,
+          "title": {
+            "en": "They Never Gave Up",
+            "ar": "لم يستسلموا أبدًا"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bfab56da5e21b897011415",
+          "order": 8,
+          "title": {
+            "en": "The Wright Brothers' Journey to Powered Flight",
+            "ar": "ويلبر وأورفيل رايت: رواد الطيران"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfab90da5e21b897011416",
+          "order": 9,
+          "title": {
+            "en": "Wilbur & Orville Wright: Pioneers of Flight",
+            "ar": "رحلة الأخوين رايت إلى الطيران المدفوع"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfb125da5e21b897011424",
+          "order": 10,
+          "title": {
+            "en": "The Wright Brothers",
+            "ar": "الأخوان رايت"
+          },
+          "type": "Quiz"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "The Science of Flight",
+        "ar": "علم الطيران"
+      },
+      "materials": [
+        {
+          "Id": "66bfac07da5e21b897011417",
+          "order": 1,
+          "title": {
+            "en": "Air Works for Me",
+            "ar": "الهواء يعمل من أجلي"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfb1aeda5e21b897011425",
+          "order": 2,
+          "title": {
+            "en": "Understanding States of Matter",
+            "ar": "فهم حالات المادة"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bfac46da5e21b897011418",
+          "order": 3,
+          "title": {
+            "en": "The Four Forces of Flight at Work",
+            "ar": "القوى الأربع للطيران في العمل"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfb1e3da5e21b897011426",
+          "order": 4,
+          "title": {
+            "en": "The Four Forces of Flight at Work",
+            "ar": "قوى الطيران الأربعة في العمل"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bfac79da5e21b897011419",
+          "order": 5,
+          "title": {
+            "en": "The Pull of Gravity",
+            "ar": "جاذبية الأرض"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfb221da5e21b897011427",
+          "order": 6,
+          "title": {
+            "en": "The Pull of Gravity",
+            "ar": "جاذبية الأرض"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bfaca9da5e21b89701141a",
+          "order": 7,
+          "title": {
+            "en": "It Lifts Me Up—The Force of Lift",
+            "ar": "قوة الرفع"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfb25ada5e21b897011428",
+          "order": 8,
+          "title": {
+            "en": "It Lifts Me Up—The Force of Lift",
+            "ar": "يرفعني للأعلى—قوة الرفع"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bfacdcda5e21b89701141b",
+          "order": 9,
+          "title": {
+            "en": "The Opposing Forces of Thrust and Drag",
+            "ar": "القوى المتضادة للدفع والسحب"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfb299da5e21b897011429",
+          "order": 10,
+          "title": {
+            "en": "The Opposing Forces of Thrust and Drag",
+            "ar": "القوى المتعارضة للدفع والسحب"
+          },
+          "type": "Quiz"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Earth, Atmosphere, and Space Exploration",
+        "ar": "الأرض والغلاف الجوي واستكشاف الفضاء"
+      },
+      "materials": [
+        {
+          "Id": "66bfad44da5e21b89701141c",
+          "order": 1,
+          "title": {
+            "en": "Controlling the Plane",
+            "ar": "التحكم بالطائرة"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfad89da5e21b89701141d",
+          "order": 1,
+          "title": {
+            "en": "Controlling the Plane 2",
+            "ar": "التحكم بالطائرة 2 "
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfb2dada5e21b89701142a",
+          "order": 3,
+          "title": {
+            "en": "Controlling the Plane",
+            "ar": "التحكم بالطائرة"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bfadf1da5e21b89701141e",
+          "order": 4,
+          "title": {
+            "en": "The Evolution of Transportation",
+            "ar": "تطور وسائل النقل"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfae33da5e21b89701141f",
+          "order": 5,
+          "title": {
+            "en": "The Evolution of Transportation 2 ",
+            "ar": "2 تطور وسائل النقل"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66c0115ada5e21b89701142c",
+          "order": 6,
+          "title": {
+            "en": "Faster, Farther, Higher",
+            "ar": "أسرع، أبعد، أعلى"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66bfae92da5e21b897011420",
+          "order": 7,
+          "title": {
+            "en": "Discovering Earth",
+            "ar": " استكشاف الأرض"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfaecdda5e21b897011421",
+          "order": 8,
+          "title": {
+            "en": "Discovering Earth 2",
+            "ar": " 2 استكشاف الأرض"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66bfb325da5e21b89701142b",
+          "order": 9,
+          "title": {
+            "en": "Discovering Earth",
+            "ar": " استكشاف الأرض"
+          },
+          "type": "Quiz"
+        }
+      ]
+    }
+  ],
+  "price": 500,
+  "image": "https://lirp.cdn-website.com/e346530e/dms3rep/multi/opt/flight_1-e01931ee-1920w.jpg",
+  "categories": [
+    {
+      "Id": "667c3e7798157d488d31854a",
+      "title": {
+        "en": "Space Exploration",
+        "ar": "استكشاف الفضاء"
+      }
+    }
+  ],
+  "objectives": [
+    {
+      "en": "Understand the key characteristics and functions of Earth's atmospheric layers.",
+      "ar": "فهم الخصائص الرئيسية ووظائف طبقات الغلاف الجوي للأرض."
+    },
+    {
+      "en": "Explore the composition and significance of gases in Earth's atmosphere.",
+      "ar": "استكشاف تكوين وأهمية الغازات في الغلاف الجوي للأرض."
+    },
+    {
+      "en": "Learn about the role and importance of satellites in Earth's orbit.",
+      "ar": "التعرف على دور وأهمية الأقمار الصناعية في مدار الأرض."
+    },
+    {
+      "en": "Gain insight into natural phenomena occurring in different atmospheric layers.",
+      "ar": "اكتساب فهم حول الظواهر الطبيعية التي تحدث في طبقات الغلاف الجوي المختلفة."
+    },
+    {
+      "en": "Comprehend the impact of the ozone layer in protecting life on Earth.",
+      "ar": "فهم تأثير طبقة الأوزون في حماية الحياة على الأرض."
+    }
+  ],
+  "min_age": 6,
+  "max_age": 9,
+  "duration": 6,
+  "number_of_enrollments": 0
+},
+{
+  "_id": {
+    "$oid": "66cb93d73b16f87bfae72876"
+  },
+  "id": "string",
+  "title": {
+    "en": "Aerospace: The Beginning",
+    "ar": "الفضاء الجوي: البداية"
+  },
+  "description": {
+    "en": "Discover the world of aerospace through this course. Explore the history of flight, from ancient myths to the Wright brothers. Learn key principles like Archimedes' Principle, Newton’s Laws, and the forces of flight. Understand Earth's atmosphere and its impact on aviation.",
+    "ar": "اكتشف عالم الفضاء الجوي من خلال هذه الدورة. استكشف تاريخ الطيران من الأساطير القديمة إلى الأخوين رايت. تعلم المبادئ الأساسية مثل مبدأ أرخميدس وقوانين نيوتن وقوى الطيران. فهم تأثير الغلاف الجوي للأرض على الطيران."
+  },
+  "chapters": [
+    {
+      "title": {
+        "en": "Introduction to Aerospace",
+        "ar": "مقدمة في الفضاء الجوي"
+      },
+      "materials": [
+        {
+          "Id": "66cb2f113b16f87bfae7285d",
+          "order": 1,
+          "title": {
+            "en": "Welcome to Aerospace: The Beginning",
+            "ar": "مرحبًا بكم في عالم الفضاء الجوي: البداية"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66cb2f583b16f87bfae7285e",
+          "order": 2,
+          "title": {
+            "en": "Folklore Legends And Myths About Flight",
+            "ar": "أساطير وحكايات شعبية عن الطيران"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66cb39913b16f87bfae7286a",
+          "order": 3,
+          "title": {
+            "en": "Quiz: Folklore Legends About Flight ",
+            "ar": "اختبار: أساطير الفولكلور حول الطيران "
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66cb304d3b16f87bfae7285f",
+          "order": 4,
+          "title": {
+            "en": "The Early Endeavours",
+            "ar": "الجهود المبكرة"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66cb3a243b16f87bfae7286b",
+          "order": 5,
+          "title": {
+            "en": "Quiz: The Early Endeavours",
+            "ar": "اختبار المساعي المبكرة"
+          },
+          "type": "Quiz"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Principles of Flight",
+        "ar": "مبادئ الطيران"
+      },
+      "materials": [
+        {
+          "Id": "66cb30ad3b16f87bfae72860",
+          "order": 1,
+          "title": {
+            "en": "Fluids and Archimedes' Principle",
+            "ar": "السوائل ومبدأ أرخميدس"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66cb3a843b16f87bfae7286c",
+          "order": 2,
+          "title": {
+            "en": "Quiz: Fluids And Archimedes Principle",
+            "ar": "اختبار: السوائل ومبدأ أرخميدس"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66cb31033b16f87bfae72861",
+          "order": 3,
+          "title": {
+            "en": "Lighter-Than-Air Flight",
+            "ar": "الطيران أخف من الهواء"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66cb49263b16f87bfae7286d",
+          "order": 4,
+          "title": {
+            "en": "Quiz: Lighter-Than-Air Flight",
+            "ar": "الاختبار: رحلة أخف من الهواء"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66cb313f3b16f87bfae72862",
+          "order": 5,
+          "title": {
+            "en": "Bernoulli’s Principle",
+            "ar": "مبدأ برنولي"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66cb4a243b16f87bfae7286e",
+          "order": 6,
+          "title": {
+            "en": "Quiz: Bernoulli’s Principle",
+            "ar": "اختبار: مبدأ برنولي"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66cb317c3b16f87bfae72863",
+          "order": 7,
+          "title": {
+            "en": "Newton’s Action and Reaction Theory",
+            "ar": "نظرية العمل والرد فعل لنيوتن"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66cb4a783b16f87bfae7286f",
+          "order": 8,
+          "title": {
+            "en": "Quiz: Newton’s Action and Reaction Theory",
+            "ar": "اختبار: نظرية الفعل ورد الفعل لنيوتن"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66cb32503b16f87bfae72864",
+          "order": 9,
+          "title": {
+            "en": "Other Principles and Concepts",
+            "ar": "مبادئ ومفاهيم أخرى"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66cb4aea3b16f87bfae72870",
+          "order": 10,
+          "title": {
+            "en": "Quiz: Other Principles and Concepts",
+            "ar": "اختبار: مبادئ ومفاهيم أخرى"
+          },
+          "type": "Quiz"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "The Evolution of Flight",
+        "ar": "تطور الطيران"
+      },
+      "materials": [
+        {
+          "Id": "66cb32db3b16f87bfae72865",
+          "order": 1,
+          "title": {
+            "en": "Forces of Flight",
+            "ar": "قوى الطيران"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66cb4b563b16f87bfae72871",
+          "order": 2,
+          "title": {
+            "en": "Quiz: Forces of Flight",
+            "ar": "اختبار: قوى الطيران"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66cb335b3b16f87bfae72866",
+          "order": 3,
+          "title": {
+            "en": "The Invention of the Airplane",
+            "ar": "اختراع الطائرة"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66cb4c243b16f87bfae72872",
+          "order": 4,
+          "title": {
+            "en": "Quiz: The Invention of the Airplane",
+            "ar": "اختبار: اختراع الطائرة"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66cb345e3b16f87bfae72867",
+          "order": 5,
+          "title": {
+            "en": "Achieving the Dream",
+            "ar": "تحقيق الحلم"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66cb4cd33b16f87bfae72873",
+          "order": 6,
+          "title": {
+            "en": "Quiz: Achieving the Dream",
+            "ar": "اختبار: تحقيق الحلم"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66cb34973b16f87bfae72868",
+          "order": 7,
+          "title": {
+            "en": "Understanding the Earth & Atmosphere",
+            "ar": "فهم الأرض والغلاف الجوي"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66cb4d493b16f87bfae72874",
+          "order": 8,
+          "title": {
+            "en": "Quiz: Understanding the Earth & Atmosphere",
+            "ar": "اختبار: فهم الأرض والغلاف الجوي"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "66cb350a3b16f87bfae72869",
+          "order": 9,
+          "title": {
+            "en": "Post-Wright",
+            "ar": "ما بعد رايت"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66cb4dd73b16f87bfae72875",
+          "order": 10,
+          "title": {
+            "en": "Quiz: Post-Wright",
+            "ar": "اختبار: ما بعد رايت"
+          },
+          "type": "Quiz"
+        }
+      ]
+    }
+  ],
+  "price": 500,
+  "image": "https://miro.medium.com/v2/resize:fit:720/format:webp/0*930xz23GRP8JfUFc.jpg",
+  "categories": [
+    {
+      "Id": "667c3e7798157d488d31854a",
+      "title": {
+        "en": "Space Exploration",
+        "ar": "استكشاف الفضاء"
+      }
+    }
+  ],
+  "objectives": [
+    {
+      "en": "Understand the fundamental principles of aerospace and flight.",
+      "ar": "فهم المبادئ الأساسية للفضاء الجوي والطيران."
+    },
+    {
+      "en": "Explore the historical milestones in aviation, from myths to modern advancements.",
+      "ar": "استكشاف المعالم التاريخية في مجال الطيران، من الأساطير إلى التطورات الحديثة."
+    },
+    {
+      "en": "Learn about key scientific principles like Archimedes' Principle and Newton's Laws.",
+      "ar": "تعلم المبادئ العلمية الأساسية مثل مبدأ أرخميدس وقوانين نيوتن."
+    },
+    {
+      "en": "Understand the impact of Earth's atmosphere on aviation and flight performance.",
+      "ar": "فهم تأثير الغلاف الجوي للأرض على الطيران وأداء الطائرات."
+    }
+  ],
+  "min_age": 10,
+  "max_age": 17,
+  "duration": 4,
+  "number_of_enrollments": 0
 }]

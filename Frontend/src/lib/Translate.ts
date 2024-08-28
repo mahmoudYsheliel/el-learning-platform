@@ -5,7 +5,7 @@ interface Languages {
   ar: string;
 }
 
-export function selectLang(obj: null | Languages ) {
+export function selectLang(obj: null | Languages) {
   const lang = useLang();
   const selectedLang = lang.getLang;
   if (selectedLang == "en") {
@@ -443,8 +443,8 @@ export const translationModule = {
     ar: "اذهب إلى دورات الأطفال",
   },
   askParent: {
-    en: "Ask your Parent To Enroll You to this Course",
-    ar: "اطلب من والديك تسجيلك في هذه الدورة",
+    en: "Ask your Parent To Enroll You to this Course or Plan",
+    ar: "اطلب من والديك تسجيلك في هذه الدورة أو الخظة",
   },
   cancell: {
     en: "Cancel",
@@ -592,151 +592,191 @@ export const translationModule = {
   },
   pleaseSendInvoice: {
     en: " Please send an invoice to this number:01065356028 with",
-    ar: "برجاء ارسال فاتورة على هذا الرقم:01065356028 مع" 
+    ar: "برجاء ارسال فاتورة على هذا الرقم:01065356028 مع",
   },
-  attatchTheInvoice:{
-    en:'and attatch the invoice as a whatsapp message to the same number',
-    ar:'وإرفاق الفاتورة كرسالة واتس اب على نفس الرقم'
+  attatchTheInvoice: {
+    en: "and attatch the invoice as a whatsapp message to the same number",
+    ar: "وإرفاق الفاتورة كرسالة واتس اب على نفس الرقم",
   },
-  switchToChild:{
-    en:'Switch to Child',
-    ar:'التبديل إلى حساب الطفل'
+  switchToChild: {
+    en: "Switch to Child",
+    ar: "التبديل إلى حساب الطفل",
   },
-  coursesEnrolled:{
-    en:'Courses Enrolled',
-    ar:'الدورات المسجلة'
+  coursesEnrolled: {
+    en: "Courses Enrolled",
+    ar: "الدورات المسجلة",
   },
-  coursesCompleted:{
-    en:'Courses Completed',
-    ar:' الدورات المكتملة'
+  coursesCompleted: {
+    en: "Courses Completed",
+    ar: " الدورات المكتملة",
   },
-  completed:{
-    en:'Completed:',
-    ar:'مكتمل:'
+  completed: {
+    en: "Completed:",
+    ar: "مكتمل:",
   },
-  completedAt:{
-    en:'Completed at:',
-    ar:'اكتملت في:'
+  completedAt: {
+    en: "Completed at:",
+    ar: "اكتملت في:",
   },
-  heighest:{
-    en:'Heighest:',
-    ar:'الأعلى:'
+  heighest: {
+    en: "Heighest:",
+    ar: "الأعلى:",
   },
-  nomOfAtts:{
-    en:'Number Of Attempts:',
-    ar:'عدد المحاولات:'
+  nomOfAtts: {
+    en: "Number Of Attempts:",
+    ar: "عدد المحاولات:",
   },
-  att:{
-    en:'Attempt',
-    ar:'المحاولة'
+  att: {
+    en: "Attempt",
+    ar: "المحاولة",
   },
-  score:{
-    en:'Score',
-    ar:'نتيجة'
+  score: {
+    en: "Score",
+    ar: "نتيجة",
   },
-  timeToAns:{
-    en:'Time To Answer',
-    ar:'وقت الإجابة'
+  timeToAns: {
+    en: "Time To Answer",
+    ar: "وقت الإجابة",
   },
-  date:{
-    en:'Date',
-    ar:'التاريخ'
+  date: {
+    en: "Date",
+    ar: "التاريخ",
   },
-  time:{
-    en:'Time',
-    ar:'الوقت'
+  time: {
+    en: "Time",
+    ar: "الوقت",
   },
-  editedSuccessffully:{
-    en:'Edited Successfully',
-    ar:'تم التعديل بنجاح'
+  editedSuccessffully: {
+    en: "Edited Successfully",
+    ar: "تم التعديل بنجاح",
   },
-  addComment:{
-    en:'Add Comment',
-    ar:'أضف تعليق'
+  addComment: {
+    en: "Add Comment",
+    ar: "أضف تعليق",
   },
-  showComments:{
-    en:'Show Comments',
-    ar:'عرض التعليقات'
+  showComments: {
+    en: "Show Comments",
+    ar: "عرض التعليقات",
   },
-  pendding:{
-    en:'Pending',
-    ar:'قيد الانتظار'
+  pendding: {
+    en: "Pending",
+    ar: "قيد الانتظار",
   },
-  rejected:{
-    en:'Rejected',
-    ar:'مرفوض'
+  rejected: {
+    en: "Rejected",
+    ar: "مرفوض",
   },
-  succeess:{
-    en:'Success',
-    ar:'مقبول'
+  succeess: {
+    en: "Success",
+    ar: "مقبول",
   },
-  enrollmentsRequests:{
-    en:'Enrollment Requests',
-    ar:'طلبات التسجيل'
+  enrollmentsRequests: {
+    en: "Enrollment Requests",
+    ar: "طلبات التسجيل",
   },
-  durationOfTest:{
-    en:'the duration of the quiz is:',
-    ar:'مدة الاختبار هي :'
+  durationOfTest: {
+    en: "the duration of the quiz is:",
+    ar: "مدة الاختبار هي :",
   },
-  yourChildIQ:{
-    en:'Your Child IQ Score is:',
-    ar:'درجة ذكاء طفلك هي:'
+  yourChildIQ: {
+    en: "Your Child IQ Score is:",
+    ar: "درجة ذكاء طفلك هي:",
   },
-  summary:{
-    en:'Summary',
-    ar:'الملخص'
+  summary: {
+    en: "Summary",
+    ar: "الملخص",
   },
-  dominantTrait:{
-    en:'Dominant Trait',
-    ar:'السمة المهيمنة'
+  dominantTrait: {
+    en: "Dominant Trait",
+    ar: "السمة المهيمنة",
   },
-  bestDescription:{
-    en:'Persnonality Type',
-    ar:' نوع الشخصية'
+  bestDescription: {
+    en: "Persnonality Type",
+    ar: " نوع الشخصية",
   },
-  learningStyle:{
-    en:'Learning Style',
-    ar:'أسلوب التعلم'
+  learningStyle: {
+    en: "Learning Style",
+    ar: "أسلوب التعلم",
   },
-  recommendedCareer:{
-    en:'Recommended Career',
-    ar:'المهنة المقترحة '
+  recommendedCareer: {
+    en: "Recommended Career",
+    ar: "المهنة المقترحة ",
   },
-  requests:{
-    en:'Requests',
-    ar:'الطلبات'
+  requests: {
+    en: "Requests",
+    ar: "الطلبات",
   },
-  logs:{
-    en:'Activities',
-    ar:'الأنشطة '
+  logs: {
+    en: "Activities",
+    ar: "الأنشطة ",
   },
-  parentEmail:{
-    en:'Parent Email',
-    ar:'ايميل الوالد'
+  parentEmail: {
+    en: "Parent Email",
+    ar: "ايميل الوالد",
   },
-  noWorkshop:{
-    en:'Currently No Workshops',
-    ar:'لا يوجد ورش عمل حاليا'
+  noWorkshop: {
+    en: "Currently No Workshops",
+    ar: "لا يوجد ورش عمل حاليا",
   },
-  viewFreeLesson:{
-    en:'View Free Lesson',
-    ar:'عرض الدرس المجاني'
+  viewFreeLesson: {
+    en: "View Free Lesson",
+    ar: "عرض الدرس المجاني",
   },
-  freeLessons:{
-    en:'The Free Lessons',
-    ar:'الدروس المجانية'
+  freeLessons: {
+    en: "The Free Lessons",
+    ar: "الدروس المجانية",
   },
-  viewCourse:{
-    en:'View Course',
-    ar:'عرض الدورة '
+  viewCourse: {
+    en: "View Course",
+    ar: "عرض الدورة ",
   },
-  egyptianPound:{
-    en:'Egyptian Pound',
-    ar:'جنيه مصري'
+  egyptianPound: {
+    en: "Egyptian Pound",
+    ar: "جنيه مصري",
+  },
+  selectedPlan: {
+    en: "Selected Plan",
+    ar: "الخطة المحددة",
+  },
+  allPlans: {
+    en: "All Plans",
+    ar: "جميع الخطط",
+  },
+  allCourses: {
+    en: "All Courses",
+    ar: "جميع الدورات",
+  },
+  planCourses: {
+    en: "Plan Courses",
+    ar: "دورات الخطة",
+  },
+  havePromoCode: {
+    en: "If you have a promo code, please enter it",
+    ar: "إذا كان لديك رمز ترويجي، يرجى إدخاله",
+  },
+  promoCode:{
+    en:'promo code',
+    ar:'الرمز الترويجي'
+  },
+  courseBelongsToPlan:{
+    en:'This Course Belongs to a Trace Plan',
+    ar:'تنتمي هذه الدورة إلى خطة Trace '
+  },
+  viewPlans:{
+    en:'View Plans',
+    ar:'عرض الخطط'
+  },
+  planDescription:{
+    en:'Plan Description',
+    ar:'وصف الخطة'
+  },
+  planObjectives:{
+    en:'Plan Objectives',
+    ar:'أهداف الخطة'
+  },
+  planInfo:{
+    en:'Plan Information',
+    ar:'معلومات عن الخطة'
   }
-
-
-
-
 
 };
