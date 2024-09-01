@@ -4,6 +4,7 @@ import Footer from "@/components/general/Footer.vue";
 import Information from "@/components/student/courseDetails/Information.vue";
 import "primeicons/primeicons.css";
 import { selectLang, translationModule } from "@/lib/Translate";
+import { materialInfo } from "@/lib/Modules";
 import { useRoute, useRouter } from "vue-router";
 import { HttpRequester } from "@/lib/APICaller";
 import { useToken, usePersonalInfo } from "@/stores/token";
@@ -38,19 +39,19 @@ courseRequester.callApi({ course_id: route.params.courseId }).then((res) => {
     };
     obj.title = chapter?.title;
     for (let mat of chapter?.materials) {
+      for (let material of materialInfo) {
+        if (mat?.type == material.name) {
+          obj.materials.push({
+            title: selectLang(mat.title),
+            icon: material.icon,
+          });
+        }
+      }
       if (mat?.type === "Lesson") {
         obj.lessonCount = obj.lessonCount + 1;
-        obj.materials.push({
-          title: selectLang(mat.title),
-          icon: "pi pi-book",
-        });
       }
       if (mat?.type === "Quiz") {
         obj.quizCount = obj.quizCount + 1;
-        obj.materials.push({
-          title: selectLang(mat.title),
-          icon: "pi pi-check-square",
-        });
       }
     }
     chapters.value.push(obj);
@@ -64,7 +65,7 @@ const showEnrollmentSuccess = ref(false);
 const showBelongToPlan = ref(false);
 const showSelectChild = ref(false);
 const showPromoCode = ref(false);
-const planId = ref()
+const planId = ref();
 
 function enroll() {
   if (!token.getIsAuthorized) {
@@ -72,21 +73,21 @@ function enroll() {
   } else if (personalInfo.getInfo?.userType == "Child") {
     showAskParent.value = true;
   } else if (personalInfo.getInfo?.userType == "Parent") {
-    const planCourseRequester = new HttpRequester("get_course_plan");
-    planCourseRequester
-      .callApi({ course_id: route.params?.courseId })
-      .then((res) => {
-        console.log(res)
-        if (res.success == false) {
-          showPromoCode.value = true;
-        } else if (res?.success == true) {
-          if (route.params?.childId == "0") {
-            showSelectChild.value = true;
-          } else if (route.params?.childId != "0")
+    if (route.params?.childId == "0") {
+      showSelectChild.value = true;
+    } else {
+      const planCourseRequester = new HttpRequester("get_course_plan");
+      planCourseRequester
+        .callApi({ course_id: route.params?.courseId })
+        .then((res) => {
+          if (res.success == false) {
+            showPromoCode.value = true;
+          } else if (res?.success == true) {
             showBelongToPlan.value = true;
-            planId.value = res?.data?.plan?.id
-        }
-      });
+            planId.value = res?.data?.plan?.id;
+          }
+        });
+    }
   }
 }
 
@@ -104,7 +105,6 @@ function requestEnrollmentWithPromoCode(promoCode: string) {
     .then((res) => {
       if (res?.success) {
         cost.value = res?.data?.request?.price;
-        console.log(cost.value);
         showEnrollmentSuccess.value = true;
       }
     });
@@ -143,7 +143,11 @@ function viewMaterial() {
     />
     <EnrolmentSuccedDialog :showDialog="showEnrollmentSuccess" :cost="cost" />
     <GoToChildrenCoursesDialog :showDialog="showSelectChild" />
-    <CourseBelongsToPlanDialog :showDialog="showBelongToPlan" :planId="planId" :childId="route.params?.childId"/>
+    <CourseBelongsToPlanDialog
+      :showDialog="showBelongToPlan"
+      :planId="planId"
+      :childId="route.params?.childId"
+    />
     <PromoCodeDialog
       :showDialog="showPromoCode"
       @promoCode="

@@ -1,50 +1,27 @@
 from models.course import Course
 from models.runtime import ServiceResponse
-from database.mongo_driver import get_database, validate_bson_id
+from database.mongo_driver import get_database, validate_bson_id, check_existance_in_DB
+from lib.materials import materials
 
 
 async def create_course(course: Course) -> ServiceResponse:
     course.number_of_enrollments = 0
     for chapter in course.chapters:
         for mat in chapter.materials:
-            bson_id = validate_bson_id(mat.Id)
-            if not bson_id:
-                return ServiceResponse(success=False, msg="bad material id" + mat.name)
-
-            if mat.type == "Lesson":
-                result = (
-                    await get_database()
-                    .get_collection("lesson")
-                    .find_one({"_id": bson_id})
-                )
-                if not result:
-                    return ServiceResponse(success=False, msg="bad lesson id")
-            elif mat.type == "Quiz":
-                result = (
-                    await get_database()
-                    .get_collection("quiz")
-                    .find_one({"_id": bson_id})
-                )
-                if not result:
-                    return ServiceResponse(success=False, msg="bad quiz id")
-            elif mat.type == "Assesment":
-                result = (
-                    await get_database()
-                    .get_collection("assesment")
-                    .find_one({"_id": bson_id})
-                )
-                if not result:
-                    return ServiceResponse(success=False, msg="bad assesment id")
+            for material in materials:
+                if material["type"] == mat.type:
+                    result =await check_existance_in_DB(
+                        mat.Id, collection_name=material["DB_name"]
+                    )
+                    if not result:
+                        return ServiceResponse(
+                            success=False, msg="bad id for" + material["DB_name"] + mat.Id
+                        )
 
     for category in course.categories:
-        bson_id = validate_bson_id(category.Id)
-        if not bson_id:
-            return ServiceResponse(success=False, msg="bad category id")
-        result = (
-            await get_database().get_collection("category").find_one({"_id": bson_id})
-        )
+        result =await check_existance_in_DB(category.Id, collection_name="category")
         if not result:
-            return ServiceResponse(success=False, msg="bad category id")
+            return ServiceResponse(success=False, msg="bad id for category")
 
     mdb_result = (
         await get_database().get_collection("course").insert_one(course.model_dump())
@@ -56,43 +33,27 @@ async def create_course(course: Course) -> ServiceResponse:
 
 
 async def delete_course(course_id: str) -> ServiceResponse:
-    bson_id = validate_bson_id(course_id)
-    if not bson_id:
-        return ServiceResponse(status_code=400, msg="Bad course ID")
-
-    result = await get_database().get_collection("course").find_one({"_id": bson_id})
+    result =await check_existance_in_DB(course_id, "course")
     if not result:
         return ServiceResponse(success=False, msg="bad course id")
-    for chapter in result.chapters:
-        for mat in chapter.material:
-            bson_id = validate_bson_id(mat.Id)
+    for chapter in result["chapters"]:
+        for mat in chapter["material"]:
+            bson_id = validate_bson_id(mat["Id"])
             if not bson_id:
-                return ServiceResponse(success=False, msg="bad material id" + mat.name)
-
-            if mat.name == "Lesson":
-                result = (
-                    await get_database()
-                    .get_collection("lesson")
-                    .delete_one({"_id": bson_id})
+                return ServiceResponse(
+                    success=False, msg="bad material id" + mat["type"]
                 )
-                if not result:
-                    return ServiceResponse(success=False, msg="bad lesson id")
-            elif mat.name == "Quiz":
-                result = (
-                    await get_database()
-                    .get_collection("quiz")
-                    .delete_one({"_id": bson_id})
-                )
-                if not result:
-                    return ServiceResponse(success=False, msg="bad quiz id")
-            elif mat.name == "Assesment":
-                result = (
-                    await get_database()
-                    .get_collection("assesment")
-                    .delete_one({"_id": bson_id})
-                )
-                if not result:
-                    return ServiceResponse(success=False, msg="bad assesment id")
+            for material in materials:
+                if mat["type"] == material["type"]:
+                    result = (
+                        await get_database()
+                        .get_collection(material["DB_name"])
+                        .delete_one({"_id": bson_id})
+                    )
+                    if not result:
+                        return ServiceResponse(
+                            success=False, msg="bad id for " + material["type"]
+                        )
 
     result = await get_database().get_collection("course").delete_one({"_id": bson_id})
     if not result.deleted_count:
@@ -132,7 +93,7 @@ async def get_course(course_id: str) -> ServiceResponse:
             {"_id": bson_id},
             {
                 "_id": 0,
-                "id":{'$toString':'$_id'},
+                "id": {"$toString": "$_id"},
                 "title": 1,
                 "description": 1,
                 "price": 1,
@@ -148,7 +109,6 @@ async def get_course(course_id: str) -> ServiceResponse:
     )
     if not course:
         return ServiceResponse(success=False, status_code=404, msg="course Not Found")
-
     return ServiceResponse(data={"course": course})
 
 
@@ -262,4 +222,3 @@ async def get_course_free_lessons(course_id: str):
     )
     course["chapters"] = []
     return ServiceResponse(data={"course": course, "lesson": lesson})
-

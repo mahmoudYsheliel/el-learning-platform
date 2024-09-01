@@ -22,7 +22,6 @@ const selectedPlan = ref();
 const courses = ref<any[]>([]);
 const planRequester = new HttpRequester("get_plan");
 planRequester.callApi({ plan_id: route.params.planId }).then((res) => {
-  console.log(res);
   if (res.success) {
     selectedPlan.value = res?.data?.plan;
 
@@ -69,10 +68,8 @@ function requestEnrollmentWithPromoCode(promoCode: string) {
       },
     })
     .then((res) => {
-      console.log(res)
       if (res?.success) {
         cost.value = res?.data?.request?.price;
-        console.log(cost.value);
         showEnrollmentSuccess.value = true;
       }
     });

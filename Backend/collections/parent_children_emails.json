@@ -1,0 +1,207 @@
+[
+    {
+        "parent_email": "mahmoud",
+        "children_emails": [
+            "child1",
+            "T"
+        ]
+    },
+    {
+        "parent_email": "basma",
+        "children_emails": [
+            "salman"
+        ]
+    },
+    {
+        "parent_email": "mahmoudsheleil@gmail.com",
+        "children_emails": [
+            "mahmoudYsheliel"
+        ]
+    },
+    {
+        "parent_email": "mahmoud2",
+        "children_emails": []
+    },
+    {
+        "parent_email": "walidsamy.edutech@gmail.com",
+        "children_emails": []
+    },
+    {
+        "parent_email": "mohammedfarouk146@gmail.com",
+        "children_emails": []
+    },
+    {
+        "parent_email": "mhmuodabrhym@gmail.com",
+        "children_emails": [
+            "mwmnm7265@gmail.com"
+        ]
+    },
+    {
+        "parent_email": "testmahmoud",
+        "children_emails": [
+            "ahmed2000@gmail.com",
+            "soly2"
+        ]
+    },
+    {
+        "parent_email": "maha.abdelaziz@gmail.com",
+        "children_emails": [
+            "salmatawfeek96@gmail.com",
+            "ahmed.islam6066@gmail.com"
+        ]
+    },
+    {
+        "parent_email": "beautylovelylove@gmail.com",
+        "children_emails": []
+    },
+    {
+        "parent_email": "s-mahmoud.sheliel@zewailcity.edu.eg",
+        "children_emails": []
+    },
+    {
+        "parent_email": "parent",
+        "children_emails": [
+            "child2",
+            "0",
+            "s"
+        ]
+    },
+    {
+        "parent_email": "amro",
+        "children_emails": [
+            "malek",
+            "yossuf",
+            "yassin"
+        ]
+    },
+    {
+        "parent_email": "alaa",
+        "children_emails": [
+            "Loll"
+        ]
+    },
+    {
+        "parent_email": "mahmoud.m.gabr@gmail.com",
+        "children_emails": [
+            "jwirya.m.gabr@gmail.com",
+            "hamza.m.gabr11@gmail.com"
+        ]
+    },
+    {
+        "parent_email": "mkinawy@gmail.com",
+        "children_emails": [
+            "layan_elkassem@sacrecoeurgh.edu.eg"
+        ]
+    },
+    {
+        "parent_email": "awad22rahaf@gmail.com",
+        "children_emails": [
+            "awad69143@gmail.com "
+        ]
+    },
+    {
+        "parent_email": "yomna.safaa.eldin@gmail.com",
+        "children_emails": [
+            "anas.m.elsaeid@gmail.com",
+            "yassin.m.elsaeid@gmail.com"
+        ]
+    },
+    {
+        "parent_email": "yomna.safaa.eldin.cse@gmail.com",
+        "children_emails": []
+    },
+    {
+        "parent_email": "ghoneim2909@gmail.com",
+        "children_emails": []
+    },
+    {
+        "parent_email": "mw9904380@gmail.com",
+        "children_emails": [
+            "mw"
+        ]
+    },
+    {
+        "parent_email": "wael.2.edc@gmail.com",
+        "children_emails": []
+    },
+    {
+        "parent_email": "negmsader500@gmail.com",
+        "children_emails": [
+            "negma5484@gmail.com"
+        ]
+    },
+    {
+        "parent_email": "noureldenwael59@gmail.com",
+        "children_emails": []
+    },
+    {
+        "parent_email": "abir.cherni@yahoo.fr",
+        "children_emails": []
+    },
+    {
+        "parent_email": "eng.mai.elshamy2019@gmail.com",
+        "children_emails": [
+            "CLS. 2O30.Sherif.Mohamed@continental.ms",
+            "Shikotota@gmail.com"
+        ]
+    },
+    {
+        "parent_email": "cls.2030.sherif.mohamed@continental.ms",
+        "children_emails": []
+    },
+    {
+        "parent_email": "nairanasser926@gmail.com",
+        "children_emails": []
+    },
+    {
+        "parent_email": "rabdou2008@gmail.com",
+        "children_emails": []
+    },
+    {
+        "parent_email": "sbelety@hotmail.com",
+        "children_emails": [
+            "sbelety@gmail.com"
+        ]
+    },
+    {
+        "parent_email": "usamaesam86@gmail.com",
+        "children_emails": []
+    },
+    {
+        "parent_email": "ahmadwas2022@gmail.com",
+        "children_emails": []
+    },
+    {
+        "parent_email": "Eiad",
+        "children_emails": []
+    },
+    {
+        "parent_email": "zigoo.eg@gmail.com",
+        "children_emails": [
+            "eiadhegazy2016@gmail.com"
+        ]
+    },
+    {
+        "parent_email": "mahmoud3",
+        "children_emails": []
+    },
+    {
+        "parent_email": "nehal89nehL@yahoo.com",
+        "children_emails": []
+    },
+    {
+        "parent_email": "nehal89nehal@yahoo.com",
+        "children_emails": [
+            "nehalmandour89gmail.com",
+            "nehalmandour89@gmail.com"
+        ]
+    },
+    {
+        "parent_email": "ideamagdaelmohandes@yahoo.com",
+        "children_emails": []
+    },
+    {
+        "parent_email": "yusufahmed3082008@gmail.com",
+        "children_emails": []
+    }
+]

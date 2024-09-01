@@ -1,0 +1,192 @@
+[{
+  "_id": {
+    "$oid": "66d0d11841fc53edd8cfb5fb"
+  },
+  "id": "cubesat_builder",
+  "title": {
+    "en": "CubeSat Builder: Build a NASA Spacecraft!",
+    "ar": "مُنشئ CubeSat: بناء مركبة فضائية تابعة لناسا!"
+  },
+  "description": {
+    "en": "Learn how to design and build a CubeSat spacecraft in this interactive NASA simulation game.",
+    "ar": "تعلّم كيفية تصميم وبناء مركبة CubeSat الفضائية في هذه اللعبة التفاعلية من ناسا."
+  },
+  "image": "https://drive.google.com/thumbnail?id=17aoD_b0EEIsD831xa9ebDAjVo2ltx8DP",
+  "source": "https://climatekids.nasa.gov/cubesat-builder-game/"
+},
+{
+  "_id": {
+    "$oid": "66d0d19b41fc53edd8cfb5fc"
+  },
+  "id": "cubesat_builder",
+  "title": {
+    "en": "Gravity and Orbits",
+    "ar": "الجاذبية والمدارات"
+  },
+  "description": {
+    "en": "Explore the relationship between gravity and orbits in this interactive simulation.",
+    "ar": "استكشاف العلاقة بين الجاذبية والمدارات في هذه المحاكاة التفاعلية."
+  },
+  "image": "https://drive.google.com/thumbnail?id=1oINissl5JayLbY3fxt8ydG4ECeeLh_El",
+  "source": "https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_all.html"
+},
+{
+  "_id": {
+    "$oid": "66d0d1e241fc53edd8cfb5fd"
+  },
+  "id": "cubesat_builder",
+  "title": {
+    "en": "Relay: A Laser-Based Space Communications Game",
+    "ar": "ريلاي: لعبة الاتصالات الفضائية باستخدام الليزر"
+  },
+  "description": {
+    "en": "Learn about laser-based space communication by playing this interactive NASA game designed for kids.",
+    "ar": "تعلّم عن الاتصالات الفضائية باستخدام الليزر من خلال هذه اللعبة التفاعلية التي تقدمها ناسا للأطفال."
+  },
+  "image": "https://drive.google.com/thumbnail?id=1VEJ0nC3rIpOrUFhoGDGrQ4Os6pX5VSlP",
+  "source": "https://spaceplace.nasa.gov/relay-laser-communications-game/en/"
+},
+{
+  "_id": {
+    "$oid": "66d0d24241fc53edd8cfb5fe"
+  },
+  "id": "cubesat_builder",
+  "title": {
+    "en": "DSN Uplink-Downlink: A DSN Game",
+    "ar": "DSN Uplink-Downlink: لعبة DSN"
+  },
+  "description": {
+    "en": "Discover how NASA communicates with spacecraft using the Deep Space Network in this interactive game.",
+    "ar": "تعرف على كيفية تواصل ناسا مع المركبات الفضائية باستخدام شبكة الفضاء العميق في هذه اللعبة التفاعلية."
+  },
+  "image": "https://drive.google.com/thumbnail?id=1Pzqoh3GivMmVns9wPvnO2rHgCk7ph1l0",
+  "source": "https://spaceplace.nasa.gov/dsn-game/en/"
+},
+{
+  "_id": {
+    "$oid": "66d0d28a41fc53edd8cfb5ff"
+  },
+  "id": "cubesat_builder",
+  "title": {
+    "en": "Explore Mars: A Mars Rover Game",
+    "ar": "استكشاف المريخ: لعبة مركبة المريخ"
+  },
+  "description": {
+    "en": "Drive a Mars rover and explore the Martian surface in this interactive game from NASA.",
+    "ar": "قم بقيادة مركبة مريخية واستكشاف سطح المريخ في هذه اللعبة التفاعلية من ناسا."
+  },
+  "image": "https://drive.google.com/thumbnail?id=1yBU1iqf-ncokpjGlEoxRM9LrC7q1HlK-",
+  "source": "https://spaceplace.nasa.gov/explore-mars/en/"
+},
+{
+  "_id": {
+    "$oid": "66d1d7903eda58b00b9c4d70"
+  },
+  "id": "string",
+  "title": {
+    "en": "Introduction to Gases Simulation",
+    "ar": "مقدمة في محاكاة الغازات"
+  },
+  "description": {
+    "en": "Explore the properties of gases through interactive simulations. Understand concepts like pressure, volume, and temperature as you manipulate gas particles and observe their behavior in various conditions.",
+    "ar": "استكشف خصائص الغازات من خلال المحاكاة التفاعلية. فهم مفاهيم مثل الضغط والحجم ودرجة الحرارة أثناء التلاعب بجزيئات الغاز ومراقبة سلوكها في ظروف مختلفة."
+  },
+  "image": "https://drive.google.com/thumbnail?id=1po-1bo2hg4QH0rUj8234WygjwoAYFY46",
+  "source": "https://phet.colorado.edu/sims/html/gases-intro/latest/gases-intro_all.html"
+},
+{
+  "_id": {
+    "$oid": "66d1e3fd3eda58b00b9c4d73"
+  },
+  "id": "string",
+  "title": {
+    "en": "Exploring the Continuity Equation",
+    "ar": "استكشاف معادلة الاستمرارية"
+  },
+  "description": {
+    "en": "Dive into the Continuity Equation to understand how it governs fluid flow. Explore its applications in predicting changes in flow speed and cross-sectional area, and see how it applies to various fluid dynamics scenarios.",
+    "ar": "استعرض معادلة الاستمرارية لفهم كيفية تنظيمها لتدفق السوائل. استكشف تطبيقاتها في التنبؤ بالتغيرات في سرعة التدفق والمساحة العرضية، واطلع على كيفية تطبيقها في سيناريوهات ديناميات السوائل المختلفة."
+  },
+  "image": "https://drive.google.com/thumbnail?id=1NugNck6Q5ygEVC9z5cHd9D1BO1ZhB3HF",
+  "source": "https://www.physicsclassroom.com/Physics-Interactives/Fluids/Continuity-Equation"
+},
+{
+  "_id": {
+    "$oid": "66d1e4413eda58b00b9c4d74"
+  },
+  "id": "string",
+  "title": {
+    "en": "Bernoulli's Equation Simulation",
+    "ar": "محاكاة معادلة برنولي"
+  },
+  "description": {
+    "en": "Interact with a simulation of Bernoulli's Equation to see how fluid velocity and pressure are related. Experiment with different flow conditions to understand how changes in velocity affect pressure and vice versa.",
+    "ar": "تفاعل مع محاكاة لمعادلة برنولي لرؤية كيفية ارتباط سرعة السوائل والضغط. جرب ظروف تدفق مختلفة لفهم كيفية تأثير التغيرات في السرعة على الضغط والعكس صحيح."
+  },
+  "image": "https://drive.google.com/thumbnail?id=1Nt30jLdO1dPkEpIo1m5j_yyKVwTUHhD1",
+  "source": "https://www.physicsclassroom.com/Physics-Interactives/Fluids/Bernoullis-Equation"
+},
+{
+  "_id": {
+    "$oid": "66d229924e869223d4f234bc"
+  },
+  "id": "string",
+  "title": {
+    "en": "Density Simulation",
+    "ar": "محاكاة الكثافة"
+  },
+  "description": {
+    "en": "Explore the concept of density through an interactive simulation. Learn how mass and volume determine the density of a substance, and experiment with different materials to observe how changes in these properties affect density.",
+    "ar": "استكشف مفهوم الكثافة من خلال محاكاة تفاعلية. تعلم كيف تحدد الكتلة والحجم كثافة المادة، وجرب مواد مختلفة لملاحظة كيفية تأثير التغيرات في هذه الخصائص على الكثافة."
+  },
+  "image": "https://drive.google.com/thumbnail?id=1bLGCPSWHiBsWf91wEfrlTcEImZPOs8MD",
+  "source": "https://phet.colorado.edu/sims/html/density/latest/density_all.html"
+},
+{
+  "_id": {
+    "$oid": "66d3975ff6fb98d8098e5015"
+  },
+  "id": "atmospheric_gasses_001",
+  "title": {
+    "en": "Atmospheric Gasses",
+    "ar": "الغازات الجوية"
+  },
+  "description": {
+    "en": "Explore the composition and properties of atmospheric gasses, including their roles and effects on climate and weather patterns.",
+    "ar": "استكشف تركيبة وخصائص الغازات الجوية، بما في ذلك أدوارها وتأثيراتها على المناخ وأنماط الطقس."
+  },
+  "image": "https://drive.google.com/thumbnail?id=1Lh8WUTDNKii3WtNiaGNoYdbBHyLt0fYL",
+  "source": "https://javalab.org/en/atmosphere_en/"
+},
+{
+  "_id": {
+    "$oid": "66d39821f6fb98d8098e5017"
+  },
+  "id": "atmospheric_gasses_001",
+  "title": {
+    "en": "AtmosModeler",
+    "ar": "نموذج الغلاف الجوي"
+  },
+  "description": {
+    "en": "AtmosModeler allows users to simulate and analyze atmospheric gas compositions and their impact on climate models.",
+    "ar": "يتيح AtmosModeler للمستخدمين محاكاة وتحليل تكوينات الغازات الجوية وتأثيرها على نماذج المناخ."
+  },
+  "image": "https://drive.google.com/thumbnail?id=1xYu6XeuXkY4EsHotRCXxMfCfqVpUdNGD",
+  "source": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/atmos/"
+},
+{
+  "_id": {
+    "$oid": "66d39869f6fb98d8098e5018"
+  },
+  "id": "atmospheric_gasses_001",
+  "title": {
+    "en": "Space Elevator",
+    "ar": "مصعد الفضاء"
+  },
+  "description": {
+    "en": "Simulate the design and mechanics of a space elevator, exploring its potential to revolutionize space travel and transport.",
+    "ar": "محاكاة تصميم وآلية مصعد الفضاء، واستكشاف إمكانيته في إحداث ثورة في السفر إلى الفضاء والنقل."
+  },
+  "image": "https://drive.google.com/thumbnail?id=1Lh8WUTDNKii3WtNiaGNoYdbBHyLt0fYL",
+  "source": "https://neal.fun/space-elevator/"
+}]

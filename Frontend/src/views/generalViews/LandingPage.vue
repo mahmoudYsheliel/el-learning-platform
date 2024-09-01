@@ -50,7 +50,6 @@ if(token.getIsAuthorized){
 personaRequester.callApi().then((res) => {
   if (res?.success){
     let info = res?.data?.info;
-    console.log(!info?.phone_number && info?.user_type=='Parent')
   if ( !info?.phone_number && info?.user_type=='Parent'){
     showAskInfoDialog.value=true
   }

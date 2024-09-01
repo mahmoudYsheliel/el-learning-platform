@@ -1,0 +1,300 @@
+[{
+  "_id": {
+    "$oid": "667ad80c0339c619b07f9171"
+  },
+  "id": null,
+  "user_id": "667ad80c0339c619b07f9170",
+  "grade": "Primary 3",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "6699aaaf3ec32768df735c4d"
+  },
+  "id": null,
+  "user_id": "6699aaaf3ec32768df735c4c",
+  "grade": "Preparatory 3",
+  "child_group": "6658d832e6f09efb5567576b",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "669ccaa91029bf18c547b8bc"
+  },
+  "id": null,
+  "user_id": "669ccaa91029bf18c547b8bb",
+  "grade": "Kindergarten 2",
+  "child_group": "6658d814e6f09efb5567576a",
+  "education_system": "National (Public) Education System"
+},
+{
+  "_id": {
+    "$oid": "66a207cb1029bf18c547b8c1"
+  },
+  "id": null,
+  "user_id": "66a207cb1029bf18c547b8c0",
+  "grade": "Secondary 3",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66a228e11029bf18c547b8c6"
+  },
+  "id": null,
+  "user_id": "66a228e11029bf18c547b8c5",
+  "grade": "Primary 4",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66a3ba921029bf18c547b8ca"
+  },
+  "id": null,
+  "user_id": "66a3ba921029bf18c547b8c9",
+  "grade": "Primary 1",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "International Schools"
+},
+{
+  "_id": {
+    "$oid": "66a3bafd1029bf18c547b8cc"
+  },
+  "id": null,
+  "user_id": "66a3bafd1029bf18c547b8cb",
+  "grade": "Preparatory 1",
+  "child_group": "6658d814e6f09efb5567576a",
+  "education_system": "International Schools"
+},
+{
+  "_id": {
+    "$oid": "66b9eb1664f330bc9744dfda"
+  },
+  "id": null,
+  "user_id": "66b9eb1664f330bc9744dfd9",
+  "grade": "Kindergarten1",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "Public Education System"
+},
+{
+  "_id": {
+    "$oid": "66ba0f8664f330bc9744dfe1"
+  },
+  "id": null,
+  "user_id": "66ba0f8664f330bc9744dfe0",
+  "grade": "Primary School2",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66ba0fbe64f330bc9744dfe3"
+  },
+  "id": null,
+  "user_id": "66ba0fbe64f330bc9744dfe2",
+  "grade": "Primary School1",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66ba0fe364f330bc9744dfe5"
+  },
+  "id": null,
+  "user_id": "66ba0fe364f330bc9744dfe4",
+  "grade": "Primary School1",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66ba472464f330bc9744dfe9"
+  },
+  "id": null,
+  "user_id": "66ba472464f330bc9744dfe8",
+  "grade": "Primary School1",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "Public Education System"
+},
+{
+  "_id": {
+    "$oid": "66bda26bba776abc9755f6f0"
+  },
+  "id": null,
+  "user_id": "66bda26bba776abc9755f6ef",
+  "grade": "Kindergarten1",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "Public Education System"
+},
+{
+  "_id": {
+    "$oid": "66bda2a3ba776abc9755f6f2"
+  },
+  "id": null,
+  "user_id": "66bda2a3ba776abc9755f6f1",
+  "grade": "Primary School4",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66bf95d8ba776abc9755f6f6"
+  },
+  "id": null,
+  "user_id": "66bf95d8ba776abc9755f6f5",
+  "grade": "Primary School5",
+  "child_group": "6658d814e6f09efb5567576a",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66bf976cba776abc9755f6f8"
+  },
+  "id": null,
+  "user_id": "66bf976cba776abc9755f6f7",
+  "grade": "Preparatory School2",
+  "child_group": "6658d814e6f09efb5567576a",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66c37ca62837dfec71ac0b8a"
+  },
+  "id": null,
+  "user_id": "66c37ca62837dfec71ac0b89",
+  "grade": "Primary School4",
+  "child_group": "6658d814e6f09efb5567576a",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66c484725237c8c32547f5a4"
+  },
+  "id": null,
+  "user_id": "66c484725237c8c32547f5a3",
+  "grade": "Secondary School1",
+  "child_group": "6658d832e6f09efb5567576b",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66c488975237c8c32547f5a8"
+  },
+  "id": null,
+  "user_id": "66c488975237c8c32547f5a7",
+  "grade": "Primary School4",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66c4f6655237c8c32547f5b2"
+  },
+  "id": null,
+  "user_id": "66c4f6655237c8c32547f5b1",
+  "grade": "Primary School5",
+  "child_group": "6658d814e6f09efb5567576a",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66c726c65237c8c32547f5c1"
+  },
+  "id": null,
+  "user_id": "66c726c65237c8c32547f5c0",
+  "grade": "Preparatory School1",
+  "child_group": "6658d814e6f09efb5567576a",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66c738e65237c8c32547f5c6"
+  },
+  "id": null,
+  "user_id": "66c738e65237c8c32547f5c5",
+  "grade": "Preparatory School1",
+  "child_group": "6658d814e6f09efb5567576a",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66ca0edc5237c8c32547f5cd"
+  },
+  "id": null,
+  "user_id": "66ca0edc5237c8c32547f5cc",
+  "grade": "Primary School1",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "Public Education System"
+},
+{
+  "_id": {
+    "$oid": "66ca2b0c5237c8c32547f5d5"
+  },
+  "id": null,
+  "user_id": "66ca2b0c5237c8c32547f5d4",
+  "grade": "Preparatory School3",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "International Schools"
+},
+{
+  "_id": {
+    "$oid": "66ca60cc5237c8c32547f5d7"
+  },
+  "id": null,
+  "user_id": "66ca60cc5237c8c32547f5d6",
+  "grade": "Primary School6",
+  "child_group": "6658d814e6f09efb5567576a",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66cca6965237c8c32547f5de"
+  },
+  "id": null,
+  "user_id": "66cca6965237c8c32547f5dd",
+  "grade": "Preparatory School2",
+  "child_group": "6658d814e6f09efb5567576a",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66cf543cee37e04aaef90833"
+  },
+  "id": null,
+  "user_id": "66cf543cee37e04aaef90832",
+  "grade": "Primary School2",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "Private Schools"
+},
+{
+  "_id": {
+    "$oid": "66cf57d2bd4175f28ce2906e"
+  },
+  "id": null,
+  "user_id": "66cf57d2bd4175f28ce2906d",
+  "grade": "Primary School3",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "International Schools"
+},
+{
+  "_id": {
+    "$oid": "66cf5976bd4175f28ce29070"
+  },
+  "id": null,
+  "user_id": "66cf5976bd4175f28ce2906f",
+  "grade": "Primary School3",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "International Schools"
+},
+{
+  "_id": {
+    "$oid": "66cf99a9bd4175f28ce29073"
+  },
+  "id": null,
+  "user_id": "66cf99a9bd4175f28ce29072",
+  "grade": "Kindergarten1",
+  "child_group": "6658d7e2e6f09efb55675769",
+  "education_system": "Public Education System"
+}]

@@ -15,7 +15,10 @@ from routes import (
     program_api,
     analysis_api,
     promo_code_api,
-    plan_api
+    plan_api,
+    simulation_api,
+    project_api,
+    activity_api,
 )
 
 
@@ -47,10 +50,13 @@ app.include_router(program_api.router)
 app.include_router(analysis_api.router)
 app.include_router(promo_code_api.router)
 app.include_router(plan_api.router)
+app.include_router(simulation_api.router)
+app.include_router(project_api.router)
+app.include_router(activity_api.router)
 
 
     
-# # Mount the static files directory
+# Mount the static files directory
 app.mount("/", StaticFiles(directory="dist", html=True), name="dist")
 
 

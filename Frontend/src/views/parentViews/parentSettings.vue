@@ -80,7 +80,7 @@ function change() {
     >
       <div class="dialog-container">
         <h1 style="padding: 0;">{{ selectLang(translationModule.editedSuccessffully) }}</h1>
-        <Button :label=selectLang(translationModule.viewChild) @click="router.push('/parentProfile')" />
+        <Button :label=selectLang(translationModule.returnHome) @click="router.push('/parentProfile')" />
       </div>
     </Dialog>
 

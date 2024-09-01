@@ -426,3 +426,28 @@ export const workshopsImages = computed(() => {
 
   ];
 });
+
+
+
+export const materialInfo = [
+  {
+    name:'Lesson',
+    icon:'pi pi-book',
+  },
+  {
+    name:'Quiz',
+    icon:'pi pi-check-square',
+  },
+  {
+    name:'Simulation',
+    icon:'pi pi-desktop',
+  },
+  {
+    name:'Project',
+    icon:'pi pi-building',
+  },
+  {
+    name:'Activity',
+    icon:'pi pi-bolt',
+  },
+]

@@ -44,7 +44,7 @@ const object = computed(() => {
                       progress: <any[]>[],
                       type: mat?.type,
                     };
-                    
+
                       if (mat.type == "Lesson") {
                         if(enrollment?.progress?.lessons_completed){
                       for (let matProgress of enrollment?.progress
@@ -53,7 +53,37 @@ const object = computed(() => {
                           materialObj.progress.push(matProgress);
                         }
                       }}
-                    } else if (mat.type == "Quiz") {
+                    }
+
+
+                    else if (mat.type == "Simulation") {
+                        if(enrollment?.progress?.simulations_completed){
+                      for (let matProgress of enrollment?.progress
+                        ?.simulations_completed) {
+                        if (matProgress?.simulation_id == mat.Id) {
+                          materialObj.progress.push(matProgress);
+                        }
+                      }}}
+                      else if (mat.type == "Project") {
+                        if(enrollment?.progress?.projects_completed){
+                      for (let matProgress of enrollment?.progress
+                        ?.projects_completed) {
+                        if (matProgress?.project_id == mat.Id) {
+                          materialObj.progress.push(matProgress);
+                        }
+                      }}}
+                      else if (mat.type == "Activity") {
+                        if(enrollment?.progress?.activities_completed){
+                      for (let matProgress of enrollment?.progress
+                        ?.activities_completed) {
+                        if (matProgress?.activity_id == mat.Id) {
+                          materialObj.progress.push(matProgress);
+                        }
+                      }}}
+
+
+
+                    else if (mat.type == "Quiz") {
                       if(enrollment?.progress?.quizes_completed){
                       for (let matProgress of enrollment?.progress
                         ?.quizes_completed) {
@@ -63,7 +93,7 @@ const object = computed(() => {
                       }
                       }
                     }
-                    
+
 
                     chapterOnj.material.push(materialObj);
                   }
@@ -137,117 +167,182 @@ function extractTime(dateTimeString: string) {
 <template>
   <main>
     <Accordion>
-    <AccordionTab
-      v-for="courseProgress in progress"
-      :key="courseProgress.courseTitle"
-    >
-      <template #header>
-        <div class="header">
-          <h2>
-            {{selectLang(courseProgress.courseTitle) }}
-          </h2>
-          <h2 style="color: var(--accent2)">
-            {{ selectLang(translationModule.completed) }} {{ courseProgress.percentage }} %
-          </h2>
-        </div>
-      </template>
-      <div class="content">
-        <div class="chapters">
-          <Accordion>
-            <AccordionTab
-              v-for="chapter in courseProgress.chapters"
-              :key="chapter.title"
-            >
-              <template #header>
-                <div class="header">
-                  <h3 style="color: var(--accent1)">
-                    {{selectLang(chapter.title) }}
-                  </h3>
-                  <h3 style="color: var(--accent2)">
-                    
-                    {{ selectLang(translationModule.completed) }}  {{ chapter.progress }} %
-                  </h3>
-                </div>
-              </template>
-              <div class="material-content">
-                <div class="material" v-for="mat in chapter.material">
-                  <div class="lesson" v-if="mat?.type == 'Lesson'" >
-                    <h4 style="color: var(--text);">
-                      {{ selectLang(mat.title) }}
-                    </h4>
-                    <div
-                      class="completed"
-                      v-if="mat?.progress[0]?.completed_at"
-                      style="color: var(--accent2)"
-                    >
-                      <span style="color: var(--text);">{{ selectLang(translationModule.completedAt) }}</span>
-                      {{ extractDate(mat?.progress[0]?.completed_at) }}
+      <AccordionTab
+        v-for="courseProgress in progress"
+        :key="courseProgress.courseTitle"
+      >
+        <template #header>
+          <div class="header">
+            <h2>
+              {{ selectLang(courseProgress.courseTitle) }}
+            </h2>
+            <h2 style="color: var(--accent2)">
+              {{ selectLang(translationModule.completed) }}
+              {{ courseProgress.percentage }} %
+            </h2>
+          </div>
+        </template>
+        <div class="content">
+          <div class="chapters">
+            <Accordion>
+              <AccordionTab
+                v-for="chapter in courseProgress.chapters"
+                :key="chapter.title"
+              >
+                <template #header>
+                  <div class="header">
+                    <h3 style="color: var(--accent1)">
+                      {{ selectLang(chapter.title) }}
+                    </h3>
+                    <h3 style="color: var(--accent2)">
+                      {{ selectLang(translationModule.completed) }}
+                      {{ chapter.progress }} %
+                    </h3>
+                  </div>
+                </template>
+                <div class="material-content">
+                  <div class="material" v-for="mat in chapter.material">
+                    <div class="lesson" v-if="mat?.type == 'Lesson'">
+                      <h4 style="color: var(--text)">
+                        {{ selectLang(mat.title) }}
+                      </h4>
+                      <div
+                        class="completed"
+                        v-if="mat?.progress[0]?.completed_at"
+                        style="color: var(--accent2)"
+                      >
+                        <span style="color: var(--text)">{{
+                          selectLang(translationModule.completedAt)
+                        }}</span>
+                        {{ extractDate(mat?.progress[0]?.completed_at) }}
+                      </div>
+                    </div>
+
+
+
+                    <div class="lesson" v-if="mat?.type == 'Simulation'">
+                      <h4 style="color: var(--text)">
+                        {{ selectLang(mat.title) }}
+                      </h4>
+                      <div
+                        class="completed"
+                        v-if="mat?.progress[0]?.completed_at"
+                        style="color: var(--accent2)"
+                      >
+                        <span style="color: var(--text)">{{
+                          selectLang(translationModule.completedAt)
+                        }}</span>
+                        {{ extractDate(mat?.progress[0]?.completed_at) }}
+                      </div>
+                    </div>
+
+                    <div class="lesson" v-if="mat?.type == 'Project'">
+                      <h4 style="color: var(--text)">
+                        {{ selectLang(mat.title) }}
+                      </h4>
+                      <div
+                        class="completed"
+                        v-if="mat?.progress[0]?.completed_at"
+                        style="color: var(--accent2)"
+                      >
+                        <span style="color: var(--text)">{{
+                          selectLang(translationModule.completedAt)
+                        }}</span>
+                        {{ extractDate(mat?.progress[0]?.completed_at) }}
+                      </div>
+                    </div>
+
+                    <div class="lesson" v-if="mat?.type == 'Activity'">
+                      <h4 style="color: var(--text)">
+                        {{ selectLang(mat.title) }}
+                      </h4>
+                      <div
+                        class="completed"
+                        v-if="mat?.progress[0]?.completed_at"
+                        style="color: var(--accent2)"
+                      >
+                        <span style="color: var(--text)">{{
+                          selectLang(translationModule.completedAt)
+                        }}</span>
+                        {{ extractDate(mat?.progress[0]?.completed_at) }}
+                      </div>
+                    </div>
+
+                    <div class="quiz" v-if="mat.type == 'Quiz'">
+                      <Accordion>
+                        <AccordionTab>
+                          <template #header>
+                            <div class="quiz-header">
+                              <h4 style="color: var(--text)">
+                                {{ selectLang(mat?.title) }}
+                              </h4>
+                              <h4>
+                                <span style="color: var(--text)">{{
+                                  selectLang(translationModule.heighest)
+                                }}</span>
+
+                                {{
+                                  mat?.progress?.reduce(
+                                    (max: number, item: any) =>
+                                      item?.score_prcentage > max
+                                        ? item?.score_prcentage
+                                        : max,
+                                    0
+                                  )
+                                }}
+                                %
+                              </h4>
+
+                              <h4>
+                                <span style="color: var(--text)">
+                                  {{
+                                    selectLang(translationModule.nomOfAtts)
+                                  }}</span
+                                >
+                                {{ mat?.progress?.length }}
+                              </h4>
+                            </div>
+                          </template>
+                          <div class="quiz-content">
+                            <div class="row names">
+                              <h5 style="color: var(--text)">
+                                {{ selectLang(translationModule.att) }}
+                              </h5>
+                              <h5 style="color: var(--text)">
+                                {{ selectLang(translationModule.score) }}
+                              </h5>
+                              <h5 style="color: var(--text)">
+                                {{ selectLang(translationModule.timeToAns) }}
+                              </h5>
+                              <h5 style="color: var(--text)">
+                                {{ selectLang(translationModule.date) }}
+                              </h5>
+                            </div>
+                            <div class="row" v-for="(p, i) in mat?.progress">
+                              <h5>{{ i + 1 }}</h5>
+                              <h5>{{ p?.score_prcentage }}%</h5>
+                              <h5>{{ p?.time_taken }} sec</h5>
+                              <h5>{{ extractDate(p?.created_at) }}</h5>
+                            </div>
+                          </div>
+                        </AccordionTab>
+                      </Accordion>
                     </div>
                   </div>
-
-                  <div class="quiz" v-if="mat.type == 'Quiz'">
-                    <Accordion>
-                      <AccordionTab>
-                        <template #header>
-                          <div class="quiz-header">
-                            <h4 style="color: var(--text);">
-                              {{selectLang(mat?.title) }}
-                            </h4>
-                            <h4>
-                              <span style="color: var(--text);">{{ selectLang(translationModule.heighest) }}</span>
-                              
-                              {{
-                                mat?.progress?.reduce(
-                                  (max: number, item: any) =>
-                                    item?.score_prcentage > max
-                                      ? item?.score_prcentage
-                                      : max,
-                                  0
-                                )
-                              }}
-                              %
-                            </h4>
-
-                            <h4>
-                              <span style="color: var(--text);"> {{ selectLang(translationModule.nomOfAtts) }}</span>
-                              {{ mat?.progress?.length }}
-                            </h4>
-                          </div>
-                        </template>
-                        <div class="quiz-content">
-                          <div class="row names">
-                            <h5 style="color: var(--text);">{{ selectLang(translationModule.att) }}</h5>
-                            <h5 style="color: var(--text);">{{ selectLang(translationModule.score) }}</h5>
-                            <h5 style="color: var(--text);">{{ selectLang(translationModule.timeToAns) }}</h5>
-                            <h5 style="color: var(--text);">{{ selectLang(translationModule.date) }}</h5>
-                          </div>
-                          <div class="row" v-for="(p, i) in mat?.progress">
-                            <h5>{{ i +1}}</h5>
-                            <h5>{{ p?.score_prcentage }}%</h5>
-                            <h5>{{ p?.time_taken }} sec</h5>
-                            <h5>{{ extractDate(p?.created_at) }}</h5>
-                           
-                           
-                          </div>
-                        </div>
-                      </AccordionTab>
-                    </Accordion>
-                  </div>
                 </div>
-              </div>
-            </AccordionTab>
-          </Accordion>
+              </AccordionTab>
+            </Accordion>
+          </div>
         </div>
-      </div>
-    </AccordionTab>
-  </Accordion>
+      </AccordionTab>
+    </Accordion>
   </main>
-  
+
   {{ object }}
 </template>
 
 <style scoped>
-main{
+main {
   margin-top: 3rem;
 }
 .header {
@@ -255,16 +350,16 @@ main{
   justify-content: space-between;
   width: 100%;
 }
-.quiz,.lesson{
+.quiz,
+.lesson {
   border-bottom: 1px solid #ddd;
   margin-block: 0.25rem;
-
 }
 .lesson {
   display: flex;
   justify-content: space-between;
   margin-left: 1rem;
-  margin-right:2rem;
+  margin-right: 2rem;
   padding-block: 1.5rem;
 }
 .quiz-header {
@@ -277,13 +372,18 @@ main{
   grid-template-columns: repeat(4, 1fr);
   color: var(--accent1);
 }
-.names{
+.names {
   color: var(--accent2);
 }
-h3,h4,h2,h1{
+h3,
+h4,
+h2,
+h1 {
   color: var(--accent1);
 }
-h3,h4,h5{
-   margin: 0
+h3,
+h4,
+h5 {
+  margin: 0;
 }
 </style>

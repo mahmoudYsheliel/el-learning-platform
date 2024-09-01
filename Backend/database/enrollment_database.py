@@ -1,9 +1,4 @@
-from models.enrollments import (
-    Enrollment,
-    RequestEnrollment,
-    AddProgress,
-    Comment
-)
+from models.enrollments import Enrollment, RequestEnrollment, AddProgress, Comment
 from models.runtime import ServiceResponse
 from database.mongo_driver import get_database, validate_bson_id
 
@@ -23,13 +18,6 @@ async def create_enrollment(enrollment: Enrollment) -> ServiceResponse:
     if mdb_result:
         return ServiceResponse(data={"enrollment_id": mdb_result["id"]})
 
-    user_bson = validate_bson_id(enrollment.student_id)
-    user = (
-        await get_database()
-        .get_collection("user")
-        .find_one({"_id": user_bson}, {"balance": 1})
-    )
-
     course_bson = validate_bson_id(enrollment.course_id)
     if not course_bson:
         return ServiceResponse(
@@ -39,31 +27,18 @@ async def create_enrollment(enrollment: Enrollment) -> ServiceResponse:
     course = (
         await get_database()
         .get_collection("course")
-        .find_one({"_id": course_bson}, {"price": 1, "number_of_enrollments": 1})
+        .find_one({"_id": course_bson}, {"number_of_enrollments": 1})
     )
     if not course:
         return ServiceResponse(
             success=False, msg="couln't find course", status_code=409
         )
 
-    if course["price"] > user["balance"]:
-        pass
-    #  return ServiceResponse(success=False,msg="not enough balance",status_code=409 )
     else:
-        new_balance = user["balance"] - course["price"]
-        result = (
-            await get_database()
-            .get_collection("user")
-            .update_one({"_id": user_bson}, {"$set": {"balance": new_balance}})
-        )
         await get_database().get_collection("course").update_one(
             {"_id": course_bson},
             {"$set": {"number_of_enrollments": course["number_of_enrollments"] + 1}},
         )
-        if not result.modified_count:
-            return ServiceResponse(
-                success=False, status_code=404, msg="enrollment not Found"
-            )
 
     mdb_result = (
         await get_database()
@@ -114,12 +89,6 @@ async def update_enrollment(enrollment_id: str, update: dict) -> ServiceResponse
 
 
 async def get_enrollment(course_id: str, user_id: str) -> ServiceResponse:
-    bson_id = validate_bson_id(course_id)
-    if not bson_id:
-        return ServiceResponse(status_code=400, msg="Bad enrollment ID")
-
-    bson_student_id = validate_bson_id(user_id)
-
     enrollment = (
         await get_database()
         .get_collection("enrollment")
@@ -170,7 +139,7 @@ async def add_progress(
     result = (
         await get_database()
         .get_collection("enrollment")
-        .find_one({"_id": bson_enrolment_id}, {"student_id": 1})
+        .find_one({"_id": bson_enrolment_id}, {"student_id": 1,"course_id": 1})
     )
     if not result:
         return ServiceResponse(
@@ -179,23 +148,18 @@ async def add_progress(
     if result["student_id"] != str(student_id):
         return ServiceResponse(success=False, status_code=400, msg="Bad User")
 
+    course = (
+        await get_database()
+        .get_collection("course")
+        .find_one({"_id": validate_bson_id(result["course_id"])}, {"chapters": 1})
+    )
+
     if progres.material_type == "Lesson":
         if not progres.lesson_progress:
             return ServiceResponse(
                 success=False, status_code=400, msg="Lesson Progress Is Not Accepted"
             )
-        course_id = (
-            await get_database()
-            .get_collection("enrollment")
-            .find_one({"_id": bson_enrolment_id}, {"course_id": 1})
-        )
-        course = (
-            await get_database()
-            .get_collection("course")
-            .find_one(
-                {"_id": validate_bson_id(course_id["course_id"])}, {"chapters": 1}
-            )
-        )
+
         for chapter in course["chapters"]:
             for material in chapter["materials"]:
                 if (
@@ -218,23 +182,97 @@ async def add_progress(
                         return ServiceResponse(msg="Lesson Progress Accepted")
         return ServiceResponse(success=False, msg="Lesson  Not Found")
 
+    if progres.material_type == "Project":
+        if not progres.project_progress:
+            return ServiceResponse(
+                success=False, status_code=400, msg="Project Progress Is Not Accepted"
+            )
+
+        for chapter in course["chapters"]:
+            for material in chapter["materials"]:
+                if (
+                    material["Id"] == progres.project_progress.project_id
+                    and material["type"] == "Project"
+                ):
+                    result = (
+                        await get_database()
+                        .get_collection("enrollment")
+                        .update_one(
+                            {"_id": bson_enrolment_id},
+                            {
+                                "$push": {
+                                    "progress.projects_completed": progres.project_progress.model_dump()
+                                }
+                            },
+                        )
+                    )
+                    if result.modified_count > 0:
+                        return ServiceResponse(msg="Project Progress Accepted")
+        return ServiceResponse(success=False, msg="Project  Not Found")
+
+    if progres.material_type == "Simulation":
+        if not progres.simulation_progress:
+            return ServiceResponse(
+                success=False,
+                status_code=400,
+                msg="Simulation Progress Is Not Accepted",
+            )
+
+        for chapter in course["chapters"]:
+            for material in chapter["materials"]:
+                if (
+                    material["Id"] == progres.simulation_progress.simulation_id
+                    and material["type"] == "Simulation"
+                ):
+                    result = (
+                        await get_database()
+                        .get_collection("enrollment")
+                        .update_one(
+                            {"_id": bson_enrolment_id},
+                            {
+                                "$push": {
+                                    "progress.simulations_completed": progres.simulation_progress.model_dump()
+                                }
+                            },
+                        )
+                    )
+                    if result.modified_count > 0:
+                        return ServiceResponse(msg="Simulation Progress Accepted")
+        return ServiceResponse(success=False, msg="Simulation  Not Found")
+
+    if progres.material_type == "Activity":
+        if not progres.activity_progress:
+            return ServiceResponse(
+                success=False, status_code=400, msg="Activity Progress Is Not Accepted"
+            )
+
+        for chapter in course["chapters"]:
+            for material in chapter["materials"]:
+                if (
+                    material["Id"] == progres.activity_progress.activity_id
+                    and material["type"] == "Activity"
+                ):
+                    result = (
+                        await get_database()
+                        .get_collection("enrollment")
+                        .update_one(
+                            {"_id": bson_enrolment_id},
+                            {
+                                "$push": {
+                                    "progress.activities_completed": progres.activity_progress.model_dump()
+                                }
+                            },
+                        )
+                    )
+                    if result.modified_count > 0:
+                        return ServiceResponse(msg="Activity Progress Accepted")
+        return ServiceResponse(success=False, msg="Activity  Not Found")
+
     if progres.material_type == "Quiz":
         if not progres.quiz_progress:
             return ServiceResponse(
                 success=False, status_code=400, msg="Quiz Progress Is Not Accepted"
             )
-        course_id = (
-            await get_database()
-            .get_collection("enrollment")
-            .find_one({"_id": bson_enrolment_id}, {"course_id": 1})
-        )
-        course = (
-            await get_database()
-            .get_collection("course")
-            .find_one(
-                {"_id": validate_bson_id(course_id["course_id"])}, {"chapters": 1}
-            )
-        )
         for chapter in course["chapters"]:
             for material in chapter["materials"]:
                 if (
@@ -304,37 +342,50 @@ async def add_progress(
     return ServiceResponse(success=False, msg="Type Not Set Priperly")
 
 
-
-
-
-
-
 async def request_enrollment(requesr: RequestEnrollment) -> ServiceResponse:
-    
+
     package_bson = validate_bson_id(requesr.course_id)
-    if requesr.package_type != 'course' and requesr.package_type != 'plan':
-          return ServiceResponse(success=False, msg="rejected typeof package", status_code=409)
+    if requesr.package_type != "course" and requesr.package_type != "plan":
+        return ServiceResponse(
+            success=False, msg="rejected typeof package", status_code=409
+        )
     price = 0
-    if requesr.package_type == 'course':
-        course = await get_database().get_collection('course').find_one({"_id":package_bson},{"_id":0,"price":1})
+    if requesr.package_type == "course":
+        course = (
+            await get_database()
+            .get_collection("course")
+            .find_one({"_id": package_bson}, {"_id": 0, "price": 1})
+        )
         if not course:
-            return ServiceResponse(success=False, msg="couln't find course", status_code=409)
-        price = course['price']
-    if requesr.package_type == 'plan':
-        course = await get_database().get_collection('plan').find_one({"_id":package_bson},{"_id":0,"price":1})
+            return ServiceResponse(
+                success=False, msg="couln't find course", status_code=409
+            )
+        price = course["price"]
+    if requesr.package_type == "plan":
+        course = (
+            await get_database()
+            .get_collection("plan")
+            .find_one({"_id": package_bson}, {"_id": 0, "price": 1})
+        )
         if not course:
-            return ServiceResponse(success=False, msg="couln't find plan", status_code=409)
-        price = course['price']
-    
-    discount = await get_database().get_collection('promo_code').find_one({"code":requesr.promo_code},{"discount":1})
-    discout_percentage =  0
-    if  discount:
-        discout_percentage = discount['discount']
-    
-    price = price * (100-discout_percentage)/100 
-    requesr.price=price
-    
-    requesr.discount=discout_percentage
+            return ServiceResponse(
+                success=False, msg="couln't find plan", status_code=409
+            )
+        price = course["price"]
+
+    discount = (
+        await get_database()
+        .get_collection("promo_code")
+        .find_one({"code": requesr.promo_code}, {"discount": 1})
+    )
+    discout_percentage = 0
+    if discount:
+        discout_percentage = discount["discount"]
+
+    price = price * (100 - discout_percentage) / 100
+    requesr.price = price
+
+    requesr.discount = discout_percentage
     mdb_result = (
         await get_database()
         .get_collection("requesrt_enrollment")
@@ -353,78 +404,114 @@ async def get_enrollment_requests(user_id: str) -> ServiceResponse:
         .find(
             {"parent_id": str(user_id)},
             {
-                "_id":0,
+                "_id": 0,
                 "id": {"$toString": "$_id"},
                 "student_id": 1,
                 "status": 1,
                 "course_id": 1,
                 "package_type": 1,
                 "price": 1,
-                "promo_code":1,
-                "discount":1,
+                "promo_code": 1,
+                "discount": 1,
                 "comments": 1,
-                "price":1,
+                "price": 1,
                 "created_at": 1,
             },
-        ).to_list(length=None)
+        )
+        .to_list(length=None)
     )
-    return  ServiceResponse(data={'requests':res})
+    return ServiceResponse(data={"requests": res})
 
 
 async def get_all_enrollment_requests(user_id: str) -> ServiceResponse:
-    user_type =  await get_database().get_collection('user').find_one({'_id':validate_bson_id(user_id)},{'user_type'})
-    if user_type['user_type'] != 'Admin':
-        return  ServiceResponse(success=False,msg='Not Accepted User Type')
+    user_type = (
+        await get_database()
+        .get_collection("user")
+        .find_one({"_id": validate_bson_id(user_id)}, {"user_type"})
+    )
+    if user_type["user_type"] != "Admin":
+        return ServiceResponse(success=False, msg="Not Accepted User Type")
     res = (
         await get_database()
         .get_collection("requesrt_enrollment")
         .find(
             {},
             {
-                "_id":0,
+                "_id": 0,
                 "id": {"$toString": "$_id"},
                 "student_id": 1,
                 "parent_id": 1,
                 "status": 1,
                 "course_id": 1,
                 "package_type": 1,
-                "promo_code":1,
-                "discount":1,
+                "promo_code": 1,
+                "discount": 1,
                 "comments": 1,
-                "price":1,
+                "price": 1,
                 "comments": 1,
                 "created_at": 1,
             },
-        ).to_list(length=None)
+        )
+        .to_list(length=None)
     )
-    return  ServiceResponse(data={'requests':res})
+    return ServiceResponse(data={"requests": res})
 
-async def add_comment(enrollment_request_id:str,msg:Comment,userId:str) ->ServiceResponse:
+
+async def add_comment(
+    enrollment_request_id: str, msg: Comment, userId: str
+) -> ServiceResponse:
     bson_id = validate_bson_id(enrollment_request_id)
     if not bson_id:
-        return ServiceResponse(success=False,msg='enrollment_request_id not Accepted')
-    
-    user_type =await get_database().get_collection('user').find_one({'_id':validate_bson_id(str(userId))},{'user_type':1})
-    msg.sender_type=user_type['user_type']
-    res = await get_database().get_collection('requesrt_enrollment').find_one({'_id':bson_id},{'_id':0,'last_comment_id':1})
-    msg.id = res['last_comment_id']+1
-    res = await get_database().get_collection('requesrt_enrollment').update_one({'_id':bson_id},{'$push':{'comments':msg.model_dump()},'$set':{'last_comment_id':msg.id}})
-    if res.modified_count>0:
-        return ServiceResponse(msg='Comment Added Succesfully')
-    return ServiceResponse(success=False,msg='Could not Add Comment')
+        return ServiceResponse(success=False, msg="enrollment_request_id not Accepted")
+
+    user_type = (
+        await get_database()
+        .get_collection("user")
+        .find_one({"_id": validate_bson_id(str(userId))}, {"user_type": 1})
+    )
+    msg.sender_type = user_type["user_type"]
+    res = (
+        await get_database()
+        .get_collection("requesrt_enrollment")
+        .find_one({"_id": bson_id}, {"_id": 0, "last_comment_id": 1})
+    )
+    msg.id = res["last_comment_id"] + 1
+    res = (
+        await get_database()
+        .get_collection("requesrt_enrollment")
+        .update_one(
+            {"_id": bson_id},
+            {
+                "$push": {"comments": msg.model_dump()},
+                "$set": {"last_comment_id": msg.id},
+            },
+        )
+    )
+    if res.modified_count > 0:
+        return ServiceResponse(msg="Comment Added Succesfully")
+    return ServiceResponse(success=False, msg="Could not Add Comment")
 
 
-async def edit_request_status(new_status:str,enrollment_request_id:str,user_id:str)->ServiceResponse:
+async def edit_request_status(
+    new_status: str, enrollment_request_id: str, user_id: str
+) -> ServiceResponse:
     bson_id = validate_bson_id(enrollment_request_id)
     if not bson_id:
-        return ServiceResponse(success=False,msg='enrollment_request_id not Accepted')
-    user_type =  await get_database().get_collection('user').find_one({'_id':validate_bson_id(user_id)},{'user_type'})
-    if user_type['user_type'] != 'Admin':
-        return  ServiceResponse(success=False,msg='Not Accepted User Type')
-    if new_status != 'Success' and new_status != 'Rejected':
-        return  ServiceResponse(success=False,msg='Status Refused')
-    res = await get_database().get_collection('requesrt_enrollment').update_one({'_id':bson_id},{'$set':{'status':new_status}})
-    if res.modified_count>0:
-        return ServiceResponse(msg='Status Edited Succesfully')
-    return ServiceResponse(success=False,msg='requesrt_enrollment not Found')
-    
+        return ServiceResponse(success=False, msg="enrollment_request_id not Accepted")
+    user_type = (
+        await get_database()
+        .get_collection("user")
+        .find_one({"_id": validate_bson_id(user_id)}, {"user_type"})
+    )
+    if user_type["user_type"] != "Admin":
+        return ServiceResponse(success=False, msg="Not Accepted User Type")
+    if new_status != "Success" and new_status != "Rejected":
+        return ServiceResponse(success=False, msg="Status Refused")
+    res = (
+        await get_database()
+        .get_collection("requesrt_enrollment")
+        .update_one({"_id": bson_id}, {"$set": {"status": new_status}})
+    )
+    if res.modified_count > 0:
+        return ServiceResponse(msg="Status Edited Succesfully")
+    return ServiceResponse(success=False, msg="requesrt_enrollment not Found")

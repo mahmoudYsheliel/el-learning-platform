@@ -789,5 +789,41 @@ export const translationModule = {
   later:{
     en:'Later',
     ar:'لاحقاً'
+  },
+  clickToView:{
+    en:'Click to Start',
+    ar:'اضغط للبدأ'
+  },
+  sources:{
+    en:"Sources",
+    ar:"المصادر"
+  },
+  source:{
+    en:"Source",
+    ar:"المصدر"
+  },
+  objectives:{
+    en:"Objectives",
+    ar:"الأهداف"
+  },
+  terms_concepts:{
+    en:"Terms and Concepts",
+    ar:'المصطلحات و المبادئ'
+  },
+  materials:{
+    en:'Materials',
+    ar:'الأدوات'
+  },
+  instructions:{
+    en:"Instrictions",
+    ar:"الخطوات"
+  },
+  results:{
+    en:"Results",
+    ar:"النتائج"
+  },
+  conclusions:{
+    en:"Conclusions",
+    ar:"الاستنتاج"
   }
 };

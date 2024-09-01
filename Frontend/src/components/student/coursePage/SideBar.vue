@@ -53,7 +53,7 @@ const chaptersObj = computed(() => {
             {{ slotProps.node.label }}
           </p>
         </template>
-        <template #Quiz="slotProps" #Lesson="slotProps">
+        <template #Quiz="slotProps">
           <p
           class="unselected"
             :class="{ done: slotProps.node.status == 'Done',selected:(slotProps.node.Id==route.params.materialId) }"
@@ -71,6 +71,57 @@ const chaptersObj = computed(() => {
           </p>
         </template>
         <template #Lesson="slotProps">
+          <p
+          class="unselected"
+            :class="{selected:(slotProps.node.Id==route.params.materialId), done: slotProps.node.status == 'Done' }"
+            
+            @click="
+              () => {
+                router.push(
+                  `/viewCoursePage/${route.params.courseId}/${route.params.enrollmentId}/${slotProps.node.Id}`
+                );
+              }
+            "
+          >
+          <i :class="slotProps.node.matIcon" />
+            {{ slotProps.node.label }}
+          </p>
+        </template>
+        <template #Simulation="slotProps">
+          <p
+          class="unselected"
+            :class="{selected:(slotProps.node.Id==route.params.materialId), done: slotProps.node.status == 'Done' }"
+            
+            @click="
+              () => {
+                router.push(
+                  `/viewCoursePage/${route.params.courseId}/${route.params.enrollmentId}/${slotProps.node.Id}`
+                );
+              }
+            "
+          >
+          <i :class="slotProps.node.matIcon" />
+            {{ slotProps.node.label }}
+          </p>
+        </template>
+        <template #Activity="slotProps">
+          <p
+          class="unselected"
+            :class="{selected:(slotProps.node.Id==route.params.materialId), done: slotProps.node.status == 'Done' }"
+            
+            @click="
+              () => {
+                router.push(
+                  `/viewCoursePage/${route.params.courseId}/${route.params.enrollmentId}/${slotProps.node.Id}`
+                );
+              }
+            "
+          >
+          <i :class="slotProps.node.matIcon" />
+            {{ slotProps.node.label }}
+          </p>
+        </template>
+        <template #Project="slotProps">
           <p
           class="unselected"
             :class="{selected:(slotProps.node.Id==route.params.materialId), done: slotProps.node.status == 'Done' }"

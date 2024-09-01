@@ -2,13 +2,16 @@
 import Navbar from "../../components/general/Navbar.vue";
 import SideBar from "../../components/student/coursePage/SideBar.vue";
 import Lesson from "../../components/student/coursePage/Lesson.vue";
+import Simulation from "../../components/student/coursePage/Simulation.vue";
+import Project from "../../components/student/coursePage/Project.vue";
+import Activity from "../../components/student/coursePage/Activity.vue";
 import Quiz2 from "../../components/student/coursePage/Quiz2.vue";
 import { ref, computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { HttpRequester } from "@/lib/APICaller";
 import Button from "primevue/button";
 import { selectLang,translationModule } from "@/lib/Translate";
-
+import { materialInfo } from "@/lib/Modules";
 
 const chapters = ref();
 const title = ref();
@@ -28,12 +31,13 @@ const getCourse = async () => {
       title.value = res.data.course.title;
       for (let material of chapters.value) {
         for (let i = 0; i < material.materials.length; i++) {
-          if (material.materials[i].type === "Lesson") {
-            material.materials[i].matIcon = "pi pi-book";
+          for (let mat of materialInfo){
+            if (material.materials[i].type === mat.name) {
+            material.materials[i].matIcon = mat.icon;
           }
-          if (material.materials[i].type === "Quiz") {
-            material.materials[i].matIcon = "pi pi-check-square";
           }
+         
+      
         }
       }
     }
@@ -59,6 +63,27 @@ const materialComponnent = computed(() => {
           } else if (
             progres.value?.quizes_completed?.some((les: any) => {
               return les?.quiz_id == mat?.Id;
+            })
+          ) {
+            mat.status = "Done";
+          }
+          else if (
+            progres.value?.activities_completed?.some((les: any) => {
+              return les?.activity_id == mat?.Id;
+            })
+          ) {
+            mat.status = "Done";
+          }
+          else if (
+            progres.value?.simulations_completed?.some((les: any) => {
+              return les?.simulation_id == mat?.Id;
+            })
+          ) {
+            mat.status = "Done";
+          }
+          else if (
+            progres.value?.projects_completed?.some((les: any) => {
+              return les?.project_id == mat?.Id;
             })
           ) {
             mat.status = "Done";
@@ -105,10 +130,19 @@ const materialComponnent = computed(() => {
           }
         }
         let type;
+        let completed=false
         if (material.type === "Lesson") {
           type = Lesson;
         }
-        let completed=false
+        if (material.type === "Simulation") {
+          type = Simulation;
+        }
+        if (material.type === "Project") {
+          type = Project;
+        }
+        if (material.type === "Activity") {
+          type = Activity;
+        }
         if (material.status=='Done'){
           completed=true
         }
@@ -179,14 +213,15 @@ function next() {
 }
 .wrapper {
   overflow-y: scroll;
-  margin-bottom: 2rem;
+  height: calc(100vh - 5rem);
+  padding-bottom: 5rem
 }
 .wrapper::-webkit-scrollbar {
   display: none;
 }
 Button {
-  font-size: 1.5rem;
-  width: 12rem;
+  font-size: 1.25rem;
+  width: 8rem;
 }
 .Button-Wrapper {
   display: flex;

@@ -102,7 +102,6 @@ function finishQuiz() {
 
   addAnswersRequester
     .callApi({ progres: progres, enrolment_id: route.params.enrollmentId })
-    .then((res) => console.log(res));
 }
 
 function resetQuiz() {

@@ -13,7 +13,6 @@ from lib.crypto import auth_user
 import database.user_database as user_database
 
 
-
 router = APIRouter()
 
 

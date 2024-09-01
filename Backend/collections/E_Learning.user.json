@@ -1,236 +1,1626 @@
 [{
+  "_id": {
+    "$oid": "667aced50339c619b07f916b"
+  },
+  "id": null,
   "email": "mahmoud",
-  "user_type": "Parent"
+  "username": "mahmoud",
+  "hashed_pass": "$2b$12$bdzYxvpQNE0nBQ/GOvcKBO8sJoWEUxERmMKPJ0cqP.X5pcphX5Pbe",
+  "user_type": "Parent",
+  "created_at": "2024-06-25T13:54:16.256148",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "667ad75c0339c619b07f916e"
+  },
+  "id": null,
   "email": "basma",
-  "user_type": "Parent"
+  "username": "basma ",
+  "hashed_pass": "$2b$12$4DNLO5wgO2orO947XQY4YumAz018l4cZv3WCSMxngI.qSRQlTVRhW",
+  "user_type": "Parent",
+  "created_at": "2024-06-25T13:54:16.256148",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "667ad80c0339c619b07f9170"
+  },
+  "id": null,
   "email": "salman",
-  "user_type": "Child"
+  "username": "Soly",
+  "hashed_pass": "$2b$12$kBCznsaRgpIwatr25F0Bg.OOq5AV6WwSAtSgZfyfdaFdXbulHqhlK",
+  "user_type": "Child",
+  "created_at": "2024-06-25T13:54:16.256148",
+  "phone_number": "",
+  "first_name": "Salman",
+  "last_name": "Walid",
+  "birth_day": "2015-07-13T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "667ca3450ee58143f035a725"
+  },
+  "id": null,
   "email": "mahmoudsheleil@gmail.com",
-  "user_type": "Parent"
+  "username": "mahmoudsheleil@gmail.com",
+  "hashed_pass": "$2b$12$oHl7FxZ6UIX64fywUUm//./no2DKRnoXk48gN83rQjGCS96q5Cngy",
+  "user_type": "Parent",
+  "created_at": "2024-06-26T23:15:24.486650",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "668e7b293ec32768df735c44"
+  },
+  "id": null,
   "email": "mahmoud2",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$J3tCfoa0SNCrqHTeyXj..OyDTKMUCy4/yAJgQtZndeWU1/6URJkta",
+  "user_type": "Parent",
+  "created_at": "2024-07-10T12:13:47.754579",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "669367763ec32768df735c46"
+  },
+  "id": null,
   "email": "walidsamy.edutech@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$bjI5d9SJdutusIEfXvP1FucuZwRXuDAtcrEJ7fBaEYHprO5zEoz9m",
+  "user_type": "Parent",
+  "created_at": "2024-07-10T12:13:47.754579",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66952aeb3ec32768df735c48"
+  },
+  "id": null,
   "email": "mohammedfarouk146@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$1KVnwIo3aLoPk/8eO5VvruxcLOc/Wb9uN9p2FnQ2dSjS6BBVs/QC.",
+  "user_type": "Parent",
+  "created_at": "2024-07-10T12:13:47.754579",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "6699a6113ec32768df735c4a"
+  },
+  "id": null,
   "email": "mhmuodabrhym@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$t5n7RspWQVYqBEh616iGCOZ9gxc4ImFmaNmixr8CKu/G4SkXfjyvu",
+  "user_type": "Parent",
+  "created_at": "2024-07-10T12:13:47.754579",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "6699aaaf3ec32768df735c4c"
+  },
+  "id": null,
   "email": "mwmnm7265@gmail.com",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$gcrJTatNhEXhpcrxBELBB.5eyRfwQAZRDkic0TY7uMBgnOtU9FIDK",
+  "user_type": "Child",
+  "created_at": "2024-07-10T12:13:47.754579",
+  "phone_number": "",
+  "first_name": "مؤمن",
+  "last_name": "محمود ",
+  "birth_day": "2010-08-05T21:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "669cc9d11029bf18c547b8b9"
+  },
+  "id": "string",
   "email": "Admin",
-  "user_type": "Admin"
+  "hashed_pass": "$2b$12$YVTRUf2T/QPn.fkAJUuS2OpqFUBcvF5m2qXdEvepZTJOhB7zM0xQi",
+  "user_type": "Admin",
+  "created_at": {
+    "$date": "2024-07-21T08:39:54.576Z"
+  },
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "669ccaa91029bf18c547b8bb"
+  },
+  "id": null,
   "email": "child1",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$O1sytcwsqSwlvnUAKkIW0.QAkyLNRwaHcXxv2wBOGH2Cz30zzVC2e",
+  "user_type": "Child",
+  "created_at": "2024-07-21T08:39:54.576568",
+  "phone_number": "",
+  "first_name": "child1",
+  "last_name": "child1",
+  "birth_day": "2024-07-04T21:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": "Personality and Skills Assessment",
+      "description": "\nPersonality and Skills Assessment is a comprehensive evaluation designed to identify individual strengths, weaknesses, and potential growth areas. This assessment combines personality profiling with skills testing to provide a holistic understanding of a person's capabilities. By analyzing traits such as communication style, problem-solving ability, and emotional intelligence, it offers insights into personal and professional development. This tool is invaluable for career planning, team building, and personal growth, enabling individuals to align their skills with their goals and aspirations. Whether for recruitment, employee development, or self-improvement, this assessment is a key to unlocking potential and enhancing performance.",
+      "type": "analysis quiz",
+      "analysis_quiz_id": "668f288a7cad99b82ce7ca0b",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66a2075e1029bf18c547b8be"
+  },
+  "id": null,
   "email": "testmahmoud",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$aXgVK84kGDuPXBn33njiCuuWwPZ2zXycQdX9sWJR2aU4xIzf2c0J6",
+  "user_type": "Parent",
+  "created_at": "2024-07-21T08:39:54.576568",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66a207cb1029bf18c547b8c0"
+  },
+  "id": null,
   "email": "ahmed2000@gmail.com",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$Hl8refiM8yrxA05qRbm4.eS0MFwFvr4XwLHjAAV9pruA1ydw4M6qu",
+  "user_type": "Child",
+  "created_at": "2024-07-21T08:39:54.576568",
+  "phone_number": "",
+  "first_name": "ahmed",
+  "last_name": "mohamed",
+  "birth_day": "2024-07-19T21:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": "Personality and Skills Assessment",
+      "description": "\nPersonality and Skills Assessment is a comprehensive evaluation designed to identify individual strengths, weaknesses, and potential growth areas. This assessment combines personality profiling with skills testing to provide a holistic understanding of a person's capabilities. By analyzing traits such as communication style, problem-solving ability, and emotional intelligence, it offers insights into personal and professional development. This tool is invaluable for career planning, team building, and personal growth, enabling individuals to align their skills with their goals and aspirations. Whether for recruitment, employee development, or self-improvement, this assessment is a key to unlocking potential and enhancing performance.",
+      "type": "analysis quiz",
+      "analysis_quiz_id": "668f288a7cad99b82ce7ca0b",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66a228e11029bf18c547b8c5"
+  },
+  "id": null,
   "email": "soly2",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$cUKwzF0UOB07CQQT.yFZUur7gGS3uoLwh0hKBFk97qrWkQpixT9PO",
+  "user_type": "Child",
+  "created_at": "2024-07-21T08:39:54.576568",
+  "phone_number": "",
+  "first_name": "Soly",
+  "last_name": "2",
+  "birth_day": "2015-07-13T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": "Personality and Skills Assessment",
+      "description": "\nPersonality and Skills Assessment is a comprehensive evaluation designed to identify individual strengths, weaknesses, and potential growth areas. This assessment combines personality profiling with skills testing to provide a holistic understanding of a person's capabilities. By analyzing traits such as communication style, problem-solving ability, and emotional intelligence, it offers insights into personal and professional development. This tool is invaluable for career planning, team building, and personal growth, enabling individuals to align their skills with their goals and aspirations. Whether for recruitment, employee development, or self-improvement, this assessment is a key to unlocking potential and enhancing performance.",
+      "type": "analysis quiz",
+      "analysis_quiz_id": "668f288a7cad99b82ce7ca0b",
+      "enrollment_request_id": "",
+      "status": "waiting"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66a3b9ea1029bf18c547b8c7"
+  },
+  "id": null,
   "email": "maha.abdelaziz@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$lFU41cX0yBRh0ux5w3mkAeW6qn.JsJLNXiwqh8W3OkL3/l1KqXdZ6",
+  "user_type": "Parent",
+  "created_at": "2024-07-21T08:39:54.576568",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66a3ba921029bf18c547b8c9"
+  },
+  "id": null,
   "email": "salmatawfeek96@gmail.com",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$AaHvR8Wmwewup6ZVgpQ6P.3gE2FRcCkJC61GdtSmJnQsCBnbB8KSi",
+  "user_type": "Child",
+  "created_at": "2024-07-21T08:39:54.576568",
+  "phone_number": "",
+  "first_name": "Salma",
+  "last_name": "Islam",
+  "birth_day": "2018-06-08T22:00:00.000Z",
+  "gender": "Female",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": "Personality and Skills Assessment",
+      "description": "\nPersonality and Skills Assessment is a comprehensive evaluation designed to identify individual strengths, weaknesses, and potential growth areas. This assessment combines personality profiling with skills testing to provide a holistic understanding of a person's capabilities. By analyzing traits such as communication style, problem-solving ability, and emotional intelligence, it offers insights into personal and professional development. This tool is invaluable for career planning, team building, and personal growth, enabling individuals to align their skills with their goals and aspirations. Whether for recruitment, employee development, or self-improvement, this assessment is a key to unlocking potential and enhancing performance.",
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66afacc4766ec5a3ea5a0c41",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66a3bafd1029bf18c547b8cb"
+  },
+  "id": null,
   "email": "ahmed.islam6066@gmail.com",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$eNf6qrPgta8S3ZdOOaTPi.rYolFnyJwzgDf32Q1PothV8furQKyNy",
+  "user_type": "Child",
+  "created_at": "2024-07-21T08:39:54.576568",
+  "phone_number": "",
+  "first_name": "Ahmed",
+  "last_name": "Islam",
+  "birth_day": "2012-03-31T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": "Personality and Skills Assessment",
+      "description": "\nPersonality and Skills Assessment is a comprehensive evaluation designed to identify individual strengths, weaknesses, and potential growth areas. This assessment combines personality profiling with skills testing to provide a holistic understanding of a person's capabilities. By analyzing traits such as communication style, problem-solving ability, and emotional intelligence, it offers insights into personal and professional development. This tool is invaluable for career planning, team building, and personal growth, enabling individuals to align their skills with their goals and aspirations. Whether for recruitment, employee development, or self-improvement, this assessment is a key to unlocking potential and enhancing performance.",
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66bcbfb0b18138d2a2aae447",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66ae3d951029bf18c547b8cf"
+  },
+  "id": null,
   "email": "beautylovelylove@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$yCDYrLM4ZUmtIbekdj7Iz.T/Qw.Kr99ZNW3wUm/4iqe2xSY4cxmtG",
+  "user_type": "Parent",
+  "created_at": "2024-07-21T08:39:54.576568",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66b9e86564f330bc9744dfd5"
+  },
+  "id": null,
   "email": "s-mahmoud.sheliel@zewailcity.edu.eg",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$.ljq6cTNkVtThtSKwAiX6O4HcW724DdOvGPlNqLdScOulHOON7sq6",
+  "user_type": "Parent",
+  "created_at": "2024-08-12T09:38:38.152093",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66b9e89e64f330bc9744dfd7"
+  },
+  "id": null,
   "email": "parent",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$HZCuL5BIFGY8iaYhc4GIKeynM0hBsNv5IRNrxO8qpeFNd9Fn6/WPC",
+  "user_type": "Parent",
+  "created_at": "2024-08-12T09:38:38.152093",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66b9eb1664f330bc9744dfd9"
+  },
+  "id": null,
   "email": "child2",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$bk07f/B9rMqAr7X15onffu/UNtBNGqFCfEGH9WxpkEfvhRYDrAz/.",
+  "user_type": "Child",
+  "created_at": "2024-08-12T09:38:38.152093",
+  "phone_number": "",
+  "first_name": "child2",
+  "last_name": "child2",
+  "birth_day": "2024-08-04T21:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 6-9:",
+        "ar": "اختبار شامل للأطفال من عمر 6-9 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 6-9. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 6-9 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66afacc4766ec5a3ea5a0c41",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66ba0f1e64f330bc9744dfde"
+  },
+  "id": null,
   "email": "amro",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$9Qqmt5DBAmSGttrraD8rc.TpHnOItteEk1oFqGenoj43E9V0pRcpq",
+  "user_type": "Parent",
+  "created_at": "2024-08-12T09:38:38.152093",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66ba0f8664f330bc9744dfe0"
+  },
+  "id": null,
   "email": "malek",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$5CLAyJUV1JwkyE42//tuF.09XVeEGIFex7HIRxNmcxHI.DCkrulWy",
+  "user_type": "Child",
+  "created_at": "2024-08-12T09:38:38.152093",
+  "phone_number": "",
+  "first_name": "malek",
+  "last_name": "amro",
+  "birth_day": "2017-01-06T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 6-9:",
+        "ar": "اختبار شامل للأطفال من عمر 6-9 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 6-9. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 6-9 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66afacc4766ec5a3ea5a0c41",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66ba0fbe64f330bc9744dfe2"
+  },
+  "id": null,
   "email": "yossuf",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$2OaZGkxmU.rjs7/XvdqK2.5mn90.u93KQpQ6FCWxgXXGyLOXJWnEa",
+  "user_type": "Child",
+  "created_at": "2024-08-12T09:38:38.152093",
+  "phone_number": "",
+  "first_name": "yossuf",
+  "last_name": "amro",
+  "birth_day": "2019-03-07T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 6-9:",
+        "ar": "اختبار شامل للأطفال من عمر 6-9 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 6-9. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 6-9 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66afacc4766ec5a3ea5a0c41",
+      "enrollment_request_id": "",
+      "status": "waiting"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66ba0fe364f330bc9744dfe4"
+  },
+  "id": null,
   "email": "yassin",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$7P8XaF9hkL8oUtcoZFxcQ.ND6JHa4PWI85aplhpKOV4fjLqfesZWO",
+  "user_type": "Child",
+  "created_at": "2024-08-12T09:38:38.152093",
+  "phone_number": "",
+  "first_name": "yassin",
+  "last_name": "amro",
+  "birth_day": "2019-03-07T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 6-9:",
+        "ar": "اختبار شامل للأطفال من عمر 6-9 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 6-9. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 6-9 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66afacc4766ec5a3ea5a0c41",
+      "enrollment_request_id": "",
+      "status": "waiting"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66ba46e164f330bc9744dfe6"
+  },
+  "id": null,
   "email": "alaa",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$49B2Az5JlCwHrVbumNGSKO1Pxxm8jZ4F8fSw9JJqMq4ebDBLzA31W",
+  "user_type": "Parent",
+  "created_at": "2024-08-12T09:38:38.152093",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66ba472464f330bc9744dfe8"
+  },
+  "id": null,
   "email": "Loll",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$Xg28eAk2mAERLHNtHumg/e4P.Btc3vqoAbidGmEndLvv15O.JdFNi",
+  "user_type": "Child",
+  "created_at": "2024-08-12T09:38:38.152093",
+  "phone_number": "",
+  "first_name": " Lolo",
+  "last_name": "Lolo",
+  "birth_day": "2002-11-18T22:00:00.000Z",
+  "gender": "Female",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 6-9:",
+        "ar": "اختبار شامل للأطفال من عمر 6-9 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 6-9. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 6-9 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66afacc4766ec5a3ea5a0c41",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66bda26bba776abc9755f6ef"
+  },
+  "id": null,
   "email": "0",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$k.aQDTv23.XpEj2kkFTvvuIzLezpofVW/n8eENVbzExe5lEGCAWqW",
+  "user_type": "Child",
+  "created_at": "2024-08-14T21:38:53.390790",
+  "phone_number": "",
+  "first_name": "Basma",
+  "last_name": "Ibrahim",
+  "birth_day": "2020-08-14T22:00:00.000Z",
+  "gender": "Female",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 6-9:",
+        "ar": "اختبار شامل للأطفال من عمر 6-9 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 6-9. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 6-9 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66afacc4766ec5a3ea5a0c41",
+      "enrollment_request_id": "",
+      "status": "waiting"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66bda2a3ba776abc9755f6f1"
+  },
+  "id": null,
   "email": "s",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$aeR1DmVDwsa25tSwuWsRVOTWHo8qm4Dm/sD/gvtxjCr1jaR9D.ysW",
+  "user_type": "Child",
+  "created_at": "2024-08-14T21:38:53.390790",
+  "phone_number": "",
+  "first_name": "Soly",
+  "last_name": "Boly",
+  "birth_day": "2015-07-13T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 6-9:",
+        "ar": "اختبار شامل للأطفال من عمر 6-9 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 6-9. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 6-9 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66afacc4766ec5a3ea5a0c41",
+      "enrollment_request_id": "",
+      "status": "waiting"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66bf9509ba776abc9755f6f3"
+  },
+  "id": null,
   "email": "mahmoud.m.gabr@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$yAvjJDJnCNtlL5O5IZUkdOXgvduL8BXGOD3cDJU3RBBGytejnron.",
+  "user_type": "Parent",
+  "created_at": "2024-08-14T21:38:53.390790",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66bf95d8ba776abc9755f6f5"
+  },
+  "id": null,
   "email": "jwirya.m.gabr@gmail.com",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$GRSC/n3IC5.7bQWccf8zQ.62h2DhGf.UBIhkbtm2N0EL8mTbM0Bv.",
+  "user_type": "Child",
+  "created_at": "2024-08-14T21:38:53.390790",
+  "phone_number": "",
+  "first_name": "Jwirya",
+  "last_name": "Mostafa",
+  "birth_day": "2014-09-03T21:00:00.000Z",
+  "gender": "Female",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66bf976cba776abc9755f6f7"
+  },
+  "id": null,
   "email": "hamza.m.gabr11@gmail.com",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$coFWcyFFF.e5wiJTM2uP8e18Mo.ByBSDQNyPfHCBtU0.RKnVHrQPq",
+  "user_type": "Child",
+  "created_at": "2024-08-14T21:38:53.390790",
+  "phone_number": "",
+  "first_name": "Hamza",
+  "last_name": "mostafa",
+  "birth_day": "2011-10-11T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66c37c0e2837dfec71ac0b87"
+  },
+  "id": null,
   "email": "mkinawy@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$cFhAc1.sMLWgo8FRElYs0eNvFyLFhvi5uyVIiJIyoLe4pczgAthgO",
+  "user_type": "Parent",
+  "created_at": "2024-08-18T13:43:09.307014",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66c37ca62837dfec71ac0b89"
+  },
+  "id": null,
   "email": "layan_elkassem@sacrecoeurgh.edu.eg",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$u.v37/Xnq9p3FkwIt9gsT.RAEE3SmF0fQchPjs8oiBmk0N61d0a0a",
+  "user_type": "Child",
+  "created_at": "2024-08-18T13:43:09.307014",
+  "phone_number": "",
+  "first_name": "layan",
+  "last_name": "mahmoud mohamed kinawy",
+  "birth_day": "2014-11-20T22:00:00.000Z",
+  "gender": "Female",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 10-13",
+        "ar": "اختبار شامل للأطفال من عمر 10-13 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 10-13. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 10-13 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66bcbfb0b18138d2a2aae447",
+      "enrollment_request_id": "",
+      "status": "waiting"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66c47ac85237c8c32547f5a1"
+  },
+  "id": null,
   "email": "awad22rahaf@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$fBIZ4DRj2R4RQfZh.qPWh.nCwOyn9Ah5GzT8bFuTq830VfEVn42/e",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "01124465041",
+  "first_name": "ندى",
+  "last_name": "عوض",
+  "birth_day": "1981-06-07T21:00:00.000Z",
+  "gender": "Female",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66c484725237c8c32547f5a3"
+  },
+  "id": null,
   "email": "awad69143@gmail.com ",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$XCKJghiSeCVpyoDaB5fesOqJYy9U4Z1Kgb889TLzAL44QdnLZ9Rd6",
+  "user_type": "Child",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "عوض ",
+  "last_name": "المعز ",
+  "birth_day": "2010-03-11T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 10-13",
+        "ar": "اختبار شامل للأطفال من عمر 10-13 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 10-13. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 10-13 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66bcbfb0b18138d2a2aae447",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66c488405237c8c32547f5a5"
+  },
+  "id": null,
   "email": "yomna.safaa.eldin@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$2JUeB.kib.Y8sAlYcO2GzedC.ME6FHvQYdSLXDVaI.shkKtr2.XpW",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66c488975237c8c32547f5a7"
+  },
+  "id": null,
   "email": "anas.m.elsaeid@gmail.com",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$DRgKHo3c4dELfCgxiNFzl.ZOGfZHm3Srx1oF.YqDFzNiZmRnBOOJK",
+  "user_type": "Child",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "Anas",
+  "last_name": "Moustafa",
+  "birth_day": "2015-08-21T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 6-9:",
+        "ar": "اختبار شامل للأطفال من عمر 6-9 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 6-9. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 6-9 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66afacc4766ec5a3ea5a0c41",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66c496005237c8c32547f5ab"
+  },
+  "id": null,
   "email": "yomna.safaa.eldin.cse@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$p9aNr47Z6O00LDShkYXD2e3xR.TOt.V.1DdeMzsUE9hQ2O6e911UW",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66c4cf1c5237c8c32547f5ad"
+  },
+  "id": null,
   "email": "ghoneim2909@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$g4zk4sKk4iTne27a9YJ8XeG2/rDKZe4AbxxlYg2Q3diY5yzWrEhIK",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66c4f5025237c8c32547f5af"
+  },
+  "id": null,
   "email": "mw9904380@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$SfqAScmLMO5dcX7T3OcekejpJWGQJnuhnMYSB0.BDoHnS0GndhZHq",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66c4f6655237c8c32547f5b1"
+  },
+  "id": null,
   "email": "mw",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$ScCngPTJAfeha8PW3rirEuyKOFrBtvaGT.YgZugjmROFzdin0b5IG",
+  "user_type": "Child",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "Menna ",
+  "last_name": "Wael",
+  "birth_day": "2012-11-01T22:00:00.000Z",
+  "gender": "Female",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 10-13",
+        "ar": "اختبار شامل للأطفال من عمر 10-13 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 10-13. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 10-13 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66bcbfb0b18138d2a2aae447",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66c4f8ba5237c8c32547f5b6"
+  },
+  "id": null,
   "email": "wael.2.edc@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$WbkzP1fPTq0XyZPsDVUaKu.VUz1T8vbwR.PuEE9xqixJ5ud6XF4xG",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66c4fea65237c8c32547f5b8"
+  },
+  "id": null,
   "email": "negmsader500@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$YUgWHQw/2MVeZKgJ2uzQo..L34fx9J4F6O1qiylgUIznmIkc2zFBW",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66c517195237c8c32547f5ba"
+  },
+  "id": null,
   "email": "noureldenwael59@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$TyahWJ43bJPGUQL1JbVAneJZD6CXzHjaJ0px17CmzMaKNb6T8CIE6",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66c637fe5237c8c32547f5bc"
+  },
+  "id": null,
   "email": "abir.cherni@yahoo.fr",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$Z/sclpcFolWhhX8uWkw6kO6lhRTViEclhW4026nPrCzxiCJaVqO76",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66c725425237c8c32547f5be"
+  },
+  "id": null,
   "email": "eng.mai.elshamy2019@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$.fLj0f4V5FGjvYqeEodte.yiZDHBmdsEwHRuTX6/tvCHUDNRJS08O",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66c726c65237c8c32547f5c0"
+  },
+  "id": null,
   "email": "CLS. 2O30.Sherif.Mohamed@continental.ms",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$fE7pIIHKa38QPn7hFsiZhecUvmOu8IFUjkqUIOYquziADmrsjIvJu",
+  "user_type": "Child",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "Sherif",
+  "last_name": "Mohamed",
+  "birth_day": "2012-03-07T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 10-13",
+        "ar": "اختبار شامل للأطفال من عمر 10-13 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 10-13. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 10-13 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66bcbfb0b18138d2a2aae447",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66c729cc5237c8c32547f5c2"
+  },
+  "id": null,
   "email": "cls.2030.sherif.mohamed@continental.ms",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$D.1Kq7c4tP7XpQ4ry8ievOqHptZC8/vA5/7WirFq9m1rkN14w7AK.",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66c738e65237c8c32547f5c5"
+  },
+  "id": null,
   "email": "Shikotota@gmail.com",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$fGcKuZNtc2TyXA2lztrWVO2.PO/u3JmTV9oaVfFhfr5lOq3KDhMnm",
+  "user_type": "Child",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "Reem",
+  "last_name": "El. Shamy",
+  "birth_day": "2012-04-09T22:00:00.000Z",
+  "gender": "Female",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 10-13",
+        "ar": "اختبار شامل للأطفال من عمر 10-13 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 10-13. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 10-13 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66bcbfb0b18138d2a2aae447",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66c884265237c8c32547f5c8"
+  },
+  "id": null,
   "email": "nairanasser926@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$tqaDqruZIoWOiIR5Z.gGpOQ6YoD9FeS.BQyvLoqGG0Jo1ICqm5Fle",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66ca0edc5237c8c32547f5cc"
+  },
+  "id": null,
   "email": "mahmoudYsheliel",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$wolKlMEl/iplJOeQCQf08.PKHq6oz/D15Ml2BwX6dxCOMumEZbRrW",
+  "user_type": "Child",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "mahmoud",
+  "last_name": "yasser",
+  "birth_day": "2018-12-05T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 6-9:",
+        "ar": "اختبار شامل للأطفال من عمر 6-9 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 6-9. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 6-9 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66afacc4766ec5a3ea5a0c41",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66ca11dc5237c8c32547f5cf"
+  },
+  "id": null,
   "email": "rabdou2008@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$5iNViPY4u0/k.m7IVnPjQ.xuCN98PwrCzaMjEim1MhAD7ziEzIknG",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66ca2a975237c8c32547f5d2"
+  },
+  "id": null,
   "email": "sbelety@hotmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$Z81OxlN7LYgyUPduriQY5.x7hTaS5JGypzdwZIyKe.CdqTib76XmO",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66ca2b0c5237c8c32547f5d4"
+  },
+  "id": null,
   "email": "sbelety@gmail.com",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$EvORXPgXfNQGkhUZPpasyeftHYOrXHeKAo53GJp1uQawwRc8h7fte",
+  "user_type": "Child",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "Kareem ",
+  "last_name": "Hady",
+  "birth_day": "2011-01-29T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 6-9:",
+        "ar": "اختبار شامل للأطفال من عمر 6-9 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 6-9. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 6-9 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66afacc4766ec5a3ea5a0c41",
+      "enrollment_request_id": "",
+      "status": "waiting"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66ca60cc5237c8c32547f5d6"
+  },
+  "id": null,
   "email": "negma5484@gmail.com",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$KY/UbegHzDWNPqRueihGbeAjlmJR.DBWIT2mQ4Q4euf82h410JdES",
+  "user_type": "Child",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "Adam ",
+  "last_name": "Negm ",
+  "birth_day": "2013-06-22T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 10-13",
+        "ar": "اختبار شامل للأطفال من عمر 10-13 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 10-13. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 10-13 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66bcbfb0b18138d2a2aae447",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66cb4b2f5237c8c32547f5d9"
+  },
+  "id": null,
   "email": "usamaesam86@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$K4xNdKBPhFanj5ZUxAA7Gu0EADb6D2OdWal6sAXE2X7oXPWb9Jzza",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 },
 {
+  "_id": {
+    "$oid": "66cca6965237c8c32547f5dd"
+  },
+  "id": null,
   "email": "yassin.m.elsaeid@gmail.com",
-  "user_type": "Child"
+  "hashed_pass": "$2b$12$M472yv5wHVQUk9v3vd4jxuh/cuveMRPJh/pIM/AOmpe.BC1kAY/4S",
+  "user_type": "Child",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "Yassin",
+  "last_name": "Moustafa",
+  "birth_day": "2011-06-18T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 10-13",
+        "ar": "اختبار شامل للأطفال من عمر 10-13 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 10-13. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 10-13 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66bcbfb0b18138d2a2aae447",
+      "enrollment_request_id": "",
+      "status": "waiting"
+    }
+  ]
 },
 {
+  "_id": {
+    "$oid": "66cdcb7d5237c8c32547f5df"
+  },
+  "id": null,
   "email": "ahmadwas2022@gmail.com",
-  "user_type": "Parent"
+  "hashed_pass": "$2b$12$PWb03tgBi4obXScfoU01FOhySMCi93A2JBX/Y95wYNey7.iSpL8nm",
+  "user_type": "Parent",
+  "created_at": "2024-08-20T11:00:44.200067",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
+},
+{
+  "_id": {
+    "$oid": "66cec97420119cf26404cbe2"
+  },
+  "id": null,
+  "email": "Eiad",
+  "hashed_pass": "$2b$12$wOY/39Qnx46vd8D/6tg6du5AbLELKJCrfPB7FZmsNTMGdbmR0MGiu",
+  "user_type": "Parent",
+  "created_at": "2024-08-28T06:17:21.308652",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
+},
+{
+  "_id": {
+    "$oid": "66cec9b820119cf26404cbe4"
+  },
+  "id": null,
+  "email": "zigoo.eg@gmail.com",
+  "hashed_pass": "$2b$12$41HU9mmBYBsq1VjtpdxlRO1mSmu8ImvAILY2Vy4qUzcG/cZJj7yRq",
+  "user_type": "Parent",
+  "created_at": "2024-08-28T06:17:21.308652",
+  "phone_number": "",
+  "first_name": "Eiad",
+  "last_name": "Ebrahim",
+  "birth_day": "2016-05-30T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": []
+},
+{
+  "_id": {
+    "$oid": "66ced9a87c92040d96b2fc38"
+  },
+  "id": null,
+  "email": "mahmoud3",
+  "hashed_pass": "$2b$12$OnEPNqM1Cl/lAbSVYiRYCOEdb6Rz6P4AoSukRzgV8Gs66edKYLQd2",
+  "user_type": "Parent",
+  "created_at": "2024-08-28T08:02:08.074129",
+  "phone_number": "01017897738",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
+},
+{
+  "_id": {
+    "$oid": "66cf5411ee37e04aaef90830"
+  },
+  "id": null,
+  "email": "nehal89nehL@yahoo.com",
+  "hashed_pass": "$2b$12$ibeVH6gB0zCc9E.FGXPHueqclngRuyhJ0eTnxSwrjyv1sHRo5fHjO",
+  "user_type": "Parent",
+  "created_at": "2024-08-28T16:42:53.253065",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
+},
+{
+  "_id": {
+    "$oid": "66cf543cee37e04aaef90832"
+  },
+  "id": null,
+  "email": "eiadhegazy2016@gmail.com",
+  "hashed_pass": "$2b$12$lynpXmWBnHn/yNjAqf9U7OPT08oKpMWFfAri9LsE8zIHmANsHTwgu",
+  "user_type": "Child",
+  "created_at": "2024-08-28T16:42:53.253065",
+  "phone_number": "",
+  "first_name": "Eiad",
+  "last_name": "Hegazy",
+  "birth_day": "2016-05-30T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 6-9:",
+        "ar": "اختبار شامل للأطفال من عمر 6-9 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 6-9. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 6-9 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66afacc4766ec5a3ea5a0c41",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66cf5530098657ea01d7314e"
+  },
+  "id": null,
+  "email": "nehal89nehal@yahoo.com",
+  "hashed_pass": "$2b$12$UJRro/snolgKMbPoyZkW6.eTmf4eUNWxUcFUFcDd.HjourWULxZHO",
+  "user_type": "Parent",
+  "created_at": "2024-08-28T16:49:03.463991",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
+},
+{
+  "_id": {
+    "$oid": "66cf57d2bd4175f28ce2906d"
+  },
+  "id": null,
+  "email": "nehalmandour89gmail.com",
+  "hashed_pass": "$2b$12$iUeDMeqdN907UdU58IEMKOznKZBbnUeT./76nq5vOBKtsUX.kXNki",
+  "user_type": "Child",
+  "created_at": "2024-08-28T16:57:24.698464",
+  "phone_number": "",
+  "first_name": "Gasser",
+  "last_name": "Shaaban ",
+  "birth_day": "2016-06-04T04:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 6-9:",
+        "ar": "اختبار شامل للأطفال من عمر 6-9 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 6-9. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 6-9 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66afacc4766ec5a3ea5a0c41",
+      "enrollment_request_id": "",
+      "status": "waiting"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66cf5976bd4175f28ce2906f"
+  },
+  "id": null,
+  "email": "nehalmandour89@gmail.com",
+  "hashed_pass": "$2b$12$LgjkMwdk4QLpPELlV33X4OBu9yZe5dVZyb.KSympK82G7mrakvGkW",
+  "user_type": "Child",
+  "created_at": "2024-08-28T16:57:24.698464",
+  "phone_number": "",
+  "first_name": "Gasser",
+  "last_name": "Shaaban ",
+  "birth_day": "2016-06-04T04:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 6-9:",
+        "ar": "اختبار شامل للأطفال من عمر 6-9 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 6-9. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 6-9 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66afacc4766ec5a3ea5a0c41",
+      "enrollment_request_id": "",
+      "status": "waiting"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66cf99a9bd4175f28ce29072"
+  },
+  "id": null,
+  "email": "T",
+  "hashed_pass": "$2b$12$VnA.NMmYEWAYfXkG.sjkKevlmdDmJjHoszYqKJRzZK14HxfE4r8ba",
+  "user_type": "Child",
+  "created_at": "2024-08-28T16:57:24.698464",
+  "phone_number": "",
+  "first_name": "T",
+  "last_name": "T",
+  "birth_day": "2024-07-31T21:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Comprehensive Quiz for Children Aged 6-9:",
+        "ar": "اختبار شامل للأطفال من عمر 6-9 سنوات"
+      },
+      "description": {
+        "en": "This comprehensive quiz is specifically designed for children aged 6-9. It provides an in-depth assessment of various aspects of a child's development, including the Big 5 personality traits, IQ levels, preferred learning styles, and Enneagram personality types. The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique personality, cognitive abilities, and learning preferences. By understanding these key areas, parents and educators can gain valuable insights into a child's strengths and areas for growth, facilitating tailored educational strategies and support to nurture their full potential.",
+        "ar": "هذا الاختبار الشامل مصمم خصيصاً للأطفال من عمر 6-9 سنوات. يوفر تقييماً معمقاً لمختلف جوانب نمو الطفل، بما في ذلك سمات الشخصية الخمس الكبرى، مستويات الذكاء، أساليب التعلم المفضلة، وأنواع إنياجرام الشخصية. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التقييم المصممة بعناية لتقييم شخصية الطفل الفريدة، وقدراته المعرفية، وتفضيلاته التعليمية. من خلال فهم هذه المجالات الرئيسية، يمكن للآباء والمعلمين الحصول على رؤى قيمة حول نقاط قوة الطفل ومجالات النمو، مما يسهل وضع استراتيجيات تعليمية مخصصة ودعم يهدف إلى تعزيز إمكاناتهم الكاملة."
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "66afacc4766ec5a3ea5a0c41",
+      "enrollment_request_id": "",
+      "status": "waiting"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66d05168bd4175f28ce29074"
+  },
+  "id": null,
+  "email": "ideamagdaelmohandes@yahoo.com",
+  "hashed_pass": "$2b$12$zadYr6mpg5.BWiUUWhgIr.itOuTtRbflEpAnsGAELSJMkBVUDty32",
+  "user_type": "Parent",
+  "created_at": "2024-08-28T16:57:24.698464",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
+},
+{
+  "_id": {
+    "$oid": "66d45730bd4175f28ce29077"
+  },
+  "id": null,
+  "email": "yusufahmed3082008@gmail.com",
+  "hashed_pass": "$2b$12$AqSsqipbQxh2vND7.rCw9.tNfteVzQiz20sUdPS2/S5kwaWVGPF1W",
+  "user_type": "Parent",
+  "created_at": "2024-08-28T16:57:24.698464",
+  "phone_number": "",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "",
+  "gender": "",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 }]

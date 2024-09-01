@@ -38,7 +38,6 @@ const plansRequester = new HttpRequester("get_all_plans");
 plansRequester.callApi().then((res) => {
   if (res.success) {
     plans.value = res?.data?.plans;
-    console.log(plans.value);
   }
 });
 </script>

@@ -16,20 +16,37 @@ class QuizProgress(BaseModel):
     time_taken:int
     created_at:datetime
 
-
 class LessonProgress(BaseModel):
     lesson_id:str
+    completed_at:datetime
+
+class SimulationProgress(BaseModel):
+    simulation_id:str
+    completed_at:datetime
+    
+class ProjectProgress(BaseModel):
+    project_id:str
+    completed_at:datetime
+    
+class ActivityProgress(BaseModel):
+    activity_id:str
     completed_at:datetime
     
     
 
 class Progress(BaseModel):
     lessons_completed:list[LessonProgress]=[]
+    activities_completed:list[ActivityProgress]=[]
+    simulations_completed:list[SimulationProgress]=[]
+    projects_completed:list[ProjectProgress]=[]
     quizes_completed:list[QuizProgress]=[]
     
     
 class AddProgress(BaseModel):
     lesson_progress:LessonProgress=None
+    project_progress:ProjectProgress=None
+    simulation_progress:SimulationProgress=None
+    activity_progress:ActivityProgress=None
     quiz_progress:QuizProgress=None
     material_type:str
 

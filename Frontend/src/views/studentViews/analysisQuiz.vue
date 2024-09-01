@@ -108,9 +108,7 @@ function finishQuiz() {
     }
     
   };
-  console.log(data)
   addAnswerRequester.callApi(data).then((res) => {
-    console.log(res?.data)
     if(res?.success){
       showDialog.value=true
     }

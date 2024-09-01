@@ -9,7 +9,7 @@ class Material(BaseModel):
     Id:str
     order:int
     title:TwoLang
-    type:str #Lesson Quiz Assesment
+    type:str #Lesson Quiz Activity Project Simulation
 
 class Chapter(BaseModel):
     title:TwoLang
