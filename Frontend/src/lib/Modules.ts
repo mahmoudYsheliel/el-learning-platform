@@ -354,7 +354,13 @@ export const managerSidebarPages = computed(() => {
       icon: "pi pi-bell",
     },
     {
-      label: selectLang(translationModule.courses),
+      label: selectLang(translationModule.users),
+      name: "Manage Users",
+      to: "manageUsers",
+      icon: "pi pi-user",
+    },
+    {
+      label: selectLang(translationModule.content),
       name: "Manage Courses",
       to: "manageCourses",
       icon: "pi pi-server",

@@ -45,7 +45,9 @@ const responsiveOptions = ref([
           :value="achievments"
           :numVisible="1"
           :numScroll="1"
-          :responsiveOptions="responsiveOptions"
+          :responsiveOptions="responsiveOptions" c
+          ircular 
+    :autoplayInterval="3000"
         >
           <template #item="slotProps">
             <div class="achievment flipDirection" >

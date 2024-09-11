@@ -77,3 +77,11 @@ async def update_user_info(user_type_specific_info:dict= Body(embed=True),update
 async def add_child(user:User = Body(embed=True) ,child:Child= Body(embed=True),userId:str = Depends(auth_user)):
     res =  await user_database.add_child(user,child,userId)
     return res
+
+@router.post('/get_all_users')
+async def get_all_users(userId:str = Depends(auth_user)):
+    res =  await user_database.get_all_users(userId)
+    return res
+
+
+

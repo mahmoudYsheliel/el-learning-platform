@@ -162,13 +162,14 @@ const router = useRouter();
 </template>
 
 <style scoped>
+
 main {
   background-color: var(--accent1);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 5rem;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 4rem;
   align-items: center;
-  padding-inline: 4rem;
+  padding-inline: 2rem;
   z-index: 2;
 }
 .logo {
@@ -192,12 +193,10 @@ main {
 }
 .option,
 .register {
-  font-size: 1.25rem;
   color: var(--primary);
   cursor: pointer;
 }
 .logo-name {
-  font-size: 1.25rem;
   color: var(--primary);
 }
 h1 {

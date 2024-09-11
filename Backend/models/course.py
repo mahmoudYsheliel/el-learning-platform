@@ -30,6 +30,6 @@ class Course(BaseModel):
     objectives:Optional[list[TwoLang]] = []
     min_age:int
     max_age:int
-    duration: Optional[int]  # number of days
+    duration: Optional[int]=7  # number of days
     number_of_enrollments: Optional[int]=0
     

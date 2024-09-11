@@ -36,26 +36,27 @@ async def delete_course(course_id: str) -> ServiceResponse:
     result =await check_existance_in_DB(course_id, "course")
     if not result:
         return ServiceResponse(success=False, msg="bad course id")
-    for chapter in result["chapters"]:
-        for mat in chapter["material"]:
-            bson_id = validate_bson_id(mat["Id"])
-            if not bson_id:
-                return ServiceResponse(
-                    success=False, msg="bad material id" + mat["type"]
-                )
-            for material in materials:
-                if mat["type"] == material["type"]:
-                    result = (
-                        await get_database()
-                        .get_collection(material["DB_name"])
-                        .delete_one({"_id": bson_id})
+    if result["chapters"]:
+        for chapter in result["chapters"]:
+            for mat in chapter["material"]:
+                bson_id = validate_bson_id(mat["Id"])
+                if not bson_id:
+                    return ServiceResponse(
+                        success=False, msg="bad material id" + mat["type"]
                     )
-                    if not result:
-                        return ServiceResponse(
-                            success=False, msg="bad id for " + material["type"]
+                for material in materials:
+                    if mat["type"] == material["type"]:
+                        result = (
+                            await get_database()
+                            .get_collection(material["DB_name"])
+                            .delete_one({"_id": bson_id})
                         )
+                        if not result:
+                            return ServiceResponse(
+                                success=False, msg="bad id for " + material["type"]
+                            )
 
-    result = await get_database().get_collection("course").delete_one({"_id": bson_id})
+    result = await get_database().get_collection("course").delete_one({"_id": validate_bson_id(course_id)})
     if not result.deleted_count:
         return ServiceResponse(success=False, status_code=404, msg="course not Found")
     return ServiceResponse(mag="OK")

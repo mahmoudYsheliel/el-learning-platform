@@ -112,3 +112,14 @@ async def get_course_plan(course_id: str):
     if not plan:
         return ServiceResponse(success=False, status_code=404, msg="Plan Not Found")
     return ServiceResponse(data={"plan": plan})
+
+async def delete_plan(losson_id: str) -> ServiceResponse:
+    bson_id=validate_bson_id(losson_id)
+    if not bson_id:
+        return ServiceResponse(status_code=400, msg='Bad plan ID')
+
+    result = await get_database().get_collection('plan').delete_one({'_id': bson_id})
+    if not result.deleted_count:
+        return ServiceResponse(success=False, status_code=404, msg='plan not Found')
+    return ServiceResponse(mag='OK')
+

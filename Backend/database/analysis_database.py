@@ -229,6 +229,7 @@ async def add_analysis_quiz_answer(
         enneagram_results=enneagram_results,
         learning_styles_results=learning_styles_results,
         possible_careers=possible_careers,
+        answers=answers
     )
 
     result = (

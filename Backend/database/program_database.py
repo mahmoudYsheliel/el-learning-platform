@@ -59,7 +59,8 @@ async def get_program(program_id: str) -> ServiceResponse:
                 "id": {"$toString": "$_id"},
                 "title": 1,
                 "description": 1,
-                "age_group": 1,
+                 "min_age":1,
+                "max_age":1,
                 "road_map": 1,
                 "image": 1,
             },
@@ -81,9 +82,10 @@ async def get_all_programs() -> ServiceResponse:
                 "_id": 0,
                 "id": {"$toString": "$_id"},
                 "title": 1,
-                "age_group": 1,
                 "image": 1,
                 "description": 1,
+                "min_age":1,
+                "max_age":1
             },
         )
         .to_list(length=None)
@@ -103,11 +105,12 @@ async def get_all_programs_and_courses() -> ServiceResponse:
                 "_id": 0,
                 "id": {"$toString": "$_id"},
                 "title": 1,
-                "age_group": 1,
                 "image": 1,
                 "description": 1,
                 "road_map": 1,
-                "image": 1,
+                "min_age":1,
+                "max_age":1,
+                "image": 1
             },
         )
         .to_list(length=None)

@@ -10,14 +10,21 @@ router = APIRouter()
 
 
 @router.post('/create_plan') 
-async def create_plan(plan: Plan =Body(embed=True),userId:str = Depends(auth_user))-> ServiceResponse:
-    res = await plan_database.create_plan(plan)
+async def create_plan(new_plan: Plan =Body(embed=True),userId:str = Depends(auth_user))-> ServiceResponse:
+    res = await plan_database.create_plan(new_plan)
     return res
 
 @router.post('/get_plan') 
 async def get_plan(plan_id:str =Body(embed=True))-> ServiceResponse:
     res = await plan_database.get_plan(plan_id)
     return res
+
+
+@router.post('/delete_plan')
+async def delete_plan(plan_id:str = Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
+    res = await plan_database.delete_plan(plan_id)
+    return res
+
 
 @router.post('/get_all_plans') 
 async def get_all_plans()-> ServiceResponse:

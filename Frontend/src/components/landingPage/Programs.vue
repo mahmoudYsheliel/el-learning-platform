@@ -22,7 +22,8 @@ programRequester.callApi().then((res) => {
     for (let i=0; i<programs.value.length;i++) {
       items.value.push({
         name: programs.value[i].title,
-        age:programs.value[i].age_group,
+        minAge:programs.value[i].min_age,
+        maxAge:programs.value[i].max_age,
         description: programs.value[i].description,
         color: colors[i%3],
         command: () => {
@@ -54,7 +55,7 @@ programRequester.callApi().then((res) => {
             <img src="/images/openBook.svg" style="width: 3rem" alt="" />
             <div class="name-age">
               <p>{{ selectLang(program.name) }}</p>
-              <p>{{ program.age }}</p>
+              <p>Age: {{ program?.minAge }} - {{ program?.maxAge }}</p>
             </div>
           </div>
           <p>{{ selectLang(program.description)?.substring(0,50) +'...'}}</p>

@@ -20,9 +20,9 @@ const router = useRouter();
         alt="Sparkle SVG"
       />
           <img
-            style="width: 2rem; margin-inline: 2rem; display: inline-block;"
             src="/images/StarFour.svg"
             alt="Sparkle SVG"
+            class="star"
           />
           <br />
           {{ selectLang(translationModule.advanceCareer) }}
@@ -72,6 +72,7 @@ img {
 .imagenormal{
   position: absolute;
    width: 25rem; 
+   max-width: 100%;
    left: 0;
 }
 h1 {
@@ -97,6 +98,11 @@ strong {
 button {
   padding: 1rem 3rem;
 }
+.star{
+  width: 2rem;
+   margin-inline:    2rem;
+    display: inline-block;
+}
 @media screen and (max-width: 1300px) {
   .wrapper {
     flex-direction: column-reverse;
@@ -105,6 +111,15 @@ button {
   }
   img {
     width: 62%;
+  }
+  p{
+    width: fit-content;
+  }
+  .star{
+    display: none;
+  }
+  .imagenormal{
+    width: 20rem;
   }
 }
 </style>

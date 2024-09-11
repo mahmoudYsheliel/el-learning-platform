@@ -34,5 +34,5 @@ async def check_existance_in_DB(id: str, collection_name: str):
             .find_one({"_id": bson_id})
         )
         if result:
-            return True
+            return result
     return False

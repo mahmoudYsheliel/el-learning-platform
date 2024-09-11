@@ -1,12 +1,18 @@
-from models.user import User, Instructor, Child, Parent,Admin,Notification
+from models.user import User, Instructor, Child, Parent, Admin, Notification
 from models.runtime import ServiceResponse
 from database.mongo_driver import get_database, validate_bson_id
-from lib.crypto import verify_password,hash_password
+from lib.crypto import verify_password, hash_password
 from datetime import datetime
+
 
 async def create_user(user: User) -> ServiceResponse:
     user_type = user.user_type
-    if user_type != "Instructor" and user_type != "Child" and user_type != "Parent" and user_type != "Admin":
+    if (
+        user_type != "Instructor"
+        and user_type != "Child"
+        and user_type != "Parent"
+        and user_type != "Admin"
+    ):
         return ServiceResponse(
             success=False, status_code=400, msg="user type is not valid"
         )
@@ -17,7 +23,7 @@ async def create_user(user: User) -> ServiceResponse:
         return ServiceResponse(
             success=False, status_code=409, msg="email is already used once"
         )
-        
+
     user.hashed_pass = hash_password(user.hashed_pass)
     mdb_result = (
         await get_database().get_collection("user").insert_one(user.model_dump())
@@ -27,13 +33,11 @@ async def create_user(user: User) -> ServiceResponse:
     if user_type == "Admin":
         admin = Admin(user_id=user_id)
         mdb_result = (
-            await get_database()
-            .get_collection("admin")
-            .insert_one(admin.model_dump())
+            await get_database().get_collection("admin").insert_one(admin.model_dump())
         )
         user_id = str(mdb_result.inserted_id)
         return ServiceResponse(data={"user_id": user_id})
-    
+
     if user_type == "Instructor":
         instructor = Instructor(user_id=user_id)
         mdb_result = (
@@ -65,7 +69,7 @@ async def create_user(user: User) -> ServiceResponse:
 async def validate_user(username: str, password: str) -> ServiceResponse:
     # check user in database
     user = await get_database().get_collection("user").find_one({"email": username})
-   
+
     if not user:
         return False
 
@@ -99,8 +103,8 @@ async def personal_info(user_id: str):
             "birth_day": 1,
             "gender": 1,
             "balance": 1,
-            "image":1,
-            'notifications':1,
+            "image": 1,
+            "notifications": 1,
         },
     )
 
@@ -117,18 +121,18 @@ async def personal_info(user_id: str):
                 "_id": 0,
             },
         )
-        
+
     if info1["user_type"] == "Instructor":
         info2 = await db.get_collection("instructor").find_one(
             {"user_id": str(user_id)},  # user_id is stored as string
             {
                 "_id": 0,
-                "title":1,
-                "specializations":1,
-                "biography":1,
-                "education_background":1,
-                "experience":1,
-                "philisophy":1
+                "title": 1,
+                "specializations": 1,
+                "biography": 1,
+                "education_background": 1,
+                "experience": 1,
+                "philisophy": 1,
             },
         )
     elif info1["user_type"] == "Parent":
@@ -226,18 +230,42 @@ async def update_user_info(
     return ServiceResponse(msg="Edited Successfully")
 
 
-
-
 async def add_child(user: User, child: Child, userId: str) -> ServiceResponse:
 
     user.user_type = "Child"
     user.hashed_pass = hash_password(user.hashed_pass)
-    program = await get_database().get_collection('program').find_one({'_id':validate_bson_id(child.child_group)},{'_id':0,'min_age':1,'max_age':1})
+    program = (
+        await get_database()
+        .get_collection("program")
+        .find_one(
+            {"_id": validate_bson_id(child.child_group)},
+            {"_id": 0, "min_age": 1, "max_age": 1},
+        )
+    )
     if not program:
         return ServiceResponse(msg="could find child_group", success=False)
-    analysis_quiz= await get_database().get_collection('analysis_quiz').find_one({'course_title_follow':'start','min_age':{'$lte':program['min_age']},'max_age':{'$gte':program['max_age']}},{ "id": {"$toString": "$_id"},'title':1,"description":1})
+    analysis_quiz = (
+        await get_database()
+        .get_collection("analysis_quiz")
+        .find_one(
+            {
+                "course_title_follow": "start",
+                "min_age": {"$lte": program["min_age"]},
+                "max_age": {"$gte": program["max_age"]},
+            },
+            {"id": {"$toString": "$_id"}, "title": 1, "description": 1},
+        )
+    )
     if analysis_quiz:
-        user.notifications.append(Notification(title=analysis_quiz['title'],description=analysis_quiz['description'],type='analysis quiz',status='waiting',analysis_quiz_id=analysis_quiz['id']))
+        user.notifications.append(
+            Notification(
+                title=analysis_quiz["title"],
+                description=analysis_quiz["description"],
+                type="analysis quiz",
+                status="waiting",
+                analysis_quiz_id=analysis_quiz["id"],
+            )
+        )
     found_user = (
         await get_database().get_collection("user").find_one({"email": user.email})
     )
@@ -264,3 +292,63 @@ async def add_child(user: User, child: Child, userId: str) -> ServiceResponse:
         )
         return ServiceResponse(data={"child_user_id": add_user_id})
     return ServiceResponse(msg="could not add child", success=False)
+
+
+async def get_all_users(userId:str) -> ServiceResponse:
+    user_type=await get_database().get_collection('admin').find_one({'user_id':str(userId)})
+    if not user_type:
+        return ServiceResponse(success=False,msg="user not allowed")
+    users = (
+        await get_database()
+        .get_collection("user")
+        .find(
+            {},
+            {
+                "_id": 0,
+                "id": {"$toString": "$_id"},
+                "email": 1,
+                "user_type": 1,
+                "phone_number": 1,
+                "first_name": 1,
+                "last_name": 1,
+                "gender": 1,
+                'created_at':1
+            },
+        )
+        .to_list(length=None)
+    )
+    parents = (
+        await get_database()
+        .get_collection("parent")
+        .find(
+            {},
+            {
+                "_id": 0,
+                "user_id": 1,
+                "location": 1,
+                "job": 1,
+                "children": 1
+            },
+        )
+        .to_list(length=None)
+    )
+    children = (
+        await get_database()
+        .get_collection("child")
+        .find(
+            {},
+            {
+                "_id": 0,
+                "user_id": 1,
+                "user_type": 1,
+                "grade": 1,
+                "child_group": 1,
+                "education_system": 1,
+            },
+        )
+        .to_list(length=None)
+    )
+
+    if children and parents and users:
+        return ServiceResponse(data={'children':children,'parents':parents,'users':users})
+    return ServiceResponse(success=False , msg="couldn't get users")

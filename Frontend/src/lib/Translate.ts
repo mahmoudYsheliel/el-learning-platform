@@ -186,6 +186,10 @@ export const translationModule = {
     en: "Type",
     ar: "النوع",
   },
+  content: {
+    en: "Content",
+    ar: "المحتوي",
+  },
   status: {
     en: "Status",
     ar: "الحالة",

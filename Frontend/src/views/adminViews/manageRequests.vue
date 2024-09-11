@@ -396,9 +396,7 @@ function orderRequests(type: string) {
   display: grid;
   grid-template-columns: repeat(7, 10rem);
 }
-h3 {
-  margin: 0;
-}
+
 .row > * {
   display: flex;
   align-items: center;
@@ -425,6 +423,7 @@ h2 {
 h3 {
   color: var(--text);
   cursor: pointer;
+  margin: 0;
 }
 span {
   color: var(--accent2);

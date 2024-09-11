@@ -81,7 +81,7 @@ main {
   margin-inline: auto;
   justify-content: space-between;
   align-items: start;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .image {
   position: relative;
@@ -94,7 +94,7 @@ main {
   font-weight: bold;
 }
 img {
-  height: 2rem;
+  height: 1.75rem;
   margin: 0;
 }
 p {

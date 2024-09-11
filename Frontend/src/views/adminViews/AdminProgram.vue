@@ -9,6 +9,7 @@ import Textarea from "primevue/textarea";
 import InputText from "primevue/inputtext";
 import InputNumber from "primevue/inputnumber";
 import { useRouter } from "vue-router";
+import Footer from '@/components/general/Footer.vue'
 
 const router = useRouter()
 
@@ -19,8 +20,10 @@ const router = useRouter()
   <div class="container">
     <AdminSidebar selected="Manage Courses" />
     <div class="wrapper">
+      
     </div>  
   </div>
+  <Footer />
 </template>
 
 <style scoped>

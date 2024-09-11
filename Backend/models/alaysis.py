@@ -139,6 +139,7 @@ class Analysis(BaseModel):
     enneagram_results:list[FeatureResult]
     learning_styles_results:list[FeatureResult]
     possible_careers:list[PossibleCarees]
+    answers:Optional[Answers]=None
     
     
     

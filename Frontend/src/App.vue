@@ -86,7 +86,10 @@ body,
   --wrongAnswer:#FF2D2D;
   --correctAnswer:#5CFA75;
 
-  font-size: calc(10px + 100vw * 0.005);
+  font-size: calc(16px + 100vw * 0.002);
+  font-size: calc(14px + 100vw * 0.005);
 }
-
+button{
+  font-size: 0.8rem;
+}
 </style>

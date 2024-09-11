@@ -57,7 +57,7 @@ const search = ref("");
 
       <div class="header-description">
         <div class="header">
-          <h1>{{ selectLang(selectedProgram?.title) }}</h1>
+          <h1>{{ selectLang(selectedProgram?.title) }} (Age: {{ selectedProgram?.min_age }} - {{ selectedProgram?.max_age }})</h1>
         </div>
         <div class="description">
           <p>{{ selectLang(selectedProgram?.description) }}</p>
@@ -109,9 +109,14 @@ const search = ref("");
 }
 .programs-wrapper > h4 {
   cursor: pointer;
+  padding:0.25rem  0.5rem ;
+  border-radius: 1rem;
 }
+
 .selected {
   color: var(--accent1);
+  border: solid 2px var(--accent1);
+  transition-duration: 0.5s;
 }
 .header-description {
   margin-inline: 5rem;
