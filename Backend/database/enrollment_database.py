@@ -104,6 +104,45 @@ async def get_enrollment(course_id: str, user_id: str) -> ServiceResponse:
     return ServiceResponse(data={"enrollment": enrollment})
 
 
+async def calc_completion(enrollment_id:str):
+    enrollment = await get_database().get_collection('enrollment').find_one({'_id':validate_bson_id(enrollment_id)},{'_id':0,'course_id':1,'progress':1,'is_completed':1})
+    course = await get_database().get_collection('course').find_one({'_id':validate_bson_id(enrollment['course_id'])},{'_id':0,'chapters':1})
+    total_material_count=0
+    completed_count=0
+    for chapter in course['chapters']:
+        for mat in chapter['materials']:
+            total_material_count= total_material_count+1
+            if mat['type']=='Lesson' and enrollment.get('progress', {}).get('lessons_completed'):
+                for progress in enrollment['progress']['lessons_completed']:
+                    if progress['lesson_id']==mat['Id']:
+                        completed_count=completed_count+1
+                        break
+            if mat['type']=='Activity' and  enrollment.get('progress', {}).get('activities_completed'):
+                for progress in enrollment['progress']['activities_completed']:
+                    if progress['activity_id']==mat['Id']:
+                        completed_count=completed_count+1
+                        break
+            if mat['type']=='Simulation' and enrollment.get('progress', {}).get('simulations_completed'):
+                for progress in enrollment['progress']['simulations_completed']:
+                    if progress['simulation_id']==mat['Id']:
+                        completed_count=completed_count+1
+                        break
+            if mat['type']=='Project' and enrollment.get('progress', {}).get('projects_completed'):
+                for progress in enrollment['progress']['projects_completed']:
+                    if progress['project_id']==mat['Id']:
+                        completed_count=completed_count+1
+                        break
+            if mat['type']=='Quiz' and enrollment.get('progress', {}).get('quizes_completed'):
+                for progress in enrollment['progress']['quizes_completed']:
+                    if progress['quiz_id']==mat['Id']:
+                        completed_count=completed_count+1
+                        break
+             
+    if total_material_count==completed_count:
+        result = await get_database().get_collection('enrollment').update_one({'_id':validate_bson_id(enrollment_id)},{'$set':{'is_completed':True}})
+    else:
+        result = await get_database().get_collection('enrollment').update_one({'_id':validate_bson_id(enrollment_id)},{'$set':{'is_completed':False}})
+
 async def get_all_enrollments(user_id: str):
     bson_student_id = validate_bson_id(user_id)
     if bson_student_id:
@@ -122,10 +161,39 @@ async def get_all_enrollments(user_id: str):
             )
             .to_list(length=None)
         )
+        for enrollment in enrollments:
+            await calc_completion(enrollment['id'])
 
         if enrollments:
             return ServiceResponse(data={"enrollments": enrollments})
     return ServiceResponse(success=False, status_code=404, msg="enrollments Not Found")
+
+
+
+async def get_admin_enrollments():
+    enrollments = (
+        await get_database()
+        .get_collection("enrollment")
+        .find(
+            {},
+            {
+                "_id": 0,
+                "id": {"$toString": "$_id"},
+                "course_id": 1,
+                "progress": 1,
+                "student_id":1,
+                "is_completed": 1,
+                "created_at":1
+              
+            },
+        )
+        .to_list(length=None)
+    )
+
+    if enrollments:
+        return ServiceResponse(data={"enrollments": enrollments})
+    return ServiceResponse(success=False, status_code=404, msg="enrollments Not Found")
+
 
 
 async def add_progress(
@@ -179,6 +247,7 @@ async def add_progress(
                         )
                     )
                     if result.modified_count > 0:
+                        await calc_completion(enrolment_id)
                         return ServiceResponse(msg="Lesson Progress Accepted")
         return ServiceResponse(success=False, msg="Lesson  Not Found")
 
@@ -207,6 +276,7 @@ async def add_progress(
                         )
                     )
                     if result.modified_count > 0:
+                        await calc_completion(enrolment_id)
                         return ServiceResponse(msg="Project Progress Accepted")
         return ServiceResponse(success=False, msg="Project  Not Found")
 
@@ -237,6 +307,7 @@ async def add_progress(
                         )
                     )
                     if result.modified_count > 0:
+                        await calc_completion(enrolment_id)
                         return ServiceResponse(msg="Simulation Progress Accepted")
         return ServiceResponse(success=False, msg="Simulation  Not Found")
 
@@ -265,6 +336,7 @@ async def add_progress(
                         )
                     )
                     if result.modified_count > 0:
+                        await calc_completion(enrolment_id)
                         return ServiceResponse(msg="Activity Progress Accepted")
         return ServiceResponse(success=False, msg="Activity  Not Found")
 
@@ -337,6 +409,7 @@ async def add_progress(
                         )
                     )
                     if result.modified_count > 0:
+                        await calc_completion(enrolment_id)
                         return ServiceResponse(msg="Quiz Progress Accepted")
         return ServiceResponse(success=False, msg="Quiz  Not Found")
     return ServiceResponse(success=False, msg="Type Not Set Priperly")

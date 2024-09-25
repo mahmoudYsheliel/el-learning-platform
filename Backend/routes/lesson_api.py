@@ -23,8 +23,8 @@ async def delete_lesson(lesson_id:str = Body(embed=True),userId:str = Depends(au
 
 
 @router.post('/update_lesson')
-async def update_lesson(lesson_id:str=Body(embed=True),new_lesson:dict = Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
-    res = await lesson_database.update_lesson(lesson_id,new_lesson)
+async def update_lesson(lesson_id:str=Body(embed=True),update:dict = Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
+    res = await lesson_database.update_lesson(lesson_id,update)
     return res
 
 

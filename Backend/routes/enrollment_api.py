@@ -42,6 +42,11 @@ async def get_student_enrollments(userId:str = Depends(auth_user))-> ServiceResp
     res = await enrollment_database.get_all_enrollments(userId)
     return res
 
+@router.post('/get_admin_enrollments') 
+async def get_student_enrollments(userId:str = Depends(auth_user))-> ServiceResponse:
+    res = await enrollment_database.get_admin_enrollments()
+    return res
+
 @router.post('/get_child_enrollments') 
 async def get_child_enrollments(child_id:str =Body(embed=True), userId:str = Depends(auth_user))-> ServiceResponse:
     res = await enrollment_database.get_all_enrollments(child_id)

@@ -25,7 +25,7 @@ const enrollmentRequestsRequester = new HttpRequester("get_request_enrollment");
 async function getEnrollmentRequests() {
   enrollmentRequests.value = [];
   enrollmentRequestsRequester.callApi().then((enrollmentRes) => {
-    if (enrollmentRes.success == true) {
+    if (enrollmentRes?.success == true) {
       for (let req of enrollmentRes?.data?.requests) {
         const childInfoRequester = new HttpRequester(
           "personal_another_user_info"
@@ -33,13 +33,13 @@ async function getEnrollmentRequests() {
         childInfoRequester
           .callApi({ another_userId: req?.student_id })
           .then((studentRes) => {
-            if (studentRes.success == true) {
+            if (studentRes?.success == true) {
               if (req?.package_type == "course") {
                 const childInfoRequester = new HttpRequester("get_course");
                 childInfoRequester
                   .callApi({ course_id: req?.course_id })
                   .then((courseRes) => {
-                    if (courseRes.success == true) {
+                    if (courseRes?.success == true) {
                       enrollmentRequests.value?.push({
                         id: req?.id,
                         //  childName: studentRes?.data?.info?.first_name,
@@ -62,7 +62,7 @@ async function getEnrollmentRequests() {
                 childInfoRequester
                   .callApi({ plan_id: req?.course_id })
                   .then((planRes) => {
-                    if (planRes.success == true) {
+                    if (planRes?.success == true) {
                       enrollmentRequests.value?.push({
                         id: req?.id,
                         //  childName: studentRes?.data?.info?.first_name,
@@ -120,7 +120,7 @@ function addComment() {
   };
   const addCommentRequester = new HttpRequester("add_comment");
   addCommentRequester.callApi(data).then((res) => {
-    if (res.success) {
+    if (res?.success) {
       getEnrollmentRequests();
     }
   });

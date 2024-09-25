@@ -36,7 +36,7 @@ const enrollmentRequestsRequester = new HttpRequester(
 async function getEnrollmentRequests() {
   enrollmentRequests.value = [];
   enrollmentRequestsRequester.callApi().then((enrollmentRes) => {
-    if (enrollmentRes.success == true) {
+    if (enrollmentRes?.success == true) {
       for (let req of enrollmentRes?.data?.requests) {
         const parentInfoRequester = new HttpRequester(
           "personal_another_user_info"
@@ -50,13 +50,13 @@ async function getEnrollmentRequests() {
             childInfoRequester
               .callApi({ another_userId: req?.student_id })
               .then((studentRes) => {
-                if (studentRes.success == true) {
+                if (studentRes?.success == true) {
                   if (req.package_type == "course") {
                     const childInfoRequester = new HttpRequester("get_course");
                     childInfoRequester
                       .callApi({ course_id: req?.course_id })
                       .then((courseRes) => {
-                        if (courseRes.success == true) {
+                        if (courseRes?.success == true) {
                           enrollmentRequests.value?.push({
                             id: req?.id,
                             parentEmail: parentRes?.data?.info?.email,
@@ -82,7 +82,7 @@ async function getEnrollmentRequests() {
                     childInfoRequester
                       .callApi({ plan_id: req?.course_id })
                       .then((planRes) => {
-                        if (planRes.success == true) {
+                        if (planRes?.success == true) {
                           enrollmentRequests.value?.push({
                             id: req?.id,
                             parentEmail: parentRes?.data?.info?.email,
@@ -144,7 +144,7 @@ function addComment() {
   };
   const addCommentRequester = new HttpRequester("add_comment");
   addCommentRequester.callApi(data).then((res) => {
-    if (res.success) {
+    if (res?.success) {
       getEnrollmentRequests();
     }
   });
@@ -163,11 +163,11 @@ function accept(req: RnrollmentRequest) {
         },
       })
       .then((res) => {
-        if (res.success) {
+        if (res?.success) {
           editRequestStatusRequester
             .callApi({ new_status: "Success", enrollment_request_id: req.id })
             .then((res) => {
-              if (res.success) {
+              if (res?.success) {
                 getEnrollmentRequests();
               }
             });
@@ -176,29 +176,28 @@ function accept(req: RnrollmentRequest) {
   }
   if (req.type == "plan") {
     const editRequestStatusRequester = new HttpRequester("edit_request_status");
-    for (let course of req.courses){
+    for (let course of req.courses) {
       const createEnrollmentRequester = new HttpRequester("create_enrollment");
-    createEnrollmentRequester
-      .callApi({
-        new_enrollment: {
-          student_id: req.student_id,
-          course_id: course?.Id,
-          created_at: new Date().toISOString(),
-        },
-      })
-      .then((res) => {
-        if (res.success) {
-          editRequestStatusRequester
-            .callApi({ new_status: "Success", enrollment_request_id: req.id })
-            .then((res) => {
-              if (res.success) {
-                getEnrollmentRequests();
-              }
-            });
-        }
-      });
+      createEnrollmentRequester
+        .callApi({
+          new_enrollment: {
+            student_id: req.student_id,
+            course_id: course?.Id,
+            created_at: new Date().toISOString(),
+          },
+        })
+        .then((res) => {
+          if (res?.success) {
+            editRequestStatusRequester
+              .callApi({ new_status: "Success", enrollment_request_id: req.id })
+              .then((res) => {
+                if (res?.success) {
+                  getEnrollmentRequests();
+                }
+              });
+          }
+        });
     }
-   
   }
 }
 function reject(id: string) {
@@ -206,7 +205,7 @@ function reject(id: string) {
   editRequestStatusRequester
     .callApi({ new_status: "Rejected", enrollment_request_id: id })
     .then((res) => {
-      if (res.success) {
+      if (res?.success) {
         getEnrollmentRequests();
       }
     });

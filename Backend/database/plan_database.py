@@ -123,3 +123,22 @@ async def delete_plan(losson_id: str) -> ServiceResponse:
         return ServiceResponse(success=False, status_code=404, msg='plan not Found')
     return ServiceResponse(mag='OK')
 
+
+
+
+async def update_plan(plan_id: str, update: dict) -> ServiceResponse:
+    bson_id=validate_bson_id(plan_id)
+    if not bson_id:
+        return ServiceResponse(status_code=400, msg='Bad plan ID')
+
+    plan_model_fields = set(Plan.model_fields.keys())
+    update_patch_fields = set(update.keys())
+    if not update_patch_fields.issubset(plan_model_fields):
+        return ServiceResponse(status_code=400 ,msg='Invalid plan Update Keys')
+
+    result = await get_database().get_collection('plan').update_one(
+        {'_id': bson_id}, {'$set': update}
+    )
+    if not result.modified_count:
+        return ServiceResponse(success=False, status_code=404, msg='plan not Found')
+    return ServiceResponse(msg='OK')

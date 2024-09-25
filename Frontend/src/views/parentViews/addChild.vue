@@ -29,10 +29,10 @@ const groups = ref<any[]>([]);
 
 const groupsRequester = new HttpRequester("get_all_program");
 groupsRequester.callApi().then((res) => {
-  if (res.success) {
+  if (res?.success) {
     for (let program of res?.data?.program) {
       groups.value.push({
-        label: selectLang(program?.title) ,
+        label: selectLang(program?.title),
         code: program?.id,
       });
     }
@@ -75,10 +75,10 @@ function addChildFunc() {
       },
     };
     addChildRequester.callApi(date).then((res) => {
-      if (res.success) {
+      if (res?.success) {
         showDialog.value = true;
-      } else if(res.msg=='email is already used once') {
-        message.value = selectLang(translationModule.emailTaken)
+      } else if (res.msg == "email is already used once") {
+        message.value = selectLang(translationModule.emailTaken);
       }
     });
   }
@@ -167,11 +167,18 @@ function addChildFunc() {
 
         <div class="element">
           <p>{{ selectLang(translationModule.educationSystem) }}</p>
-          <Dropdown v-model="educationSystem" :options="educationSystems"   option-label="label" />
+          <Dropdown
+            v-model="educationSystem"
+            :options="educationSystems"
+            option-label="label"
+          />
         </div>
       </div>
 
-      <Button :label=selectLang(translationModule.addChild) @click="addChildFunc" />
+      <Button
+        :label="selectLang(translationModule.addChild)"
+        @click="addChildFunc"
+      />
     </div>
   </div>
   <Footer />

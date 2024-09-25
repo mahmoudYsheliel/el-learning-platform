@@ -15,13 +15,13 @@ class Categories(BaseModel):
     
 class Plan(BaseModel):
     id:Optional[str] = None
-    name:str
+    name:Optional[str]=''
     title:TwoLang
     description:TwoLang
     courses:Optional[list[CourseInPlan]]=[] #list of IDs
     image:str
-    price:int
+    price:Optional[int]=0
     categories: Optional[list[Categories]] = []
     objectives:Optional[list[TwoLang]] = []
-    min_age:int
-    max_age:int
+    min_age:Optional[int]=0
+    max_age:Optional[int]=0

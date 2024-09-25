@@ -23,8 +23,8 @@ async def delete_category(category_id:str = Body(embed=True),userId:str = Depend
 
 
 @router.post('/update_category')
-async def update_category(category_id:str=Body(embed=True),new_category:dict = Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
-    res = await category_database.update_category(category_id,new_category)
+async def update_category(category_id:str=Body(embed=True),update:dict = Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
+    res = await category_database.update_category(category_id,update)
     return res
 
 

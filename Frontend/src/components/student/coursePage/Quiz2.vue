@@ -6,9 +6,7 @@ import Dialog from "primevue/dialog";
 import ProgressBar from "primevue/progressbar";
 import "primeicons/primeicons.css";
 
-import { selectLang,translationModule } from "@/lib/Translate";
-
-
+import { selectLang, translationModule } from "@/lib/Translate";
 
 defineEmits(["next"]);
 
@@ -33,17 +31,16 @@ const quiz = ref();
 const getQuiz = () => {
   const quizRequester = new HttpRequester("get_quiz");
   quizRequester.callApi({ quiz_id: route.params.materialId }).then((res) => {
-    if (res.success) {
-      quiz.value = res.data.quiz;
-      if(quiz.value?.questions){
+    if (res?.success) {
+      quiz.value = res?.data?.quiz;
+      if (quiz.value?.questions) {
         for (let q of quiz.value?.questions) {
-        const showAnswer = ref(false);
-        const selected = ref(-1);
-        q.showAnswer = showAnswer;
-        q.selected = selected;
+          const showAnswer = ref(false);
+          const selected = ref(-1);
+          q.showAnswer = showAnswer;
+          q.selected = selected;
+        }
       }
-      }
-      
     }
     progress.value = Math.floor(100 / quiz.value?.questions?.length);
     resetQuiz();
@@ -100,8 +97,10 @@ function finishQuiz() {
     material_type: "Quiz",
   };
 
-  addAnswersRequester
-    .callApi({ progres: progres, enrolment_id: route.params.enrollmentId })
+  addAnswersRequester.callApi({
+    progres: progres,
+    enrolment_id: route.params.enrollmentId,
+  });
 }
 
 function resetQuiz() {
@@ -114,12 +113,12 @@ function resetQuiz() {
   showResults.value = false;
   progress.value = 0;
   progress.value = Math.floor(100 / quiz.value?.questions?.length);
-  if(quiz.value?.questions){
+  if (quiz.value?.questions) {
     for (let q of quiz.value?.questions) {
-    q.selected = -1;
+      q.selected = -1;
+    }
   }
-  }
-  
+
   startQuiz();
 }
 
@@ -143,22 +142,21 @@ function updateProgress() {
 <template>
   <main>
     <div class="container">
-      <h2>{{selectLang(quiz?.title) }}</h2>
+      <h2>{{ selectLang(quiz?.title) }}</h2>
       <p>{{ selectLang(quiz?.description) }}</p>
 
       <div class="wrapper">
         <div v-if="showCounterElseQuestions">
           <h1 style="text-align: center; color: var(--accent1)">
-            {{selectLang(translationModule.quizWillStart)}}
+            {{ selectLang(translationModule.quizWillStart) }}
           </h1>
           <h1 class="count-down">{{ countDown }}</h1>
         </div>
         <div v-else class="question-wrapper">
           <div class="quiz-duration">
-            
-            <span style="width: fit-content;"
+            <span style="width: fit-content"
               >{{ selectLang(translationModule.yourTime) }}
-              <strong style="direction: ltr;">
+              <strong style="direction: ltr">
                 {{ Math.floor(studentTime / 60) }}:
                 <strong v-if="studentTime % 60 < 10">0</strong
                 >{{ studentTime % 60 }}</strong
@@ -172,9 +170,13 @@ function updateProgress() {
                 :value="progress"
               ></ProgressBar>
 
-              <h3 class="question-order">{{ selectLang(translationModule.question) }} {{ i + 1 }}</h3>
+              <h3 class="question-order">
+                {{ selectLang(translationModule.question) }} {{ i + 1 }}
+              </h3>
 
-              <h4 class="question-text">{{ selectLang(question?.question) }}</h4>
+              <h4 class="question-text">
+                {{ selectLang(question?.question) }}
+              </h4>
               <div class="choices-wrapper">
                 <p
                   v-for="choice in question?.choices"
@@ -196,7 +198,7 @@ function updateProgress() {
           </div>
           <div class="controls">
             <Button
-              :label=selectLang(translationModule.prevQuestion)
+              :label="selectLang(translationModule.prevQuestion)"
               :disabled="currentQuention == 0"
               @click="
                 () => {
@@ -205,9 +207,12 @@ function updateProgress() {
                 }
               "
             />
-            <Button :label=selectLang(translationModule.finishQuiz) @click="finishQuiz" />
             <Button
-              :label=selectLang(translationModule.nextQuestion)
+              :label="selectLang(translationModule.finishQuiz)"
+              @click="finishQuiz"
+            />
+            <Button
+              :label="selectLang(translationModule.nextQuestion)"
               :disabled="currentQuention + 1 == quiz?.questions?.length"
               @click="
                 () => {
@@ -240,16 +245,30 @@ function updateProgress() {
         >
           <div v-if="!showAnswer" class="score">
             <p>{{ selectLang(translationModule.yourScore) }}</p>
-            <p>{{ Math.floor(score/quiz?.questions?.length*100) }}%</p>
+            <p>{{ Math.floor((score / quiz?.questions?.length) * 100) }}%</p>
 
-      <img class="interaction" v-if="(score/quiz?.questions?.length)>0.9" src="https://i.pinimg.com/originals/56/da/ac/56daac56f90ba6cf039125586181f6ea.gif" alt="">
-      <img class="interaction" v-if="(score/quiz?.questions?.length)<0.5" src="https://img.freepik.com/free-vector/hand-drawn-facepalm-illustration_23-2150212662.jpg?t=st=1720110311~exp=1720113911~hmac=f9f12f7c863341a0acb15d0ec44f785e42038ebf827f157f7863f0ea96805826&w=826" alt="">
+            <img
+              class="interaction"
+              v-if="score / quiz?.questions?.length > 0.9"
+              src="https://i.pinimg.com/originals/56/da/ac/56daac56f90ba6cf039125586181f6ea.gif"
+              alt=""
+            />
+            <img
+              class="interaction"
+              v-if="score / quiz?.questions?.length < 0.5"
+              src="https://img.freepik.com/free-vector/hand-drawn-facepalm-illustration_23-2150212662.jpg?t=st=1720110311~exp=1720113911~hmac=f9f12f7c863341a0acb15d0ec44f785e42038ebf827f157f7863f0ea96805826&w=826"
+              alt=""
+            />
           </div>
           <div v-else class="answers">
             <div v-for="(question, i) in quiz?.questions" :key="question">
               <div class="question" style="min-height: 2rem">
-                <h4 class="question-order">{{ selectLang(translationModule.question) }} {{ i + 1 }}</h4>
-                <h4 class="question-text">{{ selectLang(question?.question) }}</h4>
+                <h4 class="question-order">
+                  {{ selectLang(translationModule.question) }} {{ i + 1 }}
+                </h4>
+                <h4 class="question-text">
+                  {{ selectLang(question?.question) }}
+                </h4>
                 <div class="choices-wrapper">
                   <p
                     v-for="choice in question?.choices"
@@ -284,9 +303,18 @@ function updateProgress() {
           </div>
 
           <div class="controls">
-            <Button :label=selectLang(translationModule.showAnswer) @click="showAnswer = true" />
-            <Button :label=selectLang(translationModule.tryAgain) @click="resetQuiz" />
-            <Button :label=selectLang(translationModule.nextLesson) @click="$emit('next', true)" />
+            <Button
+              :label="selectLang(translationModule.showAnswer)"
+              @click="showAnswer = true"
+            />
+            <Button
+              :label="selectLang(translationModule.tryAgain)"
+              @click="resetQuiz"
+            />
+            <Button
+              :label="selectLang(translationModule.nextLesson)"
+              @click="$emit('next', true)"
+            />
           </div>
         </div>
       </template>
@@ -339,7 +367,7 @@ h2 {
   font-size: 1.25rem;
   font-weight: 600;
 }
-.interaction{
+.interaction {
   width: 50%;
   border-radius: 50%;
 }

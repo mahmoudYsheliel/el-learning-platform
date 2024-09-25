@@ -41,11 +41,9 @@ function signup() {
     };
 
     signupRequester.callApi(data).then((res) => {
-      if (
-        res.msg == "email is already used once" 
-      ) {
+      if (res.msg == "email is already used once") {
         usernameEmailTaken.value = true;
-      } else if (res.success == true) {
+      } else if (res?.success == true) {
         router.push("/login");
       }
     });
@@ -65,26 +63,27 @@ const callback = (response: any) => {
     };
 
     signupRequester.callApi(data).then((res) => {
-      if (
-        res.msg == "email is already used once" 
-      ) {
+      if (res.msg == "email is already used once") {
         usernameEmailTaken.value = true;
-      } else if (res.success == true) {
+      } else if (res?.success == true) {
         const loginRequester = new HttpRequester("token");
         const personalInfo = usePersonalInfo();
-        loginRequester.login( (userData as any).email , 'mahmoud2000').then((res) => {
-         
-          if (res.access_token) {
-            const personalInfoRequester = new HttpRequester("personal_info");
-            personalInfoRequester.callApi().then((res) => {
-            
-              if (res.success) {
-                personalInfo.addInfo({ userType: res.data?.info?.user_type,notifications:[] });
-                router.push("/");
-              }
-            });
-          }
-        });
+        loginRequester
+          .login((userData as any).email, "mahmoud2000")
+          .then((res) => {
+            if (res.access_token) {
+              const personalInfoRequester = new HttpRequester("personal_info");
+              personalInfoRequester.callApi().then((res) => {
+                if (res?.success) {
+                  personalInfo.addInfo({
+                    userType: res?.data?.info?.user_type,
+                    notifications: [],
+                  });
+                  router.push("/");
+                }
+              });
+            }
+          });
       }
     });
   }
@@ -107,40 +106,48 @@ const callback = (response: any) => {
         <div class="google-facebook-wrapper">
           <GoogleLogin :callback="callback" />
         </div>
-        <h4 v-if="missingInfo">{{ selectLang(translationModule.dataMissing) }}</h4>
-        <h4 v-if="differentPassword">{{ selectLang(translationModule.diffPass) }}</h4>
-        <h4 v-if="usernameEmailTaken">{{ selectLang(translationModule.emailTaken) }}</h4>
+        <h4 v-if="missingInfo">
+          {{ selectLang(translationModule.dataMissing) }}
+        </h4>
+        <h4 v-if="differentPassword">
+          {{ selectLang(translationModule.diffPass) }}
+        </h4>
+        <h4 v-if="usernameEmailTaken">
+          {{ selectLang(translationModule.emailTaken) }}
+        </h4>
         <div class="wrapper">
           <InputText
             type="email"
             class="input"
             v-model="email"
-            :placeholder=selectLang(translationModule.email)
+            :placeholder="selectLang(translationModule.email)"
           />
           <Password
             class="input"
             v-model="pass"
             :feedback="false"
             toggleMask
-            :placeholder=selectLang(translationModule.pass)
+            :placeholder="selectLang(translationModule.pass)"
           />
           <Password
             id="input"
             v-model="confirmedPass"
             :feedback="false"
             toggleMask
-            :placeholder=selectLang(translationModule.confirmPass)
+            :placeholder="selectLang(translationModule.confirmPass)"
           />
         </div>
         <div class="button">
-          <Button @click="signup" :label=selectLang(translationModule.signup) />
+          <Button
+            @click="signup"
+            :label="selectLang(translationModule.signup)"
+          />
         </div>
         <p style="margin-left: 5rem">
-          {{ selectLang(translationModule.haveAccount) }}<strong
-            @click="router.push('/login')"
-            style="cursor: pointer"
-            > {{ selectLang(translationModule.login) }} </strong
-          >
+          {{ selectLang(translationModule.haveAccount)
+          }}<strong @click="router.push('/login')" style="cursor: pointer">
+            {{ selectLang(translationModule.login) }}
+          </strong>
         </p>
       </div>
     </div>

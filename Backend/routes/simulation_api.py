@@ -23,8 +23,8 @@ async def delete_simulation(simulation_id:str = Body(embed=True),userId:str = De
 
 
 @router.post('/update_simulation')
-async def update_simulation(simulation_id:str=Body(embed=True),new_simulation:dict = Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
-    res = await simulation_database.update_simulation(simulation_id,new_simulation)
+async def update_simulation(simulation_id:str=Body(embed=True),update:dict = Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
+    res = await simulation_database.update_simulation(simulation_id,update)
     return res
 
 

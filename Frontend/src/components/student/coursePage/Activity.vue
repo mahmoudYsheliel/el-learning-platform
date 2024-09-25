@@ -23,8 +23,8 @@ const getactivity = () => {
   activityRequester
     .callApi({ activity_id: route.params.materialId })
     .then((res) => {
-      if (res.success) {
-        activity.value = res.data.activity;
+      if (res?.success) {
+        activity.value = res?.data?.activity;
       }
     });
 };
@@ -79,7 +79,7 @@ function newWindow(source: string) {
           <h3>{{ selectLang(translationModule.sources) }}</h3>
           <div class="item" v-for="(source, i) in activity?.sources">
             <p
-            style="color: var(--secondary); cursor: pointer;"
+              style="color: var(--secondary); cursor: pointer"
               @click="
                 () => {
                   newWindow(source);
@@ -103,7 +103,9 @@ function newWindow(source: string) {
             <h3>{{ selectLang(translationModuleRef?.[field]) }}</h3>
             <div class="item" v-for="item in activity?.[field]?.items">
               <p>
-                <span :class="{terms:(field=='terms_concepts')}"> - {{ selectLang(item.text) }}</span>
+                <span :class="{ terms: field == 'terms_concepts' }">
+                  - {{ selectLang(item.text) }}</span
+                >
                 <span v-if="item.description"
                   >: {{ selectLang(item.description) }}</span
                 >
@@ -174,16 +176,16 @@ h3 {
   padding: 0;
   margin-block: 3rem 1rem;
 }
-p{
+p {
   color: var(--text);
   padding: 0;
   margin: 0;
   padding-left: 1rem;
 }
-button{
+button {
   margin-top: 3rem;
 }
-.terms{
-  color: var(--header)
+.terms {
+  color: var(--header);
 }
 </style>

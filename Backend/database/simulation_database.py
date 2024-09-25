@@ -43,10 +43,25 @@ async def update_simulation(simulation_id: str, update: dict) -> ServiceResponse
 
 async def get_simulation(simulation_id:str,userId:str)-> ServiceResponse:
     user_type = await get_database().get_collection('user').find_one({'_id':userId})
+    bson_id=validate_bson_id(simulation_id)
+    if not bson_id:
+        return ServiceResponse(status_code=400, msg='Bad simulation ID')
+    if user_type['user_type'] == 'Admin':
+        simulation = await get_database().get_collection('simulation').find_one({'_id':bson_id}, {
+            '_id': 0,
+            'id': {'$toString': '$_id'},
+            'title':1,
+            'description':1,
+            'image':1,
+            'source':1,
+            
+        })
+        if not simulation:
+            return ServiceResponse(success=False,status_code=404, msg='simulation Not Found')
+        return ServiceResponse(data={'simulation': simulation})
+    
     if user_type['user_type'] == 'Child':
-        bson_id=validate_bson_id(simulation_id)
-        if not bson_id:
-            return ServiceResponse(status_code=400, msg='Bad simulation ID')
+        
         course_id = await get_database().get_collection('course').find_one({'chapters.materials.Id':simulation_id},{'_id':1})
         if not course_id:
             return ServiceResponse(status_code=400, msg='This simulation not Found in any Course')

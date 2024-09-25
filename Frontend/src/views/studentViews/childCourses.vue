@@ -10,15 +10,15 @@ import { ref } from "vue";
 const enrollmentsRequester = new HttpRequester("get_enrollments");
 const enrollments = ref();
 enrollmentsRequester.callApi().then((res) => {
-  if (res.data.enrollments) {
-    enrollments.value = res.data.enrollments;
+  if (res?.data?.enrollments) {
+    enrollments.value = res?.data?.enrollments;
   }
 });
 const coursesRequester = new HttpRequester("get_courses");
 const courses = ref<any[]>([]);
 coursesRequester.callApi().then((res) => {
-  if (res.data.courses) {
-    courses.value = res.data.courses;
+  if (res?.data?.courses) {
+    courses.value = res?.data?.courses;
   }
 });
 </script>

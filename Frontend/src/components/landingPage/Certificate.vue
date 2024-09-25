@@ -11,7 +11,7 @@ const items = ref<any[]>([]);
 const programs = ref<any[]>([]);
 const programRequester = new HttpRequester("get_all_program");
 programRequester.callApi().then((res) => {
-  programs.value = res.data.program;
+  programs.value = res?.data?.program;
   if (programs.value) {
     for (let program of programs.value) {
       items.value.push({

@@ -12,7 +12,7 @@ const course = ref();
 const courseRequester = new HttpRequester("get_course");
 courseRequester
   .callApi({ course_id: prop.programId })
-  .then((res) => (course.value = res.data.course));
+  .then((res) => (course.value = res?.data?.course));
   
 </script>
 

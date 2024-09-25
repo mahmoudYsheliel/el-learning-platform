@@ -56,7 +56,7 @@ app.include_router(activity_api.router)
 
 
     
-# Mount the static files directory
+# # Mount the static files directory
 app.mount("/", StaticFiles(directory="dist", html=True), name="dist")
 
 

@@ -4,29 +4,27 @@ import { HttpRequester } from "@/lib/APICaller";
 const prop = defineProps(["selectedChildId"]);
 import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
-import { selectLang,translationModule } from "@/lib/Translate";
-
-
+import { selectLang, translationModule } from "@/lib/Translate";
 
 const progress = ref<any[]>([]);
 const enrollments = ref();
 const object = computed(() => {
-  enrollments.value=[]
-  progress.value=[]
+  enrollments.value = [];
+  progress.value = [];
   let enrollmentobj = [];
   const childEnrollmentsRequester = new HttpRequester("get_child_enrollments");
   if (prop.selectedChildId) {
     childEnrollmentsRequester
       .callApi({ child_id: prop.selectedChildId })
       .then((res) => {
-        if (res.data.enrollments) {
-          enrollmentobj = res.data.enrollments;
+        if (res?.data?.enrollments) {
+          enrollmentobj = res?.data?.enrollments;
           enrollments.value = enrollmentobj;
           for (let enrollment of enrollmentobj) {
             let courseId = enrollment?.course_id;
             const courseRequester = new HttpRequester("get_course");
             courseRequester.callApi({ course_id: courseId }).then((res) => {
-              if (res.success) {
+              if (res?.success) {
                 let courseProgress = {
                   courseTitle: res?.data?.course?.title,
                   chapters: <any[]>[],
@@ -45,55 +43,52 @@ const object = computed(() => {
                       type: mat?.type,
                     };
 
-                      if (mat.type == "Lesson") {
-                        if(enrollment?.progress?.lessons_completed){
-                      for (let matProgress of enrollment?.progress
-                        ?.lessons_completed) {
-                        if (matProgress?.lesson_id == mat.Id) {
-                          materialObj.progress.push(matProgress);
-                        }
-                      }}
-                    }
-
-
-                    else if (mat.type == "Simulation") {
-                        if(enrollment?.progress?.simulations_completed){
-                      for (let matProgress of enrollment?.progress
-                        ?.simulations_completed) {
-                        if (matProgress?.simulation_id == mat.Id) {
-                          materialObj.progress.push(matProgress);
-                        }
-                      }}}
-                      else if (mat.type == "Project") {
-                        if(enrollment?.progress?.projects_completed){
-                      for (let matProgress of enrollment?.progress
-                        ?.projects_completed) {
-                        if (matProgress?.project_id == mat.Id) {
-                          materialObj.progress.push(matProgress);
-                        }
-                      }}}
-                      else if (mat.type == "Activity") {
-                        if(enrollment?.progress?.activities_completed){
-                      for (let matProgress of enrollment?.progress
-                        ?.activities_completed) {
-                        if (matProgress?.activity_id == mat.Id) {
-                          materialObj.progress.push(matProgress);
-                        }
-                      }}}
-
-
-
-                    else if (mat.type == "Quiz") {
-                      if(enrollment?.progress?.quizes_completed){
-                      for (let matProgress of enrollment?.progress
-                        ?.quizes_completed) {
-                        if (matProgress?.quiz_id == mat.Id) {
-                          materialObj.progress.push(matProgress);
+                    if (mat.type == "Lesson") {
+                      if (enrollment?.progress?.lessons_completed) {
+                        for (let matProgress of enrollment?.progress
+                          ?.lessons_completed) {
+                          if (matProgress?.lesson_id == mat.Id) {
+                            materialObj.progress.push(matProgress);
+                          }
                         }
                       }
+                    } else if (mat.type == "Simulation") {
+                      if (enrollment?.progress?.simulations_completed) {
+                        for (let matProgress of enrollment?.progress
+                          ?.simulations_completed) {
+                          if (matProgress?.simulation_id == mat.Id) {
+                            materialObj.progress.push(matProgress);
+                          }
+                        }
+                      }
+                    } else if (mat.type == "Project") {
+                      if (enrollment?.progress?.projects_completed) {
+                        for (let matProgress of enrollment?.progress
+                          ?.projects_completed) {
+                          if (matProgress?.project_id == mat.Id) {
+                            materialObj.progress.push(matProgress);
+                          }
+                        }
+                      }
+                    } else if (mat.type == "Activity") {
+                      if (enrollment?.progress?.activities_completed) {
+                        for (let matProgress of enrollment?.progress
+                          ?.activities_completed) {
+                          if (matProgress?.activity_id == mat.Id) {
+                            materialObj.progress.push(matProgress);
+                          }
+                        }
+                      }
+                    } else if (mat.type == "Quiz") {
+                      if (enrollment?.progress?.quizes_completed) {
+                        for (let matProgress of enrollment?.progress
+                          ?.quizes_completed) {
+                          if (matProgress?.quiz_id == mat.Id) {
+                            materialObj.progress.push(matProgress);
+                          }
+                        }
                       }
                     }
-
 
                     chapterOnj.material.push(materialObj);
                   }
@@ -217,8 +212,6 @@ function extractTime(dateTimeString: string) {
                         {{ extractDate(mat?.progress[0]?.completed_at) }}
                       </div>
                     </div>
-
-
 
                     <div class="lesson" v-if="mat?.type == 'Simulation'">
                       <h4 style="color: var(--text)">

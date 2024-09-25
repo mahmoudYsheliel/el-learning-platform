@@ -9,11 +9,10 @@ import PersonalizedLearning from "../../components/landingPage/PersonalizedLearn
 import Achievement from "../../components/landingPage/Achievement.vue";
 import Footer from "../../components/general/Footer.vue";
 import { ref,watch } from "vue";
-import { useElementVisibility } from "@vueuse/core";
 import { useToken } from "@/stores/token";
 import { HttpRequester } from "@/lib/APICaller";
 import AskMissingPersonalInfo from "@/components/dialogs/AskMissingPersonalInfo.vue";
-
+import { useElementVisibility } from '@vueuse/core'
 
 
 const home = ref(null)

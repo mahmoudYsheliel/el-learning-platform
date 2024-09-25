@@ -38,23 +38,24 @@ async def delete_course(course_id: str) -> ServiceResponse:
         return ServiceResponse(success=False, msg="bad course id")
     if result["chapters"]:
         for chapter in result["chapters"]:
-            for mat in chapter["material"]:
-                bson_id = validate_bson_id(mat["Id"])
-                if not bson_id:
-                    return ServiceResponse(
-                        success=False, msg="bad material id" + mat["type"]
-                    )
-                for material in materials:
-                    if mat["type"] == material["type"]:
-                        result = (
-                            await get_database()
-                            .get_collection(material["DB_name"])
-                            .delete_one({"_id": bson_id})
+            if chapter["materials"]:
+                for mat in chapter["materials"]:
+                    bson_id = validate_bson_id(mat["Id"])
+                    if not bson_id:
+                        return ServiceResponse(
+                            success=False, msg="bad material id" + mat["type"]
                         )
-                        if not result:
-                            return ServiceResponse(
-                                success=False, msg="bad id for " + material["type"]
+                    for material in materials:
+                        if mat["type"] == material["type"]:
+                            result = (
+                                await get_database()
+                                .get_collection(material["DB_name"])
+                                .delete_one({"_id": bson_id})
                             )
+                            if not result:
+                                return ServiceResponse(
+                                    success=False, msg="bad id for " + material["type"]
+                                )
 
     result = await get_database().get_collection("course").delete_one({"_id": validate_bson_id(course_id)})
     if not result.deleted_count:

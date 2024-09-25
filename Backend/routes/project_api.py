@@ -23,8 +23,8 @@ async def delete_project(project_id:str = Body(embed=True),userId:str = Depends(
 
 
 @router.post('/update_project')
-async def update_project(project_id:str=Body(embed=True),new_project:dict = Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
-    res = await project_database.update_project(project_id,new_project)
+async def update_project(project_id:str=Body(embed=True),update:dict = Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
+    res = await project_database.update_project(project_id,update)
     return res
 
 

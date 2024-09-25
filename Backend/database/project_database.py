@@ -42,11 +42,25 @@ async def update_project(project_id: str, update: dict) -> ServiceResponse:
 
 
 async def get_project(project_id:str,userId:str)-> ServiceResponse:
+    bson_id=validate_bson_id(project_id)
+    if not bson_id:
+        return ServiceResponse(status_code=400, msg='Bad project ID')
     user_type = await get_database().get_collection('user').find_one({'_id':userId})
+    if user_type['user_type'] == 'Admin':
+      
+        project = await get_database().get_collection('project').find_one({'_id':bson_id}, {
+            '_id': 0,
+            'id': {'$toString': '$_id'},
+            'title':1,
+            'description':1,
+            'source':1,
+            
+        })
+        if not project:
+            return ServiceResponse(success=False,status_code=404, msg='project Not Found')
+        return ServiceResponse(data={'project': project})
     if user_type['user_type'] == 'Child':
-        bson_id=validate_bson_id(project_id)
-        if not bson_id:
-            return ServiceResponse(status_code=400, msg='Bad project ID')
+        
         course_id = await get_database().get_collection('course').find_one({'chapters.materials.Id':project_id},{'_id':1})
         if not course_id:
             return ServiceResponse(status_code=400, msg='This project not Found in any Course')

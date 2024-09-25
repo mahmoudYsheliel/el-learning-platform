@@ -3,6 +3,9 @@ import { usePersonalInfo } from "@/stores/token";
 import { useRouter } from "vue-router";
 import { computed } from "vue";
 import { selectLang } from "@/lib/Translate";
+import {  shallowRef } from "vue";
+import Textarea from "primevue/textarea";
+import InputText from "primevue/inputtext";
 
 export const pagesToRoute = [
   { name: translationModule.home, to: "/#Home" },
@@ -20,6 +23,12 @@ export const items = computed(() => {
         label: selectLang(translationModule.maangeRequests),
         command: () => {
           router.push("/manageRequests");
+        },
+      },
+      {
+        label: selectLang(translationModule.manageUsers),
+        command: () => {
+          router.push("/manageUsers");
         },
       },
       {
@@ -457,3 +466,271 @@ export const materialInfo = [
     icon:'pi pi-bolt',
   },
 ]
+
+
+export const variableObject = shallowRef({
+  titleEn: {
+    label: "English Title",
+    variable: "",
+    component: InputText,
+    forTypes: ["Plans", "Categories", "Programs", "Courses"],
+    inputType: "text",
+  },
+  titleAr: {
+    label: "Arabic Title",
+    variable: "",
+    component: InputText,
+    forTypes: ["Plans", "Categories", "Programs", "Courses"],
+    inputType: "text",
+  },
+  descriptionEn: {
+    label: "English Description",
+    variable: "",
+    component: Textarea,
+    forTypes: ["Plans", "Categories", "Programs", "Courses"],
+    inputType: "text",
+  },
+  descriptionAr: {
+    label: "Arabic Description",
+    variable: "",
+    component: Textarea,
+    forTypes: ["Plans", "Categories", "Programs", "Courses"],
+    inputType: "text",
+  },
+  imageURL: {
+    label: "Image Source",
+    variable: "",
+    component: InputText,
+    forTypes: ["Plans", "Categories", "Programs", "Courses"],
+    inputType: "text",
+  },
+  minAge: {
+    label: "Min Age",
+    variable: "",
+    component: InputText,
+    forTypes: ["Plans", "Programs", "Courses"],
+    inputType: "number",
+  },
+  maxAge: {
+    label: "Max Age",
+    variable: "",
+    component: InputText,
+    forTypes: ["Plans", "Programs", "Courses"],
+    inputType: "number",
+  },
+  price: {
+    label: "Price",
+    variable: "",
+    component: InputText,
+    forTypes: ["Plans", "Courses"],
+    inputType: "number",
+  },
+});
+
+export const categoryObject = shallowRef({
+  titleEn: {
+    label: "English Title",
+    variable: "",
+    component: InputText,
+    inputType: "text",
+  },
+  titleAr: {
+    label: "Arabic Title",
+    variable: "",
+    component: InputText,
+    inputType: "text",
+  },
+  descriptionEn: {
+    label: "English description",
+    variable: "",
+    component: Textarea,
+    inputType: "text",
+  },
+  descriptionAr: {
+    label: "Arabic description",
+    variable: "",
+    component: Textarea,
+    inputType: "text",
+  },
+  image: {
+    label: "Image Source",
+    variable: "",
+    component: InputText,
+    inputType: "text",
+  }
+});
+
+
+export const chaptersLabels = shallowRef({
+  titleEn: {
+    label: "English Title",
+    mask1: "title",
+    mask2: "en",
+    inputType: "text",
+    component: InputText,
+    disabled: false,
+  },
+  titleAr: {
+    label: "Arabic Title",
+    mask1: "title",
+    mask2: "ar",
+    inputType: "text",
+    component: InputText,
+    disabled: false,
+  },
+  type: {
+    label: "Type",
+    mask1: "type",
+    mask2: null,
+    inputType: "text",
+    component: InputText,
+    disabled: true,
+  },
+});
+
+export const courseObject = shallowRef({
+  titleEn: {
+    label: "English Title",
+    variable: "",
+    component: InputText,
+    inputType: "text",
+  },
+  titleAr: {
+    label: "Arabic Title",
+    variable: "",
+    component: InputText,
+    inputType: "text",
+  },
+  descriptionEn: {
+    label: "English description",
+    variable: "",
+    component: Textarea,
+    inputType: "text",
+  },
+  descriptionAr: {
+    label: "Arabic description",
+    variable: "",
+    component: Textarea,
+    inputType: "text",
+  },
+  image: {
+    label: "Image Source",
+    variable: "",
+    component: InputText,
+    inputType: "text",
+  },
+  minAge: {
+    label: "Min Age",
+    variable: "",
+    component: InputText,
+    inputType: "number",
+  },
+  maxAge: {
+    label: "Max Age",
+    variable: "",
+    component: InputText,
+    inputType: "number",
+  },
+  price: {
+    label: "Price",
+    variable: "",
+    component: InputText,
+    inputType: "number",
+  },
+});
+
+export const planObject = shallowRef({
+  titleEn: {
+    label: "English Title",
+    variable: "",
+    component: InputText,
+    inputType: "text",
+  },
+  titleAr: {
+    label: "Arabic Title",
+    variable: "",
+    component: InputText,
+    inputType: "text",
+  },
+  descriptionEn: {
+    label: "English description",
+    variable: "",
+    component: Textarea,
+    inputType: "text",
+  },
+  descriptionAr: {
+    label: "Arabic description",
+    variable: "",
+    component: Textarea,
+    inputType: "text",
+  },
+  image: {
+    label: "Image Source",
+    variable: "",
+    component: InputText,
+    inputType: "text",
+  },
+  minAge: {
+    label: "Min Age",
+    variable: "",
+    component: InputText,
+    inputType: "number",
+  },
+  maxAge: {
+    label: "Max Age",
+    variable: "",
+    component: InputText,
+    inputType: "number",
+  },
+  price: {
+    label: "Price",
+    variable: "",
+    component: InputText,
+    inputType: "number",
+  },
+});
+
+export const programObject = shallowRef({
+  titleEn: {
+    label: "English Title",
+    variable: "",
+    component: InputText,
+    inputType: "text",
+  },
+  titleAr: {
+    label: "Arabic Title",
+    variable: "",
+    component: InputText,
+    inputType: "text",
+  },
+  descriptionEn: {
+    label: "English description",
+    variable: "",
+    component: Textarea,
+    inputType: "text",
+  },
+  descriptionAr: {
+    label: "Arabic description",
+    variable: "",
+    component: Textarea,
+    inputType: "text",
+  },
+  image: {
+    label: "Image Source",
+    variable: "",
+    component: InputText,
+    inputType: "text",
+  },
+  minAge: {
+    label: "Min Age",
+    variable: "",
+    component: InputText,
+    inputType: "number",
+  },
+  maxAge: {
+    label: "Max Age",
+    variable: "",
+    component: InputText,
+    inputType: "number",
+  },
+});

@@ -17,7 +17,7 @@ const items = ref<any[]>([]);
 
 programRequester.callApi().then((res) => {
   const colors =['var(--accent1)','var(--accent3)','var(--accent2)']
-  programs.value = res.data.program;
+  programs.value = res?.data.program;
   if (programs.value) {
     for (let i=0; i<programs.value.length;i++) {
       items.value.push({

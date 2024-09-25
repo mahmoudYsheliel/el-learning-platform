@@ -1,37 +1,49 @@
 <script lang="ts" setup>
-import { computed, ref,watch } from "vue";
+import { computed, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import { HttpRequester } from "@/lib/APICaller";
 import Button from "primevue/button";
-import 'primeicons/primeicons.css'
-import { selectLang,translationModule } from "@/lib/Translate";
+import "primeicons/primeicons.css";
+import { selectLang, translationModule } from "@/lib/Translate";
 
-const emit=defineEmits(['next'])
-defineProps(['completed'])
+const emit = defineEmits(["next"]);
+defineProps(["completed"]);
 
-const route =useRoute()
-const lesson =ref()
-const path=computed(()=>{return route.params.materialId})
-watch(path,()=>{getlesson()})
+const route = useRoute();
+const lesson = ref();
+const path = computed(() => {
+  return route.params.materialId;
+});
+watch(path, () => {
+  getlesson();
+});
 const getlesson = () => {
-  const lessonRequester = new HttpRequester('get_lesson')
-  lessonRequester.callApi({lesson_id:route.params.materialId}).then(res=>{if(res.success){
-    lesson.value = res.data.lesson
-  }})
+  const lessonRequester = new HttpRequester("get_lesson");
+  lessonRequester
+    .callApi({ lesson_id: route.params.materialId })
+    .then((res) => {
+      if (res?.success) {
+        lesson.value = res?.data?.lesson;
+      }
+    });
 };
 getlesson();
 
-function markCompleted(){
-  const addAnswersRequester = new HttpRequester('add_progress')
+function markCompleted() {
+  const addAnswersRequester = new HttpRequester("add_progress");
   let progres = {
-    lesson_progress:{
-      lesson_id:route.params.materialId,
+    lesson_progress: {
+      lesson_id: route.params.materialId,
       completed_at: new Date().toISOString(),
     },
-    material_type:'Lesson'
-  }
+    material_type: "Lesson",
+  };
 
-  addAnswersRequester.callApi({progres:progres,enrolment_id:route.params.enrollmentId}).then(res=>{emit('next',true)})
+  addAnswersRequester
+    .callApi({ progres: progres, enrolment_id: route.params.enrollmentId })
+    .then((res) => {
+      emit("next", true);
+    });
 }
 </script>
 
@@ -39,13 +51,24 @@ function markCompleted(){
   <main>
     <div class="container">
       <h2>
-        {{selectLang(lesson?.title) }}
+        {{ selectLang(lesson?.title) }}
       </h2>
-      <p>{{selectLang(lesson?.description) }}</p>
+      <p>{{ selectLang(lesson?.description) }}</p>
       <div class="wrapper">
-        <iframe  :src="lesson?.source" frameborder="0" sandbox="allow-scripts allow-same-origin" allowfullscreen ></iframe>
+        <iframe
+          :src="lesson?.source"
+          frameborder="0"
+          sandbox="allow-scripts allow-same-origin"
+          allowfullscreen
+        ></iframe>
       </div>
-      <Button :disabled="completed" icon="pi pi-check-circle"  :label=selectLang(translationModule.markCompleted) icon-pos="right" @click="markCompleted"/>
+      <Button
+        :disabled="completed"
+        icon="pi pi-check-circle"
+        :label="selectLang(translationModule.markCompleted)"
+        icon-pos="right"
+        @click="markCompleted"
+      />
     </div>
   </main>
 </template>
@@ -74,7 +97,7 @@ iframe {
   width: 75%;
   margin-inline: auto;
 }
-button{
+button {
   font-size: 0.75rem;
 }
 </style>

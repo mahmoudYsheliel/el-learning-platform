@@ -23,8 +23,8 @@ async def delete_activity(activity_id:str = Body(embed=True),userId:str = Depend
 
 
 @router.post('/update_activity')
-async def update_activity(activity_id:str=Body(embed=True),new_activity:dict = Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
-    res = await activity_database.update_activity(activity_id,new_activity)
+async def update_activity(activity_id:str=Body(embed=True),update:dict = Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
+    res = await activity_database.update_activity(activity_id,update)
     return res
 
 

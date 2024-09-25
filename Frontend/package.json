@@ -11,7 +11,7 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
-    "@vueuse/core": "^10.9.0",
+    "@vueuse/core": "^11.1.0",
     "axios": "^1.6.8",
     "chart.js": "^4.4.3",
     "pinia": "^2.1.7",
@@ -19,7 +19,8 @@
     "primevue": "^3.49.1",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5",
-    "vue3-google-login": "^2.0.26"
+    "vue3-google-login": "^2.0.26",
+    "vuedraggable": "^4.1.0"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.2",

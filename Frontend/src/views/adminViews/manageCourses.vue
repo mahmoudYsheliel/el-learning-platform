@@ -80,13 +80,12 @@ if (matTypeVar=='Programs'){
   router.push(`/editPlan/${typeContent?.id}`)}
   if (matTypeVar=='Categories'){
   router.push(`/editCategory/${typeContent?.id}`)}
-  if (matTypeVar=='courses'){
+  if (matTypeVar=='Courses'){
   router.push(`/editCourse/${typeContent?.id}`)}
 
 }
 function deleteMat(typeContent: any, matTypeVar: any) {
   selectedMat.value = typeContent;
-  console.log(matTypeVar);
   matType.value = matTypeVar;
   showDeletMatDialog.value = true;
 }

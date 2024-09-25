@@ -37,10 +37,10 @@ function login() {
       } else if (res.access_token) {
         const personalInfoRequester = new HttpRequester("personal_info");
         personalInfoRequester.callApi().then((res) => {
-          if (res.success) {
+          if (res?.success) {
             personalInfo.addInfo({
-              userType: res.data?.info?.user_type,
-              notifications: res.data?.info?.notifications,
+              userType: res?.data?.info?.user_type,
+              notifications: res?.data?.info?.notifications,
             });
             router.push("/");
           }
@@ -63,10 +63,10 @@ const callback = (response: any) => {
       } else if (res.access_token) {
         const personalInfoRequester = new HttpRequester("personal_info");
         personalInfoRequester.callApi().then((res) => {
-          if (res.success) {
+          if (res?.success) {
             personalInfo.addInfo({
-              userType: res.data?.info?.user_type,
-              notifications: res.data?.info?.notifications,
+              userType: res?.data?.info?.user_type,
+              notifications: res?.data?.info?.notifications,
             });
             router.push("/");
           }
@@ -83,7 +83,7 @@ const callback = (response: any) => {
     <Options />
     <div class="container">
       <div class="left borderRigth">
-        <img src="/images/login.png" alt=""/>
+        <img src="/images/login.png" alt="" />
       </div>
       <div class="right">
         <div class="welcome">

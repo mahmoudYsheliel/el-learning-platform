@@ -10,7 +10,7 @@ import { ref, computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { HttpRequester } from "@/lib/APICaller";
 import Button from "primevue/button";
-import { selectLang,translationModule } from "@/lib/Translate";
+import { selectLang, translationModule } from "@/lib/Translate";
 import { materialInfo } from "@/lib/Modules";
 
 const chapters = ref();
@@ -18,26 +18,28 @@ const title = ref();
 const route = useRoute();
 const router = useRouter();
 
-
-const enrollmentRequester = new HttpRequester('get_enrollment')
-enrollmentRequester.callApi({ course_id: route.params.courseId }).then((res)=>{if(res.success==false){router.push('/')}})
-
+const enrollmentRequester = new HttpRequester("get_enrollment");
+enrollmentRequester
+  .callApi({ course_id: route.params.courseId })
+  .then((res) => {
+    if (res?.success == false) {
+      router.push("/");
+    }
+  });
 
 const getCourse = async () => {
   const courseRequester = new HttpRequester("get_course");
   courseRequester.callApi({ course_id: route.params.courseId }).then((res) => {
-    if (res.success) {
-      chapters.value = res.data.course.chapters;
-      title.value = res.data.course.title;
+    if (res?.success) {
+      chapters.value = res?.data?.course?.chapters;
+      title.value = res?.data?.course?.title;
       for (let material of chapters.value) {
         for (let i = 0; i < material.materials.length; i++) {
-          for (let mat of materialInfo){
+          for (let mat of materialInfo) {
             if (material.materials[i].type === mat.name) {
-            material.materials[i].matIcon = mat.icon;
+              material.materials[i].matIcon = mat.icon;
+            }
           }
-          }
-         
-      
         }
       }
     }
@@ -50,7 +52,7 @@ const materialComponnent = computed(() => {
   const progres = ref();
   const courseRequester = new HttpRequester("get_enrollment");
   courseRequester.callApi({ course_id: route.params.courseId }).then((res) => {
-    if (res.success) {
+    if (res?.success) {
       progres.value = res?.data?.enrollment?.progress;
       for (let chapter of chapters.value) {
         for (let mat of chapter?.materials) {
@@ -66,22 +68,19 @@ const materialComponnent = computed(() => {
             })
           ) {
             mat.status = "Done";
-          }
-          else if (
+          } else if (
             progres.value?.activities_completed?.some((les: any) => {
               return les?.activity_id == mat?.Id;
             })
           ) {
             mat.status = "Done";
-          }
-          else if (
+          } else if (
             progres.value?.simulations_completed?.some((les: any) => {
               return les?.simulation_id == mat?.Id;
             })
           ) {
             mat.status = "Done";
-          }
-          else if (
+          } else if (
             progres.value?.projects_completed?.some((les: any) => {
               return les?.project_id == mat?.Id;
             })
@@ -130,7 +129,7 @@ const materialComponnent = computed(() => {
           }
         }
         let type;
-        let completed=false
+        let completed = false;
         if (material.type === "Lesson") {
           type = Lesson;
         }
@@ -143,8 +142,8 @@ const materialComponnent = computed(() => {
         if (material.type === "Activity") {
           type = Activity;
         }
-        if (material.status=='Done'){
-          completed=true
+        if (material.status == "Done") {
+          completed = true;
         }
 
         if (material.type === "Quiz") {
@@ -154,7 +153,7 @@ const materialComponnent = computed(() => {
           type: type,
           prevMaterialId: prevMaterialId,
           nextMaterialId: nextMaterialId,
-          isCompleted:completed
+          isCompleted: completed,
         };
       }
     }
@@ -185,15 +184,19 @@ function next() {
         <SideBar :chapters="chapters" :course-title="title" />
       </div>
       <div class="wrapper">
-        <component :is="materialComponnent?.type" @next="next" :completed="materialComponnent?.isCompleted"/>
+        <component
+          :is="materialComponnent?.type"
+          @next="next"
+          :completed="materialComponnent?.isCompleted"
+        />
         <div class="Button-Wrapper">
           <Button
-            :label=selectLang(translationModule.prev)
+            :label="selectLang(translationModule.prev)"
             :class="{ hide: !materialComponnent?.prevMaterialId }"
             @click="previous"
           />
           <Button
-            :label=selectLang(translationModule.next)
+            :label="selectLang(translationModule.next)"
             :class="{ hide: !materialComponnent?.nextMaterialId }"
             @click="next"
           />
@@ -214,7 +217,7 @@ function next() {
 .wrapper {
   overflow-y: scroll;
   height: calc(100vh - 5rem);
-  padding-bottom: 5rem
+  padding-bottom: 5rem;
 }
 .wrapper::-webkit-scrollbar {
   display: none;

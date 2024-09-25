@@ -14,7 +14,7 @@ class Item(BaseModel):
     image:Optional[str]=None
     
 class ItemsSet(BaseModel):
-    items:list[Item]
+    items:Optional[list[Item]]=None
     start_images:Optional[list[str]]=None
     end_images:Optional[list[str]]=None
     

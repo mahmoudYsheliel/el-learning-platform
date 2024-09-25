@@ -17,19 +17,18 @@ const children = ref();
 const users = ref();
 const usersRequester = new HttpRequester("get_all_users");
 usersRequester.callApi().then((res) => {
-  if (res.success) {
+  if (res?.success) {
     parents.value = res?.data?.parents;
     children.value = res?.data?.children;
     users.value = res?.data?.users;
   }
 });
-const programs = ref()
-new HttpRequester('get_all_program').callApi().then(res=>{
-    console.log(res)
-    if(res.success){
-        programs.value = res?.data?.program
-    }
-}) 
+const programs = ref();
+new HttpRequester("get_all_program").callApi().then((res) => {
+  if (res?.success) {
+    programs.value = res?.data?.program;
+  }
+});
 
 const selectedViewType = ref("parent"); // or child or user
 
@@ -80,7 +79,6 @@ const childWithParent = computed(() => {
         })?.user_id == user?.id
       );
     })?.email;
-    console.log(programs.value)
     let data = {
       email: user?.email,
       firstName: user?.first_name,
@@ -88,7 +86,9 @@ const childWithParent = computed(() => {
       phoneNumber: user?.phone_number,
       createdAt: user?.created_at,
       grade: children.value[i]?.grade,
-      program: programs.value?.find(((program:any)=>{return program?.id ==children.value[i]?.child_group}))?.title ?.en,
+      program: programs.value?.find((program: any) => {
+        return program?.id == children.value[i]?.child_group;
+      })?.title?.en,
       education_system: children.value[i]?.education_system,
       parentEmail: parentEmail,
     };
@@ -233,7 +233,7 @@ span {
   grid-template-columns: 2rem 20rem 7rem 7rem 7rem 10rem 10rem 10rem 20rem;
 }
 .childRow {
-  grid-template-columns: 2rem 20rem 7rem  7rem 10rem 10rem 10rem 10rem 10rem ;
+  grid-template-columns: 2rem 20rem 7rem 7rem 10rem 10rem 10rem 20rem 10rem;
 }
 p {
   margin: 0;

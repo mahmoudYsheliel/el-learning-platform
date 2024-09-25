@@ -22,7 +22,7 @@ const selectedPlan = ref();
 const courses = ref<any[]>([]);
 const planRequester = new HttpRequester("get_plan");
 planRequester.callApi({ plan_id: route.params.planId }).then((res) => {
-  if (res.success) {
+  if (res?.success) {
     selectedPlan.value = res?.data?.plan;
 
     for (let course of res?.data?.plan?.courses) {
@@ -64,7 +64,7 @@ function requestEnrollmentWithPromoCode(promoCode: string) {
         student_id: route.params.childId,
         course_id: selectedPlan.value?.id,
         promo_code: promoCode,
-        package_type:'plan'
+        package_type: "plan",
       },
     })
     .then((res) => {
@@ -90,7 +90,7 @@ function requestEnrollmentWithPromoCode(promoCode: string) {
   />
   <EnrolmentSuccedDialog :showDialog="showEnrollmentSuccess" :cost="cost" />
   <GoToChildrenCoursesDialog :showDialog="showSelectChild" />
- 
+
   <PromoCodeDialog
     :showDialog="showPromoCode"
     @promoCode="
@@ -101,7 +101,7 @@ function requestEnrollmentWithPromoCode(promoCode: string) {
   />
 
   <div class="container">
-    <PlanDescribtion :plan="selectedPlan" @enroll="enroll"/>
+    <PlanDescribtion :plan="selectedPlan" @enroll="enroll" />
     <div class="courses">
       <h2>{{ selectLang(translationModule.planCourses) }}</h2>
       <div class="coursesContainer">

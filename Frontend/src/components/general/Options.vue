@@ -16,7 +16,7 @@ const router = useRouter();
 const items = ref<any[]>([]);
 
 programRequester.callApi().then((res) => {
-  programs.value = res.data.program;
+  programs.value = res?.data.program;
   if (programs.value) {
     for (let program of programs.value) {
       items.value.push({

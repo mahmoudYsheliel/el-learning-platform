@@ -18,8 +18,8 @@ const object = computed(() => {
     childEnrollmentsRequester
       .callApi({ child_id: prop.selectedChildId })
       .then((res) => {
-        if (res.data.enrollments) {
-          childObject = res.data.enrollments;
+        if (res?.data?.enrollments) {
+          childObject = res?.data?.enrollments;
           enrollments.value = childObject;
           let completed = enrollments.value?.filter((obj: any) => {
             return obj?.is_completed;

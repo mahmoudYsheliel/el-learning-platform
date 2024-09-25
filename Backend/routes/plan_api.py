@@ -36,5 +36,10 @@ async def get_course_plan(course_id:str =Body(embed=True))-> ServiceResponse:
     res = await plan_database.get_course_plan(course_id)
     return res
 
+@router.post('/update_plan')
+async def update_plan(plan_id:str=Body(embed=True),update:dict = Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
+    res = await plan_database.update_plan(plan_id,update)
+    return res
+
 
 

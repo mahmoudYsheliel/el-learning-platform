@@ -14,8 +14,8 @@ const obj = computed(() => {
   const coursesRequester = new HttpRequester("get_courses");
 
   coursesRequester.callApi().then((res) => {
-    if (res.data.courses) {
-      courses.value = res.data.courses;
+    if (res?.data?.courses) {
+      courses.value = res?.data?.courses;
     }
   });
 
@@ -24,8 +24,8 @@ const obj = computed(() => {
     childEnrollmentsRequester
       .callApi({ child_id: props.childId })
       .then((res) => {
-        if (res.data.enrollments) {
-          enrollments.value = res.data.enrollments;
+        if (res?.data?.enrollments) {
+          enrollments.value = res?.data?.enrollments;
         }
       });
   }
@@ -36,7 +36,7 @@ const obj = computed(() => {
 const plans = ref();
 const plansRequester = new HttpRequester("get_all_plans");
 plansRequester.callApi().then((res) => {
-  if (res.success) {
+  if (res?.success) {
     plans.value = res?.data?.plans;
   }
 });

@@ -49,11 +49,41 @@ async def update_activity(activity_id: str, update: dict) -> ServiceResponse:
 
 
 async def get_activity(activity_id: str, userId: str) -> ServiceResponse:
+    bson_id = validate_bson_id(activity_id)
+    if not bson_id:
+        return ServiceResponse(status_code=400, msg="Bad activity ID")
     user_type = await get_database().get_collection("user").find_one({"_id": userId})
+    if user_type["user_type"] == "Admin":
+        activity = (
+            await get_database()
+            .get_collection("activity")
+            .find_one(
+                {"_id": bson_id},
+                {
+                    "_id": 0,
+                    "id": {"$toString": "$_id"},
+                    "title": 1,
+                    "description": 1,
+                    "start_images": 1,
+                    "end_images": 1,
+                    "sources": 1,
+                    "objectives": 1,
+                    "terms_concepts": 1,
+                    "materials": 1,
+                    "instructions": 1,
+                    "results": 1,
+                    "conclusions": 1,
+                },
+            )
+        )
+        if not activity:
+            return ServiceResponse(
+                success=False, status_code=404, msg="activity Not Found"
+            )
+        return ServiceResponse(data={"activity": activity})
+        
     if user_type["user_type"] == "Child":
-        bson_id = validate_bson_id(activity_id)
-        if not bson_id:
-            return ServiceResponse(status_code=400, msg="Bad activity ID")
+        
         course_id = (
             await get_database()
             .get_collection("course")

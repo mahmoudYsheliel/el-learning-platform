@@ -6,38 +6,36 @@ import InputText from "primevue/inputtext";
 import { HttpRequester } from "@/lib/APICaller";
 import { selectLang, translationModule } from "@/lib/Translate";
 import "primeicons/primeicons.css";
-import { ref,computed } from "vue";
-import { useRoute,useRouter } from "vue-router";
+import { ref, computed } from "vue";
+import { useRoute, useRouter } from "vue-router";
 import Options from "@/components/general/Options.vue";
-const route = useRoute()
-const router = useRouter()
+const route = useRoute();
+const router = useRouter();
 const programs = ref<any[]>([]);
-const selectedProgramId = computed(()=>{
-  return route.params.programId
+const selectedProgramId = computed(() => {
+  return route.params.programId;
 });
-
 
 const programRequester = new HttpRequester("get_all_programs_and_courses");
 programRequester.callApi().then((res) => {
-  if(res.success){
-    programs.value=res.data.programs
+  if (res?.success) {
+    programs.value = res?.data?.programs;
   }
- 
 });
-const selectedProgram =computed(()=>{
-  for(let program of programs.value){
-    if (program?.id==selectedProgramId.value){
-      return program
+const selectedProgram = computed(() => {
+  for (let program of programs.value) {
+    if (program?.id == selectedProgramId.value) {
+      return program;
     }
   }
-})
+});
 const search = ref("");
 </script>
 
 <template>
   <main>
     <Navbar />
-    <Options/>
+    <Options />
 
     <div class="container">
       <InputText
@@ -57,19 +55,20 @@ const search = ref("");
 
       <div class="header-description">
         <div class="header">
-          <h1>{{ selectLang(selectedProgram?.title) }} (Age: {{ selectedProgram?.min_age }} - {{ selectedProgram?.max_age }})</h1>
+          <h1>
+            {{ selectLang(selectedProgram?.title) }} (Age:
+            {{ selectedProgram?.min_age }} - {{ selectedProgram?.max_age }})
+          </h1>
         </div>
         <div class="description">
           <p>{{ selectLang(selectedProgram?.description) }}</p>
           <div>
-            <img :src="selectedProgram?.image" alt="" class="image"/>
+            <img :src="selectedProgram?.image" alt="" class="image" />
           </div>
-          
         </div>
       </div>
       <div class="content">
         <h1 style="margin-block: 6rem 4rem">
-          
           <img
             style="width: 1.5rem; margin-right: 0.5rem"
             src="/images/pen.svg"
@@ -109,7 +108,7 @@ const search = ref("");
 }
 .programs-wrapper > h4 {
   cursor: pointer;
-  padding:0.25rem  0.5rem ;
+  padding: 0.25rem 0.5rem;
   border-radius: 1rem;
 }
 
@@ -173,7 +172,7 @@ h1 {
     gap: 1rem;
     width: 90%;
   }
-  .header-description{
+  .header-description {
     margin-inline: 2rem;
   }
   .image {

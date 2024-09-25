@@ -20,14 +20,14 @@ const token = useToken();
 if (token.isAuthorized) {
   personalInfoRequester.callApi().then((res) => {
     if (res?.success) {
-      let notification=res.data?.info?.notifications?.find((not:any)=>{return not?.status=='waiting' && not?.type=='analysis quiz'})
+      let notification=res?.data?.info?.notifications?.find((not:any)=>{return not?.status=='waiting' && not?.type=='analysis quiz'})
       if (notification){
         analysisQuizNotificaiotn.value=true
         analysisQuizId.value=notification?.analysis_quiz_id
       }
       personalInfo.addInfo({
-        userType: res.data?.info?.user_type,
-        notifications: res.data?.info?.notifications,
+        userType: res?.data?.info?.user_type,
+        notifications: res?.data?.info?.notifications,
       });
     }
   });
@@ -166,7 +166,7 @@ const router = useRouter();
 main {
   background-color: var(--accent1);
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 3fr 2fr;
   grid-template-rows: 4rem;
   align-items: center;
   padding-inline: 2rem;

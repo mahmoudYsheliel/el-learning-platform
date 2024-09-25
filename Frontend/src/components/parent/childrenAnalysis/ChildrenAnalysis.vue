@@ -17,12 +17,12 @@ const allFeatures = ref();
 const allCareers = ref();
 
 new HttpRequester("get_all_features_info").callApi().then((res) => {
-  if (res.success) {
+  if (res?.success) {
     allFeatures.value = res?.data?.features_info;
   }
 });
 new HttpRequester("get_all_careers").callApi().then((res) => {
-  if (res.success) {
+  if (res?.success) {
     allCareers.value = res?.data?.careers?.careers;
   }
 });
@@ -30,7 +30,7 @@ const req = computed(() => {
   const childnAlysisRequester = new HttpRequester("get_analysis");
   if (prop.childId) {
     childnAlysisRequester.callApi({ student_id: prop.childId }).then((res) => {
-      if (res.success) {
+      if (res?.success) {
         analysis.value = res?.data?.analysis_quiz;
       } else {
         analysis.value = null;
@@ -208,17 +208,17 @@ const analysisDataObject = computed(() => {
             :personality="
               analysisDataObject.personality.sections.reduce((max, obj) => {
                 return obj.score > max.score ? obj : max;
-              },  analysisDataObject.personality.sections[0])
+              }, analysisDataObject.personality.sections[0])
             "
             :learning-style="
               analysisDataObject.learningStyle.sections.reduce((max, obj) => {
                 return obj.score > max.score ? obj : max;
-              },  analysisDataObject.learningStyle.sections[0])
+              }, analysisDataObject.learningStyle.sections[0])
             "
             :best-carer="
               analysisDataObject.careers.sections.reduce((max, obj) => {
                 return obj.percentage > max.percentage ? obj : max;
-              },  analysisDataObject.careers.sections[0])
+              }, analysisDataObject.careers.sections[0])
             "
           />
         </AccordionTab>

@@ -42,11 +42,28 @@ async def update_lesson(lesson_id: str, update: dict) -> ServiceResponse:
 
 
 async def get_lesson(lesson_id:str,userId:str)-> ServiceResponse:
+    bson_id=validate_bson_id(lesson_id)
+    if not bson_id:
+        return ServiceResponse(status_code=400, msg='Bad Lesson ID')
     user_type = await get_database().get_collection('user').find_one({'_id':userId})
+    
+    if user_type['user_type'] == 'Admin':
+        lesson = await get_database().get_collection('lesson').find_one({'_id':bson_id}, {
+            '_id': 0,
+            'id': {'$toString': '$_id'},
+            'title':1,
+            'description':1,
+            'order':1,
+            'source':1,
+            
+        })
+        if not lesson:
+            return ServiceResponse(success=False,status_code=404, msg='Lesson Not Found')
+        return ServiceResponse(data={'lesson': lesson})
+    
+    
     if user_type['user_type'] == 'Child':
-        bson_id=validate_bson_id(lesson_id)
-        if not bson_id:
-            return ServiceResponse(status_code=400, msg='Bad Lesson ID')
+        
         course_id = await get_database().get_collection('course').find_one({'chapters.materials.Id':lesson_id},{'_id':1})
         if not course_id:
             return ServiceResponse(status_code=400, msg='This Lesson not Found in any Course')
@@ -67,5 +84,8 @@ async def get_lesson(lesson_id:str,userId:str)-> ServiceResponse:
             return ServiceResponse(success=False,status_code=404, msg='Lesson Not Found')
         return ServiceResponse(data={'lesson': lesson})
     return ServiceResponse(success=False,status_code=404, msg='User Not Allowed')
+
+
+
 
 

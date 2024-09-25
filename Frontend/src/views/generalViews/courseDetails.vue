@@ -15,6 +15,7 @@ import PromoCodeDialog from "@/components/dialogs/PromoCodeDialog.vue";
 import CourseBelongsToPlanDialog from "@/components/dialogs/CourseBelongsToPlanDialog.vue";
 import CourseDescribtion from "@/components/student/courseDetails/CourseDescribtion.vue";
 import CourseMaterial from "@/components/student/courseDetails/CourseMaterial.vue";
+import PrequisiteDialog from "@/components/dialogs/PrequisiteDialog.vue";
 
 import { ref } from "vue";
 
@@ -66,6 +67,7 @@ const showBelongToPlan = ref(false);
 const showSelectChild = ref(false);
 const showPromoCode = ref(false);
 const planId = ref();
+const showPrequisiteDialog = ref(false);
 
 function enroll() {
   if (!token.getIsAuthorized) {
@@ -80,7 +82,7 @@ function enroll() {
       planCourseRequester
         .callApi({ course_id: route.params?.courseId })
         .then((res) => {
-          if (res.success == false) {
+          if (res?.success == false) {
             showPromoCode.value = true;
           } else if (res?.success == true) {
             showBelongToPlan.value = true;
@@ -117,16 +119,43 @@ const enrollmentRequester = new HttpRequester("get_enrollment");
 enrollmentRequester
   .callApi({ course_id: route.params.courseId })
   .then((res) => {
-    if (res.data.enrollment) {
+    if (res?.data?.enrollment) {
       isEnrolled.value = true;
-      enrollmentId.value = res.data.enrollment?.id;
+      enrollmentId.value = res?.data?.enrollment?.id;
     }
   });
 
+const prequisiteId = ref("");
+const prequisiteTitle = ref("");
+const planRequester = new HttpRequester("get_course_plan");
+
 function viewMaterial() {
-  router.push(
-    `/viewCoursePage/${route.params.courseId}/${enrollmentId.value}/${course.value?.chapters[0]?.materials[0]?.Id}`
-  );
+  planRequester.callApi({ course_id: route.params.courseId }).then((res) => {
+    let courses = res?.data?.plan?.courses;
+    prequisiteId.value = courses?.find((course: any) => {
+      return course?.Id == route.params.courseId;
+    })?.ristriction_on_course;
+
+    new HttpRequester("get_course")
+      .callApi({ course_id: prequisiteId.value ||"" })
+      .then((res) => {
+        prequisiteTitle.value = selectLang(res?.data?.course?.title) || "";
+      });
+
+    new HttpRequester("get_enrollment")
+      .callApi({ course_id: prequisiteId.value ||"" })
+      .then((res) => {
+        if (res?.data?.enrollment?.is_completed==false) {
+          showPrequisiteDialog.value = true;
+        
+         
+        } else {
+          router.push(
+            `/viewCoursePage/${route.params.courseId}/${enrollmentId.value}/${course.value?.chapters[0]?.materials[0]?.Id}`
+          ); 
+        }
+      });
+  });
 }
 </script>
 
@@ -140,6 +169,12 @@ function viewMaterial() {
           showAskParent = false;
         }
       "
+    />
+
+    <PrequisiteDialog
+      :course="prequisiteTitle"
+      :show-dialog="showPrequisiteDialog"
+      @remove-dialog="showPrequisiteDialog = false"
     />
     <EnrolmentSuccedDialog :showDialog="showEnrollmentSuccess" :cost="cost" />
     <GoToChildrenCoursesDialog :showDialog="showSelectChild" />

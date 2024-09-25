@@ -23,8 +23,8 @@ async def delete_course(course_id:str = Body(embed=True),userId:str = Depends(au
 
 
 @router.post('/update_course')
-async def update_course(course_id:str=Body(embed=True),new_course:dict = Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
-    res = await course_database.update_course(course_id,new_course)
+async def update_course(course_id:str=Body(embed=True),update:dict = Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
+    res = await course_database.update_course(course_id,update)
     return res
 
 

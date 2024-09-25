@@ -347,8 +347,8 @@ export const translationModule = {
     ar: "إدارة المدربين",
   },
   manageCourses: {
-    en: "Manage Courses",
-    ar: "إدارة الدورات",
+    en: "Manage Content",
+    ar: "إدارة المحتوي",
   },
   maangeRequests: {
     en: "Manage Requests",
@@ -829,5 +829,13 @@ export const translationModule = {
   conclusions:{
     en:"Conclusions",
     ar:"الاستنتاج"
-  }
+  },
+  manageUsers:{
+    en:'Manage Users',
+    ar:'ادارة المستخدمين'
+  },
+courseHasPrequisite:{
+  en:'This Course Requires a Prequisite: ',
+  ar:'تتطلب هذه الدورة دورة متطلبة:'
+},
 };

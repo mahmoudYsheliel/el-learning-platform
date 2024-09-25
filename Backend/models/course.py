@@ -7,7 +7,7 @@ class TwoLang(BaseModel):
     
 class Material(BaseModel):
     Id:str
-    order:int
+    order:Optional[int]=0
     title:TwoLang
     type:str #Lesson Quiz Activity Project Simulation
 
@@ -24,12 +24,12 @@ class Course(BaseModel):
     title: TwoLang
     description: TwoLang
     chapters: Optional[list[Chapter]] = []
-    price: float
+    price: Optional[int]=0
     image: str
     categories: Optional[list[Categories]] = []
     objectives:Optional[list[TwoLang]] = []
-    min_age:int
-    max_age:int
+    min_age:Optional[int]=0
+    max_age:Optional[int]=0
     duration: Optional[int]=7  # number of days
     number_of_enrollments: Optional[int]=0
     

@@ -15,7 +15,7 @@ function deletion() {
     new HttpRequester("delete_program")
       .callApi({ program_id: prop.mat?.id })
       .then((res) => {
-        if (res.success) {
+        if (res?.success) {
           emit("removeDialog", true);
         }
       });
@@ -23,7 +23,7 @@ function deletion() {
     new HttpRequester("delete_category")
       .callApi({ category_id: prop.mat?.id })
       .then((res) => {
-        if (res.success) {
+        if (res?.success) {
           emit("removeDialog", true);
         }
       });
@@ -31,7 +31,7 @@ function deletion() {
     new HttpRequester("delete_plan")
       .callApi({ plan_id: prop.mat?.id })
       .then((res) => {
-        if (res.success) {
+        if (res?.success) {
           emit("removeDialog", true);
         }
       });
@@ -39,7 +39,7 @@ function deletion() {
     new HttpRequester("delete_course")
       .callApi({ course_id: prop.mat?.id })
       .then((res) => {
-        if (res.success) {
+        if (res?.success) {
           emit("removeDialog", true);
         }
       });

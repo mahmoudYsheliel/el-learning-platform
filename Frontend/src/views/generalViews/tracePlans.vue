@@ -13,7 +13,7 @@ const route = useRoute();
 const selectedPlan = ref(null);
 const planRequester = new HttpRequester("get_plan");
 planRequester.callApi({ plan_id: route.params.selectedPlanId }).then((res) => {
-  if (res.success) {
+  if (res?.success) {
     selectedPlan.value = res?.data?.plan;
   }
 });
@@ -21,7 +21,7 @@ planRequester.callApi({ plan_id: route.params.selectedPlanId }).then((res) => {
 const allPlans = ref(null);
 const allPlansRequester = new HttpRequester("get_all_plans");
 allPlansRequester.callApi().then((res) => {
-  if (res.success) {
+  if (res?.success) {
     allPlans.value = res?.data?.plans;
   }
 });

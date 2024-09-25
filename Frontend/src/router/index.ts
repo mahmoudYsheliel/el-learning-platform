@@ -182,12 +182,6 @@ const router = createRouter({
       meta: { requredAuth: true, userType: "Admin" },
     },
     {
-      path: "/AdminProgram/:programId",
-      name: "AdminProgram",
-      component: () => import("@/views/adminViews/AdminProgram.vue"),
-      meta: { requredAuth: true, userType: "Admin" },
-    },
-    {
       path: "/manageUsers",
       name: "manageUsers",
       component: () => import("@/views/adminViews/manageUsers.vue"),
