@@ -60,6 +60,7 @@ personaRequester.callApi().then((res) => {
 </script>
 <template>
   <main>
+    
     <AskMissingPersonalInfo :show-dialog="showAskInfoDialog" @remove-dialog="showAskInfoDialog=false"/>
     <Navbar class="nav" :selected="selected" />
     <Options id="Home" />

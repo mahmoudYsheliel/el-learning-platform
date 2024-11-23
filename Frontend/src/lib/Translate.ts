@@ -838,4 +838,8 @@ courseHasPrequisite:{
   en:'This Course Requires a Prequisite: ',
   ar:'تتطلب هذه الدورة دورة متطلبة:'
 },
+chats:{
+  en:'Ask Instructor',
+  ar:"اسأل المعلم"
+},
 };

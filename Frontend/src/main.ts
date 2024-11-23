@@ -9,7 +9,7 @@ import router from './router'
 
 
 const app = createApp(App)
-const pinia = createPinia();
+
 
 app.use(vue3GoogleLogin, {
     clientId: '97713053876-84ql7loco3nemjdtn6ha01o3v8nlmldj.apps.googleusercontent.com'
@@ -19,5 +19,4 @@ app.use(vue3GoogleLogin, {
 app.use(createPinia())
 app.use(router)
 app.use(PrimeVue);
-app.use(pinia)
 app.mount('#app')

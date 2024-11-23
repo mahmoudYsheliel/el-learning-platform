@@ -35,7 +35,6 @@ async def create_user(user: User) -> ServiceResponse:
         mdb_result = (
             await get_database().get_collection("admin").insert_one(admin.model_dump())
         )
-        user_id = str(mdb_result.inserted_id)
         return ServiceResponse(data={"user_id": user_id})
 
     if user_type == "Instructor":
@@ -45,14 +44,12 @@ async def create_user(user: User) -> ServiceResponse:
             .get_collection("instructor")
             .insert_one(instructor.model_dump())
         )
-        user_id = str(mdb_result.inserted_id)
         return ServiceResponse(data={"user_id": user_id})
     if user_type == "Child":
         child = Child(user_id=user_id)
         mdb_result = (
             await get_database().get_collection("child").insert_one(child.model_dump())
         )
-        user_id = str(mdb_result.inserted_id)
         return ServiceResponse(data={"user_id": user_id})
     if user_type == "Parent":
         parent = Parent(user_id=user_id)
@@ -61,7 +58,6 @@ async def create_user(user: User) -> ServiceResponse:
             .get_collection("parent")
             .insert_one(parent.model_dump())
         )
-        user_id = str(mdb_result.inserted_id)
         return ServiceResponse(data={"user_id": user_id})
     return ServiceResponse(success=False, status_code=400, msg="failed to add user")
 
@@ -93,6 +89,7 @@ async def personal_info(user_id: str):
         {"_id": bson_id},
         {
             "_id": 0,
+            'id': {'$toString': '$_id'},
             "email": 1,
             "username": 1,
             "user_type": 1,
@@ -133,6 +130,7 @@ async def personal_info(user_id: str):
                 "education_background": 1,
                 "experience": 1,
                 "philisophy": 1,
+                "courses":1
             },
         )
     elif info1["user_type"] == "Parent":
@@ -352,3 +350,59 @@ async def get_all_users(userId:str) -> ServiceResponse:
     if children and parents and users:
         return ServiceResponse(data={'children':children,'parents':parents,'users':users})
     return ServiceResponse(success=False , msg="couldn't get users")
+
+
+
+
+
+
+async def get_instructors(userId:str) -> ServiceResponse:
+    user_type=await get_database().get_collection('admin').find_one({'user_id':str(userId)})
+    if not user_type:
+        return ServiceResponse(success=False,msg="user not allowed")
+    
+    users = (
+        await get_database()
+        .get_collection("user")
+        .find(
+            {},
+            {
+                "_id": 0,
+                "id": {"$toString": "$_id"},
+                "email": 1,
+                "user_type": 1,
+                "phone_number": 1,
+                "first_name": 1,
+                "last_name": 1,
+                "gender": 1,
+                'created_at':1
+            },
+        )
+        .to_list(length=None)
+    )
+    
+    instructors = (
+        await get_database()
+        .get_collection("instructor")
+        .find(
+            {},
+            {
+                "_id": 0,
+                "user_id": 1,
+                "title": 1,
+                "specializations": 1,
+                "education_background": 1,
+                "biography": 1,
+                "experience": 1,
+                "philisophy": 1,
+                "courses": 1
+            },
+        )
+        .to_list(length=None)
+    )
+
+    if instructors and users:
+        return ServiceResponse(data={'instructors':instructors,'users':users})
+    return ServiceResponse(success=False , msg="couldn't get users")
+
+

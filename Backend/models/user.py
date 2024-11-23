@@ -44,6 +44,7 @@ class Instructor (BaseModel):
     education_background:Optional[list[str]]=[]
     experience:Optional[list[str]]=[]
     philisophy:Optional[str]=''
+    courses:Optional[list[str]]=[]
     
 class Parent(BaseModel):
     id:Optional[str] = None

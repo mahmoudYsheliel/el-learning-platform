@@ -11,12 +11,17 @@ import { useRoute, useRouter } from "vue-router";
 import { HttpRequester } from "@/lib/APICaller";
 import Button from "primevue/button";
 import { selectLang, translationModule } from "@/lib/Translate";
-import { materialInfo } from "@/lib/Modules";
+import { courseObject, materialInfo } from "@/lib/Modules";
+import { usePersonalInfo } from "@/stores/token";
+
+import ChatBot from "@/components/general/ChatBot.vue";
 
 const chapters = ref();
 const title = ref();
+const image = ref()
 const route = useRoute();
 const router = useRouter();
+const personalInfo = usePersonalInfo();
 
 const enrollmentRequester = new HttpRequester("get_enrollment");
 enrollmentRequester
@@ -33,6 +38,7 @@ const getCourse = async () => {
     if (res?.success) {
       chapters.value = res?.data?.course?.chapters;
       title.value = res?.data?.course?.title;
+      image.value = res?.data?.course?.image;
       for (let material of chapters.value) {
         for (let i = 0; i < material.materials.length; i++) {
           for (let mat of materialInfo) {
@@ -174,10 +180,50 @@ function next() {
     );
   }
 }
+
+function createChat() {
+  let data = {
+    new_chat: {
+      course_title: title.value?.en,
+      course_id:route.params.courseId ,
+      student_name:
+        personalInfo.getInfo?.firstName + " " + personalInfo.getInfo?.lastName,
+      avatar: image.value,
+      participants: [
+        {
+          id: personalInfo.getInfo?.id,
+          username: personalInfo.getInfo?.email,
+        },
+      ],
+    },
+  };
+  console.log(data)
+  new HttpRequester('create_chat').callApi(data).then(res=>{
+    if(res?.success){
+      console.log(`childChats/${res?.data?.chat_id}`)
+      router.push(`/childChats/${res?.data?.chat_id}`)
+    }
+  })
+}
 </script>
 
 <template>
   <main>
+    <ChatBot />
+    <Button
+      :label="selectLang(translationModule.chats)"
+      icon="pi pi-user"
+      icon-pos="right"
+      style="
+        font-size: 0.6rem;
+        position: absolute;
+        left: 1rem;
+        bottom: 1rem;
+        z-index: 2;
+        background-color: var(--accent2);
+      "
+      @click="createChat"
+    />
     <Navbar />
     <div class="container">
       <div class="sidebar">

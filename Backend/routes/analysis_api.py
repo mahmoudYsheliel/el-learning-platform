@@ -3,7 +3,6 @@ from models.alaysis import (
     AnalysisQuiz,
     Answers,
     FeatureInfo,
-    Careers
 )
 import database.analysis_database as analysis_database
 from lib.crypto import auth_user
@@ -13,10 +12,10 @@ from models.runtime import ServiceResponse
 
 router = APIRouter()
 
-@router.post('/create_careers_list')
-async def create_careers_list(careers: Careers=Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
-    res = await analysis_database.create_careers_list(careers)
-    return res
+# @router.post('/create_careers_list')
+# async def create_careers_list(careers: Careers=Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
+#     res = await analysis_database.create_careers_list(careers)
+#     return res
 
 @router.post('/create_feature_info')
 async def create_feature_info(feature_info: FeatureInfo=Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
@@ -36,7 +35,10 @@ async def get_analysis_quiz(analysis_quiz_id:str=Body(embed=True),userId:str = D
 
 
 
-
+@router.post('/get_imag')
+async def get_imag()->ServiceResponse:
+    res = await analysis_database.download_image()
+    return res
 
 
 

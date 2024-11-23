@@ -28,6 +28,10 @@ if (token.isAuthorized) {
       personalInfo.addInfo({
         userType: res?.data?.info?.user_type,
         notifications: res?.data?.info?.notifications,
+        id:res?.data?.info?.id,
+        firstName:res?.data?.info?.first_name,
+        lastName:res?.data?.info?.last_name,
+        email:res?.data?.info?.email,
       });
     }
   });

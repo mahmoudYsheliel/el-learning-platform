@@ -2,39 +2,95 @@ from models.runtime import ServiceResponse
 from database.mongo_driver import get_database, validate_bson_id
 import numpy
 from models.alaysis import (
-    TwoLang,
-    Choice,
-    Question,
     FeatureInfo,
-    IQSection,
-    IQ,
-    Trait,
-    Big5Traits,
-    PersonalityFeature,
-    Enneagram,
-    LearningStyleFeatue,
-    LearningStyles,
     AnalysisQuiz,
-    Answer,
     Answers,
-    FeatureCriteria,
-    Career,
-    Careers,
-    FeatureResult,
     Analysis,
-    PossibleCarees,
+    FeatureInfo
 )
 
 
-async def create_careers_list(careers: Careers) -> ServiceResponse:
-    mdb_result = (
-        await get_database().get_collection("careers").insert_one(careers.model_dump())
-    )
-    careers_id = str(mdb_result.inserted_id)
-    if careers_id:
-        return ServiceResponse(data={"careers_id": careers_id})
-    return ServiceResponse(success=False, msg="couln't add careers", status_code=409)
+# async def create_careers_list(careers: Careers) -> ServiceResponse:
+#     mdb_result = (
+#         await get_database().get_collection("careers").insert_one(careers.model_dump())
+#     )
+#     careers_id = str(mdb_result.inserted_id)
+#     if careers_id:
+#         return ServiceResponse(data={"careers_id": careers_id})
+#     return ServiceResponse(success=False, msg="couln't add careers", status_code=409)
 
+
+
+
+
+
+import os
+import requests
+
+# Function to download the image
+def download_google_drive_image(url, save_directory, file_name):
+    os.makedirs(save_directory, exist_ok=True)
+    file_id = url.split("id=")[-1]
+    file_full_name = f"{file_name}.jpg"
+    save_path = os.path.join(save_directory, file_full_name)
+    try:
+        response = requests.get(url, stream=True)
+        response.raise_for_status() 
+        with open(save_path, 'wb') as file:
+            for chunk in response.iter_content(1024):
+                file.write(chunk)
+        
+        print(f"Image successfully downloaded and saved")
+    except Exception as e:
+        print(f"Failed to download the image: {e}")
+
+
+async def download_image()->ServiceResponse:
+    mb_result = await get_database().get_collection('analysis_quiz').find_one({"_id":validate_bson_id('67382f6eabb11ade1ca53523')},{"_id":0,"sections":1})
+
+    id=0
+    for i,section in enumerate(mb_result['sections']):
+        for j,sub_section in enumerate(section['sub_sections']):
+            for k,question in enumerate(sub_section['questions']):
+                image_path =question['image']
+                if image_path !='https://drive.google.com/thumbnail?id=____':
+                    new_path = ''
+                    if '_____' in image_path:
+                        image_path = image_path[::-1]
+                        images = image_path.split('_____')
+                        for image in images:
+                            image=image[::-1]
+                            download_google_drive_image(image, 'test_images', file_name="image"+str(id))
+                            id +=1
+                            new_path += "image"+str(id) +'.jpg'+','
+                    else:         
+                       download_google_drive_image(image_path, 'test_images', file_name="image"+str(id))
+                       id +=1
+                       new_path += "image"+str(id) +'.jpg'
+                    update = {
+                        "$set": {
+                            f"sections.{i}.sub_sections.{j}.questions.{k}.image": '/public/analysis_quiz_images/' + new_path # Replace "new_image_url" with your new value.
+                        }
+                        }
+                    mb_result = await get_database().get_collection('analysis_quiz').update_one({"_id":validate_bson_id('67382f6eabb11ade1ca53523')},update)
+                    if mb_result.modified_count==0:
+                        return ServiceResponse(msg='failed')
+                for l,choice in enumerate(question['choices']):
+                    new_path=''
+                    if choice['image'] !='':
+                        download_google_drive_image(choice['image'], 'test_images', file_name="image"+str(id))
+                        id +=1
+                        new_path += "image"+str(id) +'.jpg'
+                        print(new_path)
+                        update = {
+                        "$set": {
+                            f"sections.{i}.sub_sections.{j}.questions.{k}.choices.{l}.image": '/public/analysis_quiz_images/' + new_path # Replace "new_image_url" with your new value.
+                        }
+                        }
+                        mb_result = await get_database().get_collection('analysis_quiz').update_one({"_id":validate_bson_id('67382f6eabb11ade1ca53523')},update)
+                        if mb_result.modified_count==0:
+                            return ServiceResponse(msg='failed')
+    return ServiceResponse(msg='done')
 
 async def create_feature_info(feature_info: FeatureInfo) -> ServiceResponse:
     mdb_result = (
@@ -74,8 +130,6 @@ async def get_all_features_info() -> ServiceResponse:
                 "name": 1,
                 "title": 1,
                 "description": 1,
-                "global_min": 1,
-                "global_max": 1,
             },
         )
         .to_list(length=None)
@@ -84,22 +138,22 @@ async def get_all_features_info() -> ServiceResponse:
         return ServiceResponse(data={"features_info": mdb_result})
     return ServiceResponse(success=False, msg="couln't find features_info", status_code=409)
 
-async def get_all_careers() -> ServiceResponse:
-    mdb_result = (
-        await get_database()
-        .get_collection("careers")
-        .find_one(
-            {},
-            {
-                "_id": 0,
-                "id": {"$toString": "$_id"},
-                "careers": 1,
-            },
-        )
-    )
-    if mdb_result:
-        return ServiceResponse(data={"careers": mdb_result})
-    return ServiceResponse(success=False, msg="couln't find careers", status_code=409)
+# async def get_all_careers() -> ServiceResponse:
+#     mdb_result = (
+#         await get_database()
+#         .get_collection("careers")
+#         .find_one(
+#             {},
+#             {
+#                 "_id": 0,
+#                 "id": {"$toString": "$_id"},
+#                 "careers": 1,
+#             },
+#         )
+#     )
+#     if mdb_result:
+#         return ServiceResponse(data={"careers": mdb_result})
+#     return ServiceResponse(success=False, msg="couln't find careers", status_code=409)
 
 
 
@@ -132,10 +186,7 @@ async def get_analysis_quiz(analysis_quiz_id: str, userId: str) -> ServiceRespon
                 "id": {"$toString": "$_id"},
                 "title": 1,
                 "description": 1,
-                "iq": 1,
-                "big5traits": 1,
-                "enneagram": 1,
-                "learning_styles": 1,
+                "sections": 1,
                 "duration": 1,
             },
         )
@@ -160,17 +211,16 @@ async def get_analysis(student_id: str) -> ServiceResponse:
             {
                 "_id": 0,
                 "id": {"$toString": "$_id"},
-                "iq_results": 1,
-                "big5traits_results": 1,
-                "enneagram_results": 1,
-                "learning_styles_results": 1,
-                "possible_careers": 1,
+                "sub_section_results": 1,
             },
         )
     )
     if not analysis:
         return ServiceResponse(success=False, status_code=404, msg="analysis Not Found")
     return ServiceResponse(data={"analysis_quiz": analysis})
+
+
+
 
 
 async def add_analysis_quiz_answer(
@@ -186,49 +236,25 @@ async def add_analysis_quiz_answer(
             {"_id": analysis_quiz_bson_id},
             {
                 "_id": 0,
-                "iq": 1,
-                "big5traits": 1,
-                "enneagram": 1,
-                "learning_styles": 1,
+                "sections": 1,
             },
         )
     )
     scores = calculate_scores(answers, analysis_quiz)
-    careers = (
-        await get_database().get_collection("careers").find_one({}, {"_id": 0, "id": 0})
-    )
-    career_scores = calculate_career_alignment(scores, careers)
+#    careers = (
+#        await get_database().get_collection("careers").find_one({}, {"_id": 0, "id": 0})
+#    )
+#    career_scores = calculate_career_alignment(scores, careers)
 
-    possible_careers = [
-        PossibleCarees(career_name=career, percentage=career_scores[career])
-        for career in career_scores
-    ]
-    iq_results = [
-        FeatureResult(feature_name=iq_section["name"], score=iq_section["total_score"])
-        for iq_section in scores["iq"]["sections"]
-    ]
-    big5traits_results = [
-        FeatureResult(feature_name=trait["name"], score=trait["total_score"])
-        for trait in scores["big5traits"]["sections"]
-    ]
-    enneagram_results = [
-        FeatureResult(feature_name=personna["name"], score=personna["total_score"])
-        for personna in scores["enneagram"]["sections"]
-    ]
-    learning_styles_results = [
-        FeatureResult(
-            feature_name=learning_style["name"], score=learning_style["total_score"]
-        )
-        for learning_style in scores["learning_styles"]["sections"]
-    ]
+#    possible_careers = [
+#        PossibleCarees(career_name=career, percentage=career_scores[career])
+#        for career in career_scores
+#    ]
+ 
 
     analysis = Analysis(
         student_id=student_id,
-        iq_results=iq_results,
-        big5traits_results=big5traits_results,
-        enneagram_results=enneagram_results,
-        learning_styles_results=learning_styles_results,
-        possible_careers=possible_careers,
+        section_results=scores,
         answers=answers
     )
 
@@ -254,6 +280,10 @@ async def add_analysis_quiz_answer(
     return ServiceResponse(msg="Could not Add Answer", success=False)
 
 
+
+
+
+
 def aplly_gauss(min: int, max: int, score: int) -> float:
     av = (min + max) / 2
     std = max - min
@@ -261,235 +291,128 @@ def aplly_gauss(min: int, max: int, score: int) -> float:
     return numpy.power(numpy.e, power * 0.25)
 
 
-def calculate_career_alignment(scores: dict, careers: dict) -> list:
-    all_careers_list = careers["careers"]
-    career_fit_percentage = {}
-
-    for career in all_careers_list:
-        career_fit_percentage[career["name"]] = 0
-
-    for score_section in scores["iq"]["sections"]:
-        for career in all_careers_list:
-            criteria = next(
-                (
-                    criteria
-                    for criteria in career["criteria"]
-                    if criteria["name"] == score_section["name"]
-                ),
-                None,
-            )
-            if criteria:
-                score = aplly_gauss(
-                    criteria["min_score"],
-                    criteria["max_score"],
-                    score_section["total_score"],
-                )
-                career_fit_percentage[career["name"]] += score * 20
-
-    for score_section in scores["big5traits"]["sections"]:
-        for career in all_careers_list:
-            criteria = next(
-                (
-                    criteria
-                    for criteria in career["criteria"]
-                    if criteria["name"] == score_section["name"]
-                ),
-                None,
-            )
-            if criteria:
-                score = aplly_gauss(
-                    criteria["min_score"],
-                    criteria["max_score"],
-                    score_section["total_score"],
-                )
-                career_fit_percentage[career["name"]] += score * 10
-
-    for score_section in scores["enneagram"]["sections"]:
-        for career in all_careers_list:
-            criteria = next(
-                (
-                    criteria
-                    for criteria in career["criteria"]
-                    if criteria["name"] == score_section["name"]
-                ),
-                None,
-            )
-            if criteria:
-                score = aplly_gauss(
-                    criteria["min_score"],
-                    criteria["max_score"],
-                    score_section["total_score"],
-                )
-                career_fit_percentage[career["name"]] += score * 20
-
-    for score_section in scores["learning_styles"]["sections"]:
-        for career in all_careers_list:
-            criteria = next(
-                (
-                    criteria
-                    for criteria in career["criteria"]
-                    if criteria["name"] == score_section["name"]
-                ),
-                None,
-            )
-            if criteria:
-                score = aplly_gauss(
-                    criteria["min_score"],
-                    criteria["max_score"],
-                    score_section["total_score"],
-                )
-                career_fit_percentage[career["name"]] += score * 5
-
-    return career_fit_percentage
-
-
 def calculate_scores(answers: Answers, analysis_quiz: dict) -> dict:
     answers_list = answers.answers
+    all_sections = []
+    for section in analysis_quiz['sections']:
+        sections_sub_sections = {"section": section["info_name"], "sub_sections": []}
 
-    all_sections = {"iq": [], "big5traits": [], "enneagram": [], "learning_styles": []}
-    total = 0
-    sections = {"name": "iq", "sections": []}
-    for section in analysis_quiz["iq"]["iq_sections"]:
-        section_score = {"name": section["name"], "total_score": 0}
-        total = 0
-        for question in section["questions"]:
-            for choice in question["choices"]:
-                score = next(
-                    (
-                        choice["score"]
-                        for answer in answers_list
-                        if answer.section_name == section["name"]
-                        and answer.question_id == question["id"]
-                        and choice["id"] == answer.choice_id
-                    ),
-                    None,
-                )
-                if score:
-                    total += score
-        section_score["total_score"] = total * 7
-        sections["sections"].append(section_score)
-    combined_sections = {}
-    for section in sections["sections"]:
-        name = section["name"]
-        score = section["total_score"]
-        if name in combined_sections:
-            combined_sections[name] += score
-        else:
-            combined_sections[name] = score
-    combined_sections_list = [
-        {"name": name, "total_score": total_score}
-        for name, total_score in combined_sections.items()
-    ]
-    sections["sections"] = combined_sections_list
-    all_sections["iq"] = sections
-
-    sections = {"name": "big5traits", "sections": []}
-    for section in analysis_quiz["big5traits"]["traits"]:
-        section_score = {"name": section["name"], "total_score": 0}
-        total = 0
-        for question in section["questions"]:
-            for choice in question["choices"]:
-                score = next(
-                    (
-                        choice["score"]
-                        for answer in answers_list
-                        if answer.section_name == section["name"]
-                        and answer.question_id == question["id"]
-                        and choice["id"] == answer.choice_id
-                    ),
-                    None,
-                )
-                if score:
-                    total += score
-        section_score["total_score"] = total
-        sections["sections"].append(section_score)
-    combined_sections = {}
-    for section in sections["sections"]:
-        name = section["name"]
-        score = section["total_score"]
-        if name in combined_sections:
-            combined_sections[name] += score
-        else:
-            combined_sections[name] = score
-    combined_sections_list = [
-        {"name": name, "total_score": total_score}
-        for name, total_score in combined_sections.items()
-    ]
-    sections["sections"] = combined_sections_list
-    all_sections["big5traits"] = sections
-
-    sections = {"name": "enneagram", "sections": []}
-    for section in analysis_quiz["enneagram"]["personalities"]:
-        section_score = {"name": section["name"], "total_score": 0}
-        total = 0
-        for question in section["questions"]:
-            for choice in question["choices"]:
-                score = next(
-                    (
-                        choice["score"]
-                        for answer in answers_list
-                        if answer.section_name == section["name"]
-                        and answer.question_id == question["id"]
-                        and choice["id"] == answer.choice_id
-                    ),
-                    None,
-                )
-                if score:
-                    total += score
-        section_score["total_score"] = total
-        sections["sections"].append(section_score)
-    combined_sections = {}
-    for section in sections["sections"]:
-        name = section["name"]
-        score = section["total_score"]
-        if name in combined_sections:
-            combined_sections[name] += score
-        else:
-            combined_sections[name] = score
-    combined_sections_list = [
-        {"name": name, "total_score": total_score}
-        for name, total_score in combined_sections.items()
-    ]
-    sections["sections"] = combined_sections_list
-    all_sections["enneagram"] = sections
-
-    sections = {"name": "learning_styles", "sections": []}
-    for section in analysis_quiz["learning_styles"]["learning_style_features"]:
-        section_score = {"name": section["name"], "total_score": 0}
-        total = 0
-        for question in section["questions"]:
-            for choice in question["choices"]:
-                score = next(
-                    (
-                        choice["score"]
-                        for answer in answers_list
-                        if answer.section_name == section["name"]
-                        and answer.question_id == question["id"]
-                        and choice["id"] == answer.choice_id
-                    ),
-                    None,
-                )
-                if score:
-                    total += score
-        section_score["total_score"] = total
-        sections["sections"].append(section_score)
-    combined_sections = {}
-
-    for section in sections["sections"]:
-        name = section["name"]
-        score = section["total_score"]
-        if name in combined_sections:
-            combined_sections[name] += score
-        else:
-            combined_sections[name] = score
-    combined_sections_list = [
-        {"name": name, "total_score": total_score}
-        for name, total_score in combined_sections.items()
-    ]
-    sections["sections"] = combined_sections_list
-    all_sections["learning_styles"] = sections
-
+        sub_sections = []
+        for section in analysis_quiz["sections"]:
+            if section['info_name'] == section["info_name"]:
+                sub_sections = section['sub_sections']
+        
+        for sub_section in sub_sections:
+            section_score = {"name": sub_section["info_name"], "total_score": 0}
+            total = 0
+            max_total=0
+            for question in sub_section["questions"]:
+                max_choice=0
+                for choice in question["choices"]:
+                    max_choice=max(choice['score'],max_choice)
+                    score = next(
+                        (
+                            choice["score"]
+                            for answer in answers_list
+                            if answer.sub_section_name == sub_section["info_name"]
+                            and answer.question_id == question["id"]
+                            and choice["id"] == answer.choice_id
+                        ),
+                        None,
+                    )
+                    if score:
+                        total += score
+                max_total+=max_choice
+                section_score["total_score"] = total/max_total
+            sections_sub_sections["sub_sections"].append(section_score)
+            
+        all_sections.append(sections_sub_sections)
+    print(all_sections)
     return all_sections
+
+
+
+
+# def calculate_career_alignment(scores: dict, careers: dict) -> list:
+#     all_careers_list = careers["careers"]
+#     career_fit_percentage = {}
+
+#     for career in all_careers_list:
+#         career_fit_percentage[career["name"]] = 0
+
+#     for score_section in scores["iq"]["sections"]:
+#         for career in all_careers_list:
+#             criteria = next(
+#                 (
+#                     criteria
+#                     for criteria in career["criteria"]
+#                     if criteria["name"] == score_section["name"]
+#                 ),
+#                 None,
+#             )
+#             if criteria:
+#                 score = aplly_gauss(
+#                     criteria["min_score"],
+#                     criteria["max_score"],
+#                     score_section["total_score"],
+#                 )
+#                 career_fit_percentage[career["name"]] += score * 20
+
+#     for score_section in scores["big5traits"]["sections"]:
+#         for career in all_careers_list:
+#             criteria = next(
+#                 (
+#                     criteria
+#                     for criteria in career["criteria"]
+#                     if criteria["name"] == score_section["name"]
+#                 ),
+#                 None,
+#             )
+#             if criteria:
+#                 score = aplly_gauss(
+#                     criteria["min_score"],
+#                     criteria["max_score"],
+#                     score_section["total_score"],
+#                 )
+#                 career_fit_percentage[career["name"]] += score * 10
+
+#     for score_section in scores["enneagram"]["sections"]:
+#         for career in all_careers_list:
+#             criteria = next(
+#                 (
+#                     criteria
+#                     for criteria in career["criteria"]
+#                     if criteria["name"] == score_section["name"]
+#                 ),
+#                 None,
+#             )
+#             if criteria:
+#                 score = aplly_gauss(
+#                     criteria["min_score"],
+#                     criteria["max_score"],
+#                     score_section["total_score"],
+#                 )
+#                 career_fit_percentage[career["name"]] += score * 20
+
+#     for score_section in scores["learning_styles"]["sections"]:
+#         for career in all_careers_list:
+#             criteria = next(
+#                 (
+#                     criteria
+#                     for criteria in career["criteria"]
+#                     if criteria["name"] == score_section["name"]
+#                 ),
+#                 None,
+#             )
+#             if criteria:
+#                 score = aplly_gauss(
+#                     criteria["min_score"],
+#                     criteria["max_score"],
+#                     score_section["total_score"],
+#                 )
+#                 career_fit_percentage[career["name"]] += score * 5
+
+#     return career_fit_percentage
 
 
 # def update_analysis(

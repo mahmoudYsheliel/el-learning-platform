@@ -3,7 +3,7 @@ import { usePersonalInfo } from "@/stores/token";
 import { useRouter } from "vue-router";
 import { computed } from "vue";
 import { selectLang } from "@/lib/Translate";
-import {  shallowRef } from "vue";
+import {  shallowRef,ref } from "vue";
 import Textarea from "primevue/textarea";
 import InputText from "primevue/inputtext";
 
@@ -108,6 +108,28 @@ export const items = computed(() => {
         label: selectLang(translationModule.notifications),
         command: () => {
           router.push("/childNotifications");
+        },
+      },
+      {
+        label: selectLang(translationModule.chats),
+        command: () => {
+          router.push("/childChats/0");
+        },
+      },
+    ];
+  }
+  else if (personalInfo.getInfo?.userType == "Instructor") {
+    return [
+      {
+        label: "Profile",
+        command: () => {
+          router.push("/instructorProfile");
+        },
+      },
+      {
+        label:"Chats",
+        command: () => {
+          router.push("/instructorChats/0");
         },
       },
     ];
@@ -220,6 +242,12 @@ export const childSidebar = [
     name: "notifications",
     to: "childNotifications",
     icon: "pi pi-bell",
+  },
+  {
+    label:translationModule.chats,
+    name: "Chats",
+    to: "ChildChats/0",
+    icon: "pi pi-comments",
   },
 ];
 
@@ -386,6 +414,24 @@ export const managerSidebarPages = computed(() => {
       to: "manageLogs",
       icon: "pi pi-arrow-right-arrow-left",
     },
+  ];
+});
+
+export const instructorSidebarPages = computed(() => {
+  return [
+    {
+      label: 'Profile',
+      name: "Profile",
+      to: "instructorProfile",
+      icon: "pi pi-user",
+    },
+    {
+      label:"Chats",
+      name: "Chats",
+      to: "instructorChats/0",
+      icon: "pi pi-comments",
+    },
+ 
   ];
 });
 
@@ -732,5 +778,46 @@ export const programObject = shallowRef({
     variable: "",
     component: InputText,
     inputType: "number",
+  },
+});
+
+
+export const instructorIfonArrayFields = shallowRef({
+  specializations: { name: "Specializations", value: <any[]> [] },
+  educationBackground: { name: "Education Background", value:  <any[]>[] },
+  experience: { name: "Experience", value: <any[]>[] },
+});
+export const instructorIfonFields = shallowRef({
+  email: { name: "Email", component: InputText, value: "", disabled: true },
+  firstName: {
+    name: "First Name",
+    component: InputText,
+    value: "",
+    disabled: false,
+  },
+  lastName: {
+    name: "Last Name",
+    component: InputText,
+    value: "",
+    disabled: false,
+  },
+  phoneNumber: {
+    name: "Phone Number",
+    component: InputText,
+    value: "",
+    disabled: false,
+  },
+  title: { name: "Title", component: InputText, value: "", disabled: false },
+  biography: {
+    name: "Biography",
+    component: Textarea,
+    value: "",
+    disabled: false,
+  },
+  philosophy: {
+    name: "Philosophy",
+    component: Textarea,
+    value: "",
+    disabled: false,
   },
 });

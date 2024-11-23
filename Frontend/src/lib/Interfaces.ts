@@ -35,3 +35,23 @@ export interface UpdatProgramCourseCategoryPlan{
     min_age?:number,
     max_age?:number
 }
+
+export interface User{
+  email: string,
+  created_at?: string,
+  phone_number?: string, 
+  first_name?: string,
+  last_name?: string, 
+  birth_day?: string, 
+  gender?: string, 
+  image?: string, 
+}
+export interface Instructor{
+  title?: string, 
+  specializations?: string[], 
+  biography?: string, 
+  education_background?: string[],
+  experience?: string[], 
+  philisophy?: string, 
+  courses?: string[]
+}

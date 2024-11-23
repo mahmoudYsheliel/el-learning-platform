@@ -9,8 +9,8 @@ export class HttpRequester {
 
   constructor(endpoint: string) {
     this.endpoint = endpoint;
-    this.base_endpoint = "http://127.0.0.1:8000/";
-    //this.base_endpoint = "/";
+    //this.base_endpoint = "http://127.0.0.1:8000/";
+    this.base_endpoint = "/";
     this.token = useToken();
     this.bearer = this.token.getToken;
   }

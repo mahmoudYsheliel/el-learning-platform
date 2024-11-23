@@ -187,6 +187,30 @@ const router = createRouter({
       component: () => import("@/views/adminViews/manageUsers.vue"),
       meta: { requredAuth: true, userType: "Admin" },
     },
+    {
+      path: "/editInstructor/:instructorId",
+      name: "editInstructor",
+      component: () => import("@/views/adminViews/editInstructor.vue"),
+      meta: { requredAuth: true, userType: "Admin" },
+    },
+    {
+      path: "/instructorProfile",
+      name: "instructorProfile",
+      component: () => import("@/views/instructorViews/instructorProfile.vue"),
+      meta: { requredAuth: true, userType: "Instructor" },
+    },
+    {
+      path: "/instructorChats/:id",
+      name: "instructorChats",
+      component: () => import("@/views/instructorViews/instructorChats.vue"),
+      meta: { requredAuth: true, userType: "Instructor" },
+    },
+    {
+      path: "/childChats/:id",
+      name: "childChats",
+      component: () => import("@/views/studentViews/childChats.vue"),
+      meta: { requredAuth: true, userType: "Child" },
+    },
   ],
 
   scrollBehavior(to, from, savedPosition) {

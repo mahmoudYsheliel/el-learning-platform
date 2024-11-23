@@ -114,7 +114,6 @@ const search = ref("");
 
 .selected {
   color: var(--accent1);
-  border: solid 2px var(--accent1);
   transition-duration: 0.5s;
 }
 .header-description {

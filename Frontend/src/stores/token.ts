@@ -11,10 +11,12 @@ export const useToken = defineStore("token", {
       this.isAuthorized = true;
       this.saveToLocalStorage();
     },
+    
     saveToLocalStorage() {
       localStorage.setItem("token", JSON.stringify(this.token));
       localStorage.setItem("isAuthorized", JSON.stringify(this.isAuthorized));
     },
+    
     logout() {
       this.token = null;
       this.isAuthorized = false;
@@ -51,6 +53,10 @@ interface Notification {
 
 interface info {
   userType: string;
+  id:string
+  firstName:string
+  lastName:string
+  email:string
   notifications: Notification[];
 }
 

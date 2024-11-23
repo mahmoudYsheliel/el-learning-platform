@@ -73,6 +73,12 @@ async def update_user_info(user_type_specific_info:dict= Body(embed=True),update
     return res
 
 
+@router.post('/update_another_user_info')
+async def update_user_info(user_type_specific_info:dict= Body(embed=True),update:dict = Body(embed=True) ,user_to_change:str= Body(embed=True),userId:str = Depends(auth_user)):
+    res =  await user_database.update_user_info(user_to_change,update,user_type_specific_info)
+    return res
+
+
 @router.post('/add_child')
 async def add_child(user:User = Body(embed=True) ,child:Child= Body(embed=True),userId:str = Depends(auth_user)):
     res =  await user_database.add_child(user,child,userId)
@@ -81,6 +87,13 @@ async def add_child(user:User = Body(embed=True) ,child:Child= Body(embed=True),
 @router.post('/get_all_users')
 async def get_all_users(userId:str = Depends(auth_user)):
     res =  await user_database.get_all_users(userId)
+    return res
+
+
+
+@router.post('/get_instructors')
+async def get_all_users(userId:str = Depends(auth_user)):
+    res =  await user_database.get_instructors(userId)
     return res
 
 

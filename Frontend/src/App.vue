@@ -86,10 +86,31 @@ body,
   --wrongAnswer:#FF2D2D;
   --correctAnswer:#5CFA75;
 
-  font-size: calc(16px + 100vw * 0.002);
-  font-size: calc(14px + 100vw * 0.005);
+  font-size: calc(14.4px + 100vw * 0.004);
+  font-size: clamp(16px, 1vw, 24px);
+}
+:root {
+    font-size: 14px; /* Base for mobile */
+}
+
+@media (min-width: 600px) {
+  :root {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 900px) {
+  :root {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+  :root {
+        font-size: 22px;
+    }
 }
 button{
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 </style>

@@ -14,11 +14,17 @@ async def get_chat(chat_id:str=Body(embed=True),userId:str = Depends(auth_user))
     return res
 
 
+@router.post('/get_chats') 
+async def get_chat(userId:str = Depends(auth_user))-> ServiceResponse:
+    res = await chat_database.get_chats(userId)
+    return res
+
+
 
 
 @router.post('/create_chat')
 async def create_chat(new_chat:Chat =Body(embed=True),userId:str = Depends(auth_user))->ServiceResponse:
-    res = await chat_database.create_chat(new_chat)
+    res = await chat_database.create_chat(new_chat,userId)
     return res
 
 

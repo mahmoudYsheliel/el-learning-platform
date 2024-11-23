@@ -10,7 +10,7 @@ const prop = defineProps(["chapters", "courseTitle"]);
 
 const router = useRouter();
 const route = useRoute();
-const shrink = ref(false);
+const shrink = ref(true);
 const selectedKey = ref();
 
 const chaptersObj = computed(() => {
@@ -37,7 +37,7 @@ const chaptersObj = computed(() => {
 </script>
 
 <template>
-  <main>
+  <div id="wrapper">
     <span @click="shrink = !shrink" class="circle">
       <span class="upper-arrow" :class="{ upperArrowShrink: shrink }"></span>
       <span class="down-arrow" :class="{ downArrowShrink: shrink }"></span>
@@ -140,7 +140,7 @@ const chaptersObj = computed(() => {
         </template>
       </Tree>
     </div>
-  </main>
+  </div>
 </template>
 
 <style scoped>
@@ -170,16 +170,16 @@ p {
   border-radius: 0.5rem
 }
 
-main {
-  min-height: 100%;
-  width: fit-content;
-  position: relative;
+#wrapper {
+  position: fixed;
   padding-bottom: 2rem;
-  box-shadow: 4px 8px 8px var(--primary);
+  z-index: 3;
+  background-color: var(--primary);
+
 }
 .container {
   background-color: var(--primary);
-  height: 100%;
+  height: calc(100vh - 5rem);
   overflow: hidden;
   width: 15rem;
  
@@ -242,7 +242,7 @@ h3 {
 }
 .tree{
   overflow-y: scroll;
-  max-height: 70vh;
+  height: calc(100vh - 12rem);
 }
 ::-webkit-scrollbar {
   width: 0.75rem;
@@ -267,11 +267,6 @@ h3 {
 }
 .element:hover {
   opacity: 0.25;
-}
-.wrapper {
-  height: calc(100% - 6rem);
-  overflow-y: scroll;
-  padding: 0;
 }
 
 .shrink {
