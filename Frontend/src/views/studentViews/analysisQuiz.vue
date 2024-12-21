@@ -23,7 +23,7 @@ const quiz = ref();
 const answerObj = ref<any[]>([]);
 const selectedQuestionOrder = ref(0);
 const showDialog = ref(false);
-const startQuiz = ref(true);
+const startQuiz = ref(false);
 
 analysisQuizRequester
   .callApi({ analysis_quiz_id: route.params.quizId })
@@ -174,7 +174,7 @@ function finishQuiz() {
 <style scoped>
 .wrapper {
   margin-inline: auto;
-  height: 70vh;
+  min-height: 70vh;
 }
 h4 {
   color: var(--text);

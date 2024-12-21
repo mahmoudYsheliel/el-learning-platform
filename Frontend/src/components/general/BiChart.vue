@@ -20,7 +20,7 @@ const setChartData = () => {
             {
                 label: props.title,
                 data: props.traitsDistribution?.scores,
-                backgroundColor: [documentStyle.getPropertyValue('--accent1'),documentStyle.getPropertyValue('--accent2'),documentStyle.getPropertyValue('--accent3'),documentStyle.getPropertyValue('--accent4'),documentStyle.getPropertyValue('--secondary')],
+                backgroundColor: [documentStyle.getPropertyValue('--accent1'),documentStyle.getPropertyValue('--accent2'),documentStyle.getPropertyValue('--accent3'),documentStyle.getPropertyValue('--accent4'),documentStyle.getPropertyValue('--secondary'),documentStyle.getPropertyValue('--accent1'),documentStyle.getPropertyValue('--accent2')],
                
             }
         ]
@@ -28,9 +28,9 @@ const setChartData = () => {
 };
 const setChartOptions = () => {
     const documentStyle = getComputedStyle(document.documentElement);
-    const textColor = documentStyle.getPropertyValue('--text');
-    const textColorSecondary = documentStyle.getPropertyValue('--text');
-    const surfaceBorder = documentStyle.getPropertyValue('--text');
+    const textColor = documentStyle.getPropertyValue('--header');
+    const textColorSecondary = documentStyle.getPropertyValue('--header');
+    const surfaceBorder = documentStyle.getPropertyValue('--choiceBackgroundColor');
 
     return {
         plugins: {
@@ -68,6 +68,7 @@ const setChartOptions = () => {
  <div class="card">
         <Chart type="bar" :data="chartData" :options="chartOptions" 
         style="width: 40rem;aspect-ratio: 1.5/1; margin-inline: auto;"
+        class="chart"
         :pt="{
         canvas: {
           style:
@@ -79,4 +80,13 @@ const setChartOptions = () => {
 </template>
 
 
-
+<style scoped>
+@media print{
+    .chart{
+        
+        width: 50rem !important;
+        aspect-ratio: 1.68/1; 
+        margin-inline: auto;
+    }
+}
+</style>

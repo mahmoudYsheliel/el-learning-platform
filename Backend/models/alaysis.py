@@ -66,13 +66,40 @@ class SectionResults(BaseModel):
     sub_sections:list[SubSectionResult]
     
     
+class LearningStyle(BaseModel):
+    name:str
+    title:TwoLang
+    description:TwoLang
+    advice:TwoLang
+    image:str
+    sections_dependence:list[str] #id of subsections from iq test
+    
+class LearningStyleScore(BaseModel):
+    learning_style_id:str #id of learning style
+    score:float
+    
+class TrackRecommendation(BaseModel):
+    name:str
+    title:TwoLang
+    description:TwoLang
+    key_skills:list[TwoLang]
+    advice:TwoLang
+    sections_dependence:list[str] #id of subsections from iq test
+    
+class TrackRecommendationScore(BaseModel):
+    tracks_recommendation_id:str #id of track recommendation
+    score:float
+
+    
+    
 class Analysis(BaseModel):
     id:Optional[str] = None
     student_id:str
     section_results:list[SectionResults]
-#   possible_careers:list[PossibleCarees]
     answers:Optional[Answers]=None
-    
+    learning_styles_results:list[LearningStyleScore]
+    tracks_recommendation_results:list[TrackRecommendationScore]
+    #   possible_careers:list[PossibleCarees]
     
     
 # class FeaturePercentage(BaseModel):

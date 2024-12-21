@@ -1,323 +1,187 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 import { HttpRequester } from "@/lib/APICaller";
+import { IQScoresMap } from "@/lib/Modules";
 import { selectLang, translationModule } from "@/lib/Translate";
+import knob from 'primevue/knob';
 import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
-import IQSection from "../childrenAnalysis/IQSection.vue";
 import Big5Traits from "../childrenAnalysis/Big5Traits.vue";
 import Personalities from "../childrenAnalysis/Personalities.vue";
 import LearningStyles from "../childrenAnalysis/LearningStyles.vue";
-import Careers from "../childrenAnalysis/Careers.vue";
+import IQChart from "../childrenAnalysis/IQChart.vue";
 import Summary from "../childrenAnalysis/Summary.vue";
 const prop = defineProps(["childId"]);
 
 const analysis = ref();
-const allFeatures = ref();
-const allCareers = ref();
 
-new HttpRequester("get_all_features_info").callApi().then((res) => {
-  if (res?.success) {
-    allFeatures.value = res?.data?.features_info;
-  }
-});
-new HttpRequester("get_all_careers").callApi().then((res) => {
-  if (res?.success) {
-    allCareers.value = res?.data?.careers?.careers;
-  }
-});
-const req = computed(() => {
+const IQResult = ref()
+const learningStyle = ref()
+const recommendTrack = ref()
+const IQSection = ref()
+function getMaxObject(arr:any[]){
+    let tem=arr[0]
+    for (let i=0;i<arr.length;i++){
+        if (arr[i]?.score > tem?.score){
+            tem=arr[i]
+        }
+    }
+    return tem
+}
+watch(prop, () => {
   const childnAlysisRequester = new HttpRequester("get_analysis");
   if (prop.childId) {
     childnAlysisRequester.callApi({ student_id: prop.childId }).then((res) => {
       if (res?.success) {
         analysis.value = res?.data?.analysis_quiz;
+        IQSection.value = analysis.value?.section_results?.find((section: any) => { return section?.section == 'IQ' })?.sub_sections
+
+        IQResult.value = 0
+        for (let i = 0; i < IQSection.value.length; i++) {
+          IQResult.value += IQSection.value[i]?.total_score
+        }
+        IQResult.value = Math.round(IQResult.value / IQSection.value.length)
+        const bestLearningStyle = getMaxObject(analysis.value?.learning_styles_results)
+                console.log(bestLearningStyle)
+                new HttpRequester('get_learning_style').callApi({ id: bestLearningStyle?.learning_style_id }).then(res => {
+                    learningStyle.value = res?.data?.learning_style
+                })
+
+                const bestTrack = getMaxObject(analysis.value?.tracks_recommendation_results)
+                new HttpRequester('get_tracks_recommendation').callApi({ id: bestTrack?.tracks_recommendation_id }).then(res => {
+                    recommendTrack.value = res?.data?.track_recommendation
+                })
+
       } else {
         analysis.value = null;
       }
     });
   }
-  return null;
+  IQResult.value = null
+  learningStyle.value = null
+  recommendTrack.value = null
 });
 
-const analysisDataObject = computed(() => {
-  if (!analysis.value) {
-    return null;
+
+
+function getIqDescription(score: number) {
+
+
+  for (const entry of IQScoresMap) {
+    const minScore = entry.min;
+    const maxScore = entry.max;
+
+    // Check if score falls within the range
+    if ((minScore === null || score >= minScore) && (maxScore === null || score <= maxScore)) {
+      return entry.desc;
+    }
   }
-  let obj = {
-    iq: {
-      title: {
-        en: "IQ evalusation",
-        ar: "مستوي الذكاء",
-      },
-      sections: <any[]>[],
-    },
-    big5Traits: {
-      title: {
-        en: "Big Five Personality Traits",
-        ar: "سمات الشخصية الخمس الكبرى",
-      },
-      sections: <any[]>[],
-    },
-    personality: {
-      title: {
-        en: "Personality",
-        ar: "الشخصية",
-      },
-      sections: <any[]>[],
-    },
-    learningStyle: {
-      title: {
-        en: "Learning Styles",
-        ar: "أنماط التعلم",
-      },
-      sections: <any[]>[],
-    },
-    careers: {
-      title: {
-        en: "Possible Careers",
-        ar: " مهن مقترحة",
-      },
-      sections: <any[]>[],
-    },
-  };
+  return { en: '', ar: '' }
+}
 
-  for (let section of analysis.value?.iq_results) {
-    let name = section?.feature_name;
-    obj.iq.sections.push({
-      name: name,
-      feature_name: section?.feature_name,
-      score: section?.score,
 
-      title: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.title,
-      description: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.description,
-      global_min: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.global_min,
-      global_max: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.global_max,
-    });
-  }
-  for (let section of analysis.value?.big5traits_results) {
-    let name = section?.feature_name;
-    obj.big5Traits.sections.push({
-      name: name,
-      feature_name: section?.feature_name,
-      score: section?.score,
-
-      title: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.title,
-      description: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.description,
-      global_min: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.global_min,
-      global_max: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.global_max,
-    });
-  }
-  for (let section of analysis.value?.enneagram_results) {
-    let name = section?.feature_name;
-    obj.personality.sections.push({
-      name: name,
-      feature_name: section?.feature_name,
-      score: section?.score,
-
-      title: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.title,
-      description: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.description,
-      global_min: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.global_min,
-      global_max: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.global_max,
-    });
-  }
-  for (let section of analysis.value?.learning_styles_results) {
-    let name = section?.feature_name;
-    obj.learningStyle.sections.push({
-      name: name,
-      feature_name: section?.feature_name,
-      score: section?.score,
-
-      title: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.title,
-      description: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.description,
-      global_min: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.global_min,
-      global_max: allFeatures.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.global_max,
-    });
-  }
-
-  for (let section of analysis.value?.possible_careers) {
-    let name = section?.career_name;
-    obj.careers.sections.push({
-      name: section?.career_name,
-      feature_name: section?.career_name,
-      percentage: section?.percentage,
-
-      title: allCareers.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.title,
-      description: allCareers.value?.find((feature: any) => {
-        return feature?.name == name;
-      })?.description,
-    });
-  }
-
-  return obj;
-});
 </script>
 
 <template>
+
+
   <div class="constainer" v-if="childId">
-    <h2>{{ selectLang(translationModule.childAnalysis) }}</h2>
-    <div v-if="analysisDataObject">
-      <Accordion :activeIndex="0">
-        <AccordionTab>
-          <template #header>
-            <h3 style="color: var(--accent1)">
-              {{ selectLang(translationModule.summary) }}
-            </h3>
-          </template>
-          <Summary
-            :iq-score="analysisDataObject.iq.sections[0]"
-            :dominant-trait="
-              analysisDataObject.big5Traits.sections.reduce((max, obj) => {
-                return obj.score > max.score ? obj : max;
-              }, analysisDataObject.big5Traits.sections[0])
-            "
-            :personality="
-              analysisDataObject.personality.sections.reduce((max, obj) => {
-                return obj.score > max.score ? obj : max;
-              }, analysisDataObject.personality.sections[0])
-            "
-            :learning-style="
-              analysisDataObject.learningStyle.sections.reduce((max, obj) => {
-                return obj.score > max.score ? obj : max;
-              }, analysisDataObject.learningStyle.sections[0])
-            "
-            :best-carer="
-              analysisDataObject.careers.sections.reduce((max, obj) => {
-                return obj.percentage > max.percentage ? obj : max;
-              }, analysisDataObject.careers.sections[0])
-            "
-          />
-        </AccordionTab>
 
-        <AccordionTab>
-          <template #header>
-            <h3 style="color: var(--accent1)">
-              {{ selectLang(analysisDataObject.iq.title) }}
-            </h3>
-          </template>
-          <IQSection :iqSection="analysisDataObject.iq.sections[0]" />
-        </AccordionTab>
+    <div class="field">
+      <h1>{{ selectLang(translationModule.summary) }}</h1>
+      <div class="labeled_text">
+        <h2><span style="color: var(--text);">{{ selectLang(translationModule.yourChildIQ) }} </span> {{ IQResult }} ({{ selectLang(getIqDescription(IQResult)) }})</h2>
 
-        <AccordionTab>
-          <template #header>
-            <h3 style="color: var(--accent1)">
-              {{ selectLang(analysisDataObject.big5Traits.title) }}
-            </h3>
-          </template>
-          <Big5Traits :traits="analysisDataObject.big5Traits" />
-        </AccordionTab>
+      </div>
+      <IQChart v-if="IQSection" :IQChart="IQSection" />
+    </div>
 
-        <AccordionTab>
-          <template #header>
-            <h3 style="color: var(--accent1)">
-              {{ selectLang(analysisDataObject.personality.title) }}
-            </h3>
-          </template>
-          <Personalities :traits="analysisDataObject.personality" />
-        </AccordionTab>
 
-        <AccordionTab>
-          <template #header>
-            <h3 style="color: var(--accent1)">
-              {{ selectLang(analysisDataObject.learningStyle.title) }}
-            </h3>
-          </template>
-          <LearningStyles :traits="analysisDataObject.learningStyle" />
-        </AccordionTab>
+    <div style="display: flex; justify-content: start;align-items: start;">
+      <div class="field">
+        <h1>{{ selectLang(translationModule.learningStyle) }}</h1>
+        <h2>{{ selectLang(learningStyle?.title) }}</h2>
+        <div class="labeled_text">
+          <h3>{{ selectLang(translationModule.styleOverview) }}</h3>
+          <p>{{ selectLang(learningStyle?.description) }}</p>
+        </div>
 
-        <AccordionTab>
-          <template #header>
-            <h3 style="color: var(--accent1)">
-              {{ selectLang(analysisDataObject.careers.title) }}
-            </h3>
-          </template>
-          <Careers :careers="analysisDataObject.careers" />
-        </AccordionTab>
-      </Accordion>
+        <div class="labeled_text">
+          <h3>{{ selectLang(translationModule.supportTips) }}</h3>
+          <p>{{ selectLang(learningStyle?.advice) }}</p>
+        </div>
+      </div>
+      <img v-if="learningStyle?.image" :src="learningStyle?.image" style="margin-top: 8rem" alt="">
+    </div>
+
+
+    <div style="display: flex; justify-content: start;align-items: start;">
+      <div class="field" >
+      <h1>{{ selectLang(translationModule.recommendTracks) }}</h1>
+      <h2>{{ selectLang(recommendTrack?.title) }}</h2>
+
+      <div class="labeled_text">
+        <h3>{{ selectLang(translationModule.aboutTrack) }}</h3>
+        <p>{{ selectLang(recommendTrack?.description) }}</p>
+      </div>
+
+      <div class="labeled_text">
+        <h3>{{ selectLang(translationModule.guidingPath) }}</h3>
+        <p>{{ selectLang(recommendTrack?.advice) }}</p>
+      </div>
+
+      <div class="labeled_text">
+        <h3>{{ selectLang(translationModule.keySkills) }}</h3>
+        <p v-for="skill in recommendTrack?.key_skills">{{ selectLang(skill) }}</p>
+      </div>
+
+
+
+    </div>
+    <img src="/public/images/TrackIcon.png"  style="margin-top: 8rem" alt="">
     </div>
   </div>
-  {{ req }}
+
 </template>
 
 <style scoped>
 .constainer {
   width: 95%;
   margin-inline: auto;
+  margin-top: 4rem;
+}
+
+.field {
+  padding-inline: 1rem;
   margin-top: 2rem;
 }
-.feature-container {
+
+.labeled_text {
   padding-inline: 1rem;
+  margin-top: 0.5rem;
 }
-h2 {
+
+h1 {
   width: fit-content;
   color: var(--accent1);
-  border-bottom: 0.25rem solid var(--accent3);
-  line-height: 1.5rem;
+  margin: 0.25rem;
+
 }
-h3,
-h4 {
+
+h2,
+h3 {
   color: var(--accent2);
-  line-height: 1rem;
-  margin-block: 0.25rem;
+  margin: 0.5rem;
+  padding-inline: 0.5rem;
 }
-h4 {
+
+h3 {
   color: var(--secondary);
 }
+
 p {
   margin: 0;
   color: var(--text);
-}
-.feature {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin-inline: auto;
-  border-bottom: 4px solid var(--choiceBackgroundColor);
-}
-.low {
-  color: var(--wrongAnswer);
-}
-.mid {
-  color: var(--accent3);
-}
-.high {
-  color: var(--correctAnswer);
-}
-.details {
-  margin-top: 5rem;
+  padding-inline: 1rem;
 }
 </style>

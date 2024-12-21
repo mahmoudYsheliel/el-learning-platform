@@ -71,7 +71,7 @@ body,
 #app {
   width: 100vw;
   height: 100vh;
-  font-family:'Baloo Tammudu 2'
+  font-family:'Cairo'
 }
 :root {
   --primary: #ffffff;
@@ -85,9 +85,6 @@ body,
   --choiceBackgroundColor:#E8F7FF;
   --wrongAnswer:#FF2D2D;
   --correctAnswer:#5CFA75;
-
-  font-size: calc(14.4px + 100vw * 0.004);
-  font-size: clamp(16px, 1vw, 24px);
 }
 :root {
     font-size: 14px; /* Base for mobile */
@@ -95,22 +92,22 @@ body,
 
 @media (min-width: 600px) {
   :root {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
 @media (min-width: 900px) {
   :root {
-        font-size: 18px;
+        font-size: 22px;
     }
 }
 
 @media (min-width: 1200px) {
   :root {
-        font-size: 22px;
+        font-size: 24px;
     }
 }
 button{
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 </style>

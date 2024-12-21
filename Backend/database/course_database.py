@@ -188,9 +188,10 @@ async def get_all_courses_with_free_lessons():
         return ServiceResponse(success=False, status_code=404, msg="courses Not Found")
 
     for course in courses:
-        lesson = course["chapters"][0]["materials"][0]
-        course["lesson"] = lesson
-        course["chapters"] = []
+        if course["chapters"]:
+            lesson = course["chapters"][0]["materials"][0]
+            course["lesson"] = lesson
+            course["chapters"] = []
     return ServiceResponse(data={"courses": courses})
 
 

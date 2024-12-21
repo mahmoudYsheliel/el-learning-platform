@@ -197,10 +197,8 @@ function createChat() {
       ],
     },
   };
-  console.log(data)
   new HttpRequester('create_chat').callApi(data).then(res=>{
     if(res?.success){
-      console.log(`childChats/${res?.data?.chat_id}`)
       router.push(`/childChats/${res?.data?.chat_id}`)
     }
   })

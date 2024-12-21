@@ -215,7 +215,6 @@ function updateInstructor() {
                           value: fieldValue,
                         },
                       };
-                      console.log(instructorIfonArrayFields);
                     }
                   }
                 "
@@ -236,7 +235,6 @@ function updateInstructor() {
                       value: fieldValue,
                     },
                   };
-                  console.log(instructorIfonArrayFields);
                 }
               "
               class="pi pi-plus-circle"

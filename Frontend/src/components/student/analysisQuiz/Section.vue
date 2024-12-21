@@ -4,9 +4,10 @@ import { selectLang, translationModule } from "@/lib/Translate";
 import 'primeicons/primeicons.css'
 import CountDown from "@/components/general/CountDown.vue";
 import { ref, computed, watch } from "vue";
+import { useLang } from "@/stores/token";
 
+const lang = useLang()
 const props = defineProps([
-  "showPrevious",
   "showNext",
   "question",
   "answers",
@@ -17,16 +18,20 @@ const props = defineProps([
   "questionType"
 ]);
 
-defineEmits(["previous", "next", "answer", 'timeOver','finish']);
+defineEmits(["next", "answer", 'timeOver', 'finish']);
+const questionOrder = computed(()=>{return props.selectedQuestionOrder})
 
 const images = ref()
-watch(props, (oldQ, new_q) => {
-  images.value = []
-  setTimeout(() => { images.value = new_q.question?.image?.split(',') }, 100)
-  stage.value = 'show image'
-  setTimeout(() => {
-    stage.value = "show options";
-  }, 3000);
+setTimeout(() => { images.value = props.question?.image?.split(',') }, 1)
+watch(questionOrder, (oldQ, new_q) => {
+ 
+    images.value = []
+    setTimeout(() => { images.value = props.question?.image?.split(',') }, 1)
+    stage.value = 'show image'
+    setTimeout(() => {
+      stage.value = "show options";
+    }, 3000);
+  
 })
 
 
@@ -49,8 +54,6 @@ const questions = computed(() => { return parseStringWithInversion(selectLang(pr
 
 function parseStringWithInversion(input: string | undefined) {
   if (input) {
-    console.log(input)
-    console.log(input.split('_____'))
 
     return input.split("_____");
   }
@@ -76,9 +79,13 @@ const stage = ref("show image"); // or show options
       <div class="question">
         <div class="question-text" v-if="questionType != 'Symbol Search'">
           <h1>{{ selectLang(question?.question) }}</h1>
-          <iframe v-if="audio_link" :src="audio_link" frameborder="0" allowtransparency="true" sandbox="allow-scripts allow-same-origin"></iframe>
+          <audio :src="audio_link" autoplay>
+            <source :src="audio_link">
+          </audio>
+
+
           <div class="image_container">
-            <img :class="{ image2: (images?.length > 1) }" v-for="image in images" :src="image" alt="" v-if="question?.image != undefined" />
+            <img  :class="{ image2: (images?.length > 1) }" v-for="image in images" :src="image" alt="" v-if="question?.image != undefined" />
           </div>
         </div>
         <div class="question-text" v-if="questionType == 'Symbol Search'">
@@ -108,22 +115,30 @@ const stage = ref("show image"); // or show options
           }
             ">
             <span>{{ selectLang(choice?.choice) }}</span>
-            <img v-if="choice?.image" :src="choice?.image" alt="" />
+            <img v-if="choice?.image" :src="choice?.image" class="image2" alt="" />
           </p>
         </div>
       </div>
     </div>
 
     <div class="button-container">
-      <Button :label="selectLang(translationModule.next)"
-      v-if="!(questionType == 'Symbol Search' && stage == 'show image')"
-      @click="() => {
+      <Button :label="selectLang(translationModule.next)" v-if="!(questionType == 'Symbol Search' && stage == 'show image')&& lang.getLang=='en'" @click="() => {
         viewEmojiFunc()
         scrollTop();
-        
-        if(!showNext){$emit('finish')}else{$emit('next');}
+
+        if (!showNext) { $emit('finish') } else { $emit('next'); }
       }
-        " icon="pi pi-arrow-right" iconPos="right"  />
+        "
+        icon="pi pi-arrow-right" iconPos="right"
+         />
+        <Button :label="selectLang(translationModule.next)" v-if="!(questionType == 'Symbol Search' && stage == 'show image' )&& lang.getLang=='ar'" @click="() => {
+        viewEmojiFunc()
+        scrollTop();
+
+        if (!showNext) { $emit('finish') } else { $emit('next'); }
+      }
+        "
+        icon="pi pi-arrow-left" iconPos="right" />
     </div>
     <span :style="{ left: (offset.toString() + 'vw') }" v-if="emojiToView == 0" class="emoj">&#128512</span>
     <span :style="{ left: (offset.toString() + 'vw') }" v-if="emojiToView == 1" class="emoj">&#128513</span>
@@ -188,12 +203,11 @@ img {
 
 .image2 {
   width: 38%;
+  object-fit:cover;
 }
 
 .container {
   padding-top: 2rem;
-  background-image: url('/public/images/tomJerry.svg');
-  background-repeat: repeat;
   min-height: 100vh;
   padding-inline: 5%;
   margin-bottom: 5rem;
@@ -203,17 +217,6 @@ p>img {
   width: 32.5%;
 }
 
-iframe {
-  background: transparent;
-  /* Ensure the iframe itself has no background */
-  border: none;
-  /* Remove the border */
-  width: 100%;
-  /* Adjust the width as needed */
-  height: 100px;
-  /* Adjust the height as needed */
-
-}
 
 h3 {
   width: fit-content;
@@ -257,11 +260,11 @@ button {
 
 .choice-text {
   border: 4px solid var(--choiceBackgroundColor);
-  border-radius: 1rem;
-  width: 100%;
+  border-radius: 0.5rem;
+  width: 75%;
   cursor: pointer;
   font-weight: 400;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 1rem;
   color: var(--header);
 }
 
@@ -278,10 +281,12 @@ h1 {
   margin: 0;
   padding: 0;
   width: 100%;
+  line-height: 2rem;
+  margin-bottom: 2rem;
 }
 
 .selectedChoice {
-  background-color: var(--accent1);
+  border-color: var(--accent4);
   color: var(--primary);
   transition-duration: 0.5s;
 }
@@ -296,19 +301,21 @@ h1 {
 h4,
 p {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
   flex-direction: column;
-  font-size: 1.25rem;
-  font-weight: 800;
+}
+span{
+  font-weight:600;
+  color: var(--header);
 }
 
 p {
   flex-direction: row;
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width:1150px) {
   .question {
     display: grid;
     grid-template-columns: 62fr 38fr;
@@ -326,7 +333,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-left: 2px solid var(--choiceBackgroundColor);
+    align-items: end;
   }
 
   img {

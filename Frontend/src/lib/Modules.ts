@@ -3,9 +3,10 @@ import { usePersonalInfo } from "@/stores/token";
 import { useRouter } from "vue-router";
 import { computed } from "vue";
 import { selectLang } from "@/lib/Translate";
-import {  shallowRef,ref } from "vue";
+import { shallowRef, ref } from "vue";
 import Textarea from "primevue/textarea";
 import InputText from "primevue/inputtext";
+import { post_event } from "./mediator";
 
 export const pagesToRoute = [
   { name: translationModule.home, to: "/#Home" },
@@ -14,11 +15,14 @@ export const pagesToRoute = [
   { name: translationModule.contact, to: "/#Contact" },
 ];
 
-export const items = computed(() => {
+
+export const items = ((router:any) => {
+
   const personalInfo = usePersonalInfo();
-  const router = useRouter();
+  let items: any
+
   if (personalInfo.getInfo?.userType == "Admin") {
-    return [
+    items = [
       {
         label: selectLang(translationModule.maangeRequests),
         command: () => {
@@ -51,53 +55,60 @@ export const items = computed(() => {
       },
     ];
   } else if (personalInfo.getInfo?.userType == "Parent") {
-    return [
-      {
-        label: selectLang(translationModule.home),
-        command: () => {
-          router.push("/parentHome");
-        },
-      },
-      {
-        label: selectLang(translationModule.childProgress),
-        command: () => {
-          router.push("/childrenProgress");
-        },
-      },
-
-      {
-        label: selectLang(translationModule.childCourses),
-        command: () => {
-          router.push("/childrenCourses");
-        },
-      },
-      {
-        label: selectLang(translationModule.childAnalysis),
-        command: () => {
-          router.push("/childrenAnalysis");
-        },
-      },
+    items = [
       {
         label: selectLang(translationModule.addChild),
+        icon: "pi pi-user-plus",
         command: () => {
           router.push("/addChild");
         },
       },
       {
-        label: selectLang(translationModule.sub),
+        label: selectLang(translationModule.childCourses),
+        icon: "pi pi-shopping-bag",
         command: () => {
-          router.push("/subscription");
+          router.push("/childrenCourses");
         },
       },
       {
+        label: selectLang(translationModule.childProgress),
+        icon: "pi pi-chart-line",
+        command: () => {
+          router.push("/childrenProgress");
+        },
+      },
+      {
+        label: selectLang(translationModule.childAnalysis),
+        icon: "pi pi-id-card",
+        command: () => {
+          router.push("/childrenAnalysis");
+        },
+      },
+
+      {
+        label: selectLang(translationModule.enrollmentRequests),
+        icon: "pi pi-check-circle",
+        command: () => {
+          router.push("/parentHome");
+        },
+      },
+
+      // {
+      //   label: selectLang(translationModule.sub),
+      //   command: () => {
+      //     router.push("/subscription");
+      //   },
+      // },
+      {
         label: selectLang(translationModule.settings),
+        icon: "pi pi-cog",
         command: () => {
           router.push("/parentSettings");
         },
       },
     ];
   } else if (personalInfo.getInfo?.userType == "Child") {
-    return [
+    items = [
       {
         label: selectLang(translationModule.myCourses),
         command: () => {
@@ -119,7 +130,7 @@ export const items = computed(() => {
     ];
   }
   else if (personalInfo.getInfo?.userType == "Instructor") {
-    return [
+    items = [
       {
         label: "Profile",
         command: () => {
@@ -127,21 +138,25 @@ export const items = computed(() => {
         },
       },
       {
-        label:"Chats",
+        label: "Chats",
         command: () => {
           router.push("/instructorChats/0");
         },
       },
     ];
   }
-  return [
-    {
-      label: selectLang(translationModule.logout),
-      command: () => {
-        return true;
+  else {
+    items = [
+      {
+        label: selectLang(translationModule.logout),
+        command: () => {
+          return true;
+        },
       },
-    },
-  ];
+    ];
+  }
+  post_event('nav_items',items)
+  return items
 });
 
 export const achievments = [
@@ -198,7 +213,7 @@ export const achievments = [
     },
     text: {
       en: "Trace Education has proudly partnered with EdVentures and Mastercard Foundation, participating in a transformative mentorship program. Out of 210 startups, we were one of the 19 selected to attend a boot camp in Alexandria, gaining invaluable insights and support that have significantly shaped our growth and trajectory.",
-      ar:" تفخر Trace Education بشراكتها مع EdVentures ومؤسسة ماستركارد، حيث شاركت في برنامج إرشادي تحولي. من بين 210 شركات ناشئة، تم اختيارنا كواحدة من 19 شركة لحضور مخيم تدريبي في الإسكندرية، حيث اكتسبنا رؤى ودعماً لا يقدر بثمن وقد أسهم بشكل كبير في نمو مسيرتنا وتوجهنا.",
+      ar: " تفخر Trace Education بشراكتها مع EdVentures ومؤسسة ماستركارد، حيث شاركت في برنامج إرشادي تحولي. من بين 210 شركات ناشئة، تم اختيارنا كواحدة من 19 شركة لحضور مخيم تدريبي في الإسكندرية، حيث اكتسبنا رؤى ودعماً لا يقدر بثمن وقد أسهم بشكل كبير في نمو مسيرتنا وتوجهنا.",
     },
   },
 ];
@@ -244,7 +259,7 @@ export const childSidebar = [
     icon: "pi pi-bell",
   },
   {
-    label:translationModule.chats,
+    label: translationModule.chats,
     name: "Chats",
     to: "ChildChats/0",
     icon: "pi pi-comments",
@@ -315,16 +330,10 @@ export const educationSystems = computed(() => {
 export const parentSidebarPages = computed(() => {
   return [
     {
-      label: selectLang(translationModule.enrollmentRequests),
-      name: "enrollmentsRequests",
-      to: "parentHome",
-      icon: "pi pi-home",
-    },
-    {
-      label: selectLang(translationModule.childProgress),
-      name: "childProgress",
-      to: "childrenProgress",
-      icon: "pi pi-chart-line",
+      label: selectLang(translationModule.addChild),
+      name: "addChild",
+      to: "addChild",
+      icon: "pi pi-user-plus",
     },
     {
       label: selectLang(translationModule.childCourses),
@@ -333,23 +342,32 @@ export const parentSidebarPages = computed(() => {
       icon: "pi pi-shopping-bag",
     },
     {
+      label: selectLang(translationModule.childProgress),
+      name: "childProgress",
+      to: "childrenProgress",
+      icon: "pi pi-chart-line",
+    },
+    {
       label: selectLang(translationModule.childAnalysis),
       name: "childAnalysis",
       to: "childrenAnalysis",
       icon: "pi pi-id-card",
     },
     {
-      label: selectLang(translationModule.addChild),
-      name: "addChild",
-      to: "addChild",
-      icon: "pi pi-user-plus",
+      label: selectLang(translationModule.enrollmentRequests),
+      name: "enrollmentsRequests",
+      to: "parentHome",
+      icon: "pi pi-check-circle",
     },
-    {
-      label: selectLang(translationModule.sub),
-      name: "subscriptions",
-      to: "subscription",
-      icon: "pi pi-arrow-right-arrow-left",
-    },
+
+
+
+    // {
+    //   label: selectLang(translationModule.sub),
+    //   name: "subscriptions",
+    //   to: "subscription",
+    //   icon: "pi pi-arrow-right-arrow-left",
+    // },
     {
       label: selectLang(translationModule.settings),
       name: "settings",
@@ -426,12 +444,12 @@ export const instructorSidebarPages = computed(() => {
       icon: "pi pi-user",
     },
     {
-      label:"Chats",
+      label: "Chats",
       name: "Chats",
       to: "instructorChats/0",
       icon: "pi pi-comments",
     },
- 
+
   ];
 });
 
@@ -439,12 +457,12 @@ export const workshopsImages = computed(() => {
   return [
     {
       text: {
-        en:"Egypt Space Agency Visit",
+        en: "Egypt Space Agency Visit",
         ar: "زيارة لوكالة الفضاء المصرية",
       },
       image: "/images/Arospace.jpeg",
     },
-    
+
     {
       text: {
         en: "Egypt Space Agency Visit",
@@ -452,7 +470,7 @@ export const workshopsImages = computed(() => {
       },
       image: "/images/EgyptSpace.png",
     },
-   
+
 
     {
       text: {
@@ -492,24 +510,24 @@ export const workshopsImages = computed(() => {
 
 export const materialInfo = [
   {
-    name:'Lesson',
-    icon:'pi pi-book',
+    name: 'Lesson',
+    icon: 'pi pi-book',
   },
   {
-    name:'Quiz',
-    icon:'pi pi-check-square',
+    name: 'Quiz',
+    icon: 'pi pi-check-square',
   },
   {
-    name:'Simulation',
-    icon:'pi pi-desktop',
+    name: 'Simulation',
+    icon: 'pi pi-desktop',
   },
   {
-    name:'Project',
-    icon:'pi pi-building',
+    name: 'Project',
+    icon: 'pi pi-building',
   },
   {
-    name:'Activity',
-    icon:'pi pi-bolt',
+    name: 'Activity',
+    icon: 'pi pi-bolt',
   },
 ]
 
@@ -611,7 +629,7 @@ export const chaptersLabels = shallowRef({
   titleEn: {
     label: "English Title",
     mask1: "title",
-    mask2: "en",
+    mask2: 'en',
     inputType: "text",
     component: InputText,
     disabled: false,
@@ -619,7 +637,7 @@ export const chaptersLabels = shallowRef({
   titleAr: {
     label: "Arabic Title",
     mask1: "title",
-    mask2: "ar",
+    mask2: 'ar',
     inputType: "text",
     component: InputText,
     disabled: false,
@@ -783,8 +801,8 @@ export const programObject = shallowRef({
 
 
 export const instructorIfonArrayFields = shallowRef({
-  specializations: { name: "Specializations", value: <any[]> [] },
-  educationBackground: { name: "Education Background", value:  <any[]>[] },
+  specializations: { name: "Specializations", value: <any[]>[] },
+  educationBackground: { name: "Education Background", value: <any[]>[] },
   experience: { name: "Experience", value: <any[]>[] },
 });
 export const instructorIfonFields = shallowRef({
@@ -821,3 +839,62 @@ export const instructorIfonFields = shallowRef({
     disabled: false,
   },
 });
+
+export const IQScoresMap = [
+  {
+    min: 130,
+    max: 160,
+    desc: {
+      en: "Very Superior",
+      ar: "متفوق جدًا"
+    }
+  },
+  {
+    min: 120,
+    max: 129,
+    desc: {
+      en: "Superior",
+      ar: "متفوق"
+    }
+  },
+  {
+    min: 110,
+    max: 119,
+    desc: {
+      en: "High Average",
+      ar: "فوق المتوسط"
+    }
+  },
+  {
+    min: 90,
+    max: 109,
+    desc: {
+      en: "Average",
+      ar: "متوسط"
+    }
+  },
+  {
+    min: 80,
+    max: 89,
+    desc: {
+      en: "Low Average",
+      ar: "أقل من المتوسط"
+    }
+  },
+  {
+    min: 70,
+    max: 79,
+    desc: {
+      en: "Borderline",
+      ar: "حدي"
+    }
+  },
+  {
+    min: 0,
+    max: 69,
+    desc: {
+      en: "Extremely Low",
+      ar: "منخفض للغاية"
+    }
+  }
+]

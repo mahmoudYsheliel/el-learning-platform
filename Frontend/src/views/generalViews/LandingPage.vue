@@ -69,7 +69,7 @@ personaRequester.callApi().then((res) => {
     <Workshop />
     <Certificate  />
     <Achievement id="About" ref="about"/>
-    <PersonalizedLearning />
+    <!-- <PersonalizedLearning /> -->
     <Footer id="Contact" ref="contact"/>
   </main>
 </template>

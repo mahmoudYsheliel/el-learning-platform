@@ -88,13 +88,19 @@ function switchChild(id: string) {
             <i v-else class="pi pi-user"></i>
           </div>
           <div class="childInfo">
-            <p style="color: var(--text); margin: 0; line-height: 1rem">
-              {{ selectedChild?.email }}
-            </p>
-            <h2 style="color: var(--accent1); margin: 0; line-height: 2rem">
+            <h2 style="color: var(--accent1); margin: 0; line-height: 2rem;padding-top: 0.5rem;">
               {{ selectedChild?.first_name }} {{ selectedChild?.last_name }}
             </h2>
-            <Button
+            <p style="color: var(--text); margin: 0; line-height: 0.75rem">
+              {{ selectedChild?.email }}
+            </p>
+            <h3>
+          {{ selectLang(selectedChild?.child_group) }}
+        </h3>
+            
+          </div>
+        </div>
+        <Button
               :label="selectLang(translationModule.switchToChild)"
               @click="
                 () => {
@@ -102,12 +108,7 @@ function switchChild(id: string) {
                 }
               "
             />
-          </div>
-        </div>
-
-        <h3>
-          {{ selectLang(selectedChild?.child_group) }}
-        </h3>
+       
       </div>
     </div>
   </main>
@@ -153,13 +154,14 @@ function switchChild(id: string) {
   border-radius: 1rem;
 }
 h3 {
-  color: var(--primary);
-  background-color: var(--accent1);
-  padding: 1rem 1.5rem;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 0.25rem;
+  line-height: 1.25rem;
+  padding: 0.25rem;
+  font-size: 0.75rem;
+  width: fit-content;
+  background-color: transparent;
+  color: var(--text);
+  border: 2px solid var(--accent1);
 }
 .childInfo {
   display: flex;
@@ -167,15 +169,23 @@ h3 {
   justify-content: center;
 }
 button {
-  font-size: 0.75rem;
-  width: fit-content;
-  background-color: transparent;
-  color: var(--text);
-  border: 2px solid var(--accent1);
-}
-button:hover {
   color: var(--primary);
   background-color: var(--accent1);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button:hover {
+  color: var(--accent1);
+  background-color: var(--primary);
   transition-duration: 0.5s;
+}
+@media print{
+  button, .dropDown{
+    display: none;
+  }
+  
 }
 </style>

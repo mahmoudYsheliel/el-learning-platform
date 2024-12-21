@@ -44,23 +44,20 @@ function setLang(selectedLang: string | undefined) {
 
 <template>
   <main>
-    <div class="image">
-      <img src="/images/logo.png" alt="" />
-      <p>{{ selectLang(translationModule.entertainYourEdu) }}</p>
-    </div>
+    
 
     <div class="options">
       <span @click="router.push('/tracePlans/0/0')" style="cursor: pointer">{{
         selectLang(translationModule.plans)
       }}</span>
-      <div class="card flex justify-content-center">
         <SplitButton
-          :label="selectLang(translationModule.programs)"
+         
           :model="items"
           @click="items[0]?.command"
           text
-        />
-      </div>
+        >
+      <span>{{ selectLang(translationModule.programs) }}</span>
+      </SplitButton>
       <span
         style="cursor: pointer"
         @click="
@@ -79,7 +76,7 @@ main {
   display: flex;
   width: 90%;
   margin-inline: auto;
-  justify-content: space-between;
+  justify-content: end;
   align-items: start;
   margin-top: 1rem;
 }
@@ -88,18 +85,16 @@ main {
 }
 .options {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   color: var(--accent2);
   align-items: center;
-  font-weight: bold;
+
+}
+span{
+  font-weight:700;
 }
 img {
   height: 1.75rem;
   margin: 0;
-}
-p {
-  margin: 0;
-  color: var(--accent2);
-  margin-left: 1rem;
 }
 </style>

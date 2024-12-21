@@ -115,7 +115,6 @@ watch(prop, () => {
         ? conclusions.value
         : null,
     };
-    console.log(mat)
     if (prop.materialId) {
       let data = {
         activity_id: prop.materialId,

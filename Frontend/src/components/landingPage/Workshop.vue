@@ -53,7 +53,12 @@ const responsiveOptions = ref([
         </div>
       </template>
     </Carousel>
-    <div style="height: 2rem">
+   
+    <Button
+      :label="selectLang(translationModule.bookWorkshop)"
+      @click="showWorkshop"
+    />
+    <div>
       <p
         style="color: var(--wrongAnswer)"
         class="noWorkshops"
@@ -62,10 +67,6 @@ const responsiveOptions = ref([
         {{ selectLang(translationModule.noWorkshop) }}
       </p>
     </div>
-    <Button
-      :label="selectLang(translationModule.bookWorkshop)"
-      @click="showWorkshop"
-    />
   </main>
 </template>
 

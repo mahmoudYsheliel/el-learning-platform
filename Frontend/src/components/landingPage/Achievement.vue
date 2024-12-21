@@ -77,8 +77,6 @@ h1 {
   width: fit-content;
   margin: 0;
   padding: 0;
-  line-height: 0.5rem;
-  border-bottom: 0.25rem solid var(--accent3);
 }
 
 p {

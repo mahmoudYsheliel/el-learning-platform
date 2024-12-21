@@ -53,8 +53,8 @@ const props = defineProps({
   },
 });
 const emits = defineEmits(['timeOver'])
-const remainTime = ref(0)
-setInterval(()=>{remainTime.value+=1;if(remainTime.value==props.totalTime){emits('timeOver')}},1000)
+const remainTime = ref(props.totalTime)
+setInterval(()=>{remainTime.value-=1;if(remainTime.value==0){emits('timeOver')}},1000)
 
 const canvas = ref();
 

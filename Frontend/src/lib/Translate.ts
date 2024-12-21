@@ -1,3 +1,4 @@
+import LearningStyles from "@/components/parent/childrenAnalysis/LearningStyles.vue";
 import { useLang } from "@/stores/token";
 
 interface Languages {
@@ -59,19 +60,15 @@ export const translationModule = {
     ar: "استمتع بالتعليم الخاص بك",
   },
   upSkills: {
-    en: "Up You Skils",
+    en: "Up Your Skills",
     ar: "ارفع مهاراتك",
   },
   advanceCareer: {
-    en: "To Advance Your Career",
-    ar: "للنهوض بحياتك ",
-  },
-  path: {
-    en: "Path",
-    ar: "المهنية",
+    en: "To Advance Your Career Path",
+    ar: " للنهوض بحياتك المهنية",
   },
   traceDescription: {
-    en: "race delivers the most interactive way for education as never before .We are here to boost our talent students creativity and guide them through their interesting and curious journey in the world",
+    en: "Trace delivers the most interactive way for education as never before .We are here to boost our talent students creativity and guide them through their interesting and curious journey in the world",
     ar: "قدم Trace الطريقة الأكثر تفاعلية للتعليم كما لم يحدث من قبل. نحن هنا لتعزيز إبداع طلابنا الموهوبين وتوجيههم خلال رحلتهم الشيقة والغريبة في العالم",
   },
   startFree: {
@@ -335,8 +332,8 @@ export const translationModule = {
     ar: "عرض التعليقات",
   },
   enrollmentRequests: {
-    en: "Enrollment Requests",
-    ar: "طلبات التسجيل",
+    en: "Enrollments",
+    ar: "التسجيل",
   },
   manageLogs: {
     en: "Manage Logs",
@@ -758,88 +755,166 @@ export const translationModule = {
     en: "If you have a promo code, please enter it",
     ar: "إذا كان لديك رمز ترويجي، يرجى إدخاله",
   },
-  promoCode:{
-    en:'promo code',
-    ar:'الرمز الترويجي'
+  promoCode: {
+    en: 'promo code',
+    ar: 'الرمز الترويجي'
   },
-  courseBelongsToPlan:{
-    en:'This Course Belongs to a Trace Plan',
-    ar:'تنتمي هذه الدورة إلى خطة Trace '
+  courseBelongsToPlan: {
+    en: 'This Course Belongs to a Trace Plan',
+    ar: 'تنتمي هذه الدورة إلى خطة Trace '
   },
-  viewPlans:{
-    en:'View Plans',
-    ar:'عرض الخطط'
+  viewPlans: {
+    en: 'View Plans',
+    ar: 'عرض الخطط'
   },
-  planDescription:{
-    en:'Plan Description',
-    ar:'وصف الخطة'
+  planDescription: {
+    en: 'Plan Description',
+    ar: 'وصف الخطة'
   },
-  planObjectives:{
-    en:'Plan Objectives',
-    ar:'أهداف الخطة'
+  planObjectives: {
+    en: 'Plan Objectives',
+    ar: 'أهداف الخطة'
   },
-  planInfo:{
-    en:'Plan Information',
-    ar:'معلومات عن الخطة'
+  planInfo: {
+    en: 'Plan Information',
+    ar: 'معلومات عن الخطة'
   },
-  missingPersonalInfo:{
-    en:'Please add missing personal information',
-    ar:'الرجاء إضافة المعلومات الشخصية المفقودة'
+  missingPersonalInfo: {
+    en: 'Please add missing personal information',
+    ar: 'الرجاء إضافة المعلومات الشخصية المفقودة'
   },
-  addInfo:{
-    en:'Add missing information',
-    ar:'إضافة المعلومات المفقودة'
+  addInfo: {
+    en: 'Add missing information',
+    ar: 'إضافة المعلومات المفقودة'
   },
-  later:{
-    en:'Later',
-    ar:'لاحقاً'
+  later: {
+    en: 'Later',
+    ar: 'لاحقاً'
   },
-  clickToView:{
-    en:'Click to Start',
-    ar:'اضغط للبدأ'
+  clickToView: {
+    en: 'Click to Start',
+    ar: 'اضغط للبدأ'
   },
-  sources:{
-    en:"Sources",
-    ar:"المصادر"
+  sources: {
+    en: "Sources",
+    ar: "المصادر"
   },
-  source:{
-    en:"Source",
-    ar:"المصدر"
+  source: {
+    en: "Source",
+    ar: "المصدر"
   },
-  objectives:{
-    en:"Objectives",
-    ar:"الأهداف"
+  objectives: {
+    en: "Objectives",
+    ar: "الأهداف"
   },
-  terms_concepts:{
-    en:"Terms and Concepts",
-    ar:'المصطلحات و المبادئ'
+  terms_concepts: {
+    en: "Terms and Concepts",
+    ar: 'المصطلحات و المبادئ'
   },
-  materials:{
-    en:'Materials',
-    ar:'الأدوات'
+  materials: {
+    en: 'Materials',
+    ar: 'الأدوات'
   },
-  instructions:{
-    en:"Instrictions",
-    ar:"الخطوات"
+  instructions: {
+    en: "Instrictions",
+    ar: "الخطوات"
   },
-  results:{
-    en:"Results",
-    ar:"النتائج"
+  results: {
+    en: "Results",
+    ar: "النتائج"
   },
-  conclusions:{
-    en:"Conclusions",
-    ar:"الاستنتاج"
+  conclusions: {
+    en: "Conclusions",
+    ar: "الاستنتاج"
   },
-  manageUsers:{
-    en:'Manage Users',
-    ar:'ادارة المستخدمين'
+  manageUsers: {
+    en: 'Manage Users',
+    ar: 'ادارة المستخدمين'
   },
-courseHasPrequisite:{
-  en:'This Course Requires a Prequisite: ',
-  ar:'تتطلب هذه الدورة دورة متطلبة:'
-},
-chats:{
-  en:'Ask Instructor',
-  ar:"اسأل المعلم"
-},
+  courseHasPrequisite: {
+    en: 'This Course Requires a Prequisite: ',
+    ar: 'تتطلب هذه الدورة دورة متطلبة:'
+  },
+  chats: {
+    en: 'Ask Instructor',
+    ar: "اسأل المعلم"
+  },
+  recommendTracks: {
+    en: "Best Tracks",
+    ar: "أفضل المسارات",
+  },
+  LearningStyle: {
+    en: "Learning Style",
+    ar: "أسلوب التعلم"
+  },
+  keySkills: {
+    en: 'Key Skills',
+    ar: 'المهارات الأساسية'
+  },
+  styleOverview: {
+    en: 'Style Overview',
+    ar: 'نظرة عامة على النمط'
+  },
+  supportTips: {
+    en: 'Support Tips',
+    ar: 'نصائح الدعم'
+  },
+  aboutTrack: {
+    en: 'About This Track',
+    ar: 'حول هذا المسار'
+  },
+  guidingPath: {
+    en: 'Guiding Their Path',
+    ar: 'توجيه مسارهم'
+  },
+  print: {
+    en: 'Print',
+    ar: 'اطبع'
+  },
+  intro: {
+    en: 'Introduction',
+    ar: 'مقدمة'
+  },
+  analysisReportIntro: {
+    en: "Welcome to your personalized Trace Test Report. This comprehensive report provides \
+                detailed insights into your child’s cognitive strengths, learning style, and areas for growth.\
+                Based on the test results, we have crafted a personalized learning pathway to help your child\
+                excel in STEM education. Our goal is to support your child’s academic journey with tailored\
+                strategies and courses designed to fit their unique profile.",
+    ar: "مرحبًا بك في تقرير اختبار التتبع المخصص لك. ويقدم هذا التقرير الشامل\
+                رؤى تفصيلية حول نقاط القوة المعرفية لدى طفلك وأسلوب التعلم ومجالات النمو.\
+                واستنادًا إلى نتائج الاختبار، قمنا بتصميم مسار تعليمي مخصص لمساعدة طفلك\
+                التفوق في تعليم العلوم والتكنولوجيا والهندسة والرياضيات (STEM). هدفنا هو دعم الرحلة الأكاديمية لطفلك من خلال برامج مخصصة\
+                الاستراتيجيات والدورات المصممة لتناسب ملفهم الشخصي الفريد./"
+  },
+  purpose: {
+    en: 'Purpose of the Trace Test',
+    ar: 'الغرض من اختبار التتبع'
+  },
+  analysisReportPurpose: {
+    en: "The Trace Test evaluates key cognitive abilities that are critical for success in STEM fields. By\
+                assessing areas such as verbal reasoning, visual-spatial skills, working memory, and\
+                processing speed, the Trace Test helps identify your child’s strengths and potential areas for\
+                growth. This allows us to create a learning pathway that is both challenging and supportive.",
+    ar: "يقوم اختبار التتبع بتقييم القدرات المعرفية الأساسية التي تعتبر ضرورية للنجاح في مجالات العلوم والتكنولوجيا والهندسة والرياضيات. بواسطة\
+                تقييم مجالات مثل التفكير اللفظي، والمهارات البصرية المكانية، والذاكرة العاملة، و\
+                سرعة المعالجة، يساعد اختبار التتبع في تحديد نقاط القوة لدى طفلك والمجالات المحتملة لها\
+                نمو. يتيح لنا ذلك إنشاء مسار تعليمي يتسم بالتحدي والداعم في نفس الوقت."
+  },
+  detailed: {
+    en: 'Detailed Feedback on Your Child’s Performance',
+    ar: "تعليقات تفصيلية حول أداء طفلك"
+  },
+  analysisReportDetail: {
+    en: "The following is a detailed breakdown of each cognitive task and what your child’s scores\
+                indicate about their abilities:",
+    ar: "فيما يلي تحليل تفصيلي لكل مهمة معرفية ونتائج طفلك\
+                تشير إلى قدراتهم:"
+  },
+
+
+
+
+
+
 };

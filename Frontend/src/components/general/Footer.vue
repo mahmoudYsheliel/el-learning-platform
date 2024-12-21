@@ -47,9 +47,9 @@ programRequester.callApi().then((res) => {
       </div>
       <div class="socialMedia">
         <div style="cursor: pointer">
-          <a href="mailto:Info@traceedtech.com?subject=Trace Platform&body=I hope this email finds you well:">
+          <a  style="color: var(--primary); text-decoration: none;" href="mailto:Info@traceedtech.com?subject=Trace Platform&body=I hope this email finds you well:">
             <i class="pi pi-envelope"></i>
-            <span>Info@traceedtech.com</span></a
+            <span >Info@traceedtech.com</span></a
           >
         </div>
         <div>

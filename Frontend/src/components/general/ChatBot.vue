@@ -46,7 +46,7 @@ async function handleSendEvent(input:any) {
 }
 
 function parseMarkdown(text: string): string {
-    console.log(text)
+
   // Replace ## heading with <h2> HTML tags
   let parsedText = text.replace(/##/g, '');
   parsedText = parsedText.replace(/\*\*/g, '');

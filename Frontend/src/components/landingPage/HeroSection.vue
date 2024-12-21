@@ -26,14 +26,14 @@ const router = useRouter();
           />
           <br />
           {{ selectLang(translationModule.advanceCareer) }}
-          <br />
-          {{ selectLang(translationModule.path) }}
+      
         </h1>
-        <p>
+        <p style="font-size: 1.25rem;font-weight: 600;">
           {{ selectLang(translationModule.traceDescription) }}
         </p>
         <div class="buttonWrapper">
           <Button
+          style="font-size: 1.5rem;margin-top: 1rem;"
             :label="selectLang(translationModule.startFree)"
             @click="router.push('/freeCourses')"
           />
@@ -65,6 +65,7 @@ main {
   align-items: start;
   justify-content: space-between;
   margin-inline: auto;
+  gap: 4rem;
 }
 img {
   width: 38.75%;
@@ -79,7 +80,7 @@ h1 {
   color: var(--accent1);
   text-transform: capitalize;
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: bolder;
   line-height: 5.5rem;
   margin: 0;
 }
@@ -89,7 +90,7 @@ span {
 p {
   color: var(--text);
   text-transform: capitalize;
-  width: 25rem;
+
   margin: 0;
 }
 strong {
