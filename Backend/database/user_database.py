@@ -232,24 +232,21 @@ async def add_child(user: User, child: Child, userId: str) -> ServiceResponse:
 
     user.user_type = "Child"
     user.hashed_pass = hash_password(user.hashed_pass)
-    program = (
-        await get_database()
-        .get_collection("program")
-        .find_one(
-            {"_id": validate_bson_id(child.child_group)},
-            {"_id": 0, "min_age": 1, "max_age": 1},
-        )
-    )
-    if not program:
-        return ServiceResponse(msg="could find child_group", success=False)
+    birth_date = datetime.now()
+    if user.birth_day:
+        birth_date = datetime.strptime(user.birth_day, "%Y-%m-%dT%H:%M:%S.%fZ")
+    
+    today = datetime.now()
+    age = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
+    print(age)
     analysis_quiz = (
         await get_database()
         .get_collection("analysis_quiz")
         .find_one(
             {
                 "course_title_follow": "start",
-                "min_age": {"$lte": program["min_age"]},
-                "max_age": {"$gte": program["max_age"]},
+                "min_age": {"$lte": age},
+                "max_age": {"$gte": age},
             },
             {"id": {"$toString": "$_id"}, "title": 1, "description": 1},
         )
