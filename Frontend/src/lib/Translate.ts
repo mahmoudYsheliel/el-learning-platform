@@ -240,7 +240,7 @@ export const translationModule = {
     ar: "كلمة السر",
   },
   confirmPass: {
-    en: "Conform Password",
+    en: "Confirm Password",
     ar: "تأكيد كلمة المرور",
   },
   childProgress: {
@@ -816,7 +816,7 @@ export const translationModule = {
     ar: 'الأدوات'
   },
   instructions: {
-    en: "Instrictions",
+    en: "instructions",
     ar: "الخطوات"
   },
   results: {

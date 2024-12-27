@@ -63,7 +63,8 @@ personaRequester.callApi().then((res) => {
     
     <AskMissingPersonalInfo :show-dialog="showAskInfoDialog" @remove-dialog="showAskInfoDialog=false"/>
     <Navbar class="nav" :selected="selected" />
-    <Options id="Home" />
+    <div class="landing_page_main">
+      <Options id="Home" />
     <HeroSection ref="home"/>
     <Programs id="Courses" ref="courses"/>
     <Workshop />
@@ -71,6 +72,8 @@ personaRequester.callApi().then((res) => {
     <Achievement id="About" ref="about"/>
     <!-- <PersonalizedLearning /> -->
     <Footer id="Contact" ref="contact"/>
+    </div>
+  
   </main>
 </template>
 
@@ -79,4 +82,10 @@ personaRequester.callApi().then((res) => {
   top: 0;
   position: sticky;
 }
+.landing_page_main{
+  overflow-y: scroll;
+  height: calc(100vh - 4rem) ;
+}
+
+
 </style>
