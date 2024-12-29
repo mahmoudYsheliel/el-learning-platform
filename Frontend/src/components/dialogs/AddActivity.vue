@@ -98,8 +98,8 @@ watch(prop, () => {
       title: title.value,
       description: description.value,
       start_images: startImages.value?.length ? startImages.value : null,
-      end_images: endImages.value?.length ? startImages.value : null,
-      sources: sources.value?.length ? startImages.value : null,
+      end_images: endImages.value?.length ? endImages.value : null,
+      sources: sources.value?.length ? sources.value : null,
       objectives: objectives.value?.items?.length
         ? objectives.value
         : null,

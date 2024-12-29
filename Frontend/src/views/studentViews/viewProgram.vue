@@ -8,7 +8,6 @@ import { selectLang, translationModule } from "@/lib/Translate";
 import "primeicons/primeicons.css";
 import { ref, computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import Options from "@/components/general/Options.vue";
 const route = useRoute();
 const router = useRouter();
 const programs = ref<any[]>([]);

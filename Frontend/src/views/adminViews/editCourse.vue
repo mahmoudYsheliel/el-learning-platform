@@ -126,7 +126,7 @@ function updatecourse() {
       },
       description: {
         en: courseObject.value.descriptionEn.variable,
-        ar: courseObject.value.descriptionEn.variable,
+        ar: courseObject.value.descriptionAr.variable,
       },
       chapters: chapters.value,
       categories: updatedcourseCategories,

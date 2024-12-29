@@ -52,14 +52,25 @@ div[class*='rtl'] .circle {
   transform: scaleX(-1);
 }
 
-body::-webkit-scrollbar {
-  display: none;
+
+
+::-webkit-scrollbar {
+  width: 12px;
 }
-body {
-  -ms-overflow-style: none;
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
 }
-body {
-  -ms-overflow-style: none;
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent3); 
 }
 
 body,
@@ -69,8 +80,6 @@ html {
 }
 body,
 #app {
-  width: 100vw;
-  height: 100vh;
   font-family:'Cairo'
 }
 :root {
@@ -85,6 +94,10 @@ body,
   --choiceBackgroundColor:#E8F7FF;
   --wrongAnswer:#FF2D2D;
   --correctAnswer:#5CFA75;
+  --accent1_100:#E8F7FF;
+  --accent1_200:#D1F0FF;
+  --accent1_300:#BAE8FF;
+
 }
 :root {
     font-size: 14px; /* Base for mobile */

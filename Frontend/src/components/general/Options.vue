@@ -78,7 +78,7 @@ main {
   margin-inline: auto;
   justify-content: end;
   align-items: start;
-  margin-top: 1rem;
+  padding-top: 1rem;
 }
 .image {
   position: relative;

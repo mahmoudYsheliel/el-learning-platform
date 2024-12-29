@@ -104,6 +104,9 @@ button {
    margin-inline:    2rem;
     display: inline-block;
 }
+button{
+  background-image: linear-gradient(to right , var(--accent1), var(--accent4));
+}
 @media screen and (max-width: 1300px) {
   .wrapper {
     flex-direction: column-reverse;

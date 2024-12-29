@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Navbar from "@/components/general/Navbar.vue";
-import Options from "@/components/general/Options.vue";
 import Footer from "@/components/general/Footer.vue";
 import { decodeCredential } from "vue3-google-login";
 import { usePersonalInfo } from "@/stores/token";
