@@ -2,6 +2,7 @@
 import Navbar from "@/components/general/Navbar.vue";
 import Footer from "@/components/general/Footer.vue";
 import CourseCard from "@/components/general/CourseCard.vue";
+import TrackCard from "@/components/general/TrackCard.vue";
 import InputText from "primevue/inputtext";
 import { HttpRequester } from "@/lib/APICaller";
 import { selectLang, translationModule } from "@/lib/Translate";
@@ -37,17 +38,9 @@ const search = ref("");
     <Options />
 
     <div class="container">
-      <InputText
-        class="search"
-        v-model="search"
-        :placeholder="selectLang(translationModule.searchCourses)"
-      />
+      <InputText class="search" v-model="search" :placeholder="selectLang(translationModule.searchCourses)" />
       <div class="programs-wrapper">
-        <h4
-          v-for="program in programs"
-          @click="router.push(`/programs/${program?.id}`)"
-          :class="{ selected: program.id == selectedProgramId }"
-        >
+        <h4 v-for="program in programs" @click="router.push(`/programs/${program?.id}`)" :class="{ selected: program.id == selectedProgramId }">
           {{ selectLang(program?.title) }}
         </h4>
       </div>
@@ -68,20 +61,24 @@ const search = ref("");
       </div>
       <div class="content">
         <h1 style="margin-block: 6rem 4rem">
-          <img
-            style="width: 1.5rem; margin-right: 0.5rem"
-            src="/images/pen.svg"
-            alt=""
-          />
+          <img style="width: 1.5rem; margin-right: 0.5rem" src="/images/pen.svg" alt="" />
           {{ selectLang(translationModule.startJourney) }}
         </h1>
-        <div class="courses">
-          <CourseCard
-            v-for="course in selectedProgram?.courses"
-            :course="course"
-            :search="search"
-          />
+
+        <div class="courses_tracks_container" v-if="selectedProgram?.tracks">
+          <h2>{{ selectLang(translationModule.tracks) }}</h2>
+          <div class="courses_tracks">
+            <TrackCard v-for="track,i in selectedProgram?.tracks" :track="track" :program-id="selectedProgramId" :track-id="i" :search="search" />
+          </div>
         </div>
+
+        <div class="courses_tracks_container">
+          <h2>{{ selectLang(translationModule.courses) }}</h2>
+          <div class="courses_tracks">
+            <CourseCard v-for="course in selectedProgram?.courses" :course="course" :search="search" />
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -96,6 +93,11 @@ const search = ref("");
   display: block;
   margin-inline: auto;
 }
+h2{
+  color: var(--accent2);
+  padding-inline: 2rem;
+  font-size: 2rem;
+}
 .programs-wrapper {
   width: 40%;
   min-width: 20rem;
@@ -105,7 +107,8 @@ const search = ref("");
   margin-inline: auto;
   opacity: 0.67;
 }
-.programs-wrapper > h4 {
+
+.programs-wrapper>h4 {
   cursor: pointer;
   padding: 0.25rem 0.5rem;
   border-radius: 1rem;
@@ -115,64 +118,79 @@ const search = ref("");
   color: var(--accent1);
   transition-duration: 0.5s;
 }
+
 .header-description {
   margin-inline: 5rem;
 }
-.header-description > p {
+
+.header-description>p {
   max-width: 80rem;
   color: var(--text);
 }
+
 .header {
   display: flex;
   gap: 0.5rem;
 }
+
 h3 {
   opacity: 0.7;
 }
+
 h1 {
   color: var(--accent1);
-  border-bottom: 0.25rem solid var(--accent3);
   width: fit-content;
   padding: 0;
   line-height: 2rem;
 }
+
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.courses {
+
+.courses_tracks {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 4rem;
   width: 80%;
-  margin-bottom: 10rem;
+  padding: 1rem 2rem;
+  margin-bottom: 5rem;
+  margin-inline: auto;
+  overflow-x: auto;
 }
+.courses_tracks_container{
+  width: 98vw;
+}
+
 .description {
   display: flex;
   gap: 15rem;
 }
+
 .image {
   border-radius: 1rem;
   width: 20rem;
   aspect-ratio: 1.6/1;
 }
+
 @media screen and (max-width: 1500px) {
   .description {
     gap: 5rem;
   }
 }
+
 @media screen and (max-width: 1000px) {
   .description {
     flex-direction: column-reverse;
     gap: 1rem;
     width: 90%;
   }
+
   .header-description {
     margin-inline: 2rem;
   }
+
   .image {
     width: 100%;
   }

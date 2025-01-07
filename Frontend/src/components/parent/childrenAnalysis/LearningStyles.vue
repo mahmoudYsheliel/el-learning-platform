@@ -42,9 +42,7 @@ h4 {
   display: flex;
   flex-direction: column;
 }
-.iqInfo {
-  border-bottom: 2px solid var(--text);
-}
+
 .chart{
   width: 100%;
   overflow: scroll;

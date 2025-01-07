@@ -63,6 +63,7 @@ async def get_program(program_id: str) -> ServiceResponse:
                 "max_age":1,
                 "road_map": 1,
                 "image": 1,
+                "tracks":1
             },
         )
     )
@@ -110,7 +111,8 @@ async def get_all_programs_and_courses() -> ServiceResponse:
                 "road_map": 1,
                 "min_age":1,
                 "max_age":1,
-                "image": 1
+                "image": 1,
+                "tracks":1
             },
         )
         .to_list(length=None)

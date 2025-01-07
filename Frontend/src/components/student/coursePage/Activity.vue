@@ -147,7 +147,6 @@ h2 {
   margin: 0;
   line-height: 1rem;
   margin-top: 2rem;
-  border-bottom: 4px solid var(--accent3);
   width: fit-content;
 }
 .wrapper {
@@ -170,7 +169,6 @@ img {
 h3 {
   color: var(--accent1);
   font-size: 1.25rem;
-  border-bottom: solid var(--accent3);
   line-height: 1rem;
   width: fit-content;
   padding: 0;

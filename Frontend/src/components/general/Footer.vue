@@ -65,10 +65,10 @@ programRequester.callApi().then((res) => {
         </div>
       </div>
     </div>
-    <div class="copyRight">
+    <!-- <div class="copyRight">
       <p>Copyright © 2024 Trace LLC</p>
       <p>All Rights Reserved - Proudly Created by MYS</p>
-    </div>
+    </div> -->
   </main>
 </template>
 

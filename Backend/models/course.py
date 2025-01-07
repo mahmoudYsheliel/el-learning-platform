@@ -32,4 +32,5 @@ class Course(BaseModel):
     max_age:Optional[int]=0
     duration: Optional[int]=7  # number of days
     number_of_enrollments: Optional[int]=0
+    is_locked:Optional[bool]=False
     

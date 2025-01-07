@@ -70,7 +70,6 @@ h1 {
   color: var(--accent2);
   width: fit-content;
   line-height: 0.5rem;
-  border-bottom: solid 0.25rem var(--accent3);
 }
 
 @media screen and (max-width: 800px) {

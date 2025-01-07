@@ -232,7 +232,6 @@ h3 {
 }
 
 .element {
-  border-bottom: 2px solid;
   margin-bottom: 0.5rem;
   cursor: pointer;
   text-overflow: ellipsis;

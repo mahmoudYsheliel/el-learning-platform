@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 import database.mongo_driver as mdb
@@ -56,10 +55,10 @@ app.include_router(activity_api.router)
 
 
     
-# #Mount the static files directory
+# # #Mount the static files directory
 app.mount("/", StaticFiles(directory="dist", html=True), name="dist")
 
 
-if __name__ == '__main__':
-    uvicorn.run(app, host='0.0.0.0', port=8080)
+# if __name__ == '__main__':
+#     uvicorn.run(app, host='0.0.0.0', port=8080)
     

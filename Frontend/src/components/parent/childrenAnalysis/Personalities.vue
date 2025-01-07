@@ -46,9 +46,7 @@ h4 {
   flex-direction: column;
   padding-inline: 2rem;
 }
-.iqInfo{
-    border-bottom: 2px solid var(--text);
-}
+
 .chart{
   width: 100%;
   overflow: scroll;

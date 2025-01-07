@@ -49,7 +49,6 @@ main {
 }
 h2 {
   width: fit-content;
-  border-bottom: solid var(--accent3) 2px;
   padding: 0;
   line-height: 1rem;
   color: var(--accent1);
@@ -61,7 +60,6 @@ h4 {
   width: 5.5rem;
 }
 .wrapper {
-  border-bottom: solid var(--primary) 1px;
   margin-bottom: 1rem;
   padding-left: 1rem;
   display: flex;

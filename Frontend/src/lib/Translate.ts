@@ -6,9 +6,12 @@ interface Languages {
   ar: string;
 }
 
-export function selectLang(obj: null | Languages) {
+export function selectLang(obj: null | Languages,lan:string|null =null) {
   const lang = useLang();
-  const selectedLang = lang.getLang;
+  let selectedLang = lang.getLang;
+  if (lan){
+    selectedLang=lan
+  } 
   if (selectedLang == "en") {
     return obj?.en;
   } else if (selectedLang == "ar") {
@@ -911,6 +914,22 @@ export const translationModule = {
     ar: "فيما يلي تحليل تفصيلي لكل مهمة معرفية ونتائج طفلك\
                 تشير إلى قدراتهم:"
   },
+  tracks:{
+    en:"Tracks",
+    ar:"المسارات"
+  },
+  levels:{
+    en:'Levels',
+    ar:'المستويات'
+  },
+  trackOverview:{
+    en:"Track Overview",
+    ar:"نظرة عامة على المسار"
+  },
+  commingSoon:{
+    en:'Coming Soon',
+    ar:'قريباً'
+  }
 
 
 

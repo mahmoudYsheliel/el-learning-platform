@@ -208,7 +208,7 @@ h2 {
   color: var(--accent1);
   width: fit-content;
   line-height: 1rem;
-  border-bottom: 0.25rem solid var(--accent3);
+  
 }
 .table {
   overflow-x: scroll;

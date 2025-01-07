@@ -65,12 +65,12 @@ div[class*='rtl'] .circle {
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #aaa; 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent3); 
+  background: #888; 
 }
 
 body,

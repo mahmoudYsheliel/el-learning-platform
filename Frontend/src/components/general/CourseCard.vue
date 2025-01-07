@@ -23,7 +23,7 @@ const childId=computed(()=>{
 
 <template>
   <main v-if="selectLang(course?.title)?.toLowerCase().includes(search.toLowerCase())">
-    <div class="container">
+    <div class="container"  @click="router.push(`/courseDetails/${prop.course?.id}/${childId}/${isEnrolled}`)">
       <img :src="course?.image" alt="" />
       <h2>{{ selectLang(course?.title) }}</h2>
       <Button @click="router.push(`/courseDetails/${prop.course?.id}/${childId}/${isEnrolled}`)" :label=selectLang(translationModule.learnMore) />
@@ -41,13 +41,13 @@ h2{
     color: var(--header);
     margin: 0;
     padding-left: 0.5rem;
-    font-size: 1.25rem
+    font-size: 1rem
 }
 button{
     align-self: end;
 }
 img{
-    width: 24rem;
+    width: 16rem;
     aspect-ratio: 1.6/1;
     border-radius: 8px;
 }

@@ -84,7 +84,7 @@ h1 {
   color: var(--accent2);
   margin: 0;
   width: fit-content;
-  border-bottom: 0.25rem solid var(--accent3);
+  
   line-height: 2rem;
 }
 </style>

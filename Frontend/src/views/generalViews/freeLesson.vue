@@ -69,7 +69,6 @@ const childId=computed(()=>{
 h1 {
   width: fit-content;
   color: var(--accent2);
-  border-bottom: 0.4rem solid var(--accent3);
   padding: 0;
   border-radius: 0.5rem;
   line-height: 2rem;

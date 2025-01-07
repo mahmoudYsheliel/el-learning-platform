@@ -129,7 +129,6 @@ h1 {
   width: fit-content;
   line-height: 1.5rem;
   color: var(--accent1);
-  border-bottom: solid 0.25rem var(--accent3);
   border-radius: 0.5rem;
   margin-bottom: 3rem;
 }

@@ -93,7 +93,6 @@ h2 {
   margin: 0;
   line-height: 1rem;
   margin-top: 2rem;
-  border-bottom: 4px solid var(--accent3);
   width: fit-content;
 }
 img {

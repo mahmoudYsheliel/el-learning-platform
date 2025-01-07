@@ -106,6 +106,7 @@ async def get_course(course_id: str) -> ServiceResponse:
                 "objectives": 1,
                 "chapters": 1,
                 "categories": 1,
+                "is_locked":1
             },
         )
     )
@@ -130,6 +131,7 @@ async def get_all_courses():
                 "min_age": 1,
                 "max_age": 1,
                 "categories": 1,
+                "is_locked":1
             },
         )
         .to_list(length=None)
@@ -156,6 +158,7 @@ async def get_all_instructor_courses(main_instructor_id):
                 "min_age": 1,
                 "max_age": 1,
                 "categories": 1,
+                "is_locked":1
             },
         )
         .to_list(length=None)
@@ -179,6 +182,7 @@ async def get_all_courses_with_free_lessons():
                 "image": 1,
                 "categories": 1,
                 "chapters": 1,
+                "is_locked":1
             },
         )
         .to_list(length=None)

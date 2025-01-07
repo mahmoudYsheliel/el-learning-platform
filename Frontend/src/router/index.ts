@@ -1,10 +1,10 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import { useToken, usePersonalInfo } from "../stores/token";
 
 import LandingPage from "../views/generalViews/LandingPage.vue";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/login",
@@ -67,6 +67,12 @@ const router = createRouter({
       path: "/programs/:programId",
       name: "programs",
       component: () => import("@/views/studentViews/viewProgram.vue"),
+      meta: { requredAuth: false, userType: "Any" },
+    },
+    {
+      path: "/tracks/:programId/:trackId",
+      name: "tracks",
+      component: () => import("@/views/studentViews/viewTrack.vue"),
       meta: { requredAuth: false, userType: "Any" },
     },
 
