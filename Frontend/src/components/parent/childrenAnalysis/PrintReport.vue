@@ -16,11 +16,11 @@ const learningStyle = ref()
 const recommendTrack = ref()
 const IQSection = ref()
 
-function getMaxObject(arr:any[]){
-    let tem=arr[0]
-    for (let i=0;i<arr.length;i++){
-        if (arr[i]?.score > tem?.score){
-            tem=arr[i]
+function getMaxObject(arr: any[]) {
+    let tem = arr[0]
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]?.score > tem?.score) {
+            tem = arr[i]
         }
     }
     return tem
@@ -32,7 +32,7 @@ watch(prop, () => {
             if (res?.success) {
                 analysis.value = res?.data?.analysis_quiz;
                 IQSection.value = analysis.value?.section_results?.find((section: any) => { return section?.section == 'IQ' })?.sub_sections
-           
+
                 IQResult.value = 0
                 for (let i = 0; i < IQSection.value.length; i++) {
                     IQResult.value += IQSection.value[i]?.total_score
@@ -93,9 +93,9 @@ function fetchComment(subset: subsets, score: number) {
 
 <template>
     <div class="print_only ">
-        
+
         <div class="field">
-            <h2>{{selectLang(translationModule.intro)}}</h2>
+            <h2>{{ selectLang(translationModule.intro) }}</h2>
             <p>{{ selectLang(translationModule.analysisReportIntro) }}</p>
         </div>
         <div class="field">
@@ -132,7 +132,7 @@ function fetchComment(subset: subsets, score: number) {
                 </div>
             </div>
         </div>
-        <div class="new-page"></div> 
+        <div class="new-page"></div>
         <div v-for="section in IQSection">
             <div style="display: flex;align-items: center;justify-content: space-between; flex-direction: column;">
                 <div class="field">
@@ -145,7 +145,7 @@ function fetchComment(subset: subsets, score: number) {
             </div>
 
         </div>
-        <div class="new-page"></div> 
+        <div class="new-page"></div>
         <div>
 
             <div class="field">
@@ -176,47 +176,47 @@ function fetchComment(subset: subsets, score: number) {
 
 
         <div style="display: flex; justify-content: start;align-items: start;">
-      <div class="field">
-        <h2>{{ selectLang(translationModule.learningStyle) }}  <span style="padding-left: 1rem; color: var(--header);">{{ selectLang(learningStyle?.title) }}</span> </h2>
-        <div class="labeled_text">
-          <h3>{{ selectLang(translationModule.styleOverview) }}</h3>
-          <p>{{ selectLang(learningStyle?.description) }}</p>
+            <div class="field">
+                <h2>{{ selectLang(translationModule.learningStyle) }} <span style="padding-left: 1rem; color: var(--header);">{{ selectLang(learningStyle?.title) }}</span> </h2>
+                <div class="labeled_text">
+                    <h3>{{ selectLang(translationModule.styleOverview) }}</h3>
+                    <p>{{ selectLang(learningStyle?.description) }}</p>
+                </div>
+
+                <div class="labeled_text">
+                    <h3>{{ selectLang(translationModule.supportTips) }}</h3>
+                    <p>{{ selectLang(learningStyle?.advice) }}</p>
+                </div>
+            </div>
+            <img v-if="learningStyle?.image" :src="learningStyle?.image" style="margin-top: 8rem" alt="">
         </div>
 
-        <div class="labeled_text">
-          <h3>{{ selectLang(translationModule.supportTips) }}</h3>
-          <p>{{ selectLang(learningStyle?.advice) }}</p>
+
+        <div style="display: flex; justify-content: start;align-items: start;">
+            <div class="field">
+
+                <h2>{{ selectLang(translationModule.recommendTracks) }} <span style="padding-left: 1rem; color: var(--header);">{{ selectLang(recommendTrack?.title) }}</span> </h2>
+
+                <div class="labeled_text">
+                    <h3>{{ selectLang(translationModule.aboutTrack) }}</h3>
+                    <p>{{ selectLang(recommendTrack?.description) }}</p>
+                </div>
+
+                <div class="labeled_text">
+                    <h3>{{ selectLang(translationModule.guidingPath) }}</h3>
+                    <p>{{ selectLang(recommendTrack?.advice) }}</p>
+                </div>
+
+                <div class="labeled_text">
+                    <h3>{{ selectLang(translationModule.keySkills) }}</h3>
+                    <p v-for="skill in recommendTrack?.key_skills">{{ selectLang(skill) }}</p>
+                </div>
+
+
+
+            </div>
+            <img src="/public/images/TrackIcon.png" style="margin-top: 8rem" alt="">
         </div>
-      </div>
-      <img  v-if="learningStyle?.image" :src="learningStyle?.image" style="margin-top: 8rem" alt="">
-    </div>
-
-
-    <div style="display: flex; justify-content: start;align-items: start;">
-      <div class="field" >
-
-      <h2>{{ selectLang(translationModule.recommendTracks) }} <span style="padding-left: 1rem; color: var(--header);">{{ selectLang(recommendTrack?.title) }}</span> </h2>
-         
-      <div class="labeled_text">
-        <h3>{{ selectLang(translationModule.aboutTrack) }}</h3>
-        <p>{{ selectLang(recommendTrack?.description) }}</p>
-      </div>
-
-      <div class="labeled_text">
-        <h3>{{ selectLang(translationModule.guidingPath) }}</h3>
-        <p>{{ selectLang(recommendTrack?.advice) }}</p>
-      </div>
-
-      <div class="labeled_text">
-        <h3>{{ selectLang(translationModule.keySkills) }}</h3>
-        <p v-for="skill in recommendTrack?.key_skills">{{ selectLang(skill) }}</p>
-      </div>
-
-
-
-    </div>
-    <img src="/public/images/TrackIcon.png"  style="margin-top: 8rem" alt="">
-    </div>
 
 
     </div>
@@ -311,7 +311,7 @@ p {
 }
 
 @media print {
-    
+
 
     .print_only {
         display: block !important;
@@ -319,9 +319,11 @@ p {
         width: 95% !important;
         margin-inline: auto !important;
     }
+
     .new-page {
-    page-break-before: always; /* Force content to start on a new page */
-  }
+        page-break-before: always;
+        /* Force content to start on a new page */
+    }
 
 }
 </style>

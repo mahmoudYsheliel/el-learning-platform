@@ -8,16 +8,28 @@ import PrintReport from '@/components/parent/childrenAnalysis/PrintReport.vue';
 import Button from 'primevue/button';
 import { ref } from "vue";
 import { selectLang, translationModule } from '@/lib/Translate';
+import { HttpRequester } from '@/lib/APICaller';
 
 const selectedChild = ref(null)
+const file = ref()
 
 function printComponent() {
-    window.print();
+    //window.print();
+    new HttpRequester('send_page').callApi({
+        body: {
+            html_content: file.value.outerHTML,
+            recipient: "s-mahmoud.sheliel@zewailcity.edu.eg",
+            subject: "Your Page PDF",
+            body: "Attached is the PDF version of the page.",
+        },
+    }).then(res => {
+        console.log(res)
+    })
 }
 </script>
 
 <template>
-    <Navbar class="no_print" />
+    <Navbar class="no_print" ref="file" />
     <div class="print_only">
         <div class="report_header ">
             <img src="/public/images/logo4.png" alt="">
@@ -34,7 +46,7 @@ function printComponent() {
 
             <SelectChild class="print" @selected-child="id => selectedChild = id" />
             <PrintReport class="print_only" :child-id="selectedChild" />
-            <ChildrenAnalysis  class="no_print" :child-id="selectedChild" />
+            <ChildrenAnalysis class="no_print" :child-id="selectedChild" />
             <div class="button-container no_print">
                 <Button style="width: 6rem;" v-if="selectedChild" @click="printComponent" :label="selectLang(translationModule.print)" />
             </div>
@@ -42,7 +54,7 @@ function printComponent() {
 
     </div>
 
-    <Footer  class="no_print" />
+    <Footer class="no_print" />
 
 </template>
 
@@ -65,7 +77,7 @@ function printComponent() {
     margin-bottom: 5rem;
 }
 
-.print_only{
+.print_only {
     display: none;
 }
 
@@ -82,26 +94,32 @@ function printComponent() {
 
 
 @media print {
-   .no_print{
-    display: none ;
-   }
-   .print_only{
-display: block !important;
-   }
-   .container{
-    display: block;
-   }
-   .report_header{
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;    
-   }
-   .report_title h2 , .report_title h4{
-    text-align: center;
-    margin: 0;
-   }
-   @page {
+    .no_print {
+        display: none;
+    }
+
+    .print_only {
+        display: block !important;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .report_header {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .report_title h2,
+    .report_title h4 {
+        text-align: center;
+        margin: 0;
+    }
+
+    @page {
         size: 1000px 1600px;
         /* A4 size (in mm) */
         margin: 20mm;

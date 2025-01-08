@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Body,Depends
+from fastapi import APIRouter, Body,Depends,BackgroundTasks
 from models.user import User,Child
 from database.user_database import validate_user,create_user
 from models.runtime import ServiceResponse
@@ -11,7 +11,7 @@ from datetime import  timedelta
 from models.user import Token
 from lib.crypto import auth_user
 import database.user_database as user_database
-
+from lib.email_service import *
 
 router = APIRouter()
 
@@ -99,3 +99,28 @@ async def get_all_users(userId:str = Depends(auth_user)):
 
 
 
+@router.post("/send_email")
+async def send_email_route(background_tasks: BackgroundTasks, subject: str=Body(embed=True), body: str=Body(embed=True), to_email: str=Body(embed=True)):
+    background_tasks.add_task(send_email,subject,body,to_email)
+    return {"message": "Email is being sent in the background."}
+
+
+
+@router.post("/send_page")
+async def send_page(request: EmailRequest=Body(embed=True)):
+    pdf_path = "TraceReport.pdf"  # Temporary path for the generated PDF
+    try:
+        # Generate the PDF from the received HTML content
+        generate_pdf_from_html(request.html_content, pdf_path)
+        # Send the PDF via email
+        send_email_with_attachment(
+            subject=request.subject,
+            to_email=request.recipient,
+            body=request.body,
+            attachment_path=pdf_path,
+        )
+        return {"message": "Email sent successfully!"}
+    finally:
+        # Clean up by deleting the generated PDF
+        if os.path.exists(pdf_path):
+            os.remove(pdf_path)
