@@ -701,6 +701,7 @@ export const courseObject = shallowRef({
     component: InputText,
     inputType: "number",
   },
+ 
 });
 
 export const planObject = shallowRef({

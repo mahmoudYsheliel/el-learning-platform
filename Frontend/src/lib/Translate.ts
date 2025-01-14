@@ -219,19 +219,23 @@ export const translationModule = {
     ar: "تسجيل الخروج",
   },
   welcomeBack: {
-    en: "Welcome back to the",
+    en: "Welcome back to",
     ar: "مرحبا بكم مرة أخرى في",
+  },
+  welcome: {
+    en: "Welcome to ",
+    ar: "مرحبا بكم "
   },
   traceCommunity: {
     en: "Trace Community",
     ar: "مجتمع Trace",
   },
   noAccount: {
-    en: "No Account Yet",
-    ar: "لا يوجد حساب بعد",
+    en: "Don't Have Account Yet?",
+    ar: "؟لا يوجد حساب بعد",
   },
   haveAccount: {
-    en: "You have Account",
+    en: "Do You have an Account?",
     ar: "لديك حساب؟",
   },
   email: {
@@ -929,10 +933,15 @@ export const translationModule = {
   commingSoon:{
     en:'Coming Soon',
     ar:'قريباً'
+  },
+  trackContent:{
+    en:"Track Content",
+    ar:"محتوي المسار"
+  },
+  locked:{
+    en:'Course is Locked Now',
+    ar:"الدورة مغلقة الآن"
   }
-
-
-
 
 
 

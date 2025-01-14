@@ -14,17 +14,17 @@ const selectedChild = ref(null)
 const file = ref()
 
 function printComponent() {
-    //window.print();
-    new HttpRequester('send_page').callApi({
-        body: {
-            html_content: file.value.outerHTML,
-            recipient: "s-mahmoud.sheliel@zewailcity.edu.eg",
-            subject: "Your Page PDF",
-            body: "Attached is the PDF version of the page.",
-        },
-    }).then(res => {
-        console.log(res)
-    })
+window.print()
+    // new HttpRequester('send_page').callApi({
+    //     body: {
+    //         html_content: file.value.outerHTML,
+    //         recipient: "s-mahmoud.sheliel@zewailcity.edu.eg",
+    //         subject: "Your Page PDF",
+    //         body: "Attached is the PDF version of the page.",
+    //     },
+    // }).then(res => {
+    //     console.log(res)
+    // })
 }
 </script>
 

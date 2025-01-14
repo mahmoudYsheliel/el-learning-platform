@@ -59,7 +59,7 @@ async def get_program(program_id: str) -> ServiceResponse:
                 "id": {"$toString": "$_id"},
                 "title": 1,
                 "description": 1,
-                 "min_age":1,
+                "min_age":1,
                 "max_age":1,
                 "road_map": 1,
                 "image": 1,
@@ -131,7 +131,7 @@ async def get_all_programs_and_courses() -> ServiceResponse:
                     .get_collection("course")
                     .find_one(
                         {"_id": validate_bson_id(course_id["id"])},
-                        {'_id':0,"id": {"$toString": "$_id"},"image": 1, "title": 1},
+                        {'_id':0,"id": {"$toString": "$_id"},"image": 1, "title": 1,"is_locked":1},
                     )
                 )
                 courses.append(course)

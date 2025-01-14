@@ -103,7 +103,7 @@ const callback = (response: any) => {
       </div>
       <div class="right">
         <div class="welcome">
-          <h1>{{ selectLang(translationModule.welcomeBack) }}</h1>
+          <h1>{{ selectLang(translationModule.welcome) }}</h1>
           <h1>{{ selectLang(translationModule.traceCommunity) }}</h1>
         </div>
         <div class="google-facebook-wrapper">
@@ -147,8 +147,8 @@ const callback = (response: any) => {
           />
         </div>
         <p style="margin-left: 5rem">
-          {{ selectLang(translationModule.haveAccount)
-          }}<strong @click="router.push('/login')" style="cursor: pointer">
+          {{ selectLang(translationModule.haveAccount) }}
+          <strong @click="router.push('/login')" style="cursor: pointer;text-decoration: underline;color: var(--accent1);">
             {{ selectLang(translationModule.login) }}
           </strong>
         </p>
@@ -184,7 +184,7 @@ main {
 }
 
 .welcome > h1 {
-  line-height: 1.5rem;
+  line-height: 2rem;
   margin: 0;
   padding: 0;
   color: black;
@@ -247,7 +247,7 @@ input {
   width: 100%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
   .container {
     width: 80%;
     height: fit-content;

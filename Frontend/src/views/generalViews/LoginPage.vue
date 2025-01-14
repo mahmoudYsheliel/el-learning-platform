@@ -41,10 +41,10 @@ function login() {
             personalInfo.addInfo({
               userType: res?.data?.info?.user_type,
               notifications: res?.data?.info?.notifications,
-              id:res?.data?.info?.id,
-              firstName:res?.data?.info?.first_name,
-        lastName:res?.data?.info?.last_name,
-        email:res?.data?.info?.email,
+              id: res?.data?.info?.id,
+              firstName: res?.data?.info?.first_name,
+              lastName: res?.data?.info?.last_name,
+              email: res?.data?.info?.email,
             });
             router.push("/");
           }
@@ -71,10 +71,10 @@ const callback = (response: any) => {
             personalInfo.addInfo({
               userType: res?.data?.info?.user_type,
               notifications: res?.data?.info?.notifications,
-              id:res?.data?.info?.id,
-              firstName:res?.data?.info?.first_name,
-        lastName:res?.data?.info?.last_name,
-        email:res?.data?.info?.email,
+              id: res?.data?.info?.id,
+              firstName: res?.data?.info?.first_name,
+              lastName: res?.data?.info?.last_name,
+              email: res?.data?.info?.email,
             });
             router.push("/");
           }
@@ -108,28 +108,16 @@ const callback = (response: any) => {
           {{ selectLang(translationModule.userNotExist) }}
         </h4>
         <div class="wrapper">
-          <InputText
-            type="email"
-            class="input"
-            v-model="email"
-            :placeholder="selectLang(translationModule.email)"
-          />
-          <Password
-            class="input"
-            v-model="pass"
-            :feedback="false"
-            toggleMask
-            :placeholder="selectLang(translationModule.pass)"
-          />
+          <InputText type="email" class="input" v-model="email" :placeholder="selectLang(translationModule.email)" />
+          <Password class="input" v-model="pass" :feedback="false" toggleMask :placeholder="selectLang(translationModule.pass)" />
         </div>
         <div class="button">
           <Button @click="login" :label="selectLang(translationModule.login)" />
         </div>
         <p style="margin-left: 5rem">
-          {{ selectLang(translationModule.noAccount)
-          }}<strong @click="router.push('/signup')" style="cursor: pointer">{{
-            selectLang(translationModule.signup)
-          }}</strong>
+          {{ selectLang(translationModule.noAccount) }}
+          <strong @click="router.push('/signup')" style="cursor: pointer;text-decoration: underline;color: var(--accent1);">
+            {{ selectLang(translationModule.signup) }}</strong>
         </p>
       </div>
     </div>
@@ -141,6 +129,7 @@ const callback = (response: any) => {
 main {
   min-height: 100%;
 }
+
 .container {
   margin-inline: auto;
   width: 75%;
@@ -149,12 +138,14 @@ main {
   grid-template-columns: 1fr 1fr;
   margin-block: 5rem;
 }
+
 .left {
   display: flex;
   align-items: start;
   justify-content: start;
   border-right: 0.25rem solid rgba(0, 0, 0, 0.2);
 }
+
 .right {
   display: flex;
   flex-direction: column;
@@ -162,12 +153,13 @@ main {
   align-items: center;
 }
 
-.welcome > h1 {
-  line-height: 1.5rem;
+.welcome>h1 {
+  line-height: 2rem;
   margin: 0;
   padding: 0;
   color: black;
 }
+
 .wrapper {
   display: flex;
   align-items: center;
@@ -175,17 +167,20 @@ main {
   gap: 0.5rem;
   flex-direction: column;
 }
+
 h1 {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .google-facebook-wrapper,
-.google-facebook-wrapper > * {
+.google-facebook-wrapper>* {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
 }
+
 .google,
 .facebook {
   border-radius: 8px;
@@ -193,35 +188,42 @@ h1 {
   border: 2px solid var(--accent1);
   cursor: pointer;
 }
-.google > i {
+
+.google>i {
   color: var(--accent1);
 }
+
 .facebook {
   color: white;
   background-color: var(--accent1);
 }
-.google > p,
-.facebook > p {
+
+.google>p,
+.facebook>p {
   line-height: 1rem;
   transform: translate(0, 0.2rem);
   padding: 0;
   margin: 0;
 }
+
 button {
   padding: 0.5rem 2rem;
   box-shadow: 0px 34px 40px -8px #7b76f13d;
 }
+
 .button {
   display: flex;
   justify-content: end;
   padding-right: 4rem;
   width: 100%;
 }
+
 h4 {
   text-align: center;
   color: red;
   margin: 0;
 }
+
 input {
   width: 100%;
 }
@@ -233,9 +235,11 @@ input {
     grid-template-columns: 1fr;
     grid-template-rows: 40rem;
   }
+
   .left {
     display: none;
   }
+
   .button {
     margin-bottom: 2rem;
   }

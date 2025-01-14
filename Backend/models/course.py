@@ -34,3 +34,4 @@ class Course(BaseModel):
     number_of_enrollments: Optional[int]=0
     is_locked:Optional[bool]=False
     
+    

@@ -35,7 +35,7 @@ defineProps(["title", "price", "categories", "min_age", "max_age", "duration"]);
 
 <style scoped>
 main {
-  width: 61.75%;
+  width: 80%;
 }
 .container {
   width: 100%;
@@ -50,7 +50,7 @@ main {
 h2 {
   width: fit-content;
   padding: 0;
-  line-height: 1rem;
+  line-height: 1.75rem;
   color: var(--accent1);
   margin-bottom: 1.5rem;
 }

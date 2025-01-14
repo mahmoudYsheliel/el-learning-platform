@@ -86,6 +86,7 @@ body,
   --primary: #ffffff;
   --secondary: #0089cc;
   --text: #848181;
+  --descriptionText: #444 ;
   --header: #282828;
   --accent1: #01abff;
   --accent2: #7302ff;

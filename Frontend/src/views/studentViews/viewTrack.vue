@@ -8,6 +8,10 @@ import Navbar from "@/components/general/Navbar.vue";
 import Footer from "@/components/general/Footer.vue";
 import "primeicons/primeicons.css";
 import CourseCard from "@/components/general/CourseCard.vue";
+import TrackContent from "@/components/general/TrackContent.vue";
+
+
+
 
 const route = useRoute();
 const router = useRouter();
@@ -15,6 +19,7 @@ const program = ref()
 const track = ref()
 const programRequester = new HttpRequester('get_program')
 const coursesRequester = new HttpRequester('get_courses')
+const levels = ref<any[]>([])
 
 programRequester.callApi({ program_id: route.params?.programId }).then(res => {
     if (res?.data) {
@@ -25,17 +30,23 @@ programRequester.callApi({ program_id: route.params?.programId }).then(res => {
             if (res?.data) {
                 const courses = res?.data?.courses
                 for (let i = 0; i < track.value?.levels?.length; i++) {
+                    let level = {title:track.value?.levels[i].title,coursesCount:0,courses:<any[]>[]}
                     for (let j = 0; j < track.value?.levels[i]?.courses?.length; j++) {
-                        track.value.levels[i].courses[j] = courses?.find((course: any) => {
+                        const course = courses?.find((course: any) => {
                             return course?.id == track.value.levels[i].courses[j]
                         })
+                        track.value.levels[i].courses[j] =course
+                        level.courses.push(course)
+                        level.coursesCount = level.coursesCount+1
                     }
+                    levels.value.push(level)
                 }
 
                 for (let i = 0; i < track.value?.courses?.length; i++) {
                     track.value.courses[i] = courses?.find((course: any) => {
                         return course?.id == track.value?.courses[i]
                     })
+
                 }
             }
 
@@ -58,10 +69,10 @@ programRequester.callApi({ program_id: route.params?.programId }).then(res => {
     <div class="track-container">
         <h1>{{ selectLang(track?.title) }}</h1>
         <div class="track_video">
-            <iframe :src="track?.video" frameborder="0"></iframe>
-            <div class="track_image">
-                <img :src="track?.female_image" alt="">
-                <img :src="track?.male_image" alt="">
+            <iframe class="video" v-if="track?.video" :src="track?.video" frameborder="0" sandbox="allow-scripts allow-same-origin" allowfullscreen></iframe>
+            <img class="video" style="aspect-ratio: 3/2;" :src="track?.image" v-else alt="">
+            <div class="track_content">
+                <TrackContent :levels="levels" />
             </div>
         </div>
         <div class="track_overview">
@@ -70,18 +81,22 @@ programRequester.callApi({ program_id: route.params?.programId }).then(res => {
         </div>
         <div class="levels_container">
             <h2>{{ selectLang(translationModule.levels) }}</h2>
-            <div class="level" v-for="level in track?.levels">
+            <div class="level" v-for="level,i in track?.levels">
 
-                <h3>{{ selectLang(level?.title) }}</h3>
+                <h3>{{ selectLang(level?.title) }} </h3>
 
-                <div class="courses_container" v-if="level.courses.length>0">
+                <div class="courses_container" v-if="level.courses.length > 0">
                     <CourseCard v-for="course in level?.courses" :course="course" search="" />
                 </div>
+                
                 <div class="h1" style="text-align: center;font-weight: bolder;font-size: 4rem;background: radial-gradient(var(--accent1),var(--accent4));background-clip: text;color: transparent;" v-else>{{ selectLang(translationModule.commingSoon) }}</div>
+                <div class="level-breaker" v-if="i!=track?.levels?.length-1"></div>
 
+                
             </div>
+           
         </div>
-        <div class="courses_tracks_container" v-if=" track?.courses.length>0">
+        <div class="courses_tracks_container" v-if="track?.courses.length > 0">
             <h2>{{ selectLang(translationModule.courses) }}</h2>
             <div class="courses_tracks">
                 <CourseCard v-for="course in track?.courses" :course="course" search="" />
@@ -103,21 +118,27 @@ h3 {
     padding-top: 2rem;
     padding-top: 0;
 }
-
-iframe {
+.level-breaker{
+    height: 4px;
+    width: 75%;
+    margin-left: 25%;
+    background-color: var(--accent1);
+}
+.video {
     width: 100%;
     aspect-ratio: 1.75/1;
     margin-top: 0.5rem;
+    border-radius: 0.25rem;
 }
 
-.track_image {
+.track_content {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
     flex-direction: column;
 
 }
 
-.track_image>img {
+.track_content>img {
     width: 50%;
     margin-inline: auto;
     border-radius: 100%;
@@ -127,7 +148,8 @@ iframe {
 
 .track_video {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
 
 }
 
@@ -191,5 +213,12 @@ h1 {
 .track-container {
     padding-inline: 4rem;
     padding-top: 3rem;
+}
+
+@media screen and (max-width:1200px) {
+    .track_video{
+        display: flex;
+        flex-direction: column;
+    }
 }
 </style>

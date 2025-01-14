@@ -11,7 +11,10 @@ import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
 import "primeicons/primeicons.css";
 import AddMaterialDialog from "@/components/dialogs/AddMaterialDialog.vue";
-import { ref,reactive } from "vue";
+import { ref, reactive } from "vue";
+import RadioButton from "primevue/radiobutton";
+import TabView from "primevue/tabview";
+import TabPanel from "primevue/tabpanel";
 
 const route = useRoute();
 const router = useRouter();
@@ -23,6 +26,7 @@ const categories = ref<any[]>([]);
 const objectives = ref<any[]>([]);
 const courseCategories = ref<any[]>([]);
 const chapters = ref<any[]>([]);
+const isLocked = ref(false)
 
 categoriesRequester.callApi().then((res) => {
   if (res?.success) {
@@ -32,6 +36,7 @@ categoriesRequester.callApi().then((res) => {
       .then((res) => {
         if (res?.success) {
           course.value = res?.data?.course;
+          isLocked.value = course.value?.is_locked ?? false
           courseObject.value = {
             ...courseObject.value,
             titleEn: {
@@ -135,6 +140,7 @@ function updatecourse() {
       min_age: courseObject.value.minAge.variable,
       max_age: courseObject.value.maxAge.variable,
       image: courseObject.value.image.variable,
+      is_locked: isLocked.value
     },
   };
   new HttpRequester("update_course").callApi(data).then((res) => {
@@ -148,8 +154,9 @@ const addMaterialDialog = ref(false);
 const chapterOrder = ref(-1);
 
 function addMaterial(info: any) {
-  setTimeout(()=>{
-  chapters.value[chapterOrder.value].materials.push(info)},250)
+  setTimeout(() => {
+    chapters.value[chapterOrder.value].materials.push(info)
+  }, 250)
 }
 
 function addChapter() {
@@ -175,224 +182,189 @@ function moveDown(chapterindex: number, matIndex: number) {
 </script>
 
 <template>
-  <AddMaterialDialog
-    v-if="addMaterialDialog"
-    :showDialog="addMaterialDialog"
-    :material-type="materialType"
-    :material-id="materialId"
-    @removeDialog="addMaterialDialog = false"
-    @info="
-      (info) => {
-        addMaterial(info);
-      }
-    "
-  />
+  <AddMaterialDialog v-if="addMaterialDialog" :showDialog="addMaterialDialog" :material-type="materialType" :material-id="materialId" @removeDialog="addMaterialDialog = false" @info="(info) => {
+    addMaterial(info);
+  }
+    " />
   <Nanbar />
+
   <div class="container">
-    <div class="element" v-for="element in courseObject">
-      <h3>{{ element.label }}</h3>
-      <component
-        :type="element.inputType"
-        :is="element.component"
-        v-model="element.variable"
-      />
-    </div>
-
-    <Accordion :activeIndex="0">
-      <AccordionTab
-        :pt="{
-          headerAction: {
-            style: 'padding-inline:0',
-          },
-        }"
-      >
+    <TabView :scrollable="true">
+      <TabPanel>
         <template #header>
-          <h3>Objectives</h3>
-        </template>
-        <div v-for="(objective, i) in objectives" class="row">
-          <div class="element">
-            <span>English</span>
-            <InputText v-model="objectives[i].en" />
-          </div>
-          <div class="element">
-            <span>Arabic</span>
-            <InputText v-model="objectives[i].ar" />
+          <div class="tab_header">
+            <i class="pi pi-info"></i>
+            <p>Basic Info</p>
           </div>
 
-          <Button
-            @click="
-              () => {
-                deleteObjective(i);
-              }
-            "
-            label="Remove"
-            style="background-color: red"
-          />
-        </div>
-        <div class="btn-container">
-          <Button @click="addObjective" label="Add Objective " />
-        </div>
-      </AccordionTab>
-
-      <AccordionTab
-        :pt="{
-          headerAction: {
-            style: 'padding-inline:0',
-          },
-        }"
-      >
-        <template #header>
-          <h3>Categories</h3>
         </template>
-        <div v-for="(category, i) in courseCategories" class="row">
-          <div class="element">
-            <span>Category</span>
-            <Dropdown
-              v-model="courseCategories[i]"
-              :options="categories"
-              optionLabel="category.en"
-            />
+        <div class="tab_container">
+          <div class="element" v-for="element in courseObject">
+            <h3>{{ element.label }}</h3>
+            <component :type="element.inputType" :is="element.component" v-model="element.variable" />
           </div>
 
-          <Button
-            @click="
-              () => {
-                deleteCategory(i);
-              }
-            "
-            label="Remove"
-            style="background-color: red"
-          />
-        </div>
-        <div class="btn-container">
-          <Button @click="addCategory" label="Add Category " />
-        </div>
-      </AccordionTab>
+          <div class="element">
+            <h3>Is Locked</h3>
 
-      <AccordionTab
-        :pt="{
-          headerAction: {
-            style: 'padding-inline:0',
-          },
-        }"
-      >
-        <template #header>
-          <h3>Chapters</h3>
-        </template>
-        <Accordion>
-          <AccordionTab
-            class="row"
-            v-for="(chapter, i) in chapters"
-            :key="'chap' + i.toString()"
-          >
-            <template #header>
-              <h3>Chapter {{ i + 1 }}</h3>
-            </template>
-
-            <div class="element">
-              <span>English Title</span>
-              <InputText v-model="chapters[i].title.en" />
+            <div style="display: flex; justify-content: space-around;">
+              <div style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
+                <RadioButton v-model="isLocked" inputId="v1" name="isLocked" :value="true" />
+                <label style="font-size: 1.25rem;" for="v1">Yes</label>
+              </div>
+              <div style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
+                <RadioButton v-model="isLocked" inputId="v2" name="isLocked" :value="false" />
+                <label style="font-size: 1.25rem;" for="v2">No</label>
+              </div>
             </div>
-            <div class="element">
-              <span>Arabic Title</span>
-              <InputText v-model="chapters[i].title.ar" />
+          </div>
+
+        </div>
+      </TabPanel>
+
+      <TabPanel>
+        <template #header>
+          <div class="tab_header">
+            <i class="pi pi-align-justify"></i>
+            <p>Categories</p>
+          </div>
+
+        </template>
+        <div class="tab_container">
+          <div v-for="(category, i) in courseCategories" class="row">
+            <div style="display: grid; grid-template-columns: 3fr 1fr;gap: 1rem;">
+
+              <Dropdown v-model="courseCategories[i]" :options="categories" optionLabel="category.en" />
+              <Button @click="() => {
+                  deleteCategory(i);
+                }
+                " label="Remove" style="background-color: red" />
             </div>
 
-            <h3>Materials</h3>
-            <transition-group name="swap" tag="ul">
-              <li
-                class="row2 row"
-                v-for="(material, j) in chapters[i].materials"
-                :key="material"
-              >
-                <div class="options">
-                  <i
-                    class="pi pi-arrow-up"
-                    style="color: var(--accent1)"
-                    @click="moveUp(i, j)"
-                  ></i>
-                  <i
-                    class="pi pi-arrow-down"
-                    style="color: var(--accent1)"
-                    @click="moveDown(i, j)"
-                  ></i>
-                </div>
-                <div class="mat-group">
-                  <div
-                    v-for="(mask, k) in chaptersLabels"
-                    :key="'mask' + i.toString() + j.toString() + k.toString()"
-                  >
-                    <div class="element">
-                      <span>{{ mask.label }}</span>
-                      <component
-                        :key="
-                          'com' +
+
+          </div>
+          <div class="btn-container">
+            <Button @click="addCategory" label="Add Category " />
+          </div>
+        </div>
+      </TabPanel>
+
+
+
+
+
+      <TabPanel>
+        <template #header>
+          <div class="tab_header">
+            <i class="pi pi-star"></i>
+            <p>Objectives</p>
+          </div>
+
+        </template>
+        <div class="tab_container">
+          <div v-for="(objective, i) in objectives" class="row">
+            <div class="element">
+              <span>English</span>
+              <InputText v-model="objectives[i].en" />
+            </div>
+            <div class="element">
+              <span>Arabic</span>
+              <InputText v-model="objectives[i].ar" />
+            </div>
+
+            <Button @click="() => {
+              deleteObjective(i);
+            }
+              " label="Remove" style="background-color: red" />
+          </div>
+          <div class="btn-container">
+            <Button @click="addObjective" label="Add Objective " />
+          </div>
+        </div>
+      </TabPanel>
+
+
+      <TabPanel>
+        <template #header>
+          <div class="tab_header">
+            <i class="pi pi-book"></i>
+            <p>Chapters</p>
+          </div>
+
+        </template>
+        <div class="tab_container">
+
+          <Accordion>
+            <AccordionTab class="row" v-for="(chapter, i) in chapters" :key="'chap' + i.toString()">
+              <template #header>
+                <h3>{{ chapter.title.en }}</h3>
+              </template>
+
+              <div class="element">
+                <span>English Title</span>
+                <InputText v-model="chapters[i].title.en" />
+              </div>
+              <div class="element">
+                <span>Arabic Title</span>
+                <InputText v-model="chapters[i].title.ar" />
+              </div>
+
+              <h3>Materials</h3>
+              <transition-group name="swap" tag="ul">
+                <li class="row2 row" v-for="(material, j) in chapters[i].materials" :key="material">
+                  <div class="options">
+                    <i class="pi pi-arrow-up" style="color: var(--accent1)" @click="moveUp(i, j)"></i>
+                    <i class="pi pi-arrow-down" style="color: var(--accent1)" @click="moveDown(i, j)"></i>
+                  </div>
+                  <div class="mat-group">
+                    <div v-for="(mask, k) in chaptersLabels" :key="'mask' + i.toString() + j.toString() + k.toString()">
+                      <div class="element">
+                        <span>{{ mask.label }}</span>
+                        <component :key="'com' +
                           i.toString() +
                           j.toString() +
                           k.toString() +
                           'a'
-                        "
-                        :is="mask.component"
-                        :disabled="mask.disabled"
-                        v-if="mask.mask2"
-                        v-model="
-                          chapters[i].materials[j][mask.mask1][mask.mask2]
-                        "
-                      />
-                      <component
-                        :key="
-                          'com' +
+                          " :is="mask.component" :disabled="mask.disabled" v-if="mask.mask2" v-model="chapters[i].materials[j][mask.mask1][mask.mask2]
+                            " />
+                        <component :key="'com' +
                           i.toString() +
                           j.toString() +
                           k.toString() +
                           'b'
-                        "
-                        :is="mask.component"
-                        :disabled="mask.disabled"
-                        v-else
-                        v-model="chapters[i].materials[j][mask.mask1]"
-                      />
+                          " :is="mask.component" :disabled="mask.disabled" v-else v-model="chapters[i].materials[j][mask.mask1]" />
+                      </div>
+                    </div>
+                    <div class="material-btns">
+                      <Button label="Edit" @click="
+                        materialId = material?.Id;
+                      materialType = material?.type;
+                      addMaterialDialog = true;
+                      chapterOrder = i;
+                      " />
+                      <Button style="background-color: red" label="delete" @click="chapters[i]?.materials?.splice(j, 1)" />
                     </div>
                   </div>
-                  <div class="material-btns">
-                    <Button
-                      label="Edit"
-                      @click="
-                        materialId = material?.Id;
-                        materialType = material?.type;
-                        addMaterialDialog = true;
-                        chapterOrder = i;
-                      "
-                    />
-                    <Button
-                      style="background-color: red"
-                      label="delete"
-                      @click="chapters[i]?.materials?.splice(j, 1)"
-                    />
-                  </div>
-                </div>
-              </li>
-            </transition-group>
+                </li>
+              </transition-group>
 
-            <div style="display: flex; justify-content: end">
-              <Button
-                @click="
+              <div style="display: flex; justify-content: end">
+                <Button @click="
                   materialId = '';
-                  materialType = '';
-                  addMaterialDialog = true;
-                  chapterOrder = i;
-                "
-                label="Add"
-                style="margin-right: 2rem"
-              />
-            </div>
-          </AccordionTab>
-        </Accordion>
-        <div class="btn-container">
-          <Button label="Add Chapter" @click="addChapter" />
+                materialType = '';
+                addMaterialDialog = true;
+                chapterOrder = i;
+                " label="Add" style="margin-right: 2rem" />
+              </div>
+            </AccordionTab>
+          </Accordion>
+          <div class="btn-container">
+            <Button label="Add Chapter" @click="addChapter" />
+          </div>
         </div>
-      </AccordionTab>
-    </Accordion>
+
+      </TabPanel>
+    </TabView>
 
     <div class="btn-container">
       <Button @click="updatecourse" label="Save Changes" />
@@ -402,47 +374,64 @@ function moveDown(chapterindex: number, matIndex: number) {
 </template>
 
 <style scoped>
+.tab_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
 .container {
   min-height: 80vh;
   width: 90%;
   margin-inline: auto;
   margin-block: 5rem;
 }
+
 .element {
   display: grid;
   grid-template-columns: 15rem calc(100% - 15rem);
   margin-bottom: 0.5rem;
 }
+
 textarea {
   height: 10rem;
 }
+
 .row {
   padding: 1rem;
   border-top: 2px solid var(--choiceBackgroundColor);
 }
+
 h3 {
   padding: 0;
   margin: 0;
   color: var(--accent1);
 }
+
 span {
   color: var(--text);
 }
+
 .btn-container {
   display: flex;
   flex-direction: column;
   align-items: end;
   margin-bottom: 5rem;
 }
+
 .material-btns {
   display: flex;
   justify-content: space-around;
 }
+
 .row2 {
   display: grid;
   grid-template-columns: 1rem calc(100% - 1rem);
   gap: 2rem;
 }
+
 .options {
   display: flex;
   flex-direction: column;
@@ -453,7 +442,8 @@ span {
 
 
 
-.swap-enter-active, .swap-leave-active {
+.swap-enter-active,
+.swap-leave-active {
   transition: all 0.5s ease;
 }
 
@@ -482,7 +472,9 @@ span {
 .swap-move {
   transition: transform 0.5s ease;
 }
+
 .row {
-  position: relative; /* Ensures smooth moving of elements when swapping */
+  position: relative;
+  /* Ensures smooth moving of elements when swapping */
 }
 </style>

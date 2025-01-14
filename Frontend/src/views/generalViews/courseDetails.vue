@@ -221,15 +221,16 @@ function viewMaterial() {
 <style scoped>
 .big-container {
   display: grid;
-  padding-inline: 5rem;
+  padding-inline: 4rem;
   grid-template-columns: 3fr 2fr;
   margin-bottom: 4rem;
+  gap: 2rem;
 }
 .content {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 12rem;
+  margin-top: 10.5rem;
 }
 
 @media screen and (max-width: 1200px) {

@@ -9,7 +9,7 @@ const router = useRouter()
 <template>
   <main v-if="selectLang(track?.title)?.toLowerCase().includes(search.toLowerCase())" >
     <div class="container"  @click="router.push(`/tracks/${prop.programId}/${prop.trackId}`)" >
-      <img :src="track?.male_image" alt="" />
+      <img :src="track?.image" alt="" />
       <h2>{{ selectLang(track?.title) }}</h2>
       <Button @click="router.push(`/tracks/${prop.programId}/${prop.trackId}`)" :label=selectLang(translationModule.learnMore) />
     </div>
@@ -21,6 +21,7 @@ const router = useRouter()
     width: fit-content;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 h2{
     color: var(--header);
@@ -32,8 +33,8 @@ button{
     align-self: end;
 }
 img{
-    width: 16rem;
-    aspect-ratio: 1.05/1;
+    width: 20rem;
+    aspect-ratio: 1.5/1;
     border-radius: 8px;
 }
 

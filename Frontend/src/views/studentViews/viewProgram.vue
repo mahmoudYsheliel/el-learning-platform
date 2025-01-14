@@ -157,7 +157,8 @@ h1 {
   padding: 1rem 2rem;
   margin-bottom: 5rem;
   margin-inline: auto;
-  overflow-x: auto;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .courses_tracks_container{
   width: 98vw;

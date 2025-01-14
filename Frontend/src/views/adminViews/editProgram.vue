@@ -6,13 +6,13 @@ import { useRoute, useRouter } from "vue-router";
 import { programObject } from "@/lib/Modules";
 import Button from "primevue/button";
 import Dropdown from "primevue/dropdown";
-import Accordion from "primevue/accordion";
-import AccordionTab from "primevue/accordiontab";
-import { selectLang } from "@/lib/Translate";
 import InputText from "primevue/inputtext";
 import Textarea from "primevue/textarea";
 import "primeicons/primeicons.css";
 import { ref, reactive } from "vue";
+import TabView from 'primevue/tabview';
+import TabPanel from 'primevue/tabpanel';
+
 
 const route = useRoute();
 const router = useRouter();
@@ -36,7 +36,6 @@ coursesRequester.callApi({}).then((res) => {
       .then((res) => {
         if (res?.success) {
           program.value = res?.data?.program;
-
           programObject.value = {
             ...programObject.value,
             titleEn: {
@@ -111,7 +110,7 @@ function addTrack() {
   tracks.value.push({
     title: {
       en: 'New Track',
-      ar: 'مسار جديد'
+      ar: ''
     },
     description: {
       en: '',
@@ -130,7 +129,7 @@ function addTrackLevel() {
 
   selectedTrack.value?.levels.push({
     title: {
-      en: '',
+      en: 'New Level',
       ar: ''
     },
     courses: []
@@ -151,6 +150,16 @@ function addLevelCourse(levelOrder: number) {
 function deleteCourse(index: number) {
   roadMap.value.splice(index, 1);
 }
+function deleteTrack() {
+  let index = -1
+  for (let i =0;i<tracks.value.length;i++){
+    if ( tracks.value[i]?.title.en == selectedTrack.value?.title?.en){
+      index=i
+    }
+  }
+  tracks.value.splice(index, 1);
+  selectedTrack.value = tracks.value[0]
+}
 
 function updateProgram() {
   let updatedRoadMap = [];
@@ -169,8 +178,8 @@ function updateProgram() {
     for (let i = 0; i < track?.levels?.length; i++) {
       for (let j = 0; j < track?.levels[i]?.courses?.length; j++) {
         track.levels[i].courses[j] = courses.value?.find((course: any) => {
-          return course?.id == track.levels[i].courses[j]
-        })
+          return course?.id == track.levels[i].courses[j].id
+        })?.id
       }
     }
 
@@ -181,7 +190,6 @@ function updateProgram() {
     }
     updated_tracks.push(track)
   }
-  console.log(updated_tracks)
 
 
   const data = {
@@ -213,139 +221,153 @@ function updateProgram() {
 <template>
   <Nanbar />
   <div class="container">
-    <div class="element" v-for="element in programObject">
-      <h3>{{ element.label }}</h3>
-      <component :type="element.inputType" :is="element.component" v-model="element.variable" />
-    </div>
-
-    <Accordion :activeIndex="0">
-      <AccordionTab :pt="{
-        headerAction: {
-          style: 'padding-inline:0',
-        },
-      }">
+    <TabView>
+      <TabPanel>
         <template #header>
-          <h3>Road Map</h3>
+          <div class="tab_header">
+            <i class="pi pi-info"></i>
+            <p> Basic Info </p>
+          </div>
         </template>
-        <div>
-          <div v-for="(roadMapStap, i) in roadMap" class="row">
-            <div class="courseelement">
-              <Dropdown v-model="roadMap[i].course" :options="courses" optionLabel="title.en" placeholder="Select a Course" />
-              <i class="pi pi-times-circle" @click="() => {
-                deleteCourse(i);
-              }
-                "></i>
+        <div class="tab_container">
+          <div class="element" v-for="element in programObject">
+            <h3>{{ element.label }}</h3>
+            <component :type="element.inputType" :is="element.component" v-model="element.variable" />
+          </div>
+        </div>
+      </TabPanel>
+      <TabPanel>
+        <template #header>
+          <div class="tab_header">
+            <i class="pi pi-bars"></i>
+            <p> Tracks</p>
+          </div>
+        </template>
+        <div class="tab_container">
+          <div class="tracks">
+            <div class="btn-container">
+              <Button @click="addTrack" icon="pi pi-plus-circle" label="Add Track" />
+            </div>
+            <div class="element" style="margin-bottom: 0.5rem;">
+              <h3>Select Track</h3>
+              <Dropdown v-model="selectedTrack" :options="tracks" optionLabel="title.en" placeholder="Select a track" />
+            </div>
+            <div class="track_container" v-if="selectedTrack" style="border-top: 2px solid var(--text);padding-top: 1rem;">
+              <div class="btn-container">
+              <Button @click="deleteTrack()" icon="pi pi-times-circle" label="Delete Track" style="background-color: red;"/>
+            </div>
+              <div class="element">
+                <h4>English Title</h4>
+                <InputText v-model="selectedTrack.title.en" />
+              </div>
+              <div class="element">
+                <h4>Arabic Title</h4>
+                <InputText v-model="selectedTrack.title.ar" />
+              </div>
+              <div class="element">
+                <h4>English Description</h4>
+                <Textarea v-model="selectedTrack.description.en" />
+              </div>
+              <div class="element">
+                <h4>Arabic Description</h4>
+                <Textarea v-model="selectedTrack.description.ar" />
+              </div>
+              <div class="images">
+                <div class="image">
+                  <h4>Female Image</h4>
+                  <InputText v-model="selectedTrack.female_image" />
+                  <img :src="selectedTrack.female_image" alt="">
+                </div>
+                <div class="image">
+                  <h4>Male Image</h4>
+                  <InputText v-model="selectedTrack.male_image" />
+                  <img :src="selectedTrack.male_image" alt="">
+                </div>
+                <div class="image">
+                  <h4>Image</h4>
+                  <InputText v-model="selectedTrack.image" />
+                  <img :src="selectedTrack.image" alt="">
+                </div>
+                <div class="image">
+                  <h4>Video</h4>
+                  <InputText v-model="selectedTrack.video" />
+                  <iframe v-if="selectedTrack.video" style="aspect-ratio: 1.75/1;" :src="selectedTrack.video" alt=""></iframe>
+                </div>
+              </div>
+              <h3>Levels</h3>
+              <TabView :scrollable="true">
+                <TabPanel v-for="level, i in selectedTrack?.levels" :key="i">
+                  <template #header>
+                    {{ level.title.en }}
+                  </template>
+                  <div class="level_container">
+                    <div class="element">
+                      <h4>English Title</h4>
+                      <InputText v-model="level.title.en" />
+                    </div>
+                    <div class="element">
+                      <h4>Arabic Title</h4>
+                      <InputText v-model="level.title.ar" />
+                    </div>
+                    <div class="btn-container">
+                      <Button @click="addLevelCourse(i)" icon="pi pi-plus-circle" label="Add Level Course" style="font-size: 0.75rem; " />
+                    </div>
+                    <div v-for="(course, j) in level.courses" class="row">
+                      <div class="courseelement">
+                        <Dropdown v-model="level.courses[j]" :options="courses" optionLabel="title.en" placeholder="Select a Course" />
+                        <i class="pi pi-times-circle" @click="() => {
+                          level.courses.splice(j, 1);
+                        }
+                          "></i>
+                      </div>
+                    </div>
+
+
+                    <div class="btn-container">
+                      <Button @click="() => { selectedTrack?.levels?.splice(i, 1) }" icon="pi pi-times-circle" label="Delete Level" style=" background-color: red;" />
+                    </div>
+
+                  </div>
+                  
+
+                </TabPanel>
+              </TabView>
+              <div class="btn-container">
+                    <Button @click="addTrackLevel()" icon="pi pi-plus-circle" label="Add Level" />
+                  </div>
+
+
+
+            </div>
+
+          </div>
+        </div>
+      </TabPanel>
+      <TabPanel>
+        <template #header>
+          <div class="tab_header">
+            <i class="pi pi-book"></i>
+            <p> Courses</p>
+          </div>
+        </template>
+        <div class="tab_container">
+          <div>
+            <div v-for="(roadMapStap, i) in roadMap" class="row">
+              <div class="courseelement">
+                <Dropdown v-model="roadMap[i].course" :options="courses" optionLabel="title.en" placeholder="Select a Course" />
+                <i class="pi pi-times-circle" @click="() => {
+                  deleteCourse(i);
+                }
+                  "></i>
+              </div>
+            </div>
+            <div class="btn-container">
+              <Button @click="addCourse" icon="pi pi-plus-circle" label="Add Course" />
             </div>
           </div>
-          <div class="btn-container">
-            <i @click="addCourse" class="pi pi-plus-circle" label="Add Course to Road Map" style="font-size: 1.5rem; color: var(--accent1)"></i>
-          </div>
         </div>
-      </AccordionTab>
-    </Accordion>
-
-    <div class="tracks">
-      <h3>Tracks</h3>
-      <div class="element" style="margin-bottom: 2rem;padding-bottom: 1rem;">
-        <h4>Select Track</h4>
-        <Dropdown v-model="selectedTrack" :options="tracks" optionLabel="title.en" placeholder="Select a track" />
-
-      </div>
-
-
-      <div class="track_container" v-if="selectedTrack">
-        <div class="element">
-          <h4>English Title</h4>
-          <InputText v-model="selectedTrack.title.en" />
-        </div>
-        <div class="element">
-          <h4>Arabic Title</h4>
-          <InputText v-model="selectedTrack.title.ar" />
-        </div>
-
-        <div class="element">
-          <h4>English Description</h4>
-          <Textarea v-model="selectedTrack.description.en" />
-        </div>
-        <div class="element">
-          <h4>Arabic Description</h4>
-          <Textarea v-model="selectedTrack.description.ar" />
-        </div>
-
-        <div class="images">
-          <div class="image">
-            <h4>Female Image</h4>
-            <InputText v-model="selectedTrack.female_image" />
-            <img :src="selectedTrack.female_image" alt="">
-          </div>
-
-          <div class="image">
-            <h4>Male Image</h4>
-            <InputText v-model="selectedTrack.male_image" />
-            <img :src="selectedTrack.male_image" alt="">
-          </div>
-
-          <div class="image">
-            <h4>Image</h4>
-            <InputText v-model="selectedTrack.image" />
-            <img :src="selectedTrack.image" alt="">
-          </div>
-
-          <div class="image">
-            <h4>Video</h4>
-            <InputText v-model="selectedTrack.video" />
-            <iframe v-if="selectedTrack.video" style="aspect-ratio: 1.75/1;" :src="selectedTrack.video" alt=""></iframe>
-          </div>
-        </div>
-        <h3>Levels</h3>
-        <div class="level" v-for="level, i in selectedTrack?.levels">
-          <div class="btn-container" style="margin: 0.25rem;">
-            <i @click="() => { selectedTrack?.levels?.splice(i, 1) }" class="pi pi-times-circle" label="Add Course to Road Map" style="font-size: 1rem; color: red;"></i>
-          </div>
-
-          <div class="element">
-            <h4>English Title</h4>
-            <InputText v-model="level.title.en" />
-          </div>
-          <div class="element">
-            <h4>Arabic Title</h4>
-            <InputText v-model="level.title.ar" />
-          </div>
-
-
-
-          <div v-for="(course, j) in level.courses" class="row">
-            <div class="courseelement">
-              <Dropdown v-model="level.courses[j]" :options="courses" optionLabel="title.en" placeholder="Select a Course" />
-              <i class="pi pi-times-circle" @click="() => {
-                level.courses.splice(j, 1);
-              }
-                "></i>
-            </div>
-          </div>
-          <div class="btn-container" style="margin: 0;">
-          <Button @click="addLevelCourse(i)" icon="pi pi-plus-circle" label="Add Level Course" style="font-size: 0.75rem; " />
-        </div>
-
-
-        </div>
-        <div class="btn-container">
-          <Button @click="addTrackLevel" icon="pi pi-plus-circle" label="Add Level" style="font-size: 0.75rem; " />
-        </div>
-
-      </div>
-      <div class="btn-container">
-        <Button @click="addTrack" icon="pi pi-plus-circle" label="Add Track" style="font-size: 0.75rem; " />
-      </div>
-    </div>
-
-
-
-
-
-
-
-
+      </TabPanel>
+    </TabView>
 
     <div class="btn-container">
       <Button @click="updateProgram" label="Save Changes" />
@@ -355,6 +377,13 @@ function updateProgram() {
 </template>
 
 <style scoped>
+.tab_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .level {
   border: 2px solid var(--text);
   padding: 1rem;
@@ -382,7 +411,7 @@ h4 {
   min-height: 80vh;
   width: 90%;
   margin-inline: auto;
-  margin-block: 5rem;
+  margin-bottom: 5rem;
 }
 
 .element {
@@ -405,8 +434,7 @@ iframe {
 }
 
 .row {
-  padding: 1rem;
-  border-top: 4px solid var(--choiceBackgroundColor);
+  padding: 0.5rem;
 }
 
 h3 {
@@ -419,10 +447,11 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: end;
-  margin-bottom: 5rem;
+  justify-content: space-evenly;
+  margin-block: 1rem;
 }
 
-i {
+.row>i {
   cursor: pointer;
   color: red;
 }

@@ -44,7 +44,7 @@ const props =defineProps(['chapters'])
         </template>
 
         <p
-          style="padding: 0; margin: 0; color: var(--accent1)"
+          style="padding: 0; margin-block: 0.35rem; color: var(--accent1)"
           class="m-0"
           v-for="mat in chapter.materials"
         >
@@ -61,27 +61,20 @@ const props =defineProps(['chapters'])
 
 h4,
 h5 {
-  margin: 0;
+  margin: 0.2rem;
 }
 h2 {
   color: var(--accent1);
-  margin: 0;
+  margin-top: 0;
   padding: 0;
 }
 p {
   margin-left: 1rem;
-  line-height: 1.25rem;
   color: var(--text);
 }
 
 .card {
-  width: 75%;
+  width: 95%;
 }
 
-@media screen and (max-width: 1200px) {
- 
-  .card {
-    width: 75%;
-  }
-}
 </style>
