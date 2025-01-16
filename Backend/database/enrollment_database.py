@@ -416,7 +416,6 @@ async def add_progress(
 
 
 async def request_enrollment(requesr: RequestEnrollment) -> ServiceResponse:
-
     package_bson = validate_bson_id(requesr.course_id)
     if requesr.package_type != "course" and requesr.package_type != "plan":
         return ServiceResponse(
