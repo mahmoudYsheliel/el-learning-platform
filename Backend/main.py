@@ -56,7 +56,7 @@ app.include_router(activity_api.router)
 
     
 # #Mount the static files directory
-# app.mount("/", StaticFiles(directory="dist", html=True), name="dist")
+app.mount("/", StaticFiles(directory="dist", html=True), name="dist")
 
 
 # if __name__ == '__main__':
