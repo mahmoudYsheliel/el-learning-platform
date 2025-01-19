@@ -100,7 +100,13 @@ const router = createRouter({
       component: () => import("@/views/parentViews/childrenAnalysis.vue"),
       meta: { requredAuth: true, userType: "Parent" },
     },
-
+    
+    {
+      path: "/viewChildAnalysis",
+      name: "viewChildAnalysis",
+      component: () => import("@/views/studentViews/viewChildAnalysis.vue"),
+      meta: { requredAuth: true, userType: "Child" },
+    },
     {
       path: "/addChild",
       name: "addChild",

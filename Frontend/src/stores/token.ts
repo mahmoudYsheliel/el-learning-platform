@@ -57,6 +57,7 @@ interface info {
   firstName:string
   lastName:string
   email:string
+  gender:string
   notifications: Notification[];
 }
 

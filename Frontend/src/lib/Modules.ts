@@ -16,7 +16,7 @@ export const pagesToRoute = [
 ];
 
 
-export const items = ((router:any) => {
+export const items = ((router: any) => {
 
   const personalInfo = usePersonalInfo();
   let items: any
@@ -155,7 +155,7 @@ export const items = ((router:any) => {
       },
     ];
   }
-  post_event('nav_items',items)
+  post_event('nav_items', items)
   return items
 });
 
@@ -701,7 +701,7 @@ export const courseObject = shallowRef({
     component: InputText,
     inputType: "number",
   },
- 
+
 });
 
 export const planObject = shallowRef({
@@ -898,4 +898,68 @@ export const IQScoresMap = [
       ar: "منخفض للغاية"
     }
   }
+]
+
+export const track_images = [
+  {
+    path: '/public/Tracks/health_heroes_male.png',
+    name: 'Health Heroes',
+    type: 'Male'
+  },
+  {
+    path: '/public/Tracks/health_heroes_female.png',
+    name: 'Health Heroes',
+    type: 'Female'
+  },
+  {
+    path: '/public/Tracks/code_creator_male.png',
+    name: "Code Creators",
+    type: 'Male'
+  },
+  {
+    path: '/public/Tracks/code_creator_female.png',
+    name: "Code Creators",
+    type: 'Female'
+  },
+  {
+    path: '/public/Tracks/tech_titans_male.png',
+    name: "Tech Titans",
+    type: 'Male'
+  },
+  {
+    path: '/public/Tracks/tech_titans_female.png',
+    name: "Tech Titans",
+    type: 'Female'
+  },
+  {
+    path: '/public/Tracks/planet_protector_male.png',
+    name: "Planet Protectors",
+    type: 'Male'
+  },
+  {
+    path: '/public/Tracks/planet_protector_female.png',
+    name: "Planet Protectors",
+    type: 'Female'
+  },
+  {
+    path: '/public/Tracks/future_frontiers_male.png',
+    name: "Future Frontiers",
+    type: 'Male'
+  },
+  {
+    path: '/public/Tracks/future_frontiers_female.png',
+    name: "Future Frontiers",
+    type: 'Female'
+  },
+  {
+    path: '/public/Tracks/quantum_quest.png',
+    name: "Quantum Quest",
+    type: 'Male'
+  },
+  {
+    path: '/public/Tracks/quantum_quest.png',
+    name: "Quantum Quest",
+    type: 'Female'
+  }
+
 ]

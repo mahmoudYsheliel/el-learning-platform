@@ -94,9 +94,11 @@ image {
   height: fit-content;
 }
 img {
-  width: 100%;
-  aspect-ratio: 2/1;
+  width: 90%;
+  margin-inline: auto;
+  aspect-ratio: 1.6/1;
   border-radius: 0.5rem;
+  object-fit:cover;
 }
 .card {
   display: flex;

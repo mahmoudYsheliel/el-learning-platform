@@ -80,7 +80,7 @@ main {
   padding: 0;
 }
 h1 {
-  line-height: 2rem;
+  line-height: 3rem;
 }
 .wrapper {
   display: flex;
@@ -127,7 +127,6 @@ p.header {
 p {
   margin: 0;
   padding: 0;
-  line-height: 1.5rem;
 }
 @media screen and (max-width: 1300px) {
   .left {

@@ -1,4 +1,7 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, File, UploadFile
+import shutil
+from pathlib import Path
+import zipfile
 from pydantic import BaseModel
 from weasyprint import HTML
 import smtplib
@@ -7,10 +10,14 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 import os
+import base64
+import re
+
 
 # Define the request body
 class EmailRequest(BaseModel):
     html_content: str
+    image_base64:str
     recipient: str
     subject: str = "Webpage PDF"
     body: str = "Please find the attached PDF of the webpage."
@@ -46,31 +53,57 @@ def send_email(subject: str, body: str, to_email: str):
 
 
 
-
+def extract_text_following_keyword(text, keyword="base64,"):
+    # Define the regex pattern to match any text following the keyword
+    pattern = re.compile(f"{keyword}(.*)")
+    
+    # Search for the pattern in the given text
+    match = pattern.search(text)
+    
+    if match:
+        # Return the text following the keyword
+        return match.group(1).strip()  # Use .strip() to remove leading/trailing whitespaces
+    else:
+        return None
 
 
 # Function to send an email with an attachment
-def send_email_with_attachment(subject: str, to_email: str, body: str, attachment_path: str):
+def send_email_with_attachment(subject: str, to_email: str, body: str, attachment_path: str,img_base64:str):
     try:
         # Create the email
         msg = MIMEMultipart()
         msg["From"] = FROM_EMAIL
         msg["To"] = to_email
         msg["Subject"] = subject
+       
+        img_base64 = extract_text_following_keyword(img_base64)
+        image_data = base64.b64decode(img_base64)
 
-        # Add the email body
-        msg.attach(MIMEText(body, "html"))
-
-        # Attach the PDF file
-        with open(attachment_path, "rb") as attachment:
+        image_filename = "attached_image.pdf"
+        with open(image_filename, "wb") as img_file:
+            img_file.write(image_data)
+            
+        zip = zipfile.ZipFile('report.zip','w',zipfile.ZIP_DEFLATED)
+        zip.write(image_filename)
+        zip.close()
+            
+        with open('report.zip', "rb") as attachment:
             part = MIMEBase("application", "octet-stream")
             part.set_payload(attachment.read())
             encoders.encode_base64(part)
             part.add_header(
                 "Content-Disposition",
-                f"attachment; filename={os.path.basename(attachment_path)}",
+                f"attachment; filename={os.path.basename('report.zip')}",
             )
             msg.attach(part)
+            
+        
+        # with open(image_filename, "rb") as img_file:
+        #     mime = MIMEBase("image", "png", filename=image_filename)
+        #     mime.set_payload(img_file.read())
+        #     encoders.encode_base64(mime)
+        #     mime.add_header("Content-Disposition", f"attachment; filename={image_filename}")
+        #     msg.attach(mime)
 
         # Send the email via Gmail's SMTP server
         with smtplib.SMTP_SSL(GMAIL_SMTP_SERVER,GMAIL_SMTP_PORT) as server:
@@ -78,4 +111,7 @@ def send_email_with_attachment(subject: str, to_email: str, body: str, attachmen
             server.sendmail(FROM_EMAIL, to_email, msg.as_string())
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error sending email: {e}")
+
+
+
 

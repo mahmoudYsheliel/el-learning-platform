@@ -1,692 +1,611 @@
-[
-  {
-    "title": {
-      "en": "The Fundamentals of Flight",
-      "ar": "أساسيات الطيران"
-    },
-    "materials": [
-      {
-        "Id": "66bfa992da5e21b897011410",
-        "order": 1,
-        "title": {
-          "en": "Running the Skies",
-          "ar": "التحكم في السما"
-        },
-        "type": "Lesson"
-      },
-      {
-        "Id": "66bfa9e9da5e21b897011411",
-        "order": 2,
-        "title": {
-          "en": "The History and Uses of Kites",
-          "ar": "تاريخ واستخدامات الطيارات الورقية"
-        },
-        "type": "Lesson"
-      },
-      {
-        "Id": "66bfaa26da5e21b897011412",
-        "order": 3,
-        "title": {
-          "en": "Famous Figures and Their Kites",
-          "ar": "المشاهير وطياراتهم الورقية"
-        },
-        "type": "Lesson"
-      },
-
-
-
-      {
-        "Id": "66d342e6f6fb98d8098e4ff9",
-        "order": 4,
-        "title": {
-          "en": "Making a Sled Kite",
-          "ar": "صنع طائرة شراعية"
-        },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d3440ef6fb98d8098e4ffa",
-        "order": 5,
-        "title": {
-          "en": "Build a Tetrahedral Kite",
-          "ar": "بناء طائرة شراعية هرمية"
-        },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d38475f6fb98d8098e4ffb",
-        "order": 6,
-        "title": {
-          "en": "Build a Delta Wing Kite (Hang Glider)",
-          "ar": "بناء طائرة شراعية دلتا"
-        },
-        "type": "Activity"
-      },
-
-
-
-
-
-
-
-      {
-        "Id": "66bfaf9ada5e21b897011422",
-        "order": 7,
-        "title": {
-          "en": "Kites in Flight",
-          "ar": "الطائرات الورقية في الطيران"
-        },
-        "type": "Quiz"
-      },
-      {
-        "Id": "66bfaa6dda5e21b897011413",
-        "order": 8,
-        "title": {
-          "en": "The Dream of Flying",
-          "ar": "حلم الطيران"
-        },
-        "type": "Lesson"
-      },
-      {
-        "Id": "66bfaaa9da5e21b897011414",
-        "order": 9,
-        "title": {
-          "en": "The Evolution of Flight",
-          "ar": "تطور الطيران"
-        },
-        "type": "Lesson"
-      },
-
-
-
-
-      {
-        "Id": "66d3851af6fb98d8098e4ffc",
-        "order": 10,
-        "title": {
-          "en": "Build a Rotor Motor",
-          "ar": "بناء محرك دوار"
-        },
-        "type": "Activity"
-      },
-
-
-
-
-
-
-
-      {
-        "Id": "66bfb0b3da5e21b897011423",
-        "order": 11,
-        "title": {
-          "en": "They Never Gave Up",
-          "ar": "لم يستسلموا أبدًا"
-        },
-        "type": "Quiz"
-      },
-      {
-        "Id": "66bfab56da5e21b897011415",
-        "order": 12,
-        "title": {
-          "en": "The Wright Brothers' Journey to Powered Flight",
-          "ar": "ويلبر وأورفيل رايت: رواد الطيران"
-        },
-        "type": "Lesson"
-      },
-      {
-        "Id": "66bfab90da5e21b897011416",
-        "order": 13,
-        "title": {
-          "en": "Wilbur & Orville Wright: Pioneers of Flight",
-          "ar": "رحلة الأخوين رايت إلى الطيران المدفوع"
-        },
-        "type": "Lesson"
-      },
-
-
-
-
-
-
-
-
-      {
-        "Id": "66d385a6f6fb98d8098e4ffd",
-        "order": 14,
-        "title": {
-          "en": "Flying a Styrofoam Plane",
-          "ar": "طيران طائرة من الستايروفوم"
-        },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d38630f6fb98d8098e4ffe",
-        "order": 15,
-        "title": {
-          "en": "Craft Stick Aircraft",
-          "ar": "طائرة من عصي الحرف اليدوية"
-        },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d386ccf6fb98d8098e4fff",
-        "order": 16,
-        "title": {
-          "en": "The Warping Technique",
-          "ar": "تقنية الالتواء"
-        },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d3880ff6fb98d8098e5000",
-        "order": 17,
-        "title": {
-          "en": "The Wright Glider",
-          "ar": "طائرة الشراعية رايت"
-        },
-        "type": "Activity"
-      },
-
-
-
-
-
-
-      {
-        "Id": "66bfb125da5e21b897011424",
-        "order": 18,
-        "title": {
-          "en": "The Wright Brothers",
-          "ar": "الأخوان رايت"
-        },
-        "type": "Quiz"
-      }
-    ]
+{
+  "id": null,
+  "title": {
+    "en": "Robotics",
+    "ar": "الروبوتات"
   },
-  {
-    "title": {
-      "en": "The Science of Flight",
-      "ar": "علم الطيران"
-    },
-    "materials": [
-      {
-        "Id": "66bfac07da5e21b897011417",
-        "order": 1,
-        "title": {
-          "en": "Air Works for Me",
-          "ar": "الهواء يعمل من أجلي"
-        },
-        "type": "Lesson"
-      },
-
-
-
-
-
-      {
-        "Id": "66d388b2f6fb98d8098e5001",
-        "order": 2,
-        "title": {
-          "en": "The Axes of Flight",
-          "ar": "محاور الطيران"
-        },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d389c5f6fb98d8098e5002",
-        "order": 3,
-        "title": {
-          "en": "Air Power",
-          "ar": "قوة الهواء"
-        },
-        "type": "Activity"
-      },
-
-
-
-
-
-
-
-      {
-        "Id": "66bfb1aeda5e21b897011425",
-        "order": 4,
-        "title": {
-          "en": "Understanding States of Matter",
-          "ar": "فهم حالات المادة"
-        },
-        "type": "Quiz"
-      },
-      {
-        "Id": "66bfac46da5e21b897011418",
-        "order": 5,
-        "title": {
-          "en": "The Four Forces of Flight at Work",
-          "ar": "القوى الأربع للطيران في العمل"
-        },
-        "type": "Lesson"
-      },
-      {
-        "Id": "66bfb1e3da5e21b897011426",
-        "order": 6,
-        "title": {
-          "en": "The Four Forces of Flight at Work",
-          "ar": "قوى الطيران الأربعة في العمل"
-        },
-        "type": "Quiz"
-      },
-      {
-        "Id": "66bfac79da5e21b897011419",
-        "order": 7,
-        "title": {
-          "en": "The Pull of Gravity",
-          "ar": "جاذبية الأرض"
-        },
-        "type": "Lesson"
-      },
-
-
-
-
-
-      {
-        "Id": "66d4946540ead54467432a21",
-        "order": 8,
-        "title": {
-          "en": "Gravity — Different Balls",
-          "ar": "الجاذبية — كرات مختلفة"
-        },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d38ab5f6fb98d8098e5003",
-        "order": 9,
-        "title": {
-          "en": "Gravity — Colliding Marbles",
-          "ar": "الجاذبية — تصادم الكرات"
-        },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d38b18f6fb98d8098e5004",
-        "order": 10,
-        "title": {
-          "en": "Gravity — Falling Water",
-          "ar": "الجاذبية — سقوط الماء"
-        },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d38b57f6fb98d8098e5005",
-        "order": 11,
-        "title": {
-          "en": "Gravity — Paper Shape",
-          "ar": "الجاذبية — شكل الورق"
-        },
-        "type": "Activity"
-      },
-
-
-
-
-
-
-      {
-        "Id": "66bfb221da5e21b897011427",
-        "order": 12,
-        "title": {
-          "en": "The Pull of Gravity",
-          "ar": "جاذبية الأرض"
-        },
-        "type": "Quiz"
-      },
-      {
-        "Id": "66bfaca9da5e21b89701141a",
-        "order": 13,
-        "title": {
-          "en": "It Lifts Me Up—The Force of Lift",
-          "ar": "قوة الرفع"
-        },
-        "type": "Lesson"
-      },
-
-
-
-
-      {
-        "Id": "66d38b84f6fb98d8098e5006",
-        "order": 14,
-        "title": {
-          "en": "Lift — Chin Ups",
-          "ar": "الرفع — سحب الذقن"
-        },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d38bb0f6fb98d8098e5007",
-        "order": 15,
-        "title": {
-          "en": "Lift — Paper Pull",
-          "ar": "الرفع — سحب الورق"
-        },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d38bd9f6fb98d8098e5008",
-        "order": 16,
-        "title": {
-          "en": "Lift — Ping-pong Funnel",
-          "ar": "الرفع — قمع الكرة الصغيرة"
-        },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d38c08f6fb98d8098e5009",
-        "order": 17,
-        "title": {
-          "en": "Lift — Wing It",
-          "ar": "الرفع — اجعلها تطير"
-        },
-        "type": "Activity"
-      },
-
-
-
-
-
-
-
-
-      {
-        "Id": "66bfb25ada5e21b897011428",
-        "order": 18,
-        "title": {
-          "en": "It Lifts Me Up—The Force of Lift",
-          "ar": "يرفعني للأعلى—قوة الرفع"
-        },
-        "type": "Quiz"
-      },
-      {
-        "Id": "66bfacdcda5e21b89701141b",
-        "order": 19,
-        "title": {
-          "en": "The Opposing Forces of Thrust and Drag",
-          "ar": "القوى المتضادة للدفع والسحب"
-        },
-        "type": "Lesson"
-      },
-
-
-
-      {
-        "Id": "66d38da4f6fb98d8098e500a",
-        "order": 21,
-        "title": {
-          "en": "Thrust — Balloon Jets",
-          "ar": "الدفع — صواريخ البالونات"
-        },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d38deff6fb98d8098e500b",
-        "order": 21,
-        "title": {
-          "en": "Thrust — Moving Fan",
-          "ar": "الدفع — المروحة المتحركة"
-        },
-        "type": "Activity"
-      },
-
-
-
-
-
-
-
-      {
-        "Id": "66bfb299da5e21b897011429",
-        "order": 22,
-        "title": {
-          "en": "The Opposing Forces of Thrust and Drag",
-          "ar": "القوى المتعارضة للدفع والسحب"
-        },
-        "type": "Quiz"
-      }
-    ]
+  "description": {
+    "en": "Explore the fascinating world of robotics with our comprehensive course! Delve into mechanics, electronics, programming, and AI, gaining hands-on experience in designing and building robots. Learn key concepts in material science, kinematics, 3D modeling, and programming languages like C and PictoBlox. Develop skills in sensor integration, power electronics, and algorithm design. Our course offers a blend of theory and practical projects, empowering you to create innovative robotic solutions.",
+    "ar": "استكشف عالم الروبوتات الرائع من خلال دورتنا الشاملة! اغمر في الميكانيكا والإلكترونيات والبرمجة والذكاء الاصطناعي، واحصل على تجربة عملية في تصميم وبناء الروبوتات. تعلم المفاهيم الأساسية في علم المواد والحركة والنمذجة ثلاثية الأبعاد ولغات البرمجة مثل C وPictoBlox. قم بتطوير المهارات في تكامل الحساسات والإلكترونيات القوية وتصميم الخوارزميات. تقدم دورتنا مزيجًا من النظرية والمشاريع العملية، مما يمكنك من إنشاء حلول روبوتية مبتكرة."
   },
-  {
-    "title": {
-      "en": "Earth, Atmosphere, and Space Exploration",
-      "ar": "الأرض والغلاف الجوي واستكشاف الفضاء"
+  "chapters": [
+    {
+      "title": {
+        "en": "Introduction To Robotics",
+        "ar": "مقدمة في الروبوتات"
+      },
+      "materials": [
+        {
+          "Id": "6679a4bf24650df2a16196d2",
+          "order": 1,
+          "title": {
+            "en": "Exploring Robotics",
+            "ar": "استكشاف الروبوتات"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679beed24650df2a16196f0",
+          "order": 2,
+          "title": {
+            "en": "Robots in Life",
+            "ar": "الروبوتات في الحياة"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679a5a924650df2a16196d3",
+          "order": 3,
+          "title": {
+            "en": "Understanding Robots Types",
+            "ar": "فهم أنواع الروبوتات"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679bfac24650df2a16196f1",
+          "order": 4,
+          "title": {
+            "en": "Types of Robots",
+            "ar": "أنواع الروبوتات"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679a66224650df2a16196d4",
+          "order": 5,
+          "title": {
+            "en": "Understanding Robots Components",
+            "ar": "فهم مكونات الروبوتات"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679bfdf24650df2a16196f2",
+          "order": 6,
+          "title": {
+            "en": "Robot Components and Functions",
+            "ar": "مكونات الروبوت ووظائفه"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679a7f624650df2a16196d5",
+          "order": 7,
+          "title": {
+            "en": "From Mechanics to Programming",
+            "ar": "من الميكانيكا إلى البرمجة"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c07a24650df2a16196f3",
+          "order": 8,
+          "title": {
+            "en": "Robot Building Fundamentals",
+            "ar": "أساسيات بناء الروبوت"
+          },
+          "type": "Quiz"
+        }
+      ]
     },
-    "materials": [
-      {
-        "Id": "66bfad44da5e21b89701141c",
-        "order": 1,
-        "title": {
-          "en": "Controlling the Plane",
-          "ar": "التحكم بالطائرة"
-        },
-        "type": "Lesson"
+    {
+      "title": {
+        "en": "Electricity",
+        "ar": "الكهرباء"
       },
-      {
-        "Id": "66bfad89da5e21b89701141d",
-        "order": 1,
-        "title": {
-          "en": "Controlling the Plane 2",
-          "ar": "التحكم بالطائرة 2 "
+      "materials": [
+        {
+          "Id": "6679a93224650df2a16196d6",
+          "order": 1,
+          "title": {
+            "en": "Understanding Electricity",
+            "ar": "فهم الكهرباء"
+          },
+          "type": "Lesson"
         },
-        "type": "Lesson"
+        {
+          "Id": "6679c0ca24650df2a16196f4",
+          "order": 2,
+          "title": {
+            "en": "Electricity and Energy",
+            "ar": "الكهرباء والطاقة"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679a9cf24650df2a16196d7",
+          "order": 3,
+          "title": {
+            "en": "Electricity Essentials",
+            "ar": "أساسيات الكهرباء"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c0f624650df2a16196f5",
+          "order": 4,
+          "title": {
+            "en": "Electric Current and Circuits",
+            "ar": "التيار الكهربائي والدوائر"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679aa4f24650df2a16196d8",
+          "order": 5,
+          "title": {
+            "en": "Understanding Electrical Power",
+            "ar": "فهم القوة الكهربائية"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c12124650df2a16196f6",
+          "order": 6,
+          "title": {
+            "en": "Electrical Power and Motors",
+            "ar": "الطاقة الكهربائية والمحركات"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679aabb24650df2a16196d9",
+          "order": 7,
+          "title": {
+            "en": "Switches in Robotics",
+            "ar": "المفاتيح في الروبوتات"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c14e24650df2a16196f7",
+          "order": 8,
+          "title": {
+            "en": "Robot Components",
+            "ar": "مكونات الروبوت"
+          },
+          "type": "Quiz"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Mechanics",
+        "ar": "الميكانيكا"
       },
-
-
-
-
-
-      {
-        "Id": "66d39444f6fb98d8098e500c",
-        "order": 3,
-        "title": {
-          "en": "Making a Straw Plane",
-          "ar": "صناعة طائرة قش"
+      "materials": [
+        {
+          "Id": "6679ab1824650df2a16196da",
+          "order": 1,
+          "title": {
+            "en": "Motion and Measurement",
+            "ar": "الحركة والقياس"
+          },
+          "type": "Lesson"
         },
-        "type": "Activity"
+        {
+          "Id": "6679c18624650df2a16196f8",
+          "order": 2,
+          "title": {
+            "en": "Physics Basics",
+            "ar": "أساسيات الفيزياء"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679ab7c24650df2a16196db",
+          "order": 3,
+          "title": {
+            "en": "Newton's Laws",
+            "ar": "قوانين نيوتن"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c1c524650df2a16196f9",
+          "order": 4,
+          "title": {
+            "en": "Newton's Laws",
+            "ar": "قوانين نيوتن"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679abd924650df2a16196dc",
+          "order": 5,
+          "title": {
+            "en": "Exploring Energy",
+            "ar": "استكشاف الطاقة"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c1e824650df2a16196fa",
+          "order": 6,
+          "title": {
+            "en": "Energy Concepts",
+            "ar": "مفاهيم الطاقة"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679ac9024650df2a16196dd",
+          "order": 7,
+          "title": {
+            "en": "Unraveling Momentum",
+            "ar": "فك رموز الزخم"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c21a24650df2a16196fb",
+          "order": 8,
+          "title": {
+            "en": "Momentum Concepts",
+            "ar": "مفاهيم الزخم"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679acd724650df2a16196de",
+          "order": 9,
+          "title": {
+            "en": "Equilibrium and Forces",
+            "ar": "التوازن والقوى"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c24324650df2a16196fc",
+          "order": 10,
+          "title": {
+            "en": "Equilibrium",
+            "ar": "التوازن"
+          },
+          "type": "Quiz"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Programming",
+        "ar": "برمجة"
       },
-      {
-        "Id": "66d39479f6fb98d8098e500d",
-        "order": 4,
-        "title": {
-          "en": "Part 1—Ailerons Procedure",
-          "ar": "الجزء 1—إجراءات الرافعات"
+      "materials": [
+        {
+          "Id": "6679ade624650df2a16196df",
+          "order": 1,
+          "title": {
+            "en": "Computer Science Fundamentals",
+            "ar": "أساسيات علوم الكمبيوتر"
+          },
+          "type": "Lesson"
         },
-        "type": "Activity"
+        {
+          "Id": "6679c27524650df2a16196fd",
+          "order": 2,
+          "title": {
+            "en": "Computer Science Basics",
+            "ar": "أساسيات علوم الكمبيوتر"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679ae5d24650df2a16196e0",
+          "order": 3,
+          "title": {
+            "en": "Foundations of Programming",
+            "ar": "أسس البرمجة"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c2a124650df2a16196fe",
+          "order": 4,
+          "title": {
+            "en": "Programming Basics",
+            "ar": "أساسيات البرمجة"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679ae9e24650df2a16196e1",
+          "order": 5,
+          "title": {
+            "en": "Algorithms and Sequences",
+            "ar": "الخوارزميات والتسلسلات"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c2c124650df2a16196ff",
+          "order": 6,
+          "title": {
+            "en": "Algorithms and Sequences",
+            "ar": "الخوارزميات والتسلسلات"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679af8924650df2a16196e2",
+          "order": 7,
+          "title": {
+            "en": "Mastering C Programming Fundamentals",
+            "ar": "إتقان أساسيات برمجة C"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c2e424650df2a1619700",
+          "order": 8,
+          "title": {
+            "en": "C Programming Basics",
+            "ar": "أساسيات برمجة C"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679b01224650df2a16196e3",
+          "order": 9,
+          "title": {
+            "en": "Conditional Statements and Logical Operators",
+            "ar": "بيانات الشروط والعوامل المنطقية"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c30524650df2a1619701",
+          "order": 10,
+          "title": {
+            "en": "Conditional Statements",
+            "ar": "بيانات الشروط"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679b05f24650df2a16196e4",
+          "order": 11,
+          "title": {
+            "en": "Loop Structures",
+            "ar": "هياكل الحلقات"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c38724650df2a1619702",
+          "order": 12,
+          "title": {
+            "en": "C Programming Loops",
+            "ar": "الحلقات في برمجة C"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679b0bc24650df2a16196e5",
+          "order": 13,
+          "title": {
+            "en": "Functions in C",
+            "ar": "الدوال في C"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c3c924650df2a1619703",
+          "order": 14,
+          "title": {
+            "en": "C Programming Functions",
+            "ar": "دوال برمجة C"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679b11624650df2a16196e6",
+          "order": 15,
+          "title": {
+            "en": "Functions and File Handling",
+            "ar": "الدوال وتعامل الملفات"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c74024650df2a1619704",
+          "order": 16,
+          "title": {
+            "en": "File Handling in C",
+            "ar": "تعامل الملفات في C"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679b16724650df2a16196e7",
+          "order": 17,
+          "title": {
+            "en": "Exploring Pictoblox",
+            "ar": "استكشاف Pictoblox"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c77324650df2a1619705",
+          "order": 18,
+          "title": {
+            "en": "Test Your Knowledge of Pictoblox",
+            "ar": "اختبر معرفتك بـ Pictoblox"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679b1f324650df2a16196e8",
+          "order": 19,
+          "title": {
+            "en": "Pictoblox 1",
+            "ar": "Pictoblox 1"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c7c024650df2a1619706",
+          "order": 20,
+          "title": {
+            "en": "Pictoblox 2",
+            "ar": "Pictoblox 2"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "6679b24424650df2a16196e9",
+          "order": 21,
+          "title": {
+            "en": "Conditional Logic in Pictoblox",
+            "ar": "المنطق الشرطي في Pictoblox"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "6679c7e424650df2a1619707",
+          "order": 22,
+          "title": {
+            "en": "Pictoblox 3",
+            "ar": "Pictoblox 3"
+          },
+          "type": "Quiz"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Programming",
+        "ar": "برمجة"
       },
-      {
-        "Id": "66d3949bf6fb98d8098e500e",
-        "order": 5,
-        "title": {
-          "en": "Part 2—Elevators Procedure",
-          "ar": "الجزء 2—إجراءات المصاعد"
+      "materials": [
+        {
+          "Id": "6679b2d524650df2a16196ea",
+          "order": 1,
+          "title": {
+            "en": "Digital Logic Gates",
+            "ar": "بوابات المنطق الرقمية"
+          },
+          "type": "Lesson"
         },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d394c6f6fb98d8098e500f",
-        "order": 6,
-        "title": {
-          "en": "Part 3—Rudders Procedure",
-          "ar": "الجزء 3—إجراءات الدفَّة"
+        {
+          "Id": "6679c95924650df2a1619708",
+          "order": 2,
+          "title": {
+            "en": "Arduino 1",
+            "ar": "أردوينو 1"
+          },
+          "type": "Quiz"
         },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d39519f6fb98d8098e5010",
-        "order": 7,
-        "title": {
-          "en": "Part 4—Flight Tests",
-          "ar": "الجزء 4—اختبارات الطيران"
+        {
+          "Id": "6679b34924650df2a16196eb",
+          "order": 3,
+          "title": {
+            "en": "Arduino Fundamentals",
+            "ar": "أساسيات أردوينو"
+          },
+          "type": "Lesson"
         },
-        "type": "Activity"
-      },
-
-
-
-
-
-
-      {
-        "Id": "66bfb2dada5e21b89701142a",
-        "order": 8,
-        "title": {
-          "en": "Controlling the Plane",
-          "ar": "التحكم بالطائرة"
+        {
+          "Id": "6679c99724650df2a1619709",
+          "order": 4,
+          "title": {
+            "en": "Arduino 2",
+            "ar": "أردوينو 2"
+          },
+          "type": "Quiz"
         },
-        "type": "Quiz"
-      },
-      {
-        "Id": "66bfadf1da5e21b89701141e",
-        "order": 9,
-        "title": {
-          "en": "The Evolution of Transportation",
-          "ar": "تطور وسائل النقل"
+        {
+          "Id": "6679b3a724650df2a16196ec",
+          "order": 5,
+          "title": {
+            "en": "Arduino Basics",
+            "ar": "أساسيات أردوينو"
+          },
+          "type": "Lesson"
         },
-        "type": "Lesson"
-      },
-      {
-        "Id": "66bfae33da5e21b89701141f",
-        "order": 10,
-        "title": {
-          "en": "The Evolution of Transportation 2 ",
-          "ar": "2 تطور وسائل النقل"
+        {
+          "Id": "6679c9d824650df2a161970a",
+          "order": 6,
+          "title": {
+            "en": "Arduino 3",
+            "ar": "أردوينو 3"
+          },
+          "type": "Quiz"
         },
-        "type": "Lesson"
-      },
-
-
-
-
-      {
-        "Id": "66d39579f6fb98d8098e5011",
-        "order": 11,
-        "title": {
-          "en": "Build a Plane Puzzle",
-          "ar": "بناء لغز الطائرة"
+        {
+          "Id": "6679b40a24650df2a16196ed",
+          "order": 7,
+          "title": {
+            "en": "What is Breadboard?",
+            "ar": "ما هو اللوح التجريبي؟"
+          },
+          "type": "Lesson"
         },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d395edf6fb98d8098e5012",
-        "order": 12,
-        "title": {
-          "en": "Hyper-X Airplane ",
-          "ar": "طائرة هايبر-X"
+        {
+          "Id": "6679b46c24650df2a16196ee",
+          "order": 8,
+          "title": {
+            "en": "Light sensor",
+            "ar": "حساس الضوء"
+          },
+          "type": "Lesson"
         },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d39663f6fb98d8098e5013",
-        "order": 13,
-        "title": {
-          "en": "Make Your Own X-59",
-          "ar": "صنع طائرتك الخاصة X-59"
-        },
-        "type": "Activity"
-      },
-
-
-
-
-
-
-
-      {
-        "Id": "66c0115ada5e21b89701142c",
-        "order": 14,
-        "title": {
-          "en": "Faster, Farther, Higher",
-          "ar": "أسرع، أبعد، أعلى"
-        },
-        "type": "Quiz"
-      },
-      {
-        "Id": "66bfae92da5e21b897011420",
-        "order": 15,
-        "title": {
-          "en": "Discovering Earth",
-          "ar": " استكشاف الأرض"
-        },
-        "type": "Lesson"
-      },
-      {
-        "Id": "66bfaecdda5e21b897011421",
-        "order": 16,
-        "title": {
-          "en": "Discovering Earth 2",
-          "ar": " 2 استكشاف الأرض"
-        },
-        "type": "Lesson"
-      },
-
-
-
-      {
-        "Id": "66d396ebf6fb98d8098e5014",
-        "order": 17,
-        "title": {
-          "en": "Round Globe",
-          "ar": "الكرة الأرضية الدائرية"
-        },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d397e2f6fb98d8098e5016",
-        "order": 18,
-        "title": {
-          "en": "Layers of Atmosphere",
-          "ar": "طبقات الغلاف الجوي"
-        },
-        "type": "Activity"
-      },
-      {
-        "Id": "66d3975ff6fb98d8098e5015",
-        "order": 19,
-        "title": {
-          "en": "Atmospheric Gasses",
-          "ar": "الغازات الجوية"
-        },
-        "type": "Simulation"
-      },
-      {
-        "Id": "66d39821f6fb98d8098e5017",
-        "order": 20,
-        "title": {
-          "en": "AtmosModeler",
-          "ar": "نموذج الغلاف الجوي"
-        },
-        "type": "Simulation"
-      },
-      {
-        "Id": "66d39869f6fb98d8098e5018",
-        "order": 21,
-        "title": {
-          "en": "Space Elevator",
-          "ar": "مصعد الفضاء"
-        },
-        "type": "Simulation"
-      },
-
-
-
-      {
-        "Id": "66bfb325da5e21b89701142b",
-        "order": 22,
-        "title": {
-          "en": "Discovering Earth",
-          "ar": " استكشاف الأرض"
-        },
-        "type": "Quiz"
+        {
+          "Id": "6679b4cc24650df2a16196ef",
+          "order": 9,
+          "title": {
+            "en": "What is IR (Infrared) sensor?",
+            "ar": "ما هو حساس الأشعة تحت الحمراء؟"
+          },
+          "type": "Lesson"
+        }
+      ]
+    }
+  ],
+  "price": 500,
+  "image": "https://www.therobotreport.com/wp-content/uploads/2023/06/sick-sponsored-featured-image-july2023-article1.jpg",
+  "categories": [
+    {
+      "Id": "6606c84243e416de9726f22b",
+      "title": {
+        "en": "Robotics",
+        "ar": "الروبوتات"
       }
-    ]
-  }
-]
+    },
+    {
+      "Id": "6606c79643e416de9726f229",
+      "title": {
+        "en": "Computer Programming",
+        "ar": "برمجة الكمبيوتر"
+      }
+    }
+  ],
+  "objectives": [
+    {
+      "en": "Understand robotics mechanics and dynamics.",
+      "ar": "فهم ميكانيكا الديناميكا للروبوتات."
+    },
+    {
+      "en": "Master kinematics and 3D modeling concepts.",
+      "ar": "اتقن مفاهيم الحركيات والنمذجة ثلاثية الأبعاد."
+    },
+    {
+      "en": "Gain proficiency in basic electricity principles.",
+      "ar": "احصل على إتقان في مبادئ الكهرباء الأساسية."
+    },
+    {
+      "en": "Learn sensor integration techniques.",
+      "ar": "تعلم تقنيات تكامل الحساسات."
+    },
+    {
+      "en": "Develop programming skills using Arduino for robot control.",
+      "ar": "طور مهارات البرمجة باستخدام Arduino للتحكم في الروبوت."
+    }
+  ],
+  "min_age": 13,
+  "max_age": 17,
+  "duration": 14,
+  "number_of_enrollments": 0,
+  "is_locked": true
+}

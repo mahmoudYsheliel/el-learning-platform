@@ -112,13 +112,13 @@ body,
 
 @media (min-width: 900px) {
   :root {
-        font-size: 22px;
+        font-size: 20px;
     }
 }
 
 @media (min-width: 1200px) {
   :root {
-        font-size: 24px;
+        font-size: 22px;
     }
 }
 button{

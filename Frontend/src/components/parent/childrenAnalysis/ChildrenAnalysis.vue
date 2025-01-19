@@ -12,7 +12,9 @@ import LearningStyles from "../childrenAnalysis/LearningStyles.vue";
 import IQChart from "../childrenAnalysis/IQChart.vue";
 import Summary from "../childrenAnalysis/Summary.vue";
 const prop = defineProps(["childId"]);
-
+import { track_images } from "@/lib/Modules";
+import { usePersonalInfo } from "@/stores/token";
+const info = usePersonalInfo()
 const analysis = ref();
 
 const IQResult = ref()
@@ -30,6 +32,9 @@ function getMaxObject(arr:any[]){
 }
 watch(prop, () => {
   const childnAlysisRequester = new HttpRequester("get_analysis");
+  IQResult.value = null
+  learningStyle.value = null
+  recommendTrack.value = null
   if (prop.childId) {
     childnAlysisRequester.callApi({ student_id: prop.childId }).then((res) => {
       if (res?.success) {
@@ -57,9 +62,7 @@ watch(prop, () => {
       }
     });
   }
-  IQResult.value = null
-  learningStyle.value = null
-  recommendTrack.value = null
+
 });
 
 
@@ -79,7 +82,18 @@ function getIqDescription(score: number) {
   return { en: '', ar: '' }
 }
 
-
+const track_image =ref()
+ watch((recommendTrack),() => {
+  console.log(1)
+    for (let i = 0; i < track_images.length; i++) {
+       if (recommendTrack.value?.name == track_images[i].name && info.getInfo?.gender==track_images[i].type) {
+          track_image.value= track_images[i].path
+          return
+        }
+    }
+    
+    track_image.value = ''
+})
 </script>
 
 <template>
@@ -138,7 +152,7 @@ function getIqDescription(score: number) {
 
 
     </div>
-    <img src="/public/images/TrackIcon.png"  style="margin-top: 8rem" alt="">
+    <img :src="track_image"  style="margin-top: 8rem" alt="">
     </div>
   </div>
 

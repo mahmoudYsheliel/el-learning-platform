@@ -42,7 +42,7 @@ h4 {
   display: flex;
   flex-direction: column;
 }
-
+npm i puppeteer
 .chart{
   width: 100%;
   overflow: scroll;
