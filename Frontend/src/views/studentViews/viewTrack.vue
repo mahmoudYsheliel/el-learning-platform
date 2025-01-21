@@ -80,7 +80,7 @@ programRequester.callApi({ program_id: route.params?.programId }).then(res => {
             <p style="width: 66% ;">{{ selectLang(track?.description) }}</p>
         </div>
         <div class="levels_container">
-            <h2 v-if="track?.title?.en == 'Robotics'">{{ selectLang(translationModule.phases) }}</h2>
+            <h2 v-if="track?.title?.en == 'Robotics Track'">{{ selectLang(translationModule.phases) }}</h2>
             <h2 v-else>{{ selectLang(translationModule.levels) }}</h2>
               <div class="level" v-for="level,i in track?.levels">
                 
