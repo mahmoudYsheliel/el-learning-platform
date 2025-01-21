@@ -80,8 +80,10 @@ programRequester.callApi({ program_id: route.params?.programId }).then(res => {
             <p style="width: 66% ;">{{ selectLang(track?.description) }}</p>
         </div>
         <div class="levels_container">
-            <h2>{{ selectLang(translationModule.levels) }}</h2>
-            <div class="level" v-for="level,i in track?.levels">
+            <h2 v-if="track?.title?.en == 'Robotics'">{{ selectLang(translationModule.phases) }}</h2>
+            <h2 v-else>{{ selectLang(translationModule.levels) }}</h2>
+              <div class="level" v-for="level,i in track?.levels">
+                
 
                 <h3>{{ selectLang(level?.title) }} </h3>
 
@@ -120,8 +122,8 @@ h3 {
 }
 .level-breaker{
     height: 4px;
-    width: 75%;
-    margin-left: 25%;
+    width: 80%;
+    margin-inline: auto;
     background-color: var(--accent1);
 }
 .video {

@@ -926,6 +926,10 @@ export const translationModule = {
     en:'Levels',
     ar:'المستويات'
   },
+  phases:{
+    en:'Phases',
+    ar:'المراحل'
+  },
   trackOverview:{
     en:"Track Overview",
     ar:"نظرة عامة على المسار"
