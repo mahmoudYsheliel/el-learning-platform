@@ -45,6 +45,7 @@ function login() {
               firstName: res?.data?.info?.first_name,
               lastName: res?.data?.info?.last_name,
               email: res?.data?.info?.email,
+              gender: res?.data?.info?.gender,
             });
             router.push("/");
           }
@@ -75,6 +76,7 @@ const callback = (response: any) => {
               firstName: res?.data?.info?.first_name,
               lastName: res?.data?.info?.last_name,
               email: res?.data?.info?.email,
+              gender: res?.data?.info?.gender
             });
             router.push("/");
           }
@@ -108,13 +110,16 @@ const callback = (response: any) => {
           {{ selectLang(translationModule.userNotExist) }}
         </h4>
         <div class="wrapper">
-          <InputText type="email" class="input" v-model="email" :placeholder="selectLang(translationModule.email)" />
+          <InputText style="width: 100%;" type="email" class="input" v-model="email" :placeholder="selectLang(translationModule.email)" />
           <Password class="input" v-model="pass" :feedback="false" toggleMask :placeholder="selectLang(translationModule.pass)" />
+          <!-- <div class="forgotPassCon">
+            <p @click="router.push('forgotPassword')">{{ selectLang(translationModule.forgeotPass) }}</p>
+          </div> -->
         </div>
         <div class="button">
           <Button @click="login" :label="selectLang(translationModule.login)" />
         </div>
-        <p style="margin-left: 5rem">
+        <p>
           {{ selectLang(translationModule.noAccount) }}
           <strong @click="router.push('/signup')" style="cursor: pointer;text-decoration: underline;color: var(--accent1);">
             {{ selectLang(translationModule.signup) }}</strong>
@@ -126,6 +131,17 @@ const callback = (response: any) => {
 </template>
 
 <style scoped>
+.forgotPassCon>p{
+  margin: 0;
+  color: var(--accent1);
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+.forgotPassCon{
+  width: 100%;
+}
 main {
   min-height: 100%;
 }
@@ -149,15 +165,17 @@ main {
 .right {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  width: fit-content;
+  margin-inline: auto;
+  gap: 3rem;
 }
 
 .welcome>h1 {
   line-height: 2rem;
   margin: 0;
   padding: 0;
-  color: black;
+  color: var(--header);
 }
 
 .wrapper {
@@ -166,6 +184,7 @@ main {
   justify-content: center;
   gap: 0.5rem;
   flex-direction: column;
+  width: fit-content;
 }
 
 h1 {
@@ -208,13 +227,12 @@ h1 {
 
 button {
   padding: 0.5rem 2rem;
-  box-shadow: 0px 34px 40px -8px #7b76f13d;
+  box-shadow: 0px 10px 20px -8px #7b76f13d;
 }
 
 .button {
   display: flex;
   justify-content: end;
-  padding-right: 4rem;
   width: 100%;
 }
 

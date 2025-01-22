@@ -6,12 +6,12 @@ interface Languages {
   ar: string;
 }
 
-export function selectLang(obj: null | Languages,lan:string|null =null) {
+export function selectLang(obj: null | Languages, lan: string | null = null) {
   const lang = useLang();
   let selectedLang = lang.getLang;
-  if (lan){
-    selectedLang=lan
-  } 
+  if (lan) {
+    selectedLang = lan
+  }
   if (selectedLang == "en") {
     return obj?.en;
   } else if (selectedLang == "ar") {
@@ -389,6 +389,14 @@ export const translationModule = {
   emailTaken: {
     en: "Email is Taken",
     ar: "تم أخذ  الايميل من قبل",
+  },
+  weakPass: {
+    en: 'Weak Password',
+    ar: 'كلمة المرور ضعيفة'
+  },
+  notValidEmail:{
+    en:'Email Not Valid',
+    ar:'البريد الإلكتروني غير صالح'
   },
   lessons: {
     en: "Lessons",
@@ -918,34 +926,39 @@ export const translationModule = {
     ar: "فيما يلي تحليل تفصيلي لكل مهمة معرفية ونتائج طفلك\
                 تشير إلى قدراتهم:"
   },
-  tracks:{
-    en:"Tracks",
-    ar:"المسارات"
+  tracks: {
+    en: "Tracks",
+    ar: "المسارات"
   },
-  levels:{
-    en:'Levels',
-    ar:'المستويات'
+  levels: {
+    en: 'Levels',
+    ar: 'المستويات'
   },
-  phases:{
-    en:'Phases',
-    ar:'المراحل'
+  phases: {
+    en: 'Phases',
+    ar: 'المراحل'
   },
-  trackOverview:{
-    en:"Track Overview",
-    ar:"نظرة عامة على المسار"
+  trackOverview: {
+    en: "Track Overview",
+    ar: "نظرة عامة على المسار"
   },
-  commingSoon:{
-    en:'Coming Soon',
-    ar:'قريباً'
+  commingSoon: {
+    en: 'Coming Soon',
+    ar: 'قريباً'
   },
-  trackContent:{
-    en:"Track Content",
-    ar:"محتوي المسار"
+  trackContent: {
+    en: "Track Content",
+    ar: "محتوي المسار"
   },
-  locked:{
-    en:'Course is Locked Now',
-    ar:"الدورة مغلقة الآن"
-  }
+  locked: {
+    en: 'Course is Locked Now',
+    ar: "الدورة مغلقة الآن"
+  },
+  forgeotPass:{
+    en:'Forgot Password?',
+    ar:'هل نسيت كلمة السر؟'
+  },
+  
 
 
 

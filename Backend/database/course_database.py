@@ -190,13 +190,21 @@ async def get_all_courses_with_free_lessons():
 
     if not courses:
         return ServiceResponse(success=False, status_code=404, msg="courses Not Found")
-
+    courses_sent =[]
     for course in courses:
-        if course["chapters"]:
-            lesson = course["chapters"][0]["materials"][0]
-            course["lesson"] = lesson
-            course["chapters"] = []
-    return ServiceResponse(data={"courses": courses})
+        if "is_locked" in course:
+            if course["chapters"] and  not course["is_locked"]:
+                lesson = course["chapters"][0]["materials"][0]
+                course["lesson"] = lesson
+                course["chapters"] = []
+                courses_sent.append(course)
+        else:
+            if course["chapters"]:
+                lesson = course["chapters"][0]["materials"][0]
+                course["lesson"] = lesson
+                course["chapters"] = []
+                courses_sent.append(course)
+    return ServiceResponse(data={"courses": courses_sent})
 
 
 async def get_course_free_lessons(course_id: str):

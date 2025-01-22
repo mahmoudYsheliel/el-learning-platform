@@ -13,6 +13,12 @@ const router = createRouter({
       meta: { requredAuth: false, userType: "Any" },
     },
     {
+      path: "/forgotPassword",
+      name: "forgotPassword",
+      component: () => import("../views/generalViews/forgotPassword.vue"),
+      meta: { requredAuth: false, userType: "Any" },
+    },
+    {
       path: "/",
       name: "home",
       component: LandingPage,

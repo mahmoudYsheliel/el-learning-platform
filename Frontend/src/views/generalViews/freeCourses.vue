@@ -52,7 +52,7 @@ const search = ref('')
 <style scoped>
 .main-container {
   min-height: 80vh;
-  padding-inline: 5rem;
+  padding-inline: 4rem;
   width: 100%;
 }
 h1{
@@ -66,7 +66,7 @@ h1{
 .courses-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 4rem;
   justify-content: center;
   margin-block: 5rem;
   width: 100%;
@@ -77,22 +77,33 @@ h1{
   display: flex;
   flex-direction: column;
 }
-h2 {
-  color: var(--header);
-  margin: 0;
-  padding-left: 1rem;
-}
+
 button {
   align-self: end;
-}
-img {
-  width: 24rem;
-  aspect-ratio: 1.6/1;
-  border-radius: 8px;
 }
 .search {
   width: 62.5%;
   display: block;
   margin-inline: auto;
+}
+.courseCard{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+h2{
+    color: var(--header);
+    margin: 0;
+    padding-left: 0.5rem;
+    font-size: 1rem
+}
+button{
+    align-self: end;
+}
+img{
+    width: 16rem;
+    aspect-ratio: 1.6/1;
+    border-radius: 8px;
 }
 </style>

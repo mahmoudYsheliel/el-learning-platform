@@ -60,19 +60,19 @@ const search = ref("");
         </div>
       </div>
       <div class="content">
-        <h1 style="margin-block: 6rem 4rem">
+        <h1>
           <img style="width: 1.5rem; margin-right: 0.5rem" src="/images/pen.svg" alt="" />
           {{ selectLang(translationModule.startJourney) }}
         </h1>
 
-        <div class="courses_tracks_container" v-if="selectedProgram?.tracks">
+        <div class="courses_tracks_container" v-if="selectedProgram?.tracks?.length>0">
           <h2>{{ selectLang(translationModule.tracks) }}</h2>
           <div class="courses_tracks">
             <TrackCard v-for="track,i in selectedProgram?.tracks" :track="track" :program-id="selectedProgramId" :track-id="i" :search="search" />
           </div>
         </div>
 
-        <div class="courses_tracks_container">
+        <div class="courses_tracks_container" v-if="selectedProgram?.courses?.length>0">
           <h2>{{ selectLang(translationModule.courses) }}</h2>
           <div class="courses_tracks">
             <CourseCard v-for="course in selectedProgram?.courses" :course="course" :search="search" />
@@ -141,7 +141,6 @@ h1 {
   color: var(--accent1);
   width: fit-content;
   padding: 0;
-  line-height: 2rem;
 }
 
 .content {
@@ -153,26 +152,29 @@ h1 {
 .courses_tracks {
   display: flex;
   gap: 4rem;
-  width: 80%;
   padding: 1rem 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 0rem;
   margin-inline: auto;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 .courses_tracks_container{
-  width: 98vw;
+  width: 100%;
+
 }
 
 .description {
   display: flex;
   gap: 15rem;
+  margin-bottom: 2rem;
 }
 
 .image {
   border-radius: 1rem;
   width: 20rem;
   aspect-ratio: 1.6/1;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 1500px) {

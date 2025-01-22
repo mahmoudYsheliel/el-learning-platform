@@ -20,17 +20,22 @@ const email = ref();
 const pass = ref();
 const confirmedPass = ref();
 
-const missingInfo = ref(false);
-const differentPassword = ref(false);
-const usernameEmailTaken = ref(false);
+const worningMessage = ref('')
 const signupRequester = new HttpRequester("signup");
 
 function signup() {
   if (!email.value || !pass.value || !confirmedPass.value) {
-    missingInfo.value = true;
+    worningMessage.value = selectLang(translationModule.dataMissing) ?? '';
   } else if (pass.value != confirmedPass.value) {
-    differentPassword.value = true;
-  } else {
+    worningMessage.value = selectLang(translationModule.diffPass) ?? '';
+  } 
+  else if(! testValidPass(pass.value)){
+    worningMessage.value = selectLang(translationModule.weakPass) ?? '';
+  }
+  else if(! isValidEmail(email.value)){
+    worningMessage.value = selectLang(translationModule.notValidEmail) ?? '';
+  }
+  else {
     let data = {
       user: {
         email: email.value,
@@ -41,7 +46,7 @@ function signup() {
 
     signupRequester.callApi(data).then((res) => {
       if (res.msg == "email is already used once") {
-        usernameEmailTaken.value = true;
+        worningMessage.value = selectLang(translationModule.emailTaken) ?? '';
       } else if (res?.success == true) {
         router.push("/login");
       }
@@ -63,7 +68,7 @@ const callback = (response: any) => {
 
     signupRequester.callApi(data).then((res) => {
       if (res.msg == "email is already used once") {
-        usernameEmailTaken.value = true;
+        worningMessage.value = selectLang(translationModule.emailTaken) ?? '';
       } else if (res?.success == true) {
         const loginRequester = new HttpRequester("token");
         const personalInfo = usePersonalInfo();
@@ -77,10 +82,11 @@ const callback = (response: any) => {
                   personalInfo.addInfo({
                     userType: res?.data?.info?.user_type,
                     notifications: [],
-                    id:res?.data?.info?.id,
-                    firstName:res?.data?.info?.first_name,
-        lastName:res?.data?.info?.last_name,
-        email:res?.data?.info?.email,
+                    id: res?.data?.info?.id,
+                    firstName: res?.data?.info?.first_name,
+                    lastName: res?.data?.info?.last_name,
+                    email: res?.data?.info?.email,
+                    gender: res?.data?.info?.gender,
                   });
                   router.push("/");
                 }
@@ -91,6 +97,20 @@ const callback = (response: any) => {
     });
   }
 };
+function testValidPass(password: string) {
+  const hasUpper = /[A-Z]/.test(password);
+  const hasLower = /[a-z]/.test(password);
+  const hasDigit = /\d/.test(password);
+  const isLongEnough = password.length >= 8;
+
+  return hasUpper && hasLower && hasDigit && isLongEnough;
+}
+function isValidEmail(email:string) {
+  // Regular expression for validating an email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
 </script>
 
 <template>
@@ -109,44 +129,32 @@ const callback = (response: any) => {
         <div class="google-facebook-wrapper">
           <GoogleLogin :callback="callback" />
         </div>
-        <h4 v-if="missingInfo">
-          {{ selectLang(translationModule.dataMissing) }}
+        <h4 v-if="worningMessage">
+          {{ worningMessage }}
         </h4>
-        <h4 v-if="differentPassword">
-          {{ selectLang(translationModule.diffPass) }}
-        </h4>
-        <h4 v-if="usernameEmailTaken">
-          {{ selectLang(translationModule.emailTaken) }}
-        </h4>
+
         <div class="wrapper">
-          <InputText
-            type="email"
-            class="input"
-            v-model="email"
-            :placeholder="selectLang(translationModule.email)"
-          />
-          <Password
-            class="input"
-            v-model="pass"
-            :feedback="false"
-            toggleMask
-            :placeholder="selectLang(translationModule.pass)"
-          />
-          <Password
-            id="input"
-            v-model="confirmedPass"
-            :feedback="false"
-            toggleMask
-            :placeholder="selectLang(translationModule.confirmPass)"
-          />
+          <InputText style="width: 100%;" type="email" class="input" v-model="email" :placeholder="selectLang(translationModule.email)" />
+          <Password toggleMask v-model="pass" :placeholder="selectLang(translationModule.pass)" @change="worningMessage=''">
+            <template #header>
+              <h6>Pick a password</h6>
+            </template>
+            <template #footer>
+              <Divider />
+              <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                <li>At least one lowercase</li>
+                <li>At least one uppercase</li>
+                <li>At least one numeric</li>
+                <li>Minimum 8 characters</li>
+              </ul>
+            </template>
+          </Password>
+          <Password class="input" v-model="confirmedPass" :feedback="false" toggleMask :placeholder="selectLang(translationModule.confirmPass)" @change="worningMessage=''" />
         </div>
         <div class="button">
-          <Button
-            @click="signup"
-            :label="selectLang(translationModule.signup)"
-          />
+          <Button @click="signup" :label="selectLang(translationModule.signup)" />
         </div>
-        <p style="margin-left: 5rem">
+        <p>
           {{ selectLang(translationModule.haveAccount) }}
           <strong @click="router.push('/login')" style="cursor: pointer;text-decoration: underline;color: var(--accent1);">
             {{ selectLang(translationModule.login) }}
@@ -162,6 +170,7 @@ const callback = (response: any) => {
 main {
   min-height: 100%;
 }
+
 .container {
   margin-inline: auto;
   width: 75%;
@@ -170,43 +179,52 @@ main {
   grid-template-columns: 1fr 1fr;
   margin-block: 5rem;
 }
+
 .left {
   display: flex;
   align-items: start;
   justify-content: start;
   border-right: 0.25rem solid rgba(0, 0, 0, 0.2);
 }
+
 .right {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  width: fit-content;
+  margin-inline: auto;
+  gap: 3rem;
 }
 
-.welcome > h1 {
+.welcome>h1 {
   line-height: 2rem;
   margin: 0;
   padding: 0;
-  color: black;
+  color: var(--header);
 }
+
 .wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   flex-direction: column;
+  width: fit-content;
 }
+
 h1 {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .google-facebook-wrapper,
-.google-facebook-wrapper > * {
+.google-facebook-wrapper>* {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
 }
+
 .google,
 .facebook {
   border-radius: 8px;
@@ -214,49 +232,53 @@ h1 {
   border: 2px solid var(--accent1);
   cursor: pointer;
 }
-.google > i {
+
+.google>i {
   color: var(--accent1);
 }
+
 .facebook {
   color: white;
   background-color: var(--accent1);
 }
-.google > p,
-.facebook > p {
+
+.google>p,
+.facebook>p {
   line-height: 1rem;
   transform: translate(0, 0.2rem);
   padding: 0;
   margin: 0;
 }
+
 button {
   padding: 0.5rem 2rem;
-  box-shadow: 0px 34px 40px -8px #7b76f13d;
+  box-shadow: 0px 10px 20px -8px #7b76f13d;
 }
+
 .button {
   display: flex;
   justify-content: end;
-  padding-right: 4rem;
   width: 100%;
 }
+
 h4 {
   text-align: center;
   color: red;
   margin: 0;
 }
-input {
-  width: 100%;
-}
 
 @media screen and (max-width: 1250px) {
   .container {
-    width: 80%;
+    width: 40%;
     height: fit-content;
     grid-template-columns: 1fr;
     grid-template-rows: 40rem;
   }
+
   .left {
     display: none;
   }
+
   .button {
     margin-bottom: 2rem;
   }

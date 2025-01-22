@@ -87,11 +87,12 @@ body,
   --secondary: #0089cc;
   --text: #848181;
   --descriptionText: #444 ;
-  --header: #282828;
+  --header: #282938;
   --accent1: #01abff;
   --accent2: #7302ff;
   --accent3: #f4b904;
   --accent4:#FFC27A;
+  --accent5:#D42488;
   --choiceBackgroundColor:#E8F7FF;
   --wrongAnswer:#FF2D2D;
   --correctAnswer:#5CFA75;
@@ -122,6 +123,6 @@ body,
     }
 }
 button{
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 </style>

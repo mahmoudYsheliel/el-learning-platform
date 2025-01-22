@@ -81,15 +81,6 @@ if (token.getIsAuthorized) {
   background-image: linear-gradient(to top , var(--primary), var(--accent1_300));
   
 }
-#Courses{
-
-}
-#workshop{
-  background-color: var(--accent1_100);
-}
-#certificate{
- 
-}
 #About{
   background-color: var(--accent1_100);
 }

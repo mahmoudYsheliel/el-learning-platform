@@ -203,7 +203,7 @@ function viewMaterial() {
     />
 
     <div class="content">
-      <CourseMaterial :chapters="chapters" />
+      <CourseMaterial :chapters="chapters" v-if="chapters?.length>0" />
 
       <Information
         :categories="course?.categories"

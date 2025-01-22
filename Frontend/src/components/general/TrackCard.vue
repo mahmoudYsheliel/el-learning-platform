@@ -33,7 +33,7 @@ button{
     align-self: end;
 }
 img{
-    width: 20rem;
+    width: 24rem;
     aspect-ratio: 1.5/1;
     border-radius: 8px;
 }

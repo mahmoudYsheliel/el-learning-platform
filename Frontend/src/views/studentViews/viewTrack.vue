@@ -30,14 +30,14 @@ programRequester.callApi({ program_id: route.params?.programId }).then(res => {
             if (res?.data) {
                 const courses = res?.data?.courses
                 for (let i = 0; i < track.value?.levels?.length; i++) {
-                    let level = {title:track.value?.levels[i].title,coursesCount:0,courses:<any[]>[]}
+                    let level = { title: track.value?.levels[i].title, coursesCount: 0, courses: <any[]>[] }
                     for (let j = 0; j < track.value?.levels[i]?.courses?.length; j++) {
                         const course = courses?.find((course: any) => {
                             return course?.id == track.value.levels[i].courses[j]
                         })
-                        track.value.levels[i].courses[j] =course
+                        track.value.levels[i].courses[j] = course
                         level.courses.push(course)
-                        level.coursesCount = level.coursesCount+1
+                        level.coursesCount = level.coursesCount + 1
                     }
                     levels.value.push(level)
                 }
@@ -82,21 +82,18 @@ programRequester.callApi({ program_id: route.params?.programId }).then(res => {
         <div class="levels_container">
             <h2 v-if="track?.title?.en == 'Robotics Track'">{{ selectLang(translationModule.phases) }}</h2>
             <h2 v-else>{{ selectLang(translationModule.levels) }}</h2>
-              <div class="level" v-for="level,i in track?.levels">
-                
-
-                <h3>{{ selectLang(level?.title) }} </h3>
-
-                <div class="courses_container" v-if="level.courses.length > 0">
-                    <CourseCard v-for="course in level?.courses" :course="course" search="" />
+            <div v-for="level, i in track?.levels">
+                <div class="level">
+                    <h3>{{ selectLang(level?.title) }} </h3>
+                    <div style="display: flex;flex-direction: column;width: 100%;justify-content: center;align-items: center;">
+                        <div class="courses_container" style="margin-block: 2rem;">
+                            <CourseCard v-for="course in level?.courses" :course="course" search="" />
+                            <div style="width: 100%;;text-align: center;font-weight: bolder;font-size: 4rem;background: radial-gradient(var(--accent5),var(--accent1));background-clip: text;color: transparent;" v-if="level.courses.length == 0">{{ selectLang(translationModule.commingSoon) }}</div>
+                        </div>
+                        <div class="level-breaker" v-if="i != track?.levels?.length - 1"></div>
+                    </div>
                 </div>
-                
-                <div class="h1" style="text-align: center;font-weight: bolder;font-size: 4rem;background: radial-gradient(var(--accent1),var(--accent4));background-clip: text;color: transparent;" v-else>{{ selectLang(translationModule.commingSoon) }}</div>
-                <div class="level-breaker" v-if="i!=track?.levels?.length-1"></div>
-
-                
             </div>
-           
         </div>
         <div class="courses_tracks_container" v-if="track?.courses.length > 0">
             <h2>{{ selectLang(translationModule.courses) }}</h2>
@@ -116,16 +113,20 @@ p {
 
 h3 {
     color: var(--accent3);
+    text-align: center;
+    font-size: 2.25rem;
+    line-height: 3.25rem;
     margin: 0;
-    padding-top: 2rem;
-    padding-top: 0;
+    padding: 0;
 }
-.level-breaker{
+
+.level-breaker {
     height: 4px;
-    width: 80%;
+    width: 60%;
     margin-inline: auto;
     background-color: var(--accent1);
 }
+
 .video {
     width: 100%;
     aspect-ratio: 1.75/1;
@@ -158,35 +159,21 @@ h3 {
 .courses_container {
     display: flex;
     gap: 2rem;
+    padding-inline: 2rem;
     overflow-x: auto;
-    padding: 1rem;
-    width: 85%;
-
+    padding-bottom: 1rem;
+    max-width: 100%;
 }
 
 .level {
     padding-inline: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 16rem calc(100% - 16rem);
 
-}
-
-.level_image {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    font-size: 1.25rem;
-    color: var(--accent2);
+
 }
 
-.level_image>img {
-    width: 20rem;
-    aspect-ratio: 1.6/1;
-    border-radius: 0.25rem;
-}
 
 h2 {
     color: var(--accent1);
@@ -208,19 +195,37 @@ h1 {
     color: var(--accent2);
 }
 
-.courses_container {
-    width: 100%;
-}
-
 .track-container {
-    padding-inline: 4rem;
-    padding-top: 3rem;
+    padding-inline: 3rem;
+    padding-top: 2rem;
 }
 
 @media screen and (max-width:1200px) {
-    .track_video{
+    .track_video {
         display: flex;
         flex-direction: column;
+    }
+
+    .level {
+        padding-inline: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        align-items: center;
+
+    }
+
+    h3 {
+        text-align: start;
+    }
+
+    .track-container {
+        padding-inline: 2rem;
+        padding-top: 2rem;
+    }
+
+    .courses_container {
+        flex-wrap: wrap;
     }
 }
 </style>
