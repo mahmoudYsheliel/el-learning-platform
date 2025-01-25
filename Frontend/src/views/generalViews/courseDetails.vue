@@ -73,7 +73,17 @@ function enroll() {
   if (!token.getIsAuthorized) {
     router.push("/login");
   } else if (personalInfo.getInfo?.userType == "Child") {
-    showAskParent.value = true;
+    const planCourseRequester = new HttpRequester("get_course_plan");
+      planCourseRequester
+        .callApi({ course_id: route.params?.courseId })
+        .then((res) => {
+          if (res?.success == false) {
+            showPromoCode.value = true;
+          } else if (res?.success == true) {
+            showBelongToPlan.value = true;
+            planId.value = res?.data?.plan?.id;
+          }
+        });
   } else if (personalInfo.getInfo?.userType == "Parent") {
     if (route.params?.childId == "0") {
       showSelectChild.value = true;
@@ -95,11 +105,18 @@ function enroll() {
 
 function requestEnrollmentWithPromoCode(promoCode: string) {
   showPromoCode.value = false;
+  let childId 
+  if (personalInfo.getInfo?.userType == 'Parent'){
+    childId = route.params.childId ?? ''
+  }
+  else if (personalInfo.getInfo?.userType == 'Child'){
+    childId = personalInfo.getInfo.id
+  }
   const requestEnrollment = new HttpRequester("request_enrollment");
   requestEnrollment
     .callApi({
       request: {
-        student_id: route.params.childId,
+        student_id: childId,
         course_id: course.value?.id,
         promo_code: promoCode,
       },

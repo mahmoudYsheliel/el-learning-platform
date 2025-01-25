@@ -5,31 +5,36 @@ const lang = useLang()
 </script>
 
 <template>
-  <div  class="mainRouter" :class="{rtl:lang.getLang=='ar',ltr:lang.getLang=='en'}">
-    
-  <RouterView/>
+  <div class="mainRouter" :class="{ rtl: lang.getLang == 'ar', ltr: lang.getLang == 'en' }">
+
+    <RouterView />
   </div>
 </template>
 
 <style>
-.rtl{
+.rtl {
   direction: rtl;
 }
-.ltr{
+
+.ltr {
   direction: ltr;
 }
-div[class*='rtl'] .imageflip{
+
+div[class*='rtl'] .imageflip {
   transform: scaleX(-1);
-  right:0;
+  right: 0;
 }
-div[class*='rtl'] .borderRigth{
+
+div[class*='rtl'] .borderRigth {
   border: none;
   border-left: 0.25rem solid rgba(0, 0, 0, 0.2);
 }
-div[class*='rtl'] .flipDirection{
+
+div[class*='rtl'] .flipDirection {
   direction: rtl;
 }
-div[class*='rtl'] .selectedSidebarItem{
+
+div[class*='rtl'] .selectedSidebarItem {
   background-color: var(--primary);
   border-top-right-radius: 0rem;
   border-bottom-right-radius: 0rem;
@@ -60,17 +65,17 @@ div[class*='rtl'] .circle {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #aaa; 
+  background: #aaa;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #888; 
+  background: #888;
 }
 
 body,
@@ -78,51 +83,63 @@ html {
   margin: 0;
   padding: 0;
 }
+
 body,
 #app {
-  font-family:'Cairo'
+  font-family: 'Cairo'
 }
+
 :root {
   --primary: #ffffff;
   --secondary: #0089cc;
   --text: #848181;
-  --descriptionText: #444 ;
+  --descriptionText: #444;
   --header: #282938;
   --accent1: #01abff;
   --accent2: #7302ff;
   --accent3: #f4b904;
-  --accent4:#FFC27A;
-  --accent5:#D42488;
-  --choiceBackgroundColor:#E8F7FF;
-  --wrongAnswer:#FF2D2D;
-  --correctAnswer:#5CFA75;
-  --accent1_100:#E8F7FF;
-  --accent1_200:#D1F0FF;
-  --accent1_300:#BAE8FF;
+  --accent4: #FFC27A;
+  --accent5: #D42488;
+  --choiceBackgroundColor: #E8F7FF;
+  --grayBackground: #F7F9FB;
+  --wrongAnswer: #FF2D2D;
+  --correctAnswer: #5CFA75;
+  --accent1_100: #E8F7FF;
+  --accent1_200: #D1F0FF;
+  --accent1_300: #BAE8FF;
 
 }
+
 :root {
-    font-size: 14px; /* Base for mobile */
+  font-size: 14px;
+  /* Base for mobile */
 }
 
 @media (min-width: 600px) {
   :root {
-        font-size: 18px;
-    }
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 900px) {
   :root {
-        font-size: 20px;
-    }
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 1200px) {
   :root {
-        font-size: 22px;
-    }
+    font-size: 22px;
+  }
 }
-button{
+
+@media (max-width:1250px) {
+  div[class*='rtl'] .borderRigth {
+    border: none;
+  }
+}
+
+button {
   font-size: 0.75rem;
 }
 </style>

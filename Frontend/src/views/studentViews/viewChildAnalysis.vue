@@ -12,6 +12,9 @@ const selectedChild = ref()
 const file = ref<HTMLElement>()
 import { jsPDF } from "jspdf";
 import html2canvas from 'html2canvas';
+import { selectLang, translationModule } from '@/lib/Translate';
+import { useRouter } from 'vue-router';
+const router = useRouter()
 onMounted(() => {
     selectedChild.value = Info.getInfo?.id
 })
@@ -86,13 +89,16 @@ async function printComponent(sections: HTMLElement[]) {
         <div class="wrapper ">
             <PrintReport class="print_only" :child-id="selectedChild" @sections="(sections) => { printComponent(sections) }" />
         </div>
+        <div style="display: flex; justify-content: end;">
+            <Button :label="selectLang(translationModule.returnHome)" icon="pi pi-home" @click="router.push('/')"/>
+  
+        </div>
     </div>
     <Footer class="no_print" />
 </template>
 
 <style scoped>
 .container {
-    width: 1200px;
     margin-inline: auto;
     padding: 1.5rem;
 }
@@ -121,4 +127,6 @@ async function printComponent(sections: HTMLElement[]) {
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
+
+
 </style>

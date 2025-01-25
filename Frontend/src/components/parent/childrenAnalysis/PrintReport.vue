@@ -350,19 +350,33 @@ p {
 }
 
 @media print {
-
-
     .print_only {
         display: block !important;
         visibility: visible !important;
         width: 95% !important;
         margin-inline: auto !important;
     }
-
     .new-page {
         page-break-before: always;
         /* Force content to start on a new page */
     }
-
+}
+@media (max-width:750px) {
+    img {
+        display: none;
+    }
+    .scores{
+        display: flex !important;
+        flex-wrap:wrap !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media screen and (max-width:1200px) {
+    .summary{
+        display: grid;
+        grid-template-columns: auto !important;
+        grid-template-rows: 1fr auto !important;
+    }
 }
 </style>

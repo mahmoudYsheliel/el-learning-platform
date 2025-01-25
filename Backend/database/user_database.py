@@ -45,12 +45,51 @@ async def create_user(user: User) -> ServiceResponse:
             .insert_one(instructor.model_dump())
         )
         return ServiceResponse(data={"user_id": user_id})
+    
+    
+    
+    
     if user_type == "Child":
+        
+        birth_date = datetime.now()
+        if user.birth_day:
+            birth_date = datetime.strptime(user.birth_day, "%Y-%m-%dT%H:%M:%S.%fZ")
+        today = datetime.now()
+        age = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
+        analysis_quiz = (
+            await get_database()
+            .get_collection("analysis_quiz")
+            .find_one(
+                {
+                    "course_title_follow": "start",
+                    "min_age": {"$lte": age},
+                    "max_age": {"$gte": age},
+                },
+                {"id": {"$toString": "$_id"}, "title": 1, "description": 1},
+            )
+        )
+        print(4)
+        if analysis_quiz:
+            notification = Notification(
+                title=analysis_quiz["title"],
+                description=analysis_quiz["description"],
+                type="analysis quiz",
+                status="waiting",
+                analysis_quiz_id=analysis_quiz["id"],
+            )
+            print(4.5)
+            updated = await get_database().get_collection('user').update_one({"_id":validate_bson_id(user_id)},{"$push": {"notifications": notification.model_dump()}} )
+ 
+        print(5)
         child = Child(user_id=user_id)
         mdb_result = (
             await get_database().get_collection("child").insert_one(child.model_dump())
         )
         return ServiceResponse(data={"user_id": user_id})
+    print(6)
+    
+    
+    
     if user_type == "Parent":
         parent = Parent(user_id=user_id)
         mdb_result = (
@@ -238,7 +277,6 @@ async def add_child(user: User, child: Child, userId: str) -> ServiceResponse:
     
     today = datetime.now()
     age = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
-    print(age)
     analysis_quiz = (
         await get_database()
         .get_collection("analysis_quiz")
@@ -274,9 +312,8 @@ async def add_child(user: User, child: Child, userId: str) -> ServiceResponse:
     add_user_id = str(mdb_result.inserted_id)
 
     child.user_id = add_user_id
-    mdb_result = (
-        await get_database().get_collection("child").insert_one(child.model_dump())
-    )
+    mdb_result = await get_database().get_collection("child").insert_one(child.model_dump())
+    
     child_id = str(mdb_result.inserted_id)
 
     if child_id:

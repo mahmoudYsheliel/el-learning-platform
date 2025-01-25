@@ -250,6 +250,30 @@ export const translationModule = {
     en: "Confirm Password",
     ar: "تأكيد كلمة المرور",
   },
+  enterEmail:{
+    en:'Enter your email for the verification proccess,we will send 4 digits code to your email.',
+    ar:'أدخل بريدك الإلكتروني لعملية التحقق، وسنرسل رمزًا مكونًا من 4 أرقام إلى أرقام'
+  },
+  enterCode:{
+    en:'Enter your 4 digits code that you received on your email.',
+    ar:'أدخل الرمز المكون من 4 أرقام الذي تلقيته على بريدك الإلكتروني.'
+  },
+  setPass:{
+    en:'Set the new password for your account so you can login and access all featuress.',
+    ar:'قم بتعيين كلمة المرور الجديدة لحسابك حتى تتمكن من تسجيل الدخول والوصول إلى جميع الميزات.'
+  },
+  passReseted:{
+    en:'Your password has been reset successfully',
+    ar:'تمت إعادة تعيين كلمة المرور الخاصة بك بنجاح'
+  },
+  didnotReceive:{
+    en:'If you didn’t receive a code!',
+    ar:'إذا لم تتلق الرمز!'
+  },
+  resend:{
+    en:'Resend',
+    ar:' إعادة الإرسال'
+  },
   childProgress: {
     en: "Children Progress",
     ar: "تطور الأطفال",
@@ -397,6 +421,10 @@ export const translationModule = {
   notValidEmail:{
     en:'Email Not Valid',
     ar:'البريد الإلكتروني غير صالح'
+  },
+  noRoleSelected:{
+en:'No Role Selected',
+ar:'لم يتم تحديد أي دور'
   },
   lessons: {
     en: "Lessons",
@@ -958,6 +986,30 @@ export const translationModule = {
     en:'Forgot Password?',
     ar:'هل نسيت كلمة السر؟'
   },
+  verification:{
+    en:'Verification',
+    ar:'تأكيد'
+  },
+  updatePass:{
+    en:'Update Password',
+    ar:'تحديث كلمة المرور'
+  },
+  parent:{
+    en:'Parent',
+    ar:'والد'
+  },
+  parentRole:{
+    en:'Parents can manage child profiles and monitor their progress, including course enrollment, lesson completion, and performance.',
+    ar:'يمكن للوالدين إدارة ملفات تعريف الأطفال ومراقبة تقدمهم، بما في ذلك التسجيل في الدورة التدريبية وإكمال الدرس والأداء.'
+  },
+  studentRole:{
+    en:'Students can independently enroll in courses, access materials, and track their progress through a personalized dashboard.',
+    ar:'يمكن للطلاب التسجيل بشكل مستقل في الدورات التدريبية، والوصول إلى المواد، وتتبع تقدمهم من خلال لوحة معلومات مخصصة.'
+  },
+  selectRole:{
+    en:'Select Role',
+    ar:'اختر دور'
+  }
   
 
 

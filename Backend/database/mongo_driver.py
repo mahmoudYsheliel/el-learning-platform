@@ -12,7 +12,7 @@ async def mongodb_connect():
     )
 
 
-def get_database() -> motor.motor_asyncio.core.AgnosticDatabase | None:
+def get_database() -> motor.motor_asyncio.AsyncIOMotorDatabase | None:
     if mdb_client:
         return mdb_client.E_Learning
     return None

@@ -28,6 +28,8 @@ watch(questionOrder, (oldQ, new_q) => {
     images.value = []
     setTimeout(() => { images.value = props.question?.image?.split(',') }, 1)
     stage.value = 'show image'
+    if (props.questionType != 'Symbol Search')
+      return
     setTimeout(() => {
       stage.value = "show options";
     }, 3000);
@@ -88,6 +90,7 @@ const stage = ref("show image"); // or show options
             <img  :class="{ image2: (images?.length > 1) }" v-for="image in images" :src="image" alt="" v-if="question?.image != undefined" />
           </div>
         </div>
+
         <div class="question-text" v-if="questionType == 'Symbol Search'">
           <h1 v-if="stage == 'show image'">{{ questions[0] }}</h1>
           <h1 v-if="stage == 'show options'">{{ questions[1] }}</h1>
@@ -115,7 +118,7 @@ const stage = ref("show image"); // or show options
           }
             ">
             <span>{{ selectLang(choice?.choice) }}</span>
-            <img v-if="choice?.image" :src="choice?.image" class="image2" alt="" />
+            <img v-if="choice?.image" :src="choice?.image" class="image_choice" alt="" />
           </p>
         </div>
       </div>
@@ -196,14 +199,20 @@ const stage = ref("show image"); // or show options
 }
 
 img {
-  width: 62%;
+  width: 80%;
   border-radius: 0.5rem;
   animation: imageMove 0.5s;
 }
 
 .image2 {
   width: 38%;
+  aspect-ratio: 1/1;
   object-fit:cover;
+}
+.image_choice{
+  width: 40%;
+  aspect-ratio: 1.6;
+  object-fit:contain;
 }
 
 .container {
@@ -211,10 +220,6 @@ img {
   min-height: 100vh;
   padding-inline: 5%;
   margin-bottom: 5rem;
-}
-
-p>img {
-  width: 32.5%;
 }
 
 
@@ -252,7 +257,7 @@ button {
 }
 
 .choices-wrapper {
-  width: 75%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 1rem;
@@ -261,7 +266,7 @@ button {
 .choice-text {
   border: 4px solid var(--choiceBackgroundColor);
   border-radius: 0.5rem;
-  width: 75%;
+  width: 100%;
   cursor: pointer;
   font-weight: 400;
   padding: 0.5rem 1rem;

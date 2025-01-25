@@ -123,8 +123,8 @@ function finishQuiz() {
         <h3>{{ selectLang(translationModule.logWithParent) }}</h3>
 
         <Button
-          :label="selectLang(translationModule.returnHome)"
-          @click="router.push('/childNotifications')"
+          :label="selectLang(translationModule.results)"
+          @click="router.push('/viewChildAnalysis')"
         />
       </div>
     </Dialog>
