@@ -92,15 +92,15 @@ function change() {
       <h1>{{ message }}</h1>
       <div class="wrapper">
         <div class="element">
-          <p>{{ selectLang(translationModule.firstName) }}</p>
+          <p>{{ selectLang(translationModule.firstName) }} *</p>
           <InputText v-model="firstName" />
         </div>
         <div class="element">
-          <p>{{ selectLang(translationModule.lastName) }}</p>
+          <p>{{ selectLang(translationModule.lastName) }} *</p>
           <InputText v-model="lastName" />
         </div>
         <div class="element">
-          <p>{{ selectLang(translationModule.phone) }}</p>
+          <p>{{ selectLang(translationModule.phone) }} *</p>
           <InputText v-model="phoneNumber" />
         </div>
 

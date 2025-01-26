@@ -11,12 +11,12 @@ import Button from "primevue/button";
 import InputText from "primevue/inputtext";
 import Password from "primevue/password";
 import Calendar from "primevue/calendar";
-
 import { HttpRequester } from "@/lib/APICaller";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
+const personalInfo = usePersonalInfo()
 
 const email = ref();
 const pass = ref();
@@ -39,7 +39,7 @@ function signup() {
   else if (!isValidEmail(email.value)) {
     worningMessage.value = selectLang(translationModule.notValidEmail) ?? '';
   }
-  else if (role.value != 'Child' && role.value != 'Parent'){
+  else if (role.value != 'Child' && role.value != 'Parent') {
     worningMessage.value = selectLang(translationModule.noRoleSelected) ?? '';
   }
   else {
@@ -55,7 +55,7 @@ function signup() {
       if (res.msg == "email is already used once") {
         worningMessage.value = selectLang(translationModule.emailTaken) ?? '';
       } else if (res?.success == true) {
-        router.push("/login");
+        login();
       }
     });
   }
@@ -63,7 +63,7 @@ function signup() {
 
 const callback = (response: any) => {
   // decodeCredential will retrive the JWT payload from the credential
-  if (role.value != 'Child' && role.value != 'Parent'){
+  if (role.value != 'Child' && role.value != 'Parent') {
     worningMessage.value = selectLang(translationModule.noRoleSelected) ?? '';
     return
   }
@@ -122,6 +122,32 @@ function isValidEmail(email: string) {
   return emailRegex.test(email);
 }
 
+
+
+
+function login() {
+  const loginRequester = new HttpRequester("token");
+  loginRequester.login(email.value, pass.value).then((res) => {
+    if (res?.access_token) {
+      const personalInfoRequester = new HttpRequester("personal_info");
+      personalInfoRequester.callApi().then((res) => {
+        if (res?.success) {
+          personalInfo.addInfo({
+            userType: res?.data?.info?.user_type,
+            notifications: res?.data?.info?.notifications,
+            id: res?.data?.info?.id,
+            firstName: res?.data?.info?.first_name,
+            lastName: res?.data?.info?.last_name,
+            email: res?.data?.info?.email,
+            gender: res?.data?.info?.gender,
+          });
+          router.push("/");
+        }
+      });
+    }
+  });
+}
+
 </script>
 
 <template>
@@ -134,27 +160,27 @@ function isValidEmail(email: string) {
 
         <h1 style="color: var(--header);">{{ selectLang(translationModule.selectRole) }}</h1>
         <div class="roles">
-          <div class="role" :class="{selected:(role =='Parent')}"  @click="role='Parent'" >
-          <div class="role_name"  >
-            <h2 style="color: var(--accent2);">{{selectLang(translationModule.parent)}}</h2>
-              <Parent style="width: 100%;height: 100%;"  color="var(--accent1)" />
+          <div class="role" :class="{ selected: (role == 'Parent') }" @click="role = 'Parent'">
+            <div class="role_name">
+              <h2 style="color: var(--accent2);">{{ selectLang(translationModule.parent) }}</h2>
+              <Parent style="width: 100%;height: 100%;" color="var(--accent1)" />
+            </div>
+            <div class="features">
+              <p>{{ selectLang(translationModule.parentRole) }} </p>
+            </div>
           </div>
-          <div class="features">
-            <p>{{selectLang(translationModule.parentRole)}}  </p>
+
+          <div class="role" :class="{ selected: (role == 'Child') }" @click="role = 'Child'">
+            <div class="role_name">
+              <h2 style="color: var(--accent2);">{{ selectLang(translationModule.student) }}</h2>
+              <Student style="width: 100%;height: 100%;" color="var(--accent1)" />
+            </div>
+            <div class="features">
+              <p>{{ selectLang(translationModule.studentRole) }}</p>
+            </div>
           </div>
         </div>
 
-        <div class="role" :class="{selected:(role =='Child')}" @click="role='Child'">
-          <div class="role_name"  >
-            <h2 style="color: var(--accent2);">{{selectLang(translationModule.student)}}</h2>
-              <Student style="width: 100%;height: 100%;" color="var(--accent1)"/>
-          </div>
-          <div class="features">
-            <p>{{ selectLang(translationModule.studentRole) }}</p>
-          </div>
-        </div>
-        </div>
-       
       </div>
       <div class="right">
         <div class="welcome">
@@ -185,7 +211,7 @@ function isValidEmail(email: string) {
             </template>
           </Password>
           <Password class="input" v-model="confirmedPass" :feedback="false" toggleMask :placeholder="selectLang(translationModule.confirmPass)" @change="worningMessage = ''" />
-          <Calendar style="width: 100%;" v-model="birthDate" :placeholder="selectLang(translationModule.birthDate)"/>
+          <Calendar style="width: 100%;" v-model="birthDate" :placeholder="selectLang(translationModule.birthDate)" />
         </div>
         <div class="button">
           <Button @click="signup" :label="selectLang(translationModule.signup)" />
@@ -232,7 +258,8 @@ h2 {
 h2 {
   color: var(--accent1);
 }
-.role_name{
+
+.role_name {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -241,8 +268,10 @@ h2 {
 }
 
 .role {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Shadow for the raised effect */
-  transition: transform 0.2s, box-shadow 0.2s; /* Smooth interaction effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  /* Shadow for the raised effect */
+  transition: transform 0.2s, box-shadow 0.2s;
+  /* Smooth interaction effect */
   padding: 1rem;
   margin-bottom: 1rem;
   margin-inline: 1rem;
@@ -253,12 +282,16 @@ h2 {
   gap: 1rem;
   cursor: pointer;
 }
-.selected{
+
+.selected {
   border: none;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25), 0 10px 16px rgba(0, 0, 0, 0.08); /* Enhance shadow on hover */
-  transition: transform 1s, box-shadow 0.2s; /* Smooth interaction effect */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25), 0 10px 16px rgba(0, 0, 0, 0.08);
+  /* Enhance shadow on hover */
+  transition: transform 1s, box-shadow 0.2s;
+  /* Smooth interaction effect */
   scale: 1.02;
 }
+
 .right {
   display: flex;
   flex-direction: column;
@@ -339,13 +372,15 @@ h4 {
   margin: 0;
 }
 
-.role{
+.role {
   font-size: 0.875rem;
 }
-.role p{
+
+.role p {
   margin: 0;
   padding: 0;
 }
+
 @media screen and (max-width: 1250px) {
   .container {
     display: flex;
@@ -353,27 +388,32 @@ h4 {
     width: 95%;
     margin-top: 2rem;
   }
-  .left,.borderRigth{
+
+  .left,
+  .borderRigth {
     border: none;
   }
-  .roles{
+
+  .roles {
     margin-bottom: 2rem;
     display: flex;
-    
+
   }
-  .role{
+
+  .role {
     display: flex;
     flex-direction: column;
     margin: 0.5rem;
 
   }
-  .welcome{
+
+  .welcome {
     display: none;
   }
 
   .button {
     margin-bottom: 2rem;
   }
-  
+
 }
 </style>

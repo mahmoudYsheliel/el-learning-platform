@@ -12,7 +12,7 @@ import Dialog from "primevue/dialog";
 import router from "@/router";
 import { selectLang, translationModule } from "@/lib/Translate";
 import { grades, genders, educationSystems } from "@/lib/Modules";
-
+import { usePersonalInfo,useToken } from "@/stores/token";
 const firstName = ref();
 const lastName = ref();
 const email = ref();
@@ -26,6 +26,7 @@ const grade = ref();
 const message = ref();
 const showDialog = ref(false);
 const groups = ref<any[]>([]);
+let childId = ''
 
 const groupsRequester = new HttpRequester("get_all_program");
 groupsRequester.callApi().then((res) => {
@@ -49,7 +50,6 @@ function addChildFunc() {
     !gender.value ||
     !birtDate.value ||
     !grade.value ||
-    !childGroup.value ||
     !educationSystem.value
   ) {
     message.value = selectLang(translationModule.dataMissing);
@@ -77,11 +77,41 @@ function addChildFunc() {
     addChildRequester.callApi(date).then((res) => {
       if (res?.success) {
         showDialog.value = true;
+        childId = res?.data?.child_user_id
       } else if (res.msg == "email is already used once") {
         message.value = selectLang(translationModule.emailTaken);
       }
     });
   }
+}
+
+
+function switchChild(id: string) {
+  console.log(id)
+  const token = useToken();
+  const switchRequester = new HttpRequester("switch_to_child");
+  switchRequester.callApi({ child_id: id }).then((res) => {
+    if (res?.success) {
+      token.logout();
+      token.addToken(res?.data?.access_token);
+      const personalInfoRequester = new HttpRequester("personal_info");
+      const personalInfo = usePersonalInfo();
+      personalInfoRequester.callApi().then((res) => {
+        if (res?.success) {
+          personalInfo.addInfo({
+            userType: res?.data?.info?.user_type,
+            notifications: res?.data?.info?.notifications,
+            id: res?.data?.info?.id,
+            firstName: res?.data?.info?.first_name,
+            lastName: res?.data?.info?.last_name,
+            email: res?.data?.info?.email,
+            gender: res?.data?.info?.gender,
+          });
+          router.push("/");
+        }
+      });
+    }
+  });
 }
 </script>
 
@@ -105,8 +135,8 @@ function addChildFunc() {
         <h3 style="color: var(--secondary)">{{ email }} Account</h3>
         <h3>{{ selectLang(translationModule.toStartJourney) }}</h3>
         <Button
-          :label="selectLang(translationModule.viewChild)"
-          @click="router.push('/childrenCourses')"
+          :label="selectLang(translationModule.switchToChild)"
+          @click="()=>{switchChild(childId)}"
         />
       </div>
     </Dialog>
@@ -156,14 +186,14 @@ function addChildFunc() {
           />
         </div>
 
-        <div class="element">
+        <!-- <div class="element">
           <p>{{ selectLang(translationModule.programs) }}</p>
           <Dropdown
             v-model="childGroup"
             :options="groups"
             option-label="label"
           />
-        </div>
+        </div> -->
 
         <div class="element">
           <p>{{ selectLang(translationModule.educationSystem) }}</p>
@@ -178,6 +208,7 @@ function addChildFunc() {
       <Button
         :label="selectLang(translationModule.addChild)"
         @click="addChildFunc"
+        style="margin-bottom: 5rem;"
       />
     </div>
   </div>

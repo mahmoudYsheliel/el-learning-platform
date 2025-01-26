@@ -11,6 +11,7 @@ import { ref, watch } from "vue";
 import { useToken } from "@/stores/token";
 import { HttpRequester } from "@/lib/APICaller";
 import AskMissingPersonalInfo from "@/components/dialogs/AskMissingPersonalInfo.vue";
+import AddChild from "@/components/dialogs/AddChild.vue";
 import { useElementVisibility } from '@vueuse/core'
 
 
@@ -43,17 +44,27 @@ watch([homeIsVisible, coursesIsVisible, aboutIsVisible, contactIsVisible], () =>
 
 const token = useToken()
 const showAskInfoDialog = ref(false)
-if (token.getIsAuthorized) {
-  const personaRequester = new HttpRequester("personal_info")
-  personaRequester.callApi().then((res) => {
-    if (res?.success) {
-      let info = res?.data?.info;
-      if (!info?.phone_number && info?.user_type == 'Parent') {
-        showAskInfoDialog.value = true
-      }
-    }
+// if (token.getIsAuthorized) {
+//   const personaRequester = new HttpRequester("personal_info")
+//   personaRequester.callApi().then((res) => {
+//     if (res?.success) {
+//       let info = res?.data?.info;
+//       if (!info?.phone_number && info?.user_type == 'Parent') {
+//         showAskInfoDialog.value = true
+//       }
+//     }
 
-  });
+//   });
+// }
+const showAddChildDialog = ref(false)
+if (token.getIsAuthorized) {
+    const childrenRequester = new HttpRequester("personal_info");
+    childrenRequester.callApi().then((res) => {
+      if (res?.data?.info?.children?.length==0 && res?.data?.info?.user_type == 'Parent') {
+        showAddChildDialog.value = true
+      }
+    });
+  
 }
 
 </script>
@@ -61,14 +72,15 @@ if (token.getIsAuthorized) {
   <main>
 
     <AskMissingPersonalInfo :show-dialog="showAskInfoDialog" @remove-dialog="showAskInfoDialog = false" />
+    <AddChild :show-dialog="showAddChildDialog" @remove-dialog="showAddChildDialog = false" />
     <Navbar class="nav" :selected="selected" />
-    <div id="home" >
-      <Options ref="home"/>
-      <HeroSection  />
+    <div id="home">
+      <Options ref="home" />
+      <HeroSection />
     </div>
     <Programs id="Courses" ref="courses" />
-    <Workshop id="workshop"/>
-    <Certificate id="certificate"/>
+    <Workshop id="workshop" />
+    <Certificate id="certificate" />
     <Achievement id="About" ref="about" />
     <Footer id="Contact" ref="contact" />
 
@@ -77,11 +89,12 @@ if (token.getIsAuthorized) {
 </template>
 
 <style scoped>
-#home{
-  background-image: linear-gradient(to top , var(--primary), var(--accent1_300));
-  
+#home {
+  background-image: linear-gradient(to top, var(--primary), var(--accent1_300));
+
 }
-#About{
+
+#About {
   background-color: var(--accent1_100);
 }
 </style>

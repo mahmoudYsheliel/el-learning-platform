@@ -56,7 +56,7 @@ function markCompleted() {
       <p>{{ selectLang(lesson?.description) }}</p>
       <div class="wrapper">
         <iframe
-          :src="lesson?.source?.replace('view?usp=sharing','preview')"
+          :src="lesson?.source?.replace('view?usp=sharing','preview')?.replace('view?usp=drive_link','preview')"
           frameborder="0"
           sandbox="allow-scripts allow-same-origin"
           allowfullscreen

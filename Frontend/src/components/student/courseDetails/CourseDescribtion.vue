@@ -29,7 +29,7 @@ const emits = defineEmits(["enroll", "viewMaterial"]);
       </div>
       <p>{{ selectLang(course?.description) }}</p>
     </div>
-    <div class="objectives" v-if="course?.objectives>0">
+    <div class="objectives" v-if="course?.objectives?.length>0">
       <h2>{{ selectLang(translationModule.courseObjectives) }}</h2>
       <ul>
         <li v-for="objective in course?.objectives">

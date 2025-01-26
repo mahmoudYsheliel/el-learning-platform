@@ -290,6 +290,10 @@ export const translationModule = {
     en: "Add Child",
     ar: "إضافة طفل",
   },
+  noChildren:{
+    en:"Add your first child to unlock personalized experiences today!",
+    ar:"أضف طفلك الأول لتستمتع بتجارب مخصصة اليوم!"
+  },
   sub: {
     en: "Subscriptions",
     ar: "الاشتراكات",
@@ -1009,6 +1013,10 @@ ar:'لم يتم تحديد أي دور'
   selectRole:{
     en:'Select Role',
     ar:'اختر دور'
+  },
+  personalInfo:{
+    en:'Personal Information',
+    ar:'معلومات شخصية'
   }
   
 

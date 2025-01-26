@@ -100,8 +100,8 @@ export const items = ((router: any) => {
       //   },
       // },
       {
-        label: selectLang(translationModule.settings),
-        icon: "pi pi-cog",
+        label: selectLang(translationModule.personalInfo),
+        icon: "pi pi-user",
         command: () => {
           router.push("/parentSettings");
         },
@@ -369,10 +369,10 @@ export const parentSidebarPages = computed(() => {
     //   icon: "pi pi-arrow-right-arrow-left",
     // },
     {
-      label: selectLang(translationModule.settings),
+      label: selectLang(translationModule.personalInfo),
       name: "settings",
       to: "parentSettings",
-      icon: "pi pi-cog",
+      icon: "pi pi-user",
     },
   ];
 });

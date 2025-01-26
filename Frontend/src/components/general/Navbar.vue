@@ -4,20 +4,20 @@ import Dialog from "primevue/dialog";
 import "primeicons/primeicons.css";
 import { defineProps } from "vue";
 import { useRouter } from "vue-router";
-import { ref,onMounted,watch } from "vue";
+import { ref, watch } from "vue";
 import { HttpRequester } from "@/lib/APICaller";
 import { usePersonalInfo, useToken } from "../../stores/token";
-import { pagesToRoute ,items} from '@/lib/Modules'
+import { pagesToRoute, items } from '@/lib/Modules'
 import { selectLang, translationModule } from "@/lib/Translate";
 import { useLang } from "../../stores/token";
 import Menu from "primevue/menu";
 
 
-const lang =useLang()
+const lang = useLang()
 const router = useRouter();
 const items2 = ref(items(router))
-watch((lang),()=>{
-  items2.value =items(router)
+watch((lang), () => {
+  items2.value = items(router)
 })
 
 
@@ -41,7 +41,7 @@ if (token.isAuthorized) {
         firstName: res?.data?.info?.first_name,
         lastName: res?.data?.info?.last_name,
         email: res?.data?.info?.email,
-        gender:res?.data?.info?.gender,
+        gender: res?.data?.info?.gender,
       });
     }
   });
@@ -219,7 +219,8 @@ i {
   color: var(--primary);
   font-size: 1.25rem;
 }
-.nav-icon{
+
+.nav-icon {
   color: var(--accent1);
   padding: 0.5rem;
   border-radius: 100%;
