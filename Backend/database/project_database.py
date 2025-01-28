@@ -54,6 +54,7 @@ async def get_project(project_id:str,userId:str)-> ServiceResponse:
             'title':1,
             'description':1,
             'source':1,
+            'source2':1
             
         })
         if not project:
@@ -74,6 +75,7 @@ async def get_project(project_id:str,userId:str)-> ServiceResponse:
             'title':1,
             'description':1,
             'source':1,
+            'source2':1
             
         })
         if not project:
