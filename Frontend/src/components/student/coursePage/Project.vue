@@ -1,10 +1,11 @@
 <script lang="ts" setup>
-import { computed, ref, watch } from "vue";
+import { computed, onMounted, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import { HttpRequester } from "@/lib/APICaller";
 import Button from "primevue/button";
 import "primeicons/primeicons.css";
 import { selectLang, translationModule } from "@/lib/Translate";
+import { useLang } from "@/stores/token";
 
 const emit = defineEmits(["next"]);
 defineProps(["completed"]);
@@ -24,6 +25,15 @@ const getproject = () => {
     .then((res) => {
       if (res?.success) {
         project.value = res?.data?.project;
+        const selectedlang = lang.getLang
+
+        if (selectedlang == 'en') {
+          console.log(selectedlang, projectScourse.value)
+          projectScourse.value = project.value?.source?.replace('view?usp=sharing', 'preview')?.replace('view?usp=drive_link', 'preview')
+        }
+        if (selectedlang == 'ar') {
+          projectScourse.value = project.value?.source2?.replace('view?usp=sharing', 'preview')?.replace('view?usp=drive_link', 'preview')
+        }
       }
     });
 };
@@ -45,6 +55,19 @@ function markCompleted() {
       emit("next", true);
     });
 }
+const lang = useLang()
+const projectScourse = ref('')
+
+watch((lang), () => {
+  const selectedlang = lang.getLang
+  if (selectedlang == 'en') {
+    projectScourse.value = project.value?.source?.replace('view?usp=sharing', 'preview')?.replace('view?usp=drive_link', 'preview')
+  }
+  if (selectedlang == 'ar') {
+    projectScourse.value = project.value?.source2?.replace('view?usp=sharing', 'preview')?.replace('view?usp=drive_link', 'preview')
+  }
+
+})
 </script>
 
 <template>
@@ -55,20 +78,11 @@ function markCompleted() {
       </h2>
       <p>{{ selectLang(project?.description) }}</p>
       <div class="wrapper">
-        <iframe
-          :src="project?.source"
-          frameborder="0"
-          sandbox="allow-scripts allow-same-origin"
-          allowfullscreen
-        ></iframe>
+
+        <iframe :src="projectScourse" frameborder="0" sandbox="allow-scripts allow-same-origin" allowfullscreen></iframe>
+
       </div>
-      <Button
-        :disabled="completed"
-        icon="pi pi-check-circle"
-        :label="selectLang(translationModule.markCompleted)"
-        icon-pos="right"
-        @click="markCompleted"
-      />
+      <Button :disabled="completed" icon="pi pi-check-circle" :label="selectLang(translationModule.markCompleted)" icon-pos="right" @click="markCompleted" />
     </div>
   </main>
 </template>
@@ -86,16 +100,19 @@ h2 {
   margin-top: 2rem;
   width: fit-content;
 }
+
 iframe {
   width: 100%;
   aspect-ratio: 16/9;
   border-radius: 8px;
 }
+
 .wrapper {
   margin-top: 2rem;
   width: 75%;
   margin-inline: auto;
 }
+
 button {
   font-size: 0.75rem;
 }

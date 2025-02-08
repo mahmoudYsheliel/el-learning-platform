@@ -23,12 +23,13 @@ const pass = ref();
 const confirmedPass = ref();
 const role = ref('')
 const birthDate = ref()
+const phone =ref('')
 
 const worningMessage = ref('')
 const signupRequester = new HttpRequester("signup");
 
 function signup() {
-  if (!email.value || !pass.value || !confirmedPass.value || !birthDate.value) {
+  if (!email.value || !pass.value || !confirmedPass.value || !birthDate.value || !phone.value) {
     worningMessage.value = selectLang(translationModule.dataMissing) ?? '';
   } else if (pass.value != confirmedPass.value) {
     worningMessage.value = selectLang(translationModule.diffPass) ?? '';
@@ -48,6 +49,8 @@ function signup() {
         email: email.value,
         hashed_pass: pass.value,
         user_type: role.value,
+        birth_day:birthDate.value,
+        phone_number:phone.value
       },
     };
 
@@ -212,6 +215,7 @@ function login() {
           </Password>
           <Password class="input" v-model="confirmedPass" :feedback="false" toggleMask :placeholder="selectLang(translationModule.confirmPass)" @change="worningMessage = ''" />
           <Calendar style="width: 100%;" v-model="birthDate" :placeholder="selectLang(translationModule.birthDate)" />
+          <InputText style="width: 100%;" type="email" class="input" v-model="phone" :placeholder="selectLang(translationModule.phone)" />
         </div>
         <div class="button">
           <Button @click="signup" :label="selectLang(translationModule.signup)" />

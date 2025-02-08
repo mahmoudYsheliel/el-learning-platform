@@ -11,6 +11,7 @@ interface TwoLang {
 const title = ref<TwoLang>({ en: "", ar: "" });
 const description = ref<TwoLang>({ en: "", ar: "" });
 const source = ref('');
+const source2 = ref('');
 
 
 const prop = defineProps(['addMaterial','materialId'])
@@ -23,6 +24,7 @@ if (prop.materialId) {
         title.value = res?.data?.project?.title;
         description.value = res?.data?.project?.description;
         source.value =res?.data?.project?.source;
+        source2.value =res?.data?.project?.source2;
       }
     });
 }
@@ -33,7 +35,8 @@ watch(prop, () => {
     let mat = {
       title:title.value,
         description:description.value,
-        source:source.value
+        source:source.value,
+        source2:source2.value
     };
     if (prop.materialId) {
       let data = {
@@ -85,8 +88,12 @@ watch(prop, () => {
       </div>
 
       <div class="element">
-        <h4>Source</h4>
+        <h4>English Source</h4>
         <InputText v-model="source" />
+      </div>
+      <div class="element">
+        <h4>Arabic Source</h4>
+        <InputText v-model="source2" />
       </div>
     </div>
   </div>

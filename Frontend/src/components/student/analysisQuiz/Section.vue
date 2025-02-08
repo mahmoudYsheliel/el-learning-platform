@@ -217,7 +217,6 @@ img {
 
 .container {
   padding-top: 2rem;
-  min-height: 100vh;
   padding-inline: 5%;
   margin-bottom: 5rem;
 }

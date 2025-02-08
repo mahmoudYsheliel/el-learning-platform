@@ -5,9 +5,26 @@ import { HttpRequester } from "@/lib/APICaller";
 import Dialog from "primevue/dialog";
 import ProgressBar from "primevue/progressbar";
 import "primeicons/primeicons.css";
-
 import { selectLang, translationModule } from "@/lib/Translate";
+import { useLang } from "@/stores/token";
 
+type directionType = 'ltr' | 'rtl'
+const lang = useLang()
+const direction = ref<directionType>('ltr')
+if (lang.getLang == 'en') {
+    direction.value = 'ltr'
+  }
+  if (lang.getLang == 'ar') {
+    direction.value = 'rtl'
+  }
+watch(lang, () => {
+  if (lang.getLang == 'en') {
+    direction.value = 'ltr'
+  }
+  if (lang.getLang == 'ar') {
+    direction.value = 'rtl'
+  }
+})
 defineEmits(["next"]);
 
 import Button from "primevue/button";
@@ -154,21 +171,15 @@ function updateProgress() {
         </div>
         <div v-else class="question-wrapper">
           <div class="quiz-duration">
-            <span style="width: fit-content"
-              >{{ selectLang(translationModule.yourTime) }}
+            <span :style="{direction:direction}" style="width: fit-content">{{ selectLang(translationModule.yourTime) }}
               <strong style="direction: ltr">
                 {{ Math.floor(studentTime / 60) }}:
-                <strong v-if="studentTime % 60 < 10">0</strong
-                >{{ studentTime % 60 }}</strong
-              >
+                <strong v-if="studentTime % 60 < 10">0</strong>{{ studentTime % 60 }}</strong>
             </span>
           </div>
           <div v-for="(question, i) in quiz?.questions" :key="question">
             <div v-if="i == currentQuention" class="question">
-              <ProgressBar
-                style="width: 75%; margin-bottom: 1rem"
-                :value="progress"
-              ></ProgressBar>
+              <ProgressBar style="width: 75%; margin-bottom: 1rem" :value="progress"></ProgressBar>
 
               <h3 class="question-order">
                 {{ selectLang(translationModule.question) }} {{ i + 1 }}
@@ -178,143 +189,86 @@ function updateProgress() {
                 {{ selectLang(question?.question) }}
               </h4>
               <div class="choices-wrapper">
-                <p
-                  v-for="choice in question?.choices"
-                  class="choice-text"
-                  :key="choice"
-                  @click="
-                    () => {
-                      quiz.questions[i].selected = choice.id;
-                    }
-                  "
-                  :class="{
+                <p v-for="choice in question?.choices" class="choice-text" :key="choice" @click="() => {
+                    quiz.questions[i].selected = choice.id;
+                  }
+                  " :class="{
                     selectedChoice: quiz.questions[i].selected == choice.id,
-                  }"
-                >
+                  }">
                   {{ selectLang(choice.choice) }}
                 </p>
               </div>
             </div>
           </div>
           <div class="controls">
-            <Button
-              :label="selectLang(translationModule.prevQuestion)"
-              :disabled="currentQuention == 0"
-              @click="
-                () => {
-                  currentQuention--;
-                  updateProgress();
-                }
-              "
-            />
-            <Button
-              :label="selectLang(translationModule.finishQuiz)"
-              @click="finishQuiz"
-            />
-            <Button
-              :label="selectLang(translationModule.nextQuestion)"
-              :disabled="currentQuention + 1 == quiz?.questions?.length"
-              @click="
-                () => {
-                  currentQuention++;
-                  updateProgress();
-                }
-              "
-            />
+            <Button :label="selectLang(translationModule.prevQuestion)" :disabled="currentQuention == 0" @click="() => {
+                currentQuention--;
+                updateProgress();
+              }
+              " />
+            <Button :label="selectLang(translationModule.finishQuiz)" @click="finishQuiz" />
+            <Button :label="selectLang(translationModule.nextQuestion)" :disabled="currentQuention + 1 == quiz?.questions?.length" @click="() => {
+                currentQuention++;
+                updateProgress();
+              }
+              " />
           </div>
         </div>
       </div>
     </div>
 
-    <Dialog
-      v-model:visible="showResults"
-      modal
-      class="dialog"
-      style="max-width: 75%"
-      :pt="{
-        root: 'border-none',
-        mask: {
-          style: 'backdrop-filter: blur(2px)',
-        },
-      }"
-    >
+    <Dialog v-model:visible="showResults" modal class="dialog" style="max-width: 75%" :pt="{
+      root: 'border-none',
+      mask: {
+        style: 'backdrop-filter: blur(2px)',
+      },
+    }">
       <template #container="{ closeCallback }">
-        <div
-          class="dialog-wrapper"
-          style="display: flex; align-items: center; flex-direction: column"
-        >
+        <div class="dialog-wrapper" style="display: flex; align-items: center; flex-direction: column">
           <div v-if="!showAnswer" class="score">
             <p>{{ selectLang(translationModule.yourScore) }}</p>
             <p>{{ Math.floor((score / quiz?.questions?.length) * 100) }}%</p>
 
-            <img
-              class="interaction"
-              v-if="score / quiz?.questions?.length > 0.9"
-              src="https://i.pinimg.com/originals/56/da/ac/56daac56f90ba6cf039125586181f6ea.gif"
-              alt=""
-            />
-            <img
-              class="interaction"
-              v-if="score / quiz?.questions?.length < 0.5"
-              src="https://img.freepik.com/free-vector/hand-drawn-facepalm-illustration_23-2150212662.jpg?t=st=1720110311~exp=1720113911~hmac=f9f12f7c863341a0acb15d0ec44f785e42038ebf827f157f7863f0ea96805826&w=826"
-              alt=""
-            />
+            <img class="interaction" v-if="score / quiz?.questions?.length > 0.9" src="https://i.pinimg.com/originals/56/da/ac/56daac56f90ba6cf039125586181f6ea.gif" alt="" />
+            <img class="interaction" v-if="score / quiz?.questions?.length < 0.5" src="https://img.freepik.com/free-vector/hand-drawn-facepalm-illustration_23-2150212662.jpg?t=st=1720110311~exp=1720113911~hmac=f9f12f7c863341a0acb15d0ec44f785e42038ebf827f157f7863f0ea96805826&w=826" alt="" />
           </div>
           <div v-else class="answers">
             <div v-for="(question, i) in quiz?.questions" :key="question">
               <div class="question" style="min-height: 2rem">
-                <h4 class="question-order">
+                <h4 class="question-order" :style="{direction:direction}">
                   {{ selectLang(translationModule.question) }} {{ i + 1 }}
                 </h4>
-                <h4 class="question-text">
+                <div class=" question-text" :style="{direction:direction}">
                   {{ selectLang(question?.question) }}
-                </h4>
-                <div class="choices-wrapper">
-                  <p
-                    v-for="choice in question?.choices"
-                    class="choice-text"
-                    :key="choice"
-                    style="cursor: auto"
-                    :class="{
-                      correct: choice.id == quiz.questions[i].correct_answer_id,
-                      selectedChoice: quiz.questions[i].selected == choice.id,
+                </div>
+                <div class=" choices-wrapper">
+                  <div v-for="choice in question?.choices" class="choice-text" :key="choice" style="cursor: auto" :style="{direction:direction}" :class="{
+                    correct: choice.id == quiz.questions[i].correct_answer_id,
+                    selectedChoice: quiz.questions[i].selected == choice.id,
 
-                      wrong:
-                        quiz.questions[i].selected !=
-                          quiz.questions[i].correct_answer_id &&
-                        quiz.questions[i].selected == choice.id,
-                    }"
-                  >
+                    wrong:
+                      quiz.questions[i].selected !=
+                      quiz.questions[i].correct_answer_id &&
+                      quiz.questions[i].selected == choice.id,
+                  }">
                     {{ selectLang(choice.choice) }}
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="quiz-duration">
-            <span
-              >{{ selectLang(translationModule.yourTime) }}
+            <span :style="{direction:direction}">{{ selectLang(translationModule.yourTime) }}
               <strong>
                 {{ Math.floor(studentTime / 60) }}:
-                <strong v-if="studentTime % 60 < 10">0</strong
-                >{{ studentTime % 60 }}</strong
-              >
+                <strong v-if="studentTime % 60 < 10">0</strong>{{ studentTime % 60 }}</strong>
             </span>
           </div>
 
           <div class="controls">
-            <Button
-              :label="selectLang(translationModule.showAnswer)"
-              @click="showAnswer = true"
-            />
-            <Button
-              :label="selectLang(translationModule.tryAgain)"
-              @click="resetQuiz"
-            />
-            <Button
-              :label="selectLang(translationModule.nextLesson)"
-              @click="$emit('next', true)"
-            />
+            <Button :label="selectLang(translationModule.showAnswer)" @click="showAnswer = true" />
+            <Button :label="selectLang(translationModule.tryAgain)" @click="resetQuiz" />
+            <Button :label="selectLang(translationModule.nextLesson)" @click="$emit('next', true)" />
           </div>
         </div>
       </template>
@@ -327,6 +281,7 @@ function updateProgress() {
   width: 80%;
   margin-inline: auto;
 }
+
 h2 {
   color: var(--accent1);
   margin: 0;
@@ -334,18 +289,22 @@ h2 {
   margin-top: 2rem;
   width: fit-content;
 }
+
 .quiz-duration {
   display: flex;
   justify-content: space-between;
 }
-.quiz-duration > span {
+
+.quiz-duration>span {
   color: var(--accent1);
 }
-.quiz-duration > span > strong {
+
+.quiz-duration>span>strong {
   color: var(--accent2);
   display: inline-block;
   width: 5rem;
 }
+
 .count-down {
   text-align: center;
   font-size: 10rem;
@@ -353,44 +312,52 @@ h2 {
   color: var(--accent1);
   line-height: 15rem;
 }
+
 .wrapper {
   width: 100%;
   min-height: 50vh;
 }
+
 .question-order {
   color: var(--accent2);
   width: 100%;
   line-height: 0;
   margin: 0;
-  margin-top: 1rem;
+  margin-block: 1rem 0.25rem;
   font-size: 1.25rem;
   font-weight: 600;
 }
+
 .interaction {
   width: 50%;
   border-radius: 50%;
 }
+
 .question {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 40vh;
 }
+
 .question-text {
   color: var(--primary);
   text-align: center;
   background-color: var(--accent1);
   border-radius: 1rem;
-  padding: 0.5rem;
+  padding: 1.25rem;
   margin: 0;
   margin-top: 1rem;
   width: 80%;
   font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.7rem
 }
 
 .choices-wrapper {
   width: 50%;
 }
+
 .choice-text {
   background-color: var(--choiceBackgroundColor);
   border-radius: 1rem;
@@ -398,8 +365,10 @@ h2 {
   width: 100%;
   cursor: pointer;
   font-weight: 400;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem;
+  margin: 1rem
 }
+
 .controls {
   margin-top: 2rem;
   display: flex;
@@ -407,6 +376,7 @@ h2 {
   padding-inline: 2rem;
   gap: 2rem;
 }
+
 Button {
   font-size: 0.75rem;
 }
@@ -415,13 +385,15 @@ Button {
   overflow-y: scroll;
   padding: 2rem;
 }
-.score > * {
+
+.score>* {
   margin: 0;
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--primary);
 }
-.score > :last-child {
+
+.score> :last-child {
   font-size: 4rem;
 }
 
@@ -437,15 +409,18 @@ Button {
   width: 25rem;
   margin-bottom: 1rem;
 }
+
 .selectedChoice {
   background-color: var(--accent1);
   color: var(--primary);
   transition-duration: 0.5s;
 }
+
 .correct {
   background-color: var(--accent4);
   color: var(--primary);
 }
+
 .wrong {
   background-color: var(--wrongAnswer);
 }

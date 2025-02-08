@@ -6,7 +6,7 @@ import Button from "primevue/button";
 import { useRoute } from "vue-router";
 import { ref } from "vue";
 import router from "@/router";
-
+import { useLang } from "@/stores/token";
 import { selectLang, translationModule } from "@/lib/Translate";
 import Dialog from "primevue/dialog";
 
@@ -88,6 +88,17 @@ function finishQuiz() {
     }
   });
 }
+
+
+const lang =useLang()
+function setLang(selectedLang: string | undefined) {
+  if (selectedLang == "English") {
+    lang.setLang("en");
+  }
+  if (selectedLang == "العربية") {
+    lang.setLang("ar");
+  }
+}
 </script>
 
 <template>
@@ -168,13 +179,28 @@ function finishQuiz() {
         
       </div>
     </div>
+    <Button class="lang_button" @click="() => {
+        setLang(selectLang(translationModule.language));
+      }
+        " icon="pi pi-language"/>
   </div>
 </template>
 
 <style scoped>
+.lang_button{
+  cursor: pointer; 
+  color: var(--primary);
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  padding: 0;
+}
 .wrapper {
   margin-inline: auto;
-  min-height: 70vh;
+  min-height: 100vh;
 }
 h4 {
   color: var(--text);

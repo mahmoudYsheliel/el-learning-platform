@@ -30,14 +30,7 @@ programRequester.callApi().then((res) => {
   }
 });
 
-function setLang(selectedLang: string | undefined) {
-  if (selectedLang == "English") {
-    lang.setLang("en");
-  }
-  if (selectedLang == "العربية") {
-    lang.setLang("ar");
-  }
-}
+
 
 const menu = ref();
 function show_account_menu(event: MouseEvent) {
@@ -62,10 +55,6 @@ function show_account_menu(event: MouseEvent) {
       <Menu ref="menu" :model="items" :popup="true" style="margin-top: 0.5rem;" />
 
 
-      <span style="cursor: pointer" @click="() => {
-        setLang(selectLang(translationModule.language));
-      }
-        ">{{ selectLang(translationModule.language) }}</span>
     </div>
   </main>
 </template>

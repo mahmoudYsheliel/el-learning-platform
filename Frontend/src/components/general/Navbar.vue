@@ -60,7 +60,14 @@ function show_account_menu(event: MouseEvent) {
 defineProps(["selected"]);
 const showDialogLogOut = ref(false);
 
-
+function setLang(selectedLang: string | undefined) {
+  if (selectedLang == "English") {
+    lang.setLang("en");
+  }
+  if (selectedLang == "العربية") {
+    lang.setLang("ar");
+  }
+}
 </script>
 <template>
   <main>
@@ -128,28 +135,18 @@ const showDialogLogOut = ref(false);
       </p>
     </div>
     <div v-if="!token.getIsAuthorized" class="profile">
+      <span style="cursor: pointer; color: var(--primary);" @click="() => {
+        setLang(selectLang(translationModule.language));
+      }
+        ">{{ selectLang(translationModule.language) }}</span>
       <Button @click="router.push('/login')" :label=selectLang(translationModule.login) class="button" />
       <p class="register" @click="router.push('/signup')">{{ selectLang(translationModule.signup) }}</p>
     </div>
     <div v-if="token.getIsAuthorized" class="profile">
-      <!-- <SplitButton
-      severity="secondary"
-      :pt="{
-        root:{style:'font-size: 0.5rem;'}
-      }"
-      :label="selectLang(translationModule.myAccount)"
-      style="direction: ltr;"
-        :model="items"
-        @click="items[0]?.command()"
-        :class="{
-          splitButton: personalInfo?.info?.notifications?.some((n) => {
-            return n.status == 'waiting';
-          }),
-        }"
-      >
-    
-    </SplitButton> -->
-
+      <span style="cursor: pointer; color: var(--primary);" @click="() => {
+        setLang(selectLang(translationModule.language));
+      }
+        ">{{ selectLang(translationModule.language) }}</span>
       <Button type="button" icon="pi pi-user" @click="show_account_menu" aria-haspopup="true" aria-controls="account_overlay_menu" :pt="menu_button_pt" />
       <Menu ref="menu" :model="items2" :popup="true" />
       <i @click="showDialogLogOut = true" class=" nav-icon pi pi-sign-out"></i>

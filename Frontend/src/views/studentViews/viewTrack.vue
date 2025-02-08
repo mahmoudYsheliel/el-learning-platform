@@ -87,7 +87,7 @@ programRequester.callApi({ program_id: route.params?.programId }).then(res => {
                     <h3>{{ selectLang(level?.title) }} </h3>
                     <div style="display: flex;flex-direction: column;width: 100%;justify-content: center;align-items: center;">
                         <div class="courses_container" style="margin-block: 2rem;">
-                            <CourseCard v-for="course in level?.courses" :course="course" search="" />
+                            <CourseCard v-for="course in level?.courses" :course="course" search="" :width="'18rem'"/>
                             <div style="width: 100%;;text-align: center;font-weight: bolder;font-size: 4rem;background: radial-gradient(var(--accent5),var(--accent1));background-clip: text;color: transparent;" v-if="level.courses.length == 0">{{ selectLang(translationModule.commingSoon) }}</div>
                         </div>
                         <div class="level-breaker" v-if="i != track?.levels?.length - 1"></div>
@@ -114,7 +114,7 @@ p {
 h3 {
     color: var(--accent3);
     text-align: center;
-    font-size: 2.25rem;
+    font-size: 2rem;
     line-height: 3.25rem;
     margin: 0;
     padding: 0;
@@ -159,10 +159,8 @@ h3 {
 .courses_container {
     display: flex;
     gap: 2rem;
-    padding-inline: 2rem;
     overflow-x: auto;
     padding-bottom: 1rem;
-    max-width: 100%;
 }
 
 .level {

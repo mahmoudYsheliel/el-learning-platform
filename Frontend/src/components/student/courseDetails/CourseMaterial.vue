@@ -16,28 +16,31 @@ const props =defineProps(['chapters'])
         :pt="{
           root: {
             style:
-              'margin-block:0.5rem; border:solid 2px var(--accent1); border-radius:1rem; padding:0.25rem',
+              'margin-block:0.5rem; border:solid 2px var(--accent1); border-radius:1rem; padding:0.25rem;',
           },
         }"
       >
-        <template #header style="display: flex; flex-direction: column">
+        <template #header style="display: flex; flex-direction: column;">
           <div>
             <h4>{{ selectLang(chapter.title) }}</h4>
             <div
               style="
                 display: flex;
-                justify-content: space-between;
-                gap: 2rem;
                 padding-left: 2rem;
+                gap: 2rem;
               "
             >
-              <h5>
+              <h5 v-if="chapter.lessonCount">
                 {{ chapter.lessonCount }}
                 {{ selectLang(translationModule.lessons) }}
               </h5>
-              <h5>
+              <h5 v-if="chapter.quizCount">
                 {{ chapter.quizCount }}
                 {{ selectLang(translationModule.quiz) }}
+              </h5>
+              <h5 v-if="chapter.activityCount">
+                {{ chapter.activityCount }}
+                {{ selectLang(translationModule.activity) }}
               </h5>
             </div>
           </div>

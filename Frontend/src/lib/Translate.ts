@@ -1,4 +1,3 @@
-import LearningStyles from "@/components/parent/childrenAnalysis/LearningStyles.vue";
 import { useLang } from "@/stores/token";
 
 interface Languages {
@@ -14,7 +13,7 @@ export function selectLang(obj: null | Languages, lan: string | null = null) {
   }
   if (selectedLang == "en") {
     return obj?.en;
-  } else if (selectedLang == "ar") {
+} else if (selectedLang == "ar") {
     return obj?.ar;
   }
   return "null";
@@ -250,6 +249,10 @@ export const translationModule = {
     en: "Confirm Password",
     ar: "تأكيد كلمة المرور",
   },
+  username:{
+    en:"User Name",
+    ar:'اسم المستخدم'
+  },
   enterEmail:{
     en:'Enter your email for the verification proccess,we will send 4 digits code to your email.',
     ar:'أدخل بريدك الإلكتروني لعملية التحقق، وسنرسل رمزًا مكونًا من 4 أرقام إلى أرقام'
@@ -435,8 +438,12 @@ ar:'لم يتم تحديد أي دور'
     ar: "دروس",
   },
   quiz: {
-    en: "Quizes",
+    en: "Quizzes",
     ar: "اختبار",
+  },
+  activity:{
+en:'Activity',
+ar:'نشاط'
   },
   courseInfo: {
     en: "Course Information",
@@ -576,7 +583,7 @@ ar:'لم يتم تحديد أي دور'
   },
   showAnswer: {
     en: "Show Answers",
-    ar: "اعرض اجابات",
+    ar: "اعرض الإجابات",
   },
   tryAgain: {
     en: "Try Again",
@@ -863,7 +870,7 @@ ar:'لم يتم تحديد أي دور'
     ar: 'الأدوات'
   },
   instructions: {
-    en: "instructions",
+    en: "Instructions",
     ar: "الخطوات"
   },
   results: {

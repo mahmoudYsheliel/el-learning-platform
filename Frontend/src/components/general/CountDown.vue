@@ -17,11 +17,11 @@ import { ref, onMounted, watchEffect } from "vue";
 const props = defineProps({
   width: {
     type: Number,
-    default: 125,
+    default: 75,
   },
   height: {
     type: Number,
-    default: 125,
+    default: 75,
   },
   totalTime: {
     type: Number,
@@ -29,7 +29,7 @@ const props = defineProps({
   },
   lineWidth: {
     type: Number,
-    default: 5,
+    default: 10,
   },
   strokeStyle: {
     type: String,

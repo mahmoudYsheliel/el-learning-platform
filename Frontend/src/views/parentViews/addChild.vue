@@ -155,7 +155,7 @@ function switchChild(id: string) {
         </div>
 
         <div class="element">
-          <p>{{ selectLang(translationModule.email) }}</p>
+          <p>{{ selectLang(translationModule.email) }} / {{ selectLang(translationModule.username) }}</p>
           <InputText v-model="email" />
         </div>
         <div class="element">

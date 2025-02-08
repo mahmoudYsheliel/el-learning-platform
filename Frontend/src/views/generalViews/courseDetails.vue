@@ -36,6 +36,7 @@ courseRequester.callApi({ course_id: route.params.courseId }).then((res) => {
       title: "",
       lessonCount: 0,
       quizCount: 0,
+      activityCount:0,
       materials: <any[]>[],
     };
     obj.title = chapter?.title;
@@ -53,6 +54,9 @@ courseRequester.callApi({ course_id: route.params.courseId }).then((res) => {
       }
       if (mat?.type === "Quiz") {
         obj.quizCount = obj.quizCount + 1;
+      }
+      if (mat?.type === "Activity" || mat?.type === "Project" || mat?.type === "Simulation") {
+        obj.activityCount = obj.activityCount + 1;
       }
     }
     chapters.value.push(obj);

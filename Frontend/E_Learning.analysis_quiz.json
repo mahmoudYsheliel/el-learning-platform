@@ -1,1847 +1,288 @@
 {
   "_id": {
-    "$oid": "676bc94a24fb5c2f612f2d42"
+    "$oid": "667c445898157d488d31854b"
   },
-  "id": "string",
+  "id": null,
   "title": {
-    "en": "Comprehensive Quiz for Children Aged 11 +:",
-    "ar": "اختبار شامل للأطفال من عمر 11 +  سنوات"
+    "en": "Exploring the Universe",
+    "ar": "استكشاف الكون"
   },
   "description": {
-    "en": "This comprehensive quiz is specifically designed for children aged 11 +. It provides an in-depth assessment of various aspects of a child's development including IQ levels and preferred learning styles.The quiz features a wide range of questions and scoring criteria that are carefully crafted to evaluate a child's unique cognitive abilities and learning preferences.",
-    "ar": "تم تصميم هذا الاختبار الشامل خصيصًا للأطفال الذين تتراوح أعمارهم بين 11 +  سنوات. فهو يوفر تقييمًا متعمقًا للجوانب المختلفة لنمو الطفل بما في ذلك مستويات الذكاء وأساليب التعلم المفضلة. يتميز الاختبار بمجموعة واسعة من الأسئلة ومعايير التسجيل التي تم تصميمها بعناية لتقييم القدرات المعرفية الفريدة للطفل وتفضيلات التعلم."
+    "en": "“Exploring the Universe” is an engaging and interactive course tailored for curious minds aged 6 to 9. This journey explores the wonders of space and the fascinating world of rockets, satellites, and space exploration. Through captivating lessons, hands-on activities, and exciting games from NASA Space Place, children will dive into the history of rocketry, the mechanics of launching satellites, and the role of space exploration in shaping our understanding of the cosmos. Designed to spark curiosity and inspire young learners, this course offers a fun and educational glimpse into potential aerospace careers.",
+    "ar": "“استكشاف الكون”  عبارة عن دورة تفاعلية جذابة مصممة خصيصًا للعقول الفضولية التي تتراوح أعمارهم بين 6 إلى 9 سنوات. تستكشف هذه الرحلة عجائب الفضاء والعالم الرائع للصواريخ والأقمار الصناعية واستكشاف الفضاء. من خلال الدروس الجذابة والأنشطة العملية والألعاب المثيرة من NASA Space Place، سوف يغوص الأطفال في تاريخ الصواريخ، وآليات إطلاق الأقمار الصناعية، ودور استكشاف الفضاء في تشكيل فهمنا للكون. تم تصميم هذه الدورة لإثارة الفضول وإلهام المتعلمين الصغار، وتقدم لمحة ممتعة وتعليمية عن المهن المحتملة في مجال الطيران."
   },
-  "sections": [
+  "chapters": [
     {
-      "info_name": "IQ",
-      "sub_sections": [
+      "title": {
+        "en": "Foundations of Rocketry",
+        "ar": "أسس الصواريخ"
+      },
+      "materials": [
         {
-          "info_name": "Similarities",
-          "questions": [
-            {
-              "id": 0,
-              "question": {
-                "en": " What is the similarity between Poetry and Painting?",
-                "ar": "ما هو التشابه بين الشعر والرسم؟"
-              },
-              "audio_link": null,
-              "image": "",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "Both are forms of artistic expression.",
-                    "ar": "كلاهما أشكال من التعبير الفني."
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "Both are sports",
-                    "ar": "كلاهما رياضة"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "Both are Animals",
-                    "ar": "كلاهما الحيوانات"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 1,
-              "question": {
-                "en": "What is the similarity between Fire and Electricity?",
-                "ar": "ما هو التشابه بين النار والكهرباء؟"
-              },
-              "audio_link": null,
-              "image": "",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "Both are sports",
-                    "ar": "كلاهما رياضة"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "Both are Food",
-                    "ar": "كلاهما طعام"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "Both can produce energy.",
-                    "ar": "كلاهما يمكن أن ينتج الطاقة."
-                  },
-                  "image": "",
-                  "score": 1
-                }
-              ]
-            },
-            {
-              "id": 2,
-              "question": {
-                "en": "What is the similarity between Doctor and Engineer?",
-                "ar": "ما هو التشابه بين الطبيب والمهندس؟"
-              },
-              "audio_link": null,
-              "image": "",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "Both are professions",
-                    "ar": "كلاهما من المهن"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "Both are tools",
-                    "ar": "كلاهما أدوات"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "Both are seasons",
-                    "ar": "كلاهما مواسم"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 3,
-              "question": {
-                "en": "What is the similarity between Justice and Equality?",
-                "ar": "ما هو التشابه بين العدل والمساواة؟"
-              },
-              "audio_link": null,
-              "image": "",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "Both are social values.",
-                    "ar": "كلاهما قيم الاجتماعية."
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "Both are laws",
-                    "ar": "كلاهما قوانين"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "Both are rights",
-                    "ar": "كلاهما حقوق"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 4,
-              "question": {
-                "en": "What is the similarity between Mountains and Deserts?",
-                "ar": "ما هو التشابه بين الجبال والصحاري؟"
-              },
-              "audio_link": null,
-              "image": "",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "Both are habitats",
-                    "ar": "كلاهما مسكن طبيعي"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "Both are natural landscapes",
-                    "ar": "كلاهما المناظر الطبيعية"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "Both are extreme climates.",
-                    "ar": "كلاهما المناخات القاسية."
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            }
-          ],
-          "last_question_number": 4
+          "Id": "667c327b98157d488d318539",
+          "order": 1,
+          "title": {
+            "en": "Welcome to Exploring the Universe",
+            "ar": "مرحبًا بك في استكشاف الكون"
+          },
+          "type": "Lesson"
         },
         {
-          "info_name": "Vocabulary",
-          "questions": [
-            {
-              "id": 0,
-              "question": {
-                "en": "This word means having a positive outlook even when things are hard.",
-                "ar": "تعني هذه الكلمة وجود نظرة إيجابية حتى عندما تكون الأمور صعبة."
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q2/Q1.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "Optimism",
-                    "ar": "التفاؤل"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "Happiness",
-                    "ar": "سعادة"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "Hope",
-                    "ar": "أمل"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "Confidence",
-                    "ar": "ثقة"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 1,
-              "question": {
-                "en": "This word refers to the ability to come up with new ideas or make things in new ways.",
-                "ar": "تشير هذه الكلمة إلى القدرة على التوصل إلى أفكار جديدة أو صنع الأشياء بطرق جديدة."
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q2/Q2.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "Invention",
-                    "ar": "اختراع"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "Creativity",
-                    "ar": "إِبداع"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "Innovation",
-                    "ar": "ابتكار"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "Expression",
-                    "ar": "تعبير"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 2,
-              "question": {
-                "en": "This word means taking care of duties or tasks that you are expected to do.",
-                "ar": "وتعني هذه الكلمة الاهتمام بالواجبات أو المهام التي يتوقع منك القيام بها."
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q2/Q3.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "Reliability",
-                    "ar": "مصداقية"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "Integrity",
-                    "ar": "نزاهة"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "Responsibility",
-                    "ar": "مسؤولية"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "Honor",
-                    "ar": "شرف"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 3,
-              "question": {
-                "en": "This word refers to the strong desire to achieve something.",
-                "ar": "تشير هذه الكلمة إلى الرغبة القوية في تحقيق شيء ما."
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q2/Q4.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "Effort",
-                    "ar": "جهد"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "Strength",
-                    "ar": "قوة"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "Determination",
-                    "ar": "عزيمة"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "Ambition",
-                    "ar": "طموح"
-                  },
-                  "image": "",
-                  "score": 1
-                }
-              ]
-            },
-            {
-              "id": 4,
-              "question": {
-                "en": "This word refers to being honest and sticking to strong moral principles.",
-                "ar": "وتشير هذه الكلمة إلى الصدق والالتزام بالمبادئ الأخلاقية القوية."
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q2/Q5.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "Trust",
-                    "ar": "ثقة"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "Respect",
-                    "ar": "احترام"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "Integrity",
-                    "ar": "نزاهة"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "Honesty",
-                    "ar": "الصدق"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            }
-          ],
-          "last_question_number": 0
+          "Id": "667c32b598157d488d31853a",
+          "order": 2,
+          "title": {
+            "en": "From Fireworks to Rockets",
+            "ar": "من الألعاب النارية إلى الصواريخ"
+          },
+          "type": "Lesson"
         },
         {
-          "info_name": "Visual Puzzles",
-          "questions": [
-            {
-              "id": 0,
-              "question": {
-                "en": "What parts should you use to make the following shape?",
-                "ar": "ما الأجزاء التي يجب أن تستخدمها لتكوين الشكل التالي؟"
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q3/Q1.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "6   ,   3   ,   5",
-                    "ar": "6   ,   3   ,   5"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "2   ,   3   ,   1",
-                    "ar": "2   ,   3   ,   1"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "3   ,   2   ,   6",
-                    "ar": "3   ,   2   ,   6"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "4   ,   1   ,   5",
-                    "ar": "4   ,   1   ,   5"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 4,
-                  "choice": {
-                    "en": "5   ,   2   ,   4",
-                    "ar": "5   ,   2   ,   4"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 5,
-                  "choice": {
-                    "en": "6   ,   2   ,   4",
-                    "ar": "6   ,   2   ,   4"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 1,
-              "question": {
-                "en": "What parts should you use to make the following shape?",
-                "ar": "ما الأجزاء التي يجب أن تستخدمها لتكوين الشكل التالي؟"
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q3/Q2.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "1   ,   6   ,   3",
-                    "ar": "1   ,   6   ,   3"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "2   ,   3   ,   1",
-                    "ar": "2   ,   3   ,   1"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "3   ,   4   ,   5",
-                    "ar": "3   ,   4   ,   5"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "4   ,   2   ,   5",
-                    "ar": "4   ,   2   ,   5"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 4,
-                  "choice": {
-                    "en": "5   ,   6   ,   1",
-                    "ar": "5   ,   6   ,   1"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 5,
-                  "choice": {
-                    "en": "6   ,   2   ,   1",
-                    "ar": "6   ,   2   ,   1"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 2,
-              "question": {
-                "en": "What parts should you use to make the following shape?",
-                "ar": "ما الأجزاء التي يجب أن تستخدمها لتكوين الشكل التالي؟"
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q3/Q3.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "1   ,   2   ,   4",
-                    "ar": "1   ,   2   ,   4"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "2   ,   6   ,   1",
-                    "ar": "2   ,   6   ,   1"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "3   ,   5   ,   6",
-                    "ar": "3   ,   5   ,   6"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "5   ,   2   ,   6",
-                    "ar": "5   ,   2   ,   6"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 4,
-                  "choice": {
-                    "en": "5   ,   3   ,   1",
-                    "ar": "5   ,   3   ,   1"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 5,
-                  "choice": {
-                    "en": "6   ,   1   ,   4",
-                    "ar": "6   ,   1   ,   4"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 3,
-              "question": {
-                "en": "What parts should you use to make the following shape?",
-                "ar": "ما الأجزاء التي يجب أن تستخدمها لتكوين الشكل التالي؟"
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q3/Q4.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "1   ,   2   ,   5",
-                    "ar": "1   ,   2   ,   5"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "2   ,   3   ,   4",
-                    "ar": "2   ,   3   ,   4"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "3   ,   6   ,   2",
-                    "ar": "3   ,   6   ,   2"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "4   ,   1   ,   5",
-                    "ar": "4   ,   1   ,   5"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 4,
-                  "choice": {
-                    "en": "5   ,   2   ,   6",
-                    "ar": "5   ,   2   ,   6"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 5,
-                  "choice": {
-                    "en": "6   ,   1   ,   3",
-                    "ar": "6   ,   1   ,   3"
-                  },
-                  "image": "",
-                  "score": 1
-                }
-              ]
-            },
-            {
-              "id": 4,
-              "question": {
-                "en": "What parts should you use to make the following shape?",
-                "ar": "ما الأجزاء التي يجب أن تستخدمها لتكوين الشكل التالي؟"
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q3/Q5.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "1   ,   2   ,   6",
-                    "ar": "1   ,   2   ,   6"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "2   ,   3   ,   4",
-                    "ar": "2   ,   3   ,   4"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "3   ,   2   ,   5",
-                    "ar": "3   ,   2   ,   5"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "4   ,   3   ,   5",
-                    "ar": "4   ,   3   ,   5"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 4,
-                  "choice": {
-                    "en": "5   ,   1   ,   2",
-                    "ar": "5   ,   1   ,   2"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 5,
-                  "choice": {
-                    "en": "6   ,   4   ,   3",
-                    "ar": "6   ,   4   ,   3"
-                  },
-                  "image": "",
-                  "score": 1
-                }
-              ]
-            }
-          ],
-          "last_question_number": 0
+          "Id": "667c3bb798157d488d318543",
+          "order": 3,
+          "title": {
+            "en": "Quiz: From Fireworks to Rockets",
+            "ar": "اختبار: من الألعاب النارية إلى الصواريخ"
+          },
+          "type": "Quiz"
         },
         {
-          "info_name": "Matrix Reasoning",
-          "questions": [
-            {
-              "id": 0,
-              "question": {
-                "en": "Which shape should be used to fill the blank?",
-                "ar": "ما الشكل الذي يجب استخدامه لملء الفراغ؟"
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q4/Q1.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "A",
-                    "ar": "A"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q1_C1.png",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "B",
-                    "ar": "B"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q1_C2.png",
-                  "score": 1
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "C",
-                    "ar": "C"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q1_C3.png",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "D",
-                    "ar": "D"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q1_C4.png",
-                  "score": 0
-                },
-                {
-                  "id": 4,
-                  "choice": {
-                    "en": "E",
-                    "ar": "E"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q1_C5.png",
-                  "score": 0
-                },
-                {
-                  "id": 5,
-                  "choice": {
-                    "en": "F",
-                    "ar": "F"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q1_C6.png",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 1,
-              "question": {
-                "en": "Which shape should be used to fill the blank?",
-                "ar": "ما الشكل الذي يجب استخدامه لملء الفراغ؟"
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q4/Q2.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "A",
-                    "ar": "A"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q2_C1.png",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "B",
-                    "ar": "B"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q2_C2.png",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "C",
-                    "ar": "C"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q2_C3.png",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "D",
-                    "ar": "D"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q2_C4.png",
-                  "score": 0
-                },
-                {
-                  "id": 4,
-                  "choice": {
-                    "en": "E",
-                    "ar": "E"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q2_C5.png",
-                  "score": 0
-                },
-                {
-                  "id": 5,
-                  "choice": {
-                    "en": "F",
-                    "ar": "F"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q2_C6.png",
-                  "score": 1
-                }
-              ]
-            },
-            {
-              "id": 2,
-              "question": {
-                "en": "Which shape should be used to fill the blank?",
-                "ar": "ما الشكل الذي يجب استخدامه لملء الفراغ؟"
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q4/Q3.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "A",
-                    "ar": "A"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q3_C1.png",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "B",
-                    "ar": "B"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q3_C2.png",
-                  "score": 1
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "C",
-                    "ar": "C"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q3_C3.png",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "D",
-                    "ar": "D"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q3_C4.png",
-                  "score": 0
-                },
-                {
-                  "id": 4,
-                  "choice": {
-                    "en": "E",
-                    "ar": "E"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q3_C5.png",
-                  "score": 0
-                },
-                {
-                  "id": 5,
-                  "choice": {
-                    "en": "F",
-                    "ar": "F"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q3_C6.png",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 3,
-              "question": {
-                "en": "Which shape should be used to fill the blank?",
-                "ar": "ما الشكل الذي يجب استخدامه لملء الفراغ؟"
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q4/Q4.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "A",
-                    "ar": "A"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q4_C1.png",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "B",
-                    "ar": "B"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q4_C2.png",
-                  "score": 1
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "C",
-                    "ar": "C"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q4_C3.png",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "D",
-                    "ar": "D"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q4_C4.png",
-                  "score": 0
-                },
-                {
-                  "id": 4,
-                  "choice": {
-                    "en": "E",
-                    "ar": "E"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q4_C5.png",
-                  "score": 0
-                },
-                {
-                  "id": 5,
-                  "choice": {
-                    "en": "F",
-                    "ar": "F"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q4_C6.png",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 4,
-              "question": {
-                "en": "Which shape should be used to fill the blank?",
-                "ar": "ما الشكل الذي يجب استخدامه لملء الفراغ؟"
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q4/Q5.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "A",
-                    "ar": "A"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q5_C1.png",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "B",
-                    "ar": "B"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q5_C2.png",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "C",
-                    "ar": "C"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q5_C3.png",
-                  "score": 1
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "D",
-                    "ar": "D"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q5_C4.png",
-                  "score": 0
-                },
-                {
-                  "id": 4,
-                  "choice": {
-                    "en": "E",
-                    "ar": "E"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q5_C5.png",
-                  "score": 0
-                },
-                {
-                  "id": 5,
-                  "choice": {
-                    "en": "F",
-                    "ar": "F"
-                  },
-                  "image": "/AnalysisQuiz3/Q4/Q5_C6.png",
-                  "score": 0
-                }
-              ]
-            }
-          ],
-          "last_question_number": 4
+          "Id": "667c32ea98157d488d31853b",
+          "order": 4,
+          "title": {
+            "en": "Rockets? What’s that?",
+            "ar": "ما هي الصواريخ؟"
+          },
+          "type": "Lesson"
         },
         {
-          "info_name": "Figure Weights",
-          "questions": [
-            {
-              "id": 0,
-              "question": {
-                "en": "Which figure should be used to fill the blank?",
-                "ar": "ما الشكل الذي يجب استخدامه لملء الفراغ؟"
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q5/Q1.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "A",
-                    "ar": "A"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q1_C1.png",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "B",
-                    "ar": "B"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q1_C2.png",
-                  "score": 1
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "C",
-                    "ar": "C"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q1_C3.png",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "D",
-                    "ar": "D"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q1_C4.png",
-                  "score": 0
-                },
-                {
-                  "id": 4,
-                  "choice": {
-                    "en": "E",
-                    "ar": "E"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q1_C5.png",
-                  "score": 0
-                },
-                {
-                  "id": 5,
-                  "choice": {
-                    "en": "F",
-                    "ar": "F"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q1_C6.png",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 1,
-              "question": {
-                "en": "Which figure should be used to fill the blank?",
-                "ar": "ما الشكل الذي يجب استخدامه لملء الفراغ؟"
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q5/Q2.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "A",
-                    "ar": "A"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q2_C1.png",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "B",
-                    "ar": "B"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q2_C2.png",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "C",
-                    "ar": "C"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q2_C3.png",
-                  "score": 1
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "D",
-                    "ar": "D"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q2_C4.png",
-                  "score": 0
-                },
-                {
-                  "id": 4,
-                  "choice": {
-                    "en": "E",
-                    "ar": "E"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q2_C5.png",
-                  "score": 0
-                },
-                {
-                  "id": 5,
-                  "choice": {
-                    "en": "F",
-                    "ar": "F"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q2_C6.png",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 2,
-              "question": {
-                "en": "Which figure should be used to fill the blank?",
-                "ar": "ما الشكل الذي يجب استخدامه لملء الفراغ؟"
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q5/Q3.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "A",
-                    "ar": "A"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q3_C1.png",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "B",
-                    "ar": "B"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q3_C2.png",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "C",
-                    "ar": "C"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q3_C3.png",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "D",
-                    "ar": "D"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q3_C4.png",
-                  "score": 0
-                },
-                {
-                  "id": 4,
-                  "choice": {
-                    "en": "E",
-                    "ar": "E"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q3_C5.png",
-                  "score": 1
-                },
-                {
-                  "id": 5,
-                  "choice": {
-                    "en": "F",
-                    "ar": "F"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q3_C6.png",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 3,
-              "question": {
-                "en": "Which figure should be used to fill the blank?",
-                "ar": "ما الشكل الذي يجب استخدامه لملء الفراغ؟"
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q5/Q4.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "A",
-                    "ar": "A"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q4_C1.png",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "B",
-                    "ar": "B"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q4_C2.png",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "C",
-                    "ar": "C"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q4_C3.png",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "D",
-                    "ar": "D"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q4_C4.png",
-                  "score": 1
-                },
-                {
-                  "id": 4,
-                  "choice": {
-                    "en": "E",
-                    "ar": "E"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q4_C5.png",
-                  "score": 0
-                },
-                {
-                  "id": 5,
-                  "choice": {
-                    "en": "F",
-                    "ar": "F"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q4_C6.png",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 4,
-              "question": {
-                "en": "Which figure should be used to fill the blank?",
-                "ar": "ما الشكل الذي يجب استخدامه لملء الفراغ؟"
-              },
-              "audio_link": null,
-              "image": "/AnalysisQuiz3/Q5/Q5.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "A",
-                    "ar": "A"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q5_C1.png",
-                  "score": 1
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "B",
-                    "ar": "B"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q5_C2.png",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "C",
-                    "ar": "C"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q5_C3.png",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "D",
-                    "ar": "D"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q5_C4.png",
-                  "score": 0
-                },
-                {
-                  "id": 4,
-                  "choice": {
-                    "en": "E",
-                    "ar": "E"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q5_C5.png",
-                  "score": 0
-                },
-                {
-                  "id": 5,
-                  "choice": {
-                    "en": "F",
-                    "ar": "F"
-                  },
-                  "image": "/AnalysisQuiz3/Q5/Q5_C6.png",
-                  "score": 0
-                }
-              ]
-            }
-          ],
-          "last_question_number": 4
+          "Id": "6799d04fd8f49e80feb4a92c",
+          "order": 0,
+          "title": {
+            "en": "Quiz: Rockets? What's that?",
+            "ar": "اختبار: ما هي الصواريخ؟"
+          },
+          "type": "Quiz"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "The Power of Satellites",
+        "ar": "قوة الأقمار الصناعية"
+      },
+      "materials": [
+        {
+          "Id": "667c332498157d488d31853c",
+          "order": 6,
+          "title": {
+            "en": "Satellites? What’s that?",
+            "ar": "ما هي الأقمار الصناعية؟"
+          },
+          "type": "Lesson"
         },
         {
-          "info_name": "Digit Span",
-          "questions": [
-            {
-              "id": 0,
-              "question": {
-                "en": "Recall the sequence in the same order.",
-                "ar": "أذكر التسلسل بنفس الترتيب."
-              },
-              "audio_link": "/AnalysisQuiz3/Q6/2_Backward/Q1.wav",
-              "image": "",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "5 , 8 , 1 , 7 , 3 , 2 , 4",
-                    "ar": "5 , 8 , 1 , 7 , 3 , 2 , 4"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "4 , 2 , 3 , 7 , 1 , 8 , 5",
-                    "ar": "4 , 2 , 3 , 7 , 1 , 8 , 5"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "1 , 2 , 3 , 4 , 5 , 7 , 8",
-                    "ar": "1 , 2 , 3 , 4 , 5 , 7 , 8"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "8 , 7 , 5 , 4 , 3 , 2 , 1",
-                    "ar": "8 , 7 , 5 , 4 , 3 , 2 , 1"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 1,
-              "question": {
-                "en": "Recall the sequence in reverse order.",
-                "ar": "أذكر التسلسل بترتيب عكسي."
-              },
-              "audio_link": "/AnalysisQuiz3/Q6/1_Forward/Q1.wav",
-              "image": "",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "2 , 4 , 9 , 6 , 3 , 1 , 8",
-                    "ar": "2 , 4 , 9 , 6 , 3 , 1 , 8"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "8 , 1 , 3 , 6 , 9 , 4 , 2",
-                    "ar": "8 , 1 , 3 , 6 , 9 , 4 , 2"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "1 , 2 , 3 , 4 , 6 , 8 , 9",
-                    "ar": "1 , 2 , 3 , 4 , 6 , 8 , 9"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "9 , 8 , 6 , 4 , 3 , 2 , 1",
-                    "ar": "9 , 8 , 6 , 4 , 3 , 2 , 1"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 2,
-              "question": {
-                "en": "Recall the sequence in reverse order.",
-                "ar": "أذكر التسلسل بترتيب عكسي."
-              },
-              "audio_link": "/AnalysisQuiz3/Q6/2_Backward/Q1.wav",
-              "image": "",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "5 , 8 , 1 , 7 , 3 , 2 , 4",
-                    "ar": "5 , 8 , 1 , 7 , 3 , 2 , 4"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "4 , 2 , 3 , 7 , 1 , 8 , 5",
-                    "ar": "4 , 2 , 3 , 7 , 1 , 8 , 5"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "1 , 2 , 3 , 4 , 5 , 7 , 8",
-                    "ar": "1 , 2 , 3 , 4 , 5 , 7 , 8"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "8 , 7 , 5 , 4 , 3 , 2 , 1",
-                    "ar": "8 , 7 , 5 , 4 , 3 , 2 , 1"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 3,
-              "question": {
-                "en": "Recall the sequence in ascending numerical order.",
-                "ar": "أذكر التسلسل بترتيب عددي تصاعدي."
-              },
-              "audio_link": "/AnalysisQuiz3/Q6/3_Sequence/Q1.wav",
-              "image": "",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "8, 3, 6, 1, 5, 9, 2",
-                    "ar": "8, 3, 6, 1, 5, 9, 2"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "4 , 2 , 3 , 7 , 1 , 8 , 5",
-                    "ar": "4 , 2 , 3 , 7 , 1 , 8 , 5"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "1 , 2 , 3 , 4 , 5 , 7 , 8",
-                    "ar": "1 , 2 , 3 , 4 , 5 , 7 , 8"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "8 , 7 , 5 , 4 , 3 , 2 , 1",
-                    "ar": "8 , 7 , 5 , 4 , 3 , 2 , 1"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 4,
-              "question": {
-                "en": "Recall the sequence in descending numerical order.",
-                "ar": "أذكر التسلسل بترتيب عددي تنازلي."
-              },
-              "audio_link": "/AnalysisQuiz3/Q6/3_Sequence/Q2.wav",
-              "image": "",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "2 , 5 , 7 , 4 , 1 , 8 , 3",
-                    "ar": "2 , 5 , 7 , 4 , 1 , 8 , 3"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "3 , 8 , 1 , 4 , 7 , 5 , 2",
-                    "ar": "3 , 8 , 1 , 4 , 7 , 5 , 2"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 2,
-                  "choice": {
-                    "en": "1 , 2 , 3 , 4 , 5 , 7 , 8",
-                    "ar": "1 , 2 , 3 , 4 , 5 , 7 , 8"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 3,
-                  "choice": {
-                    "en": "8 , 7 , 5 , 4 , 3 , 2 , 1",
-                    "ar": "8 , 7 , 5 , 4 , 3 , 2 , 1"
-                  },
-                  "image": "",
-                  "score": 1
-                }
-              ]
-            }
-          ],
-          "last_question_number": 4
+          "Id": "66d0d11841fc53edd8cfb5fb",
+          "order": 7,
+          "title": {
+            "en": "Game: CubeSat Builder",
+            "ar": "لعبة: CubeSat Builder"
+          },
+          "type": "Simulation"
         },
         {
-          "info_name": "Symbol Search",
-          "questions": [
-            {
-              "id": 0,
-              "question": {
-                "en": "Rmember the following symbols _____ Is any of the two symbols from before are in this row",
-                "ar": "تذكر الرموز التالية _____ هل أي من الرمزين السابقين موجود في هذا الصف"
-              },
-              "audio_link": "",
-              "image": "/AnalysisQuiz3/Q7/Q1_1.png,/AnalysisQuiz3/Q7/Q1_2.png,/AnalysisQuiz3/Q7/Q1_C1.png,/AnalysisQuiz3/Q7/Q1_C2.png,/AnalysisQuiz3/Q7/Q1_C3.png,/AnalysisQuiz3/Q7/Q1_C4.png,/AnalysisQuiz3/Q7/Q1_C5.png,/AnalysisQuiz3/Q7/Q1_C6.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "Yes",
-                    "ar": "نعم"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "No",
-                    "ar": "لا"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 1,
-              "question": {
-                "en": "Rmember the following symbols _____ Is any of the two symbols from before are in this row",
-                "ar": "تذكر الرموز التالية _____ هل أي من الرمزين السابقين موجود في هذا الصف"
-              },
-              "audio_link": "",
-              "image": "/AnalysisQuiz3/Q7/Q2_1.png,/AnalysisQuiz3/Q7/Q2_2.png,/AnalysisQuiz3/Q7/Q2_C1.png,/AnalysisQuiz3/Q7/Q2_C2.png,/AnalysisQuiz3/Q7/Q2_C3.png,/AnalysisQuiz3/Q7/Q2_C4.png,/AnalysisQuiz3/Q7/Q2_C5.png,/AnalysisQuiz3/Q7/Q2_C6.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "Yes",
-                    "ar": "نعم"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "No",
-                    "ar": "لا"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 2,
-              "question": {
-                "en": "Rmember the following symbols _____ Is any of the two symbols from before are in this row",
-                "ar": "تذكر الرموز التالية _____ هل أي من الرمزين السابقين موجود في هذا الصف"
-              },
-              "audio_link": "",
-              "image": "/AnalysisQuiz3/Q7/Q3_1.png,/AnalysisQuiz3/Q7/Q3_2.png,/AnalysisQuiz3/Q7/Q3_C1.png,/AnalysisQuiz3/Q7/Q3_C2.png,/AnalysisQuiz3/Q7/Q3_C3.png,/AnalysisQuiz3/Q7/Q3_C4.png,/AnalysisQuiz3/Q7/Q3_C5.png,/AnalysisQuiz3/Q7/Q3_C6.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "Yes",
-                    "ar": "نعم"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "No",
-                    "ar": "لا"
-                  },
-                  "image": "",
-                  "score": 1
-                }
-              ]
-            },
-            {
-              "id": 3,
-              "question": {
-                "en": "Rmember the following symbols _____ Is any of the two symbols from before are in this row",
-                "ar": "تذكر الرموز التالية _____ هل أي من الرمزين السابقين موجود في هذا الصف"
-              },
-              "audio_link": "",
-              "image": "/AnalysisQuiz3/Q7/Q4_1.png,/AnalysisQuiz3/Q7/Q4_2.png,/AnalysisQuiz3/Q7/Q4_C1.png,/AnalysisQuiz3/Q7/Q4_C2.png,/AnalysisQuiz3/Q7/Q4_C3.png,/AnalysisQuiz3/Q7/Q4_C4.png,/AnalysisQuiz3/Q7/Q4_C5.png,/AnalysisQuiz3/Q7/Q4_C6.png,/AnalysisQuiz3/Q7/Q4_C7.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "Yes",
-                    "ar": "نعم"
-                  },
-                  "image": "",
-                  "score": 1
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "No",
-                    "ar": "لا"
-                  },
-                  "image": "",
-                  "score": 0
-                }
-              ]
-            },
-            {
-              "id": 4,
-              "question": {
-                "en": "Rmember the following symbols _____ Is any of the two symbols from before are in this row",
-                "ar": "تذكر الرموز التالية _____ هل أي من الرمزين السابقين موجود في هذا الصف"
-              },
-              "audio_link": "",
-              "image": "/AnalysisQuiz3/Q7/Q5_1.png,/AnalysisQuiz3/Q7/Q5_2.png,/AnalysisQuiz3/Q7/Q5_C1.png,/AnalysisQuiz3/Q7/Q5_C2.png,/AnalysisQuiz3/Q7/Q5_C3.png,/AnalysisQuiz3/Q7/Q5_C4.png,/AnalysisQuiz3/Q7/Q5_C5.png,/AnalysisQuiz3/Q7/Q5_C6.png,/AnalysisQuiz3/Q7/Q5_C7.png",
-              "choices": [
-                {
-                  "id": 0,
-                  "choice": {
-                    "en": "Yes",
-                    "ar": "نعم"
-                  },
-                  "image": "",
-                  "score": 0
-                },
-                {
-                  "id": 1,
-                  "choice": {
-                    "en": "No",
-                    "ar": "لا"
-                  },
-                  "image": "",
-                  "score": 1
-                }
-              ]
-            }
-          ],
-          "last_question_number": 4
+          "Id": "66d0d19b41fc53edd8cfb5fc",
+          "order": 8,
+          "title": {
+            "en": "Simulation: Gravity and Orbits",
+            "ar": "محاكاة: الجاذبية والمدارات"
+          },
+          "type": "Simulation"
+        },
+        {
+          "Id": "667c3bf898157d488d318544",
+          "order": 9,
+          "title": {
+            "en": "Quiz: Satellites? What’s that?",
+            "ar": "اختبار: ما هي الأقمار الصناعية؟"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "667c335a98157d488d31853d",
+          "order": 10,
+          "title": {
+            "en": "Let’s Launch Satellites!",
+            "ar": "لنطلق أقمار صناعية!"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66d0d1e241fc53edd8cfb5fd",
+          "order": 11,
+          "title": {
+            "en": "Game: Relay",
+            "ar": "لعبة: ريلاي"
+          },
+          "type": "Simulation"
+        },
+        {
+          "Id": "667c3c1e98157d488d318545",
+          "order": 12,
+          "title": {
+            "en": "Quiz: Let’s Launch Satellites!",
+            "ar": "اختبار: لنطلق أقمار صناعية!"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "667c363198157d488d31853e",
+          "order": 13,
+          "title": {
+            "en": "Why Satellites?",
+            "ar": "لماذا نستخدم الأقمار الصناعية؟"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "667c3c3f98157d488d318546",
+          "order": 14,
+          "title": {
+            "en": "Quiz: Why Satellites?",
+            "ar": "اختبار: لماذا نستخدم الأقمار الصناعية؟"
+          },
+          "type": "Quiz"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Space Exploration Journey",
+        "ar": "رحلة استكشاف الفضاء"
+      },
+      "materials": [
+        {
+          "Id": "667c369a98157d488d31853f",
+          "order": 1,
+          "title": {
+            "en": "The Way to Mars",
+            "ar": "الطريق إلى المريخ"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66d0d24241fc53edd8cfb5fe",
+          "order": 2,
+          "title": {
+            "en": "Game: DSN Uplink-Downlink",
+            "ar": "لعبة: DSN Uplink-Downlink"
+          },
+          "type": "Simulation"
+        },
+        {
+          "Id": "667c3c6698157d488d318547",
+          "order": 3,
+          "title": {
+            "en": "Quiz: The Way to Mars",
+            "ar": "اختبار: الطريق إلى المريخ"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "667c36c798157d488d318540",
+          "order": 4,
+          "title": {
+            "en": "Future of Robotic Exploration",
+            "ar": "مستقبل الاستكشاف الروبوتي"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "66d0d28a41fc53edd8cfb5ff",
+          "order": 5,
+          "title": {
+            "en": "Game: Mars Rover",
+            "ar": "لعبة: روفر المريخ"
+          },
+          "type": "Simulation"
+        },
+        {
+          "Id": "667c3d2d98157d488d318549",
+          "order": 6,
+          "title": {
+            "en": "Quiz: Future of Robotic Exploration",
+            "ar": "اختبار: مستقبل الاستكشاف الروبوتي"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "667c36fd98157d488d318541",
+          "order": 7,
+          "title": {
+            "en": "Space Study Using Telescopes",
+            "ar": "دراسة الفضاء باستخدام التلسكوبات"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "667c3c9c98157d488d318548",
+          "order": 8,
+          "title": {
+            "en": "Quiz: Space Study Using Telescopes",
+            "ar": "اختبار: دراسة الفضاء باستخدام التلسكوبات"
+          },
+          "type": "Quiz"
         }
       ]
     }
   ],
-  "duration": 1800,
-  "min_age": 11,
-  "max_age": 100,
-  "course_title_follow": "start"
+  "price": 200,
+  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1735198797/ds-min_v0qkdh.png",
+  "categories": [
+    {
+      "Id": "667c3e7798157d488d31854a",
+      "title": {
+        "en": "Engineering",
+        "ar": "الهندسة"
+      }
+    }
+  ],
+  "objectives": [
+    {
+      "en": "Discover the history of rocketry: Trace the origins of rocket technology and its milestones.",
+      "ar": "استكشاف تاريخ الصواريخ: تتبع أصول تقنية الصواريخ ومعالمها التاريخية."
+    },
+    {
+      "en": "Understand rocket mechanics: Learn about rocket components, Newton’s third law, and multistage rockets.",
+      "ar": "فهم ميكانيكا الصواريخ: التعرف على مكونات الصواريخ وقانون نيوتن الثالث والصواريخ متعددة المراحل."
+    },
+    {
+      "en": "Explore satellites: Identify what satellites are, their components, and how they operate in orbit.",
+      "ar": "التعرف على الأقمار الصناعية: معرفة الأقمار الصناعية ومكوناتها، وكيف تعمل في المدار حوال الأرض."
+    },
+    {
+      "en": "Comprehend rocket launches: Understand the stages of launching satellites and factors influencing their trajectory.",
+      "ar": "فهم إطلاق الصواريخ: فهم مراحل إطلاق الأقمار الصناعية والعوامل التي تؤثر على مسارها."
+    },
+    {
+      "en": "Appreciate satellite applications: Discover the role of satellites in weather monitoring, communication, and scientific research.",
+      "ar": "تقدير تطبيقات الأقمار الصناعية: اكتشاف دور الأقمار في مراقبة الطقس والاتصالات والبحث العلمي."
+    },
+    {
+      "en": "Learn about space missions: Explore Mars missions, robotic exploration, and the future of space exploration.",
+      "ar": "التعرف على مهمات الفضاء: استكشاف مهمات المريخ والاستكشاف الروبوتي ومستقبل استكشاف الفضاء."
+    },
+    {
+      "en": "Understand telescopes in space: Differentiate between ground-based and space telescopes and their roles in studying the universe.",
+      "ar": "التعرف على التلسكوبات الفضائية: التفريق بين التلسكوبات الأرضية والفضائية ودورها في دراسة الكون."
+    },
+    {
+      "en": "Engage in interactive activities: Participate in NASA games like building CubeSats, Mars rovers, and understanding space communication.",
+      "ar": "المشاركة في أنشطة تفاعلية: المشاركة في ألعاب NASA مثل بناء CubeSats واستكشاف المريخ وفهم الاتصالات الفضائية."
+    }
+  ],
+  "min_age": 6,
+  "max_age": 9,
+  "duration": 3,
+  "number_of_enrollments": 0,
+  "is_locked": false
 }
