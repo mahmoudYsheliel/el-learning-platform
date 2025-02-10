@@ -337,6 +337,7 @@ function extractTime(dateTimeString: string) {
 <style scoped>
 main {
   margin-top: 3rem;
+  padding-inline: 2rem;
 }
 .header {
   display: flex;

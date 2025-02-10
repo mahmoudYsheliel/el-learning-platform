@@ -22,10 +22,6 @@ defineProps(["title", "price", "categories", "min_age", "max_age", "duration"]);
         <p>{{ duration }} {{ selectLang(translationModule.days) }}</p>
       </div>
       <div class="wrapper">
-        <h4>{{ selectLang(translationModule.age) }}<i class="pi pi-angle-double-up"></i></h4>
-        <p>{{ min_age }} - {{ max_age }} {{ selectLang(translationModule.years) }}</p>
-      </div>
-      <div class="wrapper">
         <h4>{{ selectLang(translationModule.price) }}<i class="pi pi-dollar"></i></h4>
         <p>{{ price }} L.E</p>
       </div>
@@ -35,10 +31,9 @@ defineProps(["title", "price", "categories", "min_age", "max_age", "duration"]);
 
 <style scoped>
 main {
-  width: 80%;
+  max-width: 80%;
 }
 .container {
-  width: 100%;
   padding: 1.5rem;
   border-radius: 8px;
   color: var(--text);

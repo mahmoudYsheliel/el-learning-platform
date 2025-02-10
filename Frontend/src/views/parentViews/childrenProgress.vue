@@ -37,9 +37,7 @@ const selectedChild = ref(null)
   gap: 2rem;
 }
 .wrapper{
-    margin-top: 3rem;
-    width: 75%;
-    margin-inline: auto;
+    margin-block: 4rem;
 }
 h3 {
   color: var(--accent1);

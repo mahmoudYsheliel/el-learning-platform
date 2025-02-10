@@ -32,7 +32,7 @@ const selectedChild = ref(null);
   min-height: 100vh;
 }
 .wrapper {
-  padding: 2rem;
+  margin-block: 4rem;
 }
 .children {
   padding: 2rem;

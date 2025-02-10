@@ -113,8 +113,7 @@ function printComponent() {
 }
 
 .wrapper {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-block: 4rem;
 }
 
 .print_only {

@@ -5,8 +5,6 @@ import { selectLang, translationModule } from "@/lib/Translate";
 import { computed } from "vue";
 import 'primeicons/primeicons.css'
 import Chip from "primevue/chip";
-import type { backgroundClip } from "html2canvas/dist/types/css/property-descriptors/background-clip";
-
 
 const prop = defineProps(
   {
@@ -21,7 +19,7 @@ const prop = defineProps(
     width: {
       type: String,
       default: '22rem'
-    }
+    },
   });
 const router = useRouter()
 const route = useRoute()

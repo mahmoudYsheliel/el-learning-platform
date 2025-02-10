@@ -41,7 +41,7 @@ const childId=computed(()=>{
       <p>{{ selectLang(selectedCourse?.lesson?.description) }}</p>
 <div class="frame-wrapper">
     <iframe
-        :src="selectedCourse?.lesson?.source"
+        :src="selectedCourse?.lesson?.source?.replace('view?usp=sharing','preview')?.replace('view?usp=drive_link','preview')"
         frameborder="0"
         sandbox="allow-scripts allow-same-origin"
         allowfullscreen
@@ -83,9 +83,10 @@ h1 {
   width: 100%;
 }
 iframe {
-  width: 50%;
+  width: 100%;
   aspect-ratio: 16/9;
   border-radius: 8px;
+  margin-bottom: 2rem;
 }
 .frame-wrapper{
     display: flex;

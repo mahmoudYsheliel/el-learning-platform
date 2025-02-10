@@ -32,7 +32,9 @@ const search = ref('')
       />
     <div class="courses-container">
       <div class="courseCard" v-for="course in courses">
-        <div class="container" v-if="selectLang(course?.title)?.toLowerCase().includes(search.toLowerCase())">
+        <div @click="
+              router.push(`/freeLesson/${course?.id}/${course?.lesson?.Id}`)
+            " class="container" v-if="selectLang(course?.title)?.toLowerCase().includes(search.toLowerCase())">
           <img :src="course?.image" alt="" />
           <h2>{{ selectLang(course?.title) }}</h2>
           <Button

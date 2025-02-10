@@ -8,7 +8,8 @@ import { usePersonalInfo, useToken } from "@/stores/token";
 import { useRouter } from "vue-router";
 import { selectLang, translationModule } from "@/lib/Translate";
 
-defineEmits(["selectedChild"]);
+
+const emits = defineEmits(["selectedChild"]);
 
 const children = ref<any[]>([]);
 const selectedChild = ref<any>(null);
@@ -32,13 +33,22 @@ groupRequester.callApi().then((res) => {
               (r: any) => r.id == childObj.child_group
             )?.title;
             children.value.push(childObj);
-          }
-        });
-      }
-    }
-  });
-});
 
+            if (! selectedChild.value) {
+              selectedChild.value = children.value[0]
+              emits('selectedChild', selectedChild.value?.id)
+            }
+          }
+
+        });
+
+      }
+
+    }
+
+  })
+
+})
 const router = useRouter();
 
 function switchChild(id: string) {
@@ -74,22 +84,11 @@ function switchChild(id: string) {
 <template>
   <main>
     <div class="container">
-      <Dropdown
-        @change="$emit('selectedChild', selectedChild?.id)"
-        v-model="selectedChild"
-        :options="children"
-        optionLabel="email"
-        :placeholder="selectLang(translationModule.selectChild)"
-        class="dropDown"
-      />
+      <Dropdown @change="$emit('selectedChild', selectedChild?.id)" v-model="selectedChild" :options="children" optionLabel="email" :placeholder="selectLang(translationModule.selectChild)" class="dropDown" />
       <div v-if="selectedChild" class="selectedChildInfo">
         <div class="info">
           <div class="childImage">
-            <img
-              v-if="selectedChild?.image != ''"
-              :src="selectedChild?.image"
-              alt=""
-            />
+            <img v-if="selectedChild?.image != ''" :src="selectedChild?.image" alt="" />
             <i v-else class="pi pi-user"></i>
           </div>
           <div class="childInfo">
@@ -100,20 +99,16 @@ function switchChild(id: string) {
               {{ selectedChild?.email }}
             </p>
             <h3>
-          {{ selectLang(selectedChild?.child_group) }}
-        </h3>
-            
+              {{ selectLang(selectedChild?.child_group) }}
+            </h3>
+
           </div>
         </div>
-        <Button
-              :label="selectLang(translationModule.switchToChild)"
-              @click="
-                () => {
-                  switchChild(selectedChild.id);
-                }
-              "
-            />
-       
+        <Button :label="selectLang(translationModule.switchToChild)" @click="() => {
+            switchChild(selectedChild.id);
+          }
+          " />
+
       </div>
     </div>
   </main>
@@ -128,10 +123,12 @@ function switchChild(id: string) {
   padding-inline: 2rem;
   margin-inline: auto;
 }
+
 .dropDown {
   width: 75%;
 }
-.childImage > * {
+
+.childImage>* {
   width: 5rem;
   height: 5rem;
   font-size: 5rem;
@@ -142,11 +139,13 @@ function switchChild(id: string) {
   border: var(--accent1) solid 0.1rem;
   background-color: var(--choiceBackgroundColor);
 }
+
 .info {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+
 .selectedChildInfo {
   display: flex;
   flex-wrap: wrap;
@@ -158,6 +157,7 @@ function switchChild(id: string) {
   background-color: var(--choiceBackgroundColor);
   border-radius: 1rem;
 }
+
 h3 {
   border-radius: 0.25rem;
   line-height: 1.25rem;
@@ -168,11 +168,13 @@ h3 {
   color: var(--text);
   border: 2px solid var(--accent1);
 }
+
 .childInfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 button {
   color: var(--primary);
   background-color: var(--accent1);
@@ -182,15 +184,19 @@ button {
   justify-content: center;
   align-items: center;
 }
+
 button:hover {
   color: var(--accent1);
   background-color: var(--primary);
   transition-duration: 0.5s;
 }
-@media print{
-  button, .dropDown{
+
+@media print {
+
+  button,
+  .dropDown {
     display: none;
   }
-  
+
 }
 </style>
