@@ -19,21 +19,21 @@ const props = defineProps([
 ]);
 
 defineEmits(["next", "answer", 'timeOver', 'finish']);
-const questionOrder = computed(()=>{return props.selectedQuestionOrder})
+const questionOrder = computed(() => { return props.selectedQuestionOrder })
 
 const images = ref()
 setTimeout(() => { images.value = props.question?.image?.split(',') }, 1)
 watch(questionOrder, (oldQ, new_q) => {
- 
-    images.value = []
-    setTimeout(() => { images.value = props.question?.image?.split(',') }, 1)
-    stage.value = 'show image'
-    if (props.questionType != 'Symbol Search')
-      return
-    setTimeout(() => {
-      stage.value = "show options";
-    }, 3000);
-  
+
+  images.value = []
+  setTimeout(() => { images.value = props.question?.image?.split(',') }, 1)
+  stage.value = 'show image'
+  if (props.questionType != 'Symbol Search')
+    return
+  setTimeout(() => {
+    stage.value = "show options";
+  }, 3000);
+
 })
 
 
@@ -41,15 +41,7 @@ function scrollTop() {
   window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 }
 
-const viewEmoji = ref(false)
-let emojiToView = ref(-1)
-let offset = 0
-function viewEmojiFunc() {
-  viewEmoji.value = true
-  emojiToView.value = Math.floor(Math.random() * 7)
-  setTimeout(() => { emojiToView.value = -1 }, 2500)
-  offset = Math.random() * 80 + 10
-}
+
 
 
 const questions = computed(() => { return parseStringWithInversion(selectLang(props.question?.question)) })
@@ -87,7 +79,7 @@ const stage = ref("show image"); // or show options
 
 
           <div class="image_container">
-            <img  :class="{ image2: (images?.length > 1) }" v-for="image in images" :src="image" alt="" v-if="question?.image != undefined" />
+            <img :class="{ image2: (images?.length > 1) }" v-for="image in images" :src="image" alt="" v-if="question?.image != undefined" />
           </div>
         </div>
 
@@ -125,31 +117,21 @@ const stage = ref("show image"); // or show options
     </div>
 
     <div class="button-container">
-      <Button :label="selectLang(translationModule.next)" v-if="!(questionType == 'Symbol Search' && stage == 'show image')&& lang.getLang=='en'" @click="() => {
-        viewEmojiFunc()
+      <Button :label="selectLang(translationModule.next)" v-if="!(questionType == 'Symbol Search' && stage == 'show image') && lang.getLang == 'en'" @click="() => {
+
         scrollTop();
 
         if (!showNext) { $emit('finish') } else { $emit('next'); }
       }
-        "
-        icon="pi pi-arrow-right" iconPos="right"
-         />
-        <Button :label="selectLang(translationModule.next)" v-if="!(questionType == 'Symbol Search' && stage == 'show image' )&& lang.getLang=='ar'" @click="() => {
-        viewEmojiFunc()
+        " icon="pi pi-arrow-right" iconPos="right" />
+      <Button :label="selectLang(translationModule.next)" v-if="!(questionType == 'Symbol Search' && stage == 'show image') && lang.getLang == 'ar'" @click="() => {
+
         scrollTop();
 
         if (!showNext) { $emit('finish') } else { $emit('next'); }
       }
-        "
-        icon="pi pi-arrow-left" iconPos="right" />
+        " icon="pi pi-arrow-left" iconPos="right" />
     </div>
-    <span :style="{ left: (offset.toString() + 'vw') }" v-if="emojiToView == 0" class="emoj">&#128512</span>
-    <span :style="{ left: (offset.toString() + 'vw') }" v-if="emojiToView == 1" class="emoj">&#128513</span>
-    <span :style="{ left: (offset.toString() + 'vw') }" v-if="emojiToView == 2" class="emoj">&#128521</span>
-    <span :style="{ left: (offset.toString() + 'vw') }" v-if="emojiToView == 3" class="emoj">&#128526</span>
-    <span :style="{ left: (offset.toString() + 'vw') }" v-if="emojiToView == 4" class="emoj">&#128525</span>
-    <span :style="{ left: (offset.toString() + 'vw') }" v-if="emojiToView == 5" class="emoj">&#128536</span>
-    <span :style="{ left: (offset.toString() + 'vw') }" v-if="emojiToView == 6" class="emoj">&#129395</span>
   </div>
 </template>
 
@@ -207,12 +189,13 @@ img {
 .image2 {
   width: 38%;
   aspect-ratio: 1/1;
-  object-fit:cover;
+  object-fit: cover;
 }
-.image_choice{
+
+.image_choice {
   width: 40%;
   aspect-ratio: 1.6;
-  object-fit:contain;
+  object-fit: contain;
 }
 
 .container {
@@ -310,8 +293,9 @@ p {
   gap: 1rem;
   flex-direction: column;
 }
-span{
-  font-weight:600;
+
+span {
+  font-weight: 600;
   color: var(--header);
 }
 

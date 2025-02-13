@@ -138,6 +138,27 @@ const router = createRouter({
       component: () => import("@/views/studentViews/childCourses.vue"),
       meta: { requredAuth: true, userType: "Child" },
     },
+
+    {
+      path: "/enrollmentRequests",
+      name: "enrollmentRequests",
+      component: () => import("@/views/studentViews/viewStudentEnrollmentRequests.vue"),
+      meta: { requredAuth: true, userType: "Child" },
+    },
+    {
+      path: "/studentProgress",
+      name: "studentProgress",
+      component: () => import("@/views/studentViews/viewStudentProgress.vue"),
+      meta: { requredAuth: true, userType: "Child" },
+    },
+
+    {
+      path: "/studentAnalysis",
+      name: "studentAnalysis",
+      component: () => import("@/views/studentViews/viewStudentAnalysis.vue"),
+      meta: { requredAuth: true, userType: "Child" },
+    },
+
     {
       path: "/childNotifications",
       name: "childNotifications",

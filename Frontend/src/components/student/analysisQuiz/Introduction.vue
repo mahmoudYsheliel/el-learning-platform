@@ -10,18 +10,11 @@ import Options from "@/components/general/Options.vue";
   <div class="container">
     <Options/>
     <h1>{{ selectLang(title) }}</h1>
-    <h3>{{ selectLang(description) }}</h3>
-    <h3>
-      {{ selectLang(translationModule.durationOfTest) }}
+    <p v-html="selectLang(description)" />
 
-      <strong>
-        {{ Math.floor(duration / 60) }}:<strong v-if="duration % 60 < 10"
-          >0</strong
-        >{{ duration % 60 }} {{ selectLang(translationModule.minutes) }}</strong
-      >
-    </h3>
     <div class="button-container">
         <Button
+        style="direction: ltr;"
       :label=selectLang(translationModule.startAnalysisQuiz)
       @click="
         () => {
@@ -40,6 +33,9 @@ import Options from "@/components/general/Options.vue";
   margin-inline: auto;
   margin-bottom: 5rem
   
+}
+p{
+  font-weight: 200;
 }
 
 h1 {

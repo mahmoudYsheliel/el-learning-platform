@@ -7,12 +7,12 @@ import PiChart from "../parentProfile/PiChart.vue";
 
 const prop = defineProps(["selectedChildId"]);
 
-const enrollments = ref();
+const enrollments = ref([]);
 const date = ref<number[]>([]);
 const object = computed(() => {
   let childObject = [];
   date.value=[]
-  enrollments.value=null
+  enrollments.value=[]
   const childEnrollmentsRequester = new HttpRequester("get_child_enrollments");
   if (prop.selectedChildId) {
     childEnrollmentsRequester

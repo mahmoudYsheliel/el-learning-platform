@@ -111,18 +111,45 @@ export const items = ((router: any) => {
     items = [
       {
         label: selectLang(translationModule.myCourses),
+        icon:'pi pi-shopping-bag',
         command: () => {
           router.push("/childCourses");
         },
       },
       {
+        label: selectLang(translationModule.studentProgress),
+        icon: "pi pi-chart-line",
+        command: () => {
+          router.push("/studentProgress");
+        },
+      },
+      {
+        label: selectLang(translationModule.studentAnalusis),
+        icon: "pi pi-id-card",
+        command: () => {
+          router.push("/studentAnalysis");
+        },
+      },
+
+      {
+        label: selectLang(translationModule.enrollmentRequests),
+        icon: "pi pi-check-circle",
+        command: () => {
+          router.push("/enrollmentRequests");
+        },
+      },
+
+
+      {
         label: selectLang(translationModule.notifications),
+        icon: "pi pi-bell",
         command: () => {
           router.push("/childNotifications");
         },
       },
       {
         label: selectLang(translationModule.chats),
+        icon:'pi pi-question-circle',
         command: () => {
           router.push("/childChats/0");
         },
@@ -239,18 +266,41 @@ export const pages = [
   { name: translationModule.home, to: "/#Home" },
   { name: translationModule.about, to: "/#About" },
   { name: translationModule.contact, to: "/#contact" },
-  //{ name: "Schools", to: "/" },
-  //{ name: "FQAs", to: "/" },
-  //{ name: "Privacy Policy", to: "/" },
-  //{ name: "Terms and Conditions", to: "/" },
+
 ];
 
 export const childSidebar = [
+
+
+
+
+  
+
   {
-    label: translationModule.home,
+    label: translationModule.myCourses,
     name: "home",
     to: "childCourses",
-    icon: "pi pi-home",
+    icon: "pi pi-shopping-bag",
+  },
+
+  {
+    label: translationModule.studentProgress,
+    name:'progress',
+    icon: "pi pi-chart-line",
+    to: "studentProgress"
+  },
+  {
+    label: translationModule.studentAnalusis,
+    name:'analysis',
+    icon: "pi pi-id-card",
+    to:"studentAnalysis"
+  },
+
+  {
+    label: translationModule.enrollmentRequests,
+    name:'requests',
+    icon: "pi pi-check-circle",
+    to: "enrollmentRequests"
   },
   {
     label: translationModule.notifications,

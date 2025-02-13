@@ -34,13 +34,13 @@ function getMaxObject(arr: any[]) {
     }
     return tem
 }
-watch(prop, async () => {
+function getAnalysis() {
     const childnAlysisRequester = new HttpRequester("get_analysis");
     IQResult.value = null
     learningStyle.value = null
     recommendTrack.value = null
     if (prop.childId) {
-        await childnAlysisRequester.callApi({ student_id: prop.childId }).then((res) => {
+        childnAlysisRequester.callApi({ student_id: prop.childId }).then((res) => {
             if (res?.success) {
                 analysis.value = res?.data?.analysis_quiz;
                 IQSection.value = analysis.value?.section_results?.find((section: any) => { return section?.section == 'IQ' })?.sub_sections
@@ -69,8 +69,12 @@ watch(prop, async () => {
         emits('sections', [section1.value, section2.value, section3.value, section4.value, section5.value])
     }
 
+}
+watch(prop, () => {
+    getAnalysis()
 });
 
+getAnalysis()
 
 function getIqDescription(score: number) {
 
@@ -98,7 +102,7 @@ function fetchComment(subset: subsets, score: number) {
 }
 const track_image = computed(() => {
     for (let i = 0; i < track_images.length; i++) {
-        if (recommendTrack.value?.name == track_images[i].name && info.getInfo?.userType==track_images[i].type) {
+        if (recommendTrack.value?.name == track_images[i].name && info.getInfo?.userType == track_images[i].type) {
             return track_images[i].path
         }
     }
@@ -356,24 +360,28 @@ p {
         width: 95% !important;
         margin-inline: auto !important;
     }
+
     .new-page {
         page-break-before: always;
         /* Force content to start on a new page */
     }
 }
+
 @media (max-width:750px) {
     img {
         display: none;
     }
-    .scores{
+
+    .scores {
         display: flex !important;
-        flex-wrap:wrap !important;
+        flex-wrap: wrap !important;
         justify-content: space-between;
         align-items: center;
     }
 }
+
 @media screen and (max-width:1200px) {
-    .summary{
+    .summary {
         display: grid;
         grid-template-columns: auto !important;
         grid-template-rows: 1fr auto !important;

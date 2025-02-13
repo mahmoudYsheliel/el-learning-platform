@@ -3,14 +3,7 @@ import { ref, computed, watch } from "vue";
 import { HttpRequester } from "@/lib/APICaller";
 import { IQScoresMap } from "@/lib/Modules";
 import { selectLang, translationModule } from "@/lib/Translate";
-import knob from 'primevue/knob';
-import Accordion from "primevue/accordion";
-import AccordionTab from "primevue/accordiontab";
-import Big5Traits from "../childrenAnalysis/Big5Traits.vue";
-import Personalities from "../childrenAnalysis/Personalities.vue";
-import LearningStyles from "../childrenAnalysis/LearningStyles.vue";
 import IQChart from "../childrenAnalysis/IQChart.vue";
-import Summary from "../childrenAnalysis/Summary.vue";
 const prop = defineProps(["childId"]);
 import { track_images } from "@/lib/Modules";
 import { usePersonalInfo } from "@/stores/token";
@@ -21,16 +14,16 @@ const IQResult = ref()
 const learningStyle = ref()
 const recommendTrack = ref()
 const IQSection = ref()
-function getMaxObject(arr:any[]){
-    let tem=arr[0]
-    for (let i=0;i<arr.length;i++){
-        if (arr[i]?.score > tem?.score){
-            tem=arr[i]
-        }
+function getMaxObject(arr: any[]) {
+  let tem = arr[0]
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]?.score > tem?.score) {
+      tem = arr[i]
     }
-    return tem
+  }
+  return tem
 }
-watch(prop, () => {
+function getAnalysis() {
   const childnAlysisRequester = new HttpRequester("get_analysis");
   IQResult.value = null
   learningStyle.value = null
@@ -47,15 +40,15 @@ watch(prop, () => {
         }
         IQResult.value = Math.round(IQResult.value / IQSection.value.length)
         const bestLearningStyle = getMaxObject(analysis.value?.learning_styles_results)
-                console.log(bestLearningStyle)
-                new HttpRequester('get_learning_style').callApi({ id: bestLearningStyle?.learning_style_id }).then(res => {
-                    learningStyle.value = res?.data?.learning_style
-                })
+        console.log(bestLearningStyle)
+        new HttpRequester('get_learning_style').callApi({ id: bestLearningStyle?.learning_style_id }).then(res => {
+          learningStyle.value = res?.data?.learning_style
+        })
 
-                const bestTrack = getMaxObject(analysis.value?.tracks_recommendation_results)
-                new HttpRequester('get_tracks_recommendation').callApi({ id: bestTrack?.tracks_recommendation_id }).then(res => {
-                    recommendTrack.value = res?.data?.track_recommendation
-                })
+        const bestTrack = getMaxObject(analysis.value?.tracks_recommendation_results)
+        new HttpRequester('get_tracks_recommendation').callApi({ id: bestTrack?.tracks_recommendation_id }).then(res => {
+          recommendTrack.value = res?.data?.track_recommendation
+        })
 
       } else {
         analysis.value = null;
@@ -63,9 +56,13 @@ watch(prop, () => {
     });
   }
 
+
+}
+watch(prop, () => {
+  getAnalysis()
 });
 
-
+getAnalysis()
 
 function getIqDescription(score: number) {
 
@@ -82,17 +79,16 @@ function getIqDescription(score: number) {
   return { en: '', ar: '' }
 }
 
-const track_image =ref()
- watch((recommendTrack),() => {
-  console.log(1)
-    for (let i = 0; i < track_images.length; i++) {
-       if (recommendTrack.value?.name == track_images[i].name && info.getInfo?.gender==track_images[i].type) {
-          track_image.value= track_images[i].path
-          return
-        }
+const track_image = ref()
+watch((recommendTrack), () => {
+  for (let i = 0; i < track_images.length; i++) {
+    if (recommendTrack.value?.name == track_images[i].name && info.getInfo?.gender == track_images[i].type) {
+      track_image.value = track_images[i].path
+      return
     }
-    
-    track_image.value = ''
+  }
+
+  track_image.value = ''
 })
 </script>
 
@@ -130,29 +126,29 @@ const track_image =ref()
 
 
     <div style="display: flex; justify-content: start;align-items: start;">
-      <div class="field" >
-      <h1>{{ selectLang(translationModule.recommendTracks) }}</h1>
-      <h2>{{ selectLang(recommendTrack?.title) }}</h2>
+      <div class="field">
+        <h1>{{ selectLang(translationModule.recommendTracks) }}</h1>
+        <h2>{{ selectLang(recommendTrack?.title) }}</h2>
 
-      <div class="labeled_text">
-        <h3>{{ selectLang(translationModule.aboutTrack) }}</h3>
-        <p>{{ selectLang(recommendTrack?.description) }}</p>
+        <div class="labeled_text">
+          <h3>{{ selectLang(translationModule.aboutTrack) }}</h3>
+          <p>{{ selectLang(recommendTrack?.description) }}</p>
+        </div>
+
+        <div class="labeled_text">
+          <h3>{{ selectLang(translationModule.guidingPath) }}</h3>
+          <p>{{ selectLang(recommendTrack?.advice) }}</p>
+        </div>
+
+        <div class="labeled_text">
+          <h3>{{ selectLang(translationModule.keySkills) }}</h3>
+          <p v-for="skill in recommendTrack?.key_skills">{{ selectLang(skill) }}</p>
+        </div>
+
+
+
       </div>
-
-      <div class="labeled_text">
-        <h3>{{ selectLang(translationModule.guidingPath) }}</h3>
-        <p>{{ selectLang(recommendTrack?.advice) }}</p>
-      </div>
-
-      <div class="labeled_text">
-        <h3>{{ selectLang(translationModule.keySkills) }}</h3>
-        <p v-for="skill in recommendTrack?.key_skills">{{ selectLang(skill) }}</p>
-      </div>
-
-
-
-    </div>
-    <img :src="track_image"  style="margin-top: 8rem" alt="">
+      <img :src="track_image" style="margin-top: 8rem" alt="">
     </div>
   </div>
 

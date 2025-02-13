@@ -3,9 +3,19 @@ import Dialog from "primevue/dialog";
 import { selectLang, translationModule } from "@/lib/Translate";
 import { useRouter } from "vue-router";
 import Button from "primevue/button";
+import { usePersonalInfo } from "@/stores/token";
 
+const info = usePersonalInfo()
 const router = useRouter();
 const prop = defineProps(["showDialog", "cost"]);
+
+
+function go_to_enrollments_page(){
+  if (info.getInfo?.userType =='Child')
+    router.push('/enrollmentRequests')
+  if (info.getInfo?.userType =='Parent')
+    router.push('/parentHome')
+}
 </script>
 
 <template>
@@ -30,7 +40,7 @@ const prop = defineProps(["showDialog", "cost"]);
         <Button
           :label="selectLang(translationModule.enrollmentRequests)"
           style="width: 20rem"
-          @click="router.push('/parentHome')"
+          @click="go_to_enrollments_page"
         />
       </div>
     </template>

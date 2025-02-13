@@ -281,6 +281,14 @@ export const translationModule = {
     en: "Children Progress",
     ar: "تطور الأطفال",
   },
+  studentProgress:{
+    en:'Student Progress',
+    ar:'تقدم الطالب'
+  },
+  studentAnalusis:{
+    en:'Student Analysis',
+    ar:'تحليل الطالب'
+  },
   childCourses: {
     en: "Children Courses",
     ar: "دورات الاطفال",

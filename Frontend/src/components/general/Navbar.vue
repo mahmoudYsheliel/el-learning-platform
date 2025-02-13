@@ -86,7 +86,7 @@ function setLang(selectedLang: string | undefined) {
       <div style="display: flex;flex-direction: column; align-items: center; gap: 2rem; padding: 2rem;">
 
 
-        <img style="width: 100%; height: 12rem; border-radius: 0.5rem;" src="/public/images/quizTime.jpeg" alt="" />
+        <img style="width: 100%; height: 12rem; border-radius: 0.5rem;" src="/public/images/quizTime.png" alt="" />
         <Button style="font-size: 1.25rem;" :label="selectLang(translationModule.startAnalysisQuiz)" @click="router.push(`/analysisQuiz/${analysisQuizId}`)" />
       </div>
     </Dialog>
