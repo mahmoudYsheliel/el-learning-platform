@@ -268,7 +268,7 @@ h1 {
   margin: 0;
   padding: 0;
   width: 100%;
-  line-height: 2rem;
+  line-height: 2.4rem;
   margin-bottom: 2rem;
 }
 

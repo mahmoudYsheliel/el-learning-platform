@@ -281,13 +281,13 @@ export const translationModule = {
     en: "Children Progress",
     ar: "تطور الأطفال",
   },
-  studentProgress:{
-    en:'Student Progress',
-    ar:'تقدم الطالب'
+  studentProgress: {
+    en: 'Student Progress',
+    ar: 'تقدم الطالب'
   },
-  studentAnalusis:{
-    en:'Student Analysis',
-    ar:'تحليل الطالب'
+  studentAnalusis: {
+    en: 'Student Analysis',
+    ar: 'تحليل الطالب'
   },
   childCourses: {
     en: "Children Courses",
@@ -441,6 +441,10 @@ export const translationModule = {
     en: 'No Role Selected',
     ar: 'لم يتم تحديد أي دور'
   },
+  phoneNumberError: {
+    en: 'Phone Number is Incorrect',
+    ar: 'رقم الهاتف غير صحيح'
+  },
   lessons: {
     en: "Lessons",
     ar: "دروس",
@@ -530,8 +534,8 @@ export const translationModule = {
     ar: "عمل رائع",
   },
   logWithParent: {
-    en: "Log in With Your Parent Account For Analysis Details",
-    ar: "قم بتسجيل الدخول باستخدام حساب الوالدين الخاص بك للحصول على تفاصيل التحليل",
+    en: "See Results of The Analysis Quiz",
+    ar: "انظر إلى نتائج اختبار التحليل",
   },
   returnHome: {
     en: "Return Home",
@@ -943,7 +947,7 @@ export const translationModule = {
                 Based on the test results, we have crafted a personalized learning pathway to help your child\
                 excel in STEM education. Our goal is to support your child’s academic journey with tailored\
                 strategies and courses designed to fit their unique profile.",
-    ar: "مرحبًا بك في تقرير اختبار التتبع المخصص لك. ويقدم هذا التقرير الشامل\
+    ar: "مرحبًا بك في تقرير اختبار Trace المخصص لك. ويقدم هذا التقرير الشامل\
                 رؤى تفصيلية حول نقاط القوة المعرفية لدى طفلك وأسلوب التعلم ومجالات النمو.\
                 واستنادًا إلى نتائج الاختبار، قمنا بتصميم مسار تعليمي مخصص لمساعدة طفلك\
                 التفوق في تعليم العلوم والتكنولوجيا والهندسة والرياضيات (STEM). هدفنا هو دعم الرحلة الأكاديمية لطفلك من خلال برامج مخصصة\
@@ -951,16 +955,16 @@ export const translationModule = {
   },
   purpose: {
     en: 'Purpose of the Trace Test',
-    ar: 'الغرض من اختبار التتبع'
+    ar: 'الغرض من اختبار Trace'
   },
   analysisReportPurpose: {
     en: "The Trace Test evaluates key cognitive abilities that are critical for success in STEM fields. By\
                 assessing areas such as verbal reasoning, visual-spatial skills, working memory, and\
                 processing speed, the Trace Test helps identify your child’s strengths and potential areas for\
                 growth. This allows us to create a learning pathway that is both challenging and supportive.",
-    ar: "يقوم اختبار التتبع بتقييم القدرات المعرفية الأساسية التي تعتبر ضرورية للنجاح في مجالات العلوم والتكنولوجيا والهندسة والرياضيات. بواسطة\
+    ar: "يقوم اختبار Trace بتقييم القدرات المعرفية الأساسية التي تعتبر ضرورية للنجاح في مجالات العلوم والتكنولوجيا والهندسة والرياضيات. بواسطة\
                 تقييم مجالات مثل التفكير اللفظي، والمهارات البصرية المكانية، والذاكرة العاملة، و\
-                سرعة المعالجة، يساعد اختبار التتبع في تحديد نقاط القوة لدى طفلك والمجالات المحتملة لها\
+                سرعة المعالجة، يساعد اختبار Trace في تحديد نقاط القوة لدى طفلك والمجالات المحتملة لها\
                 نمو. يتيح لنا ذلك إنشاء مسار تعليمي يتسم بالتحدي والداعم في نفس الوقت."
   },
   detailed: {
@@ -1032,7 +1036,40 @@ export const translationModule = {
   personalInfo: {
     en: 'Personal Information',
     ar: 'معلومات شخصية'
-  }
+  },
+  cognitiveStrengthTitle: {
+    en: 'Cognitive Strengths and Areas for Growth',
+    ar: 'نقاط القوة المعرفية ومجالات النمو'
+  },
+  cognitiveStrengthDesc: {
+    en: 'Your child exhibits strong abilities in verbal reasoning, abstract thinking, and visual-spatial\
+                    processing. These skills are key for success in STEM subjects like robotics, engineering, and\
+                    computer science. Areas to focus on for growth include working memory and processing\
+                    speed. Enhancing these skills will help your child handle complex tasks more efficiently.',
+    ar: 'يُظهر طفلك قدرات قوية في التفكير اللفظي والتفكير المجرد والبصري المكاني\
+                    يعالج.هذه المهارات هي مفتاح النجاح في موضوعات العلوم والتكنولوجيا والهندسة والرياضيات مثل الروبوتات والهندسة وغيرها\
+                    علوم الكمبيوتر.تشمل المجالات التي يجب التركيز عليها لتحقيق النمو الذاكرة العاملة والمعالجة\
+                    سرعة.إن تعزيز هذه المهارات سيساعد طفلك على التعامل مع المهام المعقدة بشكل أكثر كفاءة.'
+  },
+   shortTermGoalsDesc: {
+    en: 'Short-term goals help your child build essential skills step by step. These goals focus on improving problem-solving, critical thinking, and hands-on experience in STEM subjects. Encouraging consistent practice and setting achievable milestones will enhance their learning progress and confidence.',
+    ar: 'تساعد الأهداف قصيرة المدى طفلك على بناء المهارات الأساسية خطوة بخطوة. تركز هذه الأهداف على تحسين حل المشكلات والتفكير النقدي والخبرة العملية في موضوعات العلوم والتكنولوجيا والهندسة والرياضيات. إن تشجيع الممارسة المستمرة وتحديد معالم قابلة للتحقيق سيعزز تقدمهم في التعلم وثقتهم بأنفسهم.'
+},
+shortTermGoalsTitle:{
+en:'Short Term Learning Pathway',
+ar:'مسار التعلم على المدى القصير'
+},
+longTermLearningPathwayTitle: {
+  en:'Long Term Learning Pathway',
+  ar:'مسار التعلم على المدى الطويل'
+},
+longTermLearningPathwayDesc: {
+  en: 'Engage in progressively challenging projects in robotics and engineering. Encourage participation in STEM competitions, workshops, and collaborative projects. These activities will help solidify your child’s skills and passion for STEM.',
+  ar: 'شارك في مشاريع متدرجة التحدي في الروبوتات والهندسة. شجع على المشاركة في المسابقات وورش العمل والمشاريع التعاونية في مجالات العلوم والتكنولوجيا والهندسة والرياضيات. ستساعد هذه الأنشطة على ترسيخ مهارات طفلك وشغفه بهذه المجالات.'
+}
+
+
+
 
 
 

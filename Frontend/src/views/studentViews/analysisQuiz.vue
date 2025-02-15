@@ -135,7 +135,7 @@ function setLang(selectedLang: string | undefined) {
 
         <Button
           :label="selectLang(translationModule.results)"
-          @click="router.push('/viewChildAnalysis')"
+          @click="router.push('/studentAnalysis')"
         />
       </div>
     </Dialog>

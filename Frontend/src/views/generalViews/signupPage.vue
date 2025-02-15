@@ -43,6 +43,9 @@ function signup() {
   else if (role.value != 'Child' && role.value != 'Parent') {
     worningMessage.value = selectLang(translationModule.noRoleSelected) ?? '';
   }
+  else if (!phone.value.startsWith('01') || phone.value.length !=11) {
+    worningMessage.value = selectLang(translationModule.phoneNumberError) ?? '';
+  }
   else {
     let data = {
       user: {

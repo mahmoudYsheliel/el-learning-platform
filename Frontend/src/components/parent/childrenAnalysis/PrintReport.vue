@@ -5,6 +5,7 @@ import { selectLang, translationModule } from '@/lib/Translate';
 import { ref, watch, onMounted, computed } from "vue";
 import { HttpRequester } from "@/lib/APICaller";
 import { IQScoresMap } from "@/lib/Modules";
+import IQNames from '@/lib/IQNames.json'
 import knob from 'primevue/knob';
 import ProgressBar from 'primevue/progressbar';
 const prop = defineProps(["childId"]);
@@ -96,10 +97,11 @@ function fetchComment(subset: subsets, score: number) {
         return ''
     for (let i = 0; i < IQDescruption[subset].length; i++) {
         if (IQDescruption[subset][i].max_score >= score && IQDescruption[subset][i].min_score <= score) {
-            return IQDescruption[subset][i].comment.en
+            return selectLang(IQDescruption[subset][i].comment)
         }
     }
 }
+
 const track_image = computed(() => {
     for (let i = 0; i < track_images.length; i++) {
         if (recommendTrack.value?.name == track_images[i].name && info.getInfo?.userType == track_images[i].type) {
@@ -125,15 +127,6 @@ const track_image = computed(() => {
             </div>
         </div>
 
-
-
-        <!-- <div class="field">
-            <h2>About Trace: Personalized STEM Education</h2>
-            <p>Trace is dedicated to delivering personalized STEM education experiences for K-12 students.
-                By understanding each child's unique cognitive profile, learning preferences, and
-                personality traits, Trace helps unlock their full potential. We believe that personalized
-                education fosters curiosity, engagement, and a lifelong passion for learning.</p>
-        </div> -->
         <div class="section" ref="section2">
             <div class="field">
                 <h2>{{ selectLang(translationModule.detailed) }}</h2>
@@ -159,7 +152,7 @@ const track_image = computed(() => {
             <div v-for="section in IQSection.slice(0, 2)">
                 <div style="display: flex;align-items: center;justify-content: space-between; flex-direction: column;">
                     <div class="field">
-                        <h2>{{ section.name }} ({{ section.total_score }}/160):</h2>
+                        <h2>{{ selectLang(IQNames[section.name as subsets]) }} ({{ section.total_score }}/160):</h2>
                         <p>{{ fetchComment(section.name, section.total_score) }}</p>
                     </div>
                     <ProgressBar :value="(section.total_score - 40) / 120 * 100" style="display: block;width: 80%;margin-top: 1rem;height: 1rem;" :size="12" />
@@ -175,7 +168,7 @@ const track_image = computed(() => {
             <div v-for="section in IQSection.slice(2, IQSection.length)">
                 <div style="display: flex;align-items: center;justify-content: space-between; flex-direction: column;">
                     <div class="field">
-                        <h2>{{ section.name }} ({{ section.total_score }}/160):</h2>
+                        <h2>{{ selectLang(IQNames[section.name as subsets]) }} ({{ section.total_score }}/160):</h2>
                         <p>{{ fetchComment(section.name, section.total_score) }}</p>
                     </div>
                     <ProgressBar :value="(section.total_score - 40) / 120 * 100" style="display: block;width: 80%;margin-top: 1rem;height: 1rem;" :size="12" />
@@ -187,25 +180,18 @@ const track_image = computed(() => {
         <div class="section" ref="section4">
 
             <div class="field">
-                <h2>Cognitive Strengths and Areas for Growth</h2>
-                <p>Your child exhibits strong abilities in verbal reasoning, abstract thinking, and visual-spatial
-                    processing. These skills are key for success in STEM subjects like robotics, engineering, and
-                    computer science. Areas to focus on for growth include working memory and processing
-                    speed. Enhancing these skills will help your child handle complex tasks more efficiently.</p>
+                <h2>{{ selectLang(translationModule.cognitiveStrengthTitle) }}</h2>
+                <p>{{ selectLang(translationModule.cognitiveStrengthDesc) }}</p>
             </div>
 
             <div class="field">
-                <h2>Short-Term Goals</h2>
-                <p>Focus on improving working memory and processing speed through exercises such as
-                    memory games, puzzles, and timed challenges. Incorporate visual learning strategies to
-                    reinforce new concepts.</p>
+                <h2>{{ selectLang(translationModule.shortTermGoalsTitle) }}</h2>
+                <p>{{ selectLang(translationModule.shortTermGoalsDesc) }}</p>
             </div>
 
             <div class="field">
-                <h2>Long-Term Learning Pathway</h2>
-                <p>Engage in progressively challenging projects in robotics and engineering. Encourage
-                    participation in STEM competitions, workshops, and collaborative projects. These activities
-                    will help solidify your child’s skills and passion for STEM.</p>
+                <h2>{{ selectLang(translationModule.longTermLearningPathwayTitle) }}</h2>
+                <p>{{ selectLang(translationModule.longTermLearningPathwayDesc) }}</p>
             </div>
 
 
