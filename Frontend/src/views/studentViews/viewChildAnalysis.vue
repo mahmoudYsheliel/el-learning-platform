@@ -82,15 +82,16 @@ async function printComponent(sections: HTMLElement[]) {
         <div class="report_header" ref="file">
             <img src="/public/images/logo4.png" alt="">
             <div class="report_title">
-                <h2 style="color: black;">IQ SCORE REPORT</h2>
-                <h4 style="color: var(--accent1);">TRACE EDUCATION COMPANY</h4>
+                <h2 style="color: black;">{{ selectLang(translationModule.IQReport) }}</h2>
+                <h4 style="color: var(--accent1);">{{ selectLang(translationModule.traceEdu) }}</h4>
             </div>
         </div>
         <div class="wrapper ">
             <PrintReport class="print_only" :child-id="selectedChild" @sections="(sections) => { printComponent(sections) }" />
         </div>
-        <div style="display: flex; justify-content: end;">
-            <Button :label="selectLang(translationModule.returnHome)" icon="pi pi-home" @click="router.push('/')"/>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <p style="font-weight: bolder;font-size: 1.25rem;">{{ selectLang(translationModule.startTraceJourney) }}</p>
+            <Button  :label="selectLang(translationModule.startJourney)"   @click="router.push('/childCourses')"/>
   
         </div>
     </div>
@@ -98,6 +99,7 @@ async function printComponent(sections: HTMLElement[]) {
 </template>
 
 <style scoped>
+
 .container {
     margin-inline: auto;
     padding: 1.5rem;

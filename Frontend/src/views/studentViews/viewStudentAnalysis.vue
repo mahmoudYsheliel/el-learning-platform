@@ -31,8 +31,8 @@ function printComponent() {
                 <div class="report_header ">
                     <img src="/public/images/logo4.png" alt="">
                     <div class="report_title">
-                        <h2 style="color: black;">IQ SCORE REPORT</h2>
-                        <h4 style="color: var(--accent1);">TRACE EDUCATION COMPANY</h4>
+                        <h2 style="color: black;">{{ selectLang(translationModule.IQReport) }}</h2>
+                        <h4 style="color: var(--accent1);"></h4>
                     </div>
                 </div>
             </div>
@@ -43,14 +43,20 @@ function printComponent() {
 
                     <PrintReport class="print_only" :child-id="selectedChild" />
                     <ChildrenAnalysis class="no_print" :child-id="selectedChild" />
-                    <Button class="no_print" @click="router.push('/childCourses')" :label="selectLang(translationModule.clickToView)"  style="margin: 2rem 6rem;background-image: linear-gradient(to bottom, var(--accent2), var(--accent5));"/>
-                    <div class="button-container no_print">
-                        <Button  style="width: 6rem;" v-if="selectedChild" @click="printComponent" :label="selectLang(translationModule.print)" />
+
+                    <div class="button-container no_print" style="margin: 2rem;">
+                        <p style="font-weight: bolder;font-size: 1.25rem;">{{ selectLang(translationModule.startTraceJourney) }}</p>
+
+                        <Button class="no_print" @click="router.push('/childCourses')" :label="selectLang(translationModule.clickToView)" style="background-image: linear-gradient(to bottom, var(--accent2), var(--accent5));" />
                     </div>
-                    
+                    <div class="button-container no_print" style="justify-content: end;">  
+
+                        <Button style="width: 6rem;" v-if="selectedChild" @click="printComponent" :label="selectLang(translationModule.print)" />
+                    </div>
+
                 </div>
 
-               
+
 
             </div>
         </div>
@@ -65,9 +71,10 @@ function printComponent() {
 
 <style scoped>
 .button-container {
-    padding-inline: 4rem;
+    padding-inline: 2rem;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container {

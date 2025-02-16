@@ -6,7 +6,7 @@ import SelectChild from '@/components/parent/parentProfile/SelectChild.vue'
 import ChildrenAnalysis from '@/components/parent/childrenAnalysis/ChildrenAnalysis.vue'
 import PrintReport from '@/components/parent/childrenAnalysis/PrintReport.vue';
 import Button from 'primevue/button';
-import { ref,watch } from "vue";
+import { ref } from "vue";
 import { selectLang, translationModule } from '@/lib/Translate';
 import { HttpRequester } from '@/lib/APICaller';
 
@@ -72,8 +72,8 @@ function printComponent() {
             <div class="report_header ">
                 <img src="/public/images/logo4.png" alt="">
                 <div class="report_title">
-                    <h2 style="color: black;">IQ SCORE REPORT</h2>
-                    <h4 style="color: var(--accent1);">TRACE EDUCATION COMPANY</h4>
+                    <h2 style="color: black;">{{ selectLang(translationModule.IQReport) }}</h2>
+                    <h4 style="color: var(--accent1);">{{ selectLang(translationModule.traceEdu) }}</h4>
                 </div>
             </div>
         </div>
@@ -86,6 +86,7 @@ function printComponent() {
                 <PrintReport class="print_only" :child-id="selectedChild" />
                 <ChildrenAnalysis class="no_print" :child-id="selectedChild" />
                 <div class="button-container no_print">
+                    
                     <Button style="width: 6rem;" v-if="selectedChild" @click="printComponent" :label="selectLang(translationModule.print)" />
                 </div>
             </div>

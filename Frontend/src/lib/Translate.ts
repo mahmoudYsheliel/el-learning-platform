@@ -534,8 +534,8 @@ export const translationModule = {
     ar: "عمل رائع",
   },
   logWithParent: {
-    en: "See Results of The Analysis Quiz",
-    ar: "انظر إلى نتائج اختبار التحليل",
+    en: "Thank you for completing the test! Your results are ready.",
+    ar: "شكرًا لك على إكمال الاختبار! نتائجك جاهزة.",
   },
   returnHome: {
     en: "Return Home",
@@ -1066,6 +1066,18 @@ longTermLearningPathwayTitle: {
 longTermLearningPathwayDesc: {
   en: 'Engage in progressively challenging projects in robotics and engineering. Encourage participation in STEM competitions, workshops, and collaborative projects. These activities will help solidify your child’s skills and passion for STEM.',
   ar: 'شارك في مشاريع متدرجة التحدي في الروبوتات والهندسة. شجع على المشاركة في المسابقات وورش العمل والمشاريع التعاونية في مجالات العلوم والتكنولوجيا والهندسة والرياضيات. ستساعد هذه الأنشطة على ترسيخ مهارات طفلك وشغفه بهذه المجالات.'
+},
+traceEdu:{
+  en:'TRACE EDUCATION COMPANY',
+  ar:"شركة Trace التعليمية"
+},
+IQReport:{
+  en:"IQ SCORE REPORT",
+  ar:'تقرير نتائج معدل الذكاء'
+},
+startTraceJourney:{
+  en:"Start your learning journey with Trace courses",
+  ar:"ابدأ رحلتك للتعلم مع دورات Trace"
 }
 
 

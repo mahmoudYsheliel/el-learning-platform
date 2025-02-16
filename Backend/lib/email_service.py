@@ -79,7 +79,7 @@ def send_email_with_attachment(subject: str, to_email: str, body: str, attachmen
         img_base64 = extract_text_following_keyword(img_base64)
         image_data = base64.b64decode(img_base64)
 
-        image_filename = "attached_image.pdf"
+        image_filename ="TraceReport.pdf"
         with open(image_filename, "wb") as img_file:
             img_file.write(image_data)
             
