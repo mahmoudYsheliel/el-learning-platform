@@ -1078,6 +1078,10 @@ IQReport:{
 startTraceJourney:{
   en:"Start your learning journey with Trace courses",
   ar:"ابدأ رحلتك للتعلم مع دورات Trace"
+},
+takeTest:{
+  en:'Take Trace Test',
+  ar:'ابدأ اختبار TRACE'
 }
 
 

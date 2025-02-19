@@ -12,10 +12,11 @@ import InputText from "primevue/inputtext";
 import Password from "primevue/password";
 import Calendar from "primevue/calendar";
 import { HttpRequester } from "@/lib/APICaller";
-import { ref } from "vue";
-import { useRouter } from "vue-router";
+import { ref,onMounted } from "vue";
+import { useRouter,useRoute } from "vue-router";
 
 const router = useRouter();
+const route = useRoute();
 const personalInfo = usePersonalInfo()
 
 const email = ref();
@@ -154,6 +155,12 @@ function login() {
   });
 }
 
+
+
+
+onMounted(()=>{
+  role.value = route.params?.role as string
+})
 </script>
 
 <template>

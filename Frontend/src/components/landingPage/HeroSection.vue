@@ -3,7 +3,10 @@ import Button from "primevue/button";
 import "primeicons/primeicons.css";
 import { useRouter } from "vue-router";
 import { selectLang, translationModule } from "@/lib/Translate";
+import { useToken } from "@/stores/token";
 
+
+const token = useToken()
 const router = useRouter();
 </script>
 <template>
@@ -24,10 +27,10 @@ const router = useRouter();
           {{ selectLang(translationModule.traceDescription) }}
         </p>
         <div class="buttonWrapper">
-          <Button raised :label="selectLang(translationModule.startFree)" @click="router.push('/freeCourses')" />
-          <p style="color: var(--accent1); margin: 0;font-size: 0.875rem;font-weight: 100;">
+          <Button raised :label="selectLang(translationModule.takeTest)" @click="router.push('/signup/Child')" v-if="!token.getIsAuthorized" />
+          <!-- <p style="color: var(--accent1); margin: 0;font-size: 0.875rem;font-weight: 100;">
             {{ selectLang(translationModule.noCreditCard) }}
-          </p>
+          </p> -->
         </div>
       </div>
 
