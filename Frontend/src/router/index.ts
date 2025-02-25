@@ -13,6 +13,18 @@ const router = createRouter({
       meta: { requredAuth: false, userType: "Any" },
     },
     {
+      path: "/PrivacyPolicy",
+      name: "PrivacyPolicy",
+      component: () => import("../views/generalViews/PrivacyPolicy.vue"),
+      meta: { requredAuth: false, userType: "Any" },
+    },
+    {
+      path: "/TermConditions",
+      name: "TermConditions",
+      component: () => import("../views/generalViews/TermConditions.vue"),
+      meta: { requredAuth: false, userType: "Any" },
+    },
+    {
       path: "/forgotPassword",
       name: "forgotPassword",
       component: () => import("../views/generalViews/forgotPassword.vue"),

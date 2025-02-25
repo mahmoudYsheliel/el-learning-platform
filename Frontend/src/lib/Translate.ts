@@ -1051,39 +1051,170 @@ export const translationModule = {
                     علوم الكمبيوتر.تشمل المجالات التي يجب التركيز عليها لتحقيق النمو الذاكرة العاملة والمعالجة\
                     سرعة.إن تعزيز هذه المهارات سيساعد طفلك على التعامل مع المهام المعقدة بشكل أكثر كفاءة.'
   },
-   shortTermGoalsDesc: {
+  shortTermGoalsDesc: {
     en: 'Short-term goals help your child build essential skills step by step. These goals focus on improving problem-solving, critical thinking, and hands-on experience in STEM subjects. Encouraging consistent practice and setting achievable milestones will enhance their learning progress and confidence.',
     ar: 'تساعد الأهداف قصيرة المدى طفلك على بناء المهارات الأساسية خطوة بخطوة. تركز هذه الأهداف على تحسين حل المشكلات والتفكير النقدي والخبرة العملية في موضوعات العلوم والتكنولوجيا والهندسة والرياضيات. إن تشجيع الممارسة المستمرة وتحديد معالم قابلة للتحقيق سيعزز تقدمهم في التعلم وثقتهم بأنفسهم.'
-},
-shortTermGoalsTitle:{
-en:'Short Term Learning Pathway',
-ar:'مسار التعلم على المدى القصير'
-},
-longTermLearningPathwayTitle: {
-  en:'Long Term Learning Pathway',
-  ar:'مسار التعلم على المدى الطويل'
-},
-longTermLearningPathwayDesc: {
-  en: 'Engage in progressively challenging projects in robotics and engineering. Encourage participation in STEM competitions, workshops, and collaborative projects. These activities will help solidify your child’s skills and passion for STEM.',
-  ar: 'شارك في مشاريع متدرجة التحدي في الروبوتات والهندسة. شجع على المشاركة في المسابقات وورش العمل والمشاريع التعاونية في مجالات العلوم والتكنولوجيا والهندسة والرياضيات. ستساعد هذه الأنشطة على ترسيخ مهارات طفلك وشغفه بهذه المجالات.'
-},
-traceEdu:{
-  en:'TRACE EDUCATION COMPANY',
-  ar:"شركة Trace التعليمية"
-},
-IQReport:{
-  en:"IQ SCORE REPORT",
-  ar:'تقرير نتائج معدل الذكاء'
-},
-startTraceJourney:{
-  en:"Start your learning journey with Trace courses",
-  ar:"ابدأ رحلتك للتعلم مع دورات Trace"
-},
-takeTest:{
-  en:'Take Trace Test',
-  ar:'ابدأ اختبار TRACE'
-}
+  },
+  shortTermGoalsTitle: {
+    en: 'Short Term Learning Pathway',
+    ar: 'مسار التعلم على المدى القصير'
+  },
+  longTermLearningPathwayTitle: {
+    en: 'Long Term Learning Pathway',
+    ar: 'مسار التعلم على المدى الطويل'
+  },
+  longTermLearningPathwayDesc: {
+    en: 'Engage in progressively challenging projects in robotics and engineering. Encourage participation in STEM competitions, workshops, and collaborative projects. These activities will help solidify your child’s skills and passion for STEM.',
+    ar: 'شارك في مشاريع متدرجة التحدي في الروبوتات والهندسة. شجع على المشاركة في المسابقات وورش العمل والمشاريع التعاونية في مجالات العلوم والتكنولوجيا والهندسة والرياضيات. ستساعد هذه الأنشطة على ترسيخ مهارات طفلك وشغفه بهذه المجالات.'
+  },
+  traceEdu: {
+    en: 'TRACE EDUCATION COMPANY',
+    ar: "شركة Trace التعليمية"
+  },
+  IQReport: {
+    en: "IQ SCORE REPORT",
+    ar: 'تقرير نتائج معدل الذكاء'
+  },
+  startTraceJourney: {
+    en: "Start your learning journey with Trace courses",
+    ar: "ابدأ رحلتك للتعلم مع دورات Trace"
+  },
+  takeTest: {
+    en: 'Take Trace Test',
+    ar: 'ابدأ اختبار TRACE'
+  },
 
+
+
+
+  termsConditions: {
+    en: "Terms and Conditions",
+    ar: "الشروط والأحكام"
+  },
+  lastUpdated: {
+    en: "Last updated: February 18, 2025",
+    ar: "آخر تحديث: 18 فبراير 2025"
+  },
+  policyIntroduction: {
+    en: "These Terms and Conditions ('Terms') govern your use of the website and services provided\
+by Trace EdTech ('the Company', 'We', 'Us', or 'Our'), accessible from\
+https://www.traceedtech.com. By accessing and using this Website, You agree to comply with\
+these Terms. If You do not agree with any part of these Terms, You must not use this Website.",
+    ar: "هذه الشروط والأحكام ('الشروط') تحكم استخدامك للموقع الإلكتروني والخدمات المقدمة من قبل Trace EdTech ('الشركة'، 'نحن'، 'لنا' أو 'خاصتنا')، والمتاحة عبر  \
+https://www.traceedtech.com. من خلال الوصول إلى هذا الموقع واستخدامه، فإنك توافق على الامتثال لهذه الشروط. إذا كنت لا توافق على أي جزء من هذه الشروط، يجب عليك عدم استخدام هذا الموقع."
+  },
+  interpretationDefinitions: {
+    en: "Interpretation and Definitions",
+    ar: "التفسير والتعريفات"
+  },
+  interpretation: {
+    en: "Interpretation",
+    ar: "التفسير"
+  },
+  definitions: {
+    en: "Definitions",
+    ar: "التعريفات"
+  },
+  affiliateDefinition: {
+    en: "Affiliate: An entity that controls, is controlled by, or is under common control with a party, where 'control' means ownership of 50% or more of shares, equity interest, or other voting rights.",
+    ar: "الشركة التابعة: كيان يتحكم فيه أو يتم التحكم فيه أو يكون تحت سيطرة مشتركة مع طرف آخر، حيث تعني 'السيطرة' ملكية 50٪ أو أكثر من الأسهم أو الفائدة في الأسهم أو حقوق التصويت الأخرى."
+  },
+  country: {
+    en: "Country: Egypt.",
+    ar: "الدولة: مصر."
+  },
+  companyDefinition: {
+    en: "Company: Trace EdTech, Giza, 6th of October.",
+    ar: "الشركة: تريس إدتيك، الجيزة، السادس من أكتوبر."
+  },
+  deviceDefinition: {
+    en: "Device: Any device that can access the Service, such as a computer, cellphone, or tablet.",
+    ar: "الجهاز: أي جهاز يمكنه الوصول إلى الخدمة، مثل الكمبيوتر أو الهاتف المحمول أو الجهاز اللوحي."
+  },
+  serviceDefinition: {
+    en: "Service: The Website and any associated digital services.",
+    ar: "الخدمة: الموقع وأي خدمات رقمية مرتبطة به."
+  },
+  acknowledgment: {
+    en: "Acknowledgment",
+    ar: "الإقرار"
+  },
+  intellectualPropertyRights: {
+    en: "Intellectual Property Rights",
+    ar: "حقوق الملكية الفكرية"
+  },
+  restrictions: {
+    en: "Restrictions",
+    ar: "القيود"
+  },
+  restrictedActions: {
+    en: "You are specifically restricted from publishing any Website material in other media, selling, sub-licensing, publicly performing, or using the Website for any unlawful purpose.",
+    ar: "يُحظر عليك بشكل خاص نشر أي مواد من الموقع في وسائل الإعلام الأخرى، أو بيعها، أو منح تراخيص فرعية لها، أو عرضها علنًا، أو استخدام الموقع لأي غرض غير قانوني."
+  },
+  yourContent: {
+    en: "Your Content",
+    ar: "محتواك"
+  },
+  contentLicense: {
+    en: "By displaying Your Content, You grant the Company a non-exclusive, worldwide, irrevocable license to use, reproduce, and distribute it across any media.",
+    ar: "من خلال عرض محتواك، تمنح الشركة ترخيصًا غير حصري وعالميًا وغير قابل للإلغاء لاستخدامه وإعادة إنتاجه وتوزيعه عبر أي وسيلة إعلامية."
+  },
+  linksToOtherWebsites: {
+    en: "Links to Other Websites",
+    ar: "روابط لمواقع أخرى"
+  },
+  thirdPartyDisclaimer: {
+    en: "Our Service may contain links to third-party websites or services that are not owned or controlled by the Company.",
+    ar: "قد تحتوي خدمتنا على روابط لمواقع أو خدمات تابعة لجهات خارجية لا تملكها أو تتحكم بها الشركة."
+  },
+  termination: {
+    en: "Termination",
+    ar: "إنهاء"
+  },
+  terminationClause: {
+    en: "The Company reserves the right to terminate or suspend Your access immediately, without notice, for any violation of these Terms.",
+    ar: "تحتفظ الشركة بالحق في إنهاء أو تعليق وصولك فورًا، دون إشعار، في حالة انتهاكك لهذه الشروط."
+  },
+  limitationOfLiability: {
+    en: "Limitation of Liability",
+    ar: "حدود المسؤولية"
+  },
+  liabilityClause: {
+    en: "To the maximum extent permitted by law, the Company shall not be liable for any indirect, incidental, or consequential damages.",
+    ar: "إلى أقصى حد يسمح به القانون، لا تتحمل الشركة أي مسؤولية عن الأضرار غير المباشرة أو العرضية أو التبعية."
+  },
+  disclaimer: {
+    en: '"AS IS" and "AS AVAILABLE" Disclaimer',
+    ar: 'إخلاء المسؤولية "كما هو" و "كما هو متاح"'
+  },
+  governingLaw: {
+    en: "Governing Law & Dispute Resolution",
+    ar: "القانون الحاكم وتسوية النزاعات"
+  },
+  severability: {
+    en: "Severability",
+    ar: "قابلية الفصل"
+  },
+  changesToTerms: {
+    en: "Changes to These Terms",
+    ar: "التعديلات على هذه الشروط"
+  },
+  contactUs: {
+    en: "Contact Us",
+    ar: "اتصل بنا"
+  },
+  copyRight:{
+    en:'© 2018 - 2025 Trace Limited. All rights reserved.',
+    ar:'© 2018 - 2025 Trace Limited. جميع الحقوق محفوظة.'
+  },
+  terms:{
+    en:'Terms and Conditions',
+    ar:'الشروط والأحكام'
+  },
+  privacy:{
+    en:'Privacy Policy',
+    ar:'سياسة الخصوصية'
+  }
 
 
 

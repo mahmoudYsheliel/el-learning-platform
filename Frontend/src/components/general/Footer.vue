@@ -64,7 +64,14 @@ programRequester.callApi().then((res) => {
           /></a>
         </div>
       </div>
+     
     </div>
+    <div style="display: flex; justify-content: space-between; gap: 5rem;margin-top: 2rem;">{{ selectLang(translationModule.copyRight) }}
+        <div  style="display: flex; gap: 2rem;">
+           <span style="cursor: pointer;" @click="router.push('PrivacyPolicy')"> {{ selectLang(translationModule.privacy) }}</span> 
+           <span style="cursor: pointer;" @click="router.push('TermConditions')"> {{ selectLang(translationModule.terms) }}</span> 
+        </div>
+      </div>
     <!-- <div class="copyRight">
       <p>Copyright © 2024 Trace LLC</p>
       <p>All Rights Reserved - Proudly Created by MYS</p>
@@ -74,7 +81,7 @@ programRequester.callApi().then((res) => {
 
 <style scoped>
 main {
-  padding: 1rem 5rem;
+  padding: 1rem 2rem;
   background-color: var(--accent1);
   color: var(--primary);
 }
@@ -83,7 +90,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: start;
-  gap: 5rem;
+  gap: 2rem;
 }
 p {
   padding: 0;
