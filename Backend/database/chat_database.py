@@ -4,7 +4,6 @@ from database.mongo_driver import get_database, validate_bson_id
 
 
 async def create_chat(chat: Chat, userId: str) -> ServiceResponse:
-    print(chat.participants)
     chat.student_id=str(userId)
     mdb_result = (
         await get_database()

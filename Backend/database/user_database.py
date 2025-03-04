@@ -68,7 +68,6 @@ async def create_user(user: User) -> ServiceResponse:
                 {"id": {"$toString": "$_id"}, "title": 1, "description": 1},
             )
         )
-        print(4)
         if analysis_quiz:
             notification = Notification(
                 title=analysis_quiz["title"],
@@ -77,16 +76,14 @@ async def create_user(user: User) -> ServiceResponse:
                 status="waiting",
                 analysis_quiz_id=analysis_quiz["id"],
             )
-            print(4.5)
             updated = await get_database().get_collection('user').update_one({"_id":validate_bson_id(user_id)},{"$push": {"notifications": notification.model_dump()}} )
  
-        print(5)
         child = Child(user_id=user_id)
         mdb_result = (
             await get_database().get_collection("child").insert_one(child.model_dump())
         )
         return ServiceResponse(data={"user_id": user_id})
-    print(6)
+
     
     
     

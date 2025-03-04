@@ -215,7 +215,6 @@ async def add_analysis_quiz_answer(
         )
     )
     scores = calculate_scores(answers, analysis_quiz)
-    print(scores)
     learning_styles = (
         await get_database().get_collection("learning_style").find({}, {"_id": 0, "id": {"$toString": "$_id"}, "name": 1, "sections_dependence": 1}).to_list(length=None)
     )
@@ -305,6 +304,8 @@ def calculate_scores(answers: Answers, analysis_quiz: dict) -> list[dict]:
                     if score:
                         total += score
                 max_total += max_choice
+                if max_total ==0:
+                    max_total =1
                 section_score["total_score"] = aplly_gauss(total / max_total)
             sections_sub_sections["sub_sections"].append(section_score)
 
