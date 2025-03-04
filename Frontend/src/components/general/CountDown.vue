@@ -1,6 +1,7 @@
 <template>
   <div>
     <canvas ref="canvas" :width="width" :height="height"></canvas>
+    <p style="text-align: center; color: var(--accent1); margin: 0;line-height: 0.5rem;font-size: 1rem;margin-bottom: 1rem;direction: ltr;">{{ Math.floor(remainTime/60) }} :  <span v-if="remainTime%60 <10">0</span>{{ remainTime%60 }}</p>
   </div>
 </template>
 <style scoped>
@@ -17,11 +18,11 @@ import { ref, onMounted, watchEffect } from "vue";
 const props = defineProps({
   width: {
     type: Number,
-    default: 75,
+    default: 60,
   },
   height: {
     type: Number,
-    default: 75,
+    default: 60,
   },
   totalTime: {
     type: Number,
@@ -29,7 +30,7 @@ const props = defineProps({
   },
   lineWidth: {
     type: Number,
-    default: 10,
+    default: 7,
   },
   strokeStyle: {
     type: String,
@@ -58,6 +59,13 @@ setInterval(()=>{remainTime.value-=1;if(remainTime.value==0){emits('timeOver')}}
 
 const canvas = ref();
 
+const backgroundImage = new Image();
+backgroundImage.src = props.source;
+
+backgroundImage.onload = function () {
+  drawArc(); // Call drawArc only after the image is loaded
+};
+
 const drawArc = () => {
   const canvasEl = canvas.value;
   if (!canvasEl) return;
@@ -68,10 +76,11 @@ const drawArc = () => {
   const radius = Math.min(centerX, centerY) - props.lineWidth;
 
   const startAngle = -Math.PI / 2; // Starting at the top
-  const endAngle =
-    startAngle + 2 * Math.PI * (remainTime.value / props.totalTime);
+  const endAngle = startAngle + 2 * Math.PI * (remainTime.value / props.totalTime);
 
   ctx.clearRect(0, 0, canvasEl.width, canvasEl.height); // Clear canvas
+
+  // Draw background color
   ctx.fillStyle = props.backgroundColor;
   ctx.fillRect(0, 0, canvasEl.width, canvasEl.height);
 
@@ -88,32 +97,18 @@ const drawArc = () => {
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
 
+  // Draw the arc-shaped image
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(centerX, centerY, radius, startAngle, endAngle, false);
+  ctx.lineTo(centerX, centerY);
+  ctx.closePath();
+  ctx.clip();
 
-  const backgroundImage = new Image();
+  // Draw the image within the clipped area
+  ctx.drawImage(backgroundImage, centerX - radius, centerY - radius, radius * 2, radius * 2);
 
-  backgroundImage.src = props.source;
-  
-  
-  backgroundImage.onload = function () {
-    const centerX = props.width / 2;
-    const centerY = props.height / 2;
-    const radius = Math.sqrt((props.width)*(props.height) *2  )/3; // Radius of the arc
-
-    // Draw the arc-shaped image
-    ctx.save(); // Save the current canvas state
-    ctx.beginPath();
-    ctx.arc(centerX, centerY, radius, startAngle, endAngle, false);
-    ctx.lineTo(centerX, centerY); // Close the arc
-    ctx.closePath();
-    ctx.clip();
-
-    // Draw the image within the clipped area
-    ctx.drawImage(backgroundImage, centerX - radius, centerY - radius, radius * 2, radius * 2);
-
-    ctx.restore(); // Restore the canvas state
-
-};
-
+  ctx.restore();
 };
 
 onMounted(drawArc);

@@ -1013,3 +1013,24 @@ export const track_images = [
   }
 
 ]
+
+
+export const audioInstructions ={
+  en:`
+     <div class="instructions" >
+        <h2>Instructions</h2>
+        <p>🔊 The sound will play <strong>once</strong> automatically.</p>
+        <p>🎧 Listen carefully to the sound.</p>
+        <p>➡️ Choose the correct answer from <strong>left to right</strong>.</p>
+        <p>⚠️ You can <strong>only choose once</strong>, so think before selecting.</p>
+        <p>✅ Click on your answer to submit.</p>
+    </div>`,
+    ar:`  <div class="instructions arabic">
+        <h2>التعليمات </h2>
+        <p>🔊 سيتم تشغيل الصوت <strong>مرة واحدة </strong> تلقائيًا.</p>
+        <p>🎧 استمع جيدًا للصوت.</p>
+        <p>➡️ اختر الإجابة الصحيحة من <strong>اليسار إلى اليمين</strong>.</p>
+        <p>⚠️ يمكنك <strong>الاختيار مرة واحدة فقط</strong>، لذا فكر جيدًا قبل التحديد.</p>
+        <p>✅ انقر على إجابتك لتأكيد الاختيار.</p>
+    </div>`
+}

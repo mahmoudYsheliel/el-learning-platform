@@ -5,6 +5,7 @@ import 'primeicons/primeicons.css'
 import CountDown from "@/components/general/CountDown.vue";
 import { ref, computed, watch } from "vue";
 import { useLang } from "@/stores/token";
+import { audioInstructions } from "@/lib/Modules";
 
 const lang = useLang()
 const props = defineProps([
@@ -22,10 +23,12 @@ defineEmits(["next", "answer", 'timeOver', 'finish']);
 const questionOrder = computed(() => { return props.selectedQuestionOrder })
 
 const images = ref()
+const symbolSearchImages = ref()
 setTimeout(() => { images.value = props.question?.image?.split(',') }, 1)
 watch(questionOrder, (oldQ, new_q) => {
 
   images.value = []
+  symbolSearchImages.value = []
   setTimeout(() => { images.value = props.question?.image?.split(',') }, 1)
   stage.value = 'show image'
   if (props.questionType != 'Symbol Search')
@@ -33,6 +36,15 @@ watch(questionOrder, (oldQ, new_q) => {
   setTimeout(() => {
     stage.value = "show options";
   }, 3000);
+
+})
+
+
+watch(images, (oldQ, new_q) => {
+
+  if (images.value?.length > 2) {
+    symbolSearchImages.value = images.value?.slice(2, images.value?.length)
+  }
 
 })
 
@@ -72,7 +84,8 @@ const stage = ref("show image"); // or show options
     <div class="question-container">
       <div class="question">
         <div class="question-text" v-if="questionType != 'Symbol Search'">
-          <h1>{{ selectLang(question?.question) }}</h1>
+          <div v-if="question?.question?.en == 'AudioStart'"  v-html="selectLang(audioInstructions)"></div>
+          <h1  v-if="question?.question?.en != 'AudioStart'">{{ selectLang(question?.question) }}</h1>
           <audio :src="audio_link" autoplay>
             <source :src="audio_link">
           </audio>
@@ -93,14 +106,14 @@ const stage = ref("show image"); // or show options
             </span>
           </div>
           <div class="image_container" v-if="stage == 'show options'">
-            <span v-for="(image, i) in images" style="width: 32%;">
-              <img style="width: 100%;" class="image2" :src="image" alt="" v-if="i > 1" />
+            <span v-for="(image, i) in symbolSearchImages" style="width: 20%;">
+              <img style="width: 100%;" class="image2" :src="image" alt="" />
             </span>
           </div>
         </div>
 
 
-        <div class="choices-wrapper" v-if="!(stage == 'show image' && questionType == 'Symbol Search')">
+        <div :class="{ choices_wrapper_similarity: questionType == 'Similarities' }" class="choices-wrapper" v-if="!(stage == 'show image' && questionType == 'Symbol Search')">
           <p v-for="choice in question?.choices" class="choice-text" :class="{ selectedChoice: (answers?.some((item: any) => { return item?.sub_section_name == sectionName && item?.question_id == question?.id && item?.choice_id == choice?.id })) }" :key="choice" @click="() => {
             $emit('answer', {
               section_name: sectionName,
@@ -108,8 +121,8 @@ const stage = ref("show image"); // or show options
               choice_id: choice?.id,
             });
           }
-            ">
-            <span>{{ selectLang(choice?.choice) }}</span>
+          ">
+            <span style="direction: ltr;">{{ selectLang(choice?.choice) }}</span>
             <img v-if="choice?.image" :src="choice?.image" class="image_choice" alt="" />
           </p>
         </div>
@@ -123,14 +136,14 @@ const stage = ref("show image"); // or show options
 
         if (!showNext) { $emit('finish') } else { $emit('next'); }
       }
-        " icon="pi pi-arrow-right" iconPos="right" />
+      " icon="pi pi-arrow-right" iconPos="right" />
       <Button :label="selectLang(translationModule.next)" v-if="!(questionType == 'Symbol Search' && stage == 'show image') && lang.getLang == 'ar'" @click="() => {
 
         scrollTop();
 
         if (!showNext) { $emit('finish') } else { $emit('next'); }
       }
-        " icon="pi pi-arrow-left" iconPos="right" />
+      " icon="pi pi-arrow-left" iconPos="right" />
     </div>
   </div>
 </template>
@@ -141,7 +154,7 @@ const stage = ref("show image"); // or show options
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  width: 100%;
+  width: 80%;
   flex-wrap: wrap;
 
 }
@@ -181,7 +194,8 @@ const stage = ref("show image"); // or show options
 }
 
 img {
-  width: 80%;
+  width: 75%;
+
   border-radius: 0.5rem;
   animation: imageMove 0.5s;
 }
@@ -268,8 +282,7 @@ h1 {
   margin: 0;
   padding: 0;
   width: 100%;
-  line-height: 2.4rem;
-  margin-bottom: 2rem;
+  font-size: 1.5rem;
 }
 
 .selectedChoice {
@@ -303,10 +316,20 @@ p {
   flex-direction: row;
 }
 
+@media screen and (max-width:600px) {
+  .choices_wrapper_similarity {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1rem;
+  }
+}
+
+
 @media screen and (min-width:1150px) {
   .question {
     display: grid;
-    grid-template-columns: 62fr 38fr;
+    grid-template-columns: 1.5fr 1fr;
   }
 
   .question-text {
@@ -315,14 +338,13 @@ p {
     padding-inline: 5%;
   }
 
-  .choices-wrapper {
+  .choices_wrapper_similarity {
     width: 100%;
-    padding-inline: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1rem;
   }
+
 
   img {
     width: 75%;
@@ -332,4 +354,6 @@ p {
     margin-top: 2rem;
   }
 }
+
+
 </style>

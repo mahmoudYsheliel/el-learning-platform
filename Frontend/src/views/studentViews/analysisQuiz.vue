@@ -186,7 +186,7 @@ strong {
 .section-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  margin-bottom: 5rem;
+  
 }
 
 .section {

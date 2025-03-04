@@ -215,7 +215,7 @@ async def add_analysis_quiz_answer(
         )
     )
     scores = calculate_scores(answers, analysis_quiz)
-
+    print(scores)
     learning_styles = (
         await get_database().get_collection("learning_style").find({}, {"_id": 0, "id": {"$toString": "$_id"}, "name": 1, "sections_dependence": 1}).to_list(length=None)
     )
@@ -273,7 +273,7 @@ def aplly_gauss(score: int, min: int = 40, max: int = 160) -> float:
     return av + (score - 0.5) * std
 
 
-def calculate_scores(answers: Answers, analysis_quiz: dict) -> dict:
+def calculate_scores(answers: Answers, analysis_quiz: dict) -> list[dict]:
     answers_list = answers.answers
     all_sections = []
     for section in analysis_quiz['sections']:
@@ -321,7 +321,7 @@ def get_subsection_score(data,subsection_name):
     return 0  # Return None if 'Similarities' is not found
 
 
-def calculate_learning_style(scores: dict, learning_styles: dict):
+def calculate_learning_style(scores: list[dict], learning_styles: dict):
     learning_style_scores = []
 
     for learning_style in learning_styles:
@@ -333,6 +333,18 @@ def calculate_learning_style(scores: dict, learning_styles: dict):
     
     return learning_style_scores
 
+
+async def test_scores(scores:dict) ->ServiceResponse:
+    track_recommendation = (
+        await get_database().get_collection("track_recommendation").find({}, {"_id": 0, "id": {"$toString": "$_id"}, "name": 1, "sections_dependence": 1}).to_list(length=None)
+    )
+    track_recommendation_scores = calculate_learning_style(scores, track_recommendation)
+    
+    track_recommendation_results = [
+        TrackRecommendationScore(tracks_recommendation_id=track_recommendation_score['name'], score=track_recommendation_score['score'])
+        for track_recommendation_score in track_recommendation_scores
+    ]
+    return ServiceResponse(success=True,data={"tracks":track_recommendation_results}) 
 
 # def calculate_career_alignment(scores: dict, careers: dict) -> list:
 #     all_careers_list = careers["careers"]

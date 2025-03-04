@@ -25,12 +25,13 @@ const confirmedPass = ref();
 const role = ref('')
 const birthDate = ref()
 const phone =ref('')
+const gender = ref<string|null>()
 
 const worningMessage = ref('')
 const signupRequester = new HttpRequester("signup");
 
 function signup() {
-  if (!email.value || !pass.value || !confirmedPass.value || !birthDate.value || !phone.value) {
+  if (!email.value || !pass.value || !confirmedPass.value || !birthDate.value || !phone.value || !gender.value) {
     worningMessage.value = selectLang(translationModule.dataMissing) ?? '';
   } else if (pass.value != confirmedPass.value) {
     worningMessage.value = selectLang(translationModule.diffPass) ?? '';
@@ -54,7 +55,8 @@ function signup() {
         hashed_pass: pass.value,
         user_type: role.value,
         birth_day:birthDate.value,
-        phone_number:phone.value
+        phone_number:phone.value,
+        gender:gender.value
       },
     };
 
@@ -226,6 +228,15 @@ onMounted(()=>{
           <Password class="input" v-model="confirmedPass" :feedback="false" toggleMask :placeholder="selectLang(translationModule.confirmPass)" @change="worningMessage = ''" />
           <Calendar style="width: 100%;" v-model="birthDate" :placeholder="selectLang(translationModule.birthDate)" />
           <InputText style="width: 100%;" type="email" class="input" v-model="phone" :placeholder="selectLang(translationModule.phone)" />
+          <div class="gender">
+            <h3>{{ selectLang(translationModule.gender) }}:</h3>
+            <div class="gender" style="width: 60%;">
+
+              <span :class="{role2_selected: gender=='Male'}" @click="gender='Male'" class="role2">{{ selectLang(translationModule.male) }}</span>
+              <span :class="{role2_selected: gender=='Female'}" @click="gender='Female'" class="role2">{{ selectLang(translationModule.female) }}</span>
+            </div>
+
+          </div>
         </div>
         <div class="button">
           <Button @click="signup" :label="selectLang(translationModule.signup)" />
@@ -243,6 +254,12 @@ onMounted(()=>{
 </template>
 
 <style scoped>
+.gender{
+display: flex;
+width: 100%;
+justify-content: space-between;
+align-items: center;
+}
 main {
   min-height: 100%;
 }
@@ -297,6 +314,25 @@ h2 {
   cursor: pointer;
 }
 
+.role2{
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  /* Shadow for the raised effect */
+  transition: transform 0.2s, box-shadow 0.2s;
+  /* Smooth interaction effect */
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.role2_selected{
+  border: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25), 0 10px 16px rgba(0, 0, 0, 0.08);
+  /* Enhance shadow on hover */
+  transition: transform 1s, box-shadow 0.2s;
+  /* Smooth interaction effect */
+  scale: 1.02;
+  color:  var(--accent1);
+}
 .selected {
   border: none;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25), 0 10px 16px rgba(0, 0, 0, 0.08);

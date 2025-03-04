@@ -4,7 +4,8 @@ from models.alaysis import (
     Answers,
     FeatureInfo,
     LearningStyle,
-    TrackRecommendation
+    TrackRecommendation,
+    
 )
 import database.analysis_database as analysis_database
 from lib.crypto import auth_user
@@ -83,4 +84,11 @@ async def get_analysis(userId:str = Depends(auth_user))-> ServiceResponse:
 @router.post('/add_analysis_quiz_answer') 
 async def add_analysis_quiz_answer(answers:Answers=Body(embed=True),userId:str = Depends(auth_user))-> ServiceResponse:
     res = await analysis_database.add_analysis_quiz_answer( answers,str(userId))
+    return res
+
+
+
+@router.post('/test_scores')
+async def  test_scores(scores:list[dict]=Body(embed=True)) ->ServiceResponse:
+    res = await analysis_database.test_scores( scores)
     return res
