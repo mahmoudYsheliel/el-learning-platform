@@ -937,6 +937,10 @@ export const translationModule = {
     en: 'Print',
     ar: 'اطبع'
   },
+  viewFullReport:{
+en:'View Full Report',
+ar:'عرض التقرير الكامل'
+  },
   intro: {
     en: 'Introduction',
     ar: 'مقدمة'

@@ -84,8 +84,8 @@ const stage = ref("show image"); // or show options
     <div class="question-container">
       <div class="question">
         <div class="question-text" v-if="questionType != 'Symbol Search'">
-          <div  v-html="selectLang(audioInstructions)"></div>
           <h1  v-if="question?.question?.en != 'AudioStart'">{{ selectLang(question?.question) }}</h1>
+          <div v-else  v-html="selectLang(audioInstructions)"></div>
           <audio :src="audio_link" autoplay>
             <source :src="audio_link">
           </audio>

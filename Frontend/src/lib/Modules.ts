@@ -928,86 +928,86 @@ export const IQScoresMap = [
     min: 80,
     max: 89,
     desc: {
-      en: "Low Average",
-      ar: "أقل من المتوسط"
+      en: "Foundational Stage",
+      ar: "المرحلة التأسيسية"
     }
   },
   {
     min: 70,
     max: 79,
     desc: {
-      en: "Borderline",
-      ar: "حدي"
+      en: "Transitional Range",
+      ar: "المدى الانتقالي"
     }
   },
   {
     min: 0,
     max: 69,
     desc: {
-      en: "Extremely Low",
-      ar: "منخفض للغاية"
+      en: "Developing Foundations",
+      ar: "تطوير الأسس"
     }
   }
 ]
 
 export const track_images = [
   {
-    path: '/public/Tracks/health_heroes_male.png',
+    path: '/Tracks/health_heroes_male.png',
     name: 'Health Heroes',
     type: 'Male'
   },
   {
-    path: '/public/Tracks/health_heroes_female.png',
+    path: '/Tracks/health_heroes_female.png',
     name: 'Health Heroes',
     type: 'Female'
   },
   {
-    path: '/public/Tracks/code_creator_male.png',
+    path: '/Tracks/code_creator_male.png',
     name: "Code Creators",
     type: 'Male'
   },
   {
-    path: '/public/Tracks/code_creator_female.png',
+    path: '/Tracks/code_creator_female.png',
     name: "Code Creators",
     type: 'Female'
   },
   {
-    path: '/public/Tracks/tech_titans_male.png',
+    path: '/Tracks/tech_titans_male.png',
     name: "Tech Titans",
     type: 'Male'
   },
   {
-    path: '/public/Tracks/tech_titans_female.png',
+    path: '/Tracks/tech_titans_female.png',
     name: "Tech Titans",
     type: 'Female'
   },
   {
-    path: '/public/Tracks/planet_protector_male.png',
+    path: '/Tracks/planet_protector_male.png',
     name: "Planet Protectors",
     type: 'Male'
   },
   {
-    path: '/public/Tracks/planet_protector_female.png',
+    path: '/Tracks/planet_protector_female.png',
     name: "Planet Protectors",
     type: 'Female'
   },
   {
-    path: '/public/Tracks/future_frontiers_male.png',
+    path: '/Tracks/future_frontiers_male.png',
     name: "Future Frontiers",
     type: 'Male'
   },
   {
-    path: '/public/Tracks/future_frontiers_female.png',
+    path: '/Tracks/future_frontiers_female.png',
     name: "Future Frontiers",
     type: 'Female'
   },
   {
-    path: '/public/Tracks/quantum_quest.png',
+    path: '/Tracks/quantum_quest.png',
     name: "Quantum Quest",
     type: 'Male'
   },
   {
-    path: '/public/Tracks/quantum_quest.png',
+    path: '/Tracks/quantum_quest.png',
     name: "Quantum Quest",
     type: 'Female'
   }

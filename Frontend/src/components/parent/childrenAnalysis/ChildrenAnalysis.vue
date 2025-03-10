@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch } from "vue";
+import { ref, watch } from "vue";
 import { HttpRequester } from "@/lib/APICaller";
 import { IQScoresMap } from "@/lib/Modules";
 import { selectLang, translationModule } from "@/lib/Translate";
@@ -144,9 +144,6 @@ watch((recommendTrack), () => {
           <h3>{{ selectLang(translationModule.keySkills) }}</h3>
           <p v-for="skill in recommendTrack?.key_skills">{{ selectLang(skill) }}</p>
         </div>
-
-
-
       </div>
       <img :src="track_image" style="margin-top: 8rem" alt="">
     </div>

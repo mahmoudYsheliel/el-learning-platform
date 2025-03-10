@@ -49,9 +49,9 @@ function printComponent() {
 
                         <Button class="no_print" @click="router.push('/childCourses')" :label="selectLang(translationModule.clickToView)" style="background-image: linear-gradient(to bottom, var(--accent2), var(--accent5));" />
                     </div>
-                    <div class="button-container no_print" style="justify-content: end;">  
-
-                        <Button style="width: 6rem;" v-if="selectedChild" @click="printComponent" :label="selectLang(translationModule.print)" />
+                    <div class="button-container no_print" >  
+                        <Button style="padding-inline: 2rem;" v-if="selectedChild" @click="router.push('viewChildAnalysis')" :label="selectLang(translationModule.viewFullReport)" />
+                        <Button style="padding-inline: 2rem;" v-if="selectedChild" @click="printComponent" :label="selectLang(translationModule.print)" />
                     </div>
 
                 </div>
