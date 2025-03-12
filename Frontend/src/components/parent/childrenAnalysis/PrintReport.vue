@@ -103,8 +103,11 @@ function fetchComment(subset: subsets, score: number) {
 }
 
 const track_image = computed(() => {
+    const userType = info.getInfo?.gender ? info.getInfo?.gender : 'Male'
+    console.log(track_images,recommendTrack.value?.name,userType)
+      
     for (let i = 0; i < track_images.length; i++) {
-        if (recommendTrack.value?.name == track_images[i].name && info.getInfo?.userType == track_images[i].type) {
+        if (recommendTrack.value?.name == track_images[i].name && userType == track_images[i].type) {
             return track_images[i].path
         }
     }
@@ -351,6 +354,10 @@ p {
         page-break-before: always;
         /* Force content to start on a new page */
     }
+}
+img{
+    width: 32%;
+    min-width: 15rem;
 }
 
 @media (max-width:750px) {

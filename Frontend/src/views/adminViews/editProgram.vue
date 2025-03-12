@@ -152,9 +152,9 @@ function deleteCourse(index: number) {
 }
 function deleteTrack() {
   let index = -1
-  for (let i =0;i<tracks.value.length;i++){
-    if ( tracks.value[i]?.title.en == selectedTrack.value?.title?.en){
-      index=i
+  for (let i = 0; i < tracks.value.length; i++) {
+    if (tracks.value[i]?.title.en == selectedTrack.value?.title?.en) {
+      index = i
     }
   }
   tracks.value.splice(index, 1);
@@ -216,6 +216,17 @@ function updateProgram() {
     }
   });
 }
+
+function swapLevel(lvl1Index: number, lvl2Index: number) {
+  if (lvl1Index < 0 || lvl2Index < 0)
+    return
+  if (lvl1Index >= selectedTrack.value?.levels.length || lvl2Index >= selectedTrack.value?.levels.length)
+    return
+
+  const temp = selectedTrack.value?.levels[lvl1Index]
+  selectedTrack.value.levels[lvl1Index] = selectedTrack.value?.levels[lvl2Index]
+  selectedTrack.value.levels[lvl2Index] = temp
+}
 </script>
 
 <template>
@@ -254,8 +265,8 @@ function updateProgram() {
             </div>
             <div class="track_container" v-if="selectedTrack" style="border-top: 2px solid var(--text);padding-top: 1rem;">
               <div class="btn-container">
-              <Button @click="deleteTrack()" icon="pi pi-times-circle" label="Delete Track" style="background-color: red;"/>
-            </div>
+                <Button @click="deleteTrack()" icon="pi pi-times-circle" label="Delete Track" style="background-color: red;" />
+              </div>
               <div class="element">
                 <h4>English Title</h4>
                 <InputText v-model="selectedTrack.title.en" />
@@ -298,7 +309,9 @@ function updateProgram() {
               <TabView :scrollable="true">
                 <TabPanel v-for="level, i in selectedTrack?.levels" :key="i">
                   <template #header>
+                    <i class="pi pi-angle-left" @click="swapLevel(i, i - 1)"></i>
                     {{ level.title.en }}
+                    <i class="pi pi-angle-right" @click="swapLevel(i, i + 1)"></i>
                   </template>
                   <div class="level_container">
                     <div class="element">
@@ -318,7 +331,7 @@ function updateProgram() {
                         <i class="pi pi-times-circle" @click="() => {
                           level.courses.splice(j, 1);
                         }
-                          "></i>
+                        "></i>
                       </div>
                     </div>
 
@@ -328,13 +341,13 @@ function updateProgram() {
                     </div>
 
                   </div>
-                  
+
 
                 </TabPanel>
               </TabView>
               <div class="btn-container">
-                    <Button @click="addTrackLevel()" icon="pi pi-plus-circle" label="Add Level" />
-                  </div>
+                <Button @click="addTrackLevel()" icon="pi pi-plus-circle" label="Add Level" />
+              </div>
 
 
 
@@ -358,7 +371,7 @@ function updateProgram() {
                 <i class="pi pi-times-circle" @click="() => {
                   deleteCourse(i);
                 }
-                  "></i>
+                "></i>
               </div>
             </div>
             <div class="btn-container">

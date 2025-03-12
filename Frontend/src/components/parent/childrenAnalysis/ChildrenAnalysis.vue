@@ -191,4 +191,8 @@ p {
   color: var(--text);
   padding-inline: 1rem;
 }
+img{
+  width: 32%;
+  min-width: 15rem;
+}
 </style>
