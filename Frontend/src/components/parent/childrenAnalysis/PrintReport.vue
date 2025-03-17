@@ -153,12 +153,12 @@ const track_image = computed(() => {
 
             <div class="new-page"></div>
             <div v-for="section in IQSection.slice(0, 2)">
-                <div style="display: flex;align-items: center;justify-content: space-between; flex-direction: column;">
+                <div style="display: flex;justify-content: space-between; flex-direction: column;">
                     <div class="field">
                         <h2>{{ selectLang(IQNames[section.name as subsets]) }} ({{ section.total_score }}/160):</h2>
                         <p>{{ fetchComment(section.name, section.total_score) }}</p>
                     </div>
-                    <ProgressBar :value="(section.total_score - 40) / 120 * 100" style="display: block;width: 80%;margin-top: 1rem;height: 1rem;" :size="12" />
+                    <ProgressBar :value="(section.total_score - 40) / 120 * 100" style="display: block;width: 80%;margin-top: 1rem;height: 1rem;margin-inline: auto;" :size="12" />
                 </div>
             </div>
         </div>
@@ -169,12 +169,12 @@ const track_image = computed(() => {
 
         <div class="section" ref="section3">
             <div v-for="section in IQSection.slice(2, IQSection.length)">
-                <div style="display: flex;align-items: center;justify-content: space-between; flex-direction: column;">
+                <div style="display: flex;justify-content: space-between; flex-direction: column;">
                     <div class="field">
                         <h2>{{ selectLang(IQNames[section.name as subsets]) }} ({{ section.total_score }}/160):</h2>
                         <p>{{ fetchComment(section.name, section.total_score) }}</p>
                     </div>
-                    <ProgressBar :value="(section.total_score - 40) / 120 * 100" style="display: block;width: 80%;margin-top: 1rem;height: 1rem;" :size="12" />
+                    <ProgressBar :value="(section.total_score - 40) / 120 * 100" style="display: block;width: 80%;margin-top: 1rem;height: 1rem;margin-inline: auto;" :size="12" />
                 </div>
             </div>
         </div>
@@ -299,15 +299,8 @@ const track_image = computed(() => {
     border-radius: 1rem;
     padding: 2rem;
     width: 90%;
-    margin-inline: auto;
 }
 
-
-.constainer {
-    width: 95%;
-    margin-inline: auto;
-    margin-top: 4rem;
-}
 
 .field {
     padding-inline: 1rem;
