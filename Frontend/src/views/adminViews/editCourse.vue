@@ -15,6 +15,7 @@ import { ref, reactive } from "vue";
 import RadioButton from "primevue/radiobutton";
 import TabView from "primevue/tabview";
 import TabPanel from "primevue/tabpanel";
+import RemoveChapterDialog from "@/components/dialogs/RemoveChapterDialog.vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -179,13 +180,32 @@ function moveDown(chapterindex: number, matIndex: number) {
     chapters.value[chapterindex].materials[matIndex] = tem;
   }
 }
+
+
+
+function moveUpChapter(chapterindex: number) {
+  let tem = chapters.value[chapterindex];
+  chapters.value[chapterindex] = chapters.value[chapterindex-1];
+  chapters.value[chapterindex-1] = tem;
+}
+function moveDownChapter(chapterindex: number) {
+  let tem = chapters.value[chapterindex];
+  chapters.value[chapterindex] = chapters.value[chapterindex+1];
+  chapters.value[chapterindex+1] = tem;
+
+}
+
+
+const showDeleteChapter =ref(false)
+const removeChapterIndex = ref(-1)
 </script>
 
 <template>
   <AddMaterialDialog v-if="addMaterialDialog" :showDialog="addMaterialDialog" :material-type="materialType" :material-id="materialId" @removeDialog="addMaterialDialog = false" @info="(info) => {
     addMaterial(info);
   }
-    " />
+  " />
+  <RemoveChapterDialog :showDialog="showDeleteChapter" @hide-dialog="showDeleteChapter=false"  @confirm="chapters.splice(removeChapterIndex,1);showDeleteChapter=false"/>
   <Nanbar />
 
   <div class="container">
@@ -236,9 +256,9 @@ function moveDown(chapterindex: number, matIndex: number) {
 
               <Dropdown v-model="courseCategories[i]" :options="categories" optionLabel="category.en" />
               <Button @click="() => {
-                  deleteCategory(i);
-                }
-                " label="Remove" style="background-color: red" />
+                deleteCategory(i);
+              }
+              " label="Remove" style="background-color: red" />
             </div>
 
 
@@ -275,7 +295,7 @@ function moveDown(chapterindex: number, matIndex: number) {
             <Button @click="() => {
               deleteObjective(i);
             }
-              " label="Remove" style="background-color: red" />
+            " label="Remove" style="background-color: red" />
           </div>
           <div class="btn-container">
             <Button @click="addObjective" label="Add Objective " />
@@ -295,9 +315,18 @@ function moveDown(chapterindex: number, matIndex: number) {
         <div class="tab_container">
 
           <Accordion>
+            
             <AccordionTab class="row" v-for="(chapter, i) in chapters" :key="'chap' + i.toString()">
               <template #header>
-                <h3>{{ chapter.title.en }}</h3>
+                <div style="display: flex;gap: 0.5rem;align-items: center;width: 80vw;">
+                  <div class="options" style="gap: 0.5rem;">
+                    <i class="pi pi-arrow-up" style="color: var(--accent1)" @click.stop="moveUpChapter(i)" v-if="i > 0"></i>
+                    <i class="pi pi-arrow-down" style="color: var(--accent1)" @click.stop="moveDownChapter(i)" v-if="i < chapters.length - 1"></i>
+                  </div>
+                  <h3>{{ chapter.title.en }}</h3>
+                  <icon @click.stop="showDeleteChapter=true;removeChapterIndex=i" class="pi pi-trash" style="color: red; margin-left: auto;margin-right: 0.5rem; font-size: 1.25rem;"  /> 
+                </div>
+
               </template>
 
               <div class="element">
@@ -310,7 +339,7 @@ function moveDown(chapterindex: number, matIndex: number) {
               </div>
 
               <h3>Materials</h3>
-              <transition-group name="swap" tag="ul">
+              <TransitionGroup name="swap" tag="dev">
                 <li class="row2 row" v-for="(material, j) in chapters[i].materials" :key="material">
                   <div class="options">
                     <i class="pi pi-arrow-up" style="color: var(--accent1)" @click="moveUp(i, j)"></i>
@@ -346,7 +375,7 @@ function moveDown(chapterindex: number, matIndex: number) {
                     </div>
                   </div>
                 </li>
-              </transition-group>
+              </TransitionGroup>
 
               <div style="display: flex; justify-content: end">
                 <Button @click="

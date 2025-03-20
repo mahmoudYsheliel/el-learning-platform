@@ -30,7 +30,7 @@ div[class*='rtl'] .borderRigth {
   border-left: 0.25rem solid rgba(0, 0, 0, 0.2);
 }
 
-div[class*='rtl'] .flipDirection {
+*[class*='rtl'] .flipDirection {
   direction: rtl;
 }
 

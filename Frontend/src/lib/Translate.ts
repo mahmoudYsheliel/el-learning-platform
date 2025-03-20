@@ -51,7 +51,7 @@ export const translationModule = {
   },
   plans: {
     en: "Trace Plans",
-    ar: "Trace خطط",
+    ar: "خطط Trace" ,
   },
   programs: {
     en: "Programs",
@@ -535,7 +535,7 @@ export const translationModule = {
   },
   logWithParent: {
     en: "Thank you for completing the test! Your results are ready.",
-    ar: "شكرًا لك على إكمال الاختبار! نتائجك جاهزة.",
+    ar: ".شكرًا لك على إكمال الاختبار! نتائجك جاهزة",
   },
   returnHome: {
     en: "Return Home",
