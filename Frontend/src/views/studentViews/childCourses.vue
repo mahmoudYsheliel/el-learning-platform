@@ -63,6 +63,7 @@ coursesRequester.callApi().then((res) => {
 </template>
 
 <style scoped>
+
 .container {
   display: grid;
   grid-template-columns: 12rem 1fr;
@@ -88,7 +89,6 @@ p {
   margin: 0;
 }
 h1 {
-  line-height: 0;
   color: var(--accent2);
 }
 .availavle-courses,

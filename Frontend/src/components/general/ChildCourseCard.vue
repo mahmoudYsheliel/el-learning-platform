@@ -127,12 +127,13 @@ h2 {
   color: var(--header);
   margin: 0;
   padding-left: 1rem;
+  font-size: 1rem;
 }
 button {
   align-self: end;
 }
 img {
-  width: 24rem;
+  width: 20rem;
   aspect-ratio: 1.6/1;
   border-radius: 8px;
 }
