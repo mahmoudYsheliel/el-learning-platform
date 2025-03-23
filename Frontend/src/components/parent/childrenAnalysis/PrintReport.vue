@@ -104,8 +104,8 @@ function fetchComment(subset: subsets, score: number) {
 
 const track_image = computed(() => {
     const userType = info.getInfo?.gender ? info.getInfo?.gender : 'Male'
-    console.log(track_images,recommendTrack.value?.name,userType)
-      
+    console.log(track_images, recommendTrack.value?.name, userType)
+
     for (let i = 0; i < track_images.length; i++) {
         if (recommendTrack.value?.name == track_images[i].name && userType == track_images[i].type) {
             return track_images[i].path
@@ -202,9 +202,13 @@ const track_image = computed(() => {
         </div>
 
         <div class="section" ref="section5">
-            <div style="display: flex; justify-content: start;align-items: start;">
+            <div class="sectioni" style="display: flex; justify-content: start;align-items: start;">
                 <div class="field">
-                    <h2>{{ selectLang(translationModule.learningStyle) }} <span style="padding-left: 1rem; color: var(--header);">{{ selectLang(learningStyle?.title) }}</span> </h2>
+                    <h2>{{ selectLang(translationModule.learningStyle) }}</h2>
+
+                    <h2 style="padding-left: 1rem; color: var(--header);">{{ selectLang(learningStyle?.title) }}</h2>
+                    <img v-if="learningStyle?.image" :src="learningStyle?.image" style="margin-top: 4rem;width: 12rem;aspect-ratio: 1/1;" alt="">
+
                     <div class="labeled_text">
                         <h3>{{ selectLang(translationModule.styleOverview) }}</h3>
                         <p>{{ selectLang(learningStyle?.description) }}</p>
@@ -219,11 +223,12 @@ const track_image = computed(() => {
             </div>
 
 
-            <div style="display: flex; justify-content: start;align-items: start;">
+            <div class="sectioni" style="display: flex; justify-content: start;align-items: start;">
                 <div class="field">
 
-                    <h2>{{ selectLang(translationModule.recommendTracks) }} <span style="padding-left: 1rem; color: var(--header);">{{ selectLang(recommendTrack?.title) }}</span> </h2>
-
+                    <h2>{{ selectLang(translationModule.recommendTracks) }}</h2>
+                    <h2 style="padding-left: 1rem; color: var(--header);">{{ selectLang(recommendTrack?.title) }}</h2> 
+                    <img :src="track_image" style="margin-top: 8rem" alt="">
                     <div class="labeled_text">
                         <h3>{{ selectLang(translationModule.aboutTrack) }}</h3>
                         <p>{{ selectLang(recommendTrack?.description) }}</p>
@@ -253,7 +258,7 @@ const track_image = computed(() => {
 
 <style scoped>
 .section {
-    padding: 1rem;
+    padding-block: 1rem;
 }
 
 .subset_score {
@@ -348,15 +353,14 @@ p {
         /* Force content to start on a new page */
     }
 }
-img{
+
+img {
     width: 32%;
     min-width: 15rem;
 }
 
 @media (max-width:750px) {
-    img {
-        display: none;
-    }
+
 
     .scores {
         display: flex !important;
@@ -371,6 +375,23 @@ img{
         display: grid;
         grid-template-columns: auto !important;
         grid-template-rows: 1fr auto !important;
+    }
+}
+
+.field>img {
+    display: none;
+}
+
+@media screen and (max-width:700px) {
+    .sectioni>img {
+        display: none !important;
+    }
+
+    .field>img {
+        display: block;
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-inline: auto !important;
     }
 }
 </style>

@@ -44,7 +44,7 @@ function printComponent() {
                     <PrintReport class="print_only" :child-id="selectedChild" />
                     <ChildrenAnalysis class="no_print" :child-id="selectedChild" />
 
-                    <div class="button-container no_print" style="margin: 2rem;">
+                    <div class="button-container b1 no_print" style="margin: 2rem;">
                         <p style="font-weight: bolder;font-size: 1.25rem;">{{ selectLang(translationModule.startTraceJourney) }}</p>
 
                         <Button class="no_print" @click="router.push('/childCourses')" :label="selectLang(translationModule.clickToView)" style="background-image: linear-gradient(to bottom, var(--accent2), var(--accent5));" />
@@ -94,12 +94,15 @@ function printComponent() {
 
 @media screen and (max-width: 1000px) {
     .container {
-        grid-template-columns: 90vw;
+        grid-template-columns: 100vw;
         min-height: 100vh;
     }
 
     .sidebar {
         display: none;
+    }
+    .b1{
+        flex-direction: column;
     }
 }
 

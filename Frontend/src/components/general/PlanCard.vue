@@ -51,7 +51,7 @@ function enrollPlan() {
 
   </Dialog>
 
-  <div class="container">
+  <div class="container"  @click="router.push(`/plan/${plan?.id}/${route.params?.childId}`)">
     <h3>{{ selectLang(plan?.title) }}</h3>
 
     <img :src="plan?.image" alt="" />
@@ -60,7 +60,7 @@ function enrollPlan() {
      
       <Button
         :label="selectLang(translationModule.learnMore)"
-        @click="router.push(`/plan/${plan?.id}/${route.params?.childId}`)"
+       
       />
     </div>
   </div>
@@ -72,6 +72,7 @@ function enrollPlan() {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0.25rem 0.25rem 1rem;
+  cursor: pointer;
 }
 .container:hover {
   scale: 1.05;

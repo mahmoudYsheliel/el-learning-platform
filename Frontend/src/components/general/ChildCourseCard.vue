@@ -74,7 +74,13 @@ planRequester.callApi({ course_id: prop.courseId }).then((res) => {
 
 <template>
   <main>
-    <div class="container">
+    <div class="container" @click="
+          () => {
+            router.push(
+              `/courseDetails/${prop.courseId}/${childId}/${isEnrolled}`
+            );
+          }
+        ">
       <i
         v-if="prequisiteTitle"
         @mousemove="showPrequisite = true"
@@ -102,13 +108,7 @@ planRequester.callApi({ course_id: prop.courseId }).then((res) => {
       <img :src="course?.image" alt="" />
       <h2>{{ selectLang(course?.title) }}</h2>
       <Button
-        @click="
-          () => {
-            router.push(
-              `/courseDetails/${prop.courseId}/${childId}/${isEnrolled}`
-            );
-          }
-        "
+        
         :label="selectLang(translationModule.learnMore)"
       />
     </div>
@@ -121,6 +121,7 @@ planRequester.callApi({ course_id: prop.courseId }).then((res) => {
   display: flex;
   flex-direction: column;
   position: relative;
+  cursor: pointer;
 }
 h2 {
   color: var(--header);

@@ -107,10 +107,11 @@ watch((recommendTrack), () => {
     </div>
 
 
-    <div style="display: flex; justify-content: start;align-items: start;">
+    <div class="section" style="display: flex; justify-content: start;align-items: start;">
       <div class="field">
         <h1>{{ selectLang(translationModule.learningStyle) }}</h1>
         <h2>{{ selectLang(learningStyle?.title) }}</h2>
+        <img v-if="learningStyle?.image" :src="learningStyle?.image" style="margin-top: 8rem" alt="">
         <div class="labeled_text">
           <h3>{{ selectLang(translationModule.styleOverview) }}</h3>
           <p>{{ selectLang(learningStyle?.description) }}</p>
@@ -125,11 +126,11 @@ watch((recommendTrack), () => {
     </div>
 
 
-    <div style="display: flex; justify-content: start;align-items: start;">
+    <div class="section" style="display: flex; justify-content: start;align-items: start;">
       <div class="field">
         <h1>{{ selectLang(translationModule.recommendTracks) }}</h1>
         <h2>{{ selectLang(recommendTrack?.title) }}</h2>
-
+        <img :src="track_image" style="margin-top: 8rem" alt="">
         <div class="labeled_text">
           <h3>{{ selectLang(translationModule.aboutTrack) }}</h3>
           <p>{{ selectLang(recommendTrack?.description) }}</p>
@@ -147,6 +148,7 @@ watch((recommendTrack), () => {
       </div>
       <img :src="track_image" style="margin-top: 8rem" alt="">
     </div>
+
   </div>
 
 </template>
@@ -191,8 +193,26 @@ p {
   color: var(--text);
   padding-inline: 1rem;
 }
-img{
+
+img {
   width: 32%;
   min-width: 15rem;
+}
+
+.field>img {
+  display: none;
+}
+
+@media screen and (max-width:700px) {
+  .section>img {
+    display: none !important;
+  }
+
+  .field>img {
+    display: block;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-inline: auto !important;
+  }
 }
 </style>
