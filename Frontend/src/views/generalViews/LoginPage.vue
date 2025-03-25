@@ -228,6 +228,7 @@ h1 {
 button {
   padding: 0.5rem 2rem;
   box-shadow: 0px 10px 20px -8px #7b76f13d;
+  font-size: 1rem;
 }
 
 .button {
