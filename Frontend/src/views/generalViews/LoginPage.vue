@@ -31,7 +31,7 @@ function login() {
     missingInfo.value = true;
   } else {
     loginRequester.login(email.value, pass.value).then((res) => {
-      console.log(res)
+
       if (res?.msg == "no such user") {
         NoSuchUser.value = true;
       } else if (res?.access_token) {

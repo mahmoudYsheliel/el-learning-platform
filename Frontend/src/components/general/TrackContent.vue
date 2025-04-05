@@ -57,7 +57,7 @@ const props =defineProps(['levels'])
 
 h4,
 h5 {
-  margin: 0;
+  margin: 0.25rem;
 }
 h2 {
   color: var(--accent1);

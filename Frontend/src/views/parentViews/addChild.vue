@@ -87,7 +87,7 @@ function addChildFunc() {
 
 
 function switchChild(id: string) {
-  console.log(id)
+
   const token = useToken();
   const switchRequester = new HttpRequester("switch_to_child");
   switchRequester.callApi({ child_id: id }).then((res) => {

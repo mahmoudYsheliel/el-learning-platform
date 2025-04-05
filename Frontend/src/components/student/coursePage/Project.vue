@@ -28,7 +28,6 @@ const getproject = () => {
         const selectedlang = lang.getLang
 
         if (selectedlang == 'en') {
-          console.log(selectedlang, projectScourse.value)
           projectScourse.value = project.value?.source?.replace('view?usp=sharing', 'preview')?.replace('view?usp=drive_link', 'preview')
         }
         if (selectedlang == 'ar') {

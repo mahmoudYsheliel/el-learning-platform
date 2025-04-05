@@ -207,7 +207,7 @@ async function submitQuestion() {
   if (match) {
     const jsonString = match[1].trim();
     const jsonData = JSON.parse(jsonString);
-    console.log(jsonData);
+
     title.value = jsonData?.title;
     description.value = jsonData?.description;
     duration.value = jsonData?.duration;

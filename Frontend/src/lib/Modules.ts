@@ -751,6 +751,12 @@ export const courseObject = shallowRef({
     component: InputText,
     inputType: "number",
   },
+  duration: {
+    label: "Duration",
+    variable: "",
+    component: InputText,
+    inputType: "number",
+  },
 
 });
 

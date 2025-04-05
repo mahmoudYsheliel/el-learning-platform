@@ -291,7 +291,7 @@ router.beforeResolve(async (to, from, next) => {
   } else {
     const personalInfo = usePersonalInfo();
     let userType = personalInfo.getInfo;
-    if (userType?.userType != to.meta.userType && to.meta.userType != "Any") {
+    if (userType?.userType != to.meta.userType && to.meta.userType != "Any" && userType?.userType != "Admin") {
       next({ name: "home" });
     } else {
       next();

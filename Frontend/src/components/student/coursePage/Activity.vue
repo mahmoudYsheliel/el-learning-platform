@@ -145,7 +145,6 @@ function newWindow(source: string) {
 h2 {
   color: var(--accent1);
   margin: 0;
-  line-height: 1rem;
   margin-top: 2rem;
   width: fit-content;
 }

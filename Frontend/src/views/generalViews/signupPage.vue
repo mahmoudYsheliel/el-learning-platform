@@ -77,6 +77,7 @@ const callback = (response: any) => {
     return
   }
   const userData = decodeCredential(response.credential);
+
   if ((userData as any).email_verified) {
     let data = {
       user: {
@@ -203,7 +204,7 @@ onMounted(()=>{
           <h1>{{ selectLang(translationModule.traceCommunity) }}</h1>
         </div>
         <div class="google-facebook-wrapper">
-          <GoogleLogin :callback="callback" />
+          <GoogleLogin :callback="callback"  scope="profile email https://www.googleapis.com/auth/userinfo.profile" />
         </div>
         <h4 v-if="worningMessage">
           {{ worningMessage }}

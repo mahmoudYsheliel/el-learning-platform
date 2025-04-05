@@ -64,7 +64,7 @@ const props =defineProps(['chapters'])
 
 h4,
 h5 {
-  margin: 0.2rem;
+  margin: 0.25rem;
 }
 h2 {
   color: var(--accent1);

@@ -36,7 +36,7 @@ courseRequester.callApi({ course_id: route.params.courseId }).then((res) => {
       title: "",
       lessonCount: 0,
       quizCount: 0,
-      activityCount:0,
+      activityCount: 0,
       materials: <any[]>[],
     };
     obj.title = chapter?.title;
@@ -78,16 +78,16 @@ function enroll() {
     router.push("/login");
   } else if (personalInfo.getInfo?.userType == "Child") {
     const planCourseRequester = new HttpRequester("get_course_plan");
-      planCourseRequester
-        .callApi({ course_id: route.params?.courseId })
-        .then((res) => {
-          if (res?.success == false) {
-            showPromoCode.value = true;
-          } else if (res?.success == true) {
-            showBelongToPlan.value = true;
-            planId.value = res?.data?.plan?.id;
-          }
-        });
+    planCourseRequester
+      .callApi({ course_id: route.params?.courseId })
+      .then((res) => {
+        if (res?.success == false) {
+          showPromoCode.value = true;
+        } else if (res?.success == true) {
+          showBelongToPlan.value = true;
+          planId.value = res?.data?.plan?.id;
+        }
+      });
   } else if (personalInfo.getInfo?.userType == "Parent") {
     if (route.params?.childId == "0") {
       showSelectChild.value = true;
@@ -109,11 +109,11 @@ function enroll() {
 
 function requestEnrollmentWithPromoCode(promoCode: string) {
   showPromoCode.value = false;
-  let childId 
-  if (personalInfo.getInfo?.userType == 'Parent'){
+  let childId
+  if (personalInfo.getInfo?.userType == 'Parent') {
     childId = route.params.childId ?? ''
   }
-  else if (personalInfo.getInfo?.userType == 'Child'){
+  else if (personalInfo.getInfo?.userType == 'Child') {
     childId = personalInfo.getInfo.id
   }
   const requestEnrollment = new HttpRequester("request_enrollment");
@@ -158,22 +158,23 @@ function viewMaterial() {
     })?.ristriction_on_course;
 
     new HttpRequester("get_course")
-      .callApi({ course_id: prequisiteId.value ||"" })
+      .callApi({ course_id: prequisiteId.value || "" })
       .then((res) => {
         prequisiteTitle.value = selectLang(res?.data?.course?.title) || "";
       });
 
     new HttpRequester("get_enrollment")
-      .callApi({ course_id: prequisiteId.value ||"" })
+      .callApi({ course_id: prequisiteId.value || "" })
       .then((res) => {
-        if (res?.data?.enrollment?.is_completed==false) {
+        if (res?.data?.enrollment?.is_completed == false) {
           showPrequisiteDialog.value = true;
-        
-         
+
+
         } else {
+          
           router.push(
             `/viewCoursePage/${route.params.courseId}/${enrollmentId.value}/${course.value?.chapters[0]?.materials[0]?.Id}`
-          ); 
+          );
         }
       });
   });
@@ -183,57 +184,29 @@ function viewMaterial() {
 <template>
   <Navbar />
   <div class="big-container">
-    <AskParentDialog
-      :showDialog="showAskParent"
-      @removeDialog="
-        (res) => {
-          showAskParent = false;
-        }
-      "
-    />
+    <AskParentDialog :showDialog="showAskParent" @removeDialog="
+      (res) => {
+        showAskParent = false;
+      }
+    " />
 
-    <PrequisiteDialog
-      :course="prequisiteTitle"
-      :show-dialog="showPrequisiteDialog"
-      @remove-dialog="showPrequisiteDialog = false"
-    />
+    <PrequisiteDialog :course="prequisiteTitle" :show-dialog="showPrequisiteDialog" @remove-dialog="showPrequisiteDialog = false" />
     <EnrolmentSuccedDialog :showDialog="showEnrollmentSuccess" :cost="cost" />
     <GoToChildrenCoursesDialog :showDialog="showSelectChild" />
-    <CourseBelongsToPlanDialog
-      :showDialog="showBelongToPlan"
-      :planId="planId"
-      :childId="route.params?.childId"
-    />
-    <PromoCodeDialog
-      :showDialog="showPromoCode"
-      @promoCode="
-        (promo_code) => {
-          requestEnrollmentWithPromoCode(promo_code);
-        }
-      "
-    />
-    <CourseDescribtion
-      :course="course"
-      :isEnrolled="isEnrolled"
-      :notShowButton="
-        personalInfo.getInfo?.userType == 'Parent' &&
-        route.params.isEnrolled == '1'
-      "
-      @enroll="enroll"
-      @viewMaterial="viewMaterial"
-    />
+    <CourseBelongsToPlanDialog :showDialog="showBelongToPlan" :planId="planId" :childId="route.params?.childId" />
+    <PromoCodeDialog :showDialog="showPromoCode" @promoCode="
+      (promo_code) => {
+        requestEnrollmentWithPromoCode(promo_code);
+      }
+    " />
+    <CourseDescribtion :course="course" :isEnrolled="isEnrolled" :userType=personalInfo.getInfo?.userType :notShowButton="personalInfo.getInfo?.userType == 'Parent' &&
+      route.params.isEnrolled == '1'
+      " @enroll="enroll" @viewMaterial="viewMaterial" />
 
     <div class="content">
-      <CourseMaterial :chapters="chapters" v-if="chapters?.length>0" />
+      <CourseMaterial :chapters="chapters" v-if="chapters?.length > 0" />
 
-      <Information
-        :categories="course?.categories"
-        :title="selectLang(course?.title)"
-        :price="course?.price"
-        :duration="course?.duration"
-        :min_age="course?.min_age"
-        :max_age="course?.max_age"
-      />
+      <Information :categories="course?.categories" :title="selectLang(course?.title)" :price="course?.price" :duration="course?.duration" :min_age="course?.min_age" :max_age="course?.max_age" />
     </div>
   </div>
   <Footer />
@@ -247,6 +220,7 @@ function viewMaterial() {
   margin-bottom: 4rem;
   gap: 2rem;
 }
+
 .content {
   display: flex;
   align-items: center;
@@ -260,6 +234,7 @@ function viewMaterial() {
     flex-direction: column;
     padding-inline: 5rem;
   }
+
   .content {
     margin-top: 3rem;
   }

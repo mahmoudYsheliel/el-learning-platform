@@ -40,7 +40,7 @@ function getAnalysis() {
         }
         IQResult.value = Math.round(IQResult.value / IQSection.value.length)
         const bestLearningStyle = getMaxObject(analysis.value?.learning_styles_results)
-        console.log(bestLearningStyle)
+
         new HttpRequester('get_learning_style').callApi({ id: bestLearningStyle?.learning_style_id }).then(res => {
           learningStyle.value = res?.data?.learning_style
         })

@@ -3,7 +3,7 @@ import { selectLang, translationModule } from "@/lib/Translate";
 import Button from "primevue/button";
 import 'primeicons/primeicons.css'
 
-const props = defineProps(["course", "isEnrolled", "notShowButton"]);
+const props = defineProps(["course", "isEnrolled", "notShowButton","userType"]);
 const emits = defineEmits(["enroll", "viewMaterial"]);
 </script>
 
@@ -17,11 +17,11 @@ const emits = defineEmits(["enroll", "viewMaterial"]);
     <div class="description">
       <div class="header">
         <h2>{{ selectLang(translationModule.courseDescription) }}</h2>
-        <Button  v-if="!isEnrolled && !notShowButton && !course?.is_locked" :label="selectLang(translationModule.enrollNow)" @click="() => {
+        <Button  v-if="!isEnrolled && !notShowButton && !course?.is_locked && userType!=='Admin'" :label="selectLang(translationModule.enrollNow)" @click="() => {
             $emit('enroll');
           }
           " />
-        <Button v-if="isEnrolled && !notShowButton && !course?.is_locked" :label="selectLang(translationModule.viewMat)" @click="() => {
+        <Button v-if="(isEnrolled && !notShowButton && !course?.is_locked) || userType=='Admin'" :label="selectLang(translationModule.viewMat)" @click="() => {
             $emit('viewMaterial');
           }
           " />

@@ -104,7 +104,6 @@ function fetchComment(subset: subsets, score: number) {
 
 const track_image = computed(() => {
     const userType = info.getInfo?.gender ? info.getInfo?.gender : 'Male'
-    console.log(track_images, recommendTrack.value?.name, userType)
 
     for (let i = 0; i < track_images.length; i++) {
         if (recommendTrack.value?.name == track_images[i].name && userType == track_images[i].type) {

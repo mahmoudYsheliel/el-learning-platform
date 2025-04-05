@@ -72,6 +72,10 @@ categoriesRequester.callApi().then((res) => {
               ...courseObject.value.price,
               variable: course.value?.price || "",
             },
+            duration: {
+              ...courseObject.value.duration,
+              variable: course.value?.duration || "",
+            },
           };
 
           for (let objective of course?.value.objectives) {
@@ -137,10 +141,11 @@ function updatecourse() {
       chapters: chapters.value,
       categories: updatedcourseCategories,
       objectives: objectives.value,
-      price: courseObject.value.price.variable,
-      min_age: courseObject.value.minAge.variable,
-      max_age: courseObject.value.maxAge.variable,
+      price: Number(courseObject.value.price.variable),
+      min_age: Number(courseObject.value.minAge.variable),
+      max_age: Number(courseObject.value.maxAge.variable),
       image: courseObject.value.image.variable,
+      duration: Number(courseObject.value.duration.variable),
       is_locked: isLocked.value
     },
   };

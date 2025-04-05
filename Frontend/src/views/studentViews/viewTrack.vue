@@ -87,7 +87,7 @@ programRequester.callApi({ program_id: route.params?.programId }).then(res => {
                     <h3>{{ selectLang(level?.title) }} </h3>
                     <div style="display: flex;flex-direction: column;width: 100%;justify-content: center;align-items: center;">
                         <div class="courses_container" style="margin-block: 2rem;">
-                            <CourseCard v-for="course in level?.courses" :course="course" search="" :width="'18rem'"/>
+                            <CourseCard v-for="course in level?.courses" :course="course" search="" :width="'18rem'" />
                             <div style="width: 100%;;text-align: center;font-weight: bolder;font-size: 4rem;background: radial-gradient(var(--accent5),var(--accent1));background-clip: text;color: transparent;" v-if="level.courses.length == 0">{{ selectLang(translationModule.commingSoon) }}</div>
                         </div>
                         <div class="level-breaker" v-if="i != track?.levels?.length - 1"></div>
@@ -113,11 +113,9 @@ p {
 
 h3 {
     color: var(--accent3);
-    text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 3.25rem;
-    margin: 0;
-    padding: 0;
+
 }
 
 .level-breaker {
@@ -166,17 +164,20 @@ h3 {
 .level {
     padding-inline: 1rem;
     display: grid;
-    grid-template-columns: 16rem calc(100% - 16rem);
+    grid-template-columns: 1fr;
 
     align-items: center;
 
 }
 
+h3 {
+    text-wrap: wrap;
+}
 
 h2 {
     color: var(--accent1);
-    margin-bottom: 0;
     margin-top: 2rem;
+    font-size: 1.75rem;
 }
 
 .courses_tracks {
@@ -202,19 +203,6 @@ h1 {
     .track_video {
         display: flex;
         flex-direction: column;
-    }
-
-    .level {
-        padding-inline: 1rem;
-        display: grid;
-        grid-template-columns: 1fr;
-
-        align-items: center;
-
-    }
-
-    h3 {
-        text-align: start;
     }
 
     .track-container {

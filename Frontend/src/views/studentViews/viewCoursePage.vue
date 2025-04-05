@@ -24,13 +24,16 @@ const router = useRouter();
 const personalInfo = usePersonalInfo();
 
 const enrollmentRequester = new HttpRequester("get_enrollment");
-enrollmentRequester
+if (personalInfo.getInfo?.userType !='Admin'){
+  enrollmentRequester
   .callApi({ course_id: route.params.courseId })
   .then((res) => {
     if (res?.success == false) {
       router.push("/");
     }
-  });
+  })
+}
+
 
 const getCourse = async () => {
   const courseRequester = new HttpRequester("get_course");
