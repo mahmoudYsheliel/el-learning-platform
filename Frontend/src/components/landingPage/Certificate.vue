@@ -27,20 +27,7 @@ programRequester.callApi().then((res) => {
 
 <template>
   <main>
-    <img class="image" src="/images/certificate.png" alt="" />
     <div class="container">
-      <img
-        class="sparkle"
-        style="position: absolute; left: -25%"
-        src="/images/StarFour.svg"
-        alt=""
-      />
-      <img
-        class="sparkle"
-        style="position: absolute; left: -30%; bottom: 0"
-        src="/images/Sparkle.svg"
-        alt=""
-      />
       <h1>{{ selectLang(translationModule.earnCer) }}</h1>
       <h1>{{ selectLang(translationModule.companyName) }}</h1>
       <p>
@@ -48,18 +35,19 @@ programRequester.callApi().then((res) => {
       </p>
       <Button :label=selectLang(translationModule.joinUs)  @click="items[0]?.command" />
     </div>
+    <img class="image" src="/images/certificate.png" alt="" />
   </main>
 </template>
 
 <style scoped>
 main {
   display: flex;
-  padding: 5rem 10rem;
+  padding-block: 4rem ;
+  gap: 4rem;
+  align-items: start;
   justify-content: space-between;
-}
-.container {
-  width: 50%;
-  position: relative;
+  width: 90%;
+  margin-inline: auto;
 }
 
 h1 {
@@ -81,21 +69,11 @@ button {
 .image {
   width: 40%;
 }
-@media screen and (max-width: 1400px) {
+
+
+@media screen and (max-width: 1300px) {
   .image {
-    width: 30%;
-    height: fit-content;
-  }
-  .container {
     width: 60%;
-  }
-  main {
-    padding-inline: 2rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  .image {
-    width: 62%;
   }
  
   main{
@@ -104,9 +82,10 @@ button {
     gap: 2rem;
   }
 }
-@media screen and (max-width: 1800px) {
-  .sparkle {
-    display: none;
+@media screen and (max-width: 600px) {
+  .image {
+    width: 80%;
   }
+
 }
 </style>

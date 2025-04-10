@@ -83,16 +83,18 @@ h1 {
   line-height: 3rem;
 }
 .wrapper {
+  width: 90%;
+  margin-inline: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 3rem;
 }
 p.header {
   color: var(--text);
 }
 .content {
-  width: 62.5%;
+  
   display: flex;
   align-items: center;
   justify-content: center;

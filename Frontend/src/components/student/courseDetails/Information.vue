@@ -31,10 +31,10 @@ defineProps(["title", "price", "categories", "min_age", "max_age", "duration"]);
 
 <style scoped>
 main {
-  max-width: 80%;
+  max-width: 90%;
 }
 .container {
-  padding: 1.5rem;
+  padding: 1.25rem;
   border-radius: 8px;
   color: var(--text);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,

@@ -215,7 +215,8 @@ function viewMaterial() {
 <style scoped>
 .big-container {
   display: grid;
-  padding-inline: 4rem;
+  width: 90%;
+  margin-inline: auto;
   grid-template-columns: 3fr 2fr;
   margin-bottom: 4rem;
   gap: 2rem;
@@ -232,7 +233,6 @@ function viewMaterial() {
   .big-container {
     display: flex;
     flex-direction: column;
-    padding-inline: 5rem;
   }
 
   .content {

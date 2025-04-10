@@ -19,7 +19,7 @@ const responsiveOptions = ref([
   },
   {
     breakpoint: "767px",
-    numVisible: 2,
+    numVisible: 1,
     numScroll: 1,
   },
   {
@@ -43,10 +43,8 @@ const responsiveOptions = ref([
         <Carousel 
         style="direction: ltr;"
           :value="achievments"
-          :numVisible="1"
-          :numScroll="1"
-          :responsiveOptions="responsiveOptions" c
-          ircular 
+          
+          :responsiveOptions="responsiveOptions" circular 
     :autoplayInterval="3000"
         >
           <template #item="slotProps">
@@ -71,7 +69,11 @@ const responsiveOptions = ref([
 
 <style scoped>
 main {
-  padding: 5rem 10rem;
+  padding-block: 4rem ;
+}
+.container{
+  width: 90%;
+  margin-inline: auto;
 }
 h1 {
   width: fit-content;
@@ -82,9 +84,6 @@ h1 {
 p {
   color: var(--text);
 }
-button {
-  padding: 1rem 3rem;
-}
 .achievment {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -93,18 +92,13 @@ button {
 img {
   width: 100%;
   border-radius: 0.5rem;
-  height: fit-content;
 }
-@media screen and (max-width: 1450px) {
-  main {
-    padding-inline: 5rem;
-  }
-}
-@media screen and (max-width: 1050px) {
+
+@media screen and (max-width: 1300px) {
   .achievment {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+
 }
 }
 </style>

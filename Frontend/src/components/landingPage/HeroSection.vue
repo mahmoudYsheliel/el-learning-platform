@@ -47,7 +47,7 @@ const router = useRouter();
 
 main {
   background-color: var(--primarry);
-  padding-block: 4rem;
+  padding-block: 2rem;
   position: relative;
 }
 

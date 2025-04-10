@@ -72,7 +72,9 @@ const responsiveOptions = ref([
 
 <style scoped>
 main {
-  padding: 5rem 10rem;
+  margin-block: 4rem;
+  width: 90%;
+  margin-inline: auto;
 }
 h1 {
   margin: 0;
@@ -136,10 +138,6 @@ h4 {
     transform: translate(0, 0);
   }
 }
-@media screen and (max-width: 1400px) {
-  main {
-    padding-inline: 3rem;
-  }
-}
+
 
 </style>
