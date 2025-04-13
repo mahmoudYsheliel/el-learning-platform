@@ -393,7 +393,7 @@ function orderRequests(type: string) {
 }
 .row {
   display: grid;
-  grid-template-columns: repeat(7, 10rem);
+  grid-template-columns: repeat(7, 15rem);
 }
 
 .row > * {
