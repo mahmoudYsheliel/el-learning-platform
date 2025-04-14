@@ -79,5 +79,5 @@ class RequestEnrollment(BaseModel):
     discount: Optional[int]=0
     comments:Optional[list[str]]=[]
     last_comment_id:Optional[int]=0
-    created_at: Optional[datetime]=datetime.now().isoformat()
+    created_at: Optional[datetime | str]=datetime.now()
     

@@ -30,7 +30,6 @@ async def login_for_access_token(
     access_token = create_access_token(
         data={'userId': userid}, expires_delta=access_token_expires
     )
-    print(Token(access_token=access_token))
     return Token(access_token=access_token)
 
 

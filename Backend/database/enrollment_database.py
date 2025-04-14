@@ -1,6 +1,7 @@
 from models.enrollments import Enrollment, RequestEnrollment, AddProgress, Comment
 from models.runtime import ServiceResponse
 from database.mongo_driver import get_database, validate_bson_id
+from lib.email_service import send_email
 
 
 async def create_enrollment(enrollment: Enrollment) -> ServiceResponse:
@@ -464,7 +465,20 @@ async def request_enrollment(requesr: RequestEnrollment) -> ServiceResponse:
         .insert_one(requesr.model_dump())
     )
     requesrt_enrollment_id = str(mdb_result.inserted_id)
+    user = await get_database().get_collection("user").find_one({"_id":validate_bson_id(requesr.parent_id)}) 
+    if requesr.package_type == "course":
+        course = await get_database().get_collection("course").find_one({"_id":validate_bson_id(requesr.course_id)}) 
+    if requesr.package_type == "plan":
+        course = await get_database().get_collection("plan").find_one({"_id":validate_bson_id(requesr.course_id)}) 
+    msg = f"""
+    There is a new enrollment request:
+    email: {user["email"]}
+    phone: {user["phone_number"]}
+    course: {course["title"]["en"]}
+    price: {course["price"]}
+    """
     if requesrt_enrollment_id:
+        send_email('Enrollment Request',msg,"s-mahmoud.sheliel@zewailcity.edu.eg")
         return ServiceResponse(data={"request": requesr})
     return ServiceResponse(success=False, msg="couln't add enrollment", status_code=409)
 

@@ -156,15 +156,16 @@ h3 {
 
 .courses_container {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     gap: 2rem;
-    overflow-x: auto;
     padding-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .level {
     padding-inline: 1rem;
-    display: grid;
-    grid-template-columns: 1fr;
 
     align-items: center;
 
