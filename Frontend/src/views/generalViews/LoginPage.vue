@@ -228,7 +228,8 @@ h1 {
 button {
   width: 100%;
   box-shadow: 0px 10px 20px -8px #7b76f13d;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  padding: 0;
 }
 
 

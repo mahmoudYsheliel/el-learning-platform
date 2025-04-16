@@ -13,8 +13,13 @@ import "primeicons/primeicons.css";
 import AddMaterialDialog from "@/components/dialogs/AddMaterialDialog.vue";
 import { ref, reactive } from "vue";
 import RadioButton from "primevue/radiobutton";
-import TabView from "primevue/tabview";
-import TabPanel from "primevue/tabpanel";
+
+import Tabs from 'primevue/tabs';
+import TabList from 'primevue/tablist';
+import Tab from 'primevue/tab';
+import TabPanels from 'primevue/tabpanels';
+import TabPanel from 'primevue/tabpanel';
+
 import RemoveChapterDialog from "@/components/dialogs/RemoveChapterDialog.vue";
 
 const route = useRoute();
@@ -190,18 +195,18 @@ function moveDown(chapterindex: number, matIndex: number) {
 
 function moveUpChapter(chapterindex: number) {
   let tem = chapters.value[chapterindex];
-  chapters.value[chapterindex] = chapters.value[chapterindex-1];
-  chapters.value[chapterindex-1] = tem;
+  chapters.value[chapterindex] = chapters.value[chapterindex - 1];
+  chapters.value[chapterindex - 1] = tem;
 }
 function moveDownChapter(chapterindex: number) {
   let tem = chapters.value[chapterindex];
-  chapters.value[chapterindex] = chapters.value[chapterindex+1];
-  chapters.value[chapterindex+1] = tem;
+  chapters.value[chapterindex] = chapters.value[chapterindex + 1];
+  chapters.value[chapterindex + 1] = tem;
 
 }
 
 
-const showDeleteChapter =ref(false)
+const showDeleteChapter = ref(false)
 const removeChapterIndex = ref(-1)
 </script>
 
@@ -210,19 +215,41 @@ const removeChapterIndex = ref(-1)
     addMaterial(info);
   }
   " />
-  <RemoveChapterDialog :showDialog="showDeleteChapter" @hide-dialog="showDeleteChapter=false"  @confirm="chapters.splice(removeChapterIndex,1);showDeleteChapter=false"/>
+  <RemoveChapterDialog :showDialog="showDeleteChapter" @hide-dialog="showDeleteChapter = false" @confirm="chapters.splice(removeChapterIndex, 1); showDeleteChapter = false" />
   <Nanbar />
 
   <div class="container">
-    <TabView :scrollable="true">
-      <TabPanel>
-        <template #header>
+   <Tabs value="0">
+    <TabPanels>
+      <TabList>
+        <Tab value="0" as="div" class="flex items-center gap-2">
           <div class="tab_header">
             <i class="pi pi-info"></i>
             <p>Basic Info</p>
           </div>
+        </Tab>
+        <Tab value="1" as="div" class="flex items-center gap-2">
+          <div class="tab_header">
+            <i class="pi pi-align-justify"></i>
+            <p>Categories</p>
+          </div>
+        </Tab>
+        <Tab value="2" as="div">
+          <div class="tab_header">
+            <i class="pi pi-star"></i>
+            <p>Objectives</p>
+          </div>
+        </Tab>
+        <Tab value="3" as="div">
+          <div class="tab_header">
+            <i class="pi pi-book"></i>
+            <p>Chapters</p>
+          </div>
+        </Tab>
+      </TabList>
 
-        </template>
+      <TabPanel value="0" as="div">
+
         <div class="tab_container">
           <div class="element" v-for="element in courseObject">
             <h3>{{ element.label }}</h3>
@@ -247,14 +274,8 @@ const removeChapterIndex = ref(-1)
         </div>
       </TabPanel>
 
-      <TabPanel>
-        <template #header>
-          <div class="tab_header">
-            <i class="pi pi-align-justify"></i>
-            <p>Categories</p>
-          </div>
+      <TabPanel value="1" as="div">
 
-        </template>
         <div class="tab_container">
           <div v-for="(category, i) in courseCategories" class="row">
             <div style="display: grid; grid-template-columns: 3fr 1fr;gap: 1rem;">
@@ -274,18 +295,8 @@ const removeChapterIndex = ref(-1)
         </div>
       </TabPanel>
 
+      <TabPanel value="2" as="div">
 
-
-
-
-      <TabPanel>
-        <template #header>
-          <div class="tab_header">
-            <i class="pi pi-star"></i>
-            <p>Objectives</p>
-          </div>
-
-        </template>
         <div class="tab_container">
           <div v-for="(objective, i) in objectives" class="row">
             <div class="element">
@@ -309,18 +320,12 @@ const removeChapterIndex = ref(-1)
       </TabPanel>
 
 
-      <TabPanel>
-        <template #header>
-          <div class="tab_header">
-            <i class="pi pi-book"></i>
-            <p>Chapters</p>
-          </div>
-
-        </template>
+      <TabPanel value="3" as="div">
+     
         <div class="tab_container">
 
           <Accordion>
-            
+
             <AccordionTab class="row" v-for="(chapter, i) in chapters" :key="'chap' + i.toString()">
               <template #header>
                 <div style="display: flex;gap: 0.5rem;align-items: center;width: 80vw;">
@@ -329,7 +334,7 @@ const removeChapterIndex = ref(-1)
                     <i class="pi pi-arrow-down" style="color: var(--accent1)" @click.stop="moveDownChapter(i)" v-if="i < chapters.length - 1"></i>
                   </div>
                   <h3>{{ chapter.title.en }}</h3>
-                  <icon @click.stop="showDeleteChapter=true;removeChapterIndex=i" class="pi pi-trash" style="color: red; margin-left: auto;margin-right: 0.5rem; font-size: 1.25rem;"  /> 
+                  <icon @click.stop="showDeleteChapter = true; removeChapterIndex = i" class="pi pi-trash" style="color: red; margin-left: auto;margin-right: 0.5rem; font-size: 1.25rem;" />
                 </div>
 
               </template>
@@ -398,7 +403,9 @@ const removeChapterIndex = ref(-1)
         </div>
 
       </TabPanel>
-    </TabView>
+      
+    </TabPanels>
+   </Tabs>
 
     <div class="btn-container">
       <Button @click="updatecourse" label="Save Changes" />

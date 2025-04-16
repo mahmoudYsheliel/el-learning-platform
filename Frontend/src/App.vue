@@ -11,7 +11,8 @@ const lang = useLang()
   </div>
 </template>
 
-<style>
+<style >
+
 .rtl {
   direction: rtl;
 }

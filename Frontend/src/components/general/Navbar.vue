@@ -233,6 +233,7 @@ i {
 .button {
   background-color: var(--primary);
   color: var(--accent1);
+  padding-block: 0;
 }
 
 .splitButton::after {

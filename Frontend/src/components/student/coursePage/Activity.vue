@@ -11,7 +11,6 @@ defineProps(["completed"]);
 
 const route = useRoute();
 const activity = ref();
-const translationModuleRef = ref<any>(translationModule);
 const path = computed(() => {
   return route.params.materialId;
 });
@@ -47,18 +46,7 @@ function markCompleted() {
     });
 }
 
-const fields = [
-  "objectives",
-  "terms_concepts",
-  "materials",
-  "instructions",
-  "results",
-  "conclusions",
-];
 
-function newWindow(source: string) {
-  window.open(source);
-}
 </script>
 
 <template>
@@ -70,62 +58,8 @@ function newWindow(source: string) {
       <p v-if="activity?.description">
         {{ selectLang(activity?.description) }}
       </p>
-      <div class="wrapper">
-        <div class="images" v-if="activity?.start_images">
-          <img v-for="image in activity?.start_images" :src="image" alt="" />
-        </div>
-
-        <div class="items" v-if="activity?.sources">
-          <h3>{{ selectLang(translationModule.sources) }}</h3>
-          <div class="item" v-for="(source, i) in activity?.sources">
-            <p
-              style="color: var(--secondary); cursor: pointer"
-              @click="
-                () => {
-                  newWindow(source);
-                }
-              "
-            >
-              {{ selectLang(translationModule.source) }} {{ i + 1 }}
-            </p>
-          </div>
-        </div>
-
-        <div class="allitems" v-for="field in fields">
-          <div class="items" v-if="activity?.[field]">
-            <div class="images" v-if="activity?.[field]?.start_images">
-              <img
-                v-for="image in activity?.[field]?.start_images"
-                :src="image"
-                alt=""
-              />
-            </div>
-            <h3>{{ selectLang(translationModuleRef?.[field]) }}</h3>
-            <div class="item" v-for="item in activity?.[field]?.items">
-              <p>
-                <span :class="{ terms: field == 'terms_concepts' }">
-                  - {{ selectLang(item.text) }}</span
-                >
-                <span v-if="item.description"
-                  >: {{ selectLang(item.description) }}</span
-                >
-              </p>
-              <img v-if="item?.image" :src="item?.image" alt="" />
-            </div>
-            <div class="images" v-if="activity?.[field]?.end_images">
-              <img
-                v-for="image in activity?.[field]?.end_images"
-                :src="image"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="images" v-if="activity?.end_images">
-          <img v-for="image in activity?.end_images" :src="image" alt="" />
-        </div>
-      </div>
+      <div v-html="selectLang(activity?.content)"></div>
+     
       <Button
         :disabled="completed"
         icon="pi pi-check-circle"

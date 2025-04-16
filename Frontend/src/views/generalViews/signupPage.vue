@@ -203,9 +203,9 @@ onMounted(()=>{
           <h1>{{ selectLang(translationModule.welcome) }}</h1>
           <h1>{{ selectLang(translationModule.traceCommunity) }}</h1>
         </div>
-        <div class="google-facebook-wrapper">
+        <!-- <div class="google-facebook-wrapper">
           <GoogleLogin :callback="callback"  scope="profile email https://www.googleapis.com/auth/userinfo.profile" />
-        </div>
+        </div> -->
         <h4 v-if="worningMessage">
           {{ worningMessage }}
         </h4>
@@ -409,7 +409,8 @@ h1 {
 button {
   width: 100%;
   box-shadow: 0px 10px 20px -8px #7b76f13d;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  padding: 0;
 }
 
 .button {
