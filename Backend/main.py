@@ -55,9 +55,9 @@ app.include_router(activity_api.router)
 
 
     
-# #Mount the static files directory
+#Mount the static files directory
 app.mount('/', StaticFiles(directory='dist', html=True), name='public')
 
-# if __name__ == '__main__':
-#     uvicorn.run(app, host='0.0.0.0', port=8080)
+#if __name__ == '__main__':
+#   uvicorn.run(app, host='0.0.0.0', port=8080)
     

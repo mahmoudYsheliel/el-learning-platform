@@ -65,6 +65,15 @@ async def get_activity(activity_id: str, userId: str) -> ServiceResponse:
                     "title": 1,
                     "description": 1,
                     "content": 1,
+                    "start_images": 1,
+                    "end_images": 1,
+                    "sources": 1,
+                    "objectives": 1,
+                    "terms_concepts": 1,
+                    "materials": 1,
+                    "instructions": 1,
+                    "results": 1,
+                    "conclusions": 1,
                 },
             )
         )
@@ -109,6 +118,15 @@ async def get_activity(activity_id: str, userId: str) -> ServiceResponse:
                     "title": 1,
                     "description": 1,
                     "content": 1,
+                    "start_images": 1,
+                    "end_images": 1,
+                    "sources": 1,
+                    "objectives": 1,
+                    "terms_concepts": 1,
+                    "materials": 1,
+                    "instructions": 1,
+                    "results": 1,
+                    "conclusions": 1,
                 },
             )
         )

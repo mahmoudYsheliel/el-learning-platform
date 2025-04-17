@@ -1,0 +1,150 @@
+{
+    "_id": {
+      "$oid": "66d3851af6fb98d8098e4ffc"
+    },
+    "id": null,
+    "title": {
+      "en": "Activity: Build a Rotor Motor",
+      "ar": "نشاط: بناء محرك دوار"
+    },
+    "description": {
+      "en": "Learn how to create a simple rotor motor using a template. Follow the instructions to cut, fold, and assemble the propeller blades for a fun, spinning device.",
+      "ar": "تعلم كيفية إنشاء محرك دوار بسيط باستخدام قالب. اتبع التعليمات لقص وثني وتجميع شفرات المروحة لجهاز دوار ممتع."
+    },
+    "start_images": [
+      "https://res.cloudinary.com/dwg9hjzok/image/upload/v1744696338/Rotor_Motor-Picsart-AiImageEnhancer_xo0orv.webp"
+    ],
+    "end_images": null,
+    "sources": null,
+    "objectives": {
+      "items": [
+        {
+          "id": 1,
+          "text": {
+            "en": "To construct a functioning rotor motor from a template.",
+            "ar": "بناء محرك دوار عملي من قالب."
+          },
+          "description": null,
+          "image": null
+        }
+      ],
+      "start_images": [],
+      "end_images": []
+    },
+    "terms_concepts": {
+      "items": [
+        {
+          "id": 1,
+          "text": {
+            "en": "Rotor Motor",
+            "ar": "محرك دوار"
+          },
+          "description": {
+            "en": "A device that spins when dropped, creating a simple rotating motion using air resistance.",
+            "ar": "جهاز يدور عند إسقاطه، ويخلق حركة دورانية بسيطة باستخدام مقاومة الهواء."
+          },
+          "image": null
+        },
+        {
+          "id": 2,
+          "text": {
+            "en": "Propeller Blades",
+            "ar": "شفرات المروحة"
+          },
+          "description": {
+            "en": "The parts of the rotor motor that are folded to create the spinning motion.",
+            "ar": "الأجزاء التي يتم ثنيها في المحرك الدوار لتوليد الحركة الدورانية."
+          },
+          "image": null
+        }
+      ],
+      "start_images": [],
+      "end_images": []
+    },
+    "materials": {
+      "items": [
+        {
+          "id": 1,
+          "text": {
+            "en": "A4 paper",
+            "ar": "ورق A4"
+          },
+          "description": null,
+          "image": null
+        },
+        {
+          "id": 2,
+          "text": {
+            "en": "Scissors",
+            "ar": "مقص"
+          },
+          "description": null,
+          "image": null
+        }
+      ],
+      "start_images": [],
+      "end_images": []
+    },
+    "instructions": {
+      "items": [
+        {
+          "id": 1,
+          "text": {
+            "en": "Cut along the solid lines of the template.",
+            "ar": "اقص على طول الخطوط الصلبة في القالب."
+          },
+          "description": null,
+          "image": null
+        },
+        {
+          "id": 2,
+          "text": {
+            "en": "Fold along the dotted lines.",
+            "ar": "اثنِ على طول الخطوط المنقطة."
+          },
+          "description": null,
+          "image": null
+        },
+        {
+          "id": 3,
+          "text": {
+            "en": "Fold the propeller blades (Wing A and Wing B) in opposite directions.",
+            "ar": "اثنِ شفرات المروحة (الجناح A والجناح B) في اتجاهات متعاكسة."
+          },
+          "description": null,
+          "image": null
+        },
+        {
+          "id": 4,
+          "text": {
+            "en": "Fold X and Y toward the center.",
+            "ar": "اثنِ X و Y نحو المركز."
+          },
+          "description": null,
+          "image": null
+        },
+        {
+          "id": 5,
+          "text": {
+            "en": "Fold Z up to give the body rigidity.",
+            "ar": "اثنِ Z للأعلى لإعطاء الجسم صلابة."
+          },
+          "description": null,
+          "image": null
+        },
+        {
+          "id": 6,
+          "text": {
+            "en": "Stand up and drop the rotor motor.",
+            "ar": "قف واسقط المحرك الدوار."
+          },
+          "description": null,
+          "image": null
+        }
+      ],
+      "start_images": [],
+      "end_images": []
+    },
+    "results": null,
+    "conclusions": null
+  }

@@ -5,12 +5,13 @@ import { ref, watch } from "vue";
 import "primeicons/primeicons.css";
 import { HttpRequester } from "@/lib/APICaller";
 import { type TwoLang } from "@/lib/Interfaces";
-
+import { selectLang } from "@/lib/Translate";
+import Textarea from "primevue/textarea";
 
 const title = ref<TwoLang>({ en: "", ar: "" });
 const description = ref<TwoLang>({ en: "", ar: "" });
-const contentEn = ref('<p> rb </p>');
-const contentAr = ref("");
+
+const content = ref<TwoLang>({ en: "", ar: "" });
 
 const prop = defineProps(["addMaterial", "materialId"]);
 const emit = defineEmits(["info"]);
@@ -22,8 +23,7 @@ if (prop.materialId) {
       if (res?.success) {
         title.value = res?.data?.activity?.title;
         description.value = res?.data?.activity?.description;
-        contentEn.value = res?.data?.activity?.content.en;
-        contentAr.value = res?.data?.activity?.content.ar;
+        content.value = res?.data?.activity?.content ?? { en: "", ar: "" };
       }
     });
 }
@@ -34,10 +34,7 @@ watch(prop, () => {
     let mat = {
       title: title.value,
       description: description.value,
-      content: {
-        en:contentEn.value,
-        ar:contentAr.value
-      }
+      content: content.value
     };
     if (prop.materialId) {
       let data = {
@@ -67,7 +64,8 @@ watch(prop, () => {
 });
 
 
-
+const lang = ref('en')
+const mode = ref('editor')
 
 </script>
 
@@ -92,13 +90,35 @@ watch(prop, () => {
         <InputText v-model="description.ar" />
       </div>
 
-      <div class="editor_element">
-        <h4>English Content</h4>
-        <Editor v-model="contentEn" style="height: 300px;"/>
-      </div>
-      <div class="editor_element">
-        <h4>Arabic Content</h4>
-        <Editor v-model="contentAr" style="height: 300px;"/>
+      <div class="content">
+        <div class="options-container">
+          <h4>Content</h4>
+          <div class="options">
+            <div class="option">
+              <p @click="lang='en'" :class="{ selected: (lang == 'en') }">En</p>
+              <p @click="lang='ar'"  :class="{ selected: (lang == 'ar') }">Ar</p>
+            </div>
+            <div class="option">
+              <p @click="mode='editor'" :class="{ selected: (mode == 'editor') }">Editor</p>
+              <p @click="mode='html'" :class="{ selected: (mode == 'html') }">HTML</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="editor-container">
+          <div class="editor-mode">
+            <Editor style="width: 100%; height: calc(100% - 4rem)" v-if="lang == 'en' && mode == 'editor'" v-model="content.en" />
+            <Editor style="width: 100%; height: calc(100% - 4rem)" v-if="lang == 'ar' && mode == 'editor'" v-model="content.ar" />
+            <Textarea style="width: 100%; height: 100%;" v-if="lang == 'en' && mode == 'html'" v-model="content.en" />
+            <Textarea style="width: 100%; height: 100%;" v-if="lang == 'ar' && mode == 'html'" v-model="content.ar" />
+          </div>
+          <div>
+            <div style="max-width: 100% ;height: 100%; overflow-y: scroll;" v-if="lang == 'en'" v-html="content.en"></div>
+            <div style="max-width: 100% ;height: 100%; overflow-y: scroll;" v-if="lang == 'ar'" v-html="content.ar" dir="rtl"></div>
+          </div>
+
+        </div>
+
       </div>
 
     </div>
@@ -106,6 +126,41 @@ watch(prop, () => {
 </template>
 
 <style scoped>
+.editor-container{
+  width: 90%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  grid-template-rows: 20rem;
+}
+.editor-container>*{
+  width: 100%;
+  height: 100%;
+}
+.option>* {
+  width: 4rem;
+  background-color: grey;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.option {
+  display: flex;
+  gap: 8px;
+}
+
+.options-container {
+  display: flex;
+  justify-content: space-between;
+}
+.selected{
+  background-color: var(--accent1);
+}
 .dialog {
   height: 100%;
   width: 90vw;
@@ -130,7 +185,8 @@ watch(prop, () => {
   grid-template-columns: 15rem calc(100% - 15rem);
   margin-bottom: 1rem;
 }
-.editor_element{
+
+.editor_element {
   min-height: 400px;
 }
 
@@ -187,5 +243,4 @@ p {
   color: red;
   cursor: pointer;
 }
-
 </style>
