@@ -5,6 +5,11 @@ import { definePreset } from '@primeuix/themes';
 import vue3GoogleLogin from 'vue3-google-login'
 import { createPinia } from 'pinia';
 
+
+import { QuillEditor } from '@vueup/vue-quill'
+import '@vueup/vue-quill/dist/vue-quill.snow.css';
+import '@vueup/vue-quill/dist/vue-quill.bubble.css';
+
 import App from './App.vue'
 import router from './router'
 
@@ -40,6 +45,8 @@ const MyPreset = definePreset(Aura, {
   }
 });
 app.use(createPinia())
+app.component('QuillEditor', QuillEditor)
+
 app.use(router)
 //app.use(PrimeVue);
 app.use(PrimeVue, {

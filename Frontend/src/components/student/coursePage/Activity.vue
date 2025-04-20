@@ -73,7 +73,8 @@ function newWindow(source: string) {
       <p v-if="activity?.description">
         {{ selectLang(activity?.description) }}
       </p>
-      <div  v-if="activity?.content" v-html="selectLang(activity?.content)"></div>
+      <div style="max-width: 80vw;" v-if="activity?.content && activity?.content?.en && (activity?.content?.en !== '' || activity?.content?.en !== '<p><br></p>' )" v-html="selectLang(activity?.content)"></div>
+
 
 
       <div class="wrapper" v-else>
