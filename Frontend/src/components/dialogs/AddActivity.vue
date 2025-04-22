@@ -4,10 +4,10 @@ import InputNumber from "primevue/inputnumber";
 import Button from "primevue/button";
 
 import Editor from "primevue/editor";
-import {computed, ref, watch } from "vue";
+import { computed, ref, watch } from "vue";
 import "primeicons/primeicons.css";
 import { HttpRequester } from "@/lib/APICaller";
-import { type TwoLang,type ItemsSet } from "@/lib/Interfaces";
+import { type TwoLang, type ItemsSet } from "@/lib/Interfaces";
 import { QuillEditor } from '@vueup/vue-quill';
 import Textarea from "primevue/textarea";
 
@@ -81,19 +81,20 @@ if (prop.materialId) {
     .callApi({ activity_id: prop.materialId })
     .then((res) => {
       if (res?.success) {
-        title.value = res?.data?.activity?.title;
-        description.value = res?.data?.activity?.description;
-        content.value = res?.data?.activity?.content ?? { en: "", ar: "" };
-        startImages.value = res?.data?.activity?.start_images;
-        endImages.value = res?.data?.activity?.end_images;
-        sources.value = res?.data?.activity?.sources;
+        const activity = res?.data?.activity
+        title.value = activity?.title;
+        description.value = activity?.description ;
+        content.value = activity?.content ?? { en: "", ar: "" };
+        startImages.value = activity?.start_images;
+        endImages.value = activity?.end_images;
+        sources.value = activity?.sources;
 
-        res?.data?.activity?.objectives?.items ? objectives.value.items = res?.data?.activity?.objectives?.items : '';
-        res?.data?.activity?.terms_concepts?.items ? termsConcepts.value.items = res?.data?.activity?.terms_concepts?.items : '';
-        res?.data?.activity?.materials?.items ? materials.value.items = res?.data?.activity?.materials?.items : '';
-        res?.data?.activity?.instructions?.items ? instructions.value.items = res?.data?.activity?.instructions?.items : '';
-        res?.data?.activity?.results?.items ? results.value.items = res?.data?.activity?.results?.items : '';
-        res?.data?.activity?.conclusions?.items ? conclusions.value.items = res?.data?.activity?.conclusions?.items : '';
+        objectives.value.items = activity?.objectives?.items ?? {};
+        termsConcepts.value.items = activity?.terms_concepts?.items ?? {};
+        materials.value.items = activity?.materials?.items ?? {};
+        instructions.value.items = activity?.instructions?.items ?? {};
+        results.value.items = activity?.results?.items ?? {};
+        conclusions.value.items = activity?.conclusions?.items ?? {};
       }
     });
 }
@@ -158,7 +159,7 @@ const mode = ref('editor')
 const toolbarOptions = [
   ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
   ['link', 'image', 'video'],
-  
+
   [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'list': 'check' }],
   [{ 'script': 'sub' }, { 'script': 'super' }],      // superscript/subscript
   [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
@@ -206,7 +207,7 @@ const toolbarOptions = [
           </div>
         </div>
         <div class="btn-container">
-          <Button label="Add Image" @click="()=>{startImages ?  startImages.push(''): startImages=[''] }" />
+          <Button label="Add Image" @click="() => { startImages ? startImages.push('') : startImages = [''] }" />
         </div>
       </div>
       <div class="images">
@@ -218,59 +219,55 @@ const toolbarOptions = [
           </div>
         </div>
         <div class="btn-container">
-          <Button label="Add Source"  @click="()=>{sources ?  sources.push(''): sources=[''] }"/>
+          <Button label="Add Source" @click="() => { sources ? sources.push('') : sources = [''] }" />
         </div>
       </div>
 
 
-      
+
 
 
 
       <div class="item-container" v-for="itemSet in allItems">
         <h4>{{ itemSet.title }}</h4>
         <div class="item" v-for="(item, i) in itemSet.item?.items">
-          <i
-            class="pi pi-times-circle"
-            @click="itemSet.item?.items.splice(i, 1)"
-          ></i>
+          <div class="icon_con">
+            <i class="pi pi-times-circle" @click="itemSet.item?.items.splice(i, 1)"></i>
+          </div>
           <div class="text">
             <div>
               <span>En Text</span>
               <InputText v-model="item.text.en" />
             </div>
+            <div v-if="item.description">
+              <span>En Description</span>
+              <InputText  v-model="item.description.en" />
+            </div>
+           
             <div>
               <span>Ar Text</span>
               <InputText v-model="item.text.ar" />
             </div>
-          </div>
-          <div class="text" v-if="item.description">
-            <div>
-              <span>En Description</span>
-              <InputText v-model="item.description.en" />
-            </div>
-            <div>
+            <div v-if="item.description">
               <span>Ar Description</span>
-              <InputText v-model="item.description.ar" />
+              <InputText  v-if="item.description" v-model="item.description.ar" />
+            </div>
+            <div>
+              <span>Image</span>
+              <InputText v-model="item.image" />
+            </div>
+            <div style="display: flex; margin-top: 0.5rem;justify-content: center;">
+              <img v-if="item.image" :src="item.image" width="20%" />
             </div>
           </div>
-          <h4>Image</h4>
-          <div class="image">
-            <InputText v-model="item.image" />
-            <div style="display: flex; gap: 0.25rem">
-              <img v-if="item.image" :src="item.image" />
-            </div>
-          </div>
+      
         </div>
         <div class="btn-container">
-          <Button
-            label="Add Item"
-            @click="
-              () => {
-                addItem(itemSet.item);
-              }
-            "
-          />
+          <Button label="Add Item" @click="
+            () => {
+              addItem(itemSet.item);
+            }
+          " />
         </div>
       </div>
 
@@ -284,7 +281,7 @@ const toolbarOptions = [
           </div>
         </div>
         <div class="btn-container">
-          <Button label="Add Image" @click="()=>{endImages ?  endImages.push(''): endImages=[''] }" />
+          <Button label="Add Image" @click="() => { endImages ? endImages.push('') : endImages = [''] }" />
         </div>
       </div>
 
@@ -308,7 +305,7 @@ const toolbarOptions = [
         <div class="editor-container">
           <div class="editor-mode">
             <QuillEditor :toolbar="toolbarOptions" content-type="html" style="width: 100%; height: calc(100% - 4rem)" v-if="lang == 'en' && mode == 'editor'" v-model:content="content.en" />
-            <QuillEditor :toolbar="toolbarOptions"  content-type="html" style=" width: 100%; height: calc(100% - 4rem)" v-if="lang == 'ar' && mode == 'editor'" v-model:content="content.ar" />
+            <QuillEditor :toolbar="toolbarOptions" content-type="html" style=" width: 100%; height: calc(100% - 4rem)" v-if="lang == 'ar' && mode == 'editor'" v-model:content="content.ar" />
             <Textarea style="width: 100%; height: 100%;" v-if="lang == 'en' && mode == 'html'" v-model="content.en" />
             <Textarea style="width: 100%; height: 100%;" v-if="lang == 'ar' && mode == 'html'" v-model="content.ar" />
           </div>
@@ -326,6 +323,16 @@ const toolbarOptions = [
 </template>
 
 <style scoped>
+.icon_con{
+  display: flex;
+  justify-content: end;
+}
+.item-container {
+  padding: 0.5rem;
+  margin-block: 1rem;
+  box-shadow: 0px 0px 4px 0px gray;
+}
+
 .editor-container {
   width: 90%;
   margin-inline: auto;
@@ -407,6 +414,10 @@ span {
   margin-block: 0.5rem;
 }
 
+h4 {
+  font-size: 1.125rem;
+}
+
 h2 {
   color: var(--accent1);
   margin: 0;
@@ -424,10 +435,8 @@ h2 {
   grid-template-columns: 10rem calc(100% - 15rem);
 }
 
-.text {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+.item{
+  margin-block: 1rem;
 }
 
 .material-btns {
