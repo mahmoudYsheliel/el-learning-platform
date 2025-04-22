@@ -4,7 +4,7 @@ import InputNumber from "primevue/inputnumber";
 import Button from "primevue/button";
 
 import Editor from "primevue/editor";
-import { computed, ref, watch } from "vue";
+import { computed, ref, watch,onMounted } from "vue";
 import "primeicons/primeicons.css";
 import { HttpRequester } from "@/lib/APICaller";
 import { type TwoLang, type ItemsSet } from "@/lib/Interfaces";
@@ -88,13 +88,13 @@ if (prop.materialId) {
         startImages.value = activity?.start_images;
         endImages.value = activity?.end_images;
         sources.value = activity?.sources;
-
-        objectives.value.items = activity?.objectives?.items ?? {};
-        termsConcepts.value.items = activity?.terms_concepts?.items ?? {};
-        materials.value.items = activity?.materials?.items ?? {};
-        instructions.value.items = activity?.instructions?.items ?? {};
-        results.value.items = activity?.results?.items ?? {};
-        conclusions.value.items = activity?.conclusions?.items ?? {};
+        objectives.value.items = activity?.objectives?.items ?? [];
+        termsConcepts.value.items = activity?.terms_concepts?.items ?? [];
+        materials.value.items = activity?.materials?.items ?? [];
+        instructions.value.items = activity?.instructions?.items ?? [];
+        results.value.items = activity?.results?.items ?? [];
+        conclusions.value.items = activity?.conclusions?.items ?? [];
+        setTimeout(resizeAll,50)
       }
     });
 }
@@ -174,6 +174,23 @@ const toolbarOptions = [
 
   ['clean']                                         // remove formatting button
 ];
+
+
+
+
+function resizeAll() {
+  const textareas = document.querySelectorAll('textarea')
+  textareas.forEach(el => {
+    el.style.height = 'auto'
+    el.style.height = el.scrollHeight + 'px'
+  })
+}
+function resize(e:Event) {
+  const el = e.target as HTMLTextAreaElement
+  el.style.height = 'auto' // Reset height
+  el.style.height = el.scrollHeight + 'px' // Set to content height
+}
+
 </script>
 
 <template>
@@ -185,16 +202,17 @@ const toolbarOptions = [
       </div>
       <div class="element">
         <h4>Arabic Title</h4>
-        <InputText v-model="title.ar" />
+        <InputText dir="rtl" v-model="title.ar" />
       </div>
 
       <div class="element">
         <h4>English Description</h4>
-        <InputText v-model="description.en" />
+        <Textarea  @input="resize" rows="1" v-model="description.en" />
+        <p style="width: 300%;white-space: pre-wrap;">{{ description.en }}</p>
       </div>
       <div class="element">
         <h4>Arabic Description</h4>
-        <InputText v-model="description.ar" />
+        <Textarea dir="rtl" v-model="description.ar" />
       </div>
 
       <div class="images">
@@ -232,25 +250,26 @@ const toolbarOptions = [
         <h4>{{ itemSet.title }}</h4>
         <div class="item" v-for="(item, i) in itemSet.item?.items">
           <div class="icon_con">
+            <p style="color: var(--accent4);">{{ itemSet.title  }} {{ i+1 }}</p>
             <i class="pi pi-times-circle" @click="itemSet.item?.items.splice(i, 1)"></i>
           </div>
           <div class="text">
             <div>
-              <span>En Text</span>
-              <InputText v-model="item.text.en" />
+              <span>En Headding</span>
+              <Textarea  @input="resize" rows="1" v-model="item.text.en" />
             </div>
             <div v-if="item.description">
-              <span>En Description</span>
-              <InputText  v-model="item.description.en" />
+              <span>En Text</span>
+              <Textarea  @input="resize" rows="1"  v-model="item.description.en" />
             </div>
            
             <div>
-              <span>Ar Text</span>
-              <InputText v-model="item.text.ar" />
+              <span>Ar Headding</span>
+              <Textarea  @input="resize" rows="1" dir="rtl" v-model="item.text.ar" />
             </div>
             <div v-if="item.description">
-              <span>Ar Description</span>
-              <InputText  v-if="item.description" v-model="item.description.ar" />
+              <span>Ar Text</span>
+              <Textarea  @input="resize" rows="1" dir="rtl" v-if="item.description" v-model="item.description.ar" />
             </div>
             <div>
               <span>Image</span>
@@ -323,9 +342,18 @@ const toolbarOptions = [
 </template>
 
 <style scoped>
+textarea {
+  resize: none; /* disables manual resizing */
+  overflow: hidden; /* hides scrollbars */
+  width: 100%;
+  line-height: 1.5;
+  font-size: 1rem;
+  padding: 8px;
+  box-sizing: border-box;
+}
 .icon_con{
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
 }
 .item-container {
   padding: 0.5rem;

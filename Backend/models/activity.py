@@ -9,7 +9,7 @@ class TwoLang(BaseModel):
 
 class Item(BaseModel):
     id:int
-    text:TwoLang
+    text:Optional[TwoLang]=None
     description:Optional[TwoLang]=None
     image:Optional[str]=None
     

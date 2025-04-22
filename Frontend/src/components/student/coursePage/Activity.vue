@@ -95,18 +95,16 @@ function newWindow(source: string) {
           </div>
         </div>
 
-        <div class="allitems" v-for="field in fields">
+        <div class="allitems" v-for="field in fields" style="white-space: pre-wrap;">
           <div class="items" v-if="activity?.[field]">
             <div class="images" v-if="activity?.[field]?.start_images">
               <img v-for="image in activity?.[field]?.start_images" :src="image" alt="" />
             </div>
             <h3>{{ selectLang(translationModuleRef?.[field]) }}</h3>
             <div class="item" v-for="item in activity?.[field]?.items">
-              <p>
-                <span :class="{ terms: field == 'terms_concepts' }">
-                  - {{ selectLang(item.text) }}</span>
-                <span v-if="item.description">: {{ selectLang(item.description) }}</span>
-              </p>
+            <p class="terms">{{ selectLang(item.text) }}</p>
+              <p>{{ selectLang(item.description) }}</p>
+             
               <img v-if="item?.image" :src="item?.image" alt="" />
             </div>
             <div class="images" v-if="activity?.[field]?.end_images">
