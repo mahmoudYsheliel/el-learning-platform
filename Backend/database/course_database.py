@@ -10,7 +10,7 @@ async def create_course(course: Course) -> ServiceResponse:
         for mat in chapter.materials:
             for material in materials:
                 if material["type"] == mat.type:
-                    result =await check_existance_in_DB(
+                    result = await check_existance_in_DB(
                         mat.Id, collection_name=material["DB_name"]
                     )
                     if not result:
@@ -19,7 +19,7 @@ async def create_course(course: Course) -> ServiceResponse:
                         )
 
     for category in course.categories:
-        result =await check_existance_in_DB(category.Id, collection_name="category")
+        result = await check_existance_in_DB(category.Id, collection_name="category")
         if not result:
             return ServiceResponse(success=False, msg="bad id for category")
 
@@ -33,7 +33,7 @@ async def create_course(course: Course) -> ServiceResponse:
 
 
 async def delete_course(course_id: str) -> ServiceResponse:
-    result =await check_existance_in_DB(course_id, "course")
+    result = await check_existance_in_DB(course_id, "course")
     if not result:
         return ServiceResponse(success=False, msg="bad course id")
     if result["chapters"]:
@@ -106,7 +106,7 @@ async def get_course(course_id: str) -> ServiceResponse:
                 "objectives": 1,
                 "chapters": 1,
                 "categories": 1,
-                "is_locked":1
+                "is_locked": 1
             },
         )
     )
@@ -131,7 +131,7 @@ async def get_all_courses():
                 "min_age": 1,
                 "max_age": 1,
                 "categories": 1,
-                "is_locked":1
+                "is_locked": 1
             },
         )
         .to_list(length=None)
@@ -158,7 +158,7 @@ async def get_all_instructor_courses(main_instructor_id):
                 "min_age": 1,
                 "max_age": 1,
                 "categories": 1,
-                "is_locked":1
+                "is_locked": 1
             },
         )
         .to_list(length=None)
@@ -182,7 +182,7 @@ async def get_all_courses_with_free_lessons():
                 "image": 1,
                 "categories": 1,
                 "chapters": 1,
-                "is_locked":1
+                "is_locked": 1
             },
         )
         .to_list(length=None)
@@ -190,10 +190,10 @@ async def get_all_courses_with_free_lessons():
 
     if not courses:
         return ServiceResponse(success=False, status_code=404, msg="courses Not Found")
-    courses_sent =[]
+    courses_sent = []
     for course in courses:
         if "is_locked" in course:
-            if course["chapters"] and  not course["is_locked"]:
+            if course["chapters"] and not course["is_locked"]:
                 lesson = course["chapters"][0]["materials"][0]
                 course["lesson"] = lesson
                 course["chapters"] = []
@@ -213,7 +213,21 @@ async def get_course_free_lessons(course_id: str):
         .get_collection("course")
         .find_one(
             {"_id": validate_bson_id(course_id)},
-            {"_id": 0, "id": {"$toString": "$_id"}, "title": 1, "chapters": 1},
+            {
+                "_id": 0,
+                "id": {"$toString": "$_id"},
+                "title": 1,
+                "description": 1,
+                "price": 1,
+                "image": 1,
+                "duration": 1,
+                "min_age": 1,
+                "max_age": 1,
+                "objectives": 1,
+                "chapters": 1,
+                "categories": 1,
+                "is_locked": 1
+            },
         )
     )
 
@@ -235,5 +249,4 @@ async def get_course_free_lessons(course_id: str):
             },
         )
     )
-    course["chapters"] = []
     return ServiceResponse(data={"course": course, "lesson": lesson})

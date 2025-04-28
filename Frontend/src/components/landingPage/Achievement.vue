@@ -36,9 +36,9 @@ const responsiveOptions = ref([
       <h1 style="color: var(--accent2)">
         {{ selectLang(translationModule.achievements) }}
       </h1>
-      <h3 style="color: var(--text)">
+      <!-- <h3 style="color: var(--text)">
         {{ selectLang(translationModule.achDescription) }}
-      </h3>
+      </h3> -->
       <div class="wrapper">
         <Carousel 
         style="direction: ltr;"
@@ -87,7 +87,7 @@ p {
 .achievment {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 2rem;
+  gap: 8rem;
 }
 img {
   width: 100%;

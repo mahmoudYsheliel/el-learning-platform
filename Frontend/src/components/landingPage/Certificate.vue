@@ -29,13 +29,13 @@ programRequester.callApi().then((res) => {
   <main>
     <div class="container">
       <h1>{{ selectLang(translationModule.earnCer) }}</h1>
-      <h1>{{ selectLang(translationModule.companyName) }}</h1>
+      <h1>{{ selectLang(translationModule.stemAcc) }}</h1>
       <p>
         {{ selectLang(translationModule.certificateDescription) }}
       </p>
       <Button :label=selectLang(translationModule.joinUs)  @click="items[0]?.command" />
     </div>
-    <img class="image" src="/images/certificate.png" alt="" />
+    <img class="image" src="/images/STEMCertificate.png" alt="" />
   </main>
 </template>
 

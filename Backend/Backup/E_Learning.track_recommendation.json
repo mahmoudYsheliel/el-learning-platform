@@ -1,0 +1,213 @@
+[{
+  "_id": {
+    "$oid": "67448944b7188921228fa695"
+  },
+  "name": "Health Heroes",
+  "title": {
+    "en": "Health Heroes",
+    "ar": "أبطال الصحة"
+  },
+  "description": {
+    "en": "Health Heroes focuses on fostering verbal reasoning, communication, and language skills, perfect for children who excel in expressing themselves through words.",
+    "ar": "يُركّز برنامج أبطال الصحة على تعزيز التفكير اللفظي، مهارات التواصل، وفهم اللغة، وهو مثالي للأطفال الذين يتفوقون في التعبير عن أنفسهم بالكلمات."
+  },
+  "key_skills": [
+    {
+      "en": "Strong verbal reasoning",
+      "ar": "التفكير اللفظي القوي"
+    },
+    {
+      "en": "Clear communication",
+      "ar": "التواصل الواضح"
+    },
+    {
+      "en": "Language understanding",
+      "ar": "فهم اللغة"
+    }
+  ],
+  "advice": {
+    "en": "Your child has a gift for words—whether they’re explaining their thoughts, solving a puzzle, or reading an engaging story, their verbal talents shine!",
+    "ar": "طفلك يمتلك موهبة في الكلمات—سواء كان يشرح أفكاره، يحل الألغاز، أو يقرأ قصة مثيرة، تتألق مهاراته اللفظية!"
+  },
+  "sections_dependence": [
+    "Similarities",
+    "Vocabulary"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6744898ab7188921228fa696"
+  },
+  "name": "Code Creators",
+  "title": {
+    "en": "Code Creators",
+    "ar": "منشئو الأكواد"
+  },
+  "description": {
+    "en": "Code Creators is designed to enhance decision-making, attention to detail, and efficiency, ideal for children who thrive in fast-paced and dynamic environments.",
+    "ar": "تم تصميم برنامج منشئو الأكواد لتعزيز اتخاذ القرارات، والانتباه للتفاصيل، والكفاءة، وهو مثالي للأطفال الذين يزدهرون في البيئات السريعة والديناميكية."
+  },
+  "key_skills": [
+    {
+      "en": "Quick decision-making",
+      "ar": "اتخاذ قرارات سريعة"
+    },
+    {
+      "en": "Attention to detail",
+      "ar": "والانتباه للتفاصيل"
+    },
+    {
+      "en": "Efficiency",
+      "ar": "والكفاءة"
+    }
+  ],
+  "advice": {
+    "en": "With their sharp focus and quick reflexes, your child thrives in tasks that keep their mind and body engaged. They’re always ready to tackle the next challenge!",
+    "ar": "بتركيزهم الحاد وردود أفعالهم السريعة، يزدهر طفلك في المهام التي تحفز عقله وجسده. هم دائمًا مستعدون لمواجهة التحدي التالي!"
+  },
+  "sections_dependence": [
+    "Symbol Search"
+  ]
+},
+{
+  "_id": {
+    "$oid": "67448999b7188921228fa697"
+  },
+  "name": "Tech Titans",
+  "title": {
+    "en": "Tech Titans",
+    "ar": "عمالقة التكنولوجيا"
+  },
+  "description": {
+    "en": "Tech Titans nurtures focus, organization, and memory skills, perfect for children who excel in structured environments and can manage multiple tasks efficiently.",
+    "ar": "يعمل برنامج عمالقة التكنولوجيا على تنمية مهارات التركيز والتنظيم والذاكرة، وهو مثالي للأطفال الذين يتفوقون في البيئات المنظمة ويمكنهم إدارة المهام المتعددة بكفاءة."
+  },
+  "key_skills": [
+    {
+      "en": "Focus",
+      "ar": "التركيز"
+    },
+    {
+      "en": "Organization",
+      "ar": "التنظيم"
+    },
+    {
+      "en": "Short-term memory",
+      "ar": "الذاكرة قصيرة المدى"
+    }
+  ],
+  "advice": {
+    "en": "Your child has a talent for staying on track and remembering details. With structure and encouragement, they can achieve amazing things!",
+    "ar": "طفلك يمتلك موهبة في البقاء على المسار الصحيح وتذكر التفاصيل. مع التنظيم والتشجيع، يمكنه تحقيق أشياء مذهلة!"
+  },
+  "sections_dependence": [
+    "Digit Span"
+  ]
+},
+{
+  "_id": {
+    "$oid": "674489a4b7188921228fa698"
+  },
+  "name": "Planet Protectors",
+  "title": {
+    "en": "Planet Protectors",
+    "ar": "حماة الكوكب"
+  },
+  "description": {
+    "en": "Planet Protectors enhances logical thinking, abstract reasoning, and creative problem-solving, ideal for children who love exploring solutions and thinking outside the box.",
+    "ar": "يعمل برنامج حماة الكوكب على تعزيز التفكير المنطقي، والتفكير التجريدي، وحل المشكلات الإبداعي، وهو مثالي للأطفال الذين يحبون استكشاف الحلول والتفكير بطرق غير تقليدية."
+  },
+  "key_skills": [
+    {
+      "en": "Logical thinking",
+      "ar": "التفكير المنطقي"
+    },
+    {
+      "en": "Abstract reasoning",
+      "ar": "التفكير التجريدي"
+    },
+    {
+      "en": "Creative problem-solving",
+      "ar": "حل المشكلات الإبداعي"
+    }
+  ],
+  "advice": {
+    "en": "Your child’s mind is always searching for solutions and exploring new possibilities. They have a natural knack for figuring things out!",
+    "ar": "عقل طفلك دائمًا يبحث عن حلول ويستكشف إمكانيات جديدة. لديه موهبة طبيعية في اكتشاف الحلول!"
+  },
+  "sections_dependence": [
+    "Similarities",
+    "Vocabulary"
+  ]
+},
+{
+  "_id": {
+    "$oid": "674489aeb7188921228fa699"
+  },
+  "name": "Future Frontiers",
+  "title": {
+    "en": "Future Frontiers",
+    "ar": "آفاق المستقبل"
+  },
+  "description": {
+    "en": "Future Frontiers develops visual reasoning, spatial awareness, and abstract thinking, perfect for children who have a natural ability to visualize and conceptualize ideas.",
+    "ar": "يعمل برنامج آفاق المستقبل على تطوير التفكير البصري، والوعي المكاني، والتفكير التجريدي، وهو مثالي للأطفال الذين لديهم قدرة طبيعية على التصور وتجسيد الأفكار."
+  },
+  "key_skills": [
+    {
+      "en": "Visual reasoning",
+      "ar": "التفكير البصري"
+    },
+    {
+      "en": "Spatial awareness",
+      "ar": "الوعي المكاني"
+    },
+    {
+      "en": "Abstract thinking",
+      "ar": "التفكير التجريدي"
+    }
+  ],
+  "advice": {
+    "en": "Your child is a visionary thinker, turning ideas into visuals and concepts into creations. Their imagination knows no bounds!",
+    "ar": "طفلك مفكر بصري، يحول الأفكار إلى صور والمفاهيم إلى إبداعات. خياله ليس له حدود!"
+  },
+  "sections_dependence": [
+    "Figure Weights",
+    "Matrix Reasoning"
+  ]
+},
+{
+  "_id": {
+    "$oid": "674489b5b7188921228fa69a"
+  },
+  "name": "Quantum Quest",
+  "title": {
+    "en": "Quantum Quest",
+    "ar": "مهمة الكم"
+  },
+  "description": {
+    "en": "Quantum Quest promotes visual reasoning, spatial awareness, and abstract thinking, ideal for children who are imaginative and excel in conceptualizing abstract ideas.",
+    "ar": "يعزز برنامج مهمة الكم التفكير البصري، والوعي المكاني، والتفكير التجريدي، وهو مثالي للأطفال الذين يتمتعون بخيال خصب ويتفوقون في تجسيد الأفكار المجردة."
+  },
+  "key_skills": [
+    {
+      "en": "Visual reasoning",
+      "ar": "التفكير البصري"
+    },
+    {
+      "en": "Spatial awareness",
+      "ar": "الوعي المكاني"
+    },
+    {
+      "en": "Abstract thinking",
+      "ar": "التفكير التجريدي"
+    }
+  ],
+  "advice": {
+    "en": "Your child is a visionary thinker, turning ideas into visuals and concepts into creations. Their imagination knows no bounds!",
+    "ar": "طفلك مفكر بصري، يحول الأفكار إلى صور والمفاهيم إلى إبداعات. خياله ليس له حدود!"
+  },
+  "sections_dependence": [
+    "Visual Puzzles"
+  ]
+}]

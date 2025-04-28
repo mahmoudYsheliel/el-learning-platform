@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "6606c6e543e416de9726f228"
+  },
+  "id": "string",
+  "category": {
+    "en": "Embedded Systems",
+    "ar": "الأنظمة المدمجة"
+  },
+  "image": "https://images.spiceworks.com/800x400/wp-content/uploads/2023/10/12102017/Embedded-System.jpg",
+  "description": {
+    "en": "Embedded systems are specialized computers in everyday devices, from cars to thermostats.",
+    "ar": "الأنظمة المدمجة هي حواسيب متخصصة في الأجهزة اليومية، من السيارات إلى الثرموستات."
+  }
+},
+{
+  "_id": {
+    "$oid": "6606c79643e416de9726f229"
+  },
+  "id": "string",
+  "category": {
+    "en": "Computer Programming",
+    "ar": "برمجة الكمبيوتر"
+  },
+  "image": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*JG5yAvVMX1mAtjKXTEow4g.png",
+  "description": {
+    "en": "Learn the basics of creating instructions for computers to follow.",
+    "ar": "تعلم أساسيات إنشاء التعليمات التي يتبعها الكمبيوتر."
+  }
+},
+{
+  "_id": {
+    "$oid": "6606c7e743e416de9726f22a"
+  },
+  "id": "string",
+  "category": {
+    "en": "Computer Networks",
+    "ar": "شبكات الكمبيوتر"
+  },
+  "image": "https://media.geeksforgeeks.org/wp-content/uploads/20230406152358/CN-(1).jpg",
+  "description": {
+    "en": "Explore how computers communicate and share resources.",
+    "ar": "استكشف كيفية تواصل الكمبيوترات ومشاركة الموارد."
+  }
+},
+{
+  "_id": {
+    "$oid": "6606c84243e416de9726f22b"
+  },
+  "id": "string",
+  "category": {
+    "en": "Robotics",
+    "ar": "الروبوتات"
+  },
+  "image": "https://www.therobotreport.com/wp-content/uploads/2023/06/sick-sponsored-featured-image-july2023-article1.jpg",
+  "description": {
+    "en": "Design and build intelligent machines helping you in daily life.",
+    "ar": "صمم وابنِ آلات ذكية تساعدك في حياتك اليومية."
+  }
+},
+{
+  "_id": {
+    "$oid": "667c3e7798157d488d31854a"
+  },
+  "id": "string",
+  "category": {
+    "en": "Engineering",
+    "ar": "الهندسة"
+  },
+  "image": "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "description": {
+    "en": "Engineering is the application of scientific principles to design, build, and innovate solutions that address real-world challenges. It spans diverse fields such as mechanical systems, electrical circuits, civil structures, and aerospace technologies. Engineers develop everything from bridges and skyscrapers to autonomous vehicles and renewable energy systems, shaping the future through innovation and problem-solving. The field fosters creativity, analytical thinking, and a commitment to improving the quality of life for people worldwide.",
+    "ar": "الهندسة هي تطبيق المبادئ العلمية لتصميم وتطوير حلول مبتكرة تُعالج التحديات الواقعية، تمتد مجالاتها لتشمل أنظمة الميكانيكا والدوائر الكهربائية والهياكل المدنية وتقنيات الطيران والفضاء. يساهم المهندسون في ابتكار كل شيء، بدءًا من الجسور وناطحات السحاب وصولاً إلى المركبات الذاتية القيادة وأنظمة الطاقة المتجددة، مُشكِّلين بذلك ملامح المستقبل من خلال الإبداع وحل المشكلات. تُعزز الهندسة التفكير الإبداعي والتحليلي، وتجسد التزامًا بتحسين جودة الحياة للبشرية جمعاء."
+  }
+},
+{
+  "_id": {
+    "$oid": "66bf7ca6da5e21b89701140e"
+  },
+  "id": "physics",
+  "category": {
+    "en": "Physics",
+    "ar": "الفيزياء"
+  },
+  "image": "https://www.shutterstock.com/shutterstock/photos/2319613459/display_1500/stock-photo-a-student-or-physics-scientist-pointing-at-the-planet-saturn-and-globe-to-study-laws-of-2319613459.jpg",
+  "description": {
+    "en": "Physics is the branch of science concerned with the nature and properties of matter and energy. It includes the study of forces, motion, energy, waves, and the fundamental interactions of the universe.",
+    "ar": "الفيزياء هي فرع من العلوم المعنية بطبيعة وخصائص المادة والطاقة. تشمل دراسة القوى والحركة والطاقة والأمواج والتفاعلات الأساسية في الكون."
+  }
+},
+{
+  "_id": {
+    "$oid": "67be1d0df5bee34f3a39d5e5"
+  },
+  "id": null,
+  "category": {
+    "en": "Biology",
+    "ar": "الأحياء"
+  },
+  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/c_pad,b_gen_fill,w_2768,h_1845/v1735580102/1._Science_Explorers_gwazxn-min_mcu4ni.png",
+  "description": {
+    "en": "This engaging course is designed for curious young learners aged 6 to 9, taking them on an exciting journey to discover the magic of the five senses and how we use them to explore the world around us. Through hands-on activities, interactive quizzes, and fun experiments, children will learn how we hear sounds, see colors, taste flavors, feel textures, and smell scents. They will also explore the scientific method, the science of rainbows, light refraction, and the states of matter. Additionally, they will delve into how technology simulates our senses through devices like cameras, microphones, and touch screens. From understanding mass, volume, and density to experiencing the changing states of matter with ice cream, jelly, and hot drinks, this course is packed with exciting content that connects science to everyday experiences.",
+    "ar": "تم تصميم هذا الكورس المثير للأطفال الفضوليين من عمر 6 إلى 9 سنوات، حيث يأخذهم في رحلة شيقة لاكتشاف سحر الحواس الخمسة وكيفية استخدامها لاستكشاف العالم من حولنا. من خلال الأنشطة العملية، والاختبارات التفاعلية، والتجارب الممتعة، سيتعلم الأطفال كيفية سماع الأصوات، ورؤية الألوان، وتذوق النكهات، ولمس الأسطح المختلفة، واستنشاق الروائح. كما سيستكشفون مبادئ التفكير العلمي، والعلم وراء قوس قزح، وانكسار الضوء، وحالات المادة. بالإضافة إلى ذلك، سيتعرفون على كيفية محاكاة التكنولوجيا لحواسنا من خلال أجهزة مثل الكاميرات، والميكروفونات، والشاشات اللمسية. من فهم الكتلة، والحجم، والكثافة، إلى تجربة تغير حالات المادة باستخدام الآيس كريم، والجيلي، والمشروبات الساخنة، فإن هذه الدورة مليئة بالمحتوى المثير الذي يربط بين العلم والتجارب اليومية."
+  }
+},
+{
+  "_id": {
+    "$oid": "67be1d52f5bee34f3a39d5e6"
+  },
+  "id": null,
+  "category": {
+    "en": "Chemistry",
+    "ar": "الكيمياء"
+  },
+  "image": "",
+  "description": {
+    "en": "",
+    "ar": ""
+  }
+}]

@@ -243,6 +243,30 @@ export const achievments = [
       ar: " تفخر Trace Education بشراكتها مع EdVentures ومؤسسة ماستركارد، حيث شاركت في برنامج إرشادي تحولي. من بين 210 شركات ناشئة، تم اختيارنا كواحدة من 19 شركة لحضور مخيم تدريبي في الإسكندرية، حيث اكتسبنا رؤى ودعماً لا يقدر بثمن وقد أسهم بشكل كبير في نمو مسيرتنا وتوجهنا.",
     },
   },
+
+
+  {
+    image: "/images/STEMLogo.png",
+    header: {
+      en: "STEM.org Accredited™ Educational Experience",
+      ar: "تجربة تعليمية معتمدة من STEM.org™"
+    },
+    text: {
+      en: "Trace Edtech is proud to have earned the prestigious STEM.org Accredited™ Trustmark, an internationally recognized symbol of quality and excellence in STEM education. This accreditation highlights our commitment to providing innovative, engaging, and future-focused learning experiences that empower students with the critical skills needed for success in a rapidly evolving world.",
+      ar: "تفخر Trace Edtech بحصولها على علامة الثقة المرموقة STEM.org Accredited™، وهي رمز معترف به دوليًا للجودة والتميز في تعليم العلوم والتكنولوجيا والهندسة والرياضيات. هذا الاعتماد يؤكد التزامنا بتقديم تجارب تعليمية مبتكرة وجذابة وموجهة نحو المستقبل، لتمكين الطلاب بالمهارات اللازمة للنجاح في عالم سريع التغير."
+    }
+  },
+  {
+    image: "/images/STEMBest.png",
+    header: {
+      en: "Top 5% Best in STEM Brands (2024–2025)",
+      ar: "أفضل 5% من العلامات التجارية في مجالات العلوم والتكنولوجيا والهندسة والرياضيات (2024-2025)"
+    },
+    text: {
+      en: "We are honored to be recognized among the Top 5% Best in STEM brands worldwide for 2024–2025. This distinction celebrates our exceptional innovation, accessibility, and significant impact in advancing STEM education. At Trace Edtech, we remain dedicated to shaping the future by inspiring and equipping the next generation of STEM leaders.",
+      ar: "يشرفنا أن يتم الاعتراف بنا ضمن أفضل 5% من العلامات التجارية في مجالات العلوم والتكنولوجيا والهندسة والرياضيات على مستوى العالم لعام 2024–2025. هذا التقدير يحتفي بإبداعنا الاستثنائي وإمكانية الوصول وتأثيرنا الكبير في تعزيز تعليم STEM. نحن في Trace Edtech نواصل التزامنا بإلهام الجيل القادم من قادة STEM."
+    }
+  }
 ];
 
 export const socialMediaIcons = [

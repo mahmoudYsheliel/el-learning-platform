@@ -1,0 +1,201 @@
+[{
+  "_id": {
+    "$oid": "6658d7e2e6f09efb55675769"
+  },
+  "id": "1",
+  "title": {
+    "en": "Discovery Level",
+    "ar": "مستوى الاكتشاف"
+  },
+  "description": {
+    "en": "Embark on a journey of wonder and excitement with our Discovery Level program, designed for young explorers aged 6 to 9. Through interactive activities, hands-on experiments, and engaging stories, children will discover the world around them, igniting their curiosity and love for learning. This program covers basic concepts in science, art, and technology, encouraging creativity and critical thinking. With a focus on fun and exploration, Discovery Level aims to build a strong foundation for lifelong learning while nurturing each child's natural inquisitiveness and enthusiasm.",
+    "ar": "انطلق في رحلة من الدهشة والإثارة مع برنامج مستوى الاكتشاف الخاص بنا، المصمم للمستكشفين الصغار من عمر 6 إلى 9 سنوات. من خلال الأنشطة التفاعلية، والتجارب العملية، والقصص الجذابة، سيكتشف الأطفال العالم من حولهم، مما يثير فضولهم وحبهم للتعلم. يغطي هذا البرنامج المفاهيم الأساسية في العلوم والفنون والتكنولوجيا، ويشجع على الإبداع والتفكير النقدي. مع التركيز على المرح والاستكشاف، يهدف مستوى الاكتشاف إلى بناء أساس قوي للتعلم مدى الحياة مع تعزيز فضول كل طفل وحماسه الطبيعي."
+  },
+  "road_map": [
+    {
+      "id": "667c445898157d488d31854b"
+    },
+    {
+      "id": "66be07508abeb455cb105b2d"
+    },
+    {
+      "id": "66bf7d0dda5e21b89701140f"
+    },
+    {
+      "id": "66c0137dda5e21b89701142d"
+    },
+    {
+      "id": "66f2d9a2b8c14d4bad17398d"
+    },
+    {
+      "id": "67be1bfdf5bee34f3a39d5e4"
+    },
+    {
+      "id": "67f778a6e3c854070a96ca16"
+    }
+  ],
+  "image": "https://www.rootsofaction.com/wp-content/uploads/2019/01/How-Children-Learn-400x267.jpg",
+  "max_age": 9,
+  "min_age": 6,
+  "tracks": []
+},
+{
+  "_id": {
+    "$oid": "6658d814e6f09efb5567576a"
+  },
+  "id": "1",
+  "title": {
+    "en": "Pathfinder",
+    "ar": "المرشد"
+  },
+  "description": {
+    "en": "Our Pathfinder program, tailored for inquisitive minds aged 10 to 13, guides students through an adventurous journey of knowledge and skills. Combining project-based learning with real-world applications, this program covers intermediate topics in STEM, humanities, and the arts. Pathfinders will engage in collaborative projects, problem-solving challenges, and creative endeavors, fostering teamwork, innovation, and analytical thinking. With an emphasis on discovery and experimentation, the Pathfinder program empowers students to explore their passions and develop a deeper understanding of the subjects they love.",
+    "ar": "برنامج Pathfinder الخاص بنا، المصمم للعقول الفضولية من عمر 10 إلى 13 سنة، يوجه الطلاب من خلال رحلة مغامرة من المعرفة والمهارات. من خلال دمج التعلم القائم على المشاريع مع التطبيقات الواقعية، يغطي هذا البرنامج المواضيع المتوسطة في STEM، والإنسانيات، والفنون. سيشارك الموجهون في مشاريع تعاونية، وتحديات حل المشكلات، وجهود إبداعية، مما يعزز العمل الجماعي، والابتكار، والتفكير التحليلي. مع التركيز على الاكتشاف والتجريب، يمكن برنامج Pathfinder الطلاب من استكشاف شغفهم وتطوير فهم أعمق للمواضيع التي يحبونها."
+  },
+  "road_map": [
+    {
+      "id": "67a7119d48d368c86a6cae73"
+    },
+    {
+      "id": "67b8dd105c77567b556e5951"
+    },
+    {
+      "id": "67b8dd405c77567b556e5953"
+    },
+    {
+      "id": "67b8dda65c77567b556e5955"
+    },
+    {
+      "id": "67b8ddfe5c77567b556e5959"
+    },
+    {
+      "id": "67b8de3a5c77567b556e595b"
+    },
+    {
+      "id": "67be1bfdf5bee34f3a39d5e4"
+    }
+  ],
+  "image": "https://images.ctfassets.net/p0qf7j048i0q/5NVnSwBXxtPnrOJI1V9LR1/56f136e8dadb6cc67e00dfdc35accadd/G1180016795.png?w=828&q=75&h=828&fm=webp",
+  "max_age": 13,
+  "min_age": 10,
+  "tracks": []
+},
+{
+  "_id": {
+    "$oid": "6658d832e6f09efb5567576b"
+  },
+  "id": "1",
+  "title": {
+    "en": "Masterclass",
+    "ar": "الماجستير"
+  },
+  "description": {
+    "en": "The Master program, designed for motivated learners aged 14 to 17, offers an advanced, in-depth exploration of academic and practical subjects. This comprehensive program includes rigorous coursework, specialized workshops, and mentorship opportunities in STEM, humanities, arts, and leadership. Masters will undertake complex projects, research initiatives, and skill-building activities that prepare them for higher education and future careers. With a focus on critical thinking, innovation, and real-world application, the Master program cultivates independent thinkers and problem solvers, ready to make significant contributions to their fields and communities.",
+    "ar": "برنامج Master، المصمم للمتعلمين المتحمسين من عمر 14 إلى 17 سنة، يقدم استكشافًا متقدمًا ومتعمقًا للمواضيع الأكاديمية والعملية. يتضمن هذا البرنامج الشامل دورات دراسية صارمة، وورش عمل متخصصة، وفرص الإرشاد في STEM، والإنسانيات، والفنون، والقيادة. سيقوم الماجستير بتنفيذ مشاريع معقدة، ومبادرات بحثية، وأنشطة بناء المهارات التي تعدهم للتعليم العالي والمهن المستقبلية. مع التركيز على التفكير النقدي، والابتكار، والتطبيق الواقعي، ينمي برنامج Master المفكرين المستقلين وحلال المشكلات، المستعدين لإحداث تأثير كبير في مجالاتهم ومجتمعاتهم."
+  },
+  "road_map": [],
+  "image": "https://learnenglishteens.britishcouncil.org/sites/teens/files/styles/frontpage_block_middle_promotion/public/field/hero-promo/image/rs9105_gettyimages-1180593998-hig.jpg?itok=4iryrP7V",
+  "tracks": [
+    {
+      "id": 0,
+      "title": {
+        "en": "Aerospace",
+        "ar": "الطيران والفضاء"
+      },
+      "description": {
+        "en": "Dive into the fascinating world of Aerospace! Discover the principles of flight, aerodynamics, and space exploration. Engage in hands-on experiments and projects, including designing and testing your own models. This track combines science, engineering, and creativity to inspire future innovators and explorers in the field of aviation and space technology.",
+        "ar": "اغمر نفسك في عالم الطيران المثير! اكتشف مبادئ الطيران والديناميكا الهوائية واستكشاف الفضاء. شارك في تجارب ومشاريع عملية، بما في ذلك تصميم واختبار نماذجك الخاصة. يجمع هذا المسار بين العلم والهندسة والإبداع لإلهام المبتكرين والمستكشفين المستقبليين في مجال الطيران وتكنولوجيا الفضاء."
+      },
+      "female_image": "/Tracks/future_frontiers_female.png",
+      "male_image": "/Tracks/future_frontiers_male.png",
+      "video": "https://drive.google.com/file/d/1XDw8LAdZE9Sbcu8wcV1-ALdGib_KZafp/preview",
+      "levels": [
+        {
+          "id": 0,
+          "title": {
+            "en": "How it Actually is!",
+            "ar": "كيف هو في الواقع؟"
+          },
+          "image": "",
+          "courses": [
+            "66cb93d73b16f87bfae72876",
+            "6769ff40f1b8a6d5a3f0948f"
+          ]
+        },
+        {
+          "id": 1,
+          "title": {
+            "en": "Let's Go Advanced!",
+            "ar": "لنتقدم!"
+          },
+          "image": "https://drive.google.com/file/d/1AmYmVnX9XhR4wzdeZT7WIp_eL82OjJ4H/preview",
+          "courses": [
+            "6788fbb99ed797ce3f251746"
+          ]
+        },
+        {
+          "id": 2,
+          "title": {
+            "en": "Let's Explore Space!",
+            "ar": "لنستكشف الفضاء!"
+          },
+          "image": "https://drive.google.com/file/d/1AmYmVnX9XhR4wzdeZT7WIp_eL82OjJ4H/preview",
+          "courses": [
+            "67d4498a1cfbdf387c7f27db"
+          ]
+        }
+      ],
+      "courses": [],
+      "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1742886213/generate-an--aerospace-track--cover-image---key-el_1_2_-min_ize8nb_j33iyy.webp"
+    },
+    {
+      "title": {
+        "en": "Robotics",
+        "ar": "الروبوتات"
+      },
+      "description": {
+        "en": "Embark on an exciting journey through the Robotics Track, a carefully crafted program designed to inspire, educate, and empower young innovators. This track combines the foundational concepts of robotics with hands-on experience in designing, programming, and building robots. Through a series of engaging courses, participants will develop key technical skills while exploring the fascinating world of robotics, mechanics, and electronics.",
+        "ar": "انطلق في رحلة مشوقة عبر مسار الروبوتات، وهو برنامج مُصمم بعناية لإلهام المتعلمين الصغار وتعليمهم وتمكينهم من الابتكار. يجمع هذا المسار بين المفاهيم الأساسية للروبوتات والتجارب العملية في تصميمها وبرمجتها وبنائها. من خلال سلسلة من الدورات التفاعلية، ستكتسب مهارات تقنية أساسية بينما تستكشف عالم الروبوتات والميكانيكا والإلكترونيات الممتع."
+      },
+      "female_image": "",
+      "male_image": "",
+      "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1742886200/Track_Cover_enhanced-min_zvuquh_c_pad_b_gen_fill_w_2768_h_1845-min_lly7il_jzb6by.webp",
+      "video": "",
+      "levels": [
+        {
+          "title": {
+            "en": "Foundations of Robotics",
+            "ar": "أساسيات الروبوتات"
+          },
+          "courses": [
+            "678e7c254600443b166af139",
+            "678e7c764600443b166af13a"
+          ]
+        },
+        {
+          "title": {
+            "en": "Mechanical Design & Engineering",
+            "ar": "التصميم الميكانيكي والهندسة"
+          },
+          "courses": [
+            "678e7ca84600443b166af13b",
+            "678e7ceb4600443b166af13c"
+          ]
+        },
+        {
+          "title": {
+            "en": "Smart Systems & Electronics",
+            "ar": "الأنظمة الذكية والإلكترونيات"
+          },
+          "courses": [
+            "678e7d174600443b166af13d",
+            "678e7d4d4600443b166af13e"
+          ]
+        }
+      ],
+      "courses": []
+    }
+  ],
+  "max_age": 17,
+  "min_age": 14
+}]

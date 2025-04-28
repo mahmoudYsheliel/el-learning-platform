@@ -1,0 +1,2295 @@
+[{
+  "_id": {
+    "$oid": "6679a4bf24650df2a16196d2"
+  },
+  "id": "string",
+  "title": {
+    "en": "Exploring Robots and Their Applications",
+    "ar": "استكشاف الروبوتات وتطبيقاتها"
+  },
+  "description": {
+    "en": "Discover the basics of robotics, including robot definitions, types, components, and applications in various fields, setting a foundation for building and programming your own robots.",
+    "ar": "اكتشف أساسيات الروبوتات، بما في ذلك تعريفات الروبوتات وأنواعها ومكوناتها وتطبيقاتها في مختلف المجالات، مما يضع أساسًا لبناء وبرمجة الروبوتات الخاصة بك."
+  },
+  "source": "https://drive.google.com/file/d/1p3KX-1m-IeFKd09vOmDJ3mYeXC08JJAc/preview"
+},
+{
+  "_id": {
+    "$oid": "6679a5a924650df2a16196d3"
+  },
+  "id": "string",
+  "title": {
+    "en": "Understanding Robots and Their Types",
+    "ar": "فهم الروبوتات وأنواعها"
+  },
+  "description": {
+    "en": "Learn the fundamentals of robotics, including what robots are, their components, and why we use them. Discover different types of robots and their applications in various fields.",
+    "ar": "تعلم أساسيات الروبوتات، بما في ذلك ماهية الروبوتات ومكوناتها ولماذا نستخدمها. اكتشف أنواع الروبوتات المختلفة وتطبيقاتها في مجالات متعددة."
+  },
+  "source": "https://drive.google.com/file/d/1j14qZVbYrV5cuw5lNdpUKxvmuySmqtSk/preview"
+},
+{
+  "_id": {
+    "$oid": "6679a66224650df2a16196d4"
+  },
+  "id": "string",
+  "title": {
+    "en": "Understanding Robots and Their Components",
+    "ar": "فهم الروبوتات ومكوناتها"
+  },
+  "description": {
+    "en": "Learn about robots, their types, components, and applications. Understand the essentials needed to build and program robots. Perfect for beginners in robotics.",
+    "ar": "تعلم عن الروبوتات وأنواعها ومكوناتها وتطبيقاتها. فهم الأساسيات اللازمة لبناء وبرمجة الروبوتات. مثالي للمبتدئين في مجال الروبوتات."
+  },
+  "source": "https://drive.google.com/file/d/1RTdpO_PHAKwSSZUJfmio4ojSwUhd4Nip/preview"
+},
+{
+  "_id": {
+    "$oid": "6679a7f624650df2a16196d5"
+  },
+  "id": "string",
+  "title": {
+    "en": "From Mechanics to Programming",
+    "ar": "من الميكانيكا إلى البرمجة"
+  },
+  "description": {
+    "en": "Learn the essentials of building a robot, including mechanics, material science, kinematics, 3D modeling, electricity basics, power electronics, sensors, and programming with Arduino.",
+    "ar": "تعلم أساسيات بناء الروبوت، بما في ذلك الميكانيكا، علوم المواد، الحركيات، النمذجة ثلاثية الأبعاد، أساسيات الكهرباء، الإلكترونيات للطاقة، الحساسات، والبرمجة باستخدام Arduino."
+  },
+  "source": "https://drive.google.com/file/d/1FU4zoYZZCMsPwjgX1rLWGFdcknvaZRzd/preview"
+},
+{
+  "_id": {
+    "$oid": "6679a93224650df2a16196d6"
+  },
+  "id": "string",
+  "title": {
+    "en": "Understanding Electricity: Basics, Circuits, and Power Generation",
+    "ar": "فهم الكهرباء: الأساسيات، الدوائر، وتوليد الطاقة"
+  },
+  "description": {
+    "en": "Electricity Fundamentals: Circuits, Conductivity, and Renewable Energy. Learn about circuits, conductors, electron flow, environmental impacts, and solar power generation limitations.",
+    "ar": "أساسيات الكهرباء: الدوائر، التوصيلية، والطاقة المتجددة. تعرف على الدوائر، الموصلات، تدفق الإلكترونات، التأثيرات البيئية، وقيود توليد الطاقة الشمسية."
+  },
+  "source": "https://drive.google.com/file/d/1rQaTvW9DTtRlDby0M6Zix5-4WeynbEyo/preview"
+},
+{
+  "_id": {
+    "$oid": "6679a9cf24650df2a16196d7"
+  },
+  "id": "string",
+  "title": {
+    "en": "Electricity Essentials: Current, Voltage, and Resistance",
+    "ar": "أساسيات الكهرباء: التيار، الجهد، والمقاومة"
+  },
+  "description": {
+    "en": "Explore Ohm's law and its relationship between voltage, current, and resistance, crucial for understanding electrical circuits.",
+    "ar": "استكشف قانون أوم وعلاقته بين الجهد والتيار والمقاومة، وهو أمر حيوي لفهم الدوائر الكهربائية."
+  },
+  "source": "https://drive.google.com/file/d/1sdfbUf4cLc4SWegrZUpGzAh78kHzpgO-/preview"
+},
+{
+  "_id": {
+    "$oid": "6679aa4f24650df2a16196d8"
+  },
+  "id": "string",
+  "title": {
+    "en": "Understanding Electrical Power: Units and Concepts",
+    "ar": "فهم الطاقة الكهربائية: الوحدات والمفاهيم"
+  },
+  "description": {
+    "en": "Learn about the unit of electrical power and the distinction between power and energy in electrical systems.",
+    "ar": "تعلم عن وحدة الطاقة الكهربائية والتمييز بين الطاقة والقدرة في الأنظمة الكهربائية."
+  },
+  "source": "https://drive.google.com/file/d/18g4ZY3__32J-MKLZzopi68LVylV6y_aP/preview"
+},
+{
+  "_id": {
+    "$oid": "6679aabb24650df2a16196d9"
+  },
+  "id": "string",
+  "title": {
+    "en": "Switches in Robotics: Control and Circuit Management",
+    "ar": "المفاتيح في الروبوتات: التحكم وإدارة الدوائر"
+  },
+  "description": {
+    "en": "Learn about the role of switches in robot circuits, including their function in controlling current flow and managing circuit operations.",
+    "ar": "تعلم عن دور المفاتيح في دوائر الروبوتات، بما في ذلك وظيفتها في التحكم بتدفق التيار وإدارة عمليات الدائرة."
+  },
+  "source": "https://drive.google.com/file/d/1g15BP4OSf-sZAu5jf7bysF5BxnDU4-s4/preview"
+},
+{
+  "_id": {
+    "$oid": "6679ab1824650df2a16196da"
+  },
+  "id": "string",
+  "title": {
+    "en": "Mechanical Concepts in Robotics: Motion and Measurement",
+    "ar": "المفاهيم الميكانيكية في الروبوتات: الحركة والقياس"
+  },
+  "description": {
+    "en": "Explore mechanical concepts crucial for describing robot motion, including distance, velocity, acceleration, and different types of motion. Dive into definitions, equations, and practical examples to understand movement in robotics.",
+    "ar": "استكشف المفاهيم الميكانيكية الأساسية لوصف حركة الروبوت، بما في ذلك المسافة، السرعة، التسارع، وأنواع الحركة المختلفة. اغمر في التعريفات والمعادلات والأمثلة العملية لفهم الحركة في الروبوتات."
+  },
+  "source": "https://drive.google.com/file/d/1zZUuP0WGDgbeKjEcn1NStJThHKaW-qkb/preview"
+},
+{
+  "_id": {
+    "$oid": "6679ab7c24650df2a16196db"
+  },
+  "id": "string",
+  "title": {
+    "en": "Understanding Newton's Laws and Forces in Robotics",
+    "ar": "فهم قوانين نيوتن والقوى في الروبوتات"
+  },
+  "description": {
+    "en": "Delve into Newton's laws of motion, exploring how forces govern robot behavior. Discover different force types like gravity and friction, essential for designing and understanding robot movements.",
+    "ar": "غص في قوانين نيوتن للحركة، واستكشف كيف تتحكم القوى في سلوك الروبوت. اكتشف أنواع القوى المختلفة مثل الجاذبية والاحتكاك، وهي ضرورية لتصميم وفهم حركات الروبوت."
+  },
+  "source": "https://drive.google.com/file/d/1hJleHF9AZg0g7gs53_J9nNCHMoRmm1v0/preview"
+},
+{
+  "_id": {
+    "$oid": "6679abd924650df2a16196dc"
+  },
+  "id": "string",
+  "title": {
+    "en": "Exploring Energy: Potential, Kinetic, and More",
+    "ar": "استكشاف الطاقة: الطاقة الكامنة، الحركية، والمزيد"
+  },
+  "description": {
+    "en": "Dive into the fundamental concepts of energy, including potential and kinetic energy, conservation laws, and various energy types like electrical and heat energy. Discover how energy transforms and powers our world.",
+    "ar": "اغمر في المفاهيم الأساسية للطاقة، بما في ذلك الطاقة الكامنة والحركية، قوانين الحفاظ على الطاقة، وأنواع الطاقة المختلفة مثل الطاقة الكهربائية والحرارية. اكتشف كيف تتحول الطاقة وتدير عالمنا."
+  },
+  "source": "https://drive.google.com/file/d/1W3klWfksU2roBICaPOVJzgIwe2j9B6fn/preview"
+},
+{
+  "_id": {
+    "$oid": "6679ac9024650df2a16196dd"
+  },
+  "id": "string",
+  "title": {
+    "en": "Unraveling Momentum: Linear, Angular, and Collapsing",
+    "ar": "فك رموز الزخم: الخطّي، الزاوي، والتقليص"
+  },
+  "description": {
+    "en": "Explore the physics of momentum, understanding its role in motion and stability, including linear and angular momentum. Discover the concept of collapsing and its impact on movement and robotic control.",
+    "ar": "استكشف فيزياء الزخم، وافهم دوره في الحركة والثبات، بما في ذلك الزخم الخطّي والزاوي. اكتشف مفهوم التقليص وتأثيره على الحركة والتحكم في الروبوتات."
+  },
+  "source": "https://drive.google.com/file/d/1OxeasnpPbNOaW88lANNsjMDjasXGlfIQ/preview"
+},
+{
+  "_id": {
+    "$oid": "6679acd724650df2a16196de"
+  },
+  "id": "string",
+  "title": {
+    "en": "Understanding Equilibrium and Forces: Moments and Center of Gravity",
+    "ar": "فهم التوازن والقوى: اللحظات ومركز الثقل"
+  },
+  "description": {
+    "en": "Dive into the concepts of static equilibrium, force analysis, moments, and center of gravity in mechanical physics. Learn how these principles impact stability, motion, and design in robotics and structural engineering.",
+    "ar": "استكشف مفاهيم التوازن الثابت، وتحليل القوى، واللحظات، ومركز الثقل في الفيزياء الميكانيكية. تعرف على كيفية تأثير هذه المبادئ على الاستقرار والحركة والتصميم في الروبوتات والهندسة الإنشائية."
+  },
+  "source": "https://drive.google.com/file/d/1ip08v-xUiAXsUgMSIRg30GONiEea7Uh-/preview"
+},
+{
+  "_id": {
+    "$oid": "6679ade624650df2a16196df"
+  },
+  "id": "string",
+  "title": {
+    "en": "Introduction to Robotics and Computer Science Fundamentals",
+    "ar": "مقدمة في الروبوتات ومبادئ علوم الكمبيوتر"
+  },
+  "description": {
+    "en": "Explore hardware, software, programming in C and PictoBlox, algorithms, and sequences in programming. Learn the basics of robotics and computer science in a practical and engaging manner.",
+    "ar": "استكشف الأجهزة والبرامج، والبرمجة بلغة C وPictoBlox، والخوارزميات، والتسلسلات في البرمجة. تعلم أساسيات الروبوتات وعلوم الكمبيوتر بطريقة عملية وجذابة."
+  },
+  "source": "https://drive.google.com/file/d/1RBXxlLHfjt2zFfKDcIBjAI3BtXPCfuL2/preview"
+},
+{
+  "_id": {
+    "$oid": "6679ae5d24650df2a16196e0"
+  },
+  "id": "string",
+  "title": {
+    "en": "Foundations of Programming",
+    "ar": "أساسيات البرمجة"
+  },
+  "description": {
+    "en": "This lesson covers the basics of programming, including machine language as the core communication method with computers, different programming paradigms, and the characteristics of high-level languages that make programming more accessible and efficient.",
+    "ar": "تغطي هذه الدرس أساسيات البرمجة، بما في ذلك لغة الآلة كوسيلة أساسية للتواصل مع أجهزة الكمبيوتر، والبرمجات المختلفة، وخصائص اللغات عالية المستوى التي تجعل البرمجة أكثر سهولة وفعالية."
+  },
+  "source": "https://drive.google.com/file/d/1E4-izLresnwGO40xmPUcLb7sP2lybaf_/preview"
+},
+{
+  "_id": {
+    "$oid": "6679ae9e24650df2a16196e1"
+  },
+  "id": "string",
+  "title": {
+    "en": "Understanding Algorithms and Sequences in Programming",
+    "ar": "فهم الخوارزميات والتسلسلات في البرمجة"
+  },
+  "description": {
+    "en": "This lesson explores the concepts of algorithms and sequences in programming. It clarifies the difference between them, emphasizing how algorithms are step-by-step processes to solve problems or achieve tasks, while sequences specify the order of steps within algorithms.",
+    "ar": "تستكشف هذه الدرس مفاهيم الخوارزميات والتسلسلات في البرمجة. توضح الفرق بينهما، مع التركيز على كيفية كون الخوارزميات عمليات خطوة بخطوة لحل المشكلات أو تحقيق المهام، بينما تحدد التسلسلات ترتيب الخطوات داخل الخوارزميات."
+  },
+  "source": "https://drive.google.com/file/d/1qIyVu1kHG0TrE_rNzN8da9ygEOm1EZrW/preview"
+},
+{
+  "_id": {
+    "$oid": "6679af8924650df2a16196e2"
+  },
+  "id": "string",
+  "title": {
+    "en": "Mastering C Programming Fundamentals: Variables, Loops, Conditionals, and Logic",
+    "ar": "إتقان أساسيات برمجة C: المتغيرات والحلقات والشرطيات والمنطق"
+  },
+  "description": {
+    "en": "Dive deep into C programming with variables, loops, conditionals, and logic essentials. Learn to write efficient code and solve complex problems effectively.",
+    "ar": "تعمق في برمجة C مع المتغيرات والحلقات والشرطيات وأساسيات المنطق. تعلم كتابة كود فعال وحل المشكلات المعقدة بفعالية."
+  },
+  "source": "https://drive.google.com/file/d/1RMHpyiKfQabTV_mkX326CuFAo8xMGwcv/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b01224650df2a16196e3"
+  },
+  "id": "string",
+  "title": {
+    "en": "Mastering Conditional Statements and Logical Operators in C",
+    "ar": "إتقان العبارات الشرطية والمشغلات المنطقية في C"
+  },
+  "description": {
+    "en": "Learn how to create powerful decision-making structures using if statements, logical operators, and conditional expressions in C programming.",
+    "ar": "تعلم كيفية إنشاء هياكل اتخاذ قرارات قوية باستخدام العبارات الشرطية، المشغلات المنطقية، والتعبيرات الشرطية في برمجة C."
+  },
+  "source": "https://drive.google.com/file/d/10IFVX1EXZWubu3L7fCgbTYNr3jS-mfTM/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b05f24650df2a16196e4"
+  },
+  "id": "string",
+  "title": {
+    "en": "Understanding Loop Structures in C Programming",
+    "ar": "فهم هياكل الحلقات في برمجة C"
+  },
+  "description": {
+    "en": "Explore entry-controlled and exit-controlled loops like for, while, and do-while in C, mastering their syntax and usage for efficient program execution and iteration control.",
+    "ar": "استكشف الحلقات التي تتحكم بها الإدخالات والحلقات التي تتحكم بها الخروج مثل for و while و do-while في C، مع إتقان تركيبها واستخدامها لتحقيق تنفيذ البرنامج بشكل فعال والتحكم في التكرار."
+  },
+  "source": "https://drive.google.com/file/d/1_rxWTYntpgJu3gW_cduage9Pf4IrdjDP/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b0bc24650df2a16196e5"
+  },
+  "id": "string",
+  "title": {
+    "en": "Understanding Functions in C Programming",
+    "ar": "فهم الدوال في برمجة C"
+  },
+  "description": {
+    "en": "Differentiate between function declarations and definitions, learn the role of return statements, grasp the use of 'void' for functions with no return value, and master writing functions for common tasks like finding the maximum of two numbers.",
+    "ar": "تمييز بين إعلانات الدوال وتعريفاتها، تعلم دور عبارات الإرجاع، فهم استخدام 'void' للدوال التي لا تحتوي على قيمة إرجاع، وإتقان كتابة الدوال للمهام الشائعة مثل إيجاد أكبر عددين."
+  },
+  "source": "https://drive.google.com/file/d/1rImztsBTbzU_8WmjuFMVBK61ZjpiS7VX/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b11624650df2a16196e6"
+  },
+  "id": "string",
+  "title": {
+    "en": "Fundamentals of C Programming: Functions and File Handling",
+    "ar": "أساسيات برمجة C: الدوال والتعامل مع الملفات"
+  },
+  "description": {
+    "en": "Explore the core concepts of C programming, including function declarations vs. definitions, return statements, and file handling using fopen(), fprintf(), and fseek(). Learn to create functions for maximum finding, handle file operations efficiently, and master essential programming techniques.",
+    "ar": "استكشاف المفاهيم الأساسية لبرمجة C، بما في ذلك إعلانات الدوال مقابل التعريفات، عبارات الإرجاع، والتعامل مع الملفات باستخدام fopen()، fprintf()، و fseek(). تعلم كيفية إنشاء دوال لإيجاد القيم العظمى، التعامل مع عمليات الملفات بكفاءة، وإتقان تقنيات البرمجة الأساسية."
+  },
+  "source": "https://drive.google.com/file/d/1AzNzcp8hlWqN2O83DyJojDEukzFEo1II/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b16724650df2a16196e7"
+  },
+  "id": "string",
+  "title": {
+    "en": "Exploring Pictoblox: Visual Programming for Interactive Experiences",
+    "ar": "استكشاف Pictoblox: البرمجة المرئية لتجارب تفاعلية"
+  },
+  "description": {
+    "en": "Discover Pictoblox, a visual programming language using blocks to create interactive simulations, educational apps, and games. Learn about block palettes like 'control' for logic, 'when flag clicked' for program initiation, and 'sensing' for event detection, enabling versatile and engaging programming experiences.",
+    "ar": "اكتشف Pictoblox، لغة البرمجة المرئية التي تستخدم الكتل لإنشاء محاكيات تفاعلية، تطبيقات تعليمية، وألعاب. تعلم عن لوحات الكتل مثل 'التحكم' للمنطق، 'عند النقر على العلم' لبدء البرنامج، و 'الاستشعار' لاكتشاف الأحداث، مما يتيح تجارب برمجة متنوعة وجذابة."
+  },
+  "source": "https://drive.google.com/file/d/1kNVjZg_CUg-x3MpyVQlFbPUWdi1fg8NF/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b1f324650df2a16196e8"
+  },
+  "id": "string",
+  "title": {
+    "en": "Exploring Variables in Pictoblox",
+    "ar": "استكشاف المتغيرات في Pictoblox"
+  },
+  "description": {
+    "en": "Dive into Pictoblox's variable system, from initialization with 'set variable' to modification with 'change variable.' Learn to create loops using the 'control' palette and utilize built-in variables for sprite positioning.",
+    "ar": "غص في نظام المتغيرات في Pictoblox، من التهيئة باستخدام 'تعيين المتغير' إلى التعديل باستخدام 'تغيير المتغير'. تعلم كيفية إنشاء الحلقات باستخدام لوحة 'التحكم' واستخدام المتغيرات المدمجة لتحديد مواقع الشخصيات."
+  },
+  "source": "https://drive.google.com/file/d/1hRjnSP-AT2mMRxwYPBU7Ut9GFsFQH_KU/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b24424650df2a16196e9"
+  },
+  "id": "string",
+  "title": {
+    "en": "Mastering Conditional Logic in Pictoblox",
+    "ar": "إتقان المنطق الشرطي في Pictoblox"
+  },
+  "description": {
+    "en": "Understand the power of conditional statements in Pictoblox. Use 'if' to execute code conditionally, negate conditions with NOT, combine conditions with AND, OR, NOT, handle false conditions with 'else,' and control program flow effectively.",
+    "ar": "فهم قوة العبارات الشرطية في Pictoblox. استخدم 'if' لتنفيذ الشيفرة بشكل شرطي، أنكر الشروط باستخدام NOT، دمج الشروط باستخدام AND و OR و NOT، التعامل مع الشروط الخاطئة باستخدام 'else'، والتحكم في تدفق البرنامج بشكل فعال."
+  },
+  "source": "https://drive.google.com/file/d/1gxDvS5dVaZrxxJNm_AJYLJxbbndi8gXW/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b2d524650df2a16196ea"
+  },
+  "id": "string",
+  "title": {
+    "en": "Digital Logic Gates Fundamentals",
+    "ar": "أساسيات البوابات المنطقية الرقمية"
+  },
+  "description": {
+    "en": "Delve into the basics of digital logic gates, including AND, OR, XOR, NAND, and more. Learn about their input-output relationships and how they form the building blocks of digital circuits, essential for understanding electronics and computing.",
+    "ar": "استكشف أساسيات البوابات المنطقية الرقمية، بما في ذلك AND و OR و XOR و NAND والمزيد. تعلم عن علاقات المدخلات والمخرجات وكيفية تشكيلها كعناصر أساسية في الدوائر الرقمية، وهي ضرورية لفهم الإلكترونيات والحوسبة."
+  },
+  "source": "https://drive.google.com/file/d/1s2m139ozeA1RCxgjYPVvwldFAnLGG4YY/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b34924650df2a16196eb"
+  },
+  "id": "string",
+  "title": {
+    "en": "Introduction to Arduino Fundamentals",
+    "ar": "مقدمة في أساسيات أردوينو"
+  },
+  "description": {
+    "en": "Learn about Arduino basics, including board types like UNO, Mega, and Lilypad, uploading code to Arduino using USB, understanding digital and analog signals, and identifying components like LEDs, motors, sensors, and relay modules.",
+    "ar": "تعلم أساسيات أردوينو، بما في ذلك أنواع اللوحات مثل UNO و Mega و Lilypad، رفع الكود إلى أردوينو عبر USB، فهم الإشارات الرقمية والتناظرية، وتحديد المكونات مثل LEDs والمحركات والمستشعرات ووحدات التبديل."
+  },
+  "source": "https://drive.google.com/file/d/19rC19xQiFPo5h6LdcoNRj-9gVfLCWGjL/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b3a724650df2a16196ec"
+  },
+  "id": "string",
+  "title": {
+    "en": "Arduino Basics",
+    "ar": "أساسيات أردوينو"
+  },
+  "description": {
+    "en": "Explore Arduino types, pin configuration, signal handling, and data types.",
+    "ar": "استكشف أنواع أردوينو، تكوين الدبابيس، معالجة الإشارات، وأنواع البيانات."
+  },
+  "source": "https://drive.google.com/file/d/11HJrfybCc3d8pRbCKrgX2VbxgyYXy7ma/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b40a24650df2a16196ed"
+  },
+  "id": "string",
+  "title": {
+    "en": "What is Breadboard?",
+    "ar": "ما هو لوح الدوائر؟"
+  },
+  "description": {
+    "en": "Explore the functionality and usage of breadboards in electronics. Learn about their structure, how to properly place components, and how to use them for prototyping circuits without soldering.",
+    "ar": "استكشف وظيفة واستخدامات ألواح الدوائر في الإلكترونيات. تعرف على هيكلها، كيفية وضع المكونات بشكل صحيح، وكيفية استخدامها في تصميم الدوائر دون الحاجة للحام."
+  },
+  "source": "https://drive.google.com/file/d/1TXf8V4fyupAv2dd5o5EZfMGQpH7gOTVx/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b46c24650df2a16196ee"
+  },
+  "id": "string",
+  "title": {
+    "en": "Light Sensor",
+    "ar": "مستشعر الضوء"
+  },
+  "description": {
+    "en": "Learn about light sensors, their types, applications, and how they function to detect light intensity and provide input to various electronic systems.",
+    "ar": "تعلم عن مستشعرات الضوء، أنواعها، تطبيقاتها، وكيفية عملها لاكتشاف شدة الضوء وتقديم مدخلات إلى أنظمة إلكترونية مختلفة."
+  },
+  "source": "https://drive.google.com/file/d/1_DLhnO2lp7rVYnkgnotNzW6r7bI50980/preview"
+},
+{
+  "_id": {
+    "$oid": "6679b4cc24650df2a16196ef"
+  },
+  "id": "string",
+  "title": {
+    "en": "What is IR (Infrared) Sensor?",
+    "ar": "ما هو مستشعر الأشعة تحت الحمراء (IR)؟"
+  },
+  "description": {
+    "en": "This lesson provides an in-depth exploration of IR (Infrared) sensors, covering their working principles, applications in various fields such as robotics and automation, and how they detect and measure infrared radiation. Students will learn about different types of IR sensors and their significance in modern technology.",
+    "ar": "تقدم هذه الدرس استكشافًا متعمقًا لمستشعرات الأشعة تحت الحمراء (IR)، بما في ذلك مبادئ عملها وتطبيقاتها في مجالات مختلفة مثل الروبوتات والأتمتة، وكيفية اكتشافها وقياسها للإشعاع تحت الأحمر. سيتعلم الطلاب عن أنواع مختلفة من مستشعرات الأشعة تحت الحمراء وأهميتها في التكنولوجيا الحديثة."
+  },
+  "source": "https://drive.google.com/file/d/1QlM5VoLVy3RDf2UXL-jdP4hEzm5MCVes/preview"
+},
+{
+  "_id": {
+    "$oid": "667c327b98157d488d318539"
+  },
+  "id": "string",
+  "title": {
+    "en": "Welcome to Exploring the Universe",
+    "ar": "مرحبا بكم في استكشاف الكون"
+  },
+  "description": {
+    "en": "Welcome to Exploring the Universe course – take a thrilling journey through space with this engaging course for young explorers! Learn about the history of rockets, how satellites work, and why space exploration matters. With fun activities and interactive games from NASA Space Place, this course sparks curiosity and introduces kids to the wonders of Aerospace.",
+    "ar": "مرحبا بكم في دورة استكشاف الكون، انطلق في رحلة شيقة عبر الفضاء مع هذه الدورة الممتعة للمستكشفين الصغار! تعرف على تاريخ الصواريخ وكيف تعمل الأقمار الصناعية وأهمية استكشاف الفضاء، بالإضافة لأنشطة تفاعلية وألعاب ممتعة من NASA Space Place، ستشعل هذا الدورة فضول الأطفال وتعرّفهم على تكنولوجيا عالم الفضاء."
+  },
+  "source": "https://drive.google.com/file/d/1mNGmce_3EWhacSvKRZjrcJHepC9Sbfnz/preview"
+},
+{
+  "_id": {
+    "$oid": "667c32b598157d488d31853a"
+  },
+  "id": "string",
+  "title": {
+    "en": "From Fireworks to Rockets",
+    "ar": "من الألعاب النارية إلى الصواريخ"
+  },
+  "description": {
+    "en": "Historical overview of rocketry origins, rocket technology evolution, and significant milestones in rocket development.",
+    "ar": "نظرة تاريخية على أصول الصواريخ وتطور تكنولوجيا الصواريخ، وأبرز المحطات في تطوير الصواريخ."
+  },
+  "source": "https://drive.google.com/file/d/1d0Qzhm5z8VuaMnPPA_ZlVhYymIgk0z9T/preview"
+},
+{
+  "_id": {
+    "$oid": "667c32ea98157d488d31853b"
+  },
+  "id": "string",
+  "title": {
+    "en": "Rockets? What’s that?",
+    "ar": "ما هي الصواريخ؟"
+  },
+  "description": {
+    "en": "What makes a rocket fly? Learn about rocket components, Newton’s third law, and how multistage rockets help us explore deep space.",
+    "ar": "ما الذي يجعل الصاروخ ينطلق؟ تعرّف على مكونات الصواريخ، وقانون نيوتن الثالث، وكيف تساعد الصواريخ متعددة المراحل في استكشاف الفضاء العميق."
+  },
+  "source": "https://drive.google.com/file/d/12dVpGMXFAfHritZNHLhkylXMqspyc46O/preview"
+},
+{
+  "_id": {
+    "$oid": "667c332498157d488d31853c"
+  },
+  "id": "string",
+  "title": {
+    "en": "Satellites? What’s that?",
+    "ar": "ما هي الأقمار الصناعية؟"
+  },
+  "description": {
+    "en": "What are satellites, and why do they stay in orbit? Learn about different types of orbits, satellite components, and their vital roles in space.",
+    "ar": "ما هي الأقمار الصناعية، ولماذا تبقى في مدارها؟ تعرّف على أنواع المدارات المختلفة، ومكونات الأقمار الصناعية، وأدوارها المهمة في الفضاء."
+  },
+  "source": "https://drive.google.com/file/d/1uF_AK2H9EUCy7s-T30Du4U9gKcMrkJAY/preview"
+},
+{
+  "_id": {
+    "$oid": "667c335a98157d488d31853d"
+  },
+  "id": "string",
+  "title": {
+    "en": "Let’s Launch Satellites!",
+    "ar": "لنطلق أقمار صناعية!"
+  },
+  "description": {
+    "en": "How do we launch satellites into space? Learn about the stages of a rocket launch and the science behind achieving orbit.",
+    "ar": "كيف نطلق الأقمار الصناعية إلى الفضاء؟ تعرّف على مراحل إطلاق الصواريخ والعلم وراء إدخال الأقمار إلى المدار."
+  },
+  "source": "https://drive.google.com/file/d/1f2dfErtS1SFpRH4nnGQqNSw628TkUgs2/preview"
+},
+{
+  "_id": {
+    "$oid": "667c363198157d488d31853e"
+  },
+  "id": "2",
+  "title": {
+    "en": "Why Satellites?",
+    "ar": "لماذا نستخدم الأقمار الصناعية؟"
+  },
+  "description": {
+    "en": "Satellites help us study the weather, communicate, and explore space! Discover their important roles and how we deal with space debris.",
+    "ar": "تساعدنا الأقمار الصناعية في دراسة الطقس، والتواصل، واستكشاف الفضاء! تعرّف على أهميتها وكيف نواجه مشكلة الحطام الفضائي."
+  },
+  "source": "https://drive.google.com/file/d/1TMzx6mzRRJo_U1Q0hS3Re1kFAQ7iQ608/preview"
+},
+{
+  "_id": {
+    "$oid": "667c369a98157d488d31853f"
+  },
+  "id": "string",
+  "title": {
+    "en": "The Way to Mars",
+    "ar": "الطريق إلى المريخ"
+  },
+  "description": {
+    "en": "How do we send spacecraft to Mars? Learn about trajectory planning, navigation, and how we communicate with distant spacecraft.",
+    "ar": "كيف نرسل المركبات الفضائية إلى المريخ؟ تعرّف على تخطيط المسارات، والملاحة، وكيفية التواصل مع المركبات في الفضاء البعيد."
+  },
+  "source": "https://drive.google.com/file/d/1cFM0WAdYuTDy7GHRFnCV6v1OqrWwD3fv/preview"
+},
+{
+  "_id": {
+    "$oid": "667c36c798157d488d318540"
+  },
+  "id": "string",
+  "title": {
+    "en": "Future of Robotic Exploration",
+    "ar": "مستقبل الاستكشاف الروبوتي"
+  },
+  "description": {
+    "en": "Robots are leading space exploration! Discover how robotic missions help us explore planets and prepare for future human space travel.",
+    "ar": "الروبوتات تقود استكشاف الفضاء! تعرّف على كيف تساعدنا البعثات الروبوتية في استكشاف الكواكب والتحضير لرحلات الفضاء البشرية المستقبلية."
+  },
+  "source": "https://drive.google.com/file/d/11AJzgmsdTZ4FLob5ASMwSK7OFNh0W2v0/preview"
+},
+{
+  "_id": {
+    "$oid": "667c36fd98157d488d318541"
+  },
+  "id": "string",
+  "title": {
+    "en": "Use of Telescopes in Space Study",
+    "ar": "استخدام التلسكوبات في دراسة الفضاء"
+  },
+  "description": {
+    "en": "How do telescopes help us study space? Compare ground-based and space telescopes and learn why we place telescopes beyond Earth.",
+    "ar": "كيف تساعدنا التلسكوبات في دراسة الفضاء؟ قارن بين التلسكوبات الأرضية وتلك التي في الفضاء، وتعرّف على سبب وضع التلسكوبات خارج الأرض."
+  },
+  "source": "https://drive.google.com/file/d/1QbdId0zwqfA0VERRX_eJAOcSpgtoapoo/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf1c08abeb455cb105b1d"
+  },
+  "id": "cs_lesson_001",
+  "title": {
+    "en": "Introduction to Computer Science Fundamentals",
+    "ar": "مقدمة في أساسيات علوم الحاسب"
+  },
+  "description": {
+    "en": "This lesson introduces the basics of computer science, covering key concepts such as hardware, software, the role of the CPU, binary numbers, and the importance of operating systems. It provides foundational knowledge essential for understanding how computers work.",
+    "ar": "تقدم هذه الدرس أساسيات علوم الحاسب، وتشمل المفاهيم الرئيسية مثل الأجهزة والبرمجيات ودور وحدة المعالجة المركزية والأرقام الثنائية وأهمية نظم التشغيل. توفر معرفة أساسية لفهم كيفية عمل الحواسيب."
+  },
+  "source": "https://drive.google.com/file/d/1RBXxlLHfjt2zFfKDcIBjAI3BtXPCfuL2/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf3488abeb455cb105b1f"
+  },
+  "id": "programming_lesson_001",
+  "title": {
+    "en": "Introduction to Programming",
+    "ar": "مقدمة في البرمجة"
+  },
+  "description": {
+    "en": "This lesson covers the basics of programming, including the definition of programming, machine language, and the purpose of programming. It introduces different programming paradigms and characteristics of high-level languages.",
+    "ar": "تغطي هذه الدرس أساسيات البرمجة، بما في ذلك تعريف البرمجة، اللغة الآلية، والغرض من البرمجة. كما يقدم paradigms البرمجة المختلفة وخصائص اللغات عالية المستوى."
+  },
+  "source": "https://drive.google.com/file/d/1E4-izLresnwGO40xmPUcLb7sP2lybaf_/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf4098abeb455cb105b21"
+  },
+  "id": "algorithms_lesson_001",
+  "title": {
+    "en": "Introduction to Algorithms and Sequences",
+    "ar": "مقدمة في الخوارزميات والتسلسلات"
+  },
+  "description": {
+    "en": "This lesson introduces algorithms and sequences, explaining their definitions, differences, purposes, and how they are used in problem-solving and programming. It provides foundational knowledge essential for understanding how algorithms drive computational processes.",
+    "ar": "تقدم هذه الدرس الخوارزميات والتسلسلات، موضحة تعريفاتها واختلافاتها وأغراضها، وكيفية استخدامها في حل المشكلات والبرمجة. توفر معرفة أساسية لفهم كيفية قيادة الخوارزميات للعمليات الحسابية."
+  },
+  "source": "https://drive.google.com/file/d/1qIyVu1kHG0TrE_rNzN8da9ygEOm1EZrW/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf4ad8abeb455cb105b23"
+  },
+  "id": "variables_lesson_001",
+  "title": {
+    "en": "Understanding Variables in C Programming",
+    "ar": "فهم المتغيرات في برمجة C"
+  },
+  "description": {
+    "en": "This lesson covers the purpose of variables in C programming, including their declaration, assignment, and data types. It explains how variables are used to store and manipulate data, and how they play a crucial role in programming.",
+    "ar": "تغطي هذه الدرس غرض المتغيرات في برمجة C، بما في ذلك إعلانها وتعيين القيم وأنواع البيانات. تشرح كيف تُستخدم المتغيرات لتخزين البيانات ومعالجتها، وكيف تلعب دورًا حيويًا في البرمجة."
+  },
+  "source": "https://drive.google.com/file/d/1RMHpyiKfQabTV_mkX326CuFAo8xMGwcv/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf5218abeb455cb105b25"
+  },
+  "id": "conditional_statements_lesson_001",
+  "title": {
+    "en": "Understanding Conditional Statements in C Programming",
+    "ar": "فهم العبارات الشرطية في برمجة C"
+  },
+  "description": {
+    "en": "This lesson explains how conditional statements work in C programming, including the syntax and usage of if statements and if-else statements. It covers the logic behind decision-making in programs and provides examples to illustrate how conditions control the flow of execution.",
+    "ar": "تشرح هذه الدرس كيفية عمل العبارات الشرطية في برمجة C، بما في ذلك بناء الجملة واستخدام عبارات if وif-else. تغطي المنطق وراء اتخاذ القرار في البرامج وتوفر أمثلة توضح كيفية التحكم في تدفق التنفيذ باستخدام الشروط."
+  },
+  "source": "https://drive.google.com/file/d/10IFVX1EXZWubu3L7fCgbTYNr3jS-mfTM/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf69f8abeb455cb105b28"
+  },
+  "id": "loops_lesson_001",
+  "title": {
+    "en": "Understanding Loops in C Programming",
+    "ar": "فهم الحلقات في برمجة C"
+  },
+  "description": {
+    "en": "This lesson explains how loops work in C programming, including the syntax and usage of for loops, while loops, and do-while loops. It covers the concepts of iteration and control flow, providing examples to illustrate how loops can be used to execute code repeatedly under various conditions.",
+    "ar": "تشرح هذه الدرس كيفية عمل الحلقات في برمجة C، بما في ذلك بناء الجملة واستخدام حلقات for وwhile وdo-while. تغطي مفاهيم التكرار وتدفق التحكم، وتوفر أمثلة لتوضيح كيفية استخدام الحلقات لتنفيذ الشيفرة بشكل متكرر وفقًا لظروف مختلفة."
+  },
+  "source": "https://drive.google.com/file/d/1_rxWTYntpgJu3gW_cduage9Pf4IrdjDP/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf73c8abeb455cb105b29"
+  },
+  "id": "cs_lesson_002",
+  "title": {
+    "en": "Understanding Functions in C Programming",
+    "ar": "فهم الدوال في برمجة C"
+  },
+  "description": {
+    "en": "This lesson covers the basics of functions in C programming, including function declarations, definitions, return types, and the purpose of the return statement. It provides essential knowledge for writing and using functions effectively in your programs.",
+    "ar": "تغطي هذه الدرس أساسيات الدوال في برمجة C، بما في ذلك إعلانات الدوال، التعريفات، أنواع الإرجاع، وغرض بيان الإرجاع. توفر المعرفة الأساسية لكتابة واستخدام الدوال بفعالية في برامجك."
+  },
+  "source": "https://drive.google.com/file/d/1rImztsBTbzU_8WmjuFMVBK61ZjpiS7VX/preview"
+},
+{
+  "_id": {
+    "$oid": "66bdf7a08abeb455cb105b2b"
+  },
+  "id": "cs_lesson_003",
+  "title": {
+    "en": "File Handling in C Programming",
+    "ar": "التعامل مع الملفات في برمجة C"
+  },
+  "description": {
+    "en": "This lesson explores file handling in C programming, covering how to open, read, write, and close files. Learn about essential functions like fopen(), fprintf(), fseek(), and their applications in managing file operations.",
+    "ar": "تستعرض هذه الدرس التعامل مع الملفات في برمجة C، بما في ذلك كيفية فتح، قراءة، كتابة، وإغلاق الملفات. تعلم حول الدوال الأساسية مثل fopen()، fprintf()، fseek() وتطبيقاتها في إدارة عمليات الملفات."
+  },
+  "source": "https://drive.google.com/file/d/1AzNzcp8hlWqN2O83DyJojDEukzFEo1II/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf689dda5e21b8970113fe"
+  },
+  "id": "lesson_1",
+  "title": {
+    "en": "Wave Wizards - Part 1",
+    "ar": "سحرة الموجات - الجزء 1"
+  },
+  "description": {
+    "en": "Explore the basics of waves including types like transverse and longitudinal waves, and concepts such as wavelength, amplitude, and frequency. Learn about how waves transport energy and phenomena like constructive and destructive interference.",
+    "ar": "استكشف أساسيات الموجات بما في ذلك الأنواع مثل الموجات العرضية والطولية، ومفاهيم مثل الطول الموجي، والسعة، والتردد. تعلم عن كيفية نقل الموجات للطاقة وظواهر مثل التداخل البنّاء والتدميري."
+  },
+  "source": "https://drive.google.com/file/d/11VGMtCSkbxyG3WsbPR7PPjAeKsb3IcNo/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf68beda5e21b8970113ff"
+  },
+  "id": "lesson_2",
+  "title": {
+    "en": "Wave Wizards - Part 2",
+    "ar": "سحرة الموجات - الجزء 2"
+  },
+  "description": {
+    "en": "Delve deeper into how waves transport energy, with a focus on amplitude and its impact on energy. Understand the effects of wave interference and practical applications like noise-canceling technology.",
+    "ar": "استكشف كيفية نقل الموجات للطاقة، مع التركيز على السعة وتأثيرها على الطاقة. افهم تأثيرات التداخل الموجي وتطبيقات عملية مثل تقنية إلغاء الضوضاء."
+  },
+  "source": "https://drive.google.com/file/d/1wCwtt80Lb2Rgi4kAHECOyQaVo9mhr9C3/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6aa6da5e21b897011400"
+  },
+  "id": "lesson_001",
+  "title": {
+    "en": "The Magic of Sound",
+    "ar": "سحر الصوت"
+  },
+  "description": {
+    "en": "Explore the fascinating world of sound waves, their impact on our understanding of hearing, and their role in technology and nature. Learn about the physics of sound, including how sound waves propagate and are perceived by our ears.",
+    "ar": "استكشف عالم الموجات الصوتية المدهش وتأثيرها على فهمنا للسمع ودورها في التكنولوجيا والطبيعة. تعرف على فيزياء الصوت، بما في ذلك كيفية انتشار الموجات الصوتية وكيفية إدراكها من قبل آذاننا."
+  },
+  "source": "https://drive.google.com/file/d/1iQa9KqpWd8TMmjJIaieudQTc9k117nWR/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6ae6da5e21b897011401"
+  },
+  "id": "lesson_002",
+  "title": {
+    "en": "The Fascinating Properties of Sound",
+    "ar": "خصائص الصوت المثيرة"
+  },
+  "description": {
+    "en": "Discover the various properties of sound, including pitch, intensity, and the Doppler effect. Learn about sound waves' frequency and amplitude, how they affect what we hear, and phenomena like echo and ultrasonic/infrasonic sounds.",
+    "ar": "اكتشف الخصائص المختلفة للصوت، بما في ذلك النغمة، الشدة، وتأثير دوبلر. تعرف على تردد الموجات الصوتية وسعتها، كيف تؤثر على ما نسمعه، وظواهر مثل الصدى والأصوات فوق الصوتية وتحت الصوتية."
+  },
+  "source": "https://drive.google.com/file/d/1thWtmiVFYjHMGCLz4NZKkz0vXFUpPr3Y/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6bacda5e21b897011402"
+  },
+  "id": "lesson_id_123",
+  "title": {
+    "en": "Light as We Know It",
+    "ar": "الضوء كما نعرفه"
+  },
+  "description": {
+    "en": "This lesson explores the properties of light, including its behavior, sources, and significance in various contexts. Students will learn about the nature of light, its applications, and how it impacts our daily lives.",
+    "ar": "تستكشف هذه الدرس خصائص الضوء، بما في ذلك سلوكه ومصادره وأهميته في سياقات مختلفة. سيتعلم الطلاب عن طبيعة الضوء وتطبيقاته وكيف يؤثر على حياتنا اليومية."
+  },
+  "source": "https://drive.google.com/file/d/1pITxSASvPcd8R1wMpvthMJgV5fpRCMat/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6c5cda5e21b897011403"
+  },
+  "id": "Optical Mysteries",
+  "title": {
+    "en": "Optical Mysteries",
+    "ar": "الأسرار البصرية"
+  },
+  "description": {
+    "en": "Explore how light travels, reflects, refracts, and how lenses work. Learn about the Ray Model, Reflection, Refraction, and the role of Lenses. Understand how these principles apply to everyday tools like glasses and microscopes.",
+    "ar": "استكشف كيفية انتقال الضوء، انعكاسه، انكساره، وكيفية عمل العدسات. تعرف على نموذج الشعاع، الانعكاس، الانكسار، ودور العدسات. افهم كيف تطبق هذه المبادئ على الأدوات اليومية مثل النظارات والميكروسكوبات."
+  },
+  "source": "https://drive.google.com/file/d/1XnfndVygICnioJMAzTXUJRrFUCG74dAj/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6ca1da5e21b897011404"
+  },
+  "id": "Magnificent Light",
+  "title": {
+    "en": "Magnificent Light",
+    "ar": "الضوء الرائع"
+  },
+  "description": {
+    "en": "We’ll explore why the sky and sea are blue, if water is truly transparent, and what causes auroras. We'll also learn about refraction and see how light behaves in different media. Discover the fascinating phenomenon of mirages and how they trick our eyes into seeing things that aren’t there.",
+    "ar": "هنستكشف لماذا السماء والبحر زرقاء، وهل المياه شفافة حقًا، وما هي الأضواء الشمالية وكيف تحدث. سنتعلم أيضًا عن الانكسار وكيف يتصرف الضوء في وسائل مختلفة. اكتشف ظاهرة السراب وكيف تخدع عيوننا لرؤية أشياء غير موجودة."
+  },
+  "source": "https://drive.google.com/file/d/1M_3KMNfPywNmKWKrbW_-hyGR_M7-tGlR/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6cf9da5e21b897011405"
+  },
+  "id": "Magnificent Light",
+  "title": {
+    "en": "Magnificent Light 2",
+    "ar": "2 الضوء الرائع"
+  },
+  "description": {
+    "en": "Explore why the sea appears blue, how mirages trick our eyes, and why colors change underwater. Discover the science behind the aurora and how light interacts with different media. Learn about the role of photons, refraction, and absorption in creating these fascinating optical phenomena.",
+    "ar": "استكشف لماذا يظهر البحر أزرق، وكيف يخدع السراب عيوننا، ولماذا تتغير الألوان تحت الماء. اكتشف علم الأضواء الشمالية وكيف يتفاعل الضوء مع وسائل مختلفة. تعرف على دور الفوتونات، والانكسار، والامتصاص في خلق هذه الظواهر البصرية الرائعة."
+  },
+  "source": "https://drive.google.com/file/d/1P6ed2XLnkHC1Br2VS3-ci1P2f4ONVKha/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6d3cda5e21b897011406"
+  },
+  "id": "Unseen Wonders",
+  "title": {
+    "en": "Unseen Wonders",
+    "ar": "العجائب غير المرئية"
+  },
+  "description": {
+    "en": "Discover the electromagnetic spectrum beyond visible light. Learn about radio waves, microwaves, and infrared waves—how they work and their applications. Explore how these invisible waves influence our daily lives, from radio broadcasts to night-vision technology.",
+    "ar": "اكتشف الطيف الكهرومغناطيسي beyond الضوء المرئي. تعرف على موجات الراديو، الميكروويف، والموجات تحت الحمراء—كيف تعمل وتطبيقاتها. استكشف كيف تؤثر هذه الموجات غير المرئية على حياتنا اليومية، من البث الإذاعي إلى تكنولوجيا الرؤية الليلية."
+  },
+  "source": "https://drive.google.com/file/d/1RIWE00wrMzqXEAQBSXQv0Lg4uSmIZk5g/preview"
+},
+{
+  "_id": {
+    "$oid": "66bf6dbfda5e21b897011407"
+  },
+  "id": "unseen_wonders_001",
+  "title": {
+    "en": "Unseen Wonders 2",
+    "ar": "2 العجائب غير المرئية"
+  },
+  "description": {
+    "en": "Explore the fascinating world of electromagnetic waves that we can't see but have significant impacts, including radio waves, microwaves, infrared waves, ultraviolet rays, X-rays, and gamma rays. Learn about their sources, uses, and effects.",
+    "ar": "اكتشف عالم الأمواج الكهرومغناطيسية المدهش الذي لا يمكننا رؤيته ولكن له تأثيرات كبيرة، بما في ذلك الأمواج الراديوية، الميكروويف، الأشعة تحت الحمراء، الأشعة فوق البنفسجية، الأشعة السينية، وأشعة جاما. تعرف على مصادرها واستخداماتها وتأثيراتها."
+  },
+  "source": "https://drive.google.com/file/d/11JLSs5Q9LKXfaq013_PpX7M5b_EsMkxY/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfa992da5e21b897011410"
+  },
+  "id": "001",
+  "title": {
+    "en": "Welcome to Running the Skies",
+    "ar": "مرحبًا بك في التحليق في السماء"
+  },
+  "description": {
+    "en": "Get ready for takeoff! In this course, you’ll explore how humans first dreamed of flying and the science that made it possible.",
+    "ar": "استعد للإقلاع! في هذه الدورة، ستتعرف على كيف بدأ حلم الطيران عند البشر، والعلم الذي جعله ممكنًا."
+  },
+  "source": "https://drive.google.com/file/d/1FdTTB3A8ysYaHZYGhMzlR8dNvSFl7p8B/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfa9e9da5e21b897011411"
+  },
+  "id": "002",
+  "title": {
+    "en": "Kites in Flight - Part 1",
+    "ar": "الطائرات الورقية في الجو - الجزء 1"
+  },
+  "description": {
+    "en": "Explore how kites were among the first flying inventions and how people used them for fun, science, and even military use.",
+    "ar": "استكشف كيف كانت الطائرات الورقية من أوائل اختراعات الطيران، وكيف استخدمها الناس في اللعب والعلم وحتى في الحروب."
+  },
+  "source": "https://drive.google.com/file/d/1iy5kWPU7tEBsyxFGHPY8WgQYdKxOJRCE/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfaa26da5e21b897011412"
+  },
+  "id": "003",
+  "title": {
+    "en": "Kites in Flight - Part 2",
+    "ar": "الطائرات الورقية في الجو - الجزء 2"
+  },
+  "description": {
+    "en": "Continue your kite journey by building one yourself and testing how it flies in the wind.",
+    "ar": "تابع مغامرتك مع الطائرات الورقية بصناعة واحدة بنفسك واختبار طيرانها في الهواء."
+  },
+  "source": "https://drive.google.com/file/d/1lZEwzxYdZOi-NzZzuuzHNhVQBqUXvSkq/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfaa6dda5e21b897011413"
+  },
+  "id": "004",
+  "title": {
+    "en": "They Never Gave Up - Part 1",
+    "ar": "لم يستسلموا أبداً - الجزء 1"
+  },
+  "description": {
+    "en": "Meet the dreamers and inventors who kept trying to fly, despite repeated failures.",
+    "ar": "تعرف على الحالمين والمخترعين الذين واصلوا المحاولة رغم الفشل المتكرر."
+  },
+  "source": "https://drive.google.com/file/d/1PLeVirv3P8nUaieFBcrPA-JZBFvGXHYZ/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfaaa9da5e21b897011414"
+  },
+  "id": "005",
+  "title": {
+    "en": "They Never Gave Up - Part 2",
+    "ar": "لم يستسلموا أبداً - الجزء 2"
+  },
+  "description": {
+    "en": "Continue exploring their stories by learning from their mistakes and understanding how perseverance led to progress.",
+    "ar": "تابع استكشاف قصصهم من خلال التعرف على أخطائهم وكيف قادتهم المثابرة إلى التقدم."
+  },
+  "source": "https://drive.google.com/file/d/1mhznKswnuBC6jhd0LBDTTzBc3lLtCXsp/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfab56da5e21b897011415"
+  },
+  "id": "1",
+  "title": {
+    "en": "The Wright Brothers - Part 1",
+    "ar": "الأخوان رايت - الجزء 1"
+  },
+  "description": {
+    "en": "Discover how the Wright brothers studied flight carefully and designed their flying machine step by step.",
+    "ar": "اكتشف كيف درس الأخوان رايت الطيران بعناية وصمّما طائرتهما خطوة بخطوة."
+  },
+  "source": "https://drive.google.com/file/d/1otyHeK4EOhB4S8Pcu1yIimZOK9rgpeKS/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfab90da5e21b897011416"
+  },
+  "id": "2",
+  "title": {
+    "en": "The Wright Brothers - Part 2",
+    "ar": "الأخوان رايت - الجزء 2"
+  },
+  "description": {
+    "en": "Continue with a hands-on activity to test what made their glider design succeed.",
+    "ar": "تابع بنشاط عملي لتجربة العوامل التي جعلت تصميم طائرتهما الشراعية ناجحًا."
+  },
+  "source": "https://drive.google.com/file/d/1kq23O8Pey05GGBh5w74MJq4_mUtwFylr/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfac07da5e21b897011417"
+  },
+  "id": "4",
+  "title": {
+    "en": "Air Works for Me",
+    "ar": "الهواء يعمل من أجلي"
+  },
+  "description": {
+    "en": "Explore how air behaves and why it’s essential for flight.",
+    "ar": "استكشاف خصائص الهواء ولماذا يعتبر أساسياً للطيران."
+  },
+  "source": "https://drive.google.com/file/d/18m91mADDQ75h7oWOlBDoG8AOO6lxdgt0/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfac46da5e21b897011418"
+  },
+  "id": "5",
+  "title": {
+    "en": "The Four Forces of Flight at Work",
+    "ar": "القوى الأربع للطيران في العمل"
+  },
+  "description": {
+    "en": "Learn about lift, weight, thrust, and drag—and how they help planes fly.",
+    "ar": "تعرف على قوى الرفع والوزن والدفع والسحب ودورهم في الطيران."
+  },
+  "source": "https://drive.google.com/file/d/1htg2qdxrGROwo9SES4sAXxxL_S1quOwK/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfac79da5e21b897011419"
+  },
+  "id": "6",
+  "title": {
+    "en": "The Pull of Gravity",
+    "ar": "جاذبية الأرض"
+  },
+  "description": {
+    "en": "Understand how gravity affects everything, especially objects in the sky.",
+    "ar": "فهم تأثير الجاذبية على كل شيء، خصوصًا الأجسام في الهواء."
+  },
+  "source": "https://drive.google.com/file/d/1CaMeoUyET8diXTHSPHYqWkLfA6YPiC8Z/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfaca9da5e21b89701141a"
+  },
+  "id": "7",
+  "title": {
+    "en": "The Force of Lift",
+    "ar": "قوة الرفع"
+  },
+  "description": {
+    "en": "Investigate how wings help planes rise by changing air pressure.",
+    "ar": "استكشاف كيفية مساعدة الأجنحة للطائرات على الارتفاع من خلال فرق ضغط الهواء."
+  },
+  "source": "https://drive.google.com/file/d/17zRSnneTZ2jGLprkNN_v0L9h0qi3E5Bf/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfacdcda5e21b89701141b"
+  },
+  "id": "8",
+  "title": {
+    "en": "The Opposing Forces of Thrust and Drag",
+    "ar": "القوى المعاكسة للدفع والسحب"
+  },
+  "description": {
+    "en": "Learn how engines push planes forward and how drag resists motion.",
+    "ar": "التعرف على كيفية دفع المحركات للطائرة إلى الأمام ومقاومة السحب لحركتها."
+  },
+  "source": "https://drive.google.com/file/d/1RmsY4wnGKg1EqZv_wNl773V-gi3k-Yvu/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfad44da5e21b89701141c"
+  },
+  "id": "1",
+  "title": {
+    "en": "Controlling the Plane - Part 1",
+    "ar": "التحكم في الطائرة - الجزء 1"
+  },
+  "description": {
+    "en": "Learn about the main control surfaces: ailerons, elevators, and rudders—and what each one does.",
+    "ar": "تعرّف على أسطح التحكم الرئيسية: الجنيحات، والرافعات، والديل—ودور كل منها في توجيه الطائرة."
+  },
+  "source": "https://drive.google.com/file/d/1JwyFRscQqIn-5JAQR03YvXumAWELXzQf/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfad89da5e21b89701141d"
+  },
+  "id": "2",
+  "title": {
+    "en": "Controlling the Plane - Part 2",
+    "ar": "التحكم في الطائرة - الجزء 2"
+  },
+  "description": {
+    "en": "Continue by testing different control surfaces using a paper airplane to see how they change its movement.",
+    "ar": "تابع من خلال اختبار أسطح تحكم مختلفة باستخدام طائرة ورقية لترى كيف تؤثر على حركتها."
+  },
+  "source": "https://drive.google.com/file/d/1ExrRb5IWZaV-9n7vE-dXSrf5EEwqvyiP/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfadf1da5e21b89701141e"
+  },
+  "id": "1",
+  "title": {
+    "en": "Faster, Farther, Higher",
+    "ar": "أسرع، أبعد، أعلى"
+  },
+  "description": {
+    "en": "Explore how planes evolved to travel faster and cover greater distances.",
+    "ar": "استكشف كيف تطورت الطائرات لتطير أسرع وتغطي مسافات أطول."
+  },
+  "source": "https://drive.google.com/file/d/18IQFPSyFNEECiM6dgaeF_K2yzzWSBTb0/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfae33da5e21b89701141f"
+  },
+  "id": "2",
+  "title": {
+    "en": "The Adventure of Aviation Evolution",
+    "ar": "مغامرة تطور الطيران"
+  },
+  "description": {
+    "en": "Continue by discovering the world of jet engines and rockets that push aircraft to new heights.",
+    "ar": "تابع بالتعرف على عالم المحركات النفاثة والصواريخ التي تدفع الطائرات إلى آفاق جديدة."
+  },
+  "source": "https://drive.google.com/file/d/1NEgjPXrDln7jNOZO3WWFouLzW_fnVL9T/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfae92da5e21b897011420"
+  },
+  "id": "1",
+  "title": {
+    "en": "Exploring Planet Earth",
+    "ar": "استكشاف كوكب الأرض"
+  },
+  "description": {
+    "en": "See how aircraft help us map landscapes, study weather, and explore the Earth.",
+    "ar": "شاهد كيف تساعدنا الطائرات في رسم الخرائط، ودراسة الطقس، واستكشاف كوكب الأرض."
+  },
+  "source": "https://drive.google.com/file/d/1p2c0g5rQH3IjDq6FOtMXAY8i0jk4Ddzc/preview"
+},
+{
+  "_id": {
+    "$oid": "66bfaecdda5e21b897011421"
+  },
+  "id": "2",
+  "title": {
+    "en": "Journey Through Earth's Atmosphere",
+    "ar": "رحلة عبر غلاف الأرض الجوي"
+  },
+  "description": {
+    "en": "Continue the exploration of Earth's atmosphere.",
+    "ar": "تابع استكشاف غلاف الأرض الجوي."
+  },
+  "source": "https://drive.google.com/file/d/1FKheZ6Xt6zolJZfRaFEdQB8QjlvEXwpe/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb2f113b16f87bfae7285d"
+  },
+  "id": "string",
+  "title": {
+    "en": "Welcome to Aerospace: The Beginning",
+    "ar": "مرحبًا بكم في عالم الطيران والفضاء: البداية"
+  },
+  "description": {
+    "en": "Introduction to aerospace principles, history, and flight experiments.",
+    "ar": "مقدمة عن مبادئ الطيران والفضاء وتاريخ الطيران الطويل وأهم تجارب الطيران"
+  },
+  "source": "https://drive.google.com/file/d/1ExTCgk8Tm6b_N2svEbhT1wYiiT5hiFuY/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb2f583b16f87bfae7285e"
+  },
+  "id": "string",
+  "title": {
+    "en": "Folklore Legends And Myths About Flight",
+    "ar": "الأساطير والخرافات حول الطيران"
+  },
+  "description": {
+    "en": "Exploring global myths and legends about flight across various cultures.",
+    "ar": "استكشاف الأساطير والحكايات الشعبية العالمية عن الطيران عبر الثقافات المختلفة."
+  },
+  "source": "https://drive.google.com/file/d/1Qq2uyjq7Lqm4Jhb1qd-xvXZrREjxlTqO/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb304d3b16f87bfae7285f"
+  },
+  "id": "string",
+  "title": {
+    "en": "The Early Endeavours",
+    "ar": "المحاولات الأولى للطيران"
+  },
+  "description": {
+    "en": "Explore the milestones in early flight history, from Abbas Ibn Firnas in the 9th century to Hezârfen Çelebi in the 17th century, and the contributions of Galileo and others.",
+    "ar": "استكشف الجهود المبكرة في تاريخ الطيران، من عباس ابن فرناس في القرن التاسع إلى حزارفن چلبي في القرن السابع عشر، ومساهمات جاليليو وآخرين."
+  },
+  "source": "https://drive.google.com/file/d/1XyjhnTvp0qHk-kRggaC9YZHP4Sv5AA7x/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb30ad3b16f87bfae72860"
+  },
+  "id": "string",
+  "title": {
+    "en": "Fluids and Archimedes' Principle",
+    "ar": "السوائل ومبدأ أرخميدس"
+  },
+  "description": {
+    "en": "Explore the fundamentals of fluids, including density, buoyancy, and Archimedes' Principle. Learn how gases behave under varying conditions with the ideal gas law, and understand how temperature and pressure affect gas density.",
+    "ar": "استكشف أساسيات السوائل، بما في ذلك الكثافة والطفو ومبدأ أرخميدس. تعلم كيفية تصرف الغازات تحت ظروف متغيرة حسب قانون الغاز المثالي، وفهم كيف تؤثر درجة الحرارة والضغط على كثافة الغاز."
+  },
+  "source": "https://drive.google.com/file/d/1jOmlbnVWw69S8p-99H6aCd6WSFWzNmcq/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb31033b16f87bfae72861"
+  },
+  "id": "string",
+  "title": {
+    "en": "Lighter-Than-Air Flight",
+    "ar": "الطيران الأخف من الهواء"
+  },
+  "description": {
+    "en": "Learn about the evolution of lighter-than-air flight, from early balloons to Zeppelins and their decline.",
+    "ar": "تعلم عن تطور الطيران الأخف من الهواء، من المناطيد المبكرة إلى الزبلينز وتراجعها."
+  },
+  "source": "https://drive.google.com/file/d/104sn74Rip1wbCKLXxAAD5kG1pqHwMoYd/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb313f3b16f87bfae72862"
+  },
+  "id": "string",
+  "title": {
+    "en": "Bernoulli’s Principle",
+    "ar": "مبدأ برنولي"
+  },
+  "description": {
+    "en": "Bernoulli's principle explains the relationship between fluid speed and pressure, where increasing speed results in decreased pressure.",
+    "ar": "يشرح مبدأ برنولي العلاقة بين سرعة السوائل والضغط، حيث تؤدي زيادة السرعة إلى انخفاض الضغط عند ثبوت باقي العوامل."
+  },
+  "source": "https://drive.google.com/file/d/1i76O21Aj_ojLtwEMba5pUtYAF1Kjy0rg/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb317c3b16f87bfae72863"
+  },
+  "id": "string",
+  "title": {
+    "en": "Newton’s Action and Reaction Theory",
+    "ar": "نظرية نيوتن للفعل ورد الفعل"
+  },
+  "description": {
+    "en": "Explore Newton’s Third Law, its definition, experiments, and how it relates to aircraft flight.",
+    "ar": "استكشف قانون نيوتن الثالث من حيث تعريفه وتجاربه وعلاقته بالطيران."
+  },
+  "source": "https://drive.google.com/file/d/1XPMzCn38rtDiU4Xv8R71LL6c-vpH25FY/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb32503b16f87bfae72864"
+  },
+  "id": "string",
+  "title": {
+    "en": "Coanda Effect & Angle of Attack",
+    "ar": "تأثير كواندا وزاوية الهجوم"
+  },
+  "description": {
+    "en": "Explore Coanda Effect on fluid flow and Angle of Attack for lift generation in aircraft.",
+    "ar": "تعّلم عن تأثير كواندا على تدفق السوائل وتأثير زاوية الهجوم على قوة الرفع في الطائرات."
+  },
+  "source": "https://drive.google.com/file/d/1hiKdsJbDB1vlHzXMTKQrlaQiJoTZvEyt/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb32db3b16f87bfae72865"
+  },
+  "id": "string",
+  "title": {
+    "en": "Forces of Flight",
+    "ar": "قوى الطيران"
+  },
+  "description": {
+    "en": "Learn how airplanes fly by examining the forces affecting them; weight, lift, thrust, and drag. With also examining their effects during different flight stages takeoff, cruising, and landing.",
+    "ar": "تعّلم كيف تطيّر الطائرات من خلال دراسة القوى المؤثرة عليها؛ الوزن والرفع والدفع والمقاومة، وتأثيراتهم الفعّالة خلال مراحل الطيران المختلفة؛ الإقلاع والطيران المستوي والهبوط."
+  },
+  "source": "https://drive.google.com/file/d/1QPGBg2KrRpINsel4XlJEyR8s5OHiRxjp/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb335b3b16f87bfae72866"
+  },
+  "id": "string",
+  "title": {
+    "en": "The Invention of the Airplane",
+    "ar": "اختراع الطائرة"
+  },
+  "description": {
+    "en": "Explore the history of aviation from early pioneers like George Cayley and Otto Lilienthal to the Wright brothers. Learn about key inventors, their innovations, and how their contributions shaped modern aircraft.",
+    "ar": "استكشف تاريخ الطيران من الرواد الأوائل مثل جورج كايل وجوتو ليلينتال إلى الأخوين رايت. تعرف على المخترعين الرئيسيين وابتكاراتهم وكيف شكلت مساهماتهم الطائرات الحديثة."
+  },
+  "source": "https://drive.google.com/file/d/1noYUjNWHEZFcWSwwr61X559DDPvKp6m8/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb345e3b16f87bfae72867"
+  },
+  "id": "string",
+  "title": {
+    "en": "Achieving the Dream",
+    "ar": "تحقيق الحلم"
+  },
+  "description": {
+    "en": "Discover how structured problem-solving led to the Wright brothers' first controlled flight. Learn about their groundbreaking achievement and Wright Brothers Day celebration.",
+    "ar": "اكتشف كيف أدى حل المشكلات المنظم إلى أول رحلة طيران متحكم بها للأخوين رايت. تعرف على إنجازهم الرائد واحتفال يوم الأخوين رايت."
+  },
+  "source": "https://drive.google.com/file/d/1OFu7FUUHroeXdYZcQb9eQcW26-e2yxOj/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb34973b16f87bfae72868"
+  },
+  "id": "string",
+  "title": {
+    "en": "Understanding the Earth & Atmosphere",
+    "ar": "فهم الأرض والغلاف الجوي"
+  },
+  "description": {
+    "en": "Explore the Earth's atmosphere, its layers, and how pressure, temperature, and humidity affect flight. Learn about their impact on density and aircraft performance.",
+    "ar": "استكشف غلاف الأرض الجوي، طبقاته، وكيف يؤثر الضغط ودرجة الحرارة والرطوبة على الطيران. تعرف على تأثيرها على الكثافة وأداء الطائرات."
+  },
+  "source": "https://drive.google.com/file/d/1C-mrYYiyRFEPCLkrDtU888p_hjzyQbVy/preview"
+},
+{
+  "_id": {
+    "$oid": "66cb350a3b16f87bfae72869"
+  },
+  "id": "string",
+  "title": {
+    "en": "Post-Wright",
+    "ar": "ما بعد الأخوين رايت"
+  },
+  "description": {
+    "en": "Explore the evolution of air racing from early competitions to modern high-speed races, highlighting key events and technological advancements.",
+    "ar": "استكشف تطور سباقات الطيران من المنافسات الأولى إلى السباقات الحديثة عالية السرعة، مع تسليط الضوء على الأحداث الرئيسية والتطورات التكنولوجية."
+  },
+  "source": "https://drive.google.com/file/d/1miQHbHS4BL_6BJnBlNuRxHXF9sR-7Nym/preview"
+},
+{
+  "_id": {
+    "$oid": "66f2dc08b8c14d4bad17398e"
+  },
+  "id": null,
+  "title": {
+    "en": "Introduction to Programming",
+    "ar": "مقدمة إلى البرمجة"
+  },
+  "description": {
+    "en": "In this lesson, we explore what programming is, why it's important, and its different types. We’ll learn how programming instructions are given and introduce Scratch Junior as a fun, visual tool.",
+    "ar": "في هذا الدرس، سنتعرف على ماهية البرمجة، أهميتها، وأنواعها. سنتعلم كيفية إعطاء التعليمات للكمبيوتر ونقدم Scratch Junior كأداة مرئية ممتعة لتعلم البرمجة."
+  },
+  "source": "https://drive.google.com/file/d/1gFYRc4OP1qc5IkiTvSXtEv1zhmJscym_/preview"
+},
+{
+  "_id": {
+    "$oid": "66f2dde0b8c14d4bad173990"
+  },
+  "id": null,
+  "title": {
+    "en": "Scratch Junior Adventure | Meet the Interface",
+    "ar": "مغامرة سكراتش جونيور | التعرف على الواجهة"
+  },
+  "description": {
+    "en": "In this lesson, you will learn how to download and install Scratch Junior, explore its interface, and create your first program using motion blocks.",
+    "ar": "في هذا الدرس، ستتعلم كيفية تنزيل وتثبيت سكراتش جونيور، واستكشاف واجهته، وإنشاء أول برنامج لك باستخدام كتل الحركة."
+  },
+  "source": "https://drive.google.com/file/d/1QKs86hSPcj89URTLo0Qk0UQI5gnEOdTV/preview"
+},
+{
+  "_id": {
+    "$oid": "66f2e017b8c14d4bad173992"
+  },
+  "id": null,
+  "title": {
+    "en": "Understanding Loops in Scratch Junior",
+    "ar": "فهم الحلقات في سكراتش جونيور"
+  },
+  "description": {
+    "en": "In this lesson, students will learn about loops in Scratch Junior by revisiting motion blocks and creating programs that make characters move repeatedly. They will understand how to use the repeat forever block to enhance their programming skills.",
+    "ar": "الوصف: في هذا الدرس، سيتعلم الطلاب عن الحلقات في سكراتش جونيور من خلال مراجعة كتل الحركة وإنشاء برامج تجعل الشخصيات تتحرك بشكل متكرر. سيفهمون كيفية استخدام كتلة التكرار اللانهائي لتحسين مهاراتهم في البرمجة."
+  },
+  "source": "https://drive.google.com/file/d/1tLU5Ck85hm6ddsGxw_G0sjReA0O6gGrq/preview"
+},
+{
+  "_id": {
+    "$oid": "66f2e1e3b8c14d4bad173995"
+  },
+  "id": null,
+  "title": {
+    "en": "Loop Magic",
+    "ar": "سحر الحلقات "
+  },
+  "description": {
+    "en": "In this lesson, we delve deeper into loops in Scratch Junior, exploring different types of loops and their applications. We'll create a basketball game to illustrate the concept of loops, enhancing our programming skills.",
+    "ar": "في هذا الدرس، نتعمق أكثر في الحلقات في سكراتش جونيور، نستكشف أنواع مختلفة من الحلقات وتطبيقاتها. سنقوم بإنشاء لعبة كرة سلة لتوضيح مفهوم الحلقات، مما يعزز مهاراتنا في البرمجة."
+  },
+  "source": "https://drive.google.com/file/d/1W0bLt8pNbniKG5RA1sXmEncJi4uspzvF/preview"
+},
+{
+  "_id": {
+    "$oid": "66f2e394b8c14d4bad173996"
+  },
+  "id": null,
+  "title": {
+    "en": "Exploring Events in Scratch Junior",
+    "ar": "استكشاف الأحداث في سكراتش جونيور"
+  },
+  "description": {
+    "en": "In this lesson, we will learn about the concept of events in Scratch Junior. We will explore triggering blocks that allow us to program actions based on specific events, such as tapping a sprite or receiving a message. By creating a program with animals in a forest, we will understand how to implement these events in our projects.",
+    "ar": "في هذا الدرس، سنتعلم عن مفهوم الأحداث في سكراتش جونيور. سنستكشف الكتل المفعلة التي تتيح لنا برمجة الإجراءات بناءً على أحداث معينة، مثل الضغط على شخصية أو تلقي رسالة. من خلال إنشاء برنامج مع الحيوانات في الغابة، سنفهم كيفية تنفيذ هذه الأحداث في مشاريعنا."
+  },
+  "source": "https://drive.google.com/file/d/1V_PQCy4b0snP0ReNtresSTONMB9EuaRD/preview"
+},
+{
+  "_id": {
+    "$oid": "66f2e5adb8c14d4bad173998"
+  },
+  "id": null,
+  "title": {
+    "en": "Exploring Sound Blocks in Scratch Junior",
+    "ar": " استكشاف كتل الصوت في اسكراتش جونيور"
+  },
+  "description": {
+    "en": " In this lesson, we introduce and explain the sound blocks in Scratch Jr. Learn how to add sound to sprites and create interactive programs using sound blocks.",
+    "ar": " في هذا الدرس، نقدم ونشرح كتل الصوت في اسكراتش جونيور. تعلم كيفية إضافة الصوت إلى الشخصيات وإنشاء برامج تفاعلية باستخدام كتل الصوت."
+  },
+  "source": "https://drive.google.com/file/d/1qoJUrvC5FyEMkrq1uyjtBbQETcCrljJp/preview"
+},
+{
+  "_id": {
+    "$oid": "66f2e751b8c14d4bad17399a"
+  },
+  "id": null,
+  "title": {
+    "en": "Let’s Program a Maze 1",
+    "ar": "لنبرمج المتاهة 1"
+  },
+  "description": {
+    "en": "Welcome to a new lesson in Scratch Junior! In this lesson and the next, we will learn how to program a maze game using the concepts we've covered so far and some new techniques. By the end of this lesson, we will know how to create sprites like arrows, program their movements, draw the maze, hide the player, and display a \"Well Done\" message when the player reaches the target.",
+    "ar": "أهلاً بكم في درس جديد من برنامج سكراتش جونيور! في هذا الدرس والدرس القادم، سنتعلم كيفية برمجة لعبة المتاهة باستخدام المفاهيم التي تعلمناها حتى الآن وبعض التقنيات الجديدة. في نهاية هذا الدرس، سنعرف كيفية إنشاء كائنات مثل الأسهم، وبرمجة حركاتها، ورسم المتاهة، وإخفاء اللاعب، وعرض رسالة \"أحسنت\" عندما يصل اللاعب إلى الهدف."
+  },
+  "source": "https://drive.google.com/file/d/1SCiIzsD13kiSHoOiof4HgWluIIUGqqtD/preview"
+},
+{
+  "_id": {
+    "$oid": "66f2e95eb8c14d4bad17399c"
+  },
+  "id": null,
+  "title": {
+    "en": " Let’s Program a Maze 2",
+    "ar": "لنبرمج المتاهة 2"
+  },
+  "description": {
+    "en": "Continue programming the maze game by drawing lines, setting a target, handling events, and creating a \"Well Done\" page.",
+    "ar": "نكمل برمجة لعبة المتاهة من خلال رسم الخطوط، تحديد الهدف، معالجة الأحداث، وإنشاء صفحة \"أحسنت\"."
+  },
+  "source": "https://drive.google.com/file/d/1Y1Z1yF8nBynI7rT93mynrxvvdb3JEcGU/preview"
+},
+{
+  "_id": {
+    "$oid": "678622aed04aec23afdc4e95"
+  },
+  "id": null,
+  "title": {
+    "en": "1. History of Military Aviation",
+    "ar": "1. تاريخ الطيران العسكري"
+  },
+  "description": {
+    "en": "How wars were fought before the advent of airplanes, advances made to Wright’s designs during WWI, and developments from observation to jet engines and supersonic flight experimentation.",
+    "ar": "كيف كانت تُخاض الحروب قبل ظهور الطائرات، مع استعراض تطورات تصاميم الأخوين رايت خلال الحربين العالميتين، وتطورات المحركات النفاثة والطيران فوق الصوتي."
+  },
+  "source": "https://drive.google.com/file/d/1NHvSpeNNhQCMdgDX_yb-3IQ_2wiTgEll/preview"
+},
+{
+  "_id": {
+    "$oid": "678660c8d04aec23afdc4e97"
+  },
+  "id": null,
+  "title": {
+    "en": "Powering Flight: Engines",
+    "ar": "محركات الطيران"
+  },
+  "description": {
+    "en": "An introduction to the main types of engines powering flying machines: piston, jet, and rocket, with a focus on their variations like turboprops, turbofans, and ramjets.",
+    "ar": "شرح الأنواع الرئيسية للمحركات التي تُشغل الطائرات: مكبسي ونفاث وصاروخي، مع استعراض الأنواع المختلفة كالمحرك التوربيني والمروحي."
+  },
+  "source": "https://drive.google.com/file/d/1YdCP6MxB5gDlNiWJAdjEBbgFkZVyDQGV/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67866f20d04aec23afdc4e99"
+  },
+  "id": null,
+  "title": {
+    "en": "Military Aviation",
+    "ar": "الطيران العسكري"
+  },
+  "description": {
+    "en": "A comparison between civil and military aircraft, showcasing various types of military aircraft and their roles.",
+    "ar": "مقارنة بين الطائرات المدنية والعسكرية، مع استعراض الأنواع المختلفة للطائرات العسكرية ووظائفها."
+  },
+  "source": "https://drive.google.com/file/d/1sM4gBRUD1ETjBmqA7rB9VInW3eq76oLZ/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67867715d04aec23afdc4e9d"
+  },
+  "id": null,
+  "title": {
+    "en": "High-Speed Flight",
+    "ar": "الطيران عالي السرعة"
+  },
+  "description": {
+    "en": "Introducing Mach number and the concepts of subsonic, supersonic, and hypersonic flight, along with structural designs and challenges like sonic booms and heat problems.",
+    "ar": "تعريف أرقام ماخ، ومفاهيم الطيران التحت صوتي والفوق صوتي والفرط صوتي، مع استكشاف تصميمات الطائرات لهذه السرعات."
+  },
+  "source": "https://drive.google.com/file/d/1rMlAxGLyDhc-obf2klYjowGCMiGE-b7O/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "678cc28fad5ad76d9f8829a1"
+  },
+  "id": null,
+  "title": {
+    "en": "Hypersonic Vehicles",
+    "ar": "المركبات الفرط صوتية"
+  },
+  "description": {
+    "en": "Exploring the hypersonic flight regime and flow characteristics, introducing hypersonic vehicles and weapons.",
+    "ar": "استكشاف خصائص الطيران الفرط صوتي، مع تقديم المركبات والأسلحة المصممة لهذا النطاق."
+  },
+  "source": "https://drive.google.com/file/d/1am-GxL9NZBa9iU8EFJXV48msQtP3coC3/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "678cc4b7ad5ad76d9f8829a3"
+  },
+  "id": null,
+  "title": {
+    "en": "The Past and Future of Supersonic Flight",
+    "ar": "الماضي والمستقبل للطيران فوق الصوتي"
+  },
+  "description": {
+    "en": "An overview of iconic supersonic airplanes, their development, challenges, and future prospects.",
+    "ar": "لمحة عن أشهر الطائرات فوق الصوتية وتطورها على مر الزمن، مع التحديات والتطلعات المستقبلية."
+  },
+  "source": "https://drive.google.com/file/d/1Lc0UjG3C4I7SgMmYFm_TXTm2D_uD8FKR/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "678cc89bad5ad76d9f8829a5"
+  },
+  "id": null,
+  "title": {
+    "en": "Military-grade Biology",
+    "ar": "البيولوجيا العسكرية"
+  },
+  "description": {
+    "en": "Introducing the G-force, its significance, effects on the human body, and strategies for handling it in military aviation.",
+    "ar": "التعريف بقوة الجاذبية (G force) وأهميتها وتأثيرها وكيفية التعامل معها في الطيران العسكري."
+  },
+  "source": "https://drive.google.com/file/d/1fw3fSV5wpma5vBes1BllZd_Tdu1BErNe/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "678cc9eead5ad76d9f8829a7"
+  },
+  "id": null,
+  "title": {
+    "en": "Political And Philosophical Questions",
+    "ar": "أسئلة سياسية وفلسفية"
+  },
+  "description": {
+    "en": "Initiating a discussion on the ethical implications of using aerospace technologies in military applications.",
+    "ar": "فتح النقاش حول التأثيرات الأخلاقية لاستخدام تكنولوجيا الطيران في المجالات العسكرية."
+  },
+  "source": "https://drive.google.com/file/d/19YzRPPlgD81wGdHJPe4QfZ2cjbivmLxt/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "676f1a9ceee7769b3e0dc74f"
+  },
+  "id": null,
+  "title": {
+    "en": "Did the Ancient Egyptians invent “flying”?",
+    "ar": "هل اخترع المصريون القدماء \"الطيران\"؟"
+  },
+  "description": {
+    "en": "Explore the possibility that ancient Egyptians contributed to early flight knowledge, focusing on the Saqqara Glider and early aviation concepts.",
+    "ar": "استكشاف احتمال أن المصريين القدماء ساهموا في معرفة الطيران المبكر، مع التركيز على طائرة سقارة ومفاهيم الطيران الأولى."
+  },
+  "source": "https://drive.google.com/file/d/1FZ67lnK7Ccw7uI0n4kLels4oJTtVL43r/preview"
+},
+{
+  "_id": {
+    "$oid": "676f1d55eee7769b3e0dc751"
+  },
+  "id": null,
+  "title": {
+    "en": "Basics of Aerodynamics",
+    "ar": "أساسيات الديناميكا الهوائية"
+  },
+  "description": {
+    "en": "This lesson introduces the fundamental principles of aerodynamics, including lift, drag, and thrust. It explains how airfoil shape and angle of attack affect flight.",
+    "ar": "يقدم هذا الدرس المبادئ الأساسية للديناميكا الهوائية مثل الرفع، السحب، والدفع. كما يشرح كيف يؤثر شكل الجناح وزاوية الهجوم على الطيران."
+  },
+  "source": "https://drive.google.com/file/d/1XAX_b4lwjHtKPdGOEwLuzrCy5yopHAs6/preview"
+},
+{
+  "_id": {
+    "$oid": "676f1f69eee7769b3e0dc752"
+  },
+  "id": "string",
+  "title": {
+    "en": "Phenomenal Airplanes",
+    "ar": "الطائرات الرائعة"
+  },
+  "description": {
+    "en": "Explore the fascinating history of airplane development, from the first gliders to modern jets. Understand the advancements in structure, design, and technology that have shaped aviation over time.",
+    "ar": "استكشف تاريخ تطور الطائرات المثير، من أول الطائرات الشراعية إلى الطائرات النفاثة الحديثة. فهم التقدمات في الهيكل والتصميم والتكنولوجيا التي شكلت الطيران عبر الزمن."
+  },
+  "source": "https://drive.google.com/file/d/1kbFpcKOh4ikCSfC3xvzBAuqz-tWv6feY/preview"
+},
+{
+  "_id": {
+    "$oid": "676f2031eee7769b3e0dc753"
+  },
+  "id": "string",
+  "title": {
+    "en": "Different Geometry Configurations",
+    "ar": "الأشكال الهندسية المختلفة"
+  },
+  "description": {
+    "en": "Introducing different geometric configurations and their impact on airplane aerodynamics.",
+    "ar": "تقديم الأشكال الهندسية المختلفة وتأثيرها على الديناميكا الهوائية للطائرات."
+  },
+  "source": "https://drive.google.com/file/d/180lTLSSq6YRmHVMlBqjBaIge-GuK5zL2/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "676f2086eee7769b3e0dc754"
+  },
+  "id": "string",
+  "title": {
+    "en": "Different Wing Configurations",
+    "ar": "أشكال الأجنحة المختلفة"
+  },
+  "description": {
+    "en": "Exploring different wing configurations and their impact on aerodynamic performance.",
+    "ar": "استعراض أشكال الأجنحة المختلفة وتأثيرها على أداء الطائرة الديناميكي."
+  },
+  "source": "https://drive.google.com/file/d/1xqEgieBpHL8bQkvF5s88tXQzBuSQH31n/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "676f20c9eee7769b3e0dc755"
+  },
+  "id": "string",
+  "title": {
+    "en": "Understanding Aviation's Impact on Our World",
+    "ar": "فهم تأثير الطيران على عالمنا"
+  },
+  "description": {
+    "en": "Dive into the environmental impact of aviation, including carbon emissions, noise pollution, and fuel consumption, and explore sustainable solutions for the future.",
+    "ar": "تعرف على التأثير البيئي للطيران، بما في ذلك انبعاثات الكربون والتلوث الضوضائي واستهلاك الوقود، واستكشف الحلول المستدامة للمستقبل."
+  },
+  "source": "https://drive.google.com/file/d/1XoeKrIqw9wh_O501m_9hyuDfJJ16TynU/preview"
+},
+{
+  "_id": {
+    "$oid": "676f2107eee7769b3e0dc756"
+  },
+  "id": "string",
+  "title": {
+    "en": "When Birds Meet Airplanes",
+    "ar": "عندما تلتقي الطيور بالطائرات"
+  },
+  "description": {
+    "en": "Explore the concept of flexible wings in aviation, inspired by the natural movement of bird wings.",
+    "ar": "استكشف مفهوم الأجنحة المرنة في الطيران، المستوحاة من حركة أجنحة الطيور الطبيعية."
+  },
+  "source": "https://drive.google.com/file/d/1uc7pMuYTEpn2_Ss0Ac2E3gbwY98bOSg8/preview"
+},
+{
+  "_id": {
+    "$oid": "679647131b22575e31b57954"
+  },
+  "id": null,
+  "title": {
+    "en": "Phenomenal Airplanes",
+    "ar": "الطائرات المذهلة"
+  },
+  "description": {
+    "en": "A historical overview of the evolution of airplanes, from early gliders to modern jets.",
+    "ar": "لمحة تاريخية عن تطور الطائرات من الطائرات الشراعية الأولى إلى الطائرات النفاثة الحديثة."
+  },
+  "source": "https://drive.google.com/file/d/1kbFpcKOh4ikCSfC3xvzBAuqz-tWv6feY/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67964f221b22575e31b57956"
+  },
+  "id": null,
+  "title": {
+    "en": "Flight Stability and Control - Stability 1",
+    "ar": "استقرار الطيران والتحكم - الاستقرار 1"
+  },
+  "description": {
+    "en": "Explaining flight dynamics such as roll, pitch, and yaw.",
+    "ar": "شرح ديناميكيات الطيران مثل الدوران والارتفاع والانحراف."
+  },
+  "source": "https://drive.google.com/file/d/19hEZAQHLLszHKALqKReRwFNGazF9NkeN/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "6796500a1b22575e31b57957"
+  },
+  "id": null,
+  "title": {
+    "en": "Flight Stability and Control - Stability 2",
+    "ar": "استقرار الطيران والتحكم - الاستقرار 2"
+  },
+  "description": {
+    "en": "Exploring the concepts of longitudenal stability and lateral stability.",
+    "ar": "تعمق أكثر في فهم مفاهيم مثل الاستقرار الثابت والاستقرار الديناميكي لعملية الطيران"
+  },
+  "source": "https://drive.google.com/file/d/1gTyo1hY4xGdtCz20yMUcr8ZJFb8X101S/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "679662561b22575e31b57958"
+  },
+  "id": null,
+  "title": {
+    "en": "Flight Stability and Control - Control Surfaces",
+    "ar": "استقرار الطيران والتحكم - أسطح التحكم"
+  },
+  "description": {
+    "en": "Explaining control surfaces (ailerons, elevators, rudders) and their role in aircraft movement.",
+    "ar": "شرح أسطح التحكم ودورها في التحكم بحركة الطائرة."
+  },
+  "source": "https://drive.google.com/file/d/1D602xMEx3XLNqQWrikHszB2qlM1ex_3b/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67967a401b22575e31b57959"
+  },
+  "id": null,
+  "title": {
+    "en": "Different Tail Configurations",
+    "ar": "أشكال الذيل المختلفة"
+  },
+  "description": {
+    "en": "Introducing different tail configurations and their influence on aircraft stability and performance.",
+    "ar": "تعرف على أشكال الذيل المختلفة وتأثيرها على استقرار الطائرة وأدائها."
+  },
+  "source": "https://drive.google.com/file/d/1VGPtcOdS7zF4UVjovhvPvjjiTzH96eIv/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67967c8c1b22575e31b5795a"
+  },
+  "id": null,
+  "title": {
+    "en": "How Different Airplanes Fly",
+    "ar": "كيف تطير الطائرات المختلفة"
+  },
+  "description": {
+    "en": "Demonstrating how the four forces (lift, drag, thrust, weight) apply across different airplane types.",
+    "ar": "توضيح كيفية تطبيق القوى الأربع (الرفع، السحب، الدفع، الوزن) على أنواع الطائرات المختلفة."
+  },
+  "source": "https://drive.google.com/file/d/1TmP7rW3VyzgRDd4p3SXv4Te_uH5v7rPN/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67a138176e352a3615194a27"
+  },
+  "id": null,
+  "title": {
+    "en": "Military-grade Biology",
+    "ar": "البيولوجيا العسكرية"
+  },
+  "description": {
+    "en": "Introducing the G-force, its significance and effects on the human body, and strategies for handling it in military aviation.",
+    "ar": "التعريف بقوة الجاذبية (G force) وأهميتها وتأثيرها وكيفية التعامل معها في الطيران العسكري."
+  },
+  "source": "https://drive.google.com/file/d/1fw3fSV5wpma5vBes1BllZd_Tdu1BErNe/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67a1391f6e352a3615194a29"
+  },
+  "id": null,
+  "title": {
+    "en": "Political And Philosophical Questions",
+    "ar": "أسئلة سياسية وفلسفية"
+  },
+  "description": {
+    "en": "Opening a discussion on the ethical implications of using aerospace technologies in military applications.",
+    "ar": "فتح النقاش حول التأثيرات الأخلاقية لاستخدام التكنولوجيا الجوية في المجالات العسكرية."
+  },
+  "source": "https://drive.google.com/file/d/19YzRPPlgD81wGdHJPe4QfZ2cjbivmLxt/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67a13a2d6e352a3615194a2b"
+  },
+  "id": null,
+  "title": {
+    "en": "Spies in the Sky",
+    "ar": "جواسيس في السماء"
+  },
+  "description": {
+    "en": "The evolution of spying methods over time, highlighting the role of aircraft and satellites in reconnaissance.",
+    "ar": "تطور تقنيات التجسس عبر الزمن، مع التركيز على تطور الطائرات والأقمار الصناعية في الاستطلاع."
+  },
+  "source": "https://drive.google.com/file/d/1VSkgtOQrsGIwC8TbyFrINhQQw07HmnGO/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67be1f8af5bee34f3a39d5e7"
+  },
+  "id": null,
+  "title": {
+    "en": "Course Introduction",
+    "ar": "مقدمة الدورة"
+  },
+  "description": {
+    "en": "Welcome to an exciting journey of scientific discovery! This course will help you see the world through a scientific lens, explore fascinating natural phenomena, and experiment with simple materials from home. Get ready to unleash your curiosity!",
+    "ar": "مرحبًا في رحلة استكشاف علمية ممتعة! في هذا الكورس، هتشوف العالم بنظرة علمية، وتتعرف على ظواهر طبيعية مذهلة، وتقوم بتجارب شيقة باستخدام أدوات بسيطة من البيت. استعد لإطلاق العنان لفضولك!"
+  },
+  "source": "https://drive.google.com/file/d/1IcE46kWNUYiQMiRVZ-93SFHFZ2bWTWUG/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67be1fcdf5bee34f3a39d5e8"
+  },
+  "id": null,
+  "title": {
+    "en": "The Five Senses",
+    "ar": "الحواس الخمسة"
+  },
+  "description": {
+    "en": "Introduction to exploring life through the vivid tools that are the five senses.",
+    "ar": "مقدمة لاستكشاف الحياة من خلال الأدوات الرائعة التي نمتلكها والتي تتمثل في الحواس الخمسة."
+  },
+  "source": "https://drive.google.com/file/d/1uy72xmWXYKsHFmuwFeJPOd9gZ_f2bsn3/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67be2021f5bee34f3a39d5e9"
+  },
+  "id": null,
+  "title": {
+    "en": "Deep Dive into the Five Senses",
+    "ar": "التعمق في الحواس الخمسة"
+  },
+  "description": {
+    "en": "Explore how the five senses work and interact with the outer world, showcasing the brilliance of sensory perception.",
+    "ar": "استكشف كيفية عمل الحواس الخمسة وتفاعلها مع العالم الخارجي، وإظهار روعة إدراكنا الحسي."
+  },
+  "source": "https://drive.google.com/file/d/1OLmxaXfNDi3gmC_p65n-PvY2bc5yUmvb/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67be2052f5bee34f3a39d5ea"
+  },
+  "id": null,
+  "title": {
+    "en": "The Scientific Method",
+    "ar": "الطريقة العلمية"
+  },
+  "description": {
+    "en": "Learn to observe events scientifically, such as apples falling, chicken movements, and dissolving sugar, while discovering an organized method to explore life.",
+    "ar": "تعلم كيفية ملاحظة الأحداث بطريقة علمية، مثل سقوط التفاح، وحركة الدجاجة، وذوبان السكر، واكتشاف طريقة منظمة لاستكشاف الحياة."
+  },
+  "source": "https://drive.google.com/file/d/12tLcTVq8iOKt_tiIU3tuUcrOFE7CBKfi/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67be236ff5bee34f3a39d5ef"
+  },
+  "id": null,
+  "title": {
+    "en": "Rainbow Science",
+    "ar": "علوم ألوان الطيف"
+  },
+  "description": {
+    "en": "Discover light waves, reflection, refraction, and how we perceive different colors through everyday phenomena like rainbows.",
+    "ar": "استكشاف موجات الضوء والانعكاس والانكسار وكيف ندرك الألوان المختلفة من خلال ظواهر يومية مثل قوس قزح."
+  },
+  "source": "https://drive.google.com/file/d/1UUYRGpsJZ_ZTJ4DYgqz1MasgwTx7apzi/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67be243df5bee34f3a39d5f1"
+  },
+  "id": null,
+  "title": {
+    "en": "Scientific Method in Action",
+    "ar": "الطريقة العلمية في حياتنا"
+  },
+  "description": {
+    "en": "Apply the scientific method to daily observations, such as those in the kitchen or at school. Learn about static electricity and uncover the mystery of why balloons attract small paper pieces.",
+    "ar": "تطبيق الطريقة العلمية على الأحداث اليومية مثل تلك الموجودة في المطبخ أو المدرسة. وتعلم أيضاً عن الكهرباء الساكنة واكتشف سر جذب البالونات لقطع الورق الصغيرة."
+  },
+  "source": "https://drive.google.com/file/d/1IEGovOotIu3ezluL8L71S8agCdtBcagu/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67be252ef5bee34f3a39d5f4"
+  },
+  "id": null,
+  "title": {
+    "en": "The Five Senses & Technology",
+    "ar": "الحواس الخمسة والتكنولوجيا"
+  },
+  "description": {
+    "en": "Explore how certain devices and technologies simulate the five senses to aid human life.",
+    "ar": "استكشاف كيف تحاكي بعض الأجهزة والتقنيات في عصرنا الحالي الحواس الخمسة لتساعد الإنسان في حياته."
+  },
+  "source": "https://drive.google.com/file/d/1VQbcA-pU9dThyxw2M0_CR0A4Oi_fY7mC/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67be2683f5bee34f3a39d5f6"
+  },
+  "id": null,
+  "title": {
+    "en": "Solid, liquid, and gas!",
+    "ar": "صلب وسائل وغاز!"
+  },
+  "description": {
+    "en": "Understand the states of matter, classify things based on their states, and learn whether states of matter can be interchanged.",
+    "ar": "فهم حالات المادة، وتصنيف الأشياء حسب حالاتها، ومعرفة ما إذا كانت حالات المادة قابلة للتغيير."
+  },
+  "source": "https://drive.google.com/file/d/1FHp8htCeWy_EzBTHY2oKhVypcA6wj_G0/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67be2721f5bee34f3a39d5f8"
+  },
+  "id": null,
+  "title": {
+    "en": "Discovering Plasma & Matter Marvels!",
+    "ar": "البلازما وأسرار المادة!"
+  },
+  "description": {
+    "en": "Learn about the beautiful auroras and their composition, while understanding the basics of mass, volume, and the density of matter.",
+    "ar": "التعرف على الشفق القطبي الجميل ومكوناته، وفهم أساسيات الكتلة والحجم وكثافة المادة."
+  },
+  "source": "https://drive.google.com/file/d/1JAGwCcvi13EI0jABjC_ux8hRyxRA8iMY/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67c6960771ecaba6bdb22b16"
+  },
+  "id": null,
+  "title": {
+    "en": "Artificial Intelligence and Machine Learning",
+    "ar": "الذكاء الاصطناعي والتعلم الآلي"
+  },
+  "description": {
+    "en": "Ever wondered how computers can recognize faces, predict what you want to watch, or even talk to you? Welcome to the world of Artificial Intelligence! In this lesson, we’ll explore what AI is, how it learns, and how it is used in everyday life.",
+    "ar": "عمرك فكرت إزاي الكمبيوتر بيقدر يتعرف على الوجوه أو يقترح عليك فيديوهات تحبها؟ أهلاً بيك في عالم الذكاء الاصطناعي! في الدرس ده، هنتعرف على مفهوم الذكاء الاصطناعي، إزاي بيتعلم، وإزاي بنشوفه حوالينا كل يوم."
+  },
+  "source": "https://drive.google.com/file/d/1LrDloF3mMt8I4l5xexRihKcwWsfNFfNq/view?usp=sharing"
+},
+{
+  "_id": {
+    "$oid": "67c6997d71ecaba6bdb22b19"
+  },
+  "id": null,
+  "title": {
+    "en": "Types of Machine Learning – The Three Robots",
+    "ar": "أنواع التعلم الآلي - الروبوتات الثلاثة"
+  },
+  "description": {
+    "en": "There are three ways AI learns—like a student studying from a teacher, like a detective finding patterns, or like a gamer improving by trial and error. In this lesson, we’ll discover Supervised, Unsupervised, and Reinforcement Learning with fun examples.",
+    "ar": "الذكاء الاصطناعي ممكن يتعلم بثلاث طرق: زي الطالب اللي عنده مدرس، أو المحقق اللي بيدور على أنماط، أو اللاعب اللي بيتعلم من أخطائه. في الدرس ده، هنتعرف على التعلم الموجَّه، غير الموجَّه، والتعزيز من خلال أمثلة ممتعة."
+  },
+  "source": "https://drive.google.com/file/d/1PmajyuYc9AMfrttH2vzk6ptCFiiTbdKa/view?usp=sharing"
+},
+{
+  "_id": {
+    "$oid": "67c69cd371ecaba6bdb22b1c"
+  },
+  "id": null,
+  "title": {
+    "en": "Emotion Recognition with AI - Part 1",
+    "ar": "التعرف على المشاعر باستخدام الذكاء الاصطناعي - الجزء 1"
+  },
+  "description": {
+    "en": "Can AI understand feelings? In this lesson, we’ll use Pictoblox to create a fun AI program that detects emotions through facial expressions.",
+    "ar": "هل ممكن الذكاء الاصطناعي يفهم المشاعر؟ في الدرس ده، هنعمل برنامج ممتع باستخدام بيكتوبلوكس يقدر يتعرف على المشاعر من تعبيرات الوجه."
+  },
+  "source": "https://drive.google.com/file/d/1zKwDuz3NUrMy2hKIDQh1QqjuW4kmKld_/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67c69de471ecaba6bdb22b1d"
+  },
+  "id": null,
+  "title": {
+    "en": "Emotion Recognition with AI - Part 2",
+    "ar": "التعرف على المشاعر باستخدام الذكاء الاصطناعي - الجزء 2"
+  },
+  "description": {
+    "en": "Let's continue making our AI Emotion Recognition program.",
+    "ar": "لنكمل عمل برنامج التعرف على المشاعر باستخدام الذكاء الاصطناعي."
+  },
+  "source": "https://drive.google.com/file/d/1FjnnIZNnHjphXSsHO5elk1N8KRgqBpxt/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67c6a1dd71ecaba6bdb22b20"
+  },
+  "id": null,
+  "title": {
+    "en": "AI Drawing Assistant - Part 1",
+    "ar": "مساعد الرسم باستخدام الذكاء الاصطناعي - الجزء 1"
+  },
+  "description": {
+    "en": "Imagine drawing in the air and seeing it appear on the screen! In this lesson, we’ll use AI-powered hand tracking in Pictoblox to create a virtual drawing assistant.",
+    "ar": "تخيل ترسم بإيدك في الهواء والرسم يظهر قدامك على الشاشة! في الدرس ده، هنتعلم إزاي نستخدم بيكتوبلوكس لصنع مساعد رسم ذكي بيتابع حركة اليد."
+  },
+  "source": "https://drive.google.com/file/d/1H7dzscuB0wgvOCr91v1IalSy9MNd2tAA/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67c6a24571ecaba6bdb22b21"
+  },
+  "id": null,
+  "title": {
+    "en": "AI Drawing Assistant - Part 2",
+    "ar": "مساعد الرسم باستخدام الذكاء الاصطناعي - الجزء 2"
+  },
+  "description": {
+    "en": "Let's continue our AI Drawing Assistant program.",
+    "ar": "لنكمل برنامج مساعد الرسم باستخدام الذكاء الاصطناعي."
+  },
+  "source": "https://drive.google.com/file/d/1n0th0CFNpYJjXX6XhlOML17f627NzhqZ/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67c6b0b184ec9c31a4bf8cb6"
+  },
+  "id": null,
+  "title": {
+    "en": "Make Your Own Face Filters App - Part 1",
+    "ar": "إنشاء تطبيق مرشحات الوجه الخاص بك - الجزء 1"
+  },
+  "description": {
+    "en": "How do Snapchat and Instagram filters work? In this lesson, we’ll create a fun AI-powered face filter app using Pictoblox!",
+    "ar": "إزاي فلاتر سنابشات وإنستجرام بتشتغل؟ في الدرس ده، هنتعلم إزاي نستخدم الذكاء الاصطناعي في بيكتوبلوكس لصنع تطبيق فلاتر للوجه!"
+  },
+  "source": "https://drive.google.com/file/d/1_pQCs0STkLz7B8jsXX-12EC46JUcGbbQ/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67c6b1fb84ec9c31a4bf8cb7"
+  },
+  "id": null,
+  "title": {
+    "en": "Make Your Own Face Filters App - Part 2",
+    "ar": "إنشاء تطبيق ال Face Filters الخاص بك - الجزء 2"
+  },
+  "description": {
+    "en": "Let's continue making our Face Filters application.",
+    "ar": "لنكمل تطبيق ال Face Filters الخاص بنا."
+  },
+  "source": "https://drive.google.com/file/d/1A7kamgV9ipKJx9cWShPHzQs-SMQuRmnC/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67c6bc645f6cf43fa2d0368a"
+  },
+  "id": null,
+  "title": {
+    "en": "Toy Recognition Game with AI - part 1",
+    "ar": "لعبة التعرف على الألعاب باستخدام الذكاء الاصطناعي - جزء 1"
+  },
+  "description": {
+    "en": "What if AI could recognize your favorite toys? In this lesson, we’ll train an AI model to identify different toys and create a fun guessing game.",
+    "ar": "إيه رأيك لو الذكاء الاصطناعي يقدر يتعرف على ألعابك المفضلة؟ في الدرس ده، هنتعلم إزاي ندرب نموذج ذكاء اصطناعي لتمييز الألعاب وصنع لعبة تخمين ممتعة."
+  },
+  "source": "https://drive.google.com/file/d/11zbJUW2oQkqZVpYUQG9uHX3x05y88f_5/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67c6bd705f6cf43fa2d0368b"
+  },
+  "id": null,
+  "title": {
+    "en": "Toy Recognition Game with AI - part 2",
+    "ar": "لعبة التعرف على الألعاب باستخدام الذكاء الاصطناعي - جزء 2"
+  },
+  "description": {
+    "en": "Let's continue working on our AI Toy Recognition Game.",
+    "ar": "لنواصل العمل على لعبة التعرف على الألعاب بالذكاء الاصطناعي."
+  },
+  "source": "https://drive.google.com/file/d/1-L5nJKKAINEWgfxqTIs1VjdxlZEZiB_H/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67f7e7ebe3c854070a96ca33"
+  },
+  "id": null,
+  "title": {
+    "en": "Living and Nonliving",
+    "ar": "الكائنات الحية وغير الحية"
+  },
+  "description": {
+    "en": "Discover the key differences between living and non-living things, focusing on the essentials that define life, such as being composed of cells.",
+    "ar": "اكتشاف الفروقات الأساسية بين الكائنات الحية وغير الحية، مع التركيز على المقومات الأساسية التي تميز الكائنات الحية، مثل كونها مكونة من خلايا."
+  },
+  "source": "https://drive.google.com/file/d/1ujI4T6D1NRkBc7khZz2YFKnx2-HYdq5m/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67fb556be3c854070a96ca59"
+  },
+  "id": null,
+  "title": {
+    "en": "gh",
+    "ar": "DFGH"
+  },
+  "description": {
+    "en": "DEFGH",
+    "ar": "DEFGH"
+  },
+  "source": "FGHJ"
+},
+{
+  "_id": {
+    "$oid": "67fb55d1e3c854070a96ca5b"
+  },
+  "id": null,
+  "title": {
+    "en": "Living and Nonliving",
+    "ar": "الكائنات الحية وغير الحية"
+  },
+  "description": {
+    "en": "Learn the basic differences between living and non-living things, and discover what makes something truly alive.",
+    "ar": "اكتشف الفروقات الأساسية بين الكائنات الحية وغير الحية، وما الذي يجعل الكائن حيًا بالفعل."
+  },
+  "source": "https://drive.google.com/file/d/1ujI4T6D1NRkBc7khZz2YFKnx2-HYdq5m/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67fb568ae3c854070a96ca5c"
+  },
+  "id": null,
+  "title": {
+    "en": "A Fun Voyage Through the Five Kingdoms",
+    "ar": "رحلة ممتعة في الممالك الخمسة"
+  },
+  "description": {
+    "en": "Explore the five kingdoms of life and how each one contributes to the balance of our world.",
+    "ar": "استكشف الممالك الخمسة للكائنات الحية، ودور كل مملكة في الحفاظ على توازن الحياة على الأرض."
+  },
+  "source": "https://drive.google.com/file/d/1jelJjlu4r7dlokb_HV3-cRGA00zv7Phz/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67fb56b8e3c854070a96ca5d"
+  },
+  "id": null,
+  "title": {
+    "en": "What Do Living Creatures Need?",
+    "ar": "ماذا تحتاج الكائنات الحية؟"
+  },
+  "description": {
+    "en": "Dive into the four basic needs that all living creatures require to survive and thrive.",
+    "ar": "تعرف على الاحتياجات الأربعة الأساسية التي تحتاجها الكائنات الحية للبقاء على قيد الحياة."
+  },
+  "source": "https://drive.google.com/file/d/1OD9nIA31UGnDEHfWVt0ekMbwa31on2d4/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67fb56dfe3c854070a96ca5e"
+  },
+  "id": null,
+  "title": {
+    "en": "All About Plants!",
+    "ar": "كل ما يخص النباتات!"
+  },
+  "description": {
+    "en": "Investigate plant parts, how they function, how plants make their own food, and their vital role in producing oxygen.",
+    "ar": "استكشف أجزاء النبات، وظائفها، وكيفية إنتاج الغذاء، والدور الحيوي للنباتات في إنتاج الأكسجين."
+  },
+  "source": "https://drive.google.com/file/d/178AT7lAN98VauS9WqvdEyZ2XReDESrpx/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67fb5733e3c854070a96ca60"
+  },
+  "id": null,
+  "title": {
+    "en": "Living Creatures in Danger",
+    "ar": "الكائنات الحية في خطر!"
+  },
+  "description": {
+    "en": "Identify four major human-caused threats to life on Earth and how we can help protect endangered species.",
+    "ar": "تعرف على أربعة تهديدات رئيسية تسببها الأنشطة البشرية، وتعلّم كيف يمكننا حماية الكائنات من الانقراض."
+  },
+  "source": "https://drive.google.com/file/d/1xycsn4AT7flSTgzJeIONuTrkuRihEL4r/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67fb575be3c854070a96ca61"
+  },
+  "id": null,
+  "title": {
+    "en": "Dangers on Earth",
+    "ar": "خطر على كوكب الأرض"
+  },
+  "description": {
+    "en": "Learn about natural disasters and diseases, how they threaten life, and what actions we can take to reduce their impact.",
+    "ar": "تعرف على الكوارث الطبيعية والأمراض، وكيف تؤثر على الكائنات الحية، وما يمكننا فعله للتقليل من أضرارها."
+  },
+  "source": "https://drive.google.com/file/d/12OoMjFF1JKix8UndpzO7PRLJR8D04W-l/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67fb5787e3c854070a96ca62"
+  },
+  "id": null,
+  "title": {
+    "en": "The Digestive System",
+    "ar": "الجهاز الهضمي"
+  },
+  "description": {
+    "en": "Discover how the human body processes food and what each part of the digestive system does.",
+    "ar": "استكشف كيف يهضم الجسم الطعام، وما وظيفة كل جزء من الجهاز الهضمي."
+  },
+  "source": "https://drive.google.com/file/d/1SXHUAFVxmfE9B1o1QU7FY1qZPWvR_oEO/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67fb57b3e3c854070a96ca63"
+  },
+  "id": null,
+  "title": {
+    "en": "The Systems of Motion",
+    "ar": "أسرار الحركة: الجهاز الهيكلي والعضلي"
+  },
+  "description": {
+    "en": "Learn how bones and muscles work together to enable movement, posture, and activity.",
+    "ar": "تعرف على كيف تتعاون العظام والعضلات معًا لتمكين الجسم من الحركة والحفاظ على توازنه."
+  },
+  "source": "https://drive.google.com/file/d/1XKaIpSMRzi2Z6LoV3oUUHG2HE7nFMQV6/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67fb57dfe3c854070a96ca64"
+  },
+  "id": null,
+  "title": {
+    "en": "Inhale.. Exhale",
+    "ar": "شهيق.. زفير"
+  },
+  "description": {
+    "en": "Understand how the respiratory system brings in oxygen and expels carbon dioxide.",
+    "ar": "تعرّف على كيفية تنفس الإنسان، ودور الجهاز التنفسي في تبادل الغازات الحيوية."
+  },
+  "source": "https://drive.google.com/file/d/1puat24WmTlfhbuS9yph_DHsHrpY9oNg8/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67fb5813e3c854070a96ca65"
+  },
+  "id": null,
+  "title": {
+    "en": "The Human Body Transportation System",
+    "ar": "الجهاز الدوري"
+  },
+  "description": {
+    "en": "Explore how the heart, blood, and vessels work as a delivery network inside the body.",
+    "ar": "استكشف كيف يعمل القلب والأوعية الدموية على نقل الأكسجين والمغذيات إلى جميع أنحاء الجسم."
+  },
+  "source": "https://drive.google.com/file/d/1Z761lAVe_ZMaPNlhCrTkS0KKPcnv_X-z/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67fb5839e3c854070a96ca66"
+  },
+  "id": null,
+  "title": {
+    "en": "The Nervous Network",
+    "ar": "الشبكة العصبية"
+  },
+  "description": {
+    "en": "Learn how the brain, spinal cord, and nerves coordinate the body and connect with the five senses.",
+    "ar": " تعرف على كيفية تنسيق الدماغ والنخاع الشوكي والأعصاب لحركاتنا وحواسنا، وكيف نحافظ عليها بصحة جيدة."
+  },
+  "source": "https://drive.google.com/file/d/1YVnhuFnMZDnDgr-Ve9seK2rwmgHVyhOl/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67fdbcdf73eeb746aae9ee6f"
+  },
+  "id": null,
+  "title": {
+    "en": "Welcome to Young Scientists in Action",
+    "ar": "مرحبًا بكم في العلماء الصغار في الميدان"
+  },
+  "description": {
+    "en": "Get ready to explore life, nature, and the human body like a real scientist! This intro lesson sparks curiosity and sets the tone for young minds to think like scientists.",
+    "ar": "استعد لاستكشاف الحياة والطبيعة وجسم الإنسان كعَالِم صغير! هذه المقدمة تشعل الحماس وتهيئ العقول الصغيرة لتفكر كعلماء حقيقيين."
+  },
+  "source": "https://drive.google.com/file/d/1n7Tu9RxSkoAGXFQ90PZ0hzIWDXfOwIRV/view?usp=drive_link"
+}]

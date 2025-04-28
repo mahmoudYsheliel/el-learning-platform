@@ -3,7 +3,7 @@ import { selectLang, translationModule } from "@/lib/Translate";
 import Button from "primevue/button";
 import 'primeicons/primeicons.css'
 
-const props = defineProps(["course", "isEnrolled", "notShowButton","userType"]);
+const props = defineProps(["course", "isEnrolled", "notShowButton","userType","first_lesson_video"]);
 const emits = defineEmits(["enroll", "viewMaterial"]);
 </script>
 
@@ -12,8 +12,16 @@ const emits = defineEmits(["enroll", "viewMaterial"]);
     <div class="head">
       <h1>{{ selectLang(course?.title) }}</h1>
     </div>
-    
-    <img :src="course?.image" alt="" :class="{locked:course?.is_locked}"/>
+    <iframe
+     v-if="first_lesson_video" 
+     style="aspect-ratio: 16/9;"
+          :src="first_lesson_video.replace('view?usp=sharing','preview')?.replace('view?usp=drive_link','preview')"
+          frameborder="0"
+          sandbox="allow-scripts allow-same-origin"
+          allowfullscreen
+        ></iframe>
+    <img v-else :src="course?.image" alt="" :class="{locked:course?.is_locked}"/>
+
     <div class="description">
       <div class="header">
         <h2>{{ selectLang(translationModule.courseDescription) }}</h2>

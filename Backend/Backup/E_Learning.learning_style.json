@@ -1,0 +1,112 @@
+[{
+  "_id": {
+    "$oid": "674478f1c5f99fb80a53517e"
+  },
+  "name": "The Communicator",
+  "title": {
+    "en": "🌟 Auditory",
+    "ar": "🌟 الاستماع"
+  },
+  "description": {
+    "en": "Your child excels in using language to express themselves and understand the world. They thrive in activities that involve storytelling, reading, and verbal reasoning.",
+    "ar": "يبرع طفلك في استخدام اللغة للتعبير عن نفسه وفهم العالم من حوله. يزدهر في الأنشطة التي تشمل سرد القصص، القراءة، والتفكير اللفظي."
+  },
+  "advice": {
+    "en": "Encourage family discussions, provide books on topics they love, and engage in word games or creative writing activities.",
+    "ar": "شجّع النقاشات العائلية، وقدم لهم كتبًا حول مواضيع يحبونها، وشاركهم في ألعاب الكلمات أو أنشطة الكتابة الإبداعية."
+  },
+  "sections_dependence": [
+    "Similarities",
+    "Vocabulary"
+  ],
+  "image": "/images/Auditory.png"
+},
+{
+  "_id": {
+    "$oid": "6744799bc5f99fb80a53517f"
+  },
+  "name": "The Fast Thinker",
+  "title": {
+    "en": "⚡Kinesthetic",
+    "ar": "⚡حركية"
+  },
+  "description": {
+    "en": "Your child is quick and efficient in solving problems and completing tasks. They excel in hands-on activities and enjoy fast-paced challenges.",
+    "ar": "طفلك سريع وفعّال في حل المشكلات وإنجاز المهام. يبرع في الأنشطة العملية ويستمتع بالتحديات السريعة."
+  },
+  "advice": {
+    "en": "Provide time-sensitive tasks like puzzles or interactive games, and create opportunities for them to show off their quick thinking with real-world activities.",
+    "ar": "قدّم مهامًا محددة بالوقت مثل الألغاز أو الألعاب التفاعلية، وامنحهم فرصًا لإظهار تفكيرهم السريع من خلال الأنشطة الواقعية."
+  },
+  "sections_dependence": [
+    "Symbol Search"
+  ],
+  "image": "/images/Kinesthetic.png"
+},
+{
+  "_id": {
+    "$oid": "674479edc5f99fb80a535180"
+  },
+  "name": "The Organizer",
+  "title": {
+    "en": "📋 Read/Write",
+    "ar": "📋 قراءة / كتابة"
+  },
+  "description": {
+    "en": "Your child is great at managing information, following instructions, and staying organized. They shine in structured tasks and problem-solving that requires focus.",
+    "ar": "طفلك بارع في إدارة المعلومات، واتباع التعليمات، والبقاء منظمًا. يتألق في المهام المنظمة وحل المشكلات التي تتطلب التركيز."
+  },
+  "advice": {
+    "en": "Break tasks into manageable steps, use visual schedules or checklists, and reward them for staying on top of their responsibilities.",
+    "ar": "قسّم المهام إلى خطوات يمكن التحكم بها، استخدم جداول أو قوائم مرئية، وكافئهم على الالتزام بمسؤولياتهم."
+  },
+  "sections_dependence": [
+    "Digit Span"
+  ],
+  "image": "/images/Read.png"
+},
+{
+  "_id": {
+    "$oid": "67447a38c5f99fb80a535181"
+  },
+  "name": "The Problem Solver",
+  "title": {
+    "en": "📋 Read/Write",
+    "ar": "📋 قراءة / كتابة"
+  },
+  "description": {
+    "en": "Your child loves solving puzzles, identifying patterns, and thinking logically. They excel in tasks that involve analyzing and reasoning through problems.",
+    "ar": "طفلك يحب حل الألغاز، والتعرف على الأنماط، والتفكير المنطقي. يبرع في المهام التي تتطلب التحليل والتفكير المنطقي لحل المشكلات."
+  },
+  "advice": {
+    "en": "Encourage problem-solving games, science experiments, and open-ended questions that challenge their thinking.",
+    "ar": "شجّع ألعاب حل المشكلات، والتجارب العلمية، وطرح الأسئلة المفتوحة التي تتحدى تفكيرهم."
+  },
+  "sections_dependence": [
+    "Figure Weights",
+    "Matrix Reasoning"
+  ],
+  "image": "/images/Read.png"
+},
+{
+  "_id": {
+    "$oid": "67447a83c5f99fb80a535182"
+  },
+  "name": "The Visual Thinker",
+  "title": {
+    "en": " 🎨 Visual",
+    "ar": "🎨 بصرية"
+  },
+  "description": {
+    "en": "Your child sees the world in pictures and patterns. They excel in activities involving visualization, spatial reasoning, and creative thinking.",
+    "ar": "طفلك يرى العالم من خلال الصور والأنماط. يبرع في الأنشطة التي تشمل التخيل، التفكير المكاني، والتفكير الإبداعي."
+  },
+  "advice": {
+    "en": "Provide puzzles, art supplies, and hands-on projects like building models or creating visual presentations.",
+    "ar": "قدّم لهم الألغاز، أدوات الرسم، والمشاريع العملية مثل بناء النماذج أو إنشاء عروض مرئية."
+  },
+  "sections_dependence": [
+    "Visual Puzzles"
+  ],
+  "image": "/images/Visual.png"
+}]

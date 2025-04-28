@@ -1,0 +1,2491 @@
+[{
+  "_id": {
+    "$oid": "667ad8b00339c619b07f9173"
+  },
+  "id": "",
+  "student_id": "667ad80c0339c619b07f9170",
+  "course_id": "6679ec42f618e6d7fcab539a",
+  "created_at": {
+    "$date": "2024-06-25T14:47:45.760Z"
+  },
+  "progress": {
+    "lessons_completed": [],
+    "quizes_scores": [],
+    "assesments_scores": []
+  }
+},
+{
+  "_id": {
+    "$oid": "66a208761029bf18c547b8c3"
+  },
+  "id": "",
+  "student_id": "66a207cb1029bf18c547b8c0",
+  "course_id": "6679ec42f618e6d7fcab539a",
+  "created_at": {
+    "$date": "2024-07-25T08:10:30.278Z"
+  },
+  "progress": {
+    "lessons_completed": [
+      {
+        "lesson_id": "6679a4bf24650df2a16196d2",
+        "completed_at": {
+          "$date": "2024-07-25T08:16:44.568Z"
+        }
+      },
+      {
+        "lesson_id": "6679a5a924650df2a16196d3",
+        "completed_at": {
+          "$date": "2024-07-25T08:17:26.092Z"
+        }
+      },
+      {
+        "lesson_id": "6679a66224650df2a16196d4",
+        "completed_at": {
+          "$date": "2024-07-25T08:17:39.995Z"
+        }
+      }
+    ],
+    "quizes_completed": [
+      {
+        "quiz_id": "6679beed24650df2a16196f0",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 25,
+        "time_taken": 10,
+        "created_at": {
+          "$date": "2024-07-25T08:16:59.566Z"
+        }
+      },
+      {
+        "quiz_id": "6679bfac24650df2a16196f1",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 3
+          }
+        ],
+        "score_prcentage": 0,
+        "time_taken": 2,
+        "created_at": {
+          "$date": "2024-07-25T08:17:32.759Z"
+        }
+      },
+      {
+        "quiz_id": "6679bfdf24650df2a16196f2",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 3
+          }
+        ],
+        "score_prcentage": 0,
+        "time_taken": 3,
+        "created_at": {
+          "$date": "2024-07-25T08:17:47.846Z"
+        }
+      },
+      {
+        "quiz_id": "6679bfdf24650df2a16196f2",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          },
+          {
+            "question_id": 2,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 0,
+        "time_taken": 5,
+        "created_at": {
+          "$date": "2024-07-25T08:17:58.380Z"
+        }
+      }
+    ]
+  },
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "66b9ed2164f330bc9744dfdd"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "6679ec42f618e6d7fcab539a",
+  "created_at": {
+    "$date": "2024-08-12T11:08:17.071Z"
+  },
+  "progress": {
+    "lessons_completed": [
+      {
+        "lesson_id": "6679a4bf24650df2a16196d2",
+        "completed_at": {
+          "$date": "2024-08-12T11:08:49.972Z"
+        }
+      },
+      {
+        "lesson_id": "6679a5a924650df2a16196d3",
+        "completed_at": {
+          "$date": "2024-08-12T11:09:06.999Z"
+        }
+      },
+      {
+        "lesson_id": "6679ac9024650df2a16196dd",
+        "completed_at": {
+          "$date": "2024-08-12T11:09:55.569Z"
+        }
+      }
+    ],
+    "quizes_completed": [
+      {
+        "quiz_id": "6679beed24650df2a16196f0",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 0,
+        "time_taken": 7,
+        "created_at": {
+          "$date": "2024-08-12T11:09:02.051Z"
+        }
+      },
+      {
+        "quiz_id": "6679bfac24650df2a16196f1",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 1
+          },
+          {
+            "question_id": 5,
+            "choice_id": 3
+          }
+        ],
+        "score_prcentage": 14,
+        "time_taken": 9,
+        "created_at": {
+          "$date": "2024-08-12T11:09:20.718Z"
+        }
+      },
+      {
+        "quiz_id": "6679bfac24650df2a16196f1",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 14,
+        "time_taken": 3,
+        "created_at": {
+          "$date": "2024-08-12T11:09:34.735Z"
+        }
+      },
+      {
+        "quiz_id": "6679c1e824650df2a16196fa",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 3
+          }
+        ],
+        "score_prcentage": 0,
+        "time_taken": 2,
+        "created_at": {
+          "$date": "2024-08-12T11:09:50.699Z"
+        }
+      }
+    ]
+  },
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "66c0198aba776abc9755f6ff"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "66be07508abeb455cb105b2d",
+  "created_at": {
+    "$date": "2024-08-17T03:31:22.779Z"
+  },
+  "progress": {},
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "66c01995ba776abc9755f700"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "66c0137dda5e21b89701142d",
+  "created_at": {
+    "$date": "2024-08-17T03:31:33.149Z"
+  },
+  "progress": {
+    "activities_completed": [
+      {
+        "activity_id": "66d3440ef6fb98d8098e4ffa",
+        "completed_at": {
+          "$date": "2024-09-01T23:06:25.399Z"
+        }
+      },
+      {
+        "activity_id": "66d38475f6fb98d8098e4ffb",
+        "completed_at": {
+          "$date": "2024-09-01T23:06:29.767Z"
+        }
+      },
+      {
+        "activity_id": "66d3851af6fb98d8098e4ffc",
+        "completed_at": {
+          "$date": "2024-09-01T23:06:38.937Z"
+        }
+      }
+    ]
+  },
+  "is_completed": true
+},
+{
+  "_id": {
+    "$oid": "66c0199aba776abc9755f701"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "66bf7d0dda5e21b89701140f",
+  "created_at": {
+    "$date": "2024-08-17T03:31:38.871Z"
+  },
+  "progress": {},
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "66c019a3ba776abc9755f702"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "667c445898157d488d31854b",
+  "created_at": {
+    "$date": "2024-08-17T03:31:47.725Z"
+  },
+  "progress": {
+    "quizes_completed": [
+      {
+        "quiz_id": "667c3bb798157d488d318543",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 3
+          },
+          {
+            "question_id": 4,
+            "choice_id": 2
+          },
+          {
+            "question_id": 5,
+            "choice_id": 3
+          },
+          {
+            "question_id": 6,
+            "choice_id": 4
+          }
+        ],
+        "score_prcentage": 33,
+        "time_taken": 27,
+        "created_at": {
+          "$date": "2024-09-02T08:48:06.824Z"
+        }
+      },
+      {
+        "quiz_id": "667c3bb798157d488d318543",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 16,
+        "time_taken": 109,
+        "created_at": {
+          "$date": "2024-12-25T05:12:49.927Z"
+        }
+      },
+      {
+        "quiz_id": "667c3bb798157d488d318543",
+        "answers": [
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 1
+          },
+          {
+            "question_id": 4,
+            "choice_id": 4
+          },
+          {
+            "question_id": 5,
+            "choice_id": 3
+          },
+          {
+            "question_id": 6,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 16,
+        "time_taken": 33,
+        "created_at": {
+          "$date": "2024-12-25T05:28:10.747Z"
+        }
+      },
+      {
+        "quiz_id": "667c3bb798157d488d318543",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 0,
+        "time_taken": 62,
+        "created_at": {
+          "$date": "2024-12-25T05:29:05.700Z"
+        }
+      },
+      {
+        "quiz_id": "667c3bf898157d488d318544",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 3
+          }
+        ],
+        "score_prcentage": 14,
+        "time_taken": 12,
+        "created_at": {
+          "$date": "2024-12-25T06:16:01.130Z"
+        }
+      },
+      {
+        "quiz_id": "667c3bf898157d488d318544",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 87,
+        "created_at": {
+          "$date": "2024-12-25T06:39:40.976Z"
+        }
+      },
+      {
+        "quiz_id": "667c3c1e98157d488d318545",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 7,
+        "created_at": {
+          "$date": "2024-12-25T09:17:23.215Z"
+        }
+      },
+      {
+        "quiz_id": "667c3c1e98157d488d318545",
+        "answers": [
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 2
+          },
+          {
+            "question_id": 5,
+            "choice_id": 2
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 33,
+        "time_taken": 355,
+        "created_at": {
+          "$date": "2024-12-25T09:23:09.707Z"
+        }
+      },
+      {
+        "quiz_id": "667c3bb798157d488d318543",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 10,
+        "created_at": {
+          "$date": "2025-01-29T06:25:39.004Z"
+        }
+      },
+      {
+        "quiz_id": "667c3bb798157d488d318543",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 1,
+        "created_at": {
+          "$date": "2025-01-29T06:33:35.283Z"
+        }
+      },
+      {
+        "quiz_id": "667c3bb798157d488d318543",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 3
+          },
+          {
+            "question_id": 2,
+            "choice_id": 4
+          },
+          {
+            "question_id": 3,
+            "choice_id": 3
+          }
+        ],
+        "score_prcentage": 16,
+        "time_taken": 51,
+        "created_at": {
+          "$date": "2025-01-29T06:48:49.158Z"
+        }
+      },
+      {
+        "quiz_id": "667c3bf898157d488d318544",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 214,
+        "created_at": {
+          "$date": "2025-01-29T07:48:39.366Z"
+        }
+      },
+      {
+        "quiz_id": "667c3bf898157d488d318544",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 1,
+        "created_at": {
+          "$date": "2025-01-29T07:48:50.517Z"
+        }
+      },
+      {
+        "quiz_id": "667c3c1e98157d488d318545",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 17,
+        "created_at": {
+          "$date": "2025-01-29T07:58:44.943Z"
+        }
+      },
+      {
+        "quiz_id": "667c3c1e98157d488d318545",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 10,
+        "created_at": {
+          "$date": "2025-01-29T07:59:51.640Z"
+        }
+      },
+      {
+        "quiz_id": "667c3c1e98157d488d318545",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 2,
+        "created_at": {
+          "$date": "2025-01-29T08:23:29.750Z"
+        }
+      },
+      {
+        "quiz_id": "667c3c1e98157d488d318545",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 2,
+        "created_at": {
+          "$date": "2025-01-29T08:23:53.726Z"
+        }
+      },
+      {
+        "quiz_id": "667c3c3f98157d488d318546",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 3,
+        "created_at": {
+          "$date": "2025-01-29T09:22:26.917Z"
+        }
+      },
+      {
+        "quiz_id": "667c3c3f98157d488d318546",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 5,
+        "created_at": {
+          "$date": "2025-01-29T09:23:01.734Z"
+        }
+      },
+      {
+        "quiz_id": "667c3c6698157d488d318547",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 5,
+        "created_at": {
+          "$date": "2025-01-29T09:34:24.839Z"
+        }
+      },
+      {
+        "quiz_id": "667c3d2d98157d488d318549",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 58,
+        "created_at": {
+          "$date": "2025-01-29T09:48:15.969Z"
+        }
+      },
+      {
+        "quiz_id": "667c3c9c98157d488d318548",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 42,
+        "created_at": {
+          "$date": "2025-01-29T09:50:38.793Z"
+        }
+      }
+    ],
+    "lessons_completed": [
+      {
+        "lesson_id": "667c327b98157d488d318539",
+        "completed_at": {
+          "$date": "2024-12-25T05:07:23.342Z"
+        }
+      }
+    ]
+  },
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "66d57d65d9b85b3c76fdf057"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "66cb93d73b16f87bfae72876",
+  "created_at": {
+    "$date": "2024-09-02T08:55:01.196Z"
+  },
+  "progress": {
+    "quizes_completed": [
+      {
+        "quiz_id": "66cb4d493b16f87bfae72874",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 11,
+        "created_at": {
+          "$date": "2024-09-02T09:09:02.576Z"
+        }
+      },
+      {
+        "quiz_id": "66cb4dd73b16f87bfae72875",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          },
+          {
+            "question_id": 2,
+            "choice_id": 3
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 3
+          },
+          {
+            "question_id": 5,
+            "choice_id": 1
+          },
+          {
+            "question_id": 6,
+            "choice_id": 1
+          },
+          {
+            "question_id": 7,
+            "choice_id": 1
+          },
+          {
+            "question_id": 8,
+            "choice_id": 1
+          },
+          {
+            "question_id": 9,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 77,
+        "created_at": {
+          "$date": "2024-12-24T18:46:21.880Z"
+        }
+      },
+      {
+        "quiz_id": "66cb3a843b16f87bfae7286c",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          },
+          {
+            "question_id": 2,
+            "choice_id": 4
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 3
+          },
+          {
+            "question_id": 5,
+            "choice_id": 2
+          },
+          {
+            "question_id": 6,
+            "choice_id": 1
+          },
+          {
+            "question_id": 7,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 57,
+        "time_taken": 11,
+        "created_at": {
+          "$date": "2024-12-24T18:47:05.264Z"
+        }
+      },
+      {
+        "quiz_id": "66cb39913b16f87bfae7286a",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 182,
+        "created_at": {
+          "$date": "2024-12-26T08:29:20.881Z"
+        }
+      },
+      {
+        "quiz_id": "66cb39913b16f87bfae7286a",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 1,
+        "created_at": {
+          "$date": "2024-12-26T08:31:15.804Z"
+        }
+      },
+      {
+        "quiz_id": "66cb3a243b16f87bfae7286b",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 24,
+        "created_at": {
+          "$date": "2024-12-26T08:32:55.216Z"
+        }
+      },
+      {
+        "quiz_id": "66cb3a243b16f87bfae7286b",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 1,
+        "created_at": {
+          "$date": "2024-12-26T08:35:05.153Z"
+        }
+      },
+      {
+        "quiz_id": "66cb3a243b16f87bfae7286b",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 1,
+        "created_at": {
+          "$date": "2024-12-26T08:35:24.540Z"
+        }
+      },
+      {
+        "quiz_id": "66cb3a843b16f87bfae7286c",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 24,
+        "created_at": {
+          "$date": "2024-12-26T09:50:04.479Z"
+        }
+      },
+      {
+        "quiz_id": "66cb39913b16f87bfae7286a",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 2,
+        "created_at": {
+          "$date": "2024-12-26T09:53:36.365Z"
+        }
+      },
+      {
+        "quiz_id": "66cb3a243b16f87bfae7286b",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 11,
+        "created_at": {
+          "$date": "2024-12-26T09:54:09.213Z"
+        }
+      },
+      {
+        "quiz_id": "66cb3a843b16f87bfae7286c",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 109,
+        "created_at": {
+          "$date": "2024-12-26T10:01:43.107Z"
+        }
+      },
+      {
+        "quiz_id": "66cb3a843b16f87bfae7286c",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 1,
+        "created_at": {
+          "$date": "2024-12-26T10:04:01.499Z"
+        }
+      },
+      {
+        "quiz_id": "66cb3a843b16f87bfae7286c",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 26,
+        "created_at": {
+          "$date": "2024-12-26T10:04:39.971Z"
+        }
+      },
+      {
+        "quiz_id": "66cb3a843b16f87bfae7286c",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 6,
+        "created_at": {
+          "$date": "2024-12-26T14:19:51.357Z"
+        }
+      },
+      {
+        "quiz_id": "66cb3a843b16f87bfae7286c",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 7,
+        "created_at": {
+          "$date": "2024-12-26T14:25:43.244Z"
+        }
+      },
+      {
+        "quiz_id": "66cb49263b16f87bfae7286d",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 25,
+        "created_at": {
+          "$date": "2024-12-26T14:49:54.837Z"
+        }
+      },
+      {
+        "quiz_id": "66cb4a243b16f87bfae7286e",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 76,
+        "created_at": {
+          "$date": "2024-12-26T15:43:43.575Z"
+        }
+      },
+      {
+        "quiz_id": "66cb4a243b16f87bfae7286e",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 9,
+        "created_at": {
+          "$date": "2024-12-26T15:51:51.847Z"
+        }
+      },
+      {
+        "quiz_id": "66cb4a783b16f87bfae7286f",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 4,
+        "created_at": {
+          "$date": "2024-12-26T16:10:51.995Z"
+        }
+      },
+      {
+        "quiz_id": "66cb4aea3b16f87bfae72870",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 16,
+        "created_at": {
+          "$date": "2024-12-26T16:15:05.108Z"
+        }
+      },
+      {
+        "quiz_id": "66cb39913b16f87bfae7286a",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 7,
+        "created_at": {
+          "$date": "2025-02-03T14:15:28.009Z"
+        }
+      },
+      {
+        "quiz_id": "66cb3a243b16f87bfae7286b",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 14,
+        "time_taken": 5,
+        "created_at": {
+          "$date": "2025-02-03T14:17:04.241Z"
+        }
+      },
+      {
+        "quiz_id": "66cb3a843b16f87bfae7286c",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 3,
+        "created_at": {
+          "$date": "2025-02-03T14:25:44.416Z"
+        }
+      },
+      {
+        "quiz_id": "66cb49263b16f87bfae7286d",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 27,
+        "created_at": {
+          "$date": "2025-02-03T19:27:13.687Z"
+        }
+      },
+      {
+        "quiz_id": "66cb4aea3b16f87bfae72870",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 32,
+        "created_at": {
+          "$date": "2025-02-03T19:32:03.671Z"
+        }
+      },
+      {
+        "quiz_id": "66cb4b563b16f87bfae72871",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 2,
+        "created_at": {
+          "$date": "2025-02-03T19:34:51.600Z"
+        }
+      },
+      {
+        "quiz_id": "66cb4c243b16f87bfae72872",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 34,
+        "created_at": {
+          "$date": "2025-02-03T19:37:38.479Z"
+        }
+      },
+      {
+        "quiz_id": "66cb4cd33b16f87bfae72873",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 16,
+        "created_at": {
+          "$date": "2025-02-03T19:40:01.918Z"
+        }
+      },
+      {
+        "quiz_id": "66cb4d493b16f87bfae72874",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 0,
+        "created_at": {
+          "$date": "2025-02-03T20:36:05.908Z"
+        }
+      },
+      {
+        "quiz_id": "66cb4d493b16f87bfae72874",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 8,
+        "created_at": {
+          "$date": "2025-02-03T20:37:18.092Z"
+        }
+      },
+      {
+        "quiz_id": "66cb4d493b16f87bfae72874",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 1,
+        "created_at": {
+          "$date": "2025-02-03T20:37:25.941Z"
+        }
+      },
+      {
+        "quiz_id": "66cb4dd73b16f87bfae72875",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 12,
+        "created_at": {
+          "$date": "2025-02-03T20:44:09.515Z"
+        }
+      },
+      {
+        "quiz_id": "66cb4dd73b16f87bfae72875",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 3,
+        "created_at": {
+          "$date": "2025-02-03T20:48:19.643Z"
+        }
+      }
+    ],
+    "lessons_completed": [
+      {
+        "lesson_id": "66cb31033b16f87bfae72861",
+        "completed_at": {
+          "$date": "2024-12-24T18:47:36.822Z"
+        }
+      }
+    ]
+  },
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "66f2f7c6f47c03e515b3270b"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "66f2d9a2b8c14d4bad17398d",
+  "created_at": {
+    "$date": "2024-09-24T17:32:53.866Z"
+  },
+  "progress": {
+    "lessons_completed": [
+      {
+        "lesson_id": "66f2dc08b8c14d4bad17398e",
+        "completed_at": {
+          "$date": "2024-09-24T17:35:25.053Z"
+        }
+      }
+    ],
+    "quizes_completed": [
+      {
+        "quiz_id": "66f2dd7ab8c14d4bad17398f",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          },
+          {
+            "question_id": 2,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 0,
+        "time_taken": 6,
+        "created_at": {
+          "$date": "2024-12-29T09:32:07.502Z"
+        }
+      }
+    ]
+  },
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "678a6a5cad5ad76d9f88299d"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "6788fbb99ed797ce3f251746",
+  "created_at": {
+    "$date": "2025-01-17T14:34:05.201Z"
+  },
+  "progress": {
+    "quizes_completed": [
+      {
+        "quiz_id": "67865fdad04aec23afdc4e96",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 11,
+        "created_at": {
+          "$date": "2025-01-17T14:36:07.081Z"
+        }
+      },
+      {
+        "quiz_id": "67866302d04aec23afdc4e98",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 21,
+        "created_at": {
+          "$date": "2025-01-17T14:37:05.273Z"
+        }
+      },
+      {
+        "quiz_id": "678673d9d04aec23afdc4e9a",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 12,
+        "created_at": {
+          "$date": "2025-01-17T14:44:23.153Z"
+        }
+      },
+      {
+        "quiz_id": "67865fdad04aec23afdc4e96",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 120,
+        "created_at": {
+          "$date": "2025-02-03T21:25:05.209Z"
+        }
+      },
+      {
+        "quiz_id": "67865fdad04aec23afdc4e96",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 5,
+        "created_at": {
+          "$date": "2025-02-03T21:26:00.681Z"
+        }
+      },
+      {
+        "quiz_id": "67865fdad04aec23afdc4e96",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 2,
+        "created_at": {
+          "$date": "2025-02-03T21:28:11.625Z"
+        }
+      },
+      {
+        "quiz_id": "67865fdad04aec23afdc4e96",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 1,
+        "created_at": {
+          "$date": "2025-02-03T21:28:23.321Z"
+        }
+      },
+      {
+        "quiz_id": "67865fdad04aec23afdc4e96",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 1,
+        "created_at": {
+          "$date": "2025-02-03T21:28:42.849Z"
+        }
+      },
+      {
+        "quiz_id": "67866302d04aec23afdc4e98",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 2,
+        "created_at": {
+          "$date": "2025-02-03T21:29:44.953Z"
+        }
+      },
+      {
+        "quiz_id": "67866302d04aec23afdc4e98",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 0,
+        "created_at": {
+          "$date": "2025-02-03T21:29:50.465Z"
+        }
+      },
+      {
+        "quiz_id": "67866302d04aec23afdc4e98",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 3,
+        "created_at": {
+          "$date": "2025-02-03T21:30:05.913Z"
+        }
+      },
+      {
+        "quiz_id": "67891d48ad5ad76d9f88299b",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 1,
+        "created_at": {
+          "$date": "2025-02-03T21:31:20.961Z"
+        }
+      },
+      {
+        "quiz_id": "678cc14aad5ad76d9f8829a0",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 5,
+        "created_at": {
+          "$date": "2025-02-03T21:34:10.665Z"
+        }
+      },
+      {
+        "quiz_id": "678cc42cad5ad76d9f8829a2",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 23,
+        "created_at": {
+          "$date": "2025-02-03T21:36:01.945Z"
+        }
+      },
+      {
+        "quiz_id": "678cc7b9ad5ad76d9f8829a4",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 26,
+        "created_at": {
+          "$date": "2025-02-03T21:38:14.633Z"
+        }
+      }
+    ]
+  },
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "678a6c64ad5ad76d9f88299f"
+  },
+  "id": "",
+  "student_id": "6741ead8b38ad2406b2b2ff1",
+  "course_id": "6788fbb99ed797ce3f251746",
+  "created_at": {
+    "$date": "2025-01-17T14:42:45.305Z"
+  },
+  "progress": {},
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "678f93f1a0589d7b093c9af8"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "678f52f64600443b166af13f",
+  "created_at": {
+    "$date": "2025-01-21T12:32:49.237Z"
+  },
+  "progress": {
+    "lessons_completed": [
+      {
+        "lesson_id": "678f562a4600443b166af140",
+        "completed_at": {
+          "$date": "2025-01-21T12:35:39.458Z"
+        }
+      }
+    ],
+    "quizes_completed": [
+      {
+        "quiz_id": "678f583b4600443b166af142",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 0,
+        "time_taken": 4,
+        "created_at": {
+          "$date": "2025-01-21T12:54:07.493Z"
+        }
+      },
+      {
+        "quiz_id": "678f583b4600443b166af142",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 7,
+        "created_at": {
+          "$date": "2025-02-13T07:05:52.715Z"
+        }
+      },
+      {
+        "quiz_id": "678f5a354600443b166af145",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 14,
+        "time_taken": 23,
+        "created_at": {
+          "$date": "2025-02-13T07:22:21.575Z"
+        }
+      },
+      {
+        "quiz_id": "678f5d724600443b166af14b",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 14,
+        "time_taken": 86,
+        "created_at": {
+          "$date": "2025-02-13T07:44:53.639Z"
+        }
+      },
+      {
+        "quiz_id": "67c6969671ecaba6bdb22b17",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 5,
+        "created_at": {
+          "$date": "2025-03-04T09:20:28.155Z"
+        }
+      },
+      {
+        "quiz_id": "67c6969671ecaba6bdb22b17",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 297,
+        "created_at": {
+          "$date": "2025-03-04T09:25:19.127Z"
+        }
+      }
+    ]
+  },
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "678f93fba0589d7b093c9af9"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "678e7d4d4600443b166af13e",
+  "created_at": {
+    "$date": "2025-01-21T12:32:58.917Z"
+  },
+  "progress": {},
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "678f9400a0589d7b093c9afa"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "678e7d174600443b166af13d",
+  "created_at": {
+    "$date": "2025-01-21T12:33:04.875Z"
+  },
+  "progress": {},
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "678f9407a0589d7b093c9afb"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "678e7ceb4600443b166af13c",
+  "created_at": {
+    "$date": "2025-01-21T12:33:11.223Z"
+  },
+  "progress": {},
+  "is_completed": true
+},
+{
+  "_id": {
+    "$oid": "678f9413a0589d7b093c9afc"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "678e7ca84600443b166af13b",
+  "created_at": {
+    "$date": "2025-01-21T12:33:22.999Z"
+  },
+  "progress": {},
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "678f941ba0589d7b093c9afd"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "678e7c764600443b166af13a",
+  "created_at": {
+    "$date": "2025-01-21T12:33:31.611Z"
+  },
+  "progress": {},
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "678f9423a0589d7b093c9afe"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "678e7c254600443b166af139",
+  "created_at": {
+    "$date": "2025-01-21T12:33:39.533Z"
+  },
+  "progress": {},
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "678f942da0589d7b093c9aff"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "6769ff40f1b8a6d5a3f0948f",
+  "created_at": {
+    "$date": "2025-01-21T12:33:49.590Z"
+  },
+  "progress": {
+    "quizes_completed": [
+      {
+        "quiz_id": "676f1ca7eee7769b3e0dc750",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 198,
+        "created_at": {
+          "$date": "2025-01-26T14:10:58.864Z"
+        }
+      },
+      {
+        "quiz_id": "676f1ca7eee7769b3e0dc750",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 65,
+        "created_at": {
+          "$date": "2025-01-26T14:11:09.672Z"
+        }
+      },
+      {
+        "quiz_id": "676f21c0eee7769b3e0dc757",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 142,
+        "created_at": {
+          "$date": "2025-01-26T14:18:29.256Z"
+        }
+      }
+    ]
+  },
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "67bef31c47d1c40815c5d223"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "67be1bfdf5bee34f3a39d5e4",
+  "created_at": {
+    "$date": "2025-02-26T10:55:25.808Z"
+  },
+  "progress": {
+    "quizes_completed": [
+      {
+        "quiz_id": "67be2198f5bee34f3a39d5ec",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 3
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 3
+          },
+          {
+            "question_id": 5,
+            "choice_id": 1
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          },
+          {
+            "question_id": 7,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 85,
+        "time_taken": 97,
+        "created_at": {
+          "$date": "2025-02-26T11:24:19.023Z"
+        }
+      },
+      {
+        "quiz_id": "67be22edf5bee34f3a39d5ee",
+        "answers": [
+          {
+            "question_id": 2,
+            "choice_id": 1
+          },
+          {
+            "question_id": 3,
+            "choice_id": 3
+          },
+          {
+            "question_id": 4,
+            "choice_id": 1
+          },
+          {
+            "question_id": 5,
+            "choice_id": 3
+          },
+          {
+            "question_id": 6,
+            "choice_id": 1
+          },
+          {
+            "question_id": 7,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 85,
+        "time_taken": 54,
+        "created_at": {
+          "$date": "2025-02-26T11:26:56.240Z"
+        }
+      },
+      {
+        "quiz_id": "67be23fef5bee34f3a39d5f0",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 4
+          },
+          {
+            "question_id": 2,
+            "choice_id": 3
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 2
+          },
+          {
+            "question_id": 5,
+            "choice_id": 2
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          },
+          {
+            "question_id": 7,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 31,
+        "created_at": {
+          "$date": "2025-02-26T11:27:57.432Z"
+        }
+      },
+      {
+        "quiz_id": "67be24f3f5bee34f3a39d5f3",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 3
+          },
+          {
+            "question_id": 5,
+            "choice_id": 1
+          },
+          {
+            "question_id": 6,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 101,
+        "created_at": {
+          "$date": "2025-02-26T11:30:38.808Z"
+        }
+      },
+      {
+        "quiz_id": "67be2644f5bee34f3a39d5f5",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 1
+          },
+          {
+            "question_id": 5,
+            "choice_id": 2
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          },
+          {
+            "question_id": 7,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 49,
+        "created_at": {
+          "$date": "2025-02-26T11:31:44.486Z"
+        }
+      },
+      {
+        "quiz_id": "67be26e5f5bee34f3a39d5f7",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 3
+          }
+        ],
+        "score_prcentage": 14,
+        "time_taken": 6,
+        "created_at": {
+          "$date": "2025-02-26T11:32:13.018Z"
+        }
+      },
+      {
+        "quiz_id": "67be27bff5bee34f3a39d5fa",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 14,
+        "time_taken": 6,
+        "created_at": {
+          "$date": "2025-02-26T11:33:25.902Z"
+        }
+      },
+      {
+        "quiz_id": "67be27bff5bee34f3a39d5fa",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 14,
+        "time_taken": 6,
+        "created_at": {
+          "$date": "2025-02-26T11:33:59.483Z"
+        }
+      },
+      {
+        "quiz_id": "67be2198f5bee34f3a39d5ec",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 1,
+        "created_at": {
+          "$date": "2025-03-11T05:47:54.118Z"
+        }
+      },
+      {
+        "quiz_id": "67be224af5bee34f3a39d5ed",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 1,
+        "created_at": {
+          "$date": "2025-03-11T05:48:10.310Z"
+        }
+      },
+      {
+        "quiz_id": "67be22edf5bee34f3a39d5ee",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 1,
+        "created_at": {
+          "$date": "2025-03-11T05:48:31.198Z"
+        }
+      },
+      {
+        "quiz_id": "67be23fef5bee34f3a39d5f0",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 1,
+        "created_at": {
+          "$date": "2025-03-11T05:49:00.998Z"
+        }
+      },
+      {
+        "quiz_id": "67be24f3f5bee34f3a39d5f3",
+        "answers": [],
+        "score_prcentage": 0,
+        "time_taken": 40,
+        "created_at": {
+          "$date": "2025-03-11T05:49:58.453Z"
+        }
+      },
+      {
+        "quiz_id": "67be2198f5bee34f3a39d5ec",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 3
+          }
+        ],
+        "score_prcentage": 14,
+        "time_taken": 5,
+        "created_at": {
+          "$date": "2025-03-11T09:56:44.600Z"
+        }
+      },
+      {
+        "quiz_id": "67be2198f5bee34f3a39d5ec",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 3
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 3
+          },
+          {
+            "question_id": 5,
+            "choice_id": 3
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 85,
+        "time_taken": 24,
+        "created_at": {
+          "$date": "2025-03-11T09:57:15.979Z"
+        }
+      },
+      {
+        "quiz_id": "67be224af5bee34f3a39d5ed",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 3
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 3
+          },
+          {
+            "question_id": 4,
+            "choice_id": 3
+          },
+          {
+            "question_id": 5,
+            "choice_id": 2
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          },
+          {
+            "question_id": 7,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 105,
+        "created_at": {
+          "$date": "2025-03-11T09:59:22.643Z"
+        }
+      },
+      {
+        "quiz_id": "67be22edf5bee34f3a39d5ee",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          },
+          {
+            "question_id": 2,
+            "choice_id": 1
+          },
+          {
+            "question_id": 3,
+            "choice_id": 3
+          },
+          {
+            "question_id": 4,
+            "choice_id": 1
+          },
+          {
+            "question_id": 5,
+            "choice_id": 3
+          },
+          {
+            "question_id": 6,
+            "choice_id": 1
+          },
+          {
+            "question_id": 7,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 126,
+        "created_at": {
+          "$date": "2025-03-11T10:08:31.112Z"
+        }
+      },
+      {
+        "quiz_id": "67be23fef5bee34f3a39d5f0",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 4
+          },
+          {
+            "question_id": 2,
+            "choice_id": 3
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 2
+          },
+          {
+            "question_id": 5,
+            "choice_id": 2
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          },
+          {
+            "question_id": 7,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 68,
+        "created_at": {
+          "$date": "2025-03-11T10:09:55.276Z"
+        }
+      },
+      {
+        "quiz_id": "67be24f3f5bee34f3a39d5f3",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 3
+          },
+          {
+            "question_id": 6,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 83,
+        "time_taken": 320,
+        "created_at": {
+          "$date": "2025-03-11T10:28:18.540Z"
+        }
+      },
+      {
+        "quiz_id": "67be2644f5bee34f3a39d5f5",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 1
+          },
+          {
+            "question_id": 5,
+            "choice_id": 2
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          },
+          {
+            "question_id": 7,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 204,
+        "created_at": {
+          "$date": "2025-03-11T10:35:43.247Z"
+        }
+      },
+      {
+        "quiz_id": "67be26e5f5bee34f3a39d5f7",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 3
+          },
+          {
+            "question_id": 2,
+            "choice_id": 3
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 3
+          },
+          {
+            "question_id": 5,
+            "choice_id": 2
+          },
+          {
+            "question_id": 6,
+            "choice_id": 1
+          },
+          {
+            "question_id": 7,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 154,
+        "created_at": {
+          "$date": "2025-03-11T10:38:31.460Z"
+        }
+      },
+      {
+        "quiz_id": "67be27bff5bee34f3a39d5fa",
+        "answers": [
+          {
+            "question_id": 2,
+            "choice_id": 3
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 3
+          },
+          {
+            "question_id": 5,
+            "choice_id": 1
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          },
+          {
+            "question_id": 7,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 85,
+        "time_taken": 97,
+        "created_at": {
+          "$date": "2025-03-11T10:53:08.485Z"
+        }
+      }
+    ]
+  },
+  "is_completed": false
+},
+{
+  "_id": {
+    "$oid": "67fb5585e3c854070a96ca5a"
+  },
+  "id": "",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "67f778a6e3c854070a96ca16",
+  "created_at": {
+    "$date": "2025-04-13T06:11:16.828Z"
+  },
+  "progress": {
+    "quizes_completed": [
+      {
+        "quiz_id": "67fb5b75e3c854070a96ca68",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 3
+          },
+          {
+            "question_id": 2,
+            "choice_id": 3
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 4
+          },
+          {
+            "question_id": 5,
+            "choice_id": 1
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          },
+          {
+            "question_id": 7,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 302,
+        "created_at": {
+          "$date": "2025-04-22T13:45:42.198Z"
+        }
+      },
+      {
+        "quiz_id": "67fb5bd0e3c854070a96ca69",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 2
+          },
+          {
+            "question_id": 5,
+            "choice_id": 3
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 92,
+        "created_at": {
+          "$date": "2025-04-22T13:47:32.887Z"
+        }
+      },
+      {
+        "quiz_id": "67fb5c65e3c854070a96ca6a",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 1
+          },
+          {
+            "question_id": 4,
+            "choice_id": 3
+          },
+          {
+            "question_id": 5,
+            "choice_id": 2
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          },
+          {
+            "question_id": 7,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 62,
+        "created_at": {
+          "$date": "2025-04-22T13:48:44.372Z"
+        }
+      },
+      {
+        "quiz_id": "67fb5cd1e3c854070a96ca6b",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          },
+          {
+            "question_id": 2,
+            "choice_id": 3
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 3
+          },
+          {
+            "question_id": 5,
+            "choice_id": 2
+          },
+          {
+            "question_id": 6,
+            "choice_id": 1
+          },
+          {
+            "question_id": 7,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 62,
+        "created_at": {
+          "$date": "2025-04-22T13:49:59.465Z"
+        }
+      },
+      {
+        "quiz_id": "67fb5dd2e3c854070a96ca6c",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 1
+          },
+          {
+            "question_id": 5,
+            "choice_id": 1
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          },
+          {
+            "question_id": 7,
+            "choice_id": 1
+          },
+          {
+            "question_id": 8,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 77,
+        "created_at": {
+          "$date": "2025-04-22T13:52:33.027Z"
+        }
+      },
+      {
+        "quiz_id": "67fb5e4fe3c854070a96ca6d",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 4
+          },
+          {
+            "question_id": 4,
+            "choice_id": 1
+          },
+          {
+            "question_id": 5,
+            "choice_id": 2
+          },
+          {
+            "question_id": 6,
+            "choice_id": 3
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 238,
+        "created_at": {
+          "$date": "2025-04-22T13:56:39.961Z"
+        }
+      },
+      {
+        "quiz_id": "67fb60c6e3c854070a96ca6e",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 2
+          },
+          {
+            "question_id": 5,
+            "choice_id": 2
+          },
+          {
+            "question_id": 6,
+            "choice_id": 1
+          },
+          {
+            "question_id": 7,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 130,
+        "created_at": {
+          "$date": "2025-04-22T13:59:00.268Z"
+        }
+      },
+      {
+        "quiz_id": "67fb6112e3c854070a96ca6f",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 2
+          },
+          {
+            "question_id": 4,
+            "choice_id": 3
+          },
+          {
+            "question_id": 5,
+            "choice_id": 1
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          },
+          {
+            "question_id": 7,
+            "choice_id": 3
+          },
+          {
+            "question_id": 8,
+            "choice_id": 2
+          },
+          {
+            "question_id": 9,
+            "choice_id": 1
+          },
+          {
+            "question_id": 10,
+            "choice_id": 2
+          }
+        ],
+        "score_prcentage": 90,
+        "time_taken": 81,
+        "created_at": {
+          "$date": "2025-04-22T14:00:30.215Z"
+        }
+      },
+      {
+        "quiz_id": "67fb6157e3c854070a96ca70",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 3
+          },
+          {
+            "question_id": 4,
+            "choice_id": 2
+          },
+          {
+            "question_id": 5,
+            "choice_id": 1
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          },
+          {
+            "question_id": 7,
+            "choice_id": 2
+          },
+          {
+            "question_id": 8,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 83,
+        "created_at": {
+          "$date": "2025-04-22T14:02:42.406Z"
+        }
+      },
+      {
+        "quiz_id": "67fb6199e3c854070a96ca71",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 1
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 3
+          },
+          {
+            "question_id": 4,
+            "choice_id": 2
+          },
+          {
+            "question_id": 5,
+            "choice_id": 1
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          },
+          {
+            "question_id": 7,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 89,
+        "created_at": {
+          "$date": "2025-04-22T14:04:20.394Z"
+        }
+      },
+      {
+        "quiz_id": "67fb626fe3c854070a96ca72",
+        "answers": [
+          {
+            "question_id": 1,
+            "choice_id": 2
+          },
+          {
+            "question_id": 2,
+            "choice_id": 2
+          },
+          {
+            "question_id": 3,
+            "choice_id": 3
+          },
+          {
+            "question_id": 4,
+            "choice_id": 3
+          },
+          {
+            "question_id": 5,
+            "choice_id": 1
+          },
+          {
+            "question_id": 6,
+            "choice_id": 2
+          },
+          {
+            "question_id": 7,
+            "choice_id": 1
+          },
+          {
+            "question_id": 8,
+            "choice_id": 2
+          },
+          {
+            "question_id": 9,
+            "choice_id": 1
+          }
+        ],
+        "score_prcentage": 100,
+        "time_taken": 146,
+        "created_at": {
+          "$date": "2025-04-22T14:06:54.797Z"
+        }
+      }
+    ],
+    "activities_completed": [
+      {
+        "activity_id": "67fb585ee3c854070a96ca67",
+        "completed_at": {
+          "$date": "2025-04-22T14:22:39.975Z"
+        }
+      }
+    ]
+  },
+  "is_completed": false
+}]

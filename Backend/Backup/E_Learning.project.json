@@ -1,0 +1,112 @@
+[{
+  "_id": {
+    "$oid": "679685cb1b22575e31b5795c"
+  },
+  "id": null,
+  "title": {
+    "en": "Course Project - Balsa Wood Glider",
+    "ar": "مشروع الكورس - طائرة شراعية من خشب البلسا"
+  },
+  "description": {
+    "en": "A hands-on project to design a glider using balsa wood, applying engineering and aerodynamic concepts.",
+    "ar": "مشروع عملي لتصميم طائرة شراعية باستخدام خشب البلسا لتطبيق المفاهيم الهندسية والديناميكية الهوائية."
+  },
+  "source": "https://drive.google.com/file/d/15YzOGtuMiSZHS1Z9RgixR8OPMUqez4FS/view?usp=sharing",
+  "source2": "https://drive.google.com/file/d/1pj4JxX4q8jdm7mQg-WnJ4f0pEbyNoIax/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "679fda4a6e352a3615194a25"
+  },
+  "id": null,
+  "title": {
+    "en": "Course Project: Egg Parachute Engineering",
+    "ar": "مشروع الدورة: هندسة مظلات البيض"
+  },
+  "description": {
+    "en": "In this project, students will design and build a parachute system to safely land an egg from a specific height without breaking it. The goal is to understand the principles of air resistance, drag, and how parachutes slow down falling objects. Participants will experiment with different materials, parachute shapes, and suspension line lengths to optimize their designs.",
+    "ar": "في هذا المشروع، سيقوم الطلاب بتصميم وبناء مظلة لإنزال بيضة من ارتفاع معين دون أن تنكسر، يهدف المشروع إلى فهم مبادئ مقاومة الهواء والسحب وكيفية تباطؤ الأجسام الساقطة بواسطة المظلات، سيجرب المشاركون استخدام مواد مختلفة، وأشكال متنوعة للمظلات، وأطوال مختلفة للحبال لتعزيز أداء التصميم."
+  },
+  "source": "",
+  "source2": ""
+},
+{
+  "_id": {
+    "$oid": "67a12b4a6e352a3615194a26"
+  },
+  "id": null,
+  "title": {
+    "en": "Course Project: Egg Parachute Engineering",
+    "ar": "مشروع الدورة: هندسة مظلات البيض"
+  },
+  "description": {
+    "en": "In this project, students will design and build a parachute system to safely land an egg from a specific height without breaking it. The goal is to understand the principles of air resistance, drag, and how parachutes slow down falling objects. Participants will experiment with different materials, parachute shapes, and suspension line lengths to optimize their designs.",
+    "ar": "في هذا المشروع، سيقوم الطلاب بتصميم وبناء مظلة لإنزال بيضة من ارتفاع معين دون أن تنكسر، يهدف المشروع إلى فهم مبادئ مقاومة الهواء والسحب وكيفية تباطؤ الأجسام الساقطة بواسطة المظلات، سيجرب المشاركون استخدام مواد مختلفة، وأشكال متنوعة للمظلات، وأطوال مختلفة للحبال لتعزيز أداء التصميم."
+  },
+  "source": "https://drive.google.com/file/d/1EhIRveTRmxUatuRWwBrNVNVMvDHnozVt/view?usp=sharing",
+  "source2": "https://drive.google.com/file/d/1LIi28rxR6rUUHWTjovp4Z0yBmS9VTNH_/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67a13b7e6e352a3615194a2d"
+  },
+  "id": null,
+  "title": {
+    "en": "Course Project: Supersonic Aircraft Design Using Balsa Wood",
+    "ar": "مشروع الدورة: تصميم طائرة فوق صوتية باستخدام خشب البلسا"
+  },
+  "description": {
+    "en": "This project challenges students to design and construct a supersonic-inspired glider using balsa wood. By applying principles of high-speed aerodynamics, and streamlined design, students will create an optimized glider capable of achieving maximum speed and stability in flight. The project emphasizes hands-on engineering, encouraging students to refine their designs and test performance to reflect real-world supersonic aircraft concepts.",
+    "ar": "يهدف هذا المشروع إلى تحدي الطلاب لتصميم وبناء طائرة شراعية مستوحاة من الطائرات الأسرع من الصوت باستخدام خشب البلسا. من خلال تطبيق مبادئ الديناميكا الهوائية للسرعات العالية والتصاميم الانسيابية، سيعمل الطلاب على ابتكار تصميم محسن يحقق أقصى سرعة واستقرار أثناء الطيران. يركز المشروع على التطبيق العملي للهندسة، حيث سيقوم الطلاب بتحسين تصاميمهم واختبار أدائها لتعكس المفاهيم الحديثة في عالم الطيران الأسرع من الصوت."
+  },
+  "source": "https://drive.google.com/file/d/1rqcgJXh7e0sfl7Zv61i3JJ38RVKhD5Pk/view?usp=drive_link",
+  "source2": "https://drive.google.com/file/d/1zFsxhaEjtQeT5WyQejAfyekXWJ-VZmbA/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67a141e86e352a3615194a2e"
+  },
+  "id": null,
+  "title": {
+    "en": "Course Project: Balsa Wood Glider",
+    "ar": "مشروع الدورة: طائرة شراعية من خشب البلسا"
+  },
+  "description": {
+    "en": "In this project, students will design and build a balsa wood glider, exploring the principles of aerodynamics, lift, and stability. Through hands-on construction and flight testing, students will learn how wing shape, weight distribution, and control surfaces affect flight performance. The project encourages creativity and problem-solving while applying key aerospace concepts.",
+    "ar": "في هذا المشروع، سيقوم الطلاب بتصميم وبناء طائرة شراعية من خشب البلسا، لاستكشاف مبادئ الديناميكا الهوائية، وقوى الرفع، والاستقرار. من خلال عملية البناء والاختبار العملي للطيران، سيتعرف الطلاب على تأثير شكل الأجنحة، وتوزيع الوزن، والأسطح المتحركة على أداء الطيران. يشجع المشروع على الإبداع وحل المشكلات مع تطبيق مفاهيم الطيران الأساسية."
+  },
+  "source": "https://drive.google.com/file/d/15YzOGtuMiSZHS1Z9RgixR8OPMUqez4FS/view?usp=drive_link",
+  "source2": "https://drive.google.com/file/d/1pj4JxX4q8jdm7mQg-WnJ4f0pEbyNoIax/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "67c6c4225f6cf43fa2d0368f"
+  },
+  "id": null,
+  "title": {
+    "en": "Final Project: AI Game Challenge",
+    "ar": "المشروع النهائي: تحدي لعبة الذكاء الاصطناعي"
+  },
+  "description": {
+    "en": "Time to put everything you’ve learned into action! In this final project, students will design their own AI-powered game using Pictoblox. They can choose to create a face-detecting filter, an AI-driven quiz, or even a smart toy identifier.",
+    "ar": "دلوقتي جاء وقت التطبيق العملي! في المشروع النهائي، الطلاب هيصمموا لعبتهم الخاصة باستخدام الذكاء الاصطناعي في بيكتوبلوكس. ممكن يختاروا بين صنع فلتر ذكي للوجه، لعبة ذكاء اصطناعي، أو تطبيق يتعرف على الألعاب."
+  },
+  "source": "",
+  "source2": ""
+},
+{
+  "_id": {
+    "$oid": "67fdde7073eeb746aae9ee70"
+  },
+  "id": null,
+  "title": {
+    "en": "Course Project: Straw Plane Flight Control Challenge",
+    "ar": "مشروع الدورة: تحدي التحكم في طائرة الشفاطة"
+  },
+  "description": {
+    "en": "In this project, students will design and construct a straw plane equipped with functional control surfaces—ailerons, elevators, and a rudder—to explore the principles of flight dynamics. The goal is to understand how these control surfaces affect roll, pitch, and yaw, and to optimize the plane's flight performance. Participants will experiment with various configurations, record flight data, and refine their designs to achieve maximum stability and distance.",
+    "ar": "في هذا المشروع، سيقوم الطلاب بتصميم وبناء طائرة مصنوعة بالشفاطة مزودة بأسطح تحكم عملية (ailerons, elevators, and a rudder) لاستكشاف مبادئ ديناميكا الطيران. يهدف المشروع إلى فهم كيفية تأثير هذه الأسطح على حركات الطيران المختلفة ( roll, pitch, and yaw)، وتحسين أداء الطائرة في الطيران. سيجرب المشاركون تكوينات مختلفة، ويسجلون بيانات الطيران، ويعملون على تحسين تصاميمهم لتحقيق أقصى قدر من الاستقرار والمسافة."
+  },
+  "source": "",
+  "source2": ""
+}]

@@ -1,0 +1,82 @@
+[{
+  "_id": {
+    "$oid": "676aa619431c945485b3b9c2"
+  },
+  "id": null,
+  "student_name": "child2 child2",
+  "course_title": "Aerospace: The Beginning",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "66cb93d73b16f87bfae72876",
+  "avatar": "https://miro.medium.com/v2/resize:fit:720/format:webp/0*930xz23GRP8JfUFc.jpg",
+  "participants": [
+    {
+      "id": "66b9eb1664f330bc9744dfd9",
+      "username": "child2"
+    }
+  ],
+  "messages": [
+    {
+      "id": 0,
+      "content": "Hiii",
+      "senderId": "66b9eb1664f330bc9744dfd9",
+      "username": "child2",
+      "date": "2024-12-24",
+      "timestamp": "14:16",
+      "read_by": []
+    },
+    {
+      "id": 1,
+      "content": "is it working yet?",
+      "senderId": "66b9eb1664f330bc9744dfd9",
+      "username": "child2",
+      "date": "2024-12-24",
+      "timestamp": "14:16",
+      "read_by": []
+    },
+    {
+      "id": 2,
+      "content": "شكلها لسة :\"D",
+      "senderId": "66b9eb1664f330bc9744dfd9",
+      "username": "child2",
+      "date": "2024-12-24",
+      "timestamp": "14:17",
+      "read_by": []
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "676b8eec2ed778f6f17fafd6"
+  },
+  "id": null,
+  "student_name": "child2 child2",
+  "course_title": "Exploring the Universe",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "667c445898157d488d31854b",
+  "avatar": "https://i.ytimg.com/vi/CmWGW653voo/maxresdefault.jpg",
+  "participants": [
+    {
+      "id": "66b9eb1664f330bc9744dfd9",
+      "username": "child2"
+    }
+  ],
+  "messages": []
+},
+{
+  "_id": {
+    "$oid": "67befbee47d1c40815c5d224"
+  },
+  "id": null,
+  "student_name": "child2 child2",
+  "course_title": "Science Explorers",
+  "student_id": "66b9eb1664f330bc9744dfd9",
+  "course_id": "67be1bfdf5bee34f3a39d5e4",
+  "avatar": "https://res.cloudinary.com/dwg9hjzok/image/upload/c_pad,b_gen_fill,w_2768,h_1845/v1735580102/1._Science_Explorers_gwazxn-min_mcu4ni.png",
+  "participants": [
+    {
+      "id": "66b9eb1664f330bc9744dfd9",
+      "username": "child2"
+    }
+  ],
+  "messages": []
+}]

@@ -51,7 +51,7 @@ export const translationModule = {
   },
   plans: {
     en: "Trace Plans",
-    ar: "خطط Trace" ,
+    ar: "خطط Trace",
   },
   programs: {
     en: "Programs",
@@ -106,12 +106,16 @@ export const translationModule = {
     ar: "احجز الان",
   },
   earnCer: {
-    en: "Earn your certificate By",
-    ar: "احصل على شهادتك بواسطة",
+    en: "Trace Edtech Honored with ",
+    ar: "تم تكريم Trace Edtech بـ",
+  },
+  stemAcc: {
+    en: 'STEM.org Accreditation',
+    ar: 'اعتماد STEM.org'
   },
   certificateDescription: {
-    en: "Trace is proudly accredited by STEM.org that provides STEM courses; from the age of four till the age of eighteen years old. Exclusively in Egypt, Trace is empowered by Engineering for kids.",
-    ar: "تم اعتماد Trace بفخر من قبل STEM.org الذي يقدم دورات في العلوم والتكنولوجيا والهندسة والرياضيات. من سن الرابعة حتى سن الثامنة عشرة. حصريًا في مصر، يتم تمكين Trace من خلال الهندسة للأطفال.",
+    en: "Trace Edtech is proudly accredited by STEM.org, offering world-class STEM education for learners of all ages. Recognized among the Top 5% Best in STEM brands worldwide, Trace Edtech is committed to delivering innovative, high-quality programs that inspire future leaders in science, technology, engineering, and mathematics.",
+    ar: "تفخر Trace باعتمادها من منظمة STEM.org، حيث تقدم تعليمًا عالميًا في مجالات العلوم والتكنولوجيا والهندسة والرياضيات (STEM) لجميع الأعمار. تُعتبر Trace من بين أفضل 5% من أفضل العلامات التجارية في هذا المجال عالميًا، وهي ملتزمة بتقديم برامج مبتكرة وعالية الجودة تُلهم قادة المستقبل في مجالات العلوم والتكنولوجيا والهندسة والرياضيات."
   },
   achievements: {
     en: "Our Achievements",
@@ -937,9 +941,9 @@ export const translationModule = {
     en: 'Print',
     ar: 'اطبع'
   },
-  viewFullReport:{
-en:'View Full Report',
-ar:'عرض التقرير الكامل'
+  viewFullReport: {
+    en: 'View Full Report',
+    ar: 'عرض التقرير الكامل'
   },
   intro: {
     en: 'Introduction',
@@ -1207,17 +1211,17 @@ https://www.traceedtech.com. من خلال الوصول إلى هذا الموق
     en: "Contact Us",
     ar: "اتصل بنا"
   },
-  copyRight:{
-    en:'© 2018 - 2025 Trace Limited. All rights reserved.',
-    ar:'© 2018 - 2025 Trace Limited. جميع الحقوق محفوظة.'
+  copyRight: {
+    en: '© 2018 - 2025 Trace Limited. All rights reserved.',
+    ar: '© 2018 - 2025 Trace Limited. جميع الحقوق محفوظة.'
   },
-  terms:{
-    en:'Terms and Conditions',
-    ar:'الشروط والأحكام'
+  terms: {
+    en: 'Terms and Conditions',
+    ar: 'الشروط والأحكام'
   },
-  privacy:{
-    en:'Privacy Policy',
-    ar:'سياسة الخصوصية'
+  privacy: {
+    en: 'Privacy Policy',
+    ar: 'سياسة الخصوصية'
   }
 
 

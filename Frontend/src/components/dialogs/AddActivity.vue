@@ -208,13 +208,11 @@ function resize(e:Event) {
       <div class="element">
         <h4>English Description</h4>
         <Textarea  @input="resize" rows="1" v-model="description.en" />
-        <p style="width: 300%;white-space: pre-wrap;">{{ description.en }}</p>
       </div>
       <div class="element">
         <h4>Arabic Description</h4>
         <Textarea dir="rtl" v-model="description.ar" />
       </div>
-
       <div class="images">
         <h4>Start Images</h4>
         <div class="image" v-for="(image, i) in startImages">

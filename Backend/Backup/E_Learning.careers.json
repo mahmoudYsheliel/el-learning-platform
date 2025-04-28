@@ -1,0 +1,834 @@
+[{
+  "_id": {
+    "$oid": "66aea85c494aa3938b29dc3f"
+  },
+  "id": "string",
+  "careers": [
+    {
+      "id": 0,
+      "name": "Medicine",
+      "title": {
+        "en": "Medicine",
+        "ar": "الطب"
+      },
+      "description": {
+        "en": "A career in Medicine involves diagnosing and treating illnesses, and providing medical care to patients.",
+        "ar": "العمل في الطب ينطوي على تشخيص الأمراض وعلاجها وتقديم الرعاية الطبية للمرضى."
+      },
+      "criteria": [
+        {
+          "name": "Openness",
+          "min_score": 70,
+          "max_score": 80
+        },
+        {
+          "name": "Conscientiousness",
+          "min_score": 85,
+          "max_score": 95
+        },
+        {
+          "name": "Extraversion",
+          "min_score": 50,
+          "max_score": 65
+        },
+        {
+          "name": "Agreeableness",
+          "min_score": 70,
+          "max_score": 85
+        },
+        {
+          "name": "Neuroticism",
+          "min_score": 35,
+          "max_score": 50
+        },
+        {
+          "name": "IQ",
+          "min_score": 120,
+          "max_score": 140
+        },
+        {
+          "name": "The Giver",
+          "min_score": 75,
+          "max_score": 100
+        },
+        {
+          "name": "Visual",
+          "min_score": 80,
+          "max_score": 100
+        },
+        {
+          "name": "Reading/Writing",
+          "min_score": 80,
+          "max_score": 100
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Engineering",
+      "title": {
+        "en": "Engineering",
+        "ar": "الهندسة"
+      },
+      "description": {
+        "en": "Engineering involves designing, building, and maintaining structures, machines, and systems.",
+        "ar": "الهندسة تشمل تصميم وبناء وصيانة الهياكل والآلات والأنظمة."
+      },
+      "criteria": [
+        {
+          "name": "Openness",
+          "min_score": 75,
+          "max_score": 85
+        },
+        {
+          "name": "Conscientiousness",
+          "min_score": 80,
+          "max_score": 90
+        },
+        {
+          "name": "Extraversion",
+          "min_score": 45,
+          "max_score": 60
+        },
+        {
+          "name": "Agreeableness",
+          "min_score": 55,
+          "max_score": 70
+        },
+        {
+          "name": "Neuroticism",
+          "min_score": 30,
+          "max_score": 45
+        },
+        {
+          "name": "IQ",
+          "min_score": 125,
+          "max_score": 145
+        },
+        {
+          "name": "The Investigator",
+          "min_score": 75,
+          "max_score": 100
+        },
+        {
+          "name": "Visual",
+          "min_score": 80,
+          "max_score": 100
+        },
+        {
+          "name": "Reading/Writing",
+          "min_score": 80,
+          "max_score": 100
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Law",
+      "title": {
+        "en": "Law",
+        "ar": "القانون"
+      },
+      "description": {
+        "en": "A career in Law involves practicing and applying legal principles and representing clients in legal matters.",
+        "ar": "العمل في القانون ينطوي على ممارسة وتطبيق المبادئ القانونية وتمثيل العملاء في الأمور القانونية."
+      },
+      "criteria": [
+        {
+          "name": "Openness",
+          "min_score": 60,
+          "max_score": 75
+        },
+        {
+          "name": "Conscientiousness",
+          "min_score": 75,
+          "max_score": 85
+        },
+        {
+          "name": "Extraversion",
+          "min_score": 65,
+          "max_score": 80
+        },
+        {
+          "name": "Agreeableness",
+          "min_score": 50,
+          "max_score": 65
+        },
+        {
+          "name": "Neuroticism",
+          "min_score": 45,
+          "max_score": 60
+        },
+        {
+          "name": "IQ",
+          "min_score": 120,
+          "max_score": 140
+        },
+        {
+          "name": "The Challenger",
+          "min_score": 75,
+          "max_score": 100
+        },
+        {
+          "name": "Auditory",
+          "min_score": 80,
+          "max_score": 100
+        },
+        {
+          "name": "Reading/Writing",
+          "min_score": 80,
+          "max_score": 100
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Psychology",
+      "title": {
+        "en": "Psychology",
+        "ar": "علم النفس"
+      },
+      "description": {
+        "en": "Psychology is the scientific study of the mind and behavior, including mental processes and emotional responses.",
+        "ar": "علم النفس هو الدراسة العلمية للعقل والسلوك، بما في ذلك العمليات العقلية والاستجابات العاطفية."
+      },
+      "criteria": [
+        {
+          "name": "Openness",
+          "min_score": 75,
+          "max_score": 85
+        },
+        {
+          "name": "Conscientiousness",
+          "min_score": 70,
+          "max_score": 80
+        },
+        {
+          "name": "Extraversion",
+          "min_score": 65,
+          "max_score": 80
+        },
+        {
+          "name": "Agreeableness",
+          "min_score": 75,
+          "max_score": 90
+        },
+        {
+          "name": "Neuroticism",
+          "min_score": 45,
+          "max_score": 60
+        },
+        {
+          "name": "IQ",
+          "min_score": 110,
+          "max_score": 130
+        },
+        {
+          "name": "The Individualist",
+          "min_score": 75,
+          "max_score": 100
+        },
+        {
+          "name": "Auditory",
+          "min_score": 80,
+          "max_score": 100
+        },
+        {
+          "name": "Reading/Writing",
+          "min_score": 80,
+          "max_score": 100
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Teaching",
+      "title": {
+        "en": "Teaching",
+        "ar": "التعليم"
+      },
+      "description": {
+        "en": "Teaching involves imparting knowledge, skills, and values to students in educational settings.",
+        "ar": "التعليم ينطوي على نقل المعرفة والمهارات والقيم للطلاب في البيئات التعليمية."
+      },
+      "criteria": [
+        {
+          "name": "Openness",
+          "min_score": 60,
+          "max_score": 75
+        },
+        {
+          "name": "Conscientiousness",
+          "min_score": 75,
+          "max_score": 85
+        },
+        {
+          "name": "Extraversion",
+          "min_score": 65,
+          "max_score": 80
+        },
+        {
+          "name": "Agreeableness",
+          "min_score": 75,
+          "max_score": 90
+        },
+        {
+          "name": "Neuroticism",
+          "min_score": 45,
+          "max_score": 60
+        },
+        {
+          "name": "IQ",
+          "min_score": 105,
+          "max_score": 125
+        },
+        {
+          "name": "The Peacemaker",
+          "min_score": 75,
+          "max_score": 100
+        },
+        {
+          "name": "Visual",
+          "min_score": 80,
+          "max_score": 100
+        },
+        {
+          "name": "Auditory",
+          "min_score": 80,
+          "max_score": 100
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Business",
+      "title": {
+        "en": "Business",
+        "ar": "الأعمال"
+      },
+      "description": {
+        "en": "Business involves managing and organizing activities to generate profit and achieve organizational goals.",
+        "ar": "الأعمال تشمل إدارة وتنظيم الأنشطة لتحقيق الربح وتحقيق الأهداف التنظيمية."
+      },
+      "criteria": [
+        {
+          "name": "Openness",
+          "min_score": 70,
+          "max_score": 80
+        },
+        {
+          "name": "Conscientiousness",
+          "min_score": 75,
+          "max_score": 85
+        },
+        {
+          "name": "Extraversion",
+          "min_score": 75,
+          "max_score": 90
+        },
+        {
+          "name": "Agreeableness",
+          "min_score": 60,
+          "max_score": 75
+        },
+        {
+          "name": "Neuroticism",
+          "min_score": 35,
+          "max_score": 50
+        },
+        {
+          "name": "IQ",
+          "min_score": 110,
+          "max_score": 130
+        },
+        {
+          "name": "The Achiever",
+          "min_score": 75,
+          "max_score": 100
+        },
+        {
+          "name": "Auditory",
+          "min_score": 80,
+          "max_score": 100
+        },
+        {
+          "name": "Reading/Writing",
+          "min_score": 80,
+          "max_score": 100
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Art & Design",
+      "title": {
+        "en": "Art & Design",
+        "ar": "الفنون والتصميم"
+      },
+      "description": {
+        "en": "Art & Design focuses on creating and appreciating visual and aesthetic works, including various art forms and design principles.",
+        "ar": "الفنون والتصميم يركزان على خلق وتقدير الأعمال البصرية والجمالية، بما في ذلك الأشكال الفنية والمبادئ التصميمية المختلفة."
+      },
+      "criteria": [
+        {
+          "name": "Openness",
+          "min_score": 85,
+          "max_score": 95
+        },
+        {
+          "name": "Conscientiousness",
+          "min_score": 60,
+          "max_score": 75
+        },
+        {
+          "name": "Extraversion",
+          "min_score": 45,
+          "max_score": 60
+        },
+        {
+          "name": "Agreeableness",
+          "min_score": 55,
+          "max_score": 70
+        },
+        {
+          "name": "Neuroticism",
+          "min_score": 55,
+          "max_score": 70
+        },
+        {
+          "name": "IQ",
+          "min_score": 95,
+          "max_score": 115
+        },
+        {
+          "name": "The Individualist",
+          "min_score": 75,
+          "max_score": 100
+        },
+        {
+          "name": "Visual",
+          "min_score": 80,
+          "max_score": 100
+        },
+        {
+          "name": "Auditory",
+          "min_score": 80,
+          "max_score": 100
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Information Tech",
+      "title": {
+        "en": "Information Tech",
+        "ar": "تكنولوجيا المعلومات"
+      },
+      "description": {
+        "en": "Information Technology involves managing and developing computer systems, software, and networks.",
+        "ar": "تكنولوجيا المعلومات تشمل إدارة وتطوير أنظمة الكمبيوتر والبرامج والشبكات."
+      },
+      "criteria": [
+        {
+          "name": "Openness",
+          "min_score": 75,
+          "max_score": 85
+        },
+        {
+          "name": "Conscientiousness",
+          "min_score": 70,
+          "max_score": 80
+        },
+        {
+          "name": "Extraversion",
+          "min_score": 40,
+          "max_score": 55
+        },
+        {
+          "name": "Agreeableness",
+          "min_score": 50,
+          "max_score": 65
+        },
+        {
+          "name": "Neuroticism",
+          "min_score": 35,
+          "max_score": 50
+        },
+        {
+          "name": "IQ",
+          "min_score": 115,
+          "max_score": 135
+        },
+        {
+          "name": "The Investigator",
+          "min_score": 75,
+          "max_score": 100
+        },
+        {
+          "name": "Visual",
+          "min_score": 80,
+          "max_score": 100
+        },
+        {
+          "name": "Reading/Writing",
+          "min_score": 80,
+          "max_score": 100
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Sales",
+      "title": {
+        "en": "Sales",
+        "ar": "المبيعات"
+      },
+      "description": {
+        "en": "Sales involves persuading and assisting customers in purchasing products or services.",
+        "ar": "المبيعات تشمل إقناع ومساعدة العملاء في شراء المنتجات أو الخدمات."
+      },
+      "criteria": [
+        {
+          "name": "Openness",
+          "min_score": 60,
+          "max_score": 75
+        },
+        {
+          "name": "Conscientiousness",
+          "min_score": 70,
+          "max_score": 80
+        },
+        {
+          "name": "Extraversion",
+          "min_score": 85,
+          "max_score": 95
+        },
+        {
+          "name": "Agreeableness",
+          "min_score": 70,
+          "max_score": 85
+        },
+        {
+          "name": "Neuroticism",
+          "min_score": 35,
+          "max_score": 50
+        },
+        {
+          "name": "IQ",
+          "min_score": 105,
+          "max_score": 125
+        },
+        {
+          "name": "The Achiever",
+          "min_score": 75,
+          "max_score": 100
+        },
+        {
+          "name": "Visual",
+          "min_score": 80,
+          "max_score": 100
+        },
+        {
+          "name": "Auditory",
+          "min_score": 80,
+          "max_score": 100
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Marketing",
+      "title": {
+        "en": "Marketing",
+        "ar": "التسويق"
+      },
+      "description": {
+        "en": "Marketing involves promoting and selling products or services and understanding customer needs.",
+        "ar": "التسويق يشمل الترويج وبيع المنتجات أو الخدمات وفهم احتياجات العملاء."
+      },
+      "criteria": [
+        {
+          "name": "Openness",
+          "min_score": 70,
+          "max_score": 80
+        },
+        {
+          "name": "Conscientiousness",
+          "min_score": 70,
+          "max_score": 80
+        },
+        {
+          "name": "Extraversion",
+          "min_score": 75,
+          "max_score": 90
+        },
+        {
+          "name": "Agreeableness",
+          "min_score": 60,
+          "max_score": 75
+        },
+        {
+          "name": "Neuroticism",
+          "min_score": 35,
+          "max_score": 50
+        },
+        {
+          "name": "IQ",
+          "min_score": 110,
+          "max_score": 130
+        },
+        {
+          "name": "The Enthusiast",
+          "min_score": 75,
+          "max_score": 100
+        },
+        {
+          "name": "Auditory",
+          "min_score": 80,
+          "max_score": 100
+        },
+        {
+          "name": "Visual",
+          "min_score": 80,
+          "max_score": 100
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Finance",
+      "title": {
+        "en": "Finance",
+        "ar": "المالية"
+      },
+      "description": {
+        "en": "Finance involves managing money, investments, and financial planning for individuals or organizations.",
+        "ar": "المالية تشمل إدارة الأموال والاستثمارات والتخطيط المالي للأفراد أو المنظمات."
+      },
+      "criteria": [
+        {
+          "name": "Openness",
+          "min_score": 70,
+          "max_score": 80
+        },
+        {
+          "name": "Conscientiousness",
+          "min_score": 85,
+          "max_score": 95
+        },
+        {
+          "name": "Extraversion",
+          "min_score": 50,
+          "max_score": 65
+        },
+        {
+          "name": "Agreeableness",
+          "min_score": 50,
+          "max_score": 65
+        },
+        {
+          "name": "Neuroticism",
+          "min_score": 35,
+          "max_score": 50
+        },
+        {
+          "name": "IQ",
+          "min_score": 115,
+          "max_score": 135
+        },
+        {
+          "name": "The Skeptic",
+          "min_score": 75,
+          "max_score": 100
+        },
+        {
+          "name": "Reading/Writing",
+          "min_score": 80,
+          "max_score": 100
+        },
+        {
+          "name": "Visual",
+          "min_score": 80,
+          "max_score": 100
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Journalism",
+      "title": {
+        "en": "Journalism",
+        "ar": "الصحافة"
+      },
+      "description": {
+        "en": "Journalism involves investigating, reporting, and writing news stories for various media platforms.",
+        "ar": "الصحافة تشمل التحقيق وكتابة القصص الإخبارية للمنصات الإعلامية المختلفة."
+      },
+      "criteria": [
+        {
+          "name": "Openness",
+          "min_score": 80,
+          "max_score": 90
+        },
+        {
+          "name": "Conscientiousness",
+          "min_score": 65,
+          "max_score": 80
+        },
+        {
+          "name": "Extraversion",
+          "min_score": 60,
+          "max_score": 75
+        },
+        {
+          "name": "Agreeableness",
+          "min_score": 65,
+          "max_score": 80
+        },
+        {
+          "name": "Neuroticism",
+          "min_score": 45,
+          "max_score": 60
+        },
+        {
+          "name": "IQ",
+          "min_score": 110,
+          "max_score": 130
+        },
+        {
+          "name": "The Communicator",
+          "min_score": 75,
+          "max_score": 100
+        },
+        {
+          "name": "Auditory",
+          "min_score": 80,
+          "max_score": 100
+        },
+        {
+          "name": "Visual",
+          "min_score": 80,
+          "max_score": 100
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Healthcare",
+      "title": {
+        "en": "Healthcare",
+        "ar": "الرعاية الصحية"
+      },
+      "description": {
+        "en": "Healthcare focuses on the maintenance or improvement of health through prevention, diagnosis, treatment, and recovery.",
+        "ar": "الرعاية الصحية تركز على الحفاظ على الصحة أو تحسينها من خلال الوقاية والتشخيص والعلاج والتعافي."
+      },
+      "criteria": [
+        {
+          "name": "Openness",
+          "min_score": 60,
+          "max_score": 75
+        },
+        {
+          "name": "Conscientiousness",
+          "min_score": 75,
+          "max_score": 85
+        },
+        {
+          "name": "Extraversion",
+          "min_score": 50,
+          "max_score": 65
+        },
+        {
+          "name": "Agreeableness",
+          "min_score": 70,
+          "max_score": 85
+        },
+        {
+          "name": "Neuroticism",
+          "min_score": 45,
+          "max_score": 60
+        },
+        {
+          "name": "IQ",
+          "min_score": 105,
+          "max_score": 125
+        },
+        {
+          "name": "The Giver",
+          "min_score": 75,
+          "max_score": 100
+        },
+        {
+          "name": "Auditory",
+          "min_score": 80,
+          "max_score": 100
+        },
+        {
+          "name": "Reading/Writing",
+          "min_score": 80,
+          "max_score": 100
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Architecture",
+      "title": {
+        "en": "Architecture",
+        "ar": "العمارة"
+      },
+      "description": {
+        "en": "Architecture involves designing and planning buildings and other physical structures, combining art and science.",
+        "ar": "العمارة تتضمن تصميم وتخطيط المباني والهياكل المادية الأخرى، وتجمع بين الفن والعلم."
+      },
+      "criteria": [
+        {
+          "name": "Openness",
+          "min_score": 75,
+          "max_score": 85
+        },
+        {
+          "name": "Conscientiousness",
+          "min_score": 80,
+          "max_score": 90
+        },
+        {
+          "name": "Extraversion",
+          "min_score": 50,
+          "max_score": 65
+        },
+        {
+          "name": "Agreeableness",
+          "min_score": 55,
+          "max_score": 70
+        },
+        {
+          "name": "Neuroticism",
+          "min_score": 35,
+          "max_score": 50
+        },
+        {
+          "name": "IQ",
+          "min_score": 115,
+          "max_score": 135
+        },
+        {
+          "name": "The Investigator",
+          "min_score": 75,
+          "max_score": 100
+        },
+        {
+          "name": "Reading/Writing",
+          "min_score": 80,
+          "max_score": 100
+        },
+        {
+          "name": "Visual",
+          "min_score": 80,
+          "max_score": 100
+        }
+      ]
+    }
+  ]
+}]

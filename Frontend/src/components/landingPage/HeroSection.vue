@@ -30,6 +30,8 @@ const router = useRouter();
         </p>
         <div class="buttonWrapper">
           <Button raised :label="selectLang(translationModule.takeTest)" @click="router.push('/signup/Child')" v-if="!token.getIsAuthorized" />
+          <img style="height: 100%; width: fit-content;" src="/images/STEMLogo.png" alt="">
+          <img style="height: 100%; width: fit-content;" src="/images/STEMBest.png" alt="">
           <!-- <p style="color: var(--accent1); margin: 0;font-size: 0.875rem;font-weight: 100;">
             {{ selectLang(translationModule.noCreditCard) }}
           </p> -->
@@ -110,8 +112,16 @@ button {
 
 button {
   background-image: linear-gradient(to bottom, var(--accent2), var(--accent5));
-  font-size: 1.15rem;
-  margin-top: 1rem;
+  font-size: 1.5rem;
+
+}
+.buttonWrapper{
+  height: 5rem;
+  display: flex;
+  align-items: start;
+  width: 100%;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 @media screen and (max-width: 1300px) {

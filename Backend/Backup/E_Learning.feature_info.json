@@ -1,0 +1,112 @@
+[{
+  "_id": {
+    "$oid": "66ae90ab27f23bb8724c3197"
+  },
+  "name": "IQ",
+  "title": {
+    "en": "Intelligence Quotient (IQ)",
+    "ar": "معدل الذكاء"
+  },
+  "description": {
+    "en": "a measure of a person's intellectual abilities.",
+    "ar": "هو مقياس لقدرات الشخص العقلية."
+  }
+},
+{
+  "_id": {
+    "$oid": "6735ae57ffc634e4d7919de5"
+  },
+  "name": "Similarities",
+  "title": {
+    "en": "Similarities",
+    "ar": "التشابهات"
+  },
+  "description": {
+    "en": "The Similarities section assesses an individual's ability to identify and explain the relationship between two or more concepts or objects.",
+    "ar": "يقيّم قسم التشابهات قدرة الفرد على تحديد وشرح العلاقة بين مفهومين أو أكثر أو بين كائنات متعددة."
+  }
+},
+{
+  "_id": {
+    "$oid": "6735ae80ffc634e4d7919de6"
+  },
+  "name": "Vocabulary",
+  "title": {
+    "en": "Vocabulary",
+    "ar": "المفردات"
+  },
+  "description": {
+    "en": "The Vocabulary section evaluates an individual's knowledge and understanding of word meanings and their ability to use words accurately.",
+    "ar": "يقيم قسم المفردات معرفة الفرد وفهمه لمعاني الكلمات وقدرته على استخدامها بدقة."
+  }
+},
+{
+  "_id": {
+    "$oid": "6735ae9dffc634e4d7919de7"
+  },
+  "name": "Visual Puzzles",
+  "title": {
+    "en": "Visual Puzzles",
+    "ar": "الألغاز البصرية"
+  },
+  "description": {
+    "en": "The Visual Puzzles section tests an individual's spatial reasoning and ability to analyze and solve puzzles using visual and spatial skills.",
+    "ar": "يقيم قسم الألغاز البصرية قدرة الفرد على التحليل وحل الألغاز باستخدام المهارات البصرية والمكانية."
+  }
+},
+{
+  "_id": {
+    "$oid": "6735aed2ffc634e4d7919de8"
+  },
+  "name": "Figure Weights",
+  "title": {
+    "en": "Figure Weights",
+    "ar": "أوزان الأشكال"
+  },
+  "description": {
+    "en": "The Figure Weights section assesses an individual's quantitative reasoning and ability to discern balance and relationships between weights and figures.",
+    "ar": "يقيم قسم أوزان الأشكال قدرة الفرد على الاستدلال الكمي وفهم التوازن والعلاقات بين الأوزان والأشكال."
+  }
+},
+{
+  "_id": {
+    "$oid": "6735aef9ffc634e4d7919de9"
+  },
+  "name": "Digit Span",
+  "title": {
+    "en": "Digit Span",
+    "ar": "مدى الأرقام"
+  },
+  "description": {
+    "en": "The Digit Span section evaluates an individual's short-term memory and attention by requiring them to recall sequences of numbers in order.",
+    "ar": "يقيم قسم مدى الأرقام الذاكرة قصيرة المدى والانتباه لدى الفرد من خلال طلب استرجاع تسلسل الأرقام بالترتيب."
+  }
+},
+{
+  "_id": {
+    "$oid": "6735af01ffc634e4d7919dea"
+  },
+  "name": "Symbol Search",
+  "title": {
+    "en": "Symbol Search",
+    "ar": "البحث عن الرموز"
+  },
+  "description": {
+    "en": "The Symbol Search section measures processing speed and attention by requiring individuals to quickly identify specific symbols within a set.",
+    "ar": "يقيس قسم البحث عن الرموز سرعة المعالجة والانتباه من خلال طلب تحديد رموز معينة بسرعة داخل مجموعة."
+  }
+},
+{
+  "_id": {
+    "$oid": "674478a2c5f99fb80a53517d"
+  },
+  "name": "Matrix Reasoning",
+  "title": {
+    "en": "Matrix Reasoning",
+    "ar": "الاستدلال بالمصفوفات"
+  },
+  "description": {
+    "en": "A section that evaluates logical reasoning and pattern recognition by solving visual matrix puzzles.",
+    "ar": "قسم يقيم التفكير المنطقي والتعرف على الأنماط من خلال حل ألغاز مصفوفية بصرية."
+  }
+}]

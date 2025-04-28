@@ -26,11 +26,13 @@ const route = useRoute();
 const router = useRouter();
 
 const course = ref();
-const courseRequester = new HttpRequester("get_course");
+const first_lesson_video = ref<string|null>()
+const courseRequester = new HttpRequester("get_course_free_lessons");
 
 const chapters = ref<any[]>([]);
 courseRequester.callApi({ course_id: route.params.courseId }).then((res) => {
   course.value = res?.data?.course;
+  first_lesson_video.value = res?.data?.lesson?.source
   for (let chapter of course.value?.chapters) {
     let obj = {
       title: "",
@@ -199,7 +201,7 @@ function viewMaterial() {
         requestEnrollmentWithPromoCode(promo_code);
       }
     " />
-    <CourseDescribtion :course="course" :isEnrolled="isEnrolled" :userType=personalInfo.getInfo?.userType :notShowButton="personalInfo.getInfo?.userType == 'Parent' &&
+    <CourseDescribtion :first_lesson_video="first_lesson_video" :course="course" :isEnrolled="isEnrolled" :userType=personalInfo.getInfo?.userType :notShowButton="personalInfo.getInfo?.userType == 'Parent' &&
       route.params.isEnrolled == '1'
       " @enroll="enroll" @viewMaterial="viewMaterial" />
 
