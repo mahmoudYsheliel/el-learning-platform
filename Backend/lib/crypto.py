@@ -5,7 +5,7 @@ from typing import Any,Annotated
 from fastapi.security import OAuth2PasswordBearer
 from datetime import datetime, timedelta, timezone
 from database.mongo_driver import validate_bson_id
-
+from database.mongo_driver import get_database
 
 _jwt_key: str = 'randomkey'
 algo = 'HS512'
@@ -59,9 +59,23 @@ async def auth_user(token: Annotated[str, Depends(oauth2_scheme)]):
             raise credentials_exception
     except JWTError:
         raise credentials_exception
+    
     user_id = validate_bson_id(user_id)
     if user_id is None:
         raise credentials_exception
+    
     return user_id
 
 
+
+
+async def create_verify_email_link(email:str):
+    expire = datetime.now(timezone.utc) + timedelta(minutes=15)
+    to_encode = {'email':email,'exp':expire}
+    encoded = jwt.encode(to_encode,key=_jwt_key,algorithm=algo)
+    return encoded
+
+
+def check_verification_token(token:str):
+    decoded = jwt.decode(token, key= _jwt_key, algorithms=[algo])
+    return decoded

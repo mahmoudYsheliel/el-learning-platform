@@ -4028,7 +4028,7 @@
       "type": "analysis quiz",
       "analysis_quiz_id": "67382f6eabb11ade1ca53523",
       "enrollment_request_id": "",
-      "status": "waiting"
+      "status": "done"
     }
   ]
 },
@@ -5888,4 +5888,193 @@
       "status": "waiting"
     }
   ]
+},
+{
+  "_id": {
+    "$oid": "6810ce00241e1909fde01452"
+  },
+  "id": null,
+  "email": "shroukyehya2@gmail.com",
+  "hashed_pass": "$2b$12$89QKgvaZZYsk6gFxmeEJ5eLnRIGgiHLer3inVSgQw.AqZJwdFm4Cm",
+  "user_type": "Parent",
+  "created_at": "2025-04-28T04:38:38.712182",
+  "phone_number": "01153829380",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "1997-09-23T21:00:00.000Z",
+  "gender": "Female",
+  "balance": 0,
+  "image": "",
+  "notifications": []
+},
+{
+  "_id": {
+    "$oid": "6812776e241e1909fde01454"
+  },
+  "id": null,
+  "email": "rawanaliios188@gmail.com",
+  "hashed_pass": "$2b$12$kv2HnDsfhewtlcNNT8oIQ.Dho0t0OQrp1ujInvAPPewPiTl1e6yTK",
+  "user_type": "Child",
+  "created_at": "2025-04-28T04:38:38.712182",
+  "phone_number": "01020022399",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "2007-04-11T22:00:00.000Z",
+  "gender": "Female",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Trace Test Quiz for Children Aged 11 +:",
+        "ar": "اختبار Trace للأطفال بعمر 11 سنة فما فوق"
+      },
+      "description": {
+        "en": "\n    <div>\n        <p>\n            <strong>Trace Test</strong> is designed to assess various aspects of your child's cognitive development, including IQ levels and preferred learning styles. \n            Through carefully crafted questions, we aim to gain insights into your child's unique abilities and learning preferences.\n        </p>\n\n        <p>Instructions for Parents and Children:</p>\n        <ul style=\"margin-left: 1.125rem;\">\n            <li>The test consists of a variety of engaging questions tailored for children aged 11+.</li>\n            <li>The total duration of the test is <strong>30 minutes.</strong></li>\n            <li>You can switch languages anytime by clicking the translation icon at the bottom right corner.</li>\n            <li>Please ensure that your child takes the test in a quiet environment without interruptions.</li>\n            <li>Encourage your child to answer each question independently, without external assistance, to ensure accurate results.</li>\n            <li>Some questions do not have right or wrong answers—this test is designed to understand how your child thinks and learns best.</li>\n            <li>Once the quiz is completed, you will receive a detailed analysis of your child's cognitive strengths and learning style.</li>\n        </ul>\n\n        <p>\n            We appreciate your participation and look forward to helping you better understand your child’s learning journey.\n        </p>\n\n        <p style=\"font-weight: bold;\">Start Trace Test Now!</p>\n    </div>",
+        "ar": "\n    <div>\n        <p>\n            <strong>اختبار Trace </strong> مصمم لتقييم مختلف جوانب التطور الإدراكي لطفلك، بما في ذلك مستويات الذكاء وأنماط التعلم المفضلة. \n            من خلال أسئلة مصممة بعناية، نسعى للحصول على نظرة ثاقبة حول قدرات طفلك الفريدة وأسلوب تعلمه.\n        </p>\n\n        <p>تعليمات للآباء والأطفال:</p>\n        <ul style=\"margin-right: 1.125rem\">\n            <li>يتكون الاختبار من مجموعة متنوعة من الأسئلة التفاعلية المصممة للأطفال بعمر 11 سنة فما فوق.</li>\n            <li>المدة الإجمالية للاختبار هي <strong>30 دقيقة.</strong></li>\n            <li>يمكنك تبديل اللغات في أي وقت عن طريق النقر على أيقونة الترجمة في الزاوية اليمنى السفلى.</li>\n            <li>يرجى التأكد من أن طفلك يجري الاختبار في بيئة هادئة دون انقطاع.</li>\n            <li>شجع طفلك على الإجابة على كل سؤال بشكل مستقل، دون مساعدة خارجية، لضمان نتائج دقيقة.</li>\n            <li>بعض الأسئلة ليس لها إجابات صحيحة أو خاطئة—يهدف هذا الاختبار إلى فهم كيفية تفكير طفلك وطريقة تعلمه الأفضل.</li>\n            <li>بمجرد اكتمال الاختبار، ستتلقى تحليلاً تفصيليًا لنقاط القوة الإدراكية لطفلك وأسلوب تعلمه.</li>\n        </ul>\n\n        <p>\n            نحن نقدر مشاركتكم ونتطلع إلى مساعدتكم في فهم رحلة تعلم طفلك بشكل أفضل.\n        </p>\n\n        <p style=\"font-weight: bold;\">ابدأ اختبار Trace الآن!</p>\n    </div>\n"
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "676bc94a24fb5c2f612f2d42",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68152ce7241e1909fde01457"
+  },
+  "id": null,
+  "email": "kooo@outlook.com",
+  "hashed_pass": "$2b$12$umzRUSZMrKrSKIzttPp/UuOnPZDIZP6uAEP9emPQtu0La0GGaEJza",
+  "user_type": "Parent",
+  "created_at": "2025-04-28T04:38:38.712182",
+  "phone_number": "01080123746",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "2025-05-19T21:00:00.000Z",
+  "gender": "Female",
+  "balance": 0,
+  "image": "",
+  "notifications": []
+},
+{
+  "_id": {
+    "$oid": "68152d2c241e1909fde01459"
+  },
+  "id": null,
+  "email": "كنده ",
+  "hashed_pass": "$2b$12$r9/FcgzeDSfwEqZnsG/s4ecf94hMdEnHZ.GPZHTOzyZman1Vn1ilS",
+  "user_type": "Child",
+  "created_at": "2025-04-28T04:38:38.712182",
+  "phone_number": "",
+  "first_name": "كنده",
+  "last_name": "نظمي ",
+  "birth_day": "2025-05-19T21:00:00.000Z",
+  "gender": "Female",
+  "balance": 0,
+  "image": "",
+  "notifications": []
+},
+{
+  "_id": {
+    "$oid": "6818061a241e1909fde0145c"
+  },
+  "id": null,
+  "email": "kareem95279@gmail.com",
+  "hashed_pass": "$2b$12$0PvfoADVnd2P0PSVjVjfo.1wHqFQCf/WPFflaSTg0z6wvgIK4BMty",
+  "user_type": "Child",
+  "created_at": "2025-04-28T04:38:38.712182",
+  "phone_number": "01069569639",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "2007-04-15T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Trace Test Quiz for Children Aged 11 +:",
+        "ar": "اختبار Trace للأطفال بعمر 11 سنة فما فوق"
+      },
+      "description": {
+        "en": "\n    <div>\n        <p>\n            <strong>Trace Test</strong> is designed to assess various aspects of your child's cognitive development, including IQ levels and preferred learning styles. \n            Through carefully crafted questions, we aim to gain insights into your child's unique abilities and learning preferences.\n        </p>\n\n        <p>Instructions for Parents and Children:</p>\n        <ul style=\"margin-left: 1.125rem;\">\n            <li>The test consists of a variety of engaging questions tailored for children aged 11+.</li>\n            <li>The total duration of the test is <strong>30 minutes.</strong></li>\n            <li>You can switch languages anytime by clicking the translation icon at the bottom right corner.</li>\n            <li>Please ensure that your child takes the test in a quiet environment without interruptions.</li>\n            <li>Encourage your child to answer each question independently, without external assistance, to ensure accurate results.</li>\n            <li>Some questions do not have right or wrong answers—this test is designed to understand how your child thinks and learns best.</li>\n            <li>Once the quiz is completed, you will receive a detailed analysis of your child's cognitive strengths and learning style.</li>\n        </ul>\n\n        <p>\n            We appreciate your participation and look forward to helping you better understand your child’s learning journey.\n        </p>\n\n        <p style=\"font-weight: bold;\">Start Trace Test Now!</p>\n    </div>",
+        "ar": "\n    <div>\n        <p>\n            <strong>اختبار Trace </strong> مصمم لتقييم مختلف جوانب التطور الإدراكي لطفلك، بما في ذلك مستويات الذكاء وأنماط التعلم المفضلة. \n            من خلال أسئلة مصممة بعناية، نسعى للحصول على نظرة ثاقبة حول قدرات طفلك الفريدة وأسلوب تعلمه.\n        </p>\n\n        <p>تعليمات للآباء والأطفال:</p>\n        <ul style=\"margin-right: 1.125rem\">\n            <li>يتكون الاختبار من مجموعة متنوعة من الأسئلة التفاعلية المصممة للأطفال بعمر 11 سنة فما فوق.</li>\n            <li>المدة الإجمالية للاختبار هي <strong>30 دقيقة.</strong></li>\n            <li>يمكنك تبديل اللغات في أي وقت عن طريق النقر على أيقونة الترجمة في الزاوية اليمنى السفلى.</li>\n            <li>يرجى التأكد من أن طفلك يجري الاختبار في بيئة هادئة دون انقطاع.</li>\n            <li>شجع طفلك على الإجابة على كل سؤال بشكل مستقل، دون مساعدة خارجية، لضمان نتائج دقيقة.</li>\n            <li>بعض الأسئلة ليس لها إجابات صحيحة أو خاطئة—يهدف هذا الاختبار إلى فهم كيفية تفكير طفلك وطريقة تعلمه الأفضل.</li>\n            <li>بمجرد اكتمال الاختبار، ستتلقى تحليلاً تفصيليًا لنقاط القوة الإدراكية لطفلك وأسلوب تعلمه.</li>\n        </ul>\n\n        <p>\n            نحن نقدر مشاركتكم ونتطلع إلى مساعدتكم في فهم رحلة تعلم طفلك بشكل أفضل.\n        </p>\n\n        <p style=\"font-weight: bold;\">ابدأ اختبار Trace الآن!</p>\n    </div>\n"
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "676bc94a24fb5c2f612f2d42",
+      "enrollment_request_id": "",
+      "status": "done"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "681922d9241e1909fde0145f"
+  },
+  "id": null,
+  "email": "omneya.salehpt@gmail.com",
+  "hashed_pass": "$2b$12$RYhB2vBXF9vFL5736Z6guOF7LwOGn.bG6iwwYbxkzKgKAa7FvX4EG",
+  "user_type": "Parent",
+  "created_at": "2025-04-28T04:38:38.712182",
+  "phone_number": "01101446478",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "1989-02-11T22:00:00.000Z",
+  "gender": "Female",
+  "balance": 0,
+  "image": "",
+  "notifications": []
+},
+{
+  "_id": {
+    "$oid": "68192346241e1909fde01461"
+  },
+  "id": null,
+  "email": "Omar",
+  "hashed_pass": "$2b$12$IwQ6w5jKL0I.hSw.6osx..UfVoykh56qVuNlDmZCrjbFtJNRIUFRi",
+  "user_type": "Child",
+  "created_at": "2025-04-28T04:38:38.712182",
+  "phone_number": "",
+  "first_name": "Omar",
+  "last_name": "Abu El Saadat",
+  "birth_day": "2015-08-23T22:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": [
+    {
+      "title": {
+        "en": "Trace Test Quiz for Children Aged 9 - 10",
+        "ar": "اختبار Trace للأطفال من عمر 9 - 10 سنوات"
+      },
+      "description": {
+        "en": "\n    <div>\n        <p>\n            <strong>Trace Test</strong> is designed to assess various aspects of your child's cognitive development, including IQ levels and preferred learning styles. \n            Through carefully crafted questions, we aim to gain insights into your child's unique abilities and learning preferences.\n        </p>\n\n        <p>Instructions for Parents and Children:</p>\n        <ul style=\"margin-left: 1.125rem;\">\n            <li>The test consists of a variety of engaging questions tailored for children aged 9 to 10.</li>\n            <li>The total duration of the test is <strong>30 minutes.</strong></li>\n            <li>You can switch languages anytime by clicking the translation icon at the bottom right corner.</li>\n            <li>Please ensure that your child takes the test in a quiet environment without interruptions.</li>\n            <li>Encourage your child to answer each question independently, without external assistance, to ensure accurate results.</li>\n            <li>Some questions do not have right or wrong answers—this test is designed to understand how your child thinks and learns best.</li>\n            <li>Once the quiz is completed, you will receive a detailed analysis of your child's cognitive strengths and learning style.</li>\n        </ul>\n\n        <p>\n            We appreciate your participation and look forward to helping you better understand your child’s learning journey.\n        </p>\n\n        <p style=\"font-weight: bold;\">Start Trace Test Now!</p>\n    </div>",
+        "ar": "\n    <div>\n        <p>\n            <strong>اختبار Trace</strong> مصمم لتقييم مختلف جوانب التطور الإدراكي لطفلك، بما في ذلك مستويات الذكاء وأنماط التعلم المفضلة. \n            من خلال أسئلة مصممة بعناية، نسعى للحصول على نظرة ثاقبة حول قدرات طفلك الفريدة وأسلوب تعلمه.\n        </p>\n\n        <p>تعليمات للآباء والأطفال:</p>\n        <ul style=\"margin-right: 1.125rem\">\n            <li>يتكون الاختبار من مجموعة متنوعة من الأسئلة التفاعلية المصممة للأطفال الذين تتراوح أعمارهم بين 9 و 10 سنوات.</li>\n            <li>المدة الإجمالية للاختبار هي <strong>30 دقيقة.</strong></li>\n            <li>يمكنك تبديل اللغات في أي وقت عن طريق النقر على أيقونة الترجمة في الزاوية اليمنى السفلى.</li>\n            <li>يرجى التأكد من أن طفلك يجري الاختبار في بيئة هادئة دون انقطاع.</li>\n            <li>شجع طفلك على الإجابة على كل سؤال بشكل مستقل، دون مساعدة خارجية، لضمان نتائج دقيقة.</li>\n            <li>بعض الأسئلة ليس لها إجابات صحيحة أو خاطئة—يهدف هذا الاختبار إلى فهم كيفية تفكير طفلك وطريقة تعلمه الأفضل.</li>\n            <li>بمجرد اكتمال الاختبار، ستتلقى تحليلاً تفصيليًا لنقاط القوة الإدراكية لطفلك وأسلوب تعلمه.</li>\n        </ul>\n\n        <p>\n            نحن نقدر مشاركتكم ونتطلع إلى مساعدتكم في فهم رحلة تعلم طفلك بشكل أفضل.\n        </p>\n\n        <p style=\"font-weight: bold;\">ابدأ اختبار Trace الآن!</p>\n    </div>\n"
+      },
+      "type": "analysis quiz",
+      "analysis_quiz_id": "6769e5f9e3ecc49c3c37ed0d",
+      "enrollment_request_id": "",
+      "status": "waiting"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "681f6ff66b371d3b9ad9f3ed"
+  },
+  "id": null,
+  "email": "omarafify929@gmail.com",
+  "hashed_pass": "$2b$12$dFj.p1xVy5nXi5bHxrwLreroi30Vf8Kaboti7RUWpZXHSBIwF5H8K",
+  "user_type": "Parent",
+  "created_at": "2025-05-06T20:05:04.976849",
+  "phone_number": "01026500427",
+  "first_name": "",
+  "last_name": "",
+  "birth_day": "2025-04-30T21:00:00.000Z",
+  "gender": "Male",
+  "balance": 0,
+  "image": "",
+  "notifications": []
 }]

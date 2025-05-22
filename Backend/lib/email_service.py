@@ -115,3 +115,45 @@ def send_email_with_attachment(subject: str, to_email: str, body: str, attachmen
 
 
 
+
+
+def send_verification_link(link:str,to_email:str):
+    # Create the email message
+    html = f"""\
+    <!DOCTYPE html>
+    <html>
+    <body>
+        <p>Hi {to_email},</p>
+        <p>Thanks for signing up! Please verify your email by clicking the button below:</p>
+        <p>
+        <a href="{link}" style="
+            background-color: #01abff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        ">Verify Email</a>
+        </p>
+        <p>This link will expire in 15 minutes. If it does, you can request a new one from our website.</p>
+        <p>If you did not create this account, you can safely ignore this email.</p>
+        <p> <strong> – The Trace Team </strong> </p>
+    </body>
+    </html>
+    """
+
+    msg = MIMEMultipart()
+    msg["From"] = FROM_EMAIL
+    msg["To"] = to_email
+    msg["Subject"] = 'Email Verification'
+    msg.attach(MIMEText(html, "html"))
+
+    try:
+        # Set up the server and send the email
+        server = smtplib.SMTP_SSL(GMAIL_SMTP_SERVER, GMAIL_SMTP_PORT)
+        server.login(FROM_EMAIL, FROM_PASSWORD)
+        server.sendmail(FROM_EMAIL, to_email, msg.as_string())
+        server.quit()  # Close the connection
+        print("Email sent successfully!")
+    except Exception as e:
+        print(f"Error sending email: {e}")

@@ -2292,4 +2292,139 @@
     "ar": "استعد لاستكشاف الحياة والطبيعة وجسم الإنسان كعَالِم صغير! هذه المقدمة تشعل الحماس وتهيئ العقول الصغيرة لتفكر كعلماء حقيقيين."
   },
   "source": "https://drive.google.com/file/d/1n7Tu9RxSkoAGXFQ90PZ0hzIWDXfOwIRV/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "681b3a706b371d3b9ad9f3d8"
+  },
+  "id": null,
+  "title": {
+    "en": "Welcome to The Early Bird Doctor",
+    "ar": " مرحبًا بك في الطبيب الصغير"
+  },
+  "description": {
+    "en": "Start your journey into the amazing world of cells, microbes, and immunity. This course will turn you into a mini health detective!",
+    "ar": "ابدأ رحلتك الممتعة في عالم الخلايا والميكروبات والمناعة. هذا الكورس سيجعلك محققًا صحيًا صغيرًا!"
+  },
+  "source": "https://drive.google.com/file/d/1IkmomkOCd4P20CJ_psAbvNv3DpNEuEIm/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "681b3b196b371d3b9ad9f3da"
+  },
+  "id": null,
+  "title": {
+    "en": "A Puzzle Piece of the Human Body",
+    "ar": "قطعة البازل في جسم الإنسان"
+  },
+  "description": {
+    "en": "Explore what cells are, where they live in the body, and how to care for them so they can stay strong and healthy.",
+    "ar": "استكشف ما هي الخلية، وأين تعيش داخل الجسم، وكيف نعتني بها لتبقى قوية وصحية."
+  },
+  "source": "https://drive.google.com/file/d/1Zv5iazXQ8gDx34YsU_5WB-NgH2ANQD1P/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "681b3b536b371d3b9ad9f3db"
+  },
+  "id": null,
+  "title": {
+    "en": "The Cell is the Factory",
+    "ar": "الخلية هي المصنع"
+  },
+  "description": {
+    "en": " Take a tour inside the cell and meet the organelles—tiny parts that work like machines in a busy factory.",
+    "ar": "جولة داخل الخلية للتعرف على أجزائها الصغيرة (العضيات) التي تعمل معًا كمصنع نشيط ومنظم."
+  },
+  "source": "https://drive.google.com/file/d/1oTEwQSRljXhV99-udO9mjtcoCp_Osypm/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "681b3c106b371d3b9ad9f3dd"
+  },
+  "id": null,
+  "title": {
+    "en": "Plants & Bacteria under the Microscope",
+    "ar": "النباتات والبكتيريا تحت المجهر"
+  },
+  "description": {
+    "en": "Compare plant, bacteria, and human cells under a microscope and see what makes each one special.",
+    "ar": "قارن بين الخلايا النباتية والبكتيرية والبشرية تحت المجهر، واكتشف ما يجعل كل منها فريدة."
+  },
+  "source": "https://drive.google.com/file/d/1MZR_X16c1WHf1RYjbhKgKyK16HUHcQGZ/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "681b6b326b371d3b9ad9f3e1"
+  },
+  "id": null,
+  "title": {
+    "en": "The World of the Unseen",
+    "ar": "عالم الميكروبات غير المرئي"
+  },
+  "description": {
+    "en": "Dive into the invisible world of bacteria, fungi, and viruses, and learn how some microbes help life on Earth.",
+    "ar": "انطلق في عالم الميكروبات التي لا تُرى بالعين المجردة، وتعرف على كيف تفيد بعض الميكروبات الحياة على كوكب الأرض."
+  },
+  "source": "https://drive.google.com/file/d/1tDQ0HbJT2aEL5ClwFuwImgxq-LmGxp_r/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "681b6bbc6b371d3b9ad9f3e3"
+  },
+  "id": null,
+  "title": {
+    "en": "Unseen Enemies",
+    "ar": "الأعداء غير المرئيين"
+  },
+  "description": {
+    "en": "Not all microbes are friendly! Discover how germs cause illness and how we can protect ourselves.",
+    "ar": "ليست كل الميكروبات مفيدة! تعرف على كيفية تسببها في الأمراض وطرق الوقاية منها."
+  },
+  "source": "https://drive.google.com/file/d/1O68C-dccpo4504tfHaeMg56u4oA77iIS/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "681b71766b371d3b9ad9f3e6"
+  },
+  "id": null,
+  "title": {
+    "en": "The Immune System in Action",
+    "ar": "الجهاز المناعي في حالة تأهب"
+  },
+  "description": {
+    "en": "Learn how your body protects you from germs using powerful cells and quick responses.",
+    "ar": "تعرف على كيفية حماية الجسم لنفسه من الميكروبات باستخدام خلايا قوية واستجابات سريعة."
+  },
+  "source": "https://drive.google.com/file/d/1KMEK0y7RudCQbyYMB-wpmPMg7P-qQvta/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "681b72216b371d3b9ad9f3e8"
+  },
+  "id": null,
+  "title": {
+    "en": "Superheroes of the Immune System",
+    "ar": "أبطال الجهاز المناعي"
+  },
+  "description": {
+    "en": "Meet the heroes: white blood cells, antibodies, and more! Understand their role in keeping you safe.",
+    "ar": "تعرف على أبطال الدفاع: خلايا الدم البيضاء، الأجسام المضادة، وغيرهم! واكتشف كيف يحافظون على صحتك."
+  },
+  "source": "https://drive.google.com/file/d/1oSxrrzRkcDywhdIn-mLg3fE-QEtMm4vY/view?usp=drive_link"
+},
+{
+  "_id": {
+    "$oid": "681b72a16b371d3b9ad9f3ea"
+  },
+  "id": null,
+  "title": {
+    "en": "How to Stay Strong and Healthy",
+    "ar": "كيف نحافظ على مناعتنا؟"
+  },
+  "description": {
+    "en": "Explore healthy habits like eating well, staying active, and keeping clean to power up your immune system.",
+    "ar": "استكشف عادات صحية مثل الأكل الجيد، النشاط البدني، والنظافة لتقوية جهازك المناعي."
+  },
+  "source": "https://drive.google.com/file/d/1ccaIBDptO7qMWR8ZywG_Am0iLnxutShJ/view?usp=drive_link"
 }]

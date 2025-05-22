@@ -12,8 +12,8 @@ import InputText from "primevue/inputtext";
 import Password from "primevue/password";
 import Calendar from "primevue/calendar";
 import { HttpRequester } from "@/lib/APICaller";
-import { ref,onMounted } from "vue";
-import { useRouter,useRoute } from "vue-router";
+import { ref, onMounted, computed } from "vue";
+import { useRouter, useRoute } from "vue-router";
 
 const router = useRouter();
 const route = useRoute();
@@ -22,10 +22,10 @@ const personalInfo = usePersonalInfo()
 const email = ref();
 const pass = ref();
 const confirmedPass = ref();
-const role = ref('')
+const role = ref('Child')
 const birthDate = ref()
-const phone =ref('')
-const gender = ref<string|null>()
+const phone = ref('')
+const gender = ref<string | null>()
 
 const worningMessage = ref('')
 const signupRequester = new HttpRequester("signup");
@@ -45,7 +45,7 @@ function signup() {
   else if (role.value != 'Child' && role.value != 'Parent') {
     worningMessage.value = selectLang(translationModule.noRoleSelected) ?? '';
   }
-  else if (!phone.value.startsWith('01') || phone.value.length !=11) {
+  else if (!phone.value.startsWith('01') || phone.value.length != 11) {
     worningMessage.value = selectLang(translationModule.phoneNumberError) ?? '';
   }
   else {
@@ -54,9 +54,9 @@ function signup() {
         email: email.value,
         hashed_pass: pass.value,
         user_type: role.value,
-        birth_day:birthDate.value,
-        phone_number:phone.value,
-        gender:gender.value
+        birth_day: birthDate.value,
+        phone_number: phone.value,
+        gender: gender.value
       },
     };
 
@@ -64,18 +64,24 @@ function signup() {
       if (res.msg == "email is already used once") {
         worningMessage.value = selectLang(translationModule.emailTaken) ?? '';
       } else if (res?.success == true) {
-        login();
+        const te = new TextEncoder()
+        const encoded = te.encode(email.value)
+        const charCode = String.fromCharCode(...encoded) 
+        router.push(`/verifyEmail/${btoa(charCode)}`);
       }
     });
   }
 }
 
 const callback = (response: any) => {
+
   // decodeCredential will retrive the JWT payload from the credential
+  console.log(role.value)
   if (role.value != 'Child' && role.value != 'Parent') {
     worningMessage.value = selectLang(translationModule.noRoleSelected) ?? '';
     return
   }
+
   const userData = decodeCredential(response.credential);
 
   if ((userData as any).email_verified) {
@@ -84,6 +90,10 @@ const callback = (response: any) => {
         email: (userData as any).email,
         hashed_pass: "mahmoud2000",
         user_type: role.value,
+        is_verefied: (userData as any).email_verified,
+        first_name: (userData as any).given_name,
+        last_name: (userData as any).family_name,
+        image: (userData as any).picture,
       },
     };
 
@@ -159,11 +169,6 @@ function login() {
 }
 
 
-
-
-onMounted(()=>{
-  role.value = route.params?.role as string
-})
 </script>
 
 <template>
@@ -172,9 +177,9 @@ onMounted(()=>{
     <Options />
     <div class="container">
       <div class="left borderRigth">
-        <!-- <img src="/images/login.png" alt="" /> -->
+        <img  src="/images/login.png" alt="" />
 
-        <h1 style="color: var(--header);">{{ selectLang(translationModule.selectRole) }}</h1>
+        <!-- <h1 style="color: var(--header);">{{ selectLang(translationModule.selectRole) }}</h1>
         <div class="roles">
           <div class="role" :class="{ selected: (role == 'Parent') }" @click="role = 'Parent'">
             <div class="role_name">
@@ -195,7 +200,7 @@ onMounted(()=>{
               <p>{{ selectLang(translationModule.studentRole) }}</p>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
       <div class="right">
@@ -203,14 +208,15 @@ onMounted(()=>{
           <h1>{{ selectLang(translationModule.welcome) }}</h1>
           <h1>{{ selectLang(translationModule.traceCommunity) }}</h1>
         </div>
-        <!-- <div class="google-facebook-wrapper">
-          <GoogleLogin :callback="callback"  scope="profile email https://www.googleapis.com/auth/userinfo.profile" />
-        </div> -->
+        <div class="google-facebook-wrapper">
+          <GoogleLogin :callback="callback" scope="profile email https://www.googleapis.com/auth/userinfo.profile" />
+        </div>
         <h4 v-if="worningMessage">
           {{ worningMessage }}
         </h4>
 
         <div class="wrapper">
+       
           <InputText style="width: 100%;" type="email" class="input" v-model="email" :placeholder="selectLang(translationModule.email)" />
           <Password toggleMask v-model="pass" :placeholder="selectLang(translationModule.pass)" @change="worningMessage = ''">
             <template #header>
@@ -233,8 +239,8 @@ onMounted(()=>{
             <h3>{{ selectLang(translationModule.gender) }}:</h3>
             <div class="gender" style="width: 60%;">
 
-              <span :class="{role2_selected: gender=='Male'}" @click="gender='Male'" class="role2">{{ selectLang(translationModule.male) }}</span>
-              <span :class="{role2_selected: gender=='Female'}" @click="gender='Female'" class="role2">{{ selectLang(translationModule.female) }}</span>
+              <span :class="{ role2_selected: gender == 'Male' }" @click="gender = 'Male'" class="role2">{{ selectLang(translationModule.male) }}</span>
+              <span :class="{ role2_selected: gender == 'Female' }" @click="gender = 'Female'" class="role2">{{ selectLang(translationModule.female) }}</span>
             </div>
 
           </div>
@@ -255,19 +261,20 @@ onMounted(()=>{
 </template>
 
 <style scoped>
-.gender{
-display: flex;
-width: 100%;
-justify-content: space-between;
-align-items: center;
+.gender {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
+
 main {
   min-height: 100%;
 }
 
 .container {
   margin-inline: auto;
-  width: 85%;
+  width: 75%;
   color: var(--text);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -276,10 +283,9 @@ main {
 
 .left {
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: start;
   border-right: 0.25rem solid rgba(0, 0, 0, 0.2);
-  flex-direction: column;
 }
 
 h1,
@@ -315,7 +321,7 @@ h2 {
   cursor: pointer;
 }
 
-.role2{
+.role2 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
   /* Shadow for the raised effect */
   transition: transform 0.2s, box-shadow 0.2s;
@@ -325,15 +331,16 @@ h2 {
   cursor: pointer;
 }
 
-.role2_selected{
+.role2_selected {
   border: none;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25), 0 10px 16px rgba(0, 0, 0, 0.08);
   /* Enhance shadow on hover */
   transition: transform 1s, box-shadow 0.2s;
   /* Smooth interaction effect */
   scale: 1.02;
-  color:  var(--accent1);
+  color: var(--accent1);
 }
+
 .selected {
   border: none;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25), 0 10px 16px rgba(0, 0, 0, 0.08);
@@ -442,9 +449,8 @@ h4 {
     margin-top: 2rem;
   }
 
-  .left,
-  .borderRigth {
-    border: none;
+  .left {
+    display: none;
   }
 
   .roles {
@@ -461,7 +467,7 @@ h4 {
   }
 
   .welcome {
-    display: none;
+    margin-top: 4rem;
   }
 
   .button {

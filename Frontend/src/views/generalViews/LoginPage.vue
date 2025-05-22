@@ -157,7 +157,7 @@ main {
 
 .left {
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: start;
   border-right: 0.25rem solid rgba(0, 0, 0, 0.2);
 }

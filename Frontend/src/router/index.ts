@@ -19,6 +19,24 @@ const router = createRouter({
       meta: { requredAuth: false, userType: "Any" },
     },
     {
+      path: "/EmailVerified/:token",
+      name: "EmailVerified",
+      component: () => import("../views/generalViews/EmailVerified.vue"),
+      meta: { requredAuth: false, userType: "Any" },
+    },
+    {
+      path: "/VerifyEmail/:email",
+      name: "VerifyEmail",
+      component: () => import("../views/generalViews/VerifyEmail.vue"),
+      meta: { requredAuth: false, userType: "Any" },
+    },
+    {
+      path: "/SubscriptionPlans",
+      name: "SubscriptionPlans",
+      component: () => import("../views/generalViews/SubscriptionPlans.vue"),
+      meta: { requredAuth: false, userType: "Any" },
+    },
+    {
       path: "/TermConditions",
       name: "TermConditions",
       component: () => import("../views/generalViews/TermConditions.vue"),
@@ -286,7 +304,7 @@ router.beforeResolve(async (to, from, next) => {
   let authorized = token.getIsAuthorized;
   if (to.meta.requredAuth && !authorized) {
     next({ name: "login" });
-  } else if ((to.name == "login" || to.name == "signup") && authorized) {
+  } else if ((to.name == "login" || to.name == "signup" || to.name == "VerifyEmail" || to.name == "EmailVerified") && authorized) {
     next({ name: "home" });
   } else {
     const personalInfo = usePersonalInfo();

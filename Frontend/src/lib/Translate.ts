@@ -1222,9 +1222,27 @@ https://www.traceedtech.com. من خلال الوصول إلى هذا الموق
   privacy: {
     en: 'Privacy Policy',
     ar: 'سياسة الخصوصية'
+  },
+  verifyEmail: {
+    en: 'Verify Your Email Address',
+    ar: 'أكد بريدك الإلكتروني'
+  },
+  checkVerificationEmail: {
+    en: 'Check your email for verification link sent to',
+    ar: 'تحقق من بريدك الإلكتروني للحصول على رابط التحقق المرسل إليك'
+  },
+  changeEmail:{
+    en:'Change Email',
+    ar:'تغيير البريد الإلكتروني'
+  },
+  conf:{
+    en:'Confirm',
+    ar:'تأكيد'
+  },
+  linkExpired:{
+    en:'Verification Link Expired ',
+    ar:'انتهت صلاحية رابط التحقق'
   }
-
-
 
 
 

@@ -139,7 +139,7 @@ function setLang(selectedLang: string | undefined) {
         setLang(selectLang(translationModule.language));
       }
         ">{{ selectLang(translationModule.language) }}</span>
-      <Button @click="router.push('/login')" :label=selectLang(translationModule.login) class="button" />
+      <Button style="border: none;" @click="router.push('/login')" :label=selectLang(translationModule.login) class="button" />
       <p class="register" @click="router.push('/signup')">{{ selectLang(translationModule.signup) }}</p>
     </div>
     <div v-if="token.getIsAuthorized" class="profile">

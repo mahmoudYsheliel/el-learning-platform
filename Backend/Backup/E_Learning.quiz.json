@@ -31430,4 +31430,2196 @@
   ],
   "duration": 15,
   "last_question_number": 9
+},
+{
+  "_id": {
+    "$oid": "681b3ad76b371d3b9ad9f3d9"
+  },
+  "id": null,
+  "title": {
+    "en": "Quiz: A Puzzle Piece of the Human Body",
+    "ar": "اختبار: قطعة البازل في جسم الإنسان"
+  },
+  "description": {
+    "en": "Test your knowledge of human cell biology!",
+    "ar": "اختبر معلوماتك عن بيولوجيا الخلية البشرية!"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": {
+        "en": "What is the primary role of blood cells in the human body?",
+        "ar": "ما هو دور خلايا الدم الأساسي في جسم الإنسان؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Transmit nerve signals",
+            "ar": "نقل الإشارات العصبية"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Transport oxygen and nutrients to the rest of the body",
+            "ar": "نقل الأكسجين والغذاء لبقية الجسم"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Support muscle movement",
+            "ar": "دعم حركة العضلات"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": {
+        "en": "How do human cells produce energy?",
+        "ar": "كيف تصنع خلايا الإنسان الطاقة؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "By consuming food only",
+            "ar": "عن طريق تناول الطعام فقط"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "By converting food and oxygen into ATP",
+            "ar": "من خلال تحويل الغذاء والأوكسجين إلى ATP"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "By absorbing energy from sunlight",
+            "ar": "عبر امتصاص الطاقة من ضوء الشمس"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 3,
+      "question": {
+        "en": "Which protein helps build bones?",
+        "ar": "ما هو البروتين الذي يساعد في بناء العظام؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Keratin",
+            "ar": "الكيراتين"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Collagen",
+            "ar": "الكولاجين"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Insulin",
+            "ar": "الأنسولين"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Hemoglobin",
+            "ar": "الهيموجلوبين"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": {
+        "en": "What is the final product that cells produce to obtain energy?",
+        "ar": "ما هو المنتج النهائي الذي تنتجه الخلايا لتحصل على الطاقة؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Oxygen",
+            "ar": "الأكسجين"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "ATP",
+            "ar": "ATP"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Proteins",
+            "ar": "البروتينات"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Vitamins",
+            "ar": "الفيتامينات"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": {
+        "en": "How do cells handle wounds?",
+        "ar": "كيف تتعامل الخلايا مع الجروح؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Cells begin to divide to repair the wound",
+            "ar": "تبدأ الخلايا في الانقسام لإصلاح الجرح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Cells stop working",
+            "ar": "تتوقف الخلايا عن العمل"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Cells remain the same",
+            "ar": "تبقى الخلايا كما هي"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 6,
+      "question": {
+        "en": "What is the function of muscle cells?",
+        "ar": "ما هي وظيفة خلايا العضلات؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Transport oxygen to the blood",
+            "ar": "نقل الأكسجين إلى الدم"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Transmit nerve signals",
+            "ar": "نقل الإشارات العصبية"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Contract and relax for movement",
+            "ar": "الانقباض والانبساط للحركة"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Build tissues",
+            "ar": "بناء الأنسجة"
+          }
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 7,
+      "question": {
+        "en": "Nerve cells are designed to be like wires to transmit signals quickly.",
+        "ar": "الخلايا العصبية مصممة لكي تكون مثل الأسلاك لنقل الإشارات بسرعة."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 8,
+      "question": {
+        "en": "The body contains not only nerve cells (neurons), but also different cells that perform multiple functions.",
+        "ar": "الجسم لا يحتوي على خلايا عصبية (neurons) فقط، بل يحتوي على خلايا مختلفة تقوم بوظائف متعددة."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 9,
+      "question": {
+        "en": "Muscle cells are not flexible due to their structure.",
+        "ar": "الخلايا العضلية لا تتمتع بمرونة بسبب تركيبها."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duration": 15,
+  "last_question_number": 9
+},
+{
+  "_id": {
+    "$oid": "681b3bd16b371d3b9ad9f3dc"
+  },
+  "id": null,
+  "title": {
+    "en": "Quiz: The Cell is the Factory",
+    "ar": "اختبار: الخلية هي المصنع"
+  },
+  "description": {
+    "en": "Test your knowledge of cell organelles and their functions!",
+    "ar": "اختبر معرفتك بالعضيات ووظائفها!"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": {
+        "en": "Which of the following organelles is considered the \"powerhouse\" of the cell, where most of the energy the cell needs is produced?",
+        "ar": "أي من العضيات التالية يُعتبر \"محطة الطاقة\" في الخلية، حيث يتم إنتاج معظم الطاقة التي تحتاجها الخلية؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Nucleus",
+            "ar": "النواة"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Mitochondria",
+            "ar": "الميتوكوندريا"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Endoplasmic Reticulum",
+            "ar": "الشبكة الإندوبلازمية"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Golgi Apparatus",
+            "ar": "جهاز جولجي"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": {
+        "en": "What is the main function of the cell membrane?",
+        "ar": "ما هي الوظيفة الرئيسية لغشاء الخلية؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Storing genetic material",
+            "ar": "تخزين المادة الوراثية"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Producing proteins",
+            "ar": "إنتاج البروتينات"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Protecting the cell and controlling the passage of materials into and out of it",
+            "ar": "حماية الخلية والتحكم في مرور المواد داخلها وخارجها"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Producing energy",
+            "ar": "إنتاج الطاقة"
+          }
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 3,
+      "question": {
+        "en": "Which of the following organelles contains the cell's genetic material (DNA)?",
+        "ar": "أي من العضيات التالية يحتوي على المادة الوراثية (DNA) للخلية؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Nucleus",
+            "ar": "النواة"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Mitochondria",
+            "ar": "الميتوكوندريا"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Ribosomes",
+            "ar": "الريبوسومات"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Golgi Apparatus",
+            "ar": "جهاز جولجي"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": {
+        "en": "What organelle packages and distributes materials produced in the cell, such as proteins?",
+        "ar": "ما هو العضي الذي يقوم بتغليف وتوزيع المواد المنتجة في الخلية، مثل البروتينات؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Nucleus",
+            "ar": "النواة"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Mitochondria",
+            "ar": "الميتوكوندريا"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Endoplasmic Reticulum",
+            "ar": "الشبكة الإندوبلازمية"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Golgi Apparatus",
+            "ar": "جهاز جولجي"
+          }
+        }
+      ],
+      "correct_answer_id": 4
+    },
+    {
+      "id": 5,
+      "question": {
+        "en": "Which of the following organelles makes proteins in the cell?",
+        "ar": "أي من العضيات التالية يقوم بصنع البروتين في الخلية؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Nucleus",
+            "ar": "النواة"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Mitochondria",
+            "ar": "الميتوكوندريا"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Ribosomes",
+            "ar": "الريبوسومات"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Golgi Apparatus",
+            "ar": "جهاز جولجي"
+          }
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 6,
+      "question": {
+        "en": "What organelle breaks down foreign and harmful substances that enter the cell?",
+        "ar": "ما هو العضي الذي يقوم بتكسير المواد الغريبة والضارة التي تدخل الخلية؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Nucleus",
+            "ar": "النواة"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Mitochondria",
+            "ar": "الميتوكوندريا"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Lysosomes",
+            "ar": "الليسوسومات"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Golgi Apparatus",
+            "ar": "جهاز جولجي"
+          }
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 7,
+      "question": {
+        "en": "Cytoplasm is:",
+        "ar": "السيتوبلازم هو:"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "The cell's DNA",
+            "ar": "DNA الخلية"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "The jelly-like fluid that fills the cell and contains the organelles",
+            "ar": "السائل الهلامي الذي يملأ الخلية ويحتوي على ال organelles"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "The cell wall",
+            "ar": "جدار الخلية"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "The control center of the cell",
+            "ar": "مركز التحكم في الخلية"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duration": 15,
+  "last_question_number": 7
+},
+{
+  "_id": {
+    "$oid": "681b3c506b371d3b9ad9f3de"
+  },
+  "id": null,
+  "title": {
+    "en": "Quiz: Plants & Bacteria under the Microscope",
+    "ar": "اختبار: النباتات والبكتيريا تحت المجهر"
+  },
+  "description": {
+    "en": "Test your knowledge of basic biology concepts!",
+    "ar": "اختبر معلوماتك عن مفاهيم علم الأحياء الأساسية!"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": {
+        "en": "Where are bacteria commonly found?",
+        "ar": "أين توجد البكتيريا عادة؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "In the air",
+            "ar": "في الهواء"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "In the soil",
+            "ar": "في التربة"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "In water",
+            "ar": "في المياه"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "All of the above",
+            "ar": "جميع ما ذكر"
+          }
+        }
+      ],
+      "correct_answer_id": 4
+    },
+    {
+      "id": 2,
+      "question": {
+        "en": "What part of the plant cell gives it structure and protection?",
+        "ar": "ما الجزء الذي يدعم الخلية النباتية ويحميها؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Chloroplast",
+            "ar": "البلاستيدات الخضراء"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Cytoplasm",
+            "ar": "السيتوبلازم"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Cell wall",
+            "ar": "جدار الخلية"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Mitochondria",
+            "ar": "الميتوكوندريا"
+          }
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 3,
+      "question": {
+        "en": "What is the main function of the chloroplast in plant cells?",
+        "ar": "ما الوظيفة الرئيسية للبلاستيدات الخضراء في الخلايا النباتية؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "To store nutrients",
+            "ar": "تخزين العناصر الغذائية"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "To carry out photosynthesis",
+            "ar": "إجراء عملية البناء الضوئي"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "To produce energy",
+            "ar": "إنتاج الطاقة"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "To transport proteins",
+            "ar": "نقل البروتينات"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": {
+        "en": "Which organelle in a bacteria cell helps it move?",
+        "ar": "أي من العضيات في خلية البكتيريا تساعدها في الحركة؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Nucleus",
+            "ar": "النواة"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Flagella",
+            "ar": "السوط (Flagella)"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Mitochondria",
+            "ar": "الميتوكوندريا"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Ribosome",
+            "ar": "الريبوسومات"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": {
+        "en": "Bacteria are always harmful to humans.",
+        "ar": "البكتيريا دائماً ضارة للإنسان."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صحیح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 6,
+      "question": {
+        "en": "The cell wall in plant cells helps in protecting and supporting the plant.",
+        "ar": "جدار الخلية في الخلايا النباتية يساعد في حماية ودعم النبات."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صحیح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duration": 15,
+  "last_question_number": 6
+},
+{
+  "_id": {
+    "$oid": "681b6b876b371d3b9ad9f3e2"
+  },
+  "id": null,
+  "title": {
+    "en": "Quiz: The World of the Unseen",
+    "ar": "اختبار: عالم الميكروبات غير المرئي"
+  },
+  "description": {
+    "en": "Test your knowledge of microbiology!",
+    "ar": "اختبر معلوماتك في علم الأحياء الدقيقة!"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": {
+        "en": "What is the main role of beneficial bacteria in the body?",
+        "ar": "ما هو الدور الرئيسي للبكتيريا النافعة في الجسم؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Digesting heavy foods like fiber and fats",
+            "ar": "هضم الأطعمة الثقيلة مثل الألياف والدهون"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Fight harmful viruses",
+            "ar": "تحارب الفيروسات الضارة"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Produce certain hormones",
+            "ar": "تصنع هرمونات معينة"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Secrete toxins",
+            "ar": "تفرز السموم"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": {
+        "en": "Which fungus is used in the production of penicillin?",
+        "ar": "ما هو الفطر الذي يُستخدم في تصنيع مادة البنيسيلين؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Black mold fungus",
+            "ar": "فطر العفن الأسود"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Penicillium fungus",
+            "ar": "فطر البنسليم"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Yeast fungus",
+            "ar": "فطر الخميرة"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Aspergillus fungus",
+            "ar": "فطر الأسبيرجيللوس"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 3,
+      "question": {
+        "en": "Which of the following is NOT part of a virus's structure?",
+        "ar": "أي من التالي ليس جزءًا من تركيب الفيروس؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Protein coat (Capsid)",
+            "ar": "غلاف بروتيني (Capsid)"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Living cell",
+            "ar": "خلية حية"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Nucleic acid (DNA or RNA)",
+            "ar": "حمض نووي (DNA أو RNA)"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Viral envelope",
+            "ar": "غلاف فيروسي (Viral envelope)"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": {
+        "en": "What is one of the health benefits of edible fungi?",
+        "ar": "ما هي إحدى الفوائد الصحية للفطريات الصالحة للأكل؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Contribute to energy production",
+            "ar": "تساهم في إنتاج الطاقة"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Contain vitamins, fiber, and minerals",
+            "ar": "تحتوي على فيتامينات وألياف ومعادن"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Kill harmful bacteria",
+            "ar": "تقتل البكتيريا الضارة"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Lead to weight gain",
+            "ar": "تؤدي إلى زيادة الوزن"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": {
+        "en": "Which of the following contributes to purifying the air of carbon dioxide?",
+        "ar": "أي من التالي يساهم في تنقية الهواء من غاز ثاني أكسيد الكربون؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Fungi",
+            "ar": "الفطريات"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Harmful bacteria",
+            "ar": "البكتيريا الضارة"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Viruses",
+            "ar": "الفيروسات"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 6,
+      "question": {
+        "en": "Fungi produce antibacterial substances such as penicillin.",
+        "ar": "الفطريات تنتج مواد مضادة للبكتيريا مثل مادة البنيسيلين."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 7,
+      "question": {
+        "en": "Viruses contain cells like bacteria.",
+        "ar": "الفيروسات تحتوي على خلايا مثل البكتيريا."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 8,
+      "question": {
+        "en": "Beneficial bacteria in the large intestine contribute to digestion and vitamin formation.",
+        "ar": "البكتيريا النافعة في الأمعاء الغليظة تساهم في هضم الطعام وتكوين الفيتامينات."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duration": 15,
+  "last_question_number": 8
+},
+{
+  "_id": {
+    "$oid": "681b6c636b371d3b9ad9f3e4"
+  },
+  "id": null,
+  "title": {
+    "en": "Quiz: Unseen Enemies",
+    "ar": "اختبار: الأعداء غير المرئيين"
+  },
+  "description": {
+    "en": "Test your knowledge of microbiology and infection transmission!",
+    "ar": "اختبر معلوماتك عن علم الأحياء الدقيقة وانتقال العدوى!"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": {
+        "en": "What helps bacteria spread between people and cause infection?",
+        "ar": "ما الذي يساعد البكتيريا على الانتقال بين الأشخاص والتسبب في العدوى؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Sweat and humidity",
+            "ar": "العرق والرطوبة"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Coughing and sneezing",
+            "ar": "السعال والعطس"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Light and heat",
+            "ar": "الضوء والحرارة"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Breathing only",
+            "ar": "التنفس فقط"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": {
+        "en": "What is the main reason athletes get athlete's foot?",
+        "ar": "ما هو السبب الرئيسي لإصابة الرياضيين بعدوى القدم الرياضي؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Wearing open shoes",
+            "ar": "استخدام أحذية مفتوحة"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Sweat and humidity with poor ventilation",
+            "ar": "العرق والرطوبة مع قلة التهوية"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Eating contaminated food",
+            "ar": "تناول طعام ملوث"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Touching unclean sports equipment",
+            "ar": "لمس أدوات رياضية غير نظيفة"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 3,
+      "question": {
+        "en": "Why can't viruses reproduce outside of a living cell?",
+        "ar": "لماذا لا تستطيع الفيروسات التكاثر خارج خلايا الكائن الحي؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Because they need sugar",
+            "ar": "لأنها تحتاج إلى السكر"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Because they are non-living and need cells to provide the necessary mechanisms",
+            "ar": "لأنها غير حية وتحتاج إلى خلايا لتوفير الآليات اللازمة"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Because they are very small",
+            "ar": "لأنها صغيرة جداً"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Because they depend on water",
+            "ar": "لأنها تعتمد على الماء"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": {
+        "en": "What is the best way to avoid infection from touching contaminated surfaces?",
+        "ar": "ما هو أفضل إجراء لتجنب العدوى من ملامسة الأسطح الملوثة؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Always wear gloves",
+            "ar": "ارتداء القفازات دائماً"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Wash your hands thoroughly with soap and water",
+            "ar": "غسل اليدين جيداً بالماء والصابون"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Avoid leaving the house",
+            "ar": "تجنب الخروج من المنزل"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Use hand sanitizer only",
+            "ar": "استخدام معقم اليدين فقط"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 5,
+      "question": {
+        "en": "Which microbes rely on moisture to grow on the skin?",
+        "ar": "ما هي الميكروبات التي تعتمد على الرطوبة لتنمو على الجلد؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Bacteria",
+            "ar": "البكتيريا"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Fungi",
+            "ar": "الفطريات"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Viruses",
+            "ar": "الفيروسات"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 6,
+      "question": {
+        "en": "Bacteria secrete toxic chemicals that cause disease in humans.",
+        "ar": "تفرز البكتيريا مواد كيميائية سامة تسبب الأمراض للإنسان."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صحيح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 7,
+      "question": {
+        "en": "Bacteria can be transmitted by touching contaminated surfaces.",
+        "ar": "البكتيريا يمكن أن تنتقل عن طريق لمس الأسطح الملوثة."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صحيح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 8,
+      "question": {
+        "en": "Viruses can reproduce on their own without needing a living cell.",
+        "ar": "الفيروسات تستطيع التكاثر بمفردها دون الحاجة إلى خلايا كائن حي."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صحيح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duration": 15,
+  "last_question_number": 8
+},
+{
+  "_id": {
+    "$oid": "681b71de6b371d3b9ad9f3e7"
+  },
+  "id": null,
+  "title": {
+    "en": "Quiz: The Immune System in Action",
+    "ar": "اختبار: الجهاز المناعي في حالة تأهب"
+  },
+  "description": {
+    "en": "Test your knowledge of the innate immune system!",
+    "ar": "اختبر معلوماتك عن الجهاز المناعي الفطري!"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": {
+        "en": "What is the first line of defense in the innate immune system?",
+        "ar": "ما هو أول خط دفاع في جهاز المناعة الطبيعي؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "White blood cells",
+            "ar": "خلايا الدم البيضاء"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Skin and mucous membranes",
+            "ar": "الجلد والأغشية المخاطية"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Antibodies",
+            "ar": "الأجسام المضادة"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 2,
+      "question": {
+        "en": "What is the role of cytokines in innate immunity?",
+        "ar": "ما هو دور البروتينات المسماة بـ \"cytokines\" في المناعة الطبيعية؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Stimulate inflammation at the site of injury and attract white blood cells",
+            "ar": "تحفيز الالتهاب في موقع الإصابة وجذب خلايا الدم البيضاء"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Break down food in the stomach",
+            "ar": "تكسير الغذاء في المعدة"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Transport oxygen to the blood",
+            "ar": "نقل الأكسجين إلى الدم"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Store energy",
+            "ar": "تخزين الطاقة"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": {
+        "en": "Which of the following is a function of phagocytes?",
+        "ar": "أي من الخيارات التالية يعد من وظائف الخلايا الأكولة (Phagocytes)؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Engulf and destroy microbes",
+            "ar": "ابتلاع الميكروبات والتخلص منها"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Produce antibodies",
+            "ar": "إنتاج الأجسام المضادة"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Transport oxygen in the blood",
+            "ar": "نقل الأكسجين في الدم"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Secrete saliva and mucus",
+            "ar": "إفراز اللعاب والمخاط"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 4,
+      "question": {
+        "en": "What is the role of Natural Killer cells in the immune system?",
+        "ar": "ما دور خلايا Natural Killer في جهاز المناعة؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Attack virus-infected cells",
+            "ar": "تهاجم الخلايا المصابة بالفيروسات"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Produce mucus to protect the body",
+            "ar": "تنتج المخاط لحماية الجسم"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Make white blood cells",
+            "ar": "تصنع خلايا الدم البيضاء"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Secrete enzymes to digest food",
+            "ar": "تفرز إنزيمات لهضم الطعام"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 5,
+      "question": {
+        "en": "How does inflammation help fight infection?",
+        "ar": "كيف يساعد الالتهاب في مقاومة العدوى؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "By attracting immune cells circulating in the blood",
+            "ar": "عن طريق جذب الخلايا المناعية التي تسير في الدم"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "By killing healthy body cells",
+            "ar": "عن طريق قتل خلايا الجسم السليمة"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "By lowering body temperature",
+            "ar": "عن طريق تقليل درجة حرارة الجسم"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "By preventing white blood cells from moving",
+            "ar": "عن طريق منع خلايا الدم البيضاء من التحرك"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 6,
+      "question": {
+        "en": "Phagocytes engulf microbes and display their fingerprints for recognition by other immune cells.",
+        "ar": "الخلايا البلعمية (Phagocytes) تبتلع الميكروبات وتعرض بصماتها للتعرف عليها من قبل خلايا مناعية أخرى."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 7,
+      "question": {
+        "en": "White blood cells cannot move to the site of infection due to their large size.",
+        "ar": "خلايا الدم البيضاء لا تستطيع بأي طريقة الانتقال إلى مكان العدوى بسبب حجمها الكبير."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duration": 15,
+  "last_question_number": 7
+},
+{
+  "_id": {
+    "$oid": "681b72656b371d3b9ad9f3e9"
+  },
+  "id": null,
+  "title": {
+    "en": "Quiz: Superheroes of the Immune System",
+    "ar": "اختبار: أبطال الجهاز المناعي"
+  },
+  "description": {
+    "en": "Test your knowledge of the basic components and functions of the immune system.",
+    "ar": "اختبر معلوماتك عن المكونات والوظائف الأساسية للجهاز المناعي."
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": {
+        "en": "What is the primary role of T-helper cells in the immune system?",
+        "ar": "ما هو الدور الرئيسي للخلايا التائية المساعدة (T-helper cells) في الجهاز المناعي؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Directly destroy infected cells.",
+            "ar": "تدمير الخلايا المصابة مباشرةً."
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Produce antibodies.",
+            "ar": "إنتاج الأجسام المضادة."
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Assist and activate other immune cells.",
+            "ar": "مساعدة وتنشيط الخلايا المناعية الأخرى."
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Store information about microbes.",
+            "ar": "تخزين المعلومات حول الميكروبات."
+          }
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 2,
+      "question": {
+        "en": "What is the function of cytotoxic T-cells?",
+        "ar": "ما هي وظيفة الخلايا التائية السامة (Cytotoxic T-cells)؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Produce antibodies.",
+            "ar": "إنتاج الأجسام المضادة."
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Destroy cells infected with viruses or bacteria.",
+            "ar": "تدمير الخلايا المصابة بالفيروسات أو البكتيريا."
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Activate B-cells.",
+            "ar": "تنشيط الخلايا البائية."
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Store immune memory.",
+            "ar": "تخزين الذاكرة المناعية."
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 3,
+      "question": {
+        "en": "What is the primary role of B-cells in the immune system?",
+        "ar": "ما هو الدور الرئيسي للخلايا البائية (B-cells) في الجهاز المناعي؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Directly destroy infected cells.",
+            "ar": "تدمير الخلايا المصابة مباشرةً."
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Produce antibodies.",
+            "ar": "إنتاج الأجسام المضادة."
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Activate T-cells.",
+            "ar": "تنشيط الخلايا التائية."
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Store information about microbes.",
+            "ar": "تخزين المعلومات حول الميكروبات."
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 4,
+      "question": {
+        "en": "What is the function of memory T-cells?",
+        "ar": "ما هي وظيفة الخلايا التائية الذاكرة (Memory T-cells)؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Destroy infected cells.",
+            "ar": "تدمير الخلايا المصابة."
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Produce antibodies.",
+            "ar": "إنتاج الأجسام المضادة."
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Store information about microbes to speed up future responses.",
+            "ar": "تخزين المعلومات حول الميكروبات لتسريع الاستجابة المستقبلية."
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Activate B-cells.",
+            "ar": "تنشيط الخلايا البائية."
+          }
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 5,
+      "question": {
+        "en": "Why can a person get several colds?",
+        "ar": "لماذا يمكن أن يصاب الشخص بنزلات البرد عدة مرات؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Because cold viruses are unaffected by the immune system.",
+            "ar": "لأن الفيروسات المسببة للبرد لا تتأثر بالجهاز المناعي."
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Because cold viruses constantly change, making them unrecognizable to the immune system.",
+            "ar": "لأن الفيروسات المسببة للبرد تتغير بشكل مستمر، مما يجعلها غير معروفة للجهاز المناعي."
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Because the immune system does not retain any memory of viruses.",
+            "ar": "لأن الجهاز المناعي لا يحتفظ بأي ذاكرة للفيروسات."
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Because T-cells cannot recognize viruses.",
+            "ar": "لأن الخلايا التائية لا تستطيع التعرف على الفيروسات."
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 6,
+      "question": {
+        "en": "T-helper cells directly destroy infected cells.",
+        "ar": "الخلايا التائية المساعدة (T-helper cells) تقوم بتدمير الخلايا المصابة مباشرةً."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 7,
+      "question": {
+        "en": "B-cells produce antibodies that target specific microbes.",
+        "ar": "الخلايا البائية (B-cells) تنتج الأجسام المضادة التي تستهدف ميكروبات محددة."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 8,
+      "question": {
+        "en": "Acquired immunity responds immediately upon first exposure to a new microbe.",
+        "ar": "المناعة المكتسبة تستجيب بشكل فوري عند التعرض الأول لميكروب جديد."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    }
+  ],
+  "duration": 15,
+  "last_question_number": 8
+},
+{
+  "_id": {
+    "$oid": "681b72ee6b371d3b9ad9f3eb"
+  },
+  "id": null,
+  "title": {
+    "en": "Quiz: How to Stay Strong and Healthy",
+    "ar": "اختبار: كيف نحافظ على مناعتنا؟"
+  },
+  "description": {
+    "en": "Test your knowledge of the immune system!",
+    "ar": "اختبر معلوماتك عن جهاز المناعة!"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": {
+        "en": "What is the main role of B-cells when encountering a virus?",
+        "ar": "ما الدور الرئيسي لخلايا الـ B-cells عند مواجهة الفيروس؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Produce antibodies",
+            "ar": "إنتاج الأجسام المضادة (Antibodies)"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Transport oxygen in the blood",
+            "ar": "نقل الأكسجين في الدم"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Digest food",
+            "ar": "هضم الغذاء"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Regulate heartbeat",
+            "ar": "تنظيم ضربات القلب"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 2,
+      "question": {
+        "en": "How does a vaccine stimulate the immune system?",
+        "ar": "كيف يعمل اللقاح على تحفيز جهاز المناعة؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "By introducing a modified, safe version of the microbe that stimulates the formation of memory cells.",
+            "ar": "بإدخال نسخة معدلة وآمنة من الميكروب تُحفّز تكوين خلايا الذاكرة."
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "By introducing the actual microbe that causes the disease.",
+            "ar": "بإدخال الميكروب الحقيقي الذي يسبب المرض."
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "By reducing sugar consumption in the body.",
+            "ar": "عن طريق تقليل استهلاك السكر في الجسم."
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "By increasing the activity of the nervous system.",
+            "ar": "عن طريق زيادة نشاط الجهاز العصبي."
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 3,
+      "question": {
+        "en": "What is the main benefit of eating a healthy diet on the immune system?",
+        "ar": "ما الفائدة الأساسية لتناول الطعام الصحي على جهاز المناعة؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Storing harmful sugars",
+            "ar": "تخزين السكريات الضارة"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Increasing the chances of getting sick",
+            "ar": "زيادة فرص الإصابة بالأمراض"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Reducing blood flow in blood vessels",
+            "ar": "تقليل حركة الدم داخل الأوعية الدموية"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Providing the body with the vitamins and minerals needed to boost immunity",
+            "ar": "تزويد الجسم بالفيتامينات والمعادن اللازمة لتعزيز المناعة"
+          }
+        }
+      ],
+      "correct_answer_id": 4
+    },
+    {
+      "id": 4,
+      "question": {
+        "en": "According to the text, what is the recommended daily amount of sugar to maintain the efficiency of the immune system?",
+        "ar": "حسب النص، ما هي الكمية اليومية الموصى بها من السكر للحفاظ على كفاءة عمل جهاز المناعة؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "80 grams",
+            "ar": "80 جرام"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "50 grams",
+            "ar": "50 جرام"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "24 grams",
+            "ar": "24 جرام"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "100 grams",
+            "ar": "100 جرام"
+          }
+        }
+      ],
+      "correct_answer_id": 3
+    },
+    {
+      "id": 5,
+      "question": {
+        "en": "Which of the following is considered a factor in enhancing the work of the immune system, as mentioned in the text?",
+        "ar": "أي مما يلي يعتبر من عوامل تعزيز عمل جهاز المناعة كما ورد في النص؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Eating fast food and soft drinks",
+            "ar": "تناول الوجبات السريعة والمشروبات الغازية"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Regular exercise",
+            "ar": "ممارسة الرياضة بانتظام"
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Staying up late",
+            "ar": "السهر لفترات طويلة"
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Reducing daily sleep",
+            "ar": "تقليل النوم اليومي"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 6,
+      "question": {
+        "en": "What is the main goal of vaccination as mentioned in the text?",
+        "ar": "ما الهدف الأساسي من التطعيم كما ذُكر في النص؟"
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "Training the immune system to distinguish the real microbe by forming memory cells.",
+            "ar": "تدريب الجهاز المناعي على تمييز الميكروب الحقيقي من خلال تكوين خلايا ذاكرة."
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "Causing a mild infection to build natural immunity.",
+            "ar": "إحداث إصابة خفيفة لتكوين المناعة الطبيعية."
+          }
+        },
+        {
+          "id": 3,
+          "choice": {
+            "en": "Increasing sugar consumption to activate the body.",
+            "ar": "زيادة استهلاك السكريات لتنشيط الجسم."
+          }
+        },
+        {
+          "id": 4,
+          "choice": {
+            "en": "Reducing the activity of white blood cells in the body.",
+            "ar": "تقليل نشاط الخلايا البيضاء في الجسم."
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 7,
+      "question": {
+        "en": "The vaccine contains a modified version of the microbe that helps the immune system recognize it without causing illness symptoms.",
+        "ar": "اللقاح يحتوي على نسخة معدلة من الميكروب تساعد جهاز المناعة على التعرف عليه دون التسبب بأعراض المرض."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    },
+    {
+      "id": 8,
+      "question": {
+        "en": "Consuming large amounts of sugar does not affect the efficiency of the immune system.",
+        "ar": "تناول كميات كبيرة من السكر لا يؤثر على كفاءة عمل الجهاز المناعي."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 2
+    },
+    {
+      "id": 9,
+      "question": {
+        "en": "Regular exercise helps improve blood flow and deliver immune cells to parts of the body faster.",
+        "ar": "ممارسة الرياضة بانتظام تساعد على تحسين تدفق الدم وتوصيل خلايا المناعة إلى أجزاء الجسم بشكل أسرع."
+      },
+      "choices": [
+        {
+          "id": 1,
+          "choice": {
+            "en": "True",
+            "ar": "صح"
+          }
+        },
+        {
+          "id": 2,
+          "choice": {
+            "en": "False",
+            "ar": "خطأ"
+          }
+        }
+      ],
+      "correct_answer_id": 1
+    }
+  ],
+  "duration": 15,
+  "last_question_number": 9
 }]

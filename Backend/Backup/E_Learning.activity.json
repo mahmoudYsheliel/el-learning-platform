@@ -11748,4 +11748,652 @@
   "instructions": null,
   "results": null,
   "conclusions": null
+},
+{
+  "_id": {
+    "$oid": "681b42a66b371d3b9ad9f3df"
+  },
+  "id": null,
+  "title": {
+    "en": "Activity: Print, Observe & Color 🌱🎨",
+    "ar": "نشاط: اطبع، لاحظ، ولوِّن 🌱🎨"
+  },
+  "description": {
+    "en": "Use the printable cell provided to observe different cell organelles and color them like a real young scientist!",
+    "ar": "اطبع صورة الخلية المرفقة، ثم لاحظ عضيات الخلية المختلفة وقم بتلوينهم كما يفعل العلماء الصغار."
+  },
+  "content": {
+    "en": "",
+    "ar": ""
+  },
+  "start_images": [
+    "https://res.cloudinary.com/dwg9hjzok/image/upload/v1746616014/Act_1-Picsart-AiImageEnhancer_zwjsah.webp"
+  ],
+  "end_images": null,
+  "sources": [
+    "https://drive.google.com/file/d/19AEUmBNv4VKAt9riPohVeWRuxbtSxX4l/view?usp=drive_link"
+  ],
+  "objectives": {
+    "items": [
+      {
+        "id": 0,
+        "text": {
+          "en": "The student will explore the structure of a plant cell through observation and coloring",
+          "ar": "يتعرف الطالب على تركيب الخلية النباتية من خلال الملاحظة والتلوين"
+        },
+        "description": {
+          "en": "Helping them understand its parts and functions in a fun and interactive way.",
+          "ar": "مما يساعد على فهم أجزائها ووظائفها بطريقة ممتعة وتفاعلية."
+        },
+        "image": ""
+      }
+    ],
+    "start_images": [],
+    "end_images": []
+  },
+  "terms_concepts": null,
+  "materials": {
+    "items": [
+      {
+        "id": 0,
+        "text": {
+          "en": "Print the attached plant cell diagram",
+          "ar": "طباعة الصورة المرفقة لتركيب الخلية النباتية"
+        },
+        "description": {
+          "en": "",
+          "ar": ""
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "Colored pencils or crayons",
+          "ar": "أقلام تلوين أو ألوان خشبية"
+        },
+        "description": {
+          "en": "",
+          "ar": ""
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "Magnifying glass (optional)",
+          "ar": "عدسة مكبرة (اختياري)"
+        },
+        "description": {
+          "en": "",
+          "ar": ""
+        },
+        "image": ""
+      }
+    ],
+    "start_images": [],
+    "end_images": []
+  },
+  "instructions": {
+    "items": [
+      {
+        "id": 0,
+        "text": {
+          "en": "1️⃣ Print the Diagram:",
+          "ar": "1️⃣ اطبع الصورة:"
+        },
+        "description": {
+          "en": "Print the provided plant cell structure diagram in the Source 1.",
+          "ar": "قم بطباعة الصورة التي توضح تركيب الخلية النباتية من المصدر 1."
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "2️⃣ Observe the Details:",
+          "ar": "2️⃣ لاحظ التفاصيل:"
+        },
+        "description": {
+          "en": "Carefully examine the diagram and identify the different parts of the plant cell.\nUse a magnifying glass (if available) for a closer look at details.",
+          "ar": "تفحّص الصورة بعناية وحدد الأجزاء المختلفة للخلية النباتية.\nاستخدم عدسة مكبرة (إن أمكن) لملاحظة التفاصيل بشكل أوضح."
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "3️⃣ Label the Main Parts:",
+          "ar": "3️⃣ سمِّ الأجزاء الرئيسية:"
+        },
+        "description": {
+          "en": "Try to name different cell structures without looking at the labels such as: cell wall, cell membrane, cytoplasm, nucleus, vacuole, chloroplasts, mitochondria…etc.",
+          "ar": "حاول تسمية أجزاء الخلية مثل: الجدار الخلوي، الغشاء البلازمي، السيتوبلازم، النواة، الفجوة العصارية، البلاستيدات الخضراء، الميتوكوندريا...إلخ.\n"
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "4️⃣ Start Coloring:",
+          "ar": "4️⃣ ابدأ بالتلوين:"
+        },
+        "description": {
+          "en": "Use appropriate colors for each part of the cell as shown in the diagram.",
+          "ar": "استخدم ألوانًا مناسبة لكل جزء من الخلية كما هو موضح في الصورة."
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "5️⃣ Draw Conclusions & Take Notes:",
+          "ar": "5️⃣ استنتج ووثِّق ملاحظاتك:"
+        },
+        "description": {
+          "en": "Write notes about the function of each cell part next to the diagram.\nThink about the differences between plant and animal cells in terms of structure.",
+          "ar": "اكتب ملاحظات حول وظائف كل جزء من الخلية بجانب الصورة.\nفكر في الفرق بين الخلية النباتية والخلية الحيوانية من حيث التركيب."
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "\nDiscussion Questions After the Activity:",
+          "ar": "\nالأسئلة للنقاش بعد النشاط:"
+        },
+        "description": {
+          "en": "❓ What is the role of chloroplasts in a plant cell?",
+          "ar": "❓ ما هو دور البلاستيدات الخضراء في الخلية النباتية؟"
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "\n📌 Tip: ",
+          "ar": "\n📌 ملاحظة: "
+        },
+        "description": {
+          "en": "You can share your work with your classmates for discussion and feedback!",
+          "ar": "يمكنك مشاركة عملك مع زملائك للمناقشة والاستفادة من ملاحظاتهم!"
+        },
+        "image": ""
+      }
+    ],
+    "start_images": [],
+    "end_images": []
+  },
+  "results": null,
+  "conclusions": null
+},
+{
+  "_id": {
+    "$oid": "681b571e6b371d3b9ad9f3e0"
+  },
+  "id": null,
+  "title": {
+    "en": "jkl",
+    "ar": "nhjm"
+  },
+  "description": {
+    "en": "",
+    "ar": ""
+  },
+  "content": {
+    "en": "",
+    "ar": ""
+  },
+  "start_images": null,
+  "end_images": [
+    ""
+  ],
+  "sources": null,
+  "objectives": null,
+  "terms_concepts": null,
+  "materials": {
+    "items": [
+      {
+        "id": 0,
+        "text": {
+          "en": "",
+          "ar": ""
+        },
+        "description": {
+          "en": "",
+          "ar": ""
+        },
+        "image": ""
+      }
+    ],
+    "start_images": [],
+    "end_images": []
+  },
+  "instructions": {
+    "items": [
+      {
+        "id": 0,
+        "text": {
+          "en": "hjmk,",
+          "ar": "jkl"
+        },
+        "description": {
+          "en": "hjkl",
+          "ar": "njkio"
+        },
+        "image": ""
+      }
+    ],
+    "start_images": [],
+    "end_images": []
+  },
+  "results": null,
+  "conclusions": null
+},
+{
+  "_id": {
+    "$oid": "681b71276b371d3b9ad9f3e5"
+  },
+  "id": null,
+  "title": {
+    "en": "Activity: Germs in Action 🦠👋",
+    "ar": "نشاط: الجراثيم تنتقل من حولنا 🦠👋"
+  },
+  "description": {
+    "en": "Use hand paint to touch surfaces and discover how germs spread. Watch science in action!",
+    "ar": "استخدم ألوان اليدين للمس الأسطح واستكشاف كيفية انتشار الجراثيم في حياتنا اليومية."
+  },
+  "content": {
+    "en": "",
+    "ar": ""
+  },
+  "start_images": [
+    "https://res.cloudinary.com/dwg9hjzok/image/upload/v1746633533/431784657c36b0b83ff274aead9e0475_qoqnia.jpg"
+  ],
+  "end_images": null,
+  "sources": [
+    ""
+  ],
+  "objectives": {
+    "items": [
+      {
+        "id": 0,
+        "text": {
+          "en": "This activity helps students understand how germs transfer between surfaces",
+          "ar": "يكتشف الطالب كيف تنتقل الجراثيم بين الأسطح المختلفة"
+        },
+        "description": {
+          "en": "and why washing hands properly is essential to prevent the spread of germs.",
+          "ar": "ولماذا يجب غسل اليدين جيدًا بعد لمس الأسطح الملوثة، من خلال تجربة عملية ممتعة وآمنة."
+        },
+        "image": ""
+      }
+    ],
+    "start_images": [],
+    "end_images": []
+  },
+  "terms_concepts": null,
+  "materials": {
+    "items": [
+      {
+        "id": 0,
+        "text": {
+          "en": "A small amount of flour",
+          "ar": "كمية صغيرة من الدقيق"
+        },
+        "description": {
+          "en": "(or cocoa powder as an alternative)",
+          "ar": "(أو بودرة الكاكاو كبديل)"
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "A dark-colored surface",
+          "ar": "سطح داكن اللون"
+        },
+        "description": {
+          "en": "(black paper, dark wooden table, dark fabric)",
+          "ar": "(ورقة سوداء، طاولة خشبية غامقة، قماش داكن)"
+        },
+        "image": ""
+      }
+    ],
+    "start_images": [],
+    "end_images": []
+  },
+  "instructions": {
+    "items": [
+      {
+        "id": 0,
+        "text": {
+          "en": "1️⃣ Rub some flour on your hands:",
+          "ar": "1️⃣ رش القليل من الدقيق على يديك:"
+        },
+        "description": {
+          "en": "Sprinkle a small amount of flour onto your palms and rub your hands together.\nImagine that the flour represents \"invisible germs.\"",
+          "ar": "افرك يديك بالقليل من الدقيق، كأنه \"جراثيم غير مرئية\"."
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "2️⃣ Touch different surfaces:",
+          "ar": "2️⃣ المس الأسطح المختلفة:"
+        },
+        "description": {
+          "en": "Touch objects such as a wooden table, doorknob, toys, leaves, or a phone screen.\nOn dark surfaces, you will see the flour traces clearly, showing how germs transfer when we touch things with unclean hands.",
+          "ar": "المس بعض الأشياء، مثل طاولة خشبية، مقبض الباب، الألعاب، أوراق الشجر، شاشة الهاتف...\nستلاحظ بسهولة آثار الدقيق، مما يحاكي انتقال الجراثيم عند لمس الأشياء بأيدٍ غير نظيفة."
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "3️⃣ Examine the flour marks:",
+          "ar": "3️⃣ افحص آثار اللمس:"
+        },
+        "description": {
+          "en": "Press your hands onto a dark-colored surface (black paper, a dark wooden table, or fabric).\nObserve how the flour leaves visible marks, mimicking how germs remain on objects after we touch them.\nTry pressing your fingers on a mirror or a phone screen—you'll see smudges, just like how germs stick to surfaces!",
+          "ar": "المس سطحًا داكن اللون (ورقة سوداء أو طاولة غامقة)، ولاحظ كيف يبقى أثر الدقيق، مما يمثل كيف تترك أيدينا الجراثيم على الأشياء التي نلمسها.\nيمكنك أيضًا تمرير يدك على المرآة أو شاشة الهاتف بعد لمس الدقيق، لترى كيف تترك اليد آثارًا واضحة عليها."
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "4️⃣ Wash your hands with water only and try again:",
+          "ar": "4️⃣ اغسل يديك بالماء فقط وجرب اللمس مرة أخرى:"
+        },
+        "description": {
+          "en": "Rinse your hands with water only (no soap) and then touch the dark surface again.\nDo you still see traces of flour?\nThis shows that washing with water alone may not remove all germs.",
+          "ar": "اغسل يديك بالماء فقط (دون صابون)، ثم المس نفس السطح الداكن مرة أخرى.\nهل لا يزال هناك أثر للدقيق؟\nهذه الخطوة تُظهر أن الماء وحده قد لا يكون كافيًا لإزالة جميع الجراثيم."
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "5️⃣ Wash your hands with soap and try again:",
+          "ar": "5️⃣ اغسل يديك بالصابون وجرب مجددًا:"
+        },
+        "description": {
+          "en": "This time, wash your hands thoroughly with soap for at least 20 seconds and dry them well.\nNow, touch the same dark surface again—do you notice a difference?\nYour hands should now leave no visible marks, demonstrating that soap effectively removes germs.",
+          "ar": "هذه المرة، اغسل يديك جيدًا بالصابون لمدة 20 ثانية، ثم جففهما.\nالآن المس نفس السطح الداكن، هل لاحظت الفرق؟\nستجد أن يديك لم تترك أي أثر، مما يوضح أهمية غسل اليدين بالصابون للقضاء على الجراثيم."
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "6️⃣ Final test – Recontamination:",
+          "ar": "6️⃣ لمسة أخيرة – اختبار إعادة التلوث:"
+        },
+        "description": {
+          "en": "After washing your hands, touch a flour-contaminated surface and then touch your face or a clean toy.\nYou'll see that the flour has transferred again!\nThis shows that touching contaminated objects can reintroduce germs to your hands, even after washing them.",
+          "ar": "بعد غسل اليدين، المس سطحًا ملوثًا بالدقيق، ثم المس وجهك أو لعبة نظيفة.\nستلاحظ أن الدقيق انتقل مجددًا، مما يوضح أن لمس الأشياء الملوثة يعيد الجراثيم إلى يديك حتى بعد غسلها!"
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "\nDiscussion Questions After the Activity:",
+          "ar": "\nالأسئلة للنقاش بعد النشاط:"
+        },
+        "description": {
+          "en": " ❓ Why should we avoid touching our faces before washing our hands?\n ❓ How can we reduce the spread of germs in daily life?",
+          "ar": " ❓ لماذا علينا تجنب لمس الوجه قبل غسل اليدين؟\n ❓ كيف يمكننا تقليل انتشار الجراثيم في حياتنا اليومية؟"
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "\n📌 ⚠️ Safety Notes:",
+          "ar": "\n📌 ⚠️ ملاحظات الأمان:"
+        },
+        "description": {
+          "en": " ✔️ Use a small amount of flour to make cleanup easier.\n ✔️ Perform the activity on a table or an easily cleanable surface.\n ✔️ Wash hands thoroughly with soap and warm water after the experiment.",
+          "ar": "✔️ استخدم كمية قليلة من الدقيق لتسهيل التنظيف بعد التجربة.\n ✔️ قم بالنشاط على طاولة أو سطح يسهل تنظيفه.\n ✔️ تأكد من غسل يديك جيدًا بعد التجربة بالصابون والماء الدافئ."
+        },
+        "image": ""
+      }
+    ],
+    "start_images": [],
+    "end_images": []
+  },
+  "results": null,
+  "conclusions": {
+    "items": [
+      {
+        "id": 0,
+        "text": {
+          "en": "Enjoy the experiment, and remember: washing hands properly helps prevent the spread of germs! 🧼🔬",
+          "ar": "استمتع بالتجربة، وتذكر دائمًا: غسل اليدين جيدًا يمنع انتقال الجراثيم! 🧼🔬"
+        },
+        "description": {
+          "en": "",
+          "ar": ""
+        },
+        "image": ""
+      }
+    ],
+    "start_images": [],
+    "end_images": []
+  }
+},
+{
+  "_id": {
+    "$oid": "681b773f6b371d3b9ad9f3ec"
+  },
+  "id": null,
+  "title": {
+    "en": "Activity: How the Body Fights Germs 🦠🛑",
+    "ar": "النشاط: كيف يحارب الجسم الميكروبات؟ 🦠🛑"
+  },
+  "description": {
+    "en": "Join a simulation that shows how your immune system responds when germs try to attack.",
+    "ar": "شارك في محاكاة ممتعة توضح كيف يدافع جسمك عند دخول الجراثيم."
+  },
+  "content": {
+    "en": "",
+    "ar": ""
+  },
+  "start_images": [
+    "https://149346193.v2.pressablecdn.com/wp-content/uploads/2019/06/img_3365-1024x576.jpg"
+  ],
+  "end_images": null,
+  "sources": [
+    "https://learnasyouplay.net/2019/06/26/pepper-soap-experiment-ages-2/"
+  ],
+  "objectives": {
+    "items": [
+      {
+        "id": 0,
+        "text": {
+          "en": "Demonstrate how the skin and mucus act as natural barriers to prevent germs from entering the body and highlight the importance of washing hands with soap.",
+          "ar": " إظهار كيف يعمل الجلد والمخاط كحاجز طبيعي لمنع دخول الجراثيم إلى الجسم، وأهمية غسل اليدين بالصابون."
+        },
+        "description": {
+          "en": "",
+          "ar": ""
+        },
+        "image": ""
+      }
+    ],
+    "start_images": [],
+    "end_images": []
+  },
+  "terms_concepts": null,
+  "materials": {
+    "items": [
+      {
+        "id": 0,
+        "text": {
+          "en": "A bowl of water",
+          "ar": "وعاء به ماء"
+        },
+        "description": {
+          "en": "",
+          "ar": ""
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "Ground black pepper (to represent germs)",
+          "ar": "فلفل أسود مطحون (ليمثل الجراثيم)"
+        },
+        "description": {
+          "en": "",
+          "ar": ""
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "Liquid soap",
+          "ar": "صابون سائل"
+        },
+        "description": {
+          "en": "",
+          "ar": ""
+        },
+        "image": ""
+      }
+    ],
+    "start_images": [],
+    "end_images": []
+  },
+  "instructions": {
+    "items": [
+      {
+        "id": 0,
+        "text": {
+          "en": "1️⃣ Fill a bowl with water.",
+          "ar": "1️⃣ املأ وعاءً بالماء."
+        },
+        "description": {
+          "en": "",
+          "ar": ""
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "2️⃣ Sprinkle a little ground black pepper on the surface of the water.",
+          "ar": "2️⃣ رش القليل من الفلفل الأسود المطحون على سطح الماء."
+        },
+        "description": {
+          "en": "This represents germs found on surfaces.",
+          "ar": "سيمثل الفلفل الجراثيم المنتشرة على الأسطح."
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "3️⃣ Dip your finger without soap into the water.",
+          "ar": "3️⃣ ضع إصبعك في الماء دون صابون."
+        },
+        "description": {
+          "en": "You will notice that the \"germs\" (pepper) stick to your finger!",
+          "ar": "ستلاحظ أن الفلفل يلتصق بإصبعك!"
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "4️⃣ Now, put a drop of liquid soap on your finger and rub it lightly.",
+          "ar": "4️⃣ الآن، ضع نقطة من الصابون السائل على إصبعك وافركه قليلًا."
+        },
+        "description": {
+          "en": "",
+          "ar": ""
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "5️⃣ Dip your soapy finger back into the water and observe what happens!",
+          "ar": "5️⃣ أعد غمر الإصبع بالصابون في الماء وشاهد ماذا يحدث!"
+        },
+        "description": {
+          "en": "",
+          "ar": ""
+        },
+        "image": ""
+      }
+    ],
+    "start_images": [],
+    "end_images": []
+  },
+  "results": {
+    "items": [
+      {
+        "id": 0,
+        "text": {
+          "en": "When the finger with soap touches the water, the \"germs\" (pepper) quickly move away!",
+          "ar": "عند وضع الإصبع بالصابون في الماء، ستبتعد \"الجراثيم\" (الفلفل الأسود) عن الإصبع بسرعة!"
+        },
+        "description": {
+          "en": "",
+          "ar": ""
+        },
+        "image": ""
+      }
+    ],
+    "start_images": [],
+    "end_images": []
+  },
+  "conclusions": {
+    "items": [
+      {
+        "id": 0,
+        "text": {
+          "en": "Soap acts like the body's natural barrier (skin and mucus)",
+          "ar": "يعمل الصابون مثل حاجز الجسم الطبيعي (الجلد والمخاط)"
+        },
+        "description": {
+          "en": "Helping to remove germs and prevent them from sticking.",
+          "ar": "حيث يساعد في التخلص من الجراثيم ومنعها من الالتصاق."
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "This is why washing hands with soap is essential for staying healthy!",
+          "ar": "لهذا السبب، غسل اليدين بالصابون مهم جدًا لحمايتنا من الأمراض!"
+        },
+        "description": {
+          "en": "",
+          "ar": ""
+        },
+        "image": ""
+      },
+      {
+        "id": 0,
+        "text": {
+          "en": "\n📌 Discussion Questions After the Experiment:",
+          "ar": "\n📌 أسئلة للنقاش بعد التجربة:"
+        },
+        "description": {
+          "en": "      🔹 Why did the black pepper stick to the finger at first?\n      🔹 What happened when we used soap? Why?\n      🔹 How does washing hands with soap help prevent illnesses?",
+          "ar": "      🔹 لماذا التصق الفلفل الأسود بالإصبع في البداية؟\n      🔹 ماذا حدث عندما استخدمنا الصابون؟ ولماذا؟\n      🔹 كيف يساعد غسل اليدين بالصابون في الوقاية من الأمراض؟"
+        },
+        "image": ""
+      }
+    ],
+    "start_images": [],
+    "end_images": []
+  }
 }]

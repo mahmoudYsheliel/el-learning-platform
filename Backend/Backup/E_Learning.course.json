@@ -236,7 +236,7 @@
     }
   ],
   "price": 500,
-  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1742886202/ds-min_v0qkdh_hkllwl.webp",
+  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1747154136/ds-min_v0qkdh_hkllwl_yznbbz.webp",
   "categories": [
     {
       "Id": "667c3e7798157d488d31854a",
@@ -280,8 +280,8 @@
       "ar": "المشاركة في أنشطة تفاعلية: المشاركة في ألعاب NASA مثل بناء CubeSats واستكشاف المريخ وفهم الاتصالات الفضائية."
     }
   ],
-  "min_age": "7",
-  "max_age": "12",
+  "min_age": 7,
+  "max_age": 12,
   "duration": 3,
   "number_of_enrollments": 0,
   "is_locked": false
@@ -1220,7 +1220,7 @@
     }
   ],
   "price": 600,
-  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1742886199/Course_Cover__e_1_2_-min_z2meln_fq2dte.webp",
+  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1747154136/Course_Cover__e_1_2_-min_z2meln_fq2dte_tkdu7a.webp",
   "categories": [
     {
       "Id": "667c3e7798157d488d31854a",
@@ -1637,7 +1637,7 @@
     }
   ],
   "price": 600,
-  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1742886189/1._Aerospace_The_Beginning-min_aeyllr_c_pad_b_gen_fill_w_2768_h_1845_yntan3_j8igwr.webp",
+  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1747154132/1._Aerospace_The_Beginning-min_aeyllr_c_pad_b_gen_fill_w_2768_h_1845_yntan3_j8igwr_aljcts.webp",
   "categories": [
     {
       "Id": "667c3e7798157d488d31854a",
@@ -1673,7 +1673,7 @@
       "ar": "فهم دور الغلاف الجوي للأرض في الطيران: التعرف على تأثير الارتفاع على درجة الحرارة والضغط والكثافة، وتداعيات ذلك على أداء الطائرات."
     }
   ],
-  "min_age": "13",
+  "min_age": 13,
   "max_age": 17,
   "duration": 4,
   "number_of_enrollments": 1,
@@ -2120,7 +2120,7 @@
     }
   ],
   "price": 600,
-  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1742886194/Aerospace_in_War-min_mi9djr_c_pad_b_gen_fill_w_2768_h_1845_cs1boq_up0lnt.webp",
+  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1747154135/Aerospace_in_War-min_mi9djr_c_pad_b_gen_fill_w_2768_h_1845_cs1boq_up0lnt_lxxpue.webp",
   "categories": [
     {
       "Id": "667c3e7798157d488d31854a",
@@ -2168,7 +2168,7 @@
       "ar": "تطوير نموذج طائرة أسرع من الصوت: تطبيق المعرفة النظرية في مشروع عملي باستخدام خشب البلسا."
     }
   ],
-  "min_age": "13",
+  "min_age": 13,
   "max_age": 17,
   "duration": 7,
   "number_of_enrollments": 2,
@@ -2528,7 +2528,7 @@
     }
   ],
   "price": 600,
-  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1742886192/How_to_Build_an_Airplane_xvoqqu_c_pad_b_gen_fill_w_2768_h_1845_xrebhw_jhnevx.webp",
+  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1747154132/How_to_Build_an_Airplane_xvoqqu_c_pad_b_gen_fill_w_2768_h_1845_xrebhw_jhnevx_ehqoom.webp",
   "categories": [
     {
       "Id": "667c3e7798157d488d31854a",
@@ -3812,13 +3812,6 @@
         "en": "Computer Programming",
         "ar": "برمجة الكمبيوتر"
       }
-    },
-    {
-      "Id": "667c3e7798157d488d31854a",
-      "title": {
-        "en": "Engineering",
-        "ar": "الهندسة"
-      }
     }
   ],
   "objectives": [
@@ -3851,8 +3844,8 @@
       "ar": "اكتسب الثقة في استخدام أدوات البرمجة وتطوير المشاريع التي تتضمن الذكاء الاصطناعي."
     }
   ],
-  "min_age": "11",
-  "max_age": "16",
+  "min_age": 11,
+  "max_age": 16,
   "duration": 7,
   "number_of_enrollments": 1,
   "is_locked": false
@@ -4095,7 +4088,7 @@
     }
   ],
   "price": 500,
-  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1742886178/2_wrezv0_f2vmzp.webp",
+  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1747154133/2_wrezv0_f2vmzp_onk2ok.webp",
   "categories": [
     {
       "Id": "667c3e7798157d488d31854a",
@@ -5470,7 +5463,7 @@
     }
   ],
   "price": 500,
-  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1742886187/design-a-cover-that-captures-the-exciting-evolutio_4_pql6fo_l7l2zs.webp",
+  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1747154137/design-a-cover-that-captures-the-exciting-evolutio_4_pql6fo_l7l2zs_kwetoi.webp",
   "categories": [
     {
       "Id": "667c3e7798157d488d31854a",
@@ -5502,8 +5495,8 @@
       "ar": "فهم تأثير طبقة الأوزون في حماية الحياة على الأرض."
     }
   ],
-  "min_age": "7",
-  "max_age": "11",
+  "min_age": 7,
+  "max_age": 11,
   "duration": 6,
   "number_of_enrollments": 0,
   "is_locked": false
@@ -6019,7 +6012,7 @@
     }
   ],
   "price": 500,
-  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1742886191/create-a-courses-track-cover-for-a-courses-tr_MA49aOr_enhanced_ml03nt_c_pad_b_gen_fill_w_2768_h_1845_sinztj_xvcsqc.webp",
+  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1747154134/create-a-courses-track-cover-for-a-courses-tr_MA49aOr_enhanced_ml03nt_c_pad_b_gen_fill_w_2768_h_1845_sinztj_xvcsqc_ufjaxj.webp",
   "categories": [
     {
       "Id": "667c3e7798157d488d31854a",
@@ -6063,8 +6056,8 @@
       "ar": "المشاركة في أنشطة تفاعلية: المشاركة في ألعاب NASA مثل بناء CubeSats واستكشاف المريخ وفهم الاتصالات الفضائية."
     }
   ],
-  "min_age": "7",
-  "max_age": "12",
+  "min_age": 7,
+  "max_age": 12,
   "duration": 3,
   "number_of_enrollments": 0,
   "is_locked": false
@@ -6385,5 +6378,282 @@
   "max_age": 8,
   "duration": 25,
   "number_of_enrollments": 1,
+  "is_locked": false
+},
+{
+  "_id": {
+    "$oid": "681b2aee6b371d3b9ad9f3d7"
+  },
+  "id": null,
+  "title": {
+    "en": "The Early Bird Doctor",
+    "ar": "الطبيب الصغير"
+  },
+  "description": {
+    "en": "The Early Bird Doctor is an exciting and interactive course designed to introduce young learners to the fundamental concepts of biology, microbiology, and immunology. Through engaging lessons, hands-on activities, and real-world applications, students will explore the building blocks of life, the invisible world of microbes, and the body's defense mechanisms. This course fosters curiosity and critical thinking, empowering students with essential scientific knowledge about how life functions at a cellular level and how to maintain a healthy body.",
+    "ar": "الطبيب الصغير هي دورة تعليمية تفاعلية وممتعة تهدف إلى تعريف الطلاب الصغار بالمفاهيم الأساسية في علم الأحياء، وعلم الأحياء الدقيقة، والمناعة. من خلال دروس شيقة وأنشطة عملية وتطبيقات مستوحاة من الواقع، سيستكشف الطلاب اللبنات الأساسية للحياة، والعالم غير المرئي للميكروبات، كما سيتعرفون على آليات الدفاع في جسم الإنسان. تعزز هذه الدورة الفضول وحب الاستكشاف والتفكير النقدي، مما يمكن الطلاب من اكتساب معرفة علمية أساسية حول كيفية عمل الحياة على المستوى الخلوي وكيفية الحفاظ على صحة الجسم."
+  },
+  "chapters": [
+    {
+      "title": {
+        "en": "🧩 Chapter 1: The Building Blocks of Life",
+        "ar": "🧩 الفصل الأول: وحدة البناء الأساسية في الحياة"
+      },
+      "materials": [
+        {
+          "Id": "681b3a706b371d3b9ad9f3d8",
+          "order": 0,
+          "title": {
+            "en": "Welcome to The Early Bird Doctor",
+            "ar": " مرحبًا بك في الطبيب الصغير"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "681b3b196b371d3b9ad9f3da",
+          "order": 0,
+          "title": {
+            "en": "A Puzzle Piece of the Human Body",
+            "ar": "قطعة البازل في جسم الإنسان"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "681b3ad76b371d3b9ad9f3d9",
+          "order": 0,
+          "title": {
+            "en": "Quiz: A Puzzle Piece of the Human Body",
+            "ar": "اختبار: قطعة البازل في جسم الإنسان"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "681b3b536b371d3b9ad9f3db",
+          "order": 0,
+          "title": {
+            "en": "The Cell is the Factory",
+            "ar": "الخلية هي المصنع"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "681b3bd16b371d3b9ad9f3dc",
+          "order": 0,
+          "title": {
+            "en": "Quiz: The Cell is the Factory",
+            "ar": "اختبار: الخلية هي المصنع"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "681b3c106b371d3b9ad9f3dd",
+          "order": 0,
+          "title": {
+            "en": "Plants & Bacteria under the Microscope",
+            "ar": "النباتات والبكتيريا تحت المجهر"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "681b3c506b371d3b9ad9f3de",
+          "order": 0,
+          "title": {
+            "en": "Quiz: Plants & Bacteria under the Microscope",
+            "ar": "اختبار: النباتات والبكتيريا تحت المجهر"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "681b42a66b371d3b9ad9f3df",
+          "order": 0,
+          "title": {
+            "en": "Activity: Print, Observe & Color 🌱🎨",
+            "ar": "نشاط: اطبع، لاحظ، ولوِّن 🌱🎨"
+          },
+          "type": "Activity"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "🧫 Chapter 2: Microbiology",
+        "ar": "🧫 الفصل الثاني: علم الميكروبيولوجيا"
+      },
+      "materials": [
+        {
+          "Id": "681b6b326b371d3b9ad9f3e1",
+          "order": 0,
+          "title": {
+            "en": "The World of the Unseen",
+            "ar": "عالم الميكروبات غير المرئي"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "681b6b876b371d3b9ad9f3e2",
+          "order": 0,
+          "title": {
+            "en": "Quiz: The World of the Unseen",
+            "ar": "اختبار: عالم الميكروبات غير المرئي"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "681b6bbc6b371d3b9ad9f3e3",
+          "order": 0,
+          "title": {
+            "en": "Unseen Enemies",
+            "ar": "الأعداء غير المرئيين"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "681b6c636b371d3b9ad9f3e4",
+          "order": 0,
+          "title": {
+            "en": "Quiz: Unseen Enemies",
+            "ar": "اختبار: الأعداء غير المرئيين"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "681b71276b371d3b9ad9f3e5",
+          "order": 0,
+          "title": {
+            "en": "Activity: Germs in Action 🦠👋",
+            "ar": "نشاط: الجراثيم تنتقل من حولنا 🦠👋"
+          },
+          "type": "Activity"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "🛡️ Chapter 3: Immunity Defenders",
+        "ar": "🛡️ الفصل الثالث: مدافعي المناعة"
+      },
+      "materials": [
+        {
+          "Id": "681b71766b371d3b9ad9f3e6",
+          "order": 0,
+          "title": {
+            "en": "The Immune System in Action",
+            "ar": "الجهاز المناعي في حالة تأهب"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "681b71de6b371d3b9ad9f3e7",
+          "order": 0,
+          "title": {
+            "en": "Quiz: The Immune System in Action",
+            "ar": "اختبار: الجهاز المناعي في حالة تأهب"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "681b72216b371d3b9ad9f3e8",
+          "order": 0,
+          "title": {
+            "en": "Superheroes of the Immune System",
+            "ar": "أبطال الجهاز المناعي"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "681b72656b371d3b9ad9f3e9",
+          "order": 0,
+          "title": {
+            "en": "Quiz: Superheroes of the Immune System",
+            "ar": "اختبار: أبطال الجهاز المناعي"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "681b72a16b371d3b9ad9f3ea",
+          "order": 0,
+          "title": {
+            "en": "How to Stay Strong and Healthy",
+            "ar": "كيف نحافظ على مناعتنا؟"
+          },
+          "type": "Lesson"
+        },
+        {
+          "Id": "681b72ee6b371d3b9ad9f3eb",
+          "order": 0,
+          "title": {
+            "en": "Quiz: How to Stay Strong and Healthy",
+            "ar": "اختبار: كيف نحافظ على مناعتنا؟"
+          },
+          "type": "Quiz"
+        },
+        {
+          "Id": "681b773f6b371d3b9ad9f3ec",
+          "order": 0,
+          "title": {
+            "en": "Activity: How the Body Fights Germs 🦠🛑",
+            "ar": "النشاط: كيف يحارب الجسم الميكروبات؟ 🦠🛑"
+          },
+          "type": "Activity"
+        }
+      ]
+    }
+  ],
+  "price": 700,
+  "image": "https://res.cloudinary.com/dwg9hjzok/image/upload/v1742886212/The_Early_Bird_Doctor-min_dvgmjp_x2wxk4.webp",
+  "categories": [
+    {
+      "Id": "67be1d0df5bee34f3a39d5e5",
+      "title": {
+        "en": "Biology",
+        "ar": "الأحياء"
+      }
+    },
+    {
+      "Id": "67be1d52f5bee34f3a39d5e6",
+      "title": {
+        "en": "Chemistry",
+        "ar": "الكيمياء"
+      }
+    }
+  ],
+  "objectives": [
+    {
+      "en": "Identify cell types, functions, and ways to keep them healthy.",
+      "ar": "التعرف على أنواع الخلايا ووظائفها وكيفية الحفاظ عليها."
+    },
+    {
+      "en": "Understand cell organelles and compare them to factory roles.",
+      "ar": "فهم مكونات الخلية ومقارنتها بوظائف المصنع."
+    },
+    {
+      "en": "Compare plant, bacterial, and human cells using a microscope.",
+      "ar": "مقارنة الخلايا النباتية والبكتيرية والبشرية تحت المجهر."
+    },
+    {
+      "en": "Explore microbes and their effects—both helpful and harmful.",
+      "ar": "استكشاف الميكروبات وأدوارها المفيدة والضارة."
+    },
+    {
+      "en": "Recognize how microbes impact health and the role of hygiene.",
+      "ar": "إدراك تأثير الميكروبات وأهمية النظافة في الوقاية."
+    },
+    {
+      "en": "Understand the immune system and its defense mechanisms.",
+      "ar": "فهم جهاز المناعة وآلية دفاعه عن الجسم."
+    },
+    {
+      "en": "Learn how nutrition, exercise, and hygiene support immunity.",
+      "ar": "اكتشاف طرق دعم المناعة بالتغذية والرياضة والنظافة."
+    },
+    {
+      "en": "Conduct hands-on experiments related to cells, microbes, and immunity.",
+      "ar": "تنفيذ تجارب عملية توضح مفاهيم الخلايا والميكروبات والمناعة."
+    }
+  ],
+  "min_age": 0,
+  "max_age": 0,
+  "duration": 25,
+  "number_of_enrollments": 0,
   "is_locked": false
 }]
