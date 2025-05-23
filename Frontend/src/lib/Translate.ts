@@ -36,6 +36,10 @@ export const translationModule = {
     en: "Contact",
     ar: "اتصال",
   },
+  contactDetails: {
+    en: "Contact Details",
+    ar: "تفاصيل الاتصال"
+  },
 
   courses: {
     en: "Courses",
@@ -348,6 +352,10 @@ export const translationModule = {
   birthDate: {
     en: "Birth Date",
     ar: "تاريخ الميلاد",
+  },
+  childBirthDate:{
+    en:'Child Birth Date',
+    ar:'تاريخ ميلاد الطفل',
   },
   male: {
     en: "Male",
@@ -1242,8 +1250,23 @@ https://www.traceedtech.com. من خلال الوصول إلى هذا الموق
   linkExpired:{
     en:'Verification Link Expired ',
     ar:'انتهت صلاحية رابط التحقق'
+  },
+  thankYou:{
+    en:'Thank You!',
+    ar:'!شكرًا لك'
+  },
+  enrollSuccess:{
+    en:'Your Request Completed Successfully',
+    ar:'تم إكمال طلبك بنجاح'
+  },
+  orderSummary:{
+    en:'Order Summary',
+    ar:'ملخص الطلب'
+  },
+  checkout:{
+    en:'Checkout',
+    ar:'الدفع'
   }
-
 
 
 

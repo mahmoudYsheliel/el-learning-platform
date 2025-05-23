@@ -14,7 +14,7 @@ const email = ref()
 const pass = ref()
 const confirmPass = ref()
 const OTP = ref()
-const stage = ref('success') // email , OTP , pass  , success
+const stage = ref('OTP') // email , OTP , pass  , success
 
 </script>
 
@@ -36,7 +36,7 @@ const stage = ref('success') // email , OTP , pass  , success
                 <InputOtp v-model="OTP" style="align-self: center;" />
                 <Button @click="" :label="selectLang(translationModule.next)" />
                 <span style="align-self: center;color: var(--text);">{{ selectLang(translationModule.didnotReceive) }}
-                    <strong style="cursor: pointer;">{{ selectLang(translationModule.resend) }}</strong>
+                    <strong style="cursor: pointer;color: var(--accent1);">{{ selectLang(translationModule.resend) }}</strong>
                 </span>
             </div>
         </div>
@@ -106,7 +106,7 @@ p {
     gap: 1rem;
 }
 
-.email_stage,.success,.rest_pass,.OTP {
+.email_stage,.success,.rest_pass,.OTP,.otp_stage {
     height: 90%;
     width: 90%;
     border-radius: 0.5rem;

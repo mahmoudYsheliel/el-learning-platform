@@ -157,3 +157,54 @@ def send_verification_link(link:str,to_email:str):
         print("Email sent successfully!")
     except Exception as e:
         print(f"Error sending email: {e}")
+ 
+
+
+
+
+
+def send_password_reset_email(reset_link: str, otp_code: str, to_email: str):
+    html = f"""\
+    <!DOCTYPE html>
+    <html>
+    <body>
+        <p>Hi {to_email},</p>
+        <p>We received a request to reset your password. You can do so using either of the methods below:</p>
+
+        <h3>🔗 Method 1: Reset via Link</h3>
+        <p>
+            <a href="{reset_link}" style="
+                background-color: #28a745;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+                display: inline-block;
+            ">Reset Password</a>
+        </p>
+
+        <h3>🔐 Method 2: Use OTP Code</h3>
+        <p>Use the following One-Time Password (OTP) to reset your password:</p>
+        <h2 style="color:#333;">{otp_code}</h2>
+
+        <p><strong>Note:</strong> This link and OTP will expire in 15 minutes for your security.</p>
+        <p>If you did not request a password reset, you can safely ignore this email.</p>
+        <p><strong>– The Trace Team</strong></p>
+    </body>
+    </html>
+    """
+
+    msg = MIMEMultipart()
+    msg["From"] = FROM_EMAIL
+    msg["To"] = to_email
+    msg["Subject"] = 'Password Reset Request'
+    msg.attach(MIMEText(html, "html"))
+
+    try:
+        server = smtplib.SMTP_SSL(GMAIL_SMTP_SERVER, GMAIL_SMTP_PORT)
+        server.login(FROM_EMAIL, FROM_PASSWORD)
+        server.sendmail(FROM_EMAIL, to_email, msg.as_string())
+        server.quit()
+        print("Password reset email sent successfully!")
+    except Exception as e:
+        print(f"Error sending password reset email: {e}")

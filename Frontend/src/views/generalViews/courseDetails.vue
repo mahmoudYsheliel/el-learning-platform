@@ -16,7 +16,7 @@ import CourseBelongsToPlanDialog from "@/components/dialogs/CourseBelongsToPlanD
 import CourseDescribtion from "@/components/student/courseDetails/CourseDescribtion.vue";
 import CourseMaterial from "@/components/student/courseDetails/CourseMaterial.vue";
 import PrequisiteDialog from "@/components/dialogs/PrequisiteDialog.vue";
-
+import { useOrder } from "@/stores/token";
 import { ref } from "vue";
 
 const token = useToken();
@@ -78,7 +78,12 @@ const showPrequisiteDialog = ref(false);
 function enroll() {
   if (!token.getIsAuthorized) {
     router.push("/login");
-  } else if (personalInfo.getInfo?.userType == "Child") {
+  }else if (true){
+    const order = useOrder()
+    order.setOrder({courseTitle:course.value?.title,coursePrice:course.value.price})
+    router.push('/Checkout')
+  }
+   else if (personalInfo.getInfo?.userType == "Child") {
     const planCourseRequester = new HttpRequester("get_course_plan");
     planCourseRequester
       .callApi({ course_id: route.params?.courseId })

@@ -1,3 +1,4 @@
+import type { TwoLang } from "@/lib/Interfaces";
 import { defineStore } from "pinia";
 
 export const useToken = defineStore("token", {
@@ -145,3 +146,36 @@ export const useLang = defineStore("lang", {
   },
 });
 
+
+
+interface Order {
+  courseTitle: TwoLang
+  coursePrice: number
+}
+
+
+
+
+export const useOrder = defineStore("rder", {
+  state: () => ({
+    order: {},
+  }),
+  actions: {
+    setOrder(order: Order) {
+      this.order = order;
+      this.saveToLocalStorage();
+    },
+    saveToLocalStorage() {
+      localStorage.setItem("order", JSON.stringify(this.order));
+    },
+  },
+  getters: {
+    getOrder(state) {
+      const data = localStorage.getItem("order");
+      if (data) {
+        this.order = JSON.parse(data);
+      }
+      return state.order;
+    },
+  },
+});

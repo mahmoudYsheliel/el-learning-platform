@@ -32,7 +32,7 @@ class User(BaseModel):
     balance: Optional[float] = 0
     image: Optional[str] = ''
     notifications: Optional[list[Notification]] = []
-
+    user_type2:Optional[str] = 'Student'
 
 class Admin(BaseModel):
     id: Optional[str] = None

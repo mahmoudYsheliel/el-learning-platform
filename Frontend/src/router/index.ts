@@ -43,7 +43,7 @@ const router = createRouter({
       meta: { requredAuth: false, userType: "Any" },
     },
     {
-      path: "/forgotPassword",
+      path: "/forgotPassword/:token?",
       name: "forgotPassword",
       component: () => import("../views/generalViews/forgotPassword.vue"),
       meta: { requredAuth: false, userType: "Any" },
@@ -80,7 +80,18 @@ const router = createRouter({
       component: () => import("../views/generalViews/tracePlans.vue"),
       meta: { requredAuth: false, userType: "Any" },
     },
-
+    {
+      path: "/ThankYou",
+      name: "ThankYou",
+      component: () => import("../views/generalViews/ThankYou.vue"),
+      meta: { requredAuth: true, userType: "Any" },
+    },
+    {
+      path: "/Checkout",
+      name: "Checkout",
+      component: () => import("../views/generalViews/Checkout.vue"),
+      meta: { requredAuth: true, userType: "Any" },
+    },
     {
       path: "/courseDetails/:courseId/:childId/:isEnrolled",
       name: "courseDetails",

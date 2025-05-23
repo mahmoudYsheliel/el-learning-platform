@@ -23,6 +23,7 @@ const email = ref();
 const pass = ref();
 const confirmedPass = ref();
 const role = ref('Child')
+const role2 = ref()
 const birthDate = ref()
 const phone = ref('')
 const gender = ref<string | null>()
@@ -56,7 +57,8 @@ function signup() {
         user_type: role.value,
         birth_day: birthDate.value,
         phone_number: phone.value,
-        gender: gender.value
+        gender: gender.value,
+        role2:role2.value,
       },
     };
 
@@ -233,7 +235,7 @@ function login() {
             </template>
           </Password>
           <Password class="input" v-model="confirmedPass" :feedback="false" toggleMask :placeholder="selectLang(translationModule.confirmPass)" @change="worningMessage = ''" />
-          <Calendar style="width: 100%;" v-model="birthDate" :placeholder="selectLang(translationModule.birthDate)" />
+          <Calendar style="width: 100%;" v-model="birthDate" :placeholder="selectLang(translationModule.childBirthDate)" />
           <InputText style="width: 100%;" type="email" class="input" v-model="phone" :placeholder="selectLang(translationModule.phone)" />
           <div class="gender">
             <h3>{{ selectLang(translationModule.gender) }}:</h3>
@@ -241,6 +243,15 @@ function login() {
 
               <span :class="{ role2_selected: gender == 'Male' }" @click="gender = 'Male'" class="role2">{{ selectLang(translationModule.male) }}</span>
               <span :class="{ role2_selected: gender == 'Female' }" @click="gender = 'Female'" class="role2">{{ selectLang(translationModule.female) }}</span>
+            </div>
+
+          </div>
+          <div class="gender">
+            <h3>{{ selectLang(translationModule.type) }}:</h3>
+            <div class="gender" style="width: 60%;">
+
+              <span :class="{ role2_selected: role2 == 'Parent' }" @click="role2 = 'Parent'" class="role2">{{ selectLang(translationModule.parent) }}</span>
+              <span :class="{ role2_selected: role2 == 'Child' }" @click="role2 = 'Child'" class="role2">{{ selectLang(translationModule.student) }}</span>
             </div>
 
           </div>
@@ -302,7 +313,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 32%;
+  width: 30%;
 }
 
 .role {

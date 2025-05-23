@@ -11,8 +11,7 @@ const lang = useLang()
   </div>
 </template>
 
-<style >
-
+<style>
 .rtl {
   direction: rtl;
 }
@@ -102,7 +101,8 @@ body,
   --accent4: #FFC27A;
   --accent5: #D42488;
   --choiceBackgroundColor: #E8F7FF;
-  --grayBackground: #F7F9FB;
+  --borderColor: #EBEBEB;
+  --grayBackground: #F9F9F9;
   --wrongAnswer: #FF2D2D;
   --correctAnswer: #5CFA75;
   --accent1_100: #E8F7FF;

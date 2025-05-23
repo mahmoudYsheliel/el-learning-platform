@@ -24,6 +24,7 @@ const pass = ref();
 
 const missingInfo = ref(false);
 const NoSuchUser = ref(false);
+const userNotVerified = ref(false);
 const loginRequester = new HttpRequester("token");
 
 function login() {
@@ -34,6 +35,8 @@ function login() {
 
       if (res?.msg == "no such user") {
         NoSuchUser.value = true;
+      } else if (res?.msg == "user not verified") {
+        userNotVerified.value = true;
       } else if (res?.access_token) {
         const personalInfoRequester = new HttpRequester("personal_info");
         personalInfoRequester.callApi().then((res) => {
@@ -63,7 +66,7 @@ const callback = (response: any) => {
     const loginRequester = new HttpRequester("token");
     const personalInfo = usePersonalInfo();
     loginRequester.login((userData as any).email, "mahmoud2000").then((res) => {
-      if (res.msg == "no such user") {
+      if (res?.msg == "no such user") {
         NoSuchUser.value = true;
       } else if (res.access_token) {
         const personalInfoRequester = new HttpRequester("personal_info");
@@ -108,6 +111,9 @@ const callback = (response: any) => {
         </h4>
         <h4 v-if="NoSuchUser">
           {{ selectLang(translationModule.userNotExist) }}
+        </h4>
+        <h4 v-if="userNotVerified">
+          {{ selectLang(translationModule.verifyEmail) }}
         </h4>
         <div class="wrapper">
           <InputText style="width: 100%;" type="email" class="input" v-model="email" :placeholder="selectLang(translationModule.email)" />
