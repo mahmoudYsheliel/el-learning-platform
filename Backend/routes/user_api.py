@@ -9,7 +9,7 @@ from typing import Annotated
 from fastapi.security import OAuth2PasswordRequestForm
 from datetime import timedelta
 from models.user import Token
-from lib.crypto import  auth_user, create_verify_email_link, check_verification_token
+from lib.crypto import auth_user, create_verify_email_link, check_verification_token
 import database.user_database as user_database
 from lib.email_service import *
 import time
@@ -25,10 +25,10 @@ async def login_for_access_token(
     if not valid:
         return ServiceResponse(success=False, msg="no such user", status_code=404)
 
-    user = await get_database().get_collection("user").find_one({"email": form_data.username}, {'id': {'$toString': '$_id'},'is_verefied':1 })
+    user = await get_database().get_collection("user").find_one({"email": form_data.username}, {'id': {'$toString': '$_id'}, 'is_verefied': 1})
     has_is_verified = ('is_verefied' in dict(user).keys())
-    if user and has_is_verified and  (not user['is_verefied']):
-        
+    if user and has_is_verified and (not user['is_verefied']):
+
         return ServiceResponse(success=False, msg="user not verified", status_code=404)
     userid = user['id']
     access_token_expires = timedelta(minutes=1e6)
@@ -121,44 +121,40 @@ async def send_page(request: EmailRequest = Body(embed=True)):
             body=request.body,
             attachment_path=pdf_path,
             img_base64=request.image_base64,)
-        
+
         return {"message": "Email sent successfully!"}
     finally:
         pass
 
 
-
-
-
 @router.post('/get_verify_email_link')
-async def ge_verify_email_link(email:str = Body(embed=True)):
+async def ge_verify_email_link(email: str = Body(embed=True)):
     token = await create_verify_email_link(email)
     link = f"https://www.traceedtech.com/#/EmailVerified/{token}"
-   
+
    # link = f"http://localhost:5173/#/EmailVerified/{token}"
 
     send_verification_link(link, email)
-    return ServiceResponse(success=True,msg='verification link sent successfully')
+    return ServiceResponse(success=True, msg='verification link sent successfully')
 
 
 @router.post('/verify_email')
-async def verify_email(token:str = Body(embed=True))-> ServiceResponse | Token:
+async def verify_email(token: str = Body(embed=True)) -> ServiceResponse | Token:
     try:
         decoded = check_verification_token(token)
-        if not ( decoded or (decoded['exp']) or (decoded['email'])):
-            return ServiceResponse(success=False,msg='Token Error')
-        
+        if not (decoded or (decoded['exp']) or (decoded['email'])):
+            return ServiceResponse(success=False, msg='Token Error')
+
         email = decoded['email']
-        user = await get_database().get_collection('user').find_one({'email':email},{"id": {"$toString": "$_id"}})
-        if not (user and user['id'] ):
-            return ServiceResponse(success=False,msg='Email not Found')
-        user_update = await get_database().get_collection('user').update_one({'email':email},{'$set': {'is_verefied':True}})
+        user = await get_database().get_collection('user').find_one({'email': email}, {"id": {"$toString": "$_id"}})
+        if not (user and user['id']):
+            return ServiceResponse(success=False, msg='Email not Found')
+        user_update = await get_database().get_collection('user').update_one({'email': email}, {'$set': {'is_verefied': True}})
         if not user_update:
-            return ServiceResponse(success=False,msg='Could not update status')
+            return ServiceResponse(success=False, msg='Could not update status')
         access_token = create_access_token(
-        data={'userId': user['id']}
-    )
+            data={'userId': user['id']}
+        )
         return Token(access_token=access_token)
     except jwt.ExpiredSignatureError:
-        return ServiceResponse(success=False,msg='Token has expired.')
-        
+        return ServiceResponse(success=False, msg='Token has expired.')

@@ -59,6 +59,7 @@ function signup() {
         phone_number: phone.value,
         gender: gender.value,
         role2:role2.value,
+        is_verefied: true,
       },
     };
 
@@ -86,7 +87,7 @@ const callback = (response: any) => {
 
   const userData = decodeCredential(response.credential);
 
-  if ((userData as any).email_verified) {
+  if ((userData as any)?.email_verified) {
     let data = {
       user: {
         email: (userData as any).email,
@@ -100,7 +101,7 @@ const callback = (response: any) => {
     };
 
     signupRequester.callApi(data).then((res) => {
-      if (res.msg == "email is already used once") {
+      if (res?.msg == "email is already used once") {
         worningMessage.value = selectLang(translationModule.emailTaken) ?? '';
       } else if (res?.success == true) {
         const loginRequester = new HttpRequester("token");
@@ -108,7 +109,7 @@ const callback = (response: any) => {
         loginRequester
           .login((userData as any).email, "mahmoud2000")
           .then((res) => {
-            if (res.access_token) {
+            if (res?.access_token) {
               const personalInfoRequester = new HttpRequester("personal_info");
               personalInfoRequester.callApi().then((res) => {
                 if (res?.success) {

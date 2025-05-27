@@ -118,6 +118,7 @@ const callback = (response: any) => {
         <div class="wrapper">
           <InputText style="width: 100%;" type="email" class="input" v-model="email" :placeholder="selectLang(translationModule.email)" />
           <Password class="input" v-model="pass" :feedback="false" toggleMask :placeholder="selectLang(translationModule.pass)" />
+          <p style="margin: 0; font-weight: 800;color: var(--accent1);align-self: flex-end; cursor: pointer;" @click="router.push('/forgotPassword')">{{ selectLang(translationModule.forgeotPass) }}</p>
           <!-- <div class="forgotPassCon">
             <p @click="router.push('forgotPassword')">{{ selectLang(translationModule.forgeotPass) }}</p>
           </div> -->

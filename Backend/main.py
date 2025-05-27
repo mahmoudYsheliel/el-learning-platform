@@ -18,6 +18,7 @@ from routes import (
     simulation_api,
     project_api,
     activity_api,
+    otp_api
 )
 
 
@@ -52,6 +53,7 @@ app.include_router(plan_api.router)
 app.include_router(simulation_api.router)
 app.include_router(project_api.router)
 app.include_router(activity_api.router)
+app.include_router(otp_api.router)
 
 
     

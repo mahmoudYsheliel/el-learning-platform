@@ -283,7 +283,6 @@ export const socialMediaIcons = [
     class: "pi pi-instagram",
     to: "https://www.instagram.com/trace.education?igsh=ZW9xYnEyaGU1M210",
   },
-  { class: "pi pi-whatsapp", to: "https://wa.me/201065356028?text=hello" },
 ];
 
 export const pages = [

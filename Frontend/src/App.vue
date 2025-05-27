@@ -86,13 +86,13 @@ html {
 
 body,
 #app {
-  font-family: 'Cairo'
+  font-family: 'Cairo';
 }
 
 :root {
   --primary: #ffffff;
   --secondary: #0089cc;
-  --text: #848181;
+  --text: #828282 ;
   --descriptionText: #444;
   --header: #282938;
   --accent1: #01abff;
@@ -102,13 +102,16 @@ body,
   --accent5: #D42488;
   --choiceBackgroundColor: #E8F7FF;
   --borderColor: #EBEBEB;
-  --grayBackground: #F9F9F9;
+  --grayBackground: #F7F9FB;
   --wrongAnswer: #FF2D2D;
   --correctAnswer: #5CFA75;
   --accent1_100: #E8F7FF;
   --accent1_200: #D1F0FF;
   --accent1_300: #BAE8FF;
-
+  --pricing_background: #efe5ff;
+}
+.password .p-inputtext{
+  width: 100%;
 }
 
 :root {
@@ -128,11 +131,6 @@ body,
   }
 }
 
-@media (min-width: 1200px) {
-  :root {
-    font-size: 22px;
-  }
-}
 
 @media (max-width:1250px) {
   div[class*='rtl'] .borderRigth {

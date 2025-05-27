@@ -106,7 +106,6 @@ async def validate_user(username: str, password: str) -> ServiceResponse:
 
     # check password hash
     user = User.model_validate(user)
-    print(password, user.hashed_pass)
     if not verify_password(password, user.hashed_pass):
         return False
     return True

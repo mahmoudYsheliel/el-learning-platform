@@ -262,12 +262,12 @@ export const translationModule = {
     ar: 'اسم المستخدم'
   },
   enterEmail: {
-    en: 'Enter your email for the verification proccess,we will send 4 digits code to your email.',
-    ar: 'أدخل بريدك الإلكتروني لعملية التحقق، وسنرسل رمزًا مكونًا من 4 أرقام إلى أرقام'
+    en: 'Enter your email for the verification proccess,we will send 6 digits code to your email.',
+    ar: 'أدخل بريدك الإلكتروني لعملية التحقق، وسنرسل رمزًا مكونًا من 6 أرقام إلى أرقام'
   },
   enterCode: {
-    en: 'Enter your 4 digits code that you received on your email.',
-    ar: 'أدخل الرمز المكون من 4 أرقام الذي تلقيته على بريدك الإلكتروني.'
+    en: 'Enter your 6 digits code that you received on your email.',
+    ar: 'أدخل الرمز المكون من 6 أرقام الذي تلقيته على بريدك الإلكتروني.'
   },
   setPass: {
     en: 'Set the new password for your account so you can login and access all featuress.',
@@ -749,6 +749,14 @@ export const translationModule = {
     en: "Success",
     ar: "مقبول",
   },
+  succeessfully: {
+    en: "Successfully",
+    ar: "بنجاح",
+  },
+  traceAddress:{
+    en:'Office 3, Alshark al Awsat Mall, 6th October, Giza',
+    ar:'عقار ٣، مول الشرق الاوسط، 6 أكتوبر، الجيزة'
+  },
   enrollmentsRequests: {
     en: "Enrollment Requests",
     ar: "طلبات التسجيل",
@@ -1017,6 +1025,10 @@ export const translationModule = {
     en: "Track Content",
     ar: "محتوي المسار"
   },
+  continue:{
+    en:'Continue',
+    ar:'استمر'
+  },
   locked: {
     en: 'Course is Locked Now',
     ar: "الدورة مغلقة الآن"
@@ -1032,6 +1044,10 @@ export const translationModule = {
   updatePass: {
     en: 'Update Password',
     ar: 'تحديث كلمة المرور'
+  },
+  newPass: {
+    en: 'New Password',
+    ar: 'كلمة المرور الجديدة'
   },
   parent: {
     en: 'Parent',
@@ -1266,7 +1282,11 @@ https://www.traceedtech.com. من خلال الوصول إلى هذا الموق
   checkout:{
     en:'Checkout',
     ar:'الدفع'
-  }
+  },
+  wrongOTP:{
+    en:'OTP Code is Wrong',
+    ar:'رمز OTP خاطئ'
+  },
 
 
 
