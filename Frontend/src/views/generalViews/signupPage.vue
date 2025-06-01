@@ -70,7 +70,8 @@ function signup() {
         const te = new TextEncoder()
         const encoded = te.encode(email.value)
         const charCode = String.fromCharCode(...encoded) 
-        router.push(`/verifyEmail/${btoa(charCode)}`);
+        //router.push(`/verifyEmail/${btoa(charCode)}`);
+        router.push('/')
       }
     });
   }
