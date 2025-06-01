@@ -58,7 +58,7 @@ function signup() {
         birth_day: birthDate.value,
         phone_number: phone.value,
         gender: gender.value,
-        role2:role2.value,
+        role2: role2.value,
         is_verefied: true,
       },
     };
@@ -69,9 +69,38 @@ function signup() {
       } else if (res?.success == true) {
         const te = new TextEncoder()
         const encoded = te.encode(email.value)
-        const charCode = String.fromCharCode(...encoded) 
+        const charCode = String.fromCharCode(...encoded)
         //router.push(`/verifyEmail/${btoa(charCode)}`);
-        router.push('/')
+
+
+        const loginRequester = new HttpRequester("token");
+        const personalInfo = usePersonalInfo();
+        loginRequester
+          .login(email.value, pass.value)
+          .then((res) => {
+            if (res?.access_token) {
+              const personalInfoRequester = new HttpRequester("personal_info");
+              personalInfoRequester.callApi().then((res) => {
+                if (res?.success) {
+                  personalInfo.addInfo({
+                    userType: res?.data?.info?.user_type,
+                    notifications: [],
+                    id: res?.data?.info?.id,
+                    firstName: res?.data?.info?.first_name,
+                    lastName: res?.data?.info?.last_name,
+                    email: res?.data?.info?.email,
+                    gender: res?.data?.info?.gender,
+                  });
+                  router.push("/");
+                }
+              });
+            }
+          });
+
+
+
+
+
       }
     });
   }
@@ -181,7 +210,7 @@ function login() {
     <Options />
     <div class="container">
       <div class="left borderRigth">
-        <img  src="/images/login.png" alt="" />
+        <img src="/images/login.png" alt="" />
 
         <!-- <h1 style="color: var(--header);">{{ selectLang(translationModule.selectRole) }}</h1>
         <div class="roles">
@@ -220,7 +249,7 @@ function login() {
         </h4>
 
         <div class="wrapper">
-       
+
           <InputText style="width: 100%;" type="email" class="input" v-model="email" :placeholder="selectLang(translationModule.email)" />
           <Password toggleMask v-model="pass" :placeholder="selectLang(translationModule.pass)" @change="worningMessage = ''">
             <template #header>
