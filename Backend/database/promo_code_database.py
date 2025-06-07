@@ -1,7 +1,7 @@
 from models.promo_code import PromoCode
 from models.runtime import ServiceResponse
 from database.mongo_driver import  get_database,validate_bson_id
-
+from datetime import datetime
 
 
 async def create_promo_code(promo_code: PromoCode) -> ServiceResponse:
@@ -57,3 +57,29 @@ async def get_promo_code(promo_code_id:str)-> ServiceResponse:
     return ServiceResponse(data={'promo_code': promo_code})
 
 
+
+async def apply_promocode(amount:float, promo_code :str)->ServiceResponse:
+    promo_code_record = await get_database().get_collection('promo_code').find_one({'code':promo_code},{'discount_type':1,'discount_value': 1,'expiry_date':1,'usage_limit':1,'used_count':1})
+    if not promo_code_record:
+        return ServiceResponse(success=False,msg='no promo code found',status_code=400)
+    
+    now = datetime.now()
+    expiry_date = datetime.strptime(promo_code_record['expiry_date'], "%Y-%m-%d")
+    
+    if now > expiry_date:
+        return ServiceResponse(msg='expired promo code',status_code=400,success=False)
+    
+    if promo_code_record['used_count'] >= promo_code_record['usage_limit']:
+        return ServiceResponse(msg='promo code limit',status_code=400,success=False)
+    
+    new_amount = amount
+    if promo_code_record['discount_type'] == 'fixed': 
+        new_amount = new_amount - promo_code_record['discount_value']
+        
+    if promo_code_record['discount_type'] == 'percent': 
+        new_amount = new_amount * ( 100 - promo_code_record['discount_value'])/100
+    
+    return ServiceResponse(success=True,data={'amount': new_amount})
+    
+
+    

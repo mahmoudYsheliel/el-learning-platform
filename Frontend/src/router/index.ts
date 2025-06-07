@@ -85,6 +85,14 @@ const router = createRouter({
       name: "ThankYou",
       component: () => import("../views/generalViews/ThankYou.vue"),
       meta: { requredAuth: true, userType: "Any" },
+      beforeEnter:(to,from,next) =>{
+        const success = to.query.success
+        if (success === 'true') {
+          next()
+        } else {
+          next({ name: 'home' })
+        }
+      }
     },
     {
       path: "/Checkout",

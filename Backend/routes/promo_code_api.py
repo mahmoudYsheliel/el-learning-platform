@@ -32,3 +32,10 @@ async def create_promo_code(new_promo_code:PromoCode =Body(embed=True),userId:st
     res = await promo_code_database.create_promo_code(new_promo_code)
     return res
 
+
+
+@router.post('/apply_promocode')
+async def apply_promocode(amount:float = Body(embed=True), promo_code :str = Body(embed=True))->ServiceResponse:
+    res = await promo_code_database.apply_promocode(amount, promo_code)
+    return res
+

@@ -147,18 +147,22 @@ export const useLang = defineStore("lang", {
 });
 
 
+type orderType = 'subscription_plan' | 'course'
+
 
 interface Order {
-  courseTitle: TwoLang
-  coursePrice: number
+  title: TwoLang
+  price: number
+  type: orderType
+  id:string
 }
 
 
 
 
-export const useOrder = defineStore("rder", {
-  state: () => ({
-    order: {},
+export const useOrder = defineStore("order", {
+  state: (): { order: Order | null } => ({
+    order: null,
   }),
   actions: {
     setOrder(order: Order) {

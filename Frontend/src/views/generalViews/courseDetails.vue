@@ -80,7 +80,7 @@ function enroll() {
     router.push("/login");
   }else if (true){
     const order = useOrder()
-    order.setOrder({courseTitle:course.value?.title,coursePrice:course.value.price})
+    order.setOrder({title:course.value?.title,price:course.value.price,type:'course',id: String(route.params.courseId)})
     router.push('/Checkout')
   }
    else if (personalInfo.getInfo?.userType == "Child") {
