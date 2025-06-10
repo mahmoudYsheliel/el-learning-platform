@@ -14,15 +14,17 @@ const router = useRouter()
 
 
 const userOrder = ref<any>(order.getOrder)
-// const firstName = ref(personalInfo.getInfo?.firstName)
-// const lastName = ref(personalInfo.getInfo?.lastName)
-// const email = ref(personalInfo.getInfo?.email)
-// const phone = ref()
-
-const firstName = ref('Mahmoud')
-const lastName = ref('yasser')
+const firstName = ref(personalInfo.getInfo?.firstName)
+const lastName = ref(personalInfo.getInfo?.lastName)
 const email = ref(personalInfo.getInfo?.email)
-const phone = ref('01098365004')
+const phone = ref()
+
+const showErrorMessage = ref(false)
+
+// const firstName = ref('Mahmoud')
+// const lastName = ref('yasser')
+// const email = ref(personalInfo.getInfo?.email)
+// const phone = ref('01098365004')
 
 
 const promoCode = ref('')
@@ -32,13 +34,17 @@ const title = ref<{ en: string, ar: string }>(userOrder.value?.title)
 const promoCodeError = ref('')
 
 function checkPhoneNumber(phoneNumber: string) {
-    if (phoneNumber.startsWith('01') && phoneNumber.length == 1) {
+    if (phoneNumber.startsWith('01') && phoneNumber.length == 11) {
         return true
     }
     return false
 }
 
 const pay = async () => {
+    if (!( firstName.value && lastName.value && phone.value && checkPhoneNumber( phone.value))) {
+        showErrorMessage.value = true
+        return
+    }
     let payURL = ''
     const paymentRequester = new HttpRequester('get_payment_link')
     const data = {
@@ -71,8 +77,9 @@ function applyPromoCode() {
 
     })
 }
-watch((promoCode), () => {
+watch(([promoCode,firstName,lastName,phone,email]), () => {
     promoCodeError.value = ''
+    showErrorMessage.value = false
 })
 
 
@@ -83,7 +90,9 @@ watch((promoCode), () => {
     <Navbar />
     <div id="checkout_container">
         <div id="contact_details">
+            
             <h2>{{ selectLang(translationModule.contactDetails) }}</h2>
+            <h4 style="color: var(--wrongAnswer);text-align: center;" v-if="showErrorMessage">{{ selectLang(translationModule.dataMissing) }}</h4>
             <div class="input_field">
                 <p>{{ selectLang(translationModule.firstName) }}*</p>
                 <InputText v-model="firstName" />

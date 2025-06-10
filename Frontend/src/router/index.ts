@@ -17,6 +17,7 @@ const router = createRouter({
       name: "PrivacyPolicy",
       component: () => import("../views/generalViews/PrivacyPolicy.vue"),
       meta: { requredAuth: false, userType: "Any" },
+
     },
     {
       path: "/EmailVerified/:token",
@@ -80,20 +81,30 @@ const router = createRouter({
       component: () => import("../views/generalViews/tracePlans.vue"),
       meta: { requredAuth: false, userType: "Any" },
     },
+
+
     {
-      path: "/ThankYou",
-      name: "ThankYou",
-      component: () => import("../views/generalViews/ThankYou.vue"),
+      path: "/PaymobSuccess",
+      name: "PaymobSuccess",
+      component: () => import("../views/generalViews/PaymobSuccess.vue"),
       meta: { requredAuth: true, userType: "Any" },
-      beforeEnter:(to,from,next) =>{
-        const success = to.query.success
-        if (success === 'true') {
-          next()
-        } else {
-          next({ name: 'home' })
-        }
-      }
     },
+    {
+      path: "/PaymobFailure",
+      name: "PaymobFailure",
+      component: () => import("../views/generalViews/PaymobFailure.vue"),
+      meta: { requredAuth: true, userType: "Any" },
+    },
+    {
+      path: "/PaymobCallBack",
+      name: "PaymobCallBack",
+      component: () => import("../views/generalViews/PaymobCallBack.vue"),
+      meta: { requredAuth: true, userType: "Any" },
+    },
+
+
+
+
     {
       path: "/Checkout",
       name: "Checkout",
@@ -155,7 +166,7 @@ const router = createRouter({
       component: () => import("@/views/parentViews/childrenAnalysis.vue"),
       meta: { requredAuth: true, userType: "Parent" },
     },
-    
+
     {
       path: "/viewChildAnalysis",
       name: "viewChildAnalysis",

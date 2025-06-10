@@ -54,7 +54,7 @@ class Enrollment(BaseModel):
     id:Optional[str] = ''
     student_id:Optional[str]=''
     course_id:str
-    created_at:datetime
+    created_at: Optional[datetime | str]=datetime.now()    
     progress:Optional[Progress]={}
     is_completed:Optional[bool]=False
     

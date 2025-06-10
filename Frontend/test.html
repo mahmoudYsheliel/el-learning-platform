@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Pixel</title>
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Paymob Styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/paymob-pixel@latest/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/paymob-pixel@latest/main.css">
+
+  <style>
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    #paymob-elements {
+      width: 30%;
+    }
+
+    #payFromOutsideButton {
+      padding: 0.5rem;
+      background-color: blue;
+      color: white;
+      border-radius: 0.2rem;
+    }
+
+    .header {
+      padding: 1rem;
+      background-color: rgb(233, 255, 207);
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">Company Paymob</div>
+
+  <div class="wrapper">
+    <div class="content">
+      <div id="paymob-elements"></div>
+      <button id="payFromOutsideButton">Pay From Outside Button</button>
+    </div>
+  </div>
+
+  <div class="footer"></div>
+
+  <!-- Paymob Pixel Script -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/paymob-pixel@latest/main.js"></script>
+
+  <!-- Google Pay Script (if needed) -->
+  <script src="https://pay.google.com/gp/p/js/pay.js"></script>
+
+  <script>
+    window.onload = () => {
+      const button = document.getElementById('payFromOutsideButton');
+      button?.addEventListener('click', () => {
+        const event = new Event('payFromOutside');
+        window.dispatchEvent(event);
+      });
+
+      new Pixel({
+        publicKey: 'egy_pk_test_v06EzS5YfHqzdqBfpMhiZOsG1QNjmZZE', // Replace with your live public key
+        clientSecret: 'egy_csk_test_e9856f42cfc8cbf7f59bfea58ce7247a', // Replace with your live client secret
+        paymentMethods: ['card', 'google-pay', 'apple-pay'],
+        elementId: 'paymob-elements',
+        disablePay: false,
+        showSaveCard: true,
+        forceSaveCard: true,
+
+        beforePaymentComplete: async (paymentMethod) => {
+          console.log('Before payment start');
+          console.log(paymentMethod);
+          await new Promise(res => setTimeout(res, 5000));
+          console.log('Before payment end');
+          return true;
+        },
+
+        afterPaymentComplete: async (response) => {
+          console.log('After payment');
+          console.log(response);
+        },
+
+        onPaymentCancel: () => {
+          console.log('Payment has been canceled');
+        },
+
+        cardValidationChanged: (isValid) => {
+          console.log("Card is valid?", isValid);
+        },
+
+        customStyle: {
+          Font_Family: 'Gotham',
+          Font_Size_Label: '16',
+          Font_Size_Input_Fields: '16',
+          Font_Size_Payment_Button: '14',
+          Font_Weight_Label: 400,
+          Font_Weight_Input_Fields: 200,
+          Font_Weight_Payment_Button: 600,
+          Color_Container: '#FFF',
+          Color_Border_Input_Fields: '#D0D5DD',
+          Color_Border_Payment_Button: '#A1B8FF',
+          Radius_Border: '8',
+          Color_Disabled: '#A1B8FF',
+          Color_Error: '#CC1142',
+          Color_Primary: '#144DFF',
+          Color_Input_Fields: '#FFF',
+          Text_Color_For_Label: '#000',
+          Text_Color_For_Payment_Button: '#FFF',
+          Text_Color_For_Input_Fields: '#000',
+          Color_For_Text_Placeholder: '#667085',
+          Width_of_Container: '100%',
+          Vertical_Padding: '40',
+          Vertical_Spacing_between_components: '18',
+          Container_Padding: '0'
+        }
+      });
+    };
+  </script>
+</body>
+</html>

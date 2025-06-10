@@ -1275,6 +1275,10 @@ https://www.traceedtech.com. من خلال الوصول إلى هذا الموق
     en:'Your Request Completed Successfully',
     ar:'تم إكمال طلبك بنجاح'
   },
+  enrollFailed:{
+    en:'Your Request Failed',
+    ar:'لقد فشل طلبك'
+  },
   orderSummary:{
     en:'Order Summary',
     ar:'ملخص الطلب'
