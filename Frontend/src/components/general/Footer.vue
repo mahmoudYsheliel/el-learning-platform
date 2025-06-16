@@ -73,9 +73,9 @@ programRequester.callApi().then((res) => {
     </div>
     <div style="display: flex; justify-content: space-between; gap: 5rem;margin-top: 2rem;">{{ selectLang(translationModule.copyRight) }}
       <div style="display: flex; gap: 2rem;">
-        <span style="cursor: pointer;" @click="router.push('PrivacyPolicy')"> {{ selectLang(translationModule.privacy) }}</span>
-        <span style="cursor: pointer;" @click="router.push('TermConditions')"> {{ selectLang(translationModule.terms) }}</span>
-        <span style="cursor: pointer;" @click="router.push('RefundPolicy')"> {{ selectLang(translationModule.refundPolicy) }}</span>
+        <span style="cursor: pointer;" @click="router.push('/PrivacyPolicy')"> {{ selectLang(translationModule.privacy) }}</span>
+        <span style="cursor: pointer;" @click="router.push('/TermConditions')"> {{ selectLang(translationModule.terms) }}</span>
+        <span style="cursor: pointer;" @click="router.push('/RefundPolicy')"> {{ selectLang(translationModule.refundPolicy) }}</span>
       </div>
     </div>
     <!-- <div class="copyRight">
