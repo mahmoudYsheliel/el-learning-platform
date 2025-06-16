@@ -1,7 +1,7 @@
 from models.simulation import Simulation
 from models.runtime import ServiceResponse
 from database.mongo_driver import  get_database,validate_bson_id
-
+from datetime import datetime
 
 
 async def create_simulation(simulation: Simulation) -> ServiceResponse:
@@ -65,8 +65,8 @@ async def get_simulation(simulation_id:str,userId:str)-> ServiceResponse:
         course_id = await get_database().get_collection('course').find_one({'chapters.materials.Id':simulation_id},{'_id':1})
         if not course_id:
             return ServiceResponse(status_code=400, msg='This simulation not Found in any Course')
-        enrollmet_id = await get_database().get_collection('enrollment').find_one({'course_id':str(course_id['_id']),'student_id':str(userId)},{'_id':1})
-        if not enrollmet_id:
+        enrollment = await get_database().get_collection('enrollment').find_one({'course_id':str(course_id['_id']),'student_id':str(userId)},{'_id':1,'end_date':1})
+        if not (enrollment and (not enrollment['end_date'] or datetime.strptime(enrollment['end_date'], "%Y-%m-%d") >= datetime.now().utcnow())):
             return ServiceResponse(status_code=400, msg='This Course is not Available for This Student')
 
         simulation = await get_database().get_collection('simulation').find_one({'_id':bson_id}, {

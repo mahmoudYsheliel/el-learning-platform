@@ -57,6 +57,7 @@ class Enrollment(BaseModel):
     created_at: Optional[datetime | str]=datetime.now()    
     progress:Optional[Progress]={}
     is_completed:Optional[bool]=False
+    end_date: Optional[str] = None
     
     
     

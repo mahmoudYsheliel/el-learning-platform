@@ -11,7 +11,7 @@ router = APIRouter()
 
 @router.post('/get_enrollment') 
 async def get_enrollments(course_id:str=Body(embed=True),userId:str = Depends(auth_user))-> ServiceResponse:
-    res = await enrollment_database.get_enrollment(course_id,userId)
+    res = await enrollment_database.get_enrollment(course_id,str(userId))
     return res
 
 

@@ -44,6 +44,12 @@ const router = createRouter({
       meta: { requredAuth: false, userType: "Any" },
     },
     {
+      path: "/RefundPolicy",
+      name: "RefundPolicy",
+      component: () => import("../views/generalViews/RefundPolicy.vue"),
+      meta: { requredAuth: false, userType: "Any" },
+    },
+    {
       path: "/forgotPassword/:token?",
       name: "forgotPassword",
       component: () => import("../views/generalViews/forgotPassword.vue"),

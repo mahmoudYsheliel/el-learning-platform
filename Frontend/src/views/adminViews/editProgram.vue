@@ -108,6 +108,7 @@ function addCourse() {
 }
 function addTrack() {
   tracks.value.push({
+    id: Math.floor(Math.random() * Number(1e9)),
     title: {
       en: 'New Track',
       ar: ''
@@ -178,7 +179,7 @@ function updateProgram() {
     for (let i = 0; i < track?.levels?.length; i++) {
       for (let j = 0; j < track?.levels[i]?.courses?.length; j++) {
         track.levels[i].courses[j] = courses.value?.find((course: any) => {
-          return course?.id == track.levels[i].courses[j].id
+          return course?.id == track.levels[i].courses[j]?.id
         })?.id
       }
     }

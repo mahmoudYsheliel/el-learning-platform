@@ -19,7 +19,8 @@ from routes import (
     project_api,
     activity_api,
     otp_api,
-    paymob_api
+    paymob_api,
+    subscription_api
 )
 
 
@@ -56,6 +57,7 @@ app.include_router(project_api.router)
 app.include_router(activity_api.router)
 app.include_router(otp_api.router)
 app.include_router(paymob_api.router)
+app.include_router(subscription_api.router)
 
 
     

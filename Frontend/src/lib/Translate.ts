@@ -1291,7 +1291,10 @@ https://www.traceedtech.com. من خلال الوصول إلى هذا الموق
     en:'OTP Code is Wrong',
     ar:'رمز OTP خاطئ'
   },
-
+  refundPolicy:{
+    en:'Refund Policy',
+    ar:'سياسة الاسترداد'
+  }
 
 
 };

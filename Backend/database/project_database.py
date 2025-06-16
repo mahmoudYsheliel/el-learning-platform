@@ -1,6 +1,7 @@
 from models.project import Project
 from models.runtime import ServiceResponse
 from database.mongo_driver import  get_database,validate_bson_id
+from datetime import datetime
 
 
 
@@ -65,8 +66,8 @@ async def get_project(project_id:str,userId:str)-> ServiceResponse:
         course_id = await get_database().get_collection('course').find_one({'chapters.materials.Id':project_id},{'_id':1})
         if not course_id:
             return ServiceResponse(status_code=400, msg='This project not Found in any Course')
-        enrollmet_id = await get_database().get_collection('enrollment').find_one({'course_id':str(course_id['_id']),'student_id':str(userId)},{'_id':1})
-        if not enrollmet_id:
+        enrollment = await get_database().get_collection('enrollment').find_one({'course_id':str(course_id['_id']),'student_id':str(userId)},{'_id':1,'end_date':1})
+        if not (enrollment and (not enrollment['end_date'] or datetime.strptime(enrollment['end_date'], "%Y-%m-%d") >= datetime.now().utcnow())):
             return ServiceResponse(status_code=400, msg='This Course is not Available for This Student')
 
         project = await get_database().get_collection('project').find_one({'_id':bson_id}, {

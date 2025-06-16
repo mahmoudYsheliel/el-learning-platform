@@ -2,7 +2,7 @@ from models.enrollments import Enrollment, RequestEnrollment, AddProgress, Comme
 from models.runtime import ServiceResponse
 from database.mongo_driver import get_database, validate_bson_id
 from lib.email_service import send_email
-
+from datetime import datetime, timezone
 
 async def create_enrollment(enrollment: Enrollment) -> ServiceResponse:
 
@@ -95,56 +95,126 @@ async def get_enrollment(course_id: str, user_id: str) -> ServiceResponse:
         .get_collection("enrollment")
         .find_one(
             {"student_id": str(user_id), "course_id": course_id},
-            {"_id": 0, "id": {"$toString": "$_id"}, "progress": 1, "is_completed": 1},
+            {"_id": 0, "id": {"$toString": "$_id"}, "progress": 1, "is_completed": 1, 'end_date': 1},
         )
     )
-    if not enrollment:
+    if enrollment and (not enrollment['end_date'] or datetime.strptime(enrollment['end_date'], "%Y-%m-%d") >= datetime.now().utcnow()):
+        return ServiceResponse(data={"enrollment": enrollment})
+
+    all_subscriptions = await get_database().get_collection('subscription').find({'user_id':user_id}).to_list(length=None)
+
+    if not (all_subscriptions and len(all_subscriptions) > 0):
         return ServiceResponse(
             success=False, status_code=404, msg="enrollment Not Found"
         )
-    return ServiceResponse(data={"enrollment": enrollment})
+    
+
+    for sub in all_subscriptions:
+        sub_plan = await get_database().get_collection('subscription_plan').find_one({'_id':validate_bson_id(sub['subscription_plan_id'])})
+        program = await get_database().get_collection('program').find_one({
+            "_id": validate_bson_id(sub_plan['program_id']),
+            "tracks": {
+                "$elemMatch": {
+                    "id": int(sub_plan['track_id']),
+                    "$or": [
+                        {"courses": course_id},
+                        {"levels.courses": course_id}
+                    ]
+                }
+            }
+        })
+        if program and datetime.strptime(sub['end_date'], "%Y-%m-%d") >= datetime.now().utcnow():
+            new_enrollment = Enrollment(student_id=user_id, course_id=course_id, end_date=sub['end_date'])
+            mdb_result = await get_database().get_collection('enrollment').insert_one(new_enrollment.model_dump())
+            if mdb_result.inserted_id:
+                return ServiceResponse(data={"enrollment_id": str(mdb_result.inserted_id)})
+
+    return ServiceResponse(
+        success=False, status_code=404, msg="enrollment Not Found"
+    )
 
 
-async def calc_completion(enrollment_id:str):
-    enrollment = await get_database().get_collection('enrollment').find_one({'_id':validate_bson_id(enrollment_id)},{'_id':0,'course_id':1,'progress':1,'is_completed':1})
-    course = await get_database().get_collection('course').find_one({'_id':validate_bson_id(enrollment['course_id'])},{'_id':0,'chapters':1})
-    total_material_count=0
-    completed_count=0
+async def calc_completion(enrollment_id: str):
+    enrollment = await get_database().get_collection('enrollment').find_one({'_id': validate_bson_id(enrollment_id)}, {'_id': 0, 'course_id': 1, 'progress': 1, 'is_completed': 1})
+    course = await get_database().get_collection('course').find_one({'_id': validate_bson_id(enrollment['course_id'])}, {'_id': 0, 'chapters': 1})
+    total_material_count = 0
+    completed_count = 0
     for chapter in course['chapters']:
         for mat in chapter['materials']:
-            total_material_count= total_material_count+1
-            if mat['type']=='Lesson' and enrollment.get('progress', {}).get('lessons_completed'):
+            total_material_count = total_material_count + 1
+            if mat['type'] == 'Lesson' and enrollment.get('progress', {}).get('lessons_completed'):
                 for progress in enrollment['progress']['lessons_completed']:
-                    if progress['lesson_id']==mat['Id']:
-                        completed_count=completed_count+1
+                    if progress['lesson_id'] == mat['Id']:
+                        completed_count = completed_count + 1
                         break
-            if mat['type']=='Activity' and  enrollment.get('progress', {}).get('activities_completed'):
+            if mat['type'] == 'Activity' and enrollment.get('progress', {}).get('activities_completed'):
                 for progress in enrollment['progress']['activities_completed']:
-                    if progress['activity_id']==mat['Id']:
-                        completed_count=completed_count+1
+                    if progress['activity_id'] == mat['Id']:
+                        completed_count = completed_count + 1
                         break
-            if mat['type']=='Simulation' and enrollment.get('progress', {}).get('simulations_completed'):
+            if mat['type'] == 'Simulation' and enrollment.get('progress', {}).get('simulations_completed'):
                 for progress in enrollment['progress']['simulations_completed']:
-                    if progress['simulation_id']==mat['Id']:
-                        completed_count=completed_count+1
+                    if progress['simulation_id'] == mat['Id']:
+                        completed_count = completed_count + 1
                         break
-            if mat['type']=='Project' and enrollment.get('progress', {}).get('projects_completed'):
+            if mat['type'] == 'Project' and enrollment.get('progress', {}).get('projects_completed'):
                 for progress in enrollment['progress']['projects_completed']:
-                    if progress['project_id']==mat['Id']:
-                        completed_count=completed_count+1
+                    if progress['project_id'] == mat['Id']:
+                        completed_count = completed_count + 1
                         break
-            if mat['type']=='Quiz' and enrollment.get('progress', {}).get('quizes_completed'):
+            if mat['type'] == 'Quiz' and enrollment.get('progress', {}).get('quizes_completed'):
                 for progress in enrollment['progress']['quizes_completed']:
-                    if progress['quiz_id']==mat['Id']:
-                        completed_count=completed_count+1
+                    if progress['quiz_id'] == mat['Id']:
+                        completed_count = completed_count + 1
                         break
-             
-    if total_material_count==completed_count:
-        result = await get_database().get_collection('enrollment').update_one({'_id':validate_bson_id(enrollment_id)},{'$set':{'is_completed':True}})
+
+    if total_material_count == completed_count:
+        result = await get_database().get_collection('enrollment').update_one({'_id': validate_bson_id(enrollment_id)}, {'$set': {'is_completed': True}})
     else:
-        result = await get_database().get_collection('enrollment').update_one({'_id':validate_bson_id(enrollment_id)},{'$set':{'is_completed':False}})
+        result = await get_database().get_collection('enrollment').update_one({'_id': validate_bson_id(enrollment_id)}, {'$set': {'is_completed': False}})
+
 
 async def get_all_enrollments(user_id: str):
+    all_subscriptions = await get_database().get_collection('subscription').find({'user_id':str(user_id)}).to_list(length=None)
+    print(user_id)
+    if (all_subscriptions and len(all_subscriptions) > 0):
+        for sub in all_subscriptions:
+            sub_plan = await get_database().get_collection('subscription_plan').find_one({'_id':validate_bson_id(sub['subscription_plan_id'])})
+            program = await get_database().get_collection('program').find_one({'_id':validate_bson_id(sub_plan['program_id'])})
+            if not program:
+                print('program not found')
+                continue
+            track = next((t for t in program.get("tracks", []) if t["id"] == sub_plan['track_id']), None)
+            if not track:
+                print('track not found')
+                continue
+            course_ids = set(track.get("courses", []))
+            for level in track.get("levels", []):
+                course_ids.update(level.get("courses", []))
+            print(course_ids)
+
+            
+            for course_id in course_ids:
+                enrollment = await get_database().get_collection("enrollment").find_one({"student_id": str(user_id), "course_id": course_id}, {"_id": 1, 'end_date': 1})
+
+                if enrollment and enrollment['end_date'] == None:
+                    continue
+                
+                if enrollment and enrollment['end_date']:
+                    await get_database().get_collection('enrollment').update_one({'_id':enrollment['_id']},{'$set':{'end_date':sub['end_date']}})
+                    continue
+
+                if not enrollment:
+                    new_enrollment = Enrollment(student_id=str(user_id), course_id=course_id, end_date=sub['end_date'])
+                    await get_database().get_collection('enrollment').insert_one(new_enrollment.model_dump())
+                    continue
+                
+        
+    
+    
+    
+    
+    
     bson_student_id = validate_bson_id(user_id)
     if bson_student_id:
         enrollments = (
@@ -170,7 +240,6 @@ async def get_all_enrollments(user_id: str):
     return ServiceResponse(success=False, status_code=404, msg="enrollments Not Found")
 
 
-
 async def get_admin_enrollments():
     enrollments = (
         await get_database()
@@ -182,10 +251,10 @@ async def get_admin_enrollments():
                 "id": {"$toString": "$_id"},
                 "course_id": 1,
                 "progress": 1,
-                "student_id":1,
+                "student_id": 1,
                 "is_completed": 1,
-                "created_at":1
-              
+                "created_at": 1
+
             },
         )
         .to_list(length=None)
@@ -194,7 +263,6 @@ async def get_admin_enrollments():
     if enrollments:
         return ServiceResponse(data={"enrollments": enrollments})
     return ServiceResponse(success=False, status_code=404, msg="enrollments Not Found")
-
 
 
 async def add_progress(
@@ -208,7 +276,7 @@ async def add_progress(
     result = (
         await get_database()
         .get_collection("enrollment")
-        .find_one({"_id": bson_enrolment_id}, {"student_id": 1,"course_id": 1})
+        .find_one({"_id": bson_enrolment_id}, {"student_id": 1, "course_id": 1})
     )
     if not result:
         return ServiceResponse(
@@ -465,11 +533,11 @@ async def request_enrollment(requesr: RequestEnrollment) -> ServiceResponse:
         .insert_one(requesr.model_dump())
     )
     requesrt_enrollment_id = str(mdb_result.inserted_id)
-    user = await get_database().get_collection("user").find_one({"_id":validate_bson_id(requesr.parent_id)}) 
+    user = await get_database().get_collection("user").find_one({"_id": validate_bson_id(requesr.parent_id)})
     if requesr.package_type == "course":
-        course = await get_database().get_collection("course").find_one({"_id":validate_bson_id(requesr.course_id)}) 
+        course = await get_database().get_collection("course").find_one({"_id": validate_bson_id(requesr.course_id)})
     if requesr.package_type == "plan":
-        course = await get_database().get_collection("plan").find_one({"_id":validate_bson_id(requesr.course_id)}) 
+        course = await get_database().get_collection("plan").find_one({"_id": validate_bson_id(requesr.course_id)})
     msg = f"""
     There is a new enrollment request:
     email: {user["email"]}
@@ -478,7 +546,7 @@ async def request_enrollment(requesr: RequestEnrollment) -> ServiceResponse:
     price: {course["price"]}
     """
     if requesrt_enrollment_id:
-        send_email('Enrollment Request',msg,"s-mahmoud.sheliel@zewailcity.edu.eg")
+        send_email('Enrollment Request', msg, "s-mahmoud.sheliel@zewailcity.edu.eg")
         return ServiceResponse(data={"request": requesr})
     return ServiceResponse(success=False, msg="couln't add enrollment", status_code=409)
 

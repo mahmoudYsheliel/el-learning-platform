@@ -1,6 +1,7 @@
 from models.quiz import Quiz, Question, Choice
 from models.runtime import ServiceResponse
 from database.mongo_driver import get_database, validate_bson_id
+from datetime import datetime
 
 
 async def create_quiz(quiz: Quiz) -> ServiceResponse:
@@ -83,18 +84,9 @@ async def get_quiz(quiz_id: str, userId: str) -> ServiceResponse:
             return ServiceResponse(
                 status_code=400, msg="This Quiz not Found in any Course"
             )
-        enrollmet_id = (
-            await get_database()
-            .get_collection("enrollment")
-            .find_one(
-                {"course_id": str(course_id["_id"]), "student_id": str(userId)},
-                {"_id": 1},
-            )
-        )
-        if not enrollmet_id:
-            return ServiceResponse(
-                status_code=400, msg="This Course is not Available for This Student"
-            )
+        enrollment = await get_database().get_collection('enrollment').find_one({'course_id':str(course_id['_id']),'student_id':str(userId)},{'_id':1,'end_date':1})
+        if not (enrollment and (not enrollment['end_date'] or datetime.strptime(enrollment['end_date'], "%Y-%m-%d") >= datetime.now().utcnow())):
+            return ServiceResponse(status_code=400, msg='This Course is not Available for This Student')
 
         quiz = (
             await get_database()

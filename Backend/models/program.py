@@ -17,7 +17,7 @@ class Level(BaseModel):
     courses: Optional[list[str]] = []
 
 class Track(BaseModel):
-    id:Optional[int]=0
+    id:int
     title: TwoLang
     description: TwoLang
     female_image:Optional[str]=None
@@ -26,6 +26,8 @@ class Track(BaseModel):
     video:Optional[str]=None
     levels: Optional[list[Level]] = []
     courses: Optional[list[str]] = []
+    min_age:Optional[int]=0
+    max_age:Optional[int]=0
 
 class Program(BaseModel):
     id:Optional[str] = None
