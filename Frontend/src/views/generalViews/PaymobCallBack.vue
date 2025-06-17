@@ -57,6 +57,7 @@ onMounted(async () => {
         }
         const paymentVerificationRequest = new HttpRequester('verify_order')
         paymentVerificationRequest.callApi({ payment_verification: data }).then(res => {
+
             if (res?.success) {
                 window.location.href = '/#/PaymobSuccess'
             } else {

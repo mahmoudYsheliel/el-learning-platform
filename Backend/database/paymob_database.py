@@ -5,10 +5,8 @@ from models.runtime import ServiceResponse
 from database.mongo_driver import get_database, validate_bson_id
 import os
 from dotenv import load_dotenv
-import requests
 from datetime import datetime,timedelta
 import httpx
-import json
 import hmac
 import hashlib
 from models.subscription import Subscription
@@ -27,10 +25,10 @@ async def get_payment_link(paymob_data: Paymob) -> ServiceResponse:
         return ServiceResponse(msg='bson id error', success=False)
 
     if order_type == 'subscription_plan':
-        plan = await get_database().get_collection('subscription_plan').find_one({'_id': order_bson_id}, {'price': 1, 'title': 1})
-        # if not plan:
-        #     return ServiceResponse(msg='plan not found', success=False)
-        amount =  500
+        plan = await get_database().get_collection('subscription_plan').find_one({'_id': order_bson_id}, {'price': 1, 'title': 1,'paymob_id':1})
+        if not plan:
+            return ServiceResponse(msg='plan not found', success=False)
+        amount =  plan['price']
 
     if order_type == 'course':
         course = await get_database().get_collection('course').find_one({'_id': order_bson_id}, {'price': 1, 'title': 1})
@@ -65,19 +63,19 @@ async def get_payment_link(paymob_data: Paymob) -> ServiceResponse:
     payload = {
         'amount': amount * 100,
         'currency': 'EGP',
-        #'payment_methods': [5110299,5110298],
-        'payment_methods': [5078771,5084891],
+        'payment_methods': [5110299,5110298],
+        #'payment_methods': [5078771,5084891],
         'billing_data': {
             'first_name': paymob_data.first_name,
             'last_name': paymob_data.last_name,
             'phone_number': paymob_data.phone_number,
             'email':user['email']
         },
-        "redirection_url": "https://www.traceedtech.com/#/PaymobCallBack"
+        "redirection_url": "https://traceedtech.com/#/PaymobCallBack"
     }
     if paymob_data.type == 'subscription_plan':
-        payload['subscription_plan_id'] = paymob_data.plan_course_id
-        payload['payment_methods'] = [5078771]
+        payload['subscription_plan_id'] = plan['paymob_id']
+        payload['payment_methods'] = [5110299]
         payload['subscription_start_date'] = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
         
     async with httpx.AsyncClient() as client:
@@ -110,10 +108,14 @@ async def verify_order(payment_verification:PaymentVerification ):
         return ServiceResponse(success=False,msg='order not found',data={'result': False})
     if order['type'] == 'course':
         enrollment = Enrollment(student_id = order['user_id'],course_id = order['plan_course_id'])
-        result = await enrollment_database.create_enrollment(enrollment)
-        await get_database().get_collection('order').update_one({'order_id':payment_verification.order_id},{'$set':{'is_success':True}})
+        mdb_result = await get_database().get_collection("enrollment").find_one({"student_id": enrollment.student_id, "course_id": enrollment.course_id}, {"id": {"$toString": "$_id"}})
+        if mdb_result:
+            result = await enrollment_database.update_enrollment(enrollment_id=mdb_result['id'],update={'end_date':None})
+        else:
+            result = await enrollment_database.create_enrollment(enrollment)
+            await get_database().get_collection('order').update_one({'order_id':payment_verification.order_id},{'$set':{'is_success':True}})
         return result
-    return ServiceResponse(success=False)
+    return ServiceResponse(success=True)
 
     
     
@@ -171,17 +173,6 @@ async def create_subscription_plan(plan:SubscriptionPlan):
     return ServiceResponse(msg = 'could not add new subscription plan',success=False)
 
 
-async def test(user_id:str):
-    auth_token = await get_auth_token()
-    if not auth_token.success:
-        return ServiceResponse(success=False)
-    paymob_data = Paymob(user_id=str(user_id),plan_course_id=3195,first_name='mahmoud',last_name='yasser',type='subscription_plan',phone_number='01017897738',promo_code='',)
-    res =  await get_payment_link(paymob_data)
-    return res
-
-
-
-
 
 async def paymob_subscribe_callback(data:WebhookPayload):
     paymob_plan_id = data['subscription_data']['plan_id']
@@ -193,8 +184,8 @@ async def paymob_subscribe_callback(data:WebhookPayload):
     user = await get_database().get_collection('user').find_one({'email':email},{'id':{'$toString':'$_id'}})
     subscription_plan_id = str(subscription_plan['_id'])
     if not (user and user['id']):
-        print('email is in correct')
-        return ServiceResponse('email is in correct')
+        print('email is incorrect')
+        return ServiceResponse('email is incorrect')
     user_id = user['id']
     subscription = await get_database().get_collection('subscription').find_one({'user_id':user_id,'subscription_plan_id':subscription_plan_id},{'_id':1})
     
@@ -217,39 +208,40 @@ async def paymob_subscribe_callback(data:WebhookPayload):
                                     updated_at = today_str,
                                     status= 'active')
         mdb_result = await get_database().get_collection('subscription').insert_one(subscription.model_dump())
-        if not mdb_result.inserted_id:
-            print('could not add subscription')
-            return ServiceResponse(success=False,msg='could not add subscription')
+        if mdb_result.inserted_id:
+            return ServiceResponse(data={'subscription_id':str(mdb_result.inserted_id)})
+        print('could not add subscription')
+        return ServiceResponse(success=False,msg='could not add subscription')
 
-    program = await get_database().get_collection('program').find_one({'_id':validate_bson_id(subscription_plan['program_id'])})
-    if not program:
-        print('program not found')
-        return ServiceResponse(success=False,msg='program not found')
-    track = next((t for t in program.get("tracks", []) if t["id"] == subscription_plan['track_id']), None)
-    if not track:
-        print('track not found')
-        return ServiceResponse(success=False,msg='track not found')
-    course_ids = set(track.get("courses", []))
+    # program = await get_database().get_collection('program').find_one({'_id':validate_bson_id(subscription_plan['program_id'])})
+    # if not program:
+    #     print('program not found')
+    #     return ServiceResponse(success=False,msg='program not found')
+    # track = next((t for t in program.get("tracks", []) if t["id"] == subscription_plan['track_id']), None)
+    # if not track:
+    #     print('track not found')
+    #     return ServiceResponse(success=False,msg='track not found')
+    # course_ids = set(track.get("courses", []))
 
-    for level in track.get("levels", []):
-        course_ids.update(level.get("courses", []))
+    # for level in track.get("levels", []):
+    #     course_ids.update(level.get("courses", []))
     
     
-    for course_id in course_ids:
-        enrollment = await get_database().get_collection("enrollment").find_one({"student_id": str(user_id), "course_id": course_id}, {"_id": 1, 'end_date': 1})
+    # for course_id in course_ids:
+    #     enrollment = await get_database().get_collection("enrollment").find_one({"student_id": str(user_id), "course_id": course_id}, {"_id": 1, 'end_date': 1})
 
-        if enrollment and enrollment['end_date'] == None:
-            continue
+    #     if enrollment and enrollment['end_date'] == None:
+    #         continue
         
-        if enrollment and enrollment['end_date']:
-            await get_database().get_collection('enrollment').update_one({'_id':enrollment['_id']},{'$set':{'end_date':end_date}})
-            continue
+    #     if enrollment and enrollment['end_date']:
+    #         await get_database().get_collection('enrollment').update_one({'_id':enrollment['_id']},{'$set':{'end_date':end_date}})
+    #         continue
 
-        if not enrollment:
-            new_enrollment = Enrollment(student_id=user_id, course_id=course_id, end_date=end_date)
-            await get_database().get_collection('enrollment').insert_one(new_enrollment.model_dump())
-            continue
+    #     if not enrollment:
+    #         new_enrollment = Enrollment(student_id=user_id, course_id=course_id, end_date=end_date)
+    #         await get_database().get_collection('enrollment').insert_one(new_enrollment.model_dump())
+    #         continue
         
-    return ServiceResponse(msg='enrollment updated',success=True)
+    # return ServiceResponse(msg='enrollment updated',success=True)
         
             

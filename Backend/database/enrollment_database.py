@@ -4,48 +4,20 @@ from database.mongo_driver import get_database, validate_bson_id
 from lib.email_service import send_email
 from datetime import datetime, timezone
 
-async def create_enrollment(enrollment: Enrollment) -> ServiceResponse:
 
-    mdb_result = (
-        await get_database()
-        .get_collection("enrollment")
-        .find_one(
-            {"student_id": enrollment.student_id, "course_id": enrollment.course_id},
-            {
-                "id": {"$toString": "$_id"},
-            },
-        )
-    )
+async def create_enrollment(enrollment: Enrollment) -> ServiceResponse:
+    mdb_result = await get_database().get_collection("enrollment").find_one({"student_id": enrollment.student_id, "course_id": enrollment.course_id}, {"id": {"$toString": "$_id"}})
     if mdb_result:
         return ServiceResponse(data={"enrollment_id": mdb_result["id"]})
-
     course_bson = validate_bson_id(enrollment.course_id)
     if not course_bson:
-        return ServiceResponse(
-            success=False, msg="couln't find course", status_code=409
-        )
-
-    course = (
-        await get_database()
-        .get_collection("course")
-        .find_one({"_id": course_bson}, {"number_of_enrollments": 1})
-    )
+        return ServiceResponse(success=False, msg="couln't find course", status_code=409)
+    course = await get_database().get_collection("course").find_one({"_id": course_bson}, {"number_of_enrollments": 1})
     if not course:
-        return ServiceResponse(
-            success=False, msg="couln't find course", status_code=409
-        )
-
+        return ServiceResponse(success=False, msg="couln't find course", status_code=409)
     else:
-        await get_database().get_collection("course").update_one(
-            {"_id": course_bson},
-            {"$set": {"number_of_enrollments": course["number_of_enrollments"] + 1}},
-        )
-
-    mdb_result = (
-        await get_database()
-        .get_collection("enrollment")
-        .insert_one(enrollment.model_dump())
-    )
+        await get_database().get_collection("course").update_one({"_id": course_bson}, {"$set": {"number_of_enrollments": course["number_of_enrollments"] + 1}})
+    mdb_result = await get_database().get_collection("enrollment").insert_one(enrollment.model_dump())
     enrollment_id = str(mdb_result.inserted_id)
     if enrollment_id:
         return ServiceResponse(data={"enrollment_id": enrollment_id})
@@ -77,42 +49,36 @@ async def update_enrollment(enrollment_id: str, update: dict) -> ServiceResponse
     if not update_patch_fields.issubset(enrollment_model_fields):
         return ServiceResponse(status_code=400, msg="Invalid enrollment Update Keys")
 
-    result = (
-        await get_database()
-        .get_collection("enrollment")
-        .update_one({"_id": bson_id}, {"$set": update})
-    )
+    result =  await get_database().get_collection("enrollment").update_one({"_id": bson_id}, {"$set": update})
+    
     if not result.modified_count:
-        return ServiceResponse(
-            success=False, status_code=404, msg="enrollment not Found"
-        )
+        return ServiceResponse(success=False, status_code=404, msg="enrollment not Found")
     return ServiceResponse(msg="OK")
 
 
 async def get_enrollment(course_id: str, user_id: str) -> ServiceResponse:
-    enrollment = (
-        await get_database()
-        .get_collection("enrollment")
-        .find_one(
-            {"student_id": str(user_id), "course_id": course_id},
-            {"_id": 0, "id": {"$toString": "$_id"}, "progress": 1, "is_completed": 1, 'end_date': 1},
-        )
-    )
+    enrollment = await get_database().get_collection("enrollment").find_one({"student_id": str(user_id), "course_id": course_id},{"_id": 0, "id": {"$toString": "$_id"}, "progress": 1, "is_completed": 1, 'end_date': 1})
+    
     if enrollment and (not enrollment['end_date'] or datetime.strptime(enrollment['end_date'], "%Y-%m-%d") >= datetime.now().utcnow()):
         return ServiceResponse(data={"enrollment": enrollment})
 
-    all_subscriptions = await get_database().get_collection('subscription').find({'user_id':user_id}).to_list(length=None)
+    all_subscriptions = await get_database().get_collection('subscription').find({'user_id': user_id}).to_list(length=None)
 
     if not (all_subscriptions and len(all_subscriptions) > 0):
-        return ServiceResponse(
-            success=False, status_code=404, msg="enrollment Not Found"
-        )
-    
+        return ServiceResponse(success=False, status_code=404, msg="enrollment Not Found")
 
     for sub in all_subscriptions:
-        sub_plan = await get_database().get_collection('subscription_plan').find_one({'_id':validate_bson_id(sub['subscription_plan_id'])})
+        if datetime.strptime(sub['end_date'], "%Y-%m-%d") < datetime.now().utcnow():
+            continue
+        bison_id = validate_bson_id(sub['subscription_plan_id'])
+        if not bison_id:
+            continue
+        sub_plan = await get_database().get_collection('subscription_plan').find_one({'_id': bison_id})
+        bison_id = validate_bson_id(sub_plan['program_id'])
+        if not bison_id:
+            continue
         program = await get_database().get_collection('program').find_one({
-            "_id": validate_bson_id(sub_plan['program_id']),
+            "_id": bison_id,
             "tracks": {
                 "$elemMatch": {
                     "id": int(sub_plan['track_id']),
@@ -123,15 +89,79 @@ async def get_enrollment(course_id: str, user_id: str) -> ServiceResponse:
                 }
             }
         })
-        if program and datetime.strptime(sub['end_date'], "%Y-%m-%d") >= datetime.now().utcnow():
+        if program:
             new_enrollment = Enrollment(student_id=user_id, course_id=course_id, end_date=sub['end_date'])
-            mdb_result = await get_database().get_collection('enrollment').insert_one(new_enrollment.model_dump())
-            if mdb_result.inserted_id:
-                return ServiceResponse(data={"enrollment_id": str(mdb_result.inserted_id)})
+            return create_enrollment(new_enrollment)
 
-    return ServiceResponse(
-        success=False, status_code=404, msg="enrollment Not Found"
-    )
+    return ServiceResponse(success=False, status_code=404, msg="enrollment Not Found")
+
+
+
+async def enroll_subscribed_courses(user_id: str):
+    all_subscriptions = await get_database().get_collection('subscription').find({'user_id': str(user_id)}).to_list(length=None)
+    if (all_subscriptions and len(all_subscriptions) > 0):
+        for sub in all_subscriptions:
+            bison_id = validate_bson_id(sub['subscription_plan_id'])
+            if not bison_id:
+                continue
+            sub_plan = await get_database().get_collection('subscription_plan').find_one({'_id':bison_id})
+            bison_id =  validate_bson_id(sub_plan['program_id'])
+            if not bison_id:
+                continue
+            program = await get_database().get_collection('program').find_one({'_id':bison_id})
+            if not program:
+                print('program not found')
+                continue
+            track = next((t for t in program.get("tracks", []) if t["id"] == sub_plan['track_id']), None)
+            if not track:
+                print('track not found')
+                continue
+            course_ids = set(track.get("courses", []))
+            for level in track.get("levels", []):
+                course_ids.update(level.get("courses", []))
+            for course_id in course_ids:
+                enrollment = await get_database().get_collection("enrollment").find_one({"student_id": str(user_id), "course_id": course_id}, {"_id": 1, 'end_date': 1})
+
+                if enrollment and enrollment['end_date'] == None:
+                    continue
+
+                if enrollment and datetime.strptime(sub['end_date'], "%Y-%m-%d")  >  datetime.strptime(enrollment['end_date'], "%Y-%m-%d")  :
+                    await get_database().get_collection('enrollment').update_one({'_id': enrollment['_id']}, {'$set': {'end_date': sub['end_date']}})
+                    continue
+
+                if not enrollment:
+                    new_enrollment = Enrollment(student_id=str(user_id), course_id=course_id, end_date=sub['end_date'])
+                    await get_database().get_collection('enrollment').insert_one(new_enrollment.model_dump())
+                    continue
+
+
+async def get_all_enrollments(user_id: str):
+    await enroll_subscribed_courses(user_id)
+
+    bson_student_id = validate_bson_id(user_id)
+    if bson_student_id:
+        enrollments = (
+            await get_database()
+            .get_collection("enrollment")
+            .find(
+                {"student_id": str(user_id)},
+                {
+                    "_id": 0,
+                    "id": {"$toString": "$_id"},
+                    "course_id": 1,
+                    "progress": 1,
+                    "is_completed": 1,
+                },
+            )
+            .to_list(length=None)
+        )
+        for enrollment in enrollments:
+            await calc_completion(enrollment['id'])
+
+        if enrollments:
+            return ServiceResponse(data={"enrollments": enrollments})
+    return ServiceResponse(success=False, status_code=404, msg="enrollments Not Found")
+
 
 
 async def calc_completion(enrollment_id: str):
@@ -173,71 +203,6 @@ async def calc_completion(enrollment_id: str):
     else:
         result = await get_database().get_collection('enrollment').update_one({'_id': validate_bson_id(enrollment_id)}, {'$set': {'is_completed': False}})
 
-
-async def get_all_enrollments(user_id: str):
-    all_subscriptions = await get_database().get_collection('subscription').find({'user_id':str(user_id)}).to_list(length=None)
-    print(user_id)
-    if (all_subscriptions and len(all_subscriptions) > 0):
-        for sub in all_subscriptions:
-            sub_plan = await get_database().get_collection('subscription_plan').find_one({'_id':validate_bson_id(sub['subscription_plan_id'])})
-            program = await get_database().get_collection('program').find_one({'_id':validate_bson_id(sub_plan['program_id'])})
-            if not program:
-                print('program not found')
-                continue
-            track = next((t for t in program.get("tracks", []) if t["id"] == sub_plan['track_id']), None)
-            if not track:
-                print('track not found')
-                continue
-            course_ids = set(track.get("courses", []))
-            for level in track.get("levels", []):
-                course_ids.update(level.get("courses", []))
-            print(course_ids)
-
-            
-            for course_id in course_ids:
-                enrollment = await get_database().get_collection("enrollment").find_one({"student_id": str(user_id), "course_id": course_id}, {"_id": 1, 'end_date': 1})
-
-                if enrollment and enrollment['end_date'] == None:
-                    continue
-                
-                if enrollment and enrollment['end_date']:
-                    await get_database().get_collection('enrollment').update_one({'_id':enrollment['_id']},{'$set':{'end_date':sub['end_date']}})
-                    continue
-
-                if not enrollment:
-                    new_enrollment = Enrollment(student_id=str(user_id), course_id=course_id, end_date=sub['end_date'])
-                    await get_database().get_collection('enrollment').insert_one(new_enrollment.model_dump())
-                    continue
-                
-        
-    
-    
-    
-    
-    
-    bson_student_id = validate_bson_id(user_id)
-    if bson_student_id:
-        enrollments = (
-            await get_database()
-            .get_collection("enrollment")
-            .find(
-                {"student_id": str(user_id)},
-                {
-                    "_id": 0,
-                    "id": {"$toString": "$_id"},
-                    "course_id": 1,
-                    "progress": 1,
-                    "is_completed": 1,
-                },
-            )
-            .to_list(length=None)
-        )
-        for enrollment in enrollments:
-            await calc_completion(enrollment['id'])
-
-        if enrollments:
-            return ServiceResponse(data={"enrollments": enrollments})
-    return ServiceResponse(success=False, status_code=404, msg="enrollments Not Found")
 
 
 async def get_admin_enrollments():

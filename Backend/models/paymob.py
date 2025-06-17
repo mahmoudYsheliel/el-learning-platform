@@ -7,7 +7,7 @@ class Paymob(BaseModel):
     id:Optional[str] = None
     user_id:Optional[str] = None
     type: str # 'subscription_plan' | 'course'
-    plan_course_id:str|int
+    plan_course_id:str
     promo_code: str
     first_name: str
     last_name: str
@@ -34,7 +34,7 @@ class SubscriptionPlan(BaseModel):
     id:Optional[str] = None
     frequency:int 
     name: str
-    amount_cents: int
+    price: float
     webhook_url:Optional[str] =  "https://d78d-197-56-39-136.ngrok-free.app/paymob_subscribe_callback"
     reminder_days: Optional[int] = 2
     retrial_days: Optional[int] = 2
