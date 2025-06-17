@@ -35,7 +35,7 @@ class SubscriptionPlan(BaseModel):
     frequency:int 
     name: str
     price: float
-    webhook_url:Optional[str] =  "https://d78d-197-56-39-136.ngrok-free.app/paymob_subscribe_callback"
+    webhook_url:Optional[str] =  "https://www.traceedtech.com/paymob_subscribe_callback"
     reminder_days: Optional[int] = 2
     retrial_days: Optional[int] = 2
     plan_type:Optional[str] = "rent"
