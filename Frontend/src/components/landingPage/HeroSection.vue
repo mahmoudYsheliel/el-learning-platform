@@ -3,11 +3,12 @@ import Button from "primevue/button";
 import "primeicons/primeicons.css";
 import { useRouter } from "vue-router";
 import { selectLang, translationModule } from "@/lib/Translate";
-import { useToken } from "@/stores/token";
+import { useToken,usePersonalInfo } from "@/stores/token";
 
 
 const token = useToken()
 const router = useRouter();
+const personalInfo = usePersonalInfo()
 
 </script>
 <template>
@@ -29,7 +30,7 @@ const router = useRouter();
           {{ selectLang(translationModule.traceDescription) }}
         </p>
         <div class="buttonWrapper">
-          <Button raised :label="selectLang(translationModule.takeTest)" @click="router.push('/signup/Child')" v-if="!token.getIsAuthorized" />
+          <Button raised :label="selectLang(translationModule.takeTest)" @click="token.getIsAuthorized ? router.push(`/analysisQuiz/${personalInfo.getInfo?.notifications[0].analysis_quiz_id}`) :router.push('/signup/Child')" v-if="!token.getIsAuthorized || (token.getIsAuthorized && personalInfo.getInfo?.notifications.some(n => n.status == 'waiting'))" />
           <img style="height: 100%; width: fit-content;" src="/images/STEMLogo.png" alt="">
           <img style="height: 100%; width: fit-content;" src="/images/STEMBest.png" alt="">
           <!-- <p style="color: var(--accent1); margin: 0;font-size: 0.875rem;font-weight: 100;">

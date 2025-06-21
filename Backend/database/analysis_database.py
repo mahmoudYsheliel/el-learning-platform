@@ -77,6 +77,8 @@ async def get_track_recommendation(track_recommendation_id: str) -> ServiceRespo
                 "description": 1,
                 "key_skills": 1,
                 "advice": 1,
+                "program_id":1,
+                "image":1
             },
         )
     )
@@ -328,17 +330,17 @@ def calculate_learning_style(scores: list[dict], learning_styles: dict):
     for learning_style in learning_styles:
         learning_style_obj = {'id': learning_style['id'], 'name': learning_style['name'],'score': 0}
         for dependence in learning_style['sections_dependence']:
-            learning_style_obj['score']+= get_subsection_score(scores,dependence)
-        learning_style_obj['score']/= len(learning_style['sections_dependence'])
+            learning_style_obj['score']+= get_subsection_score(scores,dependence['section']) * dependence['weight']
         learning_style_scores.append(learning_style_obj)
     
     return learning_style_scores
 
 
-async def test_scores(scores:dict) ->ServiceResponse:
+async def test_scores(scores:list[dict]) ->ServiceResponse:
     track_recommendation = (
         await get_database().get_collection("track_recommendation").find({}, {"_id": 0, "id": {"$toString": "$_id"}, "name": 1, "sections_dependence": 1}).to_list(length=None)
     )
+    
     track_recommendation_scores = calculate_learning_style(scores, track_recommendation)
     
     track_recommendation_results = [

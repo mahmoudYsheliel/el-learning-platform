@@ -17,6 +17,10 @@ const analysis = ref();
 const IQResult = ref()
 const learningStyle = ref()
 const recommendTrack = ref()
+const recommendTrack2 = ref()
+const recommendTrack3 = ref()
+
+const selectedTrack = ref()
 const IQSection = ref<any[]>([])
 
 const section1 = ref()
@@ -26,14 +30,16 @@ const section4 = ref()
 const section5 = ref()
 
 const emits = defineEmits(['sections'])
-function getMaxObject(arr: any[]) {
-    let tem = arr[0]
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i]?.score > tem?.score) {
-            tem = arr[i]
-        }
+function getBestIndex(arr: any[], rank: number = 1) {
+    if (!Array.isArray(arr) || arr.length === 0 || rank < 1 || rank > arr.length) {
+        return null
     }
-    return tem
+
+    // Create an array of indices sorted by score descending
+    const sortedIndices = arr
+        .map((_, index) => index)
+        .sort((a, b) => (arr[b]?.score ?? -Infinity) - (arr[a]?.score ?? -Infinity));
+    return arr[sortedIndices[rank - 1]];
 }
 function getAnalysis() {
     const childnAlysisRequester = new HttpRequester("get_analysis");
@@ -52,14 +58,22 @@ function getAnalysis() {
                 }
                 IQResult.value = Math.round(IQResult.value / IQSection.value.length)
 
-                const bestLearningStyle = getMaxObject(analysis.value?.learning_styles_results)
+                const bestLearningStyle = getBestIndex(analysis.value?.learning_styles_results)
 
                 new HttpRequester('get_learning_style').callApi({ id: bestLearningStyle?.learning_style_id }).then(res => {
                     learningStyle.value = res?.data?.learning_style
                 })
 
-                const bestTrack = getMaxObject(analysis.value?.tracks_recommendation_results)
+                const bestTrack = getBestIndex(analysis.value?.tracks_recommendation_results)
                 new HttpRequester('get_tracks_recommendation').callApi({ id: bestTrack?.tracks_recommendation_id }).then(res => {
+                    recommendTrack.value = res?.data?.track_recommendation
+                })
+                const bestTrack2 = getBestIndex(analysis.value?.tracks_recommendation_results)
+                new HttpRequester('get_tracks_recommendation').callApi({ id: bestTrack2?.tracks_recommendation_id }).then(res => {
+                    recommendTrack.value = res?.data?.track_recommendation
+                })
+                const bestTrack3 = getBestIndex(analysis.value?.tracks_recommendation_results)
+                new HttpRequester('get_tracks_recommendation').callApi({ id: bestTrack3?.tracks_recommendation_id }).then(res => {
                     recommendTrack.value = res?.data?.track_recommendation
                 })
 
@@ -144,7 +158,7 @@ const track_image = computed(() => {
 
                 <div class="scores ">
                     <div v-for="section in IQSection" class="subset_score">
-                        <knob :min="40" :max="160" :modelValue="section.total_score" style="display: inline;" :size="120" />
+                        <knob readonly :min="40" :max="160" :modelValue="section.total_score" style="display: inline;" :size="120" />
                         <h4 style="margin: 0; translate:0 -0.75rem ;">{{ section.name }}</h4>
                     </div>
                 </div>
@@ -157,7 +171,7 @@ const track_image = computed(() => {
                         <h2>{{ selectLang(IQNames[section.name as subsets]) }} ({{ section.total_score }}/160):</h2>
                         <p>{{ fetchComment(section.name, section.total_score) }}</p>
                     </div>
-                    <ProgressBar :value="(section.total_score - 40) / 120 * 100" style="display: block;width: 80%;margin-top: 1rem;height: 1rem;margin-inline: auto;" :size="12" />
+                    <ProgressBar :value="Math.round((section.total_score - 40) / 120 * 100)" style="display: block;width: 80%;margin-top: 1rem;height: 1rem;margin-inline: auto;" :size="12" />
                 </div>
             </div>
         </div>
@@ -173,7 +187,7 @@ const track_image = computed(() => {
                         <h2>{{ selectLang(IQNames[section.name as subsets]) }} ({{ section.total_score }}/160):</h2>
                         <p>{{ fetchComment(section.name, section.total_score) }}</p>
                     </div>
-                    <ProgressBar :value="(section.total_score - 40) / 120 * 100" style="display: block;width: 80%;margin-top: 1rem;height: 1rem;margin-inline: auto;" :size="12" />
+                    <ProgressBar :value="Math.round((section.total_score - 40) / 120 * 100)" style="display: block;width: 80%;margin-top: 1rem;height: 1rem;margin-inline: auto;" :size="12" />
                 </div>
             </div>
         </div>
@@ -226,9 +240,13 @@ const track_image = computed(() => {
                 <div class="field">
 
                     <h2>{{ selectLang(translationModule.recommendTracks) }}</h2>
+                    
+         
+
                     <h2 style="padding-left: 1rem; color: var(--header);">{{ selectLang(recommendTrack?.title) }}</h2> 
                     <img :src="track_image" style="margin-top: 8rem" alt="">
                     <div class="labeled_text">
+                        
                         <h3>{{ selectLang(translationModule.aboutTrack) }}</h3>
                         <p>{{ selectLang(recommendTrack?.description) }}</p>
                     </div>

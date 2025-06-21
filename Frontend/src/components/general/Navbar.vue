@@ -71,26 +71,6 @@ function setLang(selectedLang: string | undefined) {
 </script>
 <template>
   <main>
-    <Dialog v-model:visible="analysisQuizNotificaiotn" modal :pt="{
-      mask: {
-        style: 'backdrop-filter: blur(2px)',
-      },
-      header: {
-        style: 'display:none',
-      },
-      content: {
-        style:
-          'margin-block:auto; display: flex; flex-direction: column; align-items: center; justify-content: center;',
-      },
-    }">
-      <div style="display: flex;flex-direction: column; align-items: center; gap: 2rem; padding: 2rem;">
-
-
-        <img style="width: 100%; height: 12rem; border-radius: 0.5rem;" src="/public/images/quizTime.png" alt="" />
-        <Button style="font-size: 1.25rem;" :label="selectLang(translationModule.startAnalysisQuiz)" @click="router.push(`/analysisQuiz/${analysisQuizId}`)" />
-      </div>
-    </Dialog>
-
     <Dialog v-model:visible="showDialogLogOut" style="width: 25rem; height: 15rem" modal :pt="{
       mask: {
         style: 'backdrop-filter: blur(2px)',

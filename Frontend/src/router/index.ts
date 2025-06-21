@@ -136,7 +136,7 @@ const router = createRouter({
       meta: { requredAuth: false, userType: "Any" },
     },
     {
-      path: "/programs/:programId",
+      path: "/programs/:programId/:subscriptionPlanId?",
       name: "programs",
       component: () => import("@/views/studentViews/viewProgram.vue"),
       meta: { requredAuth: false, userType: "Any" },

@@ -5,8 +5,11 @@ interface Languages {
   ar: string;
 }
 
-export function selectLang(obj: null | Languages, lan: string | null = null) {
+export function selectLang(obj: undefined | null | Languages | string, lan: string | null = null) {
   const lang = useLang();
+  if (typeof(obj) == 'string'){
+    return obj
+  }
   let selectedLang = lang.getLang;
   if (lan) {
     selectedLang = lan
@@ -85,9 +88,9 @@ export const translationModule = {
     en: "NO CREDIT CARD REQUIRED",
     ar: "بطاقة الإئتمان غير مطلوبة",
   },
-  tracePrograms: {
-    en: "Trace Programs",
-    ar: "برامج Trace",
+  traceTracks: {
+    en: "Trace Tracks",
+    ar: "مسارات Trace",
   },
   traceProgramsDescription: {
     en: "Where Entertainment meets Education",
@@ -316,6 +319,14 @@ export const translationModule = {
   sub: {
     en: "Subscriptions",
     ar: "الاشتراكات",
+  },
+  subscribe: {
+    en: "Subscribe",
+    ar: "اشترك",
+  },
+  subscribeFor: {
+    en: "Subscribe For",
+    ar: "اشترك مقابل",
   },
   settings: {
     en: "Settings",
@@ -825,6 +836,10 @@ export const translationModule = {
     en: "Selected Plan",
     ar: "الخطة المحددة",
   },
+  selectPlan: {
+    en: "Select Plan",
+    ar: "اختر الخطة",
+  },
   allPlans: {
     en: "All Plans",
     ar: "جميع الخطط",
@@ -926,7 +941,7 @@ export const translationModule = {
     ar: "اسأل المعلم"
   },
   recommendTracks: {
-    en: "Best Tracks",
+    en: "Recommended Tracks",
     ar: "أفضل المسارات",
   },
   LearningStyle: {
@@ -948,6 +963,10 @@ export const translationModule = {
   aboutTrack: {
     en: 'About This Track',
     ar: 'حول هذا المسار'
+  },
+  trackDesc: {
+    en: 'Track Description',
+    ar: 'وصف المسار'
   },
   guidingPath: {
     en: 'Guiding Their Path',
@@ -1294,7 +1313,15 @@ https://www.traceedtech.com. من خلال الوصول إلى هذا الموق
   refundPolicy:{
     en:'Refund Policy',
     ar:'سياسة الاسترداد'
+  },
+  aboutLevel:{
+    en:'About Level',
+    ar:'حول المستوى'
   }
 
 
 };
+function type(obj: string | Languages | null | undefined) {
+  throw new Error("Function not implemented.");
+}
+

@@ -36,7 +36,7 @@ class Program(BaseModel):
     min_age:Optional[int]=0
     max_age:Optional[int]=0
     road_map:Optional[list[RoadMapCourse]]=[]
-    image:str
+    image:TwoLang
     tracks:Optional[list[Track]]=[]
     
     

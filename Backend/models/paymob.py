@@ -30,10 +30,21 @@ class PaymentVerification(BaseModel):
     success: bool
     
     
+class TwoLang(BaseModel):
+    en:str
+    ar:str
 class SubscriptionPlan(BaseModel):
     id:Optional[str] = None
     frequency:int 
     name: str
+    title:Optional[TwoLang]  =None
+
+    suitable_for:Optional[TwoLang] = None
+    suitable_for_name:Optional[TwoLang] = None
+    description:Optional[TwoLang] = None
+    freatures:Optional[list[TwoLang]] = []
+    image:str
+    
     price: float
     webhook_url:Optional[str] =  "https://www.traceedtech.com/paymob_subscribe_callback"
     reminder_days: Optional[int] = 2
@@ -44,7 +55,6 @@ class SubscriptionPlan(BaseModel):
     integration:Optional[int] = 5078771
     paymob_id:Optional[int] = None
     program_id: str
-    track_id: int
     
     
     

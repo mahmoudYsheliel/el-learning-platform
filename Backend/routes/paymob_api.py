@@ -42,3 +42,9 @@ async def test(request:Request):
     body = await request.json()
     res = await paymob_database.paymob_subscribe_callback(body)
     return res
+
+
+@router.post('/get_subscription_plans')
+async def get_subscription_plans(program_id:str = Body(embed=True)):
+    res = await paymob_database.get_subscription_plans(program_id)
+    return res

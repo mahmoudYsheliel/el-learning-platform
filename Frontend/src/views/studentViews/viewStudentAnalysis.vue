@@ -44,11 +44,7 @@ function printComponent() {
                     <PrintReport class="print_only" :child-id="selectedChild" />
                     <ChildrenAnalysis class="no_print" :child-id="selectedChild" />
 
-                    <div class="button-container b1 no_print" style="margin: 2rem;">
-                        <p style="font-weight: bolder;font-size: 1.25rem;">{{ selectLang(translationModule.startTraceJourney) }}</p>
 
-                        <Button class="no_print" @click="router.push('/childCourses')" :label="selectLang(translationModule.clickToView)" style="background-image: linear-gradient(to bottom, var(--accent2), var(--accent5));" />
-                    </div>
                     <div class="button-container no_print" >  
                         <Button style="padding-inline: 2rem;" v-if="selectedChild" @click="router.push('viewChildAnalysis')" :label="selectLang(translationModule.viewFullReport)" />
                         <Button style="padding-inline: 2rem;" v-if="selectedChild" @click="printComponent" :label="selectLang(translationModule.print)" />

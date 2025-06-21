@@ -131,7 +131,8 @@ async def get_all_courses():
                 "min_age": 1,
                 "max_age": 1,
                 "categories": 1,
-                "is_locked": 1
+                "is_locked": 1,
+                'price':1
             },
         )
         .to_list(length=None)

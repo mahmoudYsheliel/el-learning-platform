@@ -86,7 +86,7 @@ const lang = useLang()
                 <p>Our Service may contain links to third-party websites or services that are not owned or controlled by the Company. The Company assumes no responsibility for the content, privacy policies, or practices of any third-party websites or services.</p>
 
 
-
+<!-- 
                 <h2>Refund and Exchange Policy</h2>
 
                 <h3>1. Refund and Exchange Policy Overview</h3>
@@ -175,7 +175,7 @@ const lang = useLang()
                 </p>
 
 
-
+ -->
 
 
 
@@ -293,7 +293,7 @@ const lang = useLang()
                     </p>
                 </section>
 
-
+<!-- 
                 <section>
                     <h2>سياسة الاسترجاع والاستبدال</h2>
 
@@ -365,7 +365,7 @@ const lang = useLang()
                     <p>تحتفظ Trace بالحق في تعديل أو تحديث هذه السياسة في أي وقت. سيتم نشر التحديثات على المنصة، ويُعد استخدام المنصة المستمر بمثابة قبول لها.</p>
 
 
-                </section>
+                </section> -->
 
 
                 <section>

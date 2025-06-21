@@ -4,24 +4,31 @@ import { HttpRequester } from "@/lib/APICaller";
 import { IQScoresMap } from "@/lib/Modules";
 import { selectLang, translationModule } from "@/lib/Translate";
 import IQChart from "../childrenAnalysis/IQChart.vue";
+import Button from "primevue/button";
 const prop = defineProps(["childId"]);
 import { track_images } from "@/lib/Modules";
 import { usePersonalInfo } from "@/stores/token";
+import { useRouter } from "vue-router";
 const info = usePersonalInfo()
 const analysis = ref();
-
+const router = useRouter()
 const IQResult = ref()
 const learningStyle = ref()
 const recommendTrack = ref()
+const recommendTrack2 = ref()
+const recommendTrack3 = ref()
+const selectedTrack = ref<any | null>(null)
 const IQSection = ref()
-function getMaxObject(arr: any[]) {
-  let tem = arr[0]
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i]?.score > tem?.score) {
-      tem = arr[i]
-    }
+function getBestIndex(arr: any[], rank: number = 1) {
+  if (!Array.isArray(arr) || arr.length === 0 || rank < 1 || rank > arr.length) {
+    return null
   }
-  return tem
+
+  // Create an array of indices sorted by score descending
+  const sortedIndices = arr
+    .map((_, index) => index)
+    .sort((a, b) => (arr[b]?.score ?? -Infinity) - (arr[a]?.score ?? -Infinity));
+  return arr[sortedIndices[rank - 1]];
 }
 function getAnalysis() {
   const childnAlysisRequester = new HttpRequester("get_analysis");
@@ -39,15 +46,24 @@ function getAnalysis() {
           IQResult.value += IQSection.value[i]?.total_score
         }
         IQResult.value = Math.round(IQResult.value / IQSection.value.length)
-        const bestLearningStyle = getMaxObject(analysis.value?.learning_styles_results)
+        const bestLearningStyle = getBestIndex(analysis.value?.learning_styles_results)
 
         new HttpRequester('get_learning_style').callApi({ id: bestLearningStyle?.learning_style_id }).then(res => {
           learningStyle.value = res?.data?.learning_style
         })
 
-        const bestTrack = getMaxObject(analysis.value?.tracks_recommendation_results)
+        const bestTrack = getBestIndex(analysis.value?.tracks_recommendation_results)
         new HttpRequester('get_tracks_recommendation').callApi({ id: bestTrack?.tracks_recommendation_id }).then(res => {
           recommendTrack.value = res?.data?.track_recommendation
+          selectedTrack.value = res?.data?.track_recommendation
+        })
+        const bestTrack2 = getBestIndex(analysis.value?.tracks_recommendation_results, 2)
+        new HttpRequester('get_tracks_recommendation').callApi({ id: bestTrack2?.tracks_recommendation_id }).then(res => {
+          recommendTrack2.value = res?.data?.track_recommendation
+        })
+        const bestTrack3 = getBestIndex(analysis.value?.tracks_recommendation_results, 3)
+        new HttpRequester('get_tracks_recommendation').callApi({ id: bestTrack3?.tracks_recommendation_id }).then(res => {
+          recommendTrack3.value = res?.data?.track_recommendation
         })
 
       } else {
@@ -127,26 +143,42 @@ watch((recommendTrack), () => {
 
 
     <div class="section" style="display: flex; justify-content: start;align-items: start;">
-      <div class="field">
+
+      <div style="width: 100%;">
+
         <h1>{{ selectLang(translationModule.recommendTracks) }}</h1>
-        <h2>{{ selectLang(recommendTrack?.title) }}</h2>
-        <img :src="track_image" style="margin-top: 8rem" alt="">
-        <div class="labeled_text">
-          <h3>{{ selectLang(translationModule.aboutTrack) }}</h3>
-          <p>{{ selectLang(recommendTrack?.description) }}</p>
+        <div class="tracks_images">
+          <img @click="selectedTrack = recommendTrack" :src="selectLang(recommendTrack?.image)" alt="">
+          <img @click="selectedTrack = recommendTrack2" :src="selectLang(recommendTrack2?.image)" alt="">
+          <img @click="selectedTrack = recommendTrack3" :src="selectLang(recommendTrack3?.image)" alt="">
+        </div>
+        <div v-if="selectedTrack">
+          <h2>{{ selectLang(selectedTrack?.title) }}</h2>
+          <div class="labeled_text">
+            <h3>{{ selectLang(translationModule.aboutTrack) }}</h3>
+            <p>{{ selectLang(selectedTrack?.description) }}</p>
+          </div>
+
+          <div class="labeled_text">
+            <h3>{{ selectLang(translationModule.guidingPath) }}</h3>
+            <p>{{ selectLang(selectedTrack?.advice) }}</p>
+          </div>
+
+          <div class="labeled_text">
+            <h3>{{ selectLang(translationModule.keySkills) }}</h3>
+            <p v-for="skill in selectedTrack?.key_skills">{{ selectLang(skill) }}</p>
+          </div>
+
+          <div class="button-container b1 no_print" style="margin: 2rem;">
+            <p style="font-weight: bolder;font-size: 1.25rem;color: var(--header);">{{ selectLang(translationModule.startTraceJourney) }}</p>
+
+            <Button class="no_print" @click="router.push(`/programs/${selectedTrack.program_id}`)" :label="selectLang(translationModule.clickToView)" style="background-image: linear-gradient(to bottom, var(--accent2), var(--accent5));" />
+          </div>
+
         </div>
 
-        <div class="labeled_text">
-          <h3>{{ selectLang(translationModule.guidingPath) }}</h3>
-          <p>{{ selectLang(recommendTrack?.advice) }}</p>
-        </div>
 
-        <div class="labeled_text">
-          <h3>{{ selectLang(translationModule.keySkills) }}</h3>
-          <p v-for="skill in recommendTrack?.key_skills">{{ selectLang(skill) }}</p>
-        </div>
       </div>
-      <img :src="track_image" style="margin-top: 8rem" alt="">
     </div>
 
   </div>
@@ -154,10 +186,29 @@ watch((recommendTrack), () => {
 </template>
 
 <style scoped>
+.opacity {
+  opacity: 0.6;
+}
+
 .constainer {
   width: 95%;
   margin-inline: auto;
   margin-top: 4rem;
+}
+
+.tracks_images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.tracks_images img {
+  border-radius: 2rem;
+  cursor: pointer;
+  width: 12rem;
 }
 
 .field {
@@ -202,6 +253,13 @@ img {
 .field>img {
   display: none;
 }
+.button-container {
+    padding-inline: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 @media screen and (max-width:700px) {
   .section>img {

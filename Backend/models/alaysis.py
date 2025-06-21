@@ -65,6 +65,9 @@ class SectionResults(BaseModel):
     section:str
     sub_sections:list[SubSectionResult]
     
+class SectionWeight(BaseModel):
+    section:str
+    weigth:float
     
 class LearningStyle(BaseModel):
     name:str
@@ -72,11 +75,13 @@ class LearningStyle(BaseModel):
     description:TwoLang
     advice:TwoLang
     image:str
-    sections_dependence:list[str] #id of subsections from iq test
+    sections_dependence:list[SectionWeight] #id of subsections from iq test
     
 class LearningStyleScore(BaseModel):
     learning_style_id:str #id of learning style
     score:float
+    
+
     
 class TrackRecommendation(BaseModel):
     name:str
@@ -84,7 +89,9 @@ class TrackRecommendation(BaseModel):
     description:TwoLang
     key_skills:list[TwoLang]
     advice:TwoLang
-    sections_dependence:list[str] #id of subsections from iq test
+    sections_dependence:list[SectionWeight] #id of subsections from iq test
+    program_id:str
+    image:TwoLang
     
 class TrackRecommendationScore(BaseModel):
     tracks_recommendation_id:str #id of track recommendation
