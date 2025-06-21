@@ -320,7 +320,7 @@ def get_subsection_score(data,subsection_name):
         if section['section'] == 'IQ':  # Check if the section is IQ
             for sub_section in section['sub_sections']:
                 if sub_section['name'] == subsection_name:  # Check if the sub-section is Similarities
-                    return sub_section['total_score']
+                    return round(sub_section['total_score'])
     return 0  # Return None if 'Similarities' is not found
 
 

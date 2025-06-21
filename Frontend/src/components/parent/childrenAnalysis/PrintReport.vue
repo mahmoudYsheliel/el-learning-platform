@@ -168,7 +168,7 @@ const track_image = computed(() => {
             <div v-for="section in IQSection.slice(0, 2)">
                 <div style="display: flex;justify-content: space-between; flex-direction: column;">
                     <div class="field">
-                        <h2>{{ selectLang(IQNames[section.name as subsets]) }} ({{ section.total_score }}/160):</h2>
+                        <h2>{{ selectLang(IQNames[section.name as subsets]) }} ({{ Math.round(section.total_score) }}/160):</h2>
                         <p>{{ fetchComment(section.name, section.total_score) }}</p>
                     </div>
                     <ProgressBar :value="Math.round((section.total_score - 40) / 120 * 100)" style="display: block;width: 80%;margin-top: 1rem;height: 1rem;margin-inline: auto;" :size="12" />
@@ -184,7 +184,7 @@ const track_image = computed(() => {
             <div v-for="section in IQSection.slice(2, IQSection.length)">
                 <div style="display: flex;justify-content: space-between; flex-direction: column;">
                     <div class="field">
-                        <h2>{{ selectLang(IQNames[section.name as subsets]) }} ({{ section.total_score }}/160):</h2>
+                        <h2>{{ selectLang(IQNames[section.name as subsets]) }} ({{ Math.round(section.total_score) }}/160):</h2>
                         <p>{{ fetchComment(section.name, section.total_score) }}</p>
                     </div>
                     <ProgressBar :value="Math.round((section.total_score - 40) / 120 * 100)" style="display: block;width: 80%;margin-top: 1rem;height: 1rem;margin-inline: auto;" :size="12" />
