@@ -829,8 +829,12 @@ export const translationModule = {
     ar: "عرض الدورة ",
   },
   egyptianPound: {
-    en: "Egyptian Pound",
+    en: "EGP",
     ar: "جنيه مصري",
+  },
+  EGP: {
+    en: "EGP",
+    ar: "ج.م.", 
   },
   selectedPlan: {
     en: "Selected Plan",

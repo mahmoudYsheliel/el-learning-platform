@@ -52,6 +52,7 @@ coursesRequester.callApi().then((res) => {
 
 
 const selectedProgram = computed((): Program | undefined => {
+
   for (let program of programs.value) {
     if (program?.id == selectedProgramId.value) {
       if (program?.tracks && program?.tracks.length > 0)
@@ -61,13 +62,12 @@ const selectedProgram = computed((): Program | undefined => {
   }
 });
 const selectedLevelCourses = computed(() => {
-  const selectedLevel = selectedProgram.value?.tracks?.filter(track => track.id == selectedTrackId.value)[0]
-  let coursesIds: string[] = selectedLevel?.courses ?? []
+  const selectedLevel = selectedProgram.value?.tracks?.find(track => track.id == selectedTrackId.value)
   let trackCourses = []
   for (let v of selectedLevel?.levels ?? []) {
-    coursesIds.push(...v.courses ?? [])
+    if (v.courses)
+      trackCourses.push(...v.courses.map(id => courses.value.find(course => { return course.id == id })) )
   }
-  trackCourses = coursesIds.map(id => courses.value.find(course => { return course.id == id }))
   return trackCourses
 });
 </script>
@@ -112,7 +112,7 @@ const selectedLevelCourses = computed(() => {
             <div class="course_info">
               <p>{{ selectLang(course?.title) }}</p>
               <div class="course_price_view">
-                <strong style="font-size: 1.5rem;">{{ course?.price }}</strong>
+                <strong style="font-size: 1.5rem;">{{ course?.price }} {{ selectLang(translationModule.EGP) }}</strong>
                 <Button :label="selectLang(translationModule.viewCourse)" raised @click="router.push(`/courseDetails/${course?.id}/0/0`)" />
               </div>
             </div>
@@ -204,6 +204,7 @@ h2 {
   align-items: center;
   color: var(--accent1);
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 .selected {

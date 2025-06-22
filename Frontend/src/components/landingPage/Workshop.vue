@@ -8,10 +8,7 @@ import { ref } from "vue";
 
 const showParagraph = ref(false);
 function showWorkshop() {
-  showParagraph.value = true;
-  setTimeout(() => {
-    showParagraph.value = false;
-  }, 5000);
+window.location.href = 'https://forms.gle/EBFNy1yJcjQqMAad9'
 }
 const responsiveOptions = ref([
   {

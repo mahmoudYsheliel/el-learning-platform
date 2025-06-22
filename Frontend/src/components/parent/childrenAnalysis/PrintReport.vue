@@ -67,14 +67,15 @@ function getAnalysis() {
                 const bestTrack = getBestIndex(analysis.value?.tracks_recommendation_results)
                 new HttpRequester('get_tracks_recommendation').callApi({ id: bestTrack?.tracks_recommendation_id }).then(res => {
                     recommendTrack.value = res?.data?.track_recommendation
+                    selectedTrack.value = res?.data?.track_recommendation
                 })
-                const bestTrack2 = getBestIndex(analysis.value?.tracks_recommendation_results)
+                const bestTrack2 = getBestIndex(analysis.value?.tracks_recommendation_results, 2)
                 new HttpRequester('get_tracks_recommendation').callApi({ id: bestTrack2?.tracks_recommendation_id }).then(res => {
-                    recommendTrack.value = res?.data?.track_recommendation
+                    recommendTrack2.value = res?.data?.track_recommendation
                 })
-                const bestTrack3 = getBestIndex(analysis.value?.tracks_recommendation_results)
+                const bestTrack3 = getBestIndex(analysis.value?.tracks_recommendation_results, 3)
                 new HttpRequester('get_tracks_recommendation').callApi({ id: bestTrack3?.tracks_recommendation_id }).then(res => {
-                    recommendTrack.value = res?.data?.track_recommendation
+                    recommendTrack3.value = res?.data?.track_recommendation
                 })
 
             } else {
@@ -158,7 +159,7 @@ const track_image = computed(() => {
 
                 <div class="scores ">
                     <div v-for="section in IQSection" class="subset_score">
-                        <knob readonly :min="40" :max="160" :modelValue="section.total_score" style="display: inline;" :size="120" />
+                        <knob readonly :min="40" :max="160" :modelValue="Math.round(section.total_score)" style="display: inline;" :size="120" />
                         <h4 style="margin: 0; translate:0 -0.75rem ;">{{ section.name }}</h4>
                     </div>
                 </div>
@@ -236,29 +237,34 @@ const track_image = computed(() => {
             </div>
 
 
+            <div class="tracks_images no_print">
+                <img :class="{ notSelectedTrack: (selectedTrack?.name !== recommendTrack?.name) }" @click="selectedTrack = recommendTrack" :src="selectLang(recommendTrack?.image)" alt="">
+                <img :class="{ notSelectedTrack: (selectedTrack?.name !== recommendTrack2?.name) }" @click="selectedTrack = recommendTrack2" :src="selectLang(recommendTrack2?.image)" alt="">
+                <img :class="{ notSelectedTrack: (selectedTrack?.name !== recommendTrack3?.name) }" @click="selectedTrack = recommendTrack3" :src="selectLang(recommendTrack3?.image)" alt="">
+            </div>
             <div class="sectioni" style="display: flex; justify-content: start;align-items: start;">
                 <div class="field">
 
                     <h2>{{ selectLang(translationModule.recommendTracks) }}</h2>
-                    
-         
 
-                    <h2 style="padding-left: 1rem; color: var(--header);">{{ selectLang(recommendTrack?.title) }}</h2> 
+
+
+                    <h2 style="padding-left: 1rem; color: var(--header);">{{ selectLang(selectedTrack?.title) }}</h2>
                     <img :src="track_image" style="margin-top: 8rem" alt="">
                     <div class="labeled_text">
-                        
+
                         <h3>{{ selectLang(translationModule.aboutTrack) }}</h3>
-                        <p>{{ selectLang(recommendTrack?.description) }}</p>
+                        <p>{{ selectLang(selectedTrack?.description) }}</p>
                     </div>
 
                     <div class="labeled_text">
                         <h3>{{ selectLang(translationModule.guidingPath) }}</h3>
-                        <p>{{ selectLang(recommendTrack?.advice) }}</p>
+                        <p>{{ selectLang(selectedTrack?.advice) }}</p>
                     </div>
 
                     <div class="labeled_text">
                         <h3>{{ selectLang(translationModule.keySkills) }}</h3>
-                        <p v-for="skill in recommendTrack?.key_skills">{{ selectLang(skill) }}</p>
+                        <p v-for="skill in selectedTrack?.key_skills">{{ selectLang(skill) }}</p>
                     </div>
 
 
@@ -274,6 +280,23 @@ const track_image = computed(() => {
 </template>
 
 <style scoped>
+.tracks_images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+.notSelectedTrack {
+  opacity: 0.6;
+}
+.tracks_images img {
+    border-radius: 2rem;
+    cursor: pointer;
+    width: 20rem;
+}
+
 .section {
     padding-block: 1rem;
 }
@@ -364,6 +387,11 @@ p {
         width: 95% !important;
         margin-inline: auto !important;
     }
+
+    .no_print {
+        display: none;
+    }
+
 
     .new-page {
         page-break-before: always;

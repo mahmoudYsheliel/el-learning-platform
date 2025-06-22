@@ -148,9 +148,9 @@ watch((recommendTrack), () => {
 
         <h1>{{ selectLang(translationModule.recommendTracks) }}</h1>
         <div class="tracks_images">
-          <img @click="selectedTrack = recommendTrack" :src="selectLang(recommendTrack?.image)" alt="">
-          <img @click="selectedTrack = recommendTrack2" :src="selectLang(recommendTrack2?.image)" alt="">
-          <img @click="selectedTrack = recommendTrack3" :src="selectLang(recommendTrack3?.image)" alt="">
+          <img :class="{notSelectedTrack:(selectedTrack?.name !== recommendTrack?.name)}" @click="selectedTrack = recommendTrack" :src="selectLang(recommendTrack?.image)" alt="">
+          <img :class="{notSelectedTrack:(selectedTrack?.name !== recommendTrack2?.name)}" @click="selectedTrack = recommendTrack2" :src="selectLang(recommendTrack2?.image)" alt="">
+          <img :class="{notSelectedTrack:(selectedTrack?.name !== recommendTrack3?.name)}" @click="selectedTrack = recommendTrack3" :src="selectLang(recommendTrack3?.image)" alt="">
         </div>
         <div v-if="selectedTrack">
           <h2>{{ selectLang(selectedTrack?.title) }}</h2>
@@ -186,7 +186,7 @@ watch((recommendTrack), () => {
 </template>
 
 <style scoped>
-.opacity {
+.notSelectedTrack {
   opacity: 0.6;
 }
 
@@ -208,7 +208,7 @@ watch((recommendTrack), () => {
 .tracks_images img {
   border-radius: 2rem;
   cursor: pointer;
-  width: 12rem;
+  width: 20rem;
 }
 
 .field {
