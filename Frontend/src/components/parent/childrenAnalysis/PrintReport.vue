@@ -29,7 +29,7 @@ const section3 = ref()
 const section4 = ref()
 const section5 = ref()
 
-const emits = defineEmits(['sections'])
+const emits = defineEmits(['sections','selectProgram'])
 function getBestIndex(arr: any[], rank: number = 1) {
     if (!Array.isArray(arr) || arr.length === 0 || rank < 1 || rank > arr.length) {
         return null
@@ -117,6 +117,9 @@ function fetchComment(subset: subsets, score: number) {
     }
 }
 
+watch(selectedTrack,()=>{
+    emits('selectProgram',selectedTrack.value?.program_id)
+})
 const track_image = computed(() => {
     const userType = info.getInfo?.gender ? info.getInfo?.gender : 'Male'
 
@@ -287,6 +290,7 @@ const track_image = computed(() => {
     align-items: center;
     gap: 2rem;
     width: 100%;
+    margin-top: 2rem;
 }
 .notSelectedTrack {
   opacity: 0.6;

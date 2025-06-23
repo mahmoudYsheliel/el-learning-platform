@@ -246,18 +246,20 @@ p {
 }
 
 img {
-  width: 32%;
-  min-width: 15rem;
+  width: 30%;
+  min-width: 12rem;
 }
 
 .field>img {
   display: none;
 }
 .button-container {
-    padding-inline: 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 

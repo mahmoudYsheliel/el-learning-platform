@@ -19,6 +19,8 @@ onMounted(() => {
     selectedChild.value = Info.getInfo?.id
 })
 
+const selectedProgramId = ref('')
+
 async function printComponent(sections: HTMLElement[]) {
     // window.print()
 
@@ -87,11 +89,11 @@ async function printComponent(sections: HTMLElement[]) {
             </div>
         </div>
         <div class="wrapper ">
-            <PrintReport class="print_only" :child-id="selectedChild" @sections="(sections) => { printComponent(sections) }" />
+            <PrintReport @selectProgram="(id:string)=>{selectedProgramId=id}" class="print_only" :child-id="selectedChild" @sections="(sections) => { printComponent(sections) }" />
         </div>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex;justify-content: center;align-items: center;flex-wrap: wrap;gap: 2rem;">
             <p style="font-weight: bolder;font-size: 1.25rem;">{{ selectLang(translationModule.startTraceJourney) }}</p>
-            <Button  :label="selectLang(translationModule.startJourney)"   @click="router.push('/childCourses')"/>
+            <Button  :label="selectLang(translationModule.startJourney)"   @click="router.push(`/programs/${selectedProgramId}`)"/>
   
         </div>
     </div>

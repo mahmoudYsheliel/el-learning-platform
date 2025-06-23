@@ -31,8 +31,8 @@ const personalInfo = usePersonalInfo()
         </p>
         <div class="buttonWrapper">
           <Button raised :label="selectLang(translationModule.takeTest)" @click="token.getIsAuthorized ? router.push(`/analysisQuiz/${personalInfo.getInfo?.notifications[0].analysis_quiz_id}`) :router.push('/signup/Child')" v-if="!token.getIsAuthorized || (token.getIsAuthorized && personalInfo.getInfo?.notifications.some(n => n.status == 'waiting'))" />
-          <img style="height: 100%; width: fit-content;" src="/images/STEMLogo.png" alt="">
-          <img style="height: 100%; width: fit-content;" src="/images/STEMBest.png" alt="">
+          <img style="height: 4rem; width:4rem;object-fit: cover; " src="/images/STEMLogo.png" alt="">
+          <img style="height: 4rem; width:4rem;object-fit: cover; " src="/images/STEMBest.png" alt="">
           <!-- <p style="color: var(--accent1); margin: 0;font-size: 0.875rem;font-weight: 100;">
             {{ selectLang(translationModule.noCreditCard) }}
           </p> -->
@@ -66,9 +66,6 @@ main {
   gap: 4rem;
 }
 
-img {
-  width: 38.75%;
-}
 
 .imagenormal {
   position: absolute;

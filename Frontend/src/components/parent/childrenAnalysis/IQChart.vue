@@ -23,7 +23,7 @@ const traitsDistribution =computed(()=>{
 
 
 <template>
-  <div v-if="traitsDistribution"> <BiChart  class="chart" :traits-distribution="traitsDistribution" :title="selectLang(translationModule.results)" />
+  <div v-if="traitsDistribution"> <BiChart  class="chart" :traits-distribution="traitsDistribution" :title="selectLang(translationModule.results)"  />
   </div>
  
 </template>

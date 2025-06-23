@@ -67,7 +67,7 @@ const setChartOptions = () => {
 <template>
  <div class="card">
         <Chart type="bar" :data="chartData" :options="chartOptions" 
-        style="width: 40rem;aspect-ratio: 1.5/1; margin-inline: auto;"
+        style="width: 100%;aspect-ratio: 1.5/1; margin-inline: auto;"
         class="chart"
         :pt="{
         canvas: {
