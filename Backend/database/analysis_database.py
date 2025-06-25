@@ -1,5 +1,6 @@
 from models.runtime import ServiceResponse
 from database.mongo_driver import get_database, validate_bson_id
+from datetime import datetime
 from models.alaysis import (
     FeatureInfo,
     AnalysisQuiz,
@@ -511,6 +512,12 @@ async def get_all_analysis():
             continue
         
         result['email'] = user['email']
+        age = 0
+        if user['birth_day']:
+            birth_date = datetime.strptime(user['birth_day'], "%Y-%m-%dT%H:%M:%S.%fZ")
+            today = datetime.now()
+            age = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
+            result['age'] = age
         
         for section in analysis['section_results'][0]['sub_sections']:
             result[section['name']] = section['total_score']
