@@ -512,6 +512,9 @@ async def get_all_analysis():
         
         result['email'] = user['email']
         
+        for section in analysis['section_results'][0]['sub_sections']:
+            result[section['name']] = section['total_score']
+        
         for lso in analysis['learning_styles_results']:
             ls = next((learning_style for learning_style in learning_styles if learning_style['_id'] == validate_bson_id(lso['learning_style_id'])), None)
             if not ls:
