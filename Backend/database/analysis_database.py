@@ -489,3 +489,41 @@ async def test_scores(scores:list[dict]) ->ServiceResponse:
 #     if analysis_id:
 #         return ServiceResponse(data={"analysis_id": analysis_id})
 #     return ServiceResponse(success=False, msg="couln't add analysis", status_code=409)
+
+
+
+
+async def get_all_analysis():
+    all_analysis = await get_database().get_collection('analysis').find({},{}).to_list(length=None)
+    users = await get_database().get_collection('user').find({},{}).to_list(length=None)
+    track_recommendations = await get_database().get_collection('track_recommendation').find({},{}).to_list(length=None)
+    learning_styles = await get_database().get_collection('learning_style').find({},{}).to_list(length=None)
+
+    all_results = []
+    for analysis in all_analysis:
+        result = {}
+        if not ('learning_styles_results' in analysis and 'tracks_recommendation_results' in analysis and 'student_id' in analysis):
+            continue
+        
+
+        user = next((user for user in users if user['_id'] == validate_bson_id(analysis['student_id'])), None)
+        if not user:
+            continue
+        
+        result['email'] = user['email']
+        
+        for lso in analysis['learning_styles_results']:
+            ls = next((learning_style for learning_style in learning_styles if learning_style['_id'] == validate_bson_id(lso['learning_style_id'])), None)
+            if not ls:
+                continue
+            result[ls['name']] = lso['score']
+            
+            for lso in analysis['tracks_recommendation_results']:
+                ls = next((track_recommendation for track_recommendation in track_recommendations if track_recommendation['_id'] == validate_bson_id(lso['tracks_recommendation_id'])), None)
+                if not ls:
+                    continue
+                result[ls['name']] = lso['score']
+        all_results.append(result)
+        
+    return ServiceResponse(data={'results':all_results})
+            

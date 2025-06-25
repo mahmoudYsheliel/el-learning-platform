@@ -92,3 +92,9 @@ async def add_analysis_quiz_answer(answers:Answers=Body(embed=True),userId:str =
 async def  test_scores(scores:list[dict]=Body(embed=True)) ->ServiceResponse:
     res = await analysis_database.test_scores( scores)
     return res
+
+
+@router.post('/get_all_analysis')
+async def get_all_analysis():
+    res = await analysis_database.get_all_analysis()
+    return res
