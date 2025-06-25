@@ -517,7 +517,7 @@ async def get_all_analysis():
             birth_date = datetime.strptime(user['birth_day'], "%Y-%m-%dT%H:%M:%S.%fZ")
             today = datetime.now()
             age = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
-            result['age'] = age
+        result['age'] = age
         
         for section in analysis['section_results'][0]['sub_sections']:
             result[section['name']] = section['total_score']
